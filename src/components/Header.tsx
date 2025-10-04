@@ -17,6 +17,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import { useColorMode } from "@/theme/useColorMode";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -24,7 +25,7 @@ import Image from "next/image";
 export default function Header() {
   const { mode, toggle } = useColorMode();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const [currentLocale, setCurrentLocale] = useState("en");
+  const currentLocale = useLocale();
   const t = useTranslations("navigation");
   const pathname = usePathname();
 
@@ -42,7 +43,6 @@ export default function Header() {
   };
 
   const handleLanguageChange = (locale: string) => {
-    setCurrentLocale(locale);
     document.cookie = `NEXT_LOCALE=${locale}; max-age=31536000; path=/`;
     window.location.reload();
     handleLanguageClose();

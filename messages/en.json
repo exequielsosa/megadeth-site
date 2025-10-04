@@ -14,6 +14,22 @@
     "viewDates": "View dates",
     "listenSingle": "Listen single"
   },
+  "album": {
+    "finalAlbumTitle": "Album 17 / Megadeth's Final",
+    "albumName": "Megadeth",
+    "releaseDate": "Release date",
+    "releaseDateValue": "January 23, 2026",
+    "firstSingle": "First single",
+    "firstSingleValue": "Tipping Point — already released",
+    "producedBy": "Produced by",
+    "producedByValue": "Mustaine + Chris Rakestraw",
+    "finalLineup": "Final lineup",
+    "finalLineupValue": "Dave Mustaine, Dirk Verbeuren, Teemu Mäntysaari and James LoMenzo",
+    "includes": "Includes",
+    "includesValue": "Farewell tour and Mustaine's book",
+    "preOrder": "Pre-order",
+    "officialStore": "Megadeth Official Store"
+  },
   "home": {
     "welcome": "Welcome",
     "comingSoon": "Coming soon: news, dates and albums."

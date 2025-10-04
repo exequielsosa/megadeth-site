@@ -1,12 +1,13 @@
 "use client";
 
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import ContainerGradient from "../components/atoms/ContainerGradient";
 import Image from "next/image";
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const tAlbum = useTranslations("album");
 
   return (
     <ContainerGradient>
@@ -37,38 +38,40 @@ export default function Hero() {
                   color="primary"
                   sx={{ fontWeight: 700, mb: 1 }}
                 >
-                  Álbum 17 / Final de Megadeth
+                  {tAlbum("finalAlbumTitle")}
                 </Typography>
 
                 <Typography
                   variant="h5"
                   sx={{ fontWeight: 600, color: "text.primary" }}
                 >
-                  Titulado: &ldquo;Megadeth&rdquo;
+                  {tAlbum("albumName")}: &ldquo;{tAlbum("albumName")}&rdquo;
                 </Typography>
 
                 <Stack spacing={1.5}>
                   <Typography variant="body1" sx={{ fontSize: "1.1rem" }}>
-                    <strong>Fecha de lanzamiento:</strong> 23 de enero de 2026
+                    <strong>{tAlbum("releaseDate")}:</strong>{" "}
+                    {tAlbum("releaseDateValue")}
                   </Typography>
 
                   <Typography variant="body1" sx={{ fontSize: "1.1rem" }}>
-                    <strong>Primer single:</strong> &ldquo;Tipping Point&rdquo;
-                    — ya lanzado
+                    <strong>{tAlbum("firstSingle")}:</strong> &ldquo;
+                    {tAlbum("firstSingleValue")}&rdquo;
                   </Typography>
 
                   <Typography variant="body1" sx={{ fontSize: "1.1rem" }}>
-                    <strong>Producido por:</strong> Mustaine + Chris Rakestraw
+                    <strong>{tAlbum("producedBy")}:</strong>{" "}
+                    {tAlbum("producedByValue")}
                   </Typography>
 
                   <Typography variant="body1" sx={{ fontSize: "1.1rem" }}>
-                    <strong>Line-up final:</strong> Dave Mustaine, Dirk
-                    Verbeuren, Teemu Mäntysaari y James LoMenzo
+                    <strong>{tAlbum("finalLineup")}:</strong>{" "}
+                    {tAlbum("finalLineupValue")}
                   </Typography>
 
                   <Typography variant="body1" sx={{ fontSize: "1.1rem" }}>
-                    <strong>Incluye:</strong> Gira de despedida y libro de
-                    Mustaine
+                    <strong>{tAlbum("includes")}:</strong>{" "}
+                    {tAlbum("includesValue")}
                   </Typography>
 
                   <Typography
@@ -78,7 +81,7 @@ export default function Hero() {
                       mt: 1,
                     }}
                   >
-                    <strong>Pre-order:</strong>{" "}
+                    <strong>{tAlbum("preOrder")}:</strong>{" "}
                     <Typography
                       component="a"
                       href="https://shop.megadeth.com/collections/megadeth"
@@ -95,7 +98,7 @@ export default function Hero() {
                         },
                       }}
                     >
-                      Tienda oficial de Megadeth
+                      {tAlbum("officialStore")}
                     </Typography>
                   </Typography>
                 </Stack>
