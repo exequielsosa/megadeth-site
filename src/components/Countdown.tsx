@@ -92,6 +92,7 @@ export default function Countdown() {
           letterSpacing: "1px",
           color: "text.secondary",
           mt: 0.5,
+          fontSize: { xs: "8px", sm: "14px" },
         }}
       >
         {label}
@@ -108,22 +109,23 @@ export default function Countdown() {
           mb: 3,
           fontWeight: 600,
           color: "text.primary",
+          fontSize: { xs: "18Px", sm: "24px" },
         }}
       >
         {t("title")}
       </Typography>
 
-      <Grid container spacing={2} justifyContent="center">
-        <Grid size={{ xs: 6, sm: 3 }}>
+      <Grid container spacing={{ xs: 1, sm: 2 }} justifyContent="center">
+        <Grid size={{ xs: 3, sm: 3 }}>
           <TimeUnit value={timeLeft.days} label={t("days")} />
         </Grid>
-        <Grid size={{ xs: 6, sm: 3 }}>
+        <Grid size={{ xs: 3, sm: 3 }}>
           <TimeUnit value={timeLeft.hours} label={t("hours")} />
         </Grid>
-        <Grid size={{ xs: 6, sm: 3 }}>
+        <Grid size={{ xs: 3, sm: 3 }}>
           <TimeUnit value={timeLeft.minutes} label={t("minutes")} />
         </Grid>
-        <Grid size={{ xs: 6, sm: 3 }}>
+        <Grid size={{ xs: 3, sm: 3 }}>
           <TimeUnit value={timeLeft.seconds} label={t("seconds")} />
         </Grid>
       </Grid>
