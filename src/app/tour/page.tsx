@@ -91,10 +91,19 @@ export default function TourPage() {
     <ContainerGradient>
       <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
         <Box sx={{ textAlign: "center", mb: 6 }}>
-          <Typography variant="h1" component="h1" gutterBottom>
+          <Typography
+            variant="h1"
+            component="h1"
+            gutterBottom
+            sx={{ fontSize: { xs: 28, md: 56 }, fontWeight: 700 }}
+          >
             {t("title")}
           </Typography>
-          <Typography variant="h5" color="text.secondary" sx={{ mb: 4 }}>
+          <Typography
+            variant="h5"
+            color="text.secondary"
+            sx={{ mb: 4, fontSize: { xs: 18, md: 24 } }}
+          >
             {t("subtitle")}
           </Typography>
         </Box>
