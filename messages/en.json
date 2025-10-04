@@ -55,6 +55,14 @@
     "buyTickets": "Buy tickets",
     "soldOut": "Sold out"
   },
+  "albumTeasers": {
+    "title": "Album Previews",
+    "subtitle": "Exclusive previews and leaks from the upcoming final album",
+    "credits": "Credits:"
+  },
+  "shorts": {
+    "title": "New Album Previews"
+  },
   "footer": {
     "disclaimer": "Unofficial fan site. © {year}"
   }

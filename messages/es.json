@@ -55,6 +55,14 @@
     "buyTickets": "Comprar entradas",
     "soldOut": "Agotado"
   },
+  "albumTeasers": {
+    "title": "Adelantos del Álbum",
+    "subtitle": "Adelantos exclusivos y filtraciones del próximo álbum final",
+    "credits": "Créditos:"
+  },
+  "shorts": {
+    "title": "Adelantos del Nuevo Álbum"
+  },
   "footer": {
     "disclaimer": "Fan site no oficial. © {year}"
   }
