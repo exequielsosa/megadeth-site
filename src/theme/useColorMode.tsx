@@ -13,13 +13,13 @@ export const useColorMode = () => {
 };
 
 export const ColorModeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [mode, setMode] = useState<ColorMode>('dark');
+  const [mode, setMode] = useState<ColorMode>('light');
 
   useEffect(() => {
     const saved = window.localStorage.getItem('color-mode') as ColorMode | null;
     if (saved) setMode(saved);
-    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      setMode('light');
+    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setMode('dark');
     }
   }, []);
 
