@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import ThemeRegistry from "@/theme/ThemeRegistry";
@@ -7,10 +7,11 @@ import { ColorModeProvider } from "@/theme/useColorMode";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-poppins",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -36,7 +37,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang="es" className={inter.variable} suppressHydrationWarning>
+    <html lang="es" className={poppins.variable} suppressHydrationWarning>
       <body
         style={{
           margin: 0,

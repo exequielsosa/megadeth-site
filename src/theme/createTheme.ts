@@ -18,7 +18,7 @@ export const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
         }),
   },
   typography: {
-    fontFamily: ['Inter', 'Rubik', 'system-ui', 'Arial'].join(','),
+    fontFamily: ['var(--font-poppins)', 'Poppins', 'system-ui', 'Arial'].join(','),
     h1: { fontWeight: 800, letterSpacing: -0.5 },
     h2: { fontWeight: 700 },
     button: { textTransform: 'none' },
