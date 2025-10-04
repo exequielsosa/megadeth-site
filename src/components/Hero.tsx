@@ -7,6 +7,7 @@ import Countdown from "./Countdown";
 import YouTubeEmbed from "./YouTubeEmbed";
 import Image from "next/image";
 import Divider from "@mui/material/Divider";
+import AlbumTeasers from "./AlbumTeasers";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -158,6 +159,7 @@ export default function Hero() {
           <YouTubeEmbed videoId="ECXg-a7XZQI" title={t("latestVideo")} />
         </Box>
       </Container>
+      <AlbumTeasers />
     </ContainerGradient>
   );
 }

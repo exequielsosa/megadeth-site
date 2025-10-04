@@ -29,6 +29,17 @@ export async function generateMetadata(): Promise<Metadata> {
       "música",
       "heavy metal",
       "Argentina",
+      "álbum final",
+      "adelantos",
+      "Burnation",
+      "Portals to Oblivion",
+      "Sector 11",
+      "Tyranny of the Masses",
+      "Lethal Weapon",
+      "Alchemist",
+      "filtraciones",
+      "nuevas canciones",
+      "YouTube shorts",
     ],
     en: [
       "Megadeth",
@@ -40,17 +51,28 @@ export async function generateMetadata(): Promise<Metadata> {
       "music",
       "heavy metal",
       "live shows",
+      "final album",
+      "previews",
+      "Burnation",
+      "Portals to Oblivion",
+      "Sector 11",
+      "Tyranny of the Masses",
+      "Lethal Weapon",
+      "Alchemist",
+      "leaks",
+      "new songs",
+      "YouTube shorts",
     ],
   };
 
   const titleByLocale = {
-    es: "Megadeth — Último disco y gira final",
-    en: "Megadeth — Latest Album and Final Tour",
+    es: "Megadeth — Adelantos del Álbum Final y Gira Mundial",
+    en: "Megadeth — Final Album Previews and World Tour",
   };
 
   const descriptionByLocale = {
-    es: "Noticias, fechas y discografía de Megadeth (fan site no oficial).",
-    en: "News, tour dates and discography of Megadeth (unofficial fan site).",
+    es: "Noticias, fechas de gira y adelantos exclusivos del álbum final de Megadeth. Burnation, Portals to Oblivion, Lethal Weapon y más. Fan site no oficial.",
+    en: "News, tour dates and exclusive previews of Megadeth's final album. Burnation, Portals to Oblivion, Lethal Weapon and more. Unofficial fan site.",
   };
 
   return {
