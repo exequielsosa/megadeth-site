@@ -1,0 +1,34 @@
+[
+  {
+    "id": "megadeth-2026",
+    "title": "Megadeth",
+    "year": 2026,
+    "cover": "/covers/megadeth-2026.jpg",
+    "label": "Tradecraft / Frontiers",
+    "producers": ["Dave Mustaine", "Chris Rakestraw"],
+    "description": "Álbum final de estudio de Megadeth.",
+    "isUpcoming": true,
+    "releaseDate": "2026-01-23",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/...",
+      "appleMusic": "https://music.apple.com/album/..."
+    }
+  },
+  {
+    "id": "the-sick-the-dying-and-the-dead",
+    "title": "The Sick, The Dying... and The Dead!",
+    "year": 2022,
+    "cover": "/covers/the-sick-the-dying.jpg",
+    "label": "Tradecraft / Universal",
+    "producers": ["Dave Mustaine", "Chris Rakestraw"],
+    "description": "Regreso al thrash con producción filosa.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/...",
+      "youtube": "https://www.youtube.com/playlist?list=..."
+    },
+    "tracks": [
+      { "n": 1, "title": "The Sick, The Dying... And The Dead!" },
+      { "n": 2, "title": "Life In Hell" }
+    ]
+  }
+]
