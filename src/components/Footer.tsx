@@ -1,7 +1,10 @@
 "use client";
 import { Box, Container, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <Box
       component="footer"
@@ -18,7 +21,7 @@ export default function Footer() {
         sx={{ maxWidth: 1440, mx: "auto", px: { xs: 2, sm: 3 } }}
       >
         <Typography variant="body2" color="text.secondary">
-          Fan site no oficial. © {new Date().getFullYear()}
+          {t("disclaimer", { year: new Date().getFullYear() })}
         </Typography>
       </Container>
     </Box>

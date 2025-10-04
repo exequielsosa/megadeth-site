@@ -1,0 +1,20 @@
+{
+  "header": {
+    "fanSite": "Megadeth • Fan",
+    "changeTheme": "Cambiar tema",
+    "changeLanguage": "Cambiar idioma"
+  },
+  "hero": {
+    "title": "Último disco · Gira final",
+    "description": "Noticias, fechas y discografía de Megadeth. Curado para fans. Rápido, simple y full responsive.",
+    "viewDates": "Ver fechas",
+    "listenSingle": "Escuchar single"
+  },
+  "home": {
+    "welcome": "Bienvenido",
+    "comingSoon": "Pronto: noticias, fechas y discos."
+  },
+  "footer": {
+    "disclaimer": "Fan site no oficial. © {year}"
+  }
+}

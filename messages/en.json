@@ -1,0 +1,20 @@
+{
+  "header": {
+    "fanSite": "Megadeth • Fan",
+    "changeTheme": "Change theme",
+    "changeLanguage": "Change language"
+  },
+  "hero": {
+    "title": "Latest album · Farewell tour",
+    "description": "News, dates and discography of Megadeth. Curated for fans. Fast, simple and fully responsive.",
+    "viewDates": "View dates",
+    "listenSingle": "Listen single"
+  },
+  "home": {
+    "welcome": "Welcome",
+    "comingSoon": "Coming soon: news, dates and albums."
+  },
+  "footer": {
+    "disclaimer": "Unofficial fan site. © {year}"
+  }
+}

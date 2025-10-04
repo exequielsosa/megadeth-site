@@ -1,8 +1,11 @@
 "use client";
 
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <Box
       sx={{
@@ -17,19 +20,18 @@ export default function Hero() {
       >
         <Stack spacing={3} alignItems="start">
           <Typography variant="h1" sx={{ fontSize: { xs: 36, md: 56 } }}>
-            Último disco · Gira final
+            {t("title")}
           </Typography>
           <Typography
             variant="h5"
             color="text.secondary"
             sx={{ maxWidth: 720 }}
           >
-            Noticias, fechas y discografía de Megadeth. Curado para fans.
-            Rápido, simple y full responsive.
+            {t("description")}
           </Typography>
           <Stack direction="row" spacing={2}>
-            <Button variant="contained">Ver fechas</Button>
-            <Button variant="outlined">Escuchar single</Button>
+            <Button variant="contained">{t("viewDates")}</Button>
+            <Button variant="outlined">{t("listenSingle")}</Button>
           </Stack>
         </Stack>
       </Container>

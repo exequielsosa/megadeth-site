@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 import ThemeRegistry from "@/theme/ThemeRegistry";
 import { ColorModeProvider } from "@/theme/useColorMode";
 import Header from "@/components/Header";
@@ -26,11 +28,13 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const messages = await getMessages();
+
   return (
     <html lang="es" className={inter.variable} suppressHydrationWarning>
       <body
@@ -42,13 +46,15 @@ export default function RootLayout({
           flexDirection: "column",
         }}
       >
-        <ColorModeProvider>
-          <ThemeRegistry>
-            <Header />
-            <main style={{ flex: 1 }}>{children}</main>
-            <Footer />
-          </ThemeRegistry>
-        </ColorModeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ColorModeProvider>
+            <ThemeRegistry>
+              <Header />
+              <main style={{ flex: 1 }}>{children}</main>
+              <Footer />
+            </ThemeRegistry>
+          </ColorModeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

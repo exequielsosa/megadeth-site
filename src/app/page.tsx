@@ -1,7 +1,10 @@
 import Hero from "@/components/Hero";
 import { Container, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 export default function HomePage() {
+  const t = useTranslations("home");
+
   return (
     <>
       <Hero />
@@ -10,11 +13,9 @@ export default function HomePage() {
         sx={{ maxWidth: 1440, mx: "auto", py: 6, px: { xs: 2, sm: 3 } }}
       >
         <Typography variant="h4" sx={{ mb: 2 }}>
-          Bienvenido
+          {t("welcome")}
         </Typography>
-        <Typography color="text.secondary">
-          Pronto: noticias, fechas y discos.
-        </Typography>
+        <Typography color="text.secondary">{t("comingSoon")}</Typography>
       </Container>
     </>
   );
