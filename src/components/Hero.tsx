@@ -3,7 +3,10 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import ContainerGradient from "../components/atoms/ContainerGradient";
+import Countdown from "./Countdown";
+import YouTubeEmbed from "./YouTubeEmbed";
 import Image from "next/image";
+import Divider from "@mui/material/Divider";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -19,6 +22,7 @@ export default function Hero() {
           <Typography variant="h1" sx={{ fontSize: { xs: 36, md: 56 } }}>
             {t("title")}
           </Typography>
+
           <Box
             width="100%"
             gap={4}
@@ -45,7 +49,7 @@ export default function Hero() {
                   variant="h5"
                   sx={{ fontWeight: 600, color: "text.primary" }}
                 >
-                  {tAlbum("albumName")}: &ldquo;{tAlbum("albumName")}&rdquo;
+                  {tAlbum("albumName")}: &quot;{tAlbum("albumName")}&quot;
                 </Typography>
 
                 <Stack spacing={1.5}>
@@ -55,8 +59,8 @@ export default function Hero() {
                   </Typography>
 
                   <Typography variant="body1" sx={{ fontSize: "1.1rem" }}>
-                    <strong>{tAlbum("firstSingle")}:</strong> &ldquo;
-                    {tAlbum("firstSingleValue")}&rdquo;
+                    <strong>{tAlbum("firstSingle")}:</strong> &quot;
+                    {tAlbum("firstSingleValue")}&quot;
                   </Typography>
 
                   <Typography variant="body1" sx={{ fontSize: "1.1rem" }}>
@@ -102,10 +106,24 @@ export default function Hero() {
                     </Typography>
                   </Typography>
                 </Stack>
+
+                {/* Countdown Component */}
+                <Box mt={1}>
+                  <Countdown />
+                </Box>
               </Stack>
             </Box>
           </Box>
         </Stack>
+        <Divider sx={{ my: 6, width: "100%" }} />
+        {/* YouTube Video */}
+
+        <Typography variant="h3" sx={{ fontSize: { xs: 28, md: 48 } }}>
+          {t("newVideoTitle")}
+        </Typography>
+        <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
+          <YouTubeEmbed videoId="ECXg-a7XZQI" title={t("latestVideo")} />
+        </Box>
       </Container>
     </ContainerGradient>
   );

@@ -12,7 +12,9 @@
     "title": "Latest album · Farewell tour",
     "description": "News, dates and discography of Megadeth. Curated for fans. Fast, simple and fully responsive.",
     "viewDates": "View dates",
-    "listenSingle": "Listen single"
+    "listenSingle": "Listen single",
+    "latestVideo": "Latest Megadeth video",
+    "newVideoTitle": "New video: \"Tipping Point\""
   },
   "album": {
     "finalAlbumTitle": "Album 17 / Megadeth's Final",
@@ -29,6 +31,18 @@
     "includesValue": "Farewell tour and Mustaine's book",
     "preOrder": "Pre-order",
     "officialStore": "Megadeth Official Store"
+  },
+  "countdown": {
+    "title": "Time left until release",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  },
+  "video": {
+    "defaultTitle": "YouTube video",
+    "loading": "Loading video...",
+    "error": "Error loading video"
   },
   "home": {
     "welcome": "Welcome",

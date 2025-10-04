@@ -12,7 +12,9 @@
     "title": "Último disco · Megadeth",
     "description": "Noticias, fechas y discografía de Megadeth. Curado para fans. Rápido, simple y full responsive.",
     "viewDates": "Ver fechas",
-    "listenSingle": "Escuchar single"
+    "listenSingle": "Escuchar single",
+    "latestVideo": "Último video de Megadeth",
+    "newVideoTitle": "Nuevo video: \"Tipping Point\""
   },
   "album": {
     "finalAlbumTitle": "Álbum 17 / Final de Megadeth",
@@ -29,6 +31,18 @@
     "includesValue": "Gira de despedida y libro de Mustaine",
     "preOrder": "Pre-order",
     "officialStore": "Tienda oficial de Megadeth"
+  },
+  "countdown": {
+    "title": "Tiempo restante hasta el lanzamiento",
+    "days": "Días",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos"
+  },
+  "video": {
+    "defaultTitle": "Video de YouTube",
+    "loading": "Cargando video...",
+    "error": "Error al cargar el video"
   },
   "home": {
     "welcome": "Bienvenido",
