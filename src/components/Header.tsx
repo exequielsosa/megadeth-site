@@ -90,12 +90,21 @@ export default function Header() {
         <Toolbar sx={{ gap: 2, px: { xs: 2, sm: 3 } }}>
           <Typography variant="h6" sx={{ fontWeight: 800 }}>
             <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
-              <Image
-                src="/logo-megadeth.png"
-                alt="Megadeth"
-                width={200}
-                height={47}
-              />
+              <Box
+                sx={{
+                  position: "relative",
+                  width: { xs: "150px", sm: "200px" },
+                  height: { xs: "35px", sm: "47px" },
+                }}
+              >
+                <Image
+                  src="/logo-megadeth.png"
+                  alt="Megadeth"
+                  fill
+                  style={{ objectFit: "contain" }}
+                  priority
+                />
+              </Box>
             </Link>
           </Typography>
 
