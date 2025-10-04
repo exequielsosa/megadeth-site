@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import {
   Box,
   Typography,
@@ -6,44 +7,15 @@ import {
   Card,
   CardContent,
   Grid,
+  Button,
+  CardActions,
 } from "@mui/material";
 import ContainerGradient from "@/components/atoms/ContainerGradient";
+import { tourDates } from "@/constants/tourDates";
 
 export default function TourPage() {
   const t = useTranslations("tour");
-
-  const tourDates = [
-    {
-      date: "2024-03-15",
-      city: "Los Angeles",
-      venue: "Hollywood Bowl",
-      country: "USA",
-    },
-    {
-      date: "2024-03-18",
-      city: "New York",
-      venue: "Madison Square Garden",
-      country: "USA",
-    },
-    {
-      date: "2024-03-22",
-      city: "Londres",
-      venue: "Wembley Arena",
-      country: "UK",
-    },
-    {
-      date: "2024-03-25",
-      city: "París",
-      venue: "AccorHotels Arena",
-      country: "Francia",
-    },
-    {
-      date: "2024-03-28",
-      city: "Buenos Aires",
-      venue: "Estadio River Plate",
-      country: "Argentina",
-    },
-  ];
+  const locale = useLocale();
 
   return (
     <ContainerGradient>
@@ -77,11 +49,14 @@ export default function TourPage() {
                     gutterBottom
                     color="primary"
                   >
-                    {new Date(show.date).toLocaleDateString("es-ES", {
-                      day: "numeric",
-                      month: "long",
-                      year: "numeric",
-                    })}
+                    {new Date(show.date).toLocaleDateString(
+                      locale === "es" ? "es-ES" : "en-US",
+                      {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                      }
+                    )}
                   </Typography>
                   <Typography variant="h5" gutterBottom>
                     {show.city}
@@ -93,10 +68,28 @@ export default function TourPage() {
                   >
                     {show.venue}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                     {show.country}
                   </Typography>
                 </CardContent>
+                
+                <CardActions sx={{ p: 2, pt: 0 }}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    fullWidth
+                    href={show.ticketLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      textTransform: "uppercase",
+                      fontWeight: 600,
+                      py: 1.5,
+                    }}
+                  >
+                    {t("buyTickets")}
+                  </Button>
+                </CardActions>
               </Card>
             </Grid>
           ))}

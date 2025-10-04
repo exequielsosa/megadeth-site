@@ -51,7 +51,9 @@
   "tour": {
     "title": "World Tour",
     "subtitle": "Don't miss the upcoming Megadeth concerts",
-    "moreInfo": "More dates will be announced soon. Stay tuned!"
+    "moreInfo": "More dates will be announced soon. Stay tuned!",
+    "buyTickets": "Buy tickets",
+    "soldOut": "Sold out"
   },
   "footer": {
     "disclaimer": "Unofficial fan site. © {year}"

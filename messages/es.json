@@ -51,7 +51,9 @@
   "tour": {
     "title": "Gira Mundial",
     "subtitle": "No te pierdas los próximos conciertos de Megadeth",
-    "moreInfo": "Más fechas serán anunciadas próximamente. ¡Mantente atento!"
+    "moreInfo": "Más fechas serán anunciadas próximamente. ¡Mantente atento!",
+    "buyTickets": "Comprar entradas",
+    "soldOut": "Agotado"
   },
   "footer": {
     "disclaimer": "Fan site no oficial. © {year}"
