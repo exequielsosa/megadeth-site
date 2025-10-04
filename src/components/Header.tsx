@@ -15,7 +15,7 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LanguageIcon from "@mui/icons-material/Language";
 import { useColorMode } from "@/theme/useColorMode";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
@@ -25,9 +25,21 @@ import Image from "next/image";
 export default function Header() {
   const { mode, toggle } = useColorMode();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   const currentLocale = useLocale();
   const t = useTranslations("navigation");
   const pathname = usePathname();
+
+  // Detectar scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50); // Activar después de 50px de scroll
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navigationItems = [
     { label: t("home"), href: "/" },
@@ -48,12 +60,31 @@ export default function Header() {
     handleLanguageClose();
   };
 
+  console.log("Current locale:", mode);
+
+  // Función para obtener el color de fondo basado en scroll y modo
+  const getBackgroundColor = () => {
+    if (!isScrolled) return "transparent";
+    return mode === "dark"
+      ? "rgba(0, 0, 0, 0.95)"
+      : "rgba(255, 255, 255, 0.95)";
+  };
+
   return (
     <AppBar
       position="sticky"
-      elevation={0}
-      color="transparent"
-      sx={{ padding: 1 }}
+      elevation={isScrolled ? 4 : 0}
+      sx={{
+        backgroundColor: getBackgroundColor(),
+        backdropFilter: isScrolled ? "blur(10px)" : "none",
+        borderBottom: isScrolled
+          ? mode === "dark"
+            ? "1px solid rgba(255, 255, 255, 0.1)"
+            : "1px solid rgba(0, 0, 0, 0.1)"
+          : "none",
+        transition: "all 0.3s ease-in-out",
+        padding: 1,
+      }}
     >
       <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
         <Toolbar sx={{ gap: 2, px: { xs: 2, sm: 3 } }}>
