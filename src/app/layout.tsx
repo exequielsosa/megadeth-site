@@ -33,11 +33,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={inter.variable} suppressHydrationWarning>
-      <body>
+      <body
+        style={{
+          margin: 0,
+          padding: 0,
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         <ColorModeProvider>
           <ThemeRegistry>
             <Header />
-            {children}
+            <main style={{ flex: 1 }}>{children}</main>
             <Footer />
           </ThemeRegistry>
         </ColorModeProvider>

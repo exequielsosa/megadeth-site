@@ -11,7 +11,10 @@ export default function Hero() {
           "radial-gradient(60% 80% at 50% 0%, rgba(239,83,80,0.15), transparent 60%)",
       }}
     >
-      <Container maxWidth="lg">
+      <Container
+        maxWidth={false}
+        sx={{ maxWidth: 1440, mx: "auto", px: { xs: 2, sm: 3 } }}
+      >
         <Stack spacing={3} alignItems="start">
           <Typography variant="h1" sx={{ fontSize: { xs: 36, md: 56 } }}>
             Último disco · Gira final

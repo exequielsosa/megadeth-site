@@ -5,7 +5,10 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Container maxWidth="lg" sx={{ py: 6 }}>
+      <Container
+        maxWidth={false}
+        sx={{ maxWidth: 1440, mx: "auto", py: 6, px: { xs: 2, sm: 3 } }}
+      >
         <Typography variant="h4" sx={{ mb: 2 }}>
           Bienvenido
         </Typography>
