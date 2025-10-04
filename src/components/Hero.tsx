@@ -27,9 +27,9 @@ export default function Hero() {
             width="100%"
             gap={4}
             display="flex"
-            flexDirection={{ xs: "column", md: "row" }}
-            justifyContent={{ xs: "center", md: "flex-start" }}
-            alignItems={{ xs: "center", md: "flex-start" }}
+            flexDirection={{ xs: "column", lg: "row" }}
+            justifyContent={{ xs: "center", lg: "flex-start" }}
+            alignItems={{ xs: "center", lg: "flex-start" }}
           >
             <Box
               sx={{
