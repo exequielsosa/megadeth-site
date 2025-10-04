@@ -1,34 +1,279 @@
 [
   {
-    "id": "megadeth-2026",
-    "title": "Megadeth",
-    "year": 2026,
-    "cover": "/covers/megadeth-2026.jpg",
-    "label": "Tradecraft / Frontiers",
-    "producers": ["Dave Mustaine", "Chris Rakestraw"],
-    "description": "Álbum final de estudio de Megadeth.",
-    "isUpcoming": true,
-    "releaseDate": "2026-01-23",
-    "streaming": {
-      "spotify": "https://open.spotify.com/album/...",
-      "appleMusic": "https://music.apple.com/album/..."
-    }
-  },
-  {
     "id": "the-sick-the-dying-and-the-dead",
     "title": "The Sick, The Dying... and The Dead!",
     "year": 2022,
-    "cover": "/covers/the-sick-the-dying.jpg",
+    "cover": "/images/albums/16-sick.webp",
     "label": "Tradecraft / Universal",
     "producers": ["Dave Mustaine", "Chris Rakestraw"],
-    "description": "Regreso al thrash con producción filosa.",
+    "description": "Décimo sexto LP: regreso al thrash con producción filosa y nueva formación.",
     "streaming": {
-      "spotify": "https://open.spotify.com/album/...",
-      "youtube": "https://www.youtube.com/playlist?list=..."
+      "spotify": "https://open.spotify.com/album/3DrgkZvzYlCht8QmV9fSlA",
+      "youtube": "https://www.youtube.com/playlist?list=PLKcGEIO7V0rV8T1XbB9kH2M7vRr3oW2MZ"
     },
     "tracks": [
       { "n": 1, "title": "The Sick, The Dying... And The Dead!" },
-      { "n": 2, "title": "Life In Hell" }
+      { "n": 2, "title": "Life In Hell" },
+      { "n": 3, "title": "Night Stalkers" },
+      { "n": 4, "title": "Dogs of Chernobyl" },
+      { "n": 5, "title": "Sacrifice" },
+      { "n": 6, "title": "Junkie" },
+      { "n": 7, "title": "Psychopathy" },
+      { "n": 8, "title": "Killing Time" },
+      { "n": 9, "title": "Soldier On!" },
+      { "n": 10, "title": "Celebutante" },
+      { "n": 11, "title": "Mission To Mars" },
+      { "n": 12, "title": "We'll Be Back" }
+    ]
+  },
+  {
+    "id": "dystopia",
+    "title": "Dystopia",
+    "year": 2016,
+    "cover": "/images/albums/15-dystopia.webp",
+    "label": "Tradecraft / Universal",
+    "producers": ["Dave Mustaine", "Chris Rakestraw"],
+    "description": "Quinceavo álbum; primer disco con Kiko Loureiro; ganó el Grammy a Mejor Performance Metal por “Dystopia”.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/4sP7CAPrmdBD1ojBBrPxiV",
+      "appleMusic": null
+    },
+    "tracks": [
+      { "n": 1, "title": "The Threat Is Real" },
+      { "n": 2, "title": "Dystopia" },
+      { "n": 3, "title": "Fatal Illusion" },
+      { "n": 4, "title": "Death From Within" },
+      { "n": 5, "title": "Bullet To The Brain" },
+      { "n": 6, "title": "Post American World" },
+      { "n": 7, "title": "Poisonous Shadows" },
+      { "n": 8, "title": "Conquer Or Die!" },
+      { "n": 9, "title": "Lying In State" },
+      { "n": 10, "title": "The Emperor" },
+      { "n": 11, "title": "Foreign Policy" }
+    ]
+  },
+  {
+    "id": "super-collider",
+    "title": "Super Collider",
+    "year": 2013,
+    "cover": "/images/albums/14-super.webp",
+    "label": "Tradecraft / Universal",
+    "producers": ["Dave Mustaine", "Johnny K"],
+    "description": "Décimo cuarto LP; sonido más hard rock; incluye colaboración con David Draiman.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/5uQWmN2J0nZl19Gm1yHw6a"
+    },
+    "tracks": [
+      { "n": 1, "title": "Kingmaker" },
+      { "n": 2, "title": "Super Collider" }
+    ]
+  },
+  {
+    "id": "th1rt3en",
+    "title": "TH1RT3EN",
+    "year": 2011,
+    "cover": "/images/albums/13-13.webp",
+    "label": "Roadrunner",
+    "producers": ["Johnny K", "Dave Mustaine"],
+    "description": "Regreso de David Ellefson al bajo; mezcla de material nuevo y regrabaciones.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/1Ue0azG7gbwnS5hAknI6D0"
+    },
+    "tracks": [
+      { "n": 1, "title": "Sudden Death" },
+      { "n": 2, "title": "Public Enemy No. 1" }
+    ]
+  },
+  {
+    "id": "endgame",
+    "title": "Endgame",
+    "year": 2009,
+    "cover": "/images/albums/12-endgame.webp",
+    "label": "Roadrunner",
+    "producers": ["Dave Mustaine", "Andy Sneap"],
+    "description": "Vuelta a la velocidad; primer álbum con Chris Broderick.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/0G5qC48D3MI8YBKTVwIiz1"
+    },
+    "tracks": [
+      { "n": 1, "title": "Dialectic Chaos" },
+      { "n": 2, "title": "This Day We Fight!" }
+    ]
+  },
+  {
+    "id": "united-abominations",
+    "title": "United Abominations",
+    "year": 2007,
+    "cover": "/images/albums/11-united.webp",
+    "label": "Roadrunner",
+    "producers": ["Dave Mustaine", "Jeff Balding", "Andy Sneap"],
+    "description": "Onceavo LP; sonido moderno con mezcla de Andy Sneap; incluye “A Tout Le Monde (Set Me Free)”.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/4YeGSTxQshqOyT6DIOaT2b"
+    },
+    "tracks": [
+      { "n": 1, "title": "Sleepwalker" },
+      { "n": 2, "title": "Washington Is Next!" }
+    ]
+  },
+  {
+    "id": "the-system-has-failed",
+    "title": "The System Has Failed",
+    "year": 2004,
+    "cover": "/images/albums/10-tshf.webp",
+    "label": "Sanctuary",
+    "producers": ["Dave Mustaine", "Jeff Balding"],
+    "description": "Regreso tras la lesión de Mustaine; participación de Chris Poland en guitarras.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/5v2wU0n9LSVTYW9vO7NX5m"
+    },
+    "tracks": [
+      { "n": 1, "title": "Blackmail the Universe" },
+      { "n": 2, "title": "Die Dead Enough" }
+    ]
+  },
+  {
+    "id": "the-world-needs-a-hero",
+    "title": "The World Needs a Hero",
+    "year": 2001,
+    "cover": "/images/albums/09-twnah.webp",
+    "label": "Sanctuary",
+    "producers": ["Bill Kennedy", "Dave Mustaine"],
+    "description": "Vuelta a un sonido más heavy tras la etapa de fines de los 90.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/5YFrdrFUHGgAvK8iXFxULa"
+    },
+    "tracks": [
+      { "n": 1, "title": "Disconnect" },
+      { "n": 2, "title": "The World Needs a Hero" }
+    ]
+  },
+  {
+    "id": "risk",
+    "title": "Risk",
+    "year": 1999,
+    "cover": "/images/albums/08-risk.webp",
+    "label": "Capitol",
+    "producers": ["Dann Huff", "Dave Mustaine"],
+    "description": "Apuesta de hard rock/alt metal; último con Marty Friedman.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/0iI53eVNLCjdlfcdngAUyH"
+    },
+    "tracks": [
+      { "n": 1, "title": "Insomnia" },
+      { "n": 2, "title": "Prince of Darkness" }
+    ]
+  },
+  {
+    "id": "cryptic-writings",
+    "title": "Cryptic Writings",
+    "year": 1997,
+    "cover": "/images/albums/07-cryptic.webp",
+    "label": "Capitol",
+    "producers": ["Dann Huff"],
+    "description": "Corte más melódico y orientado a radio; último con Nick Menza.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/6nZ3O6o1EqlA1RRnSNQ2Vq"
+    },
+    "tracks": [
+      { "n": 1, "title": "Trust" },
+      { "n": 2, "title": "Almost Honest" }
+    ]
+  },
+  {
+    "id": "youthanasia",
+    "title": "Youthanasia",
+    "year": 1994,
+    "cover": "/images/albums/06-youthanasia.webp",
+    "label": "Capitol",
+    "producers": ["Max Norman", "Dave Mustaine"],
+    "description": "Sexto LP; enfoque más groove y melodías; arte icónico de bebés colgando.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/5iBvQWRRazoyt7CrEPFBsW"
+    },
+    "tracks": [
+      { "n": 1, "title": "Reckoning Day" },
+      { "n": 2, "title": "Train of Consequences" }
+    ]
+  },
+  {
+    "id": "countdown-to-extinction",
+    "title": "Countdown to Extinction",
+    "year": 1992,
+    "cover": "/images/albums/05-countdown.jpg",
+    "label": "Capitol",
+    "producers": ["Max Norman", "Dave Mustaine"],
+    "description": "Clásico multiplatino con hits masivos como “Symphony of Destruction”.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/1w9opfGdFtR3ulNHxnnO1e"
+    },
+    "tracks": [
+      { "n": 1, "title": "Skin o' My Teeth" },
+      { "n": 2, "title": "Symphony of Destruction" }
+    ]
+  },
+  {
+    "id": "rust-in-peace",
+    "title": "Rust in Peace",
+    "year": 1990,
+    "cover": "/images/albums/04-rip.webp",
+    "label": "Capitol",
+    "producers": ["Dave Mustaine", "Mike Clink"],
+    "description": "Piedra angular del thrash; primera aparición de Marty Friedman y Nick Menza.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/4e6ML9RBhDyyKTaTwbiRZv"
+    },
+    "tracks": [
+      { "n": 1, "title": "Holy Wars... The Punishment Due" },
+      { "n": 2, "title": "Hangar 18" }
+    ]
+  },
+  {
+    "id": "so-far-so-good-so-what",
+    "title": "So Far, So Good... So What!",
+    "year": 1988,
+    "cover": "/images/albums/03-sfsgsw.webp",
+    "label": "Capitol",
+    "producers": ["Paul Lani", "Dave Mustaine"],
+    "description": "Tercer LP; sonido crudo y veloz; única aparición de Behler/Young.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/intl-es/album/1ziUtOuRT545OI4cnHEMhC?utm_campaign=fAfTD_96_fmly&utm_source=Original_Original&utm_medium=Original&utm_content=3fc3f4b8-7496-40c0-ab05-2543d0240164_none_Megadeth_none_The%20Sick%2C%20The%20Dying%E2%80%A6%20And%20The%20Dead%21_none_20220606_https%3A%2F%2Fwww.megadeth.com%2F_universal-music-enterprises-ume_US_megadeth.lnk.to%2FSickDyingDead"
+    },
+    "tracks": [
+      { "n": 1, "title": "Into the Lungs of Hell" },
+      { "n": 2, "title": "Set the World Afire" }
+    ]
+  },
+  {
+    "id": "peace-sells-but-whos-buying",
+    "title": "Peace Sells... but Who's Buying?",
+    "year": 1986,
+    "cover": "/images/albums/02-peace.webp",
+    "label": "Combat / Capitol",
+    "producers": ["Dave Mustaine", "Randy Burns"],
+    "description": "El despegue comercial; base del sonido clásico de la banda.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/4U8ZF5zDIRy4lBnnXBN2uO"
+    },
+    "tracks": [
+      { "n": 1, "title": "Wake Up Dead" },
+      { "n": 2, "title": "The Conjuring" }
+    ]
+  },
+  {
+    "id": "killing-is-my-business-and-business-is-good",
+    "title": "Killing Is My Business... and Business Is Good!",
+    "year": 1985,
+    "cover": "/images/albums/01-killing.webp",
+    "label": "Combat",
+    "producers": ["Dave Mustaine", "Karat Faye"],
+    "description": "Debut feroz y vertiginoso; germen del thrash de Megadeth.",
+    "streaming": {
+      "spotify": "https://open.spotify.com/album/0TFQuO4m3XR5pTJCFS88Qk"
+    },
+    "tracks": [
+      { "n": 1, "title": "Last Rites / Loved to Deth" },
+      { "n": 2, "title": "Killing Is My Business... And Business Is Good!" }
     ]
   }
 ]
