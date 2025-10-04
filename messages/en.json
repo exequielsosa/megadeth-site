@@ -4,6 +4,10 @@
     "changeTheme": "Change theme",
     "changeLanguage": "Change language"
   },
+  "navigation": {
+    "home": "Home",
+    "tour": "Tour"
+  },
   "hero": {
     "title": "Latest album · Farewell tour",
     "description": "News, dates and discography of Megadeth. Curated for fans. Fast, simple and fully responsive.",
@@ -13,6 +17,11 @@
   "home": {
     "welcome": "Welcome",
     "comingSoon": "Coming soon: news, dates and albums."
+  },
+  "tour": {
+    "title": "World Tour",
+    "subtitle": "Don't miss the upcoming Megadeth concerts",
+    "moreInfo": "More dates will be announced soon. Stay tuned!"
   },
   "footer": {
     "disclaimer": "Unofficial fan site. © {year}"

@@ -4,6 +4,10 @@
     "changeTheme": "Cambiar tema",
     "changeLanguage": "Cambiar idioma"
   },
+  "navigation": {
+    "home": "Inicio",
+    "tour": "Gira"
+  },
   "hero": {
     "title": "Último disco · Gira final",
     "description": "Noticias, fechas y discografía de Megadeth. Curado para fans. Rápido, simple y full responsive.",
@@ -13,6 +17,11 @@
   "home": {
     "welcome": "Bienvenido",
     "comingSoon": "Pronto: noticias, fechas y discos."
+  },
+  "tour": {
+    "title": "Gira Mundial",
+    "subtitle": "No te pierdas los próximos conciertos de Megadeth",
+    "moreInfo": "Más fechas serán anunciadas próximamente. ¡Mantente atento!"
   },
   "footer": {
     "disclaimer": "Fan site no oficial. © {year}"
