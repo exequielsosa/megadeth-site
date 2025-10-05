@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "the-sick-the-dying-and-the-dead",
     "title": "The Sick, The Dying... and The Dead!",
@@ -6,7 +6,16 @@
     "cover": "/images/albums/16-sick.webp",
     "label": "Tradecraft / Universal",
     "producers": ["Dave Mustaine", "Chris Rakestraw"],
-    "description": "Décimo sexto LP: regreso al thrash con producción filosa y nueva formación.",
+    "description": {
+      "short": {
+        "es": "Décimo sexto LP: regreso al thrash con producción filosa y nueva formación.",
+        "en": "Sixteenth LP: return to thrash with sharp production and new lineup."
+      },
+      "extended": {
+        "es": "El decimosexto álbum de estudio marca el regreso definitivo de Megadeth al thrash metal tras años de experimentación. Con una producción cristalina a cargo de Chris Rakestraw y la consolidación de la formación con Kiko Loureiro y Dirk Verbeuren, este disco demuestra que la banda mantiene intacta su capacidad destructiva.",
+        "en": "The sixteenth studio album marks Megadeth's definitive return to thrash metal after years of experimentation. With crystal-clear production by Chris Rakestraw and the consolidation of the lineup featuring Kiko Loureiro and Dirk Verbeuren, this record proves the band maintains their destructive capacity intact."
+      }
+    },
     "streaming": {
       "spotify": "https://open.spotify.com/intl-es/album/1ziUtOuRT545OI4cnHEMhC?utm_campaign=fAfTD_96_fmly&utm_source=Original_Original&utm_medium=Original&utm_content=3fc3f4b8-7496-40c0-ab05-2543d0240164_none_Megadeth_none_The%20Sick%2C%20The%20Dying%E2%80%A6%20And%20The%20Dead%21_none_20220606_https%3A%2F%2Fwww.megadeth.com%2F_universal-music-enterprises-ume_US_megadeth.lnk.to%2FSickDyingDead"
     },
@@ -92,7 +101,16 @@
     "cover": "/images/albums/15-dystopia.webp",
     "label": "Tradecraft / Universal",
     "producers": ["Dave Mustaine", "Chris Rakestraw"],
-    "description": "Quinceavo álbum; primer disco con Kiko Loureiro; ganó el Grammy a Mejor Performance Metal por “Dystopia”.",
+    "description": {
+      "short": {
+        "es": "Quinceavo disco; primer disco con Kiko Loureiro; ganó el Grammy a Mejor Performance Metal por 'Dystopia'.",
+        "en": "Fifteenth album; first record with Kiko Loureiro; won Grammy for Best Metal Performance for 'Dystopia'."
+      },
+      "extended": {
+        "es": "El quinceavo álbum marca una revitalización creativa de Megadeth con la incorporación del virtuoso guitarrista brasileño Kiko Loureiro. Este disco representa un regreso triunfal al thrash metal que les valió el reconocimiento de la Academia con el Grammy a Mejor Performance Metal por la canción titular, demostrando que la banda mantiene su relevancia y poder creativo después de más de tres décadas.",
+        "en": "The fifteenth album marks a creative revitalization of Megadeth with the incorporation of Brazilian virtuoso guitarist Kiko Loureiro. This record represents a triumphant return to thrash metal that earned them Academy recognition with the Grammy for Best Metal Performance for the title track, proving the band maintains its relevance and creative power after more than three decades."
+      }
+    },
     "streaming": {
       "spotify": "https://open.spotify.com/album/4sP7CAPrmdBD1ojBBrPxiV"
     },
@@ -172,7 +190,16 @@
     "cover": "/images/albums/14-super.webp",
     "label": "Tradecraft / Universal",
     "producers": ["Dave Mustaine", "Johnny K"],
-    "description": "Décimo cuarto LP; sonido más hard rock; incluye colaboración con David Draiman.",
+    "description": {
+      "short": {
+        "es": "DÃ©cimo cuarto LP; sonido mÃ¡s hard rock; incluye colaboraciÃ³n con David Draiman.",
+        "en": "Fourteenth LP; more hard rock sound; includes collaboration with David Draiman."
+      },
+      "extended": {
+        "es": "El decimocuarto Ã¡lbum representa otro experimento sonoro de Megadeth hacia un territorio mÃ¡s hard rock y menos thrash. Con una producciÃ³n mÃ¡s comercial y la colaboraciÃ³n especial de David Draiman de Disturbed, este disco muestra la constante bÃºsqueda de la banda por evolucionar, aunque dividiÃ³ opiniones entre los fanÃ¡ticos mÃ¡s puristas del metal extremo.",
+        "en": "The fourteenth album represents another sonic experiment by Megadeth towards more hard rock and less thrash territory. With more commercial production and special collaboration from Disturbed's David Draiman, this record shows the band's constant search to evolve, though it divided opinions among extreme metal purists."
+      }
+    },
     "streaming": {
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_lZb_JnxiNLxOH5BPpiTIB7lu7uVMddYRw"
     },
@@ -252,7 +279,16 @@
     "cover": "/images/albums/13-13.webp",
     "label": "Roadrunner",
     "producers": ["Johnny K", "Dave Mustaine"],
-    "description": "Regreso de David Ellefson al bajo; mezcla de material nuevo y regrabaciones.",
+    "description": {
+      "short": {
+        "es": "Regreso de David Ellefson al bajo; mezcla de material nuevo y regrabaciones.",
+        "en": "David Ellefson's return on bass; mix of new material and re-recordings."
+      },
+      "extended": {
+        "es": "El decimotercer Ã¡lbum marca el emotivo regreso de David Ellefson al bajo despuÃ©s de aÃ±os de separaciÃ³n, reuniendo a la formaciÃ³n clÃ¡sica de los fundadores. Este disco presenta una mezcla Ãºnica de material completamente nuevo junto con regrabaciones de temas inÃ©ditos de los archivos de la banda, creando un puente entre el pasado y el presente de Megadeth.",
+        "en": "The thirteenth album marks the emotional return of David Ellefson on bass after years of separation, reuniting the classic lineup of the founders. This record presents a unique mix of completely new material alongside re-recordings of unreleased tracks from the band's archives, creating a bridge between Megadeth's past and present."
+      }
+    },
     "streaming": {
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mxtFZed8Xp9EaJbX-I9yTmUEOsWQMC0ag"
     },
@@ -344,7 +380,16 @@
     "cover": "/images/albums/12-endgame.webp",
     "label": "Roadrunner",
     "producers": ["Dave Mustaine", "Andy Sneap"],
-    "description": "Vuelta a la velocidad; primer álbum con Chris Broderick.",
+    "description": {
+      "short": {
+        "es": "Vuelta a la velocidad; primer Ã¡lbum con Chris Broderick.",
+        "en": "Return to speed; first album with Chris Broderick."
+      },
+      "extended": {
+        "es": "El duodÃ©cimo Ã¡lbum marca el regreso de Megadeth a la velocidad y agresividad que los caracterizÃ³ en sus mejores Ã©pocas. Con la llegada del virtuoso guitarrista Chris Broderick, la banda recupera la complejidad tÃ©cnica y la energÃ­a thrash, demostrando que aÃºn podÃ­an competir con las nuevas generaciones del metal extremo.",
+        "en": "The twelfth album marks Megadeth's return to the speed and aggression that characterized them in their best periods. With the arrival of virtuoso guitarist Chris Broderick, the band recovers technical complexity and thrash energy, proving they could still compete with new generations of extreme metal."
+      }
+    },
     "streaming": {
       "spotify": "https://open.spotify.com/album/0G5qC48D3MI8YBKTVwIiz1"
     },
@@ -424,7 +469,16 @@
     "cover": "/images/albums/11-united.webp",
     "label": "Roadrunner",
     "producers": ["Dave Mustaine", "Jeff Balding", "Andy Sneap"],
-    "description": "Onceavo LP; sonido moderno con mezcla de Andy Sneap; incluye “A Tout Le Monde (Set Me Free)”.",
+    "description": {
+      "short": {
+        "es": "Onceavo LP; sonido moderno con mezcla de Andy Sneap; incluye 'A Tout Le Monde (Set Me Free)'.",
+        "en": "Eleventh LP; modern sound with Andy Sneap mix; includes 'A Tout Le Monde (Set Me Free)'."
+      },
+      "extended": {
+        "es": "El undÃ©cimo Ã¡lbum marca una nueva era con un sonido moderno gracias a la mezcla de Andy Sneap, que le dio una producciÃ³n mÃ¡s pesada y contemporÃ¡nea. Este disco incluye la regrabaciÃ³n de 'A Tout Le Monde' junto a Lacuna Coil, mostrando la capacidad de Megadeth para reinventar sus clÃ¡sicos mientras mantiene la relevancia en el metal moderno.",
+        "en": "The eleventh album marks a new era with a modern sound thanks to Andy Sneap's mix, which gave it a heavier and more contemporary production. This record includes the re-recording of 'A Tout Le Monde' featuring Lacuna Coil, showing Megadeth's ability to reinvent their classics while maintaining relevance in modern metal."
+      }
+    },
     "streaming": {
       "spotify": "https://open.spotify.com/album/4YeGSTxQshqOyT6DIOaT2b"
     },
@@ -473,7 +527,7 @@
       },
       {
         "n": 8,
-        "title": "À Tout le Monde (Set Me Free)",
+        "title": "Ã€ Tout le Monde (Set Me Free)",
         "duration": "4:12",
         "writers": ["Dave Mustaine", "Cristina Scabbia"]
       },
@@ -504,7 +558,16 @@
     "cover": "/images/albums/10-tshf.webp",
     "label": "Sanctuary",
     "producers": ["Dave Mustaine", "Jeff Balding"],
-    "description": "Regreso tras la lesión de Mustaine; participación de Chris Poland en guitarras.",
+    "description": {
+      "short": {
+        "es": "Regreso tras la lesiÃ³n de Mustaine; participaciÃ³n de Chris Poland en guitarras.",
+        "en": "Return after Mustaine's injury; featuring Chris Poland on guitars."
+      },
+      "extended": {
+        "es": "El dÃ©cimo Ã¡lbum marca el dramÃ¡tico regreso de Dave Mustaine despuÃ©s de sufrir una lesiÃ³n en el brazo que casi termina con su carrera. Este disco representa la resurrecciÃ³n de Megadeth con la participaciÃ³n especial de Chris Poland, guitarrista original de la banda, aÃ±adiendo un toque nostÃ¡lgico al sonido renovado y demostrando que la creatividad de Mustaine permanecÃ­a intacta.",
+        "en": "The tenth album marks Dave Mustaine's dramatic return after suffering an arm injury that nearly ended his career. This record represents Megadeth's resurrection with special participation from Chris Poland, the band's original guitarist, adding a nostalgic touch to the renewed sound and proving that Mustaine's creativity remained intact."
+      }
+    },
     "streaming": {
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_l3p-K0XPW1jpZP0zdTXWUih7xTWGWLHOg"
     },
@@ -590,7 +653,16 @@
     "cover": "/images/albums/09-twnah.webp",
     "label": "Sanctuary",
     "producers": ["Bill Kennedy", "Dave Mustaine"],
-    "description": "Vuelta a un sonido más heavy tras la etapa de fines de los 90.",
+    "description": {
+      "short": {
+        "es": "Vuelta a un sonido mÃ¡s heavy tras la etapa de fines de los 90.",
+        "en": "Return to a heavier sound after the late 90s period."
+      },
+      "extended": {
+        "es": "El noveno Ã¡lbum marca el regreso de Megadeth a un sonido mÃ¡s pesado despuÃ©s de los experimentos de los aÃ±os 90. Aunque sin alcanzar la intensidad de los Ã¡lbumes clÃ¡sicos, este disco muestra la intenciÃ³n de la banda de reconectar con sus raÃ­ces thrash, respondiendo a las crÃ­ticas de los fanes que demandaban un retorno al metal mÃ¡s agresivo.",
+        "en": "The ninth album marks Megadeth's return to a heavier sound after the 90s experiments. While not reaching the intensity of the classic albums, this record shows the band's intention to reconnect with their thrash roots, responding to fan criticism demanding a return to more aggressive metal."
+      }
+    },
     "streaming": {
       "spotify": "https://open.spotify.com/album/5YFrdrFUHGgAvK8iXFxULa"
     },
@@ -676,7 +748,16 @@
     "cover": "/images/albums/08-risk.webp",
     "label": "Capitol",
     "producers": ["Dann Huff", "Dave Mustaine"],
-    "description": "Apuesta de hard rock/alt metal; último con Marty Friedman.",
+    "description": {
+      "short": {
+        "es": "Apuesta de hard rock/alt metal; Ãºltimo con Marty Friedman.",
+        "en": "Hard rock/alt metal gamble; last with Marty Friedman."
+      },
+      "extended": {
+        "es": "El octavo Ã¡lbum representa el mayor alejamiento de Megadeth del thrash metal, explorando sonidos de hard rock alternativo que dividieron a la base de fans. Este experimento comercial marca el final de la era dorada con la partida de Marty Friedman, cerrando asÃ­ el capÃ­tulo mÃ¡s exitoso creativamente de la banda. A pesar de la controversia, demostrÃ³ la voluntad de Megadeth de arriesgar y experimentar.",
+        "en": "The eighth album represents Megadeth's greatest departure from thrash metal, exploring alternative hard rock sounds that divided the fanbase. This commercial experiment marks the end of the golden era with Marty Friedman's departure, thus closing the band's most creatively successful chapter. Despite the controversy, it demonstrated Megadeth's willingness to take risks and experiment."
+      }
+    },
     "streaming": {
       "spotify": "https://open.spotify.com/album/0iI53eVNLCjdlfcdngAUyH"
     },
@@ -762,7 +843,16 @@
     "cover": "/images/albums/07-cryptic.webp",
     "label": "Capitol",
     "producers": ["Dann Huff"],
-    "description": "Corte más melódico y orientado a radio; último con Nick Menza.",
+    "description": {
+      "short": {
+        "es": "Corte mÃ¡s melÃ³dico y orientado a radio; Ãºltimo con Nick Menza.",
+        "en": "More melodic and radio-oriented approach; last with Nick Menza."
+      },
+      "extended": {
+        "es": "El sÃ©ptimo Ã¡lbum de estudio representa la mayor aproximaciÃ³n de Megadeth al sonido mainstream, con un enfoque mÃ¡s melÃ³dico y orientado a la radio bajo la producciÃ³n de Dann Huff. Marca el final de una era siendo el Ãºltimo disco con el baterista Nick Menza, quien habÃ­a sido parte integral del sonido clÃ¡sico de la banda desde 'Rust in Peace'.",
+        "en": "The seventh studio album represents Megadeth's closest approach to mainstream sound, with a more melodic and radio-oriented focus under Dann Huff's production. It marks the end of an era being the last record with drummer Nick Menza, who had been an integral part of the band's classic sound since 'Rust in Peace'."
+      }
+    },
     "streaming": {
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mVpayAum5S7IRdUGfnhdEGP7tmeNnLI8k"
     },
@@ -848,7 +938,16 @@
     "cover": "/images/albums/06-youthanasia.webp",
     "label": "Capitol",
     "producers": ["Max Norman", "Dave Mustaine"],
-    "description": "Sexto LP; enfoque más groove y melodías; arte icónico de bebés colgando.",
+    "description": {
+      "short": {
+        "es": "Sexto LP; enfoque mÃ¡s groove y melodÃ­as; arte icÃ³nico de bebÃ©s colgando.",
+        "en": "Sixth LP; more groove and melodies; iconic hanging babies artwork."
+      },
+      "extended": {
+        "es": "El sexto Ã¡lbum de estudio explora un territorio mÃ¡s groove-orientado sin abandonar la intensidad que caracteriza a Megadeth. Con una producciÃ³n refinada de Max Norman y una mayor atenciÃ³n a las melodÃ­as, este disco presenta un equilibrio entre accesibilidad y complejidad. Su portada controversial con bebÃ©s colgando se convirtiÃ³ en una de las imÃ¡genes mÃ¡s reconocibles del metal.",
+        "en": "The sixth studio album explores more groove-oriented territory without abandoning the intensity that characterizes Megadeth. With refined production by Max Norman and greater attention to melodies, this record presents a balance between accessibility and complexity. Its controversial cover featuring hanging babies became one of metal's most recognizable images."
+      }
+    },
     "streaming": {
       "spotify": "https://open.spotify.com/album/5iBvQWRRazoyt7CrEPFBsW"
     },
@@ -934,7 +1033,16 @@
     "cover": "/images/albums/05-countdown.jpg",
     "label": "Capitol",
     "producers": ["Max Norman", "Dave Mustaine"],
-    "description": "Clásico multiplatino con hits masivos como “Symphony of Destruction”.",
+    "description": {
+      "short": {
+        "es": "ClÃ¡sico multiplatino con hits masivos como 'Symphony of Destruction'.",
+        "en": "Multi-platinum classic with massive hits like 'Symphony of Destruction'."
+      },
+      "extended": {
+        "es": "El quinto Ã¡lbum de estudio representa el pico comercial de Megadeth, alcanzando el doble platino en Estados Unidos. Con una producciÃ³n mÃ¡s pulida de Max Norman y composiciones mÃ¡s accesibles sin perder intensidad, canciones como 'Symphony of Destruction' y 'Sweating Bullets' se convirtieron en himnos del metal que trascienden generaciones, consolidando a la banda como una de las Big Four del thrash.",
+        "en": "The fifth studio album represents Megadeth's commercial peak, achieving double platinum status in the United States. With more polished production by Max Norman and more accessible compositions without losing intensity, songs like 'Symphony of Destruction' and 'Sweating Bullets' became metal anthems that transcend generations, cementing the band as one of the Big Four of thrash."
+      }
+    },
     "streaming": {
       "spotify": "https://open.spotify.com/album/1w9opfGdFtR3ulNHxnnO1e"
     },
@@ -1014,7 +1122,16 @@
     "cover": "/images/albums/04-rip.webp",
     "label": "Capitol",
     "producers": ["Dave Mustaine", "Mike Clink"],
-    "description": "Piedra angular del thrash; primera aparición de Marty Friedman y Nick Menza.",
+    "description": {
+      "short": {
+        "es": "Piedra angular del thrash; primera apariciÃ³n de Marty Friedman y Nick Menza.",
+        "en": "Thrash cornerstone; first appearance of Marty Friedman and Nick Menza."
+      },
+      "extended": {
+        "es": "Considerado una de las obras maestras absolutas del thrash metal, este cuarto Ã¡lbum marca la llegada de la formaciÃ³n clÃ¡sica con Marty Friedman en guitarra y Nick Menza en baterÃ­a. Con una producciÃ³n impecable de Mike Clink y composiciones legendarias como 'Holy Wars' y 'Hangar 18', este disco definiÃ³ los estÃ¡ndares tÃ©cnicos y compositivos del gÃ©nero para toda una generaciÃ³n.",
+        "en": "Considered one of the absolute masterpieces of thrash metal, this fourth album marks the arrival of the classic lineup with Marty Friedman on guitar and Nick Menza on drums. With impeccable production by Mike Clink and legendary compositions like 'Holy Wars' and 'Hangar 18', this record defined the technical and compositional standards of the genre for an entire generation."
+      }
+    },
     "streaming": {
       "spotify": "https://open.spotify.com/album/4e6ML9RBhDyyKTaTwbiRZv"
     },
@@ -1082,7 +1199,16 @@
     "cover": "/images/albums/03-sfsgsw.webp",
     "label": "Capitol",
     "producers": ["Paul Lani", "Dave Mustaine"],
-    "description": "Tercer LP; sonido crudo y veloz; única aparición de Behler/Young.",
+    "description": {
+      "short": {
+        "es": "Tercer LP; sonido crudo y veloz; Ãºnica apariciÃ³n de Behler/Young.",
+        "en": "Third LP; raw and fast sound; only appearance of Behler/Young."
+      },
+      "extended": {
+        "es": "El tercer Ã¡lbum de estudio marca una etapa de transiciÃ³n con la Ãºnica participaciÃ³n del baterista Chuck Behler y el guitarrista Jeff Young. Con un sonido mÃ¡s crudo y agresivo que su predecesor, este disco captura la energÃ­a salvaje de Megadeth en un momento de cambios, manteniendo la velocidad y ferocidad que caracterizarÃ­a su sonido clÃ¡sico.",
+        "en": "The third studio album marks a transitional period with the only participation of drummer Chuck Behler and guitarist Jeff Young. With a rawer and more aggressive sound than its predecessor, this record captures Megadeth's wild energy during a time of changes, maintaining the speed and ferocity that would characterize their classic sound."
+      }
+    },
     "streaming": {
       "spotify": "https://open.spotify.com/intl-es/album/4rW8n1hOkavPGIxPvEnT18"
     },
@@ -1144,7 +1270,16 @@
     "cover": "/images/albums/02-peace.webp",
     "label": "Combat / Capitol",
     "producers": ["Dave Mustaine", "Randy Burns"],
-    "description": "El despegue comercial; base del sonido clásico de la banda.",
+    "description": {
+      "short": {
+        "es": "El despegue comercial; base del sonido clÃ¡sico de la banda.",
+        "en": "Commercial breakthrough; foundation of the band's classic sound."
+      },
+      "extended": {
+        "es": "El segundo Ã¡lbum y primer gran Ã©xito comercial de Megadeth estableciÃ³ las bases del sonido clÃ¡sico que definirÃ­a a la banda. Con la icÃ³nica lÃ­nea de bajo de 'Peace Sells' y composiciones mÃ¡s sofisticadas, este disco demostrÃ³ que el thrash metal podÃ­a ser tanto brutal como comercialmente viable, convirtiendo a Megadeth en una de las fuerzas principales del gÃ©nero.",
+        "en": "The second album and first major commercial success established the foundation of the classic sound that would define the band. With the iconic bass line of 'Peace Sells' and more sophisticated compositions, this record proved that thrash metal could be both brutal and commercially viable, making Megadeth one of the genre's major forces."
+      }
+    },
     "streaming": {
       "spotify": "https://open.spotify.com/album/4U8ZF5zDIRy4lBnnXBN2uO"
     },
@@ -1206,7 +1341,16 @@
     "cover": "/images/albums/01-killing.webp",
     "label": "Combat",
     "producers": ["Dave Mustaine", "Karat Faye"],
-    "description": "Debut feroz y vertiginoso; germen del thrash de Megadeth.",
+    "description": {
+      "short": {
+        "es": "Debut feroz y vertiginoso; germen del thrash de Megadeth.",
+        "en": "Fierce and vertiginous debut; the genesis of Megadeth's thrash."
+      },
+      "extended": {
+        "es": "El Ã¡lbum debut de Megadeth establece las bases del sonido thrash que definirÃ­a a la banda. Grabado con un presupuesto mÃ­nimo y una producciÃ³n cruda, este disco captura la rabia y la velocidad pura que Dave Mustaine buscaba tras su salida de Metallica. Con riffs demoledores y una actitud despiadada, marca el nacimiento de una de las fuerzas mÃ¡s importantes del metal extremo.",
+        "en": "Megadeth's debut album establishes the foundation of the thrash sound that would define the band. Recorded on a minimal budget with raw production, this record captures the pure rage and speed that Dave Mustaine sought after his departure from Metallica. With devastating riffs and a ruthless attitude, it marks the birth of one of extreme metal's most important forces."
+      }
+    },
     "streaming": {
       "spotify": "https://open.spotify.com/album/0TFQuO4m3XR5pTJCFS88Qk"
     },

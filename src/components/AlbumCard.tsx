@@ -19,7 +19,8 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
 import type { Album } from "@/types/album";
-import { useState } from "react";
+import { useLocale } from "next-intl";
+import { getAlbumDescription } from "@/utils/albumHelpers";
 
 function StreamingIcons({ links }: { links?: Album["streaming"] }) {
   if (!links) return null;
@@ -33,6 +34,7 @@ function StreamingIcons({ links }: { links?: Album["streaming"] }) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={label}
+        onClick={(e) => e.stopPropagation()}
       >
         {icon}
       </IconButton>
@@ -58,6 +60,8 @@ function StreamingIcons({ links }: { links?: Album["streaming"] }) {
 }
 
 export default function AlbumCard({ album }: { album: Album }) {
+  const locale = useLocale();
+
   const metaChips = (
     <Stack direction="row" spacing={1.5} flexWrap="wrap" useFlexGap>
       <Chip size="small" label={album.year} />
@@ -147,7 +151,7 @@ export default function AlbumCard({ album }: { album: Album }) {
         <CardContent sx={{ flexGrow: 1 }}>
           {album.description && (
             <Typography variant="body2" color="text.secondary" sx={{ mb: 1.5 }}>
-              {album.description}
+              {getAlbumDescription(album, locale, "short")}
             </Typography>
           )}
 

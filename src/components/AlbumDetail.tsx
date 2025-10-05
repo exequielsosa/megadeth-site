@@ -20,9 +20,10 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import ContainerGradient from "./atoms/ContainerGradient";
 import type { Album, Track } from "@/types/album";
+import { getAlbumDescription } from "@/utils/albumHelpers";
 import LyricsIcon from "@mui/icons-material/MusicNote";
 
 interface AlbumDetailProps {
@@ -33,6 +34,7 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
   const [selectedTrack, setSelectedTrack] = useState<Track | null>(null);
   const [lyricsOpen, setLyricsOpen] = useState(false);
   const t = useTranslations("albumDetail");
+  const locale = useLocale();
 
   const handleTrackClick = (track: Track) => {
     if (track.lyrics) {
@@ -105,7 +107,7 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                     variant="body1"
                     sx={{ mb: 3, color: "text.secondary" }}
                   >
-                    {album.description}
+                    {getAlbumDescription(album, locale, "extended")}
                   </Typography>
                 )}
               </Box>
