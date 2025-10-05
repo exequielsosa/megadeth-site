@@ -74,7 +74,8 @@
     "duration": "Duración",
     "writers": "Compositores",
     "noLyrics": "Letras no disponibles",
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "lineup": "Formación"
   },
   "footer": {
     "disclaimer": "Fan site no oficial. © {year}"

@@ -16,6 +16,36 @@
         "en": "The sixteenth studio album marks Megadeth's definitive return to thrash metal after years of experimentation. With crystal-clear production by Chris Rakestraw and the consolidation of the lineup featuring Kiko Loureiro and Dirk Verbeuren, this record proves the band maintains their destructive capacity intact."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Kiko Loureiro",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "James LoMenzo",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Dirk Verbeuren",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "spotify": "https://open.spotify.com/intl-es/album/1ziUtOuRT545OI4cnHEMhC?utm_campaign=fAfTD_96_fmly&utm_source=Original_Original&utm_medium=Original&utm_content=3fc3f4b8-7496-40c0-ab05-2543d0240164_none_Megadeth_none_The%20Sick%2C%20The%20Dying%E2%80%A6%20And%20The%20Dead%21_none_20220606_https%3A%2F%2Fwww.megadeth.com%2F_universal-music-enterprises-ume_US_megadeth.lnk.to%2FSickDyingDead"
     },
@@ -111,6 +141,36 @@
         "en": "The fifteenth album marks a creative revitalization of Megadeth with the incorporation of Brazilian virtuoso guitarist Kiko Loureiro. This record represents a triumphant return to thrash metal that earned them Academy recognition with the Grammy for Best Metal Performance for the title track, proving the band maintains its relevance and creative power after more than three decades."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Kiko Loureiro",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Chris Adler",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "spotify": "https://open.spotify.com/album/4sP7CAPrmdBD1ojBBrPxiV"
     },
@@ -192,14 +252,44 @@
     "producers": ["Dave Mustaine", "Johnny K"],
     "description": {
       "short": {
-        "es": "DÃ©cimo cuarto LP; sonido mÃ¡s hard rock; incluye colaboraciÃ³n con David Draiman.",
+        "es": "Décimo cuarto LP; sonido más hard rock; incluye colaboración con David Draiman.",
         "en": "Fourteenth LP; more hard rock sound; includes collaboration with David Draiman."
       },
       "extended": {
-        "es": "El decimocuarto Ã¡lbum representa otro experimento sonoro de Megadeth hacia un territorio mÃ¡s hard rock y menos thrash. Con una producciÃ³n mÃ¡s comercial y la colaboraciÃ³n especial de David Draiman de Disturbed, este disco muestra la constante bÃºsqueda de la banda por evolucionar, aunque dividiÃ³ opiniones entre los fanÃ¡ticos mÃ¡s puristas del metal extremo.",
+        "es": "El decimocuarto Álbum representa otro experimento sonoro de Megadeth hacia un territorio más hard rock y menos thrash. Con una producción más comercial y la colaboración especial de David Draiman de Disturbed, este disco muestra la constante búsqueda de la banda por evolucionar, aunque dividió opiniones entre los fanáticos más puristas del metal extremo.",
         "en": "The fourteenth album represents another sonic experiment by Megadeth towards more hard rock and less thrash territory. With more commercial production and special collaboration from Disturbed's David Draiman, this record shows the band's constant search to evolve, though it divided opinions among extreme metal purists."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Chris Broderick",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Shawn Drover",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_lZb_JnxiNLxOH5BPpiTIB7lu7uVMddYRw"
     },
@@ -285,10 +375,40 @@
         "en": "David Ellefson's return on bass; mix of new material and re-recordings."
       },
       "extended": {
-        "es": "El decimotercer Ã¡lbum marca el emotivo regreso de David Ellefson al bajo despuÃ©s de aÃ±os de separaciÃ³n, reuniendo a la formaciÃ³n clÃ¡sica de los fundadores. Este disco presenta una mezcla Ãºnica de material completamente nuevo junto con regrabaciones de temas inÃ©ditos de los archivos de la banda, creando un puente entre el pasado y el presente de Megadeth.",
+        "es": "El decimotercer disco marca el emotivo regreso de David Ellefson al bajo luego de años de separación, reuniendo a la formación clásica de los fundadores. Este disco presenta una mezcla única de material completamente nuevo junto con regrabaciones de temas inéditos de los archivos de la banda, creando un puente entre el pasado y el presente de Megadeth.",
         "en": "The thirteenth album marks the emotional return of David Ellefson on bass after years of separation, reuniting the classic lineup of the founders. This record presents a unique mix of completely new material alongside re-recordings of unreleased tracks from the band's archives, creating a bridge between Megadeth's past and present."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Chris Broderick",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Shawn Drover",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mxtFZed8Xp9EaJbX-I9yTmUEOsWQMC0ag"
     },
@@ -382,14 +502,44 @@
     "producers": ["Dave Mustaine", "Andy Sneap"],
     "description": {
       "short": {
-        "es": "Vuelta a la velocidad; primer Ã¡lbum con Chris Broderick.",
+        "es": "Vuelta a la velocidad; primer Álbum con Chris Broderick.",
         "en": "Return to speed; first album with Chris Broderick."
       },
       "extended": {
-        "es": "El duodÃ©cimo Ã¡lbum marca el regreso de Megadeth a la velocidad y agresividad que los caracterizÃ³ en sus mejores Ã©pocas. Con la llegada del virtuoso guitarrista Chris Broderick, la banda recupera la complejidad tÃ©cnica y la energÃ­a thrash, demostrando que aÃºn podÃ­an competir con las nuevas generaciones del metal extremo.",
+        "es": "El duodécimo álbum marca el regreso de Megadeth a la velocidad y agresividad que los caracterizó en sus mejores épocas. Con la llegada del virtuoso guitarrista Chris Broderick, la banda recupera la complejidad técnica y la energía thrash, demostrando que aún podían competir con las nuevas generaciones del metal extremo.",
         "en": "The twelfth album marks Megadeth's return to the speed and aggression that characterized them in their best periods. With the arrival of virtuoso guitarist Chris Broderick, the band recovers technical complexity and thrash energy, proving they could still compete with new generations of extreme metal."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Chris Broderick",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "James LoMenzo",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Shawn Drover",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "spotify": "https://open.spotify.com/album/0G5qC48D3MI8YBKTVwIiz1"
     },
@@ -475,10 +625,40 @@
         "en": "Eleventh LP; modern sound with Andy Sneap mix; includes 'A Tout Le Monde (Set Me Free)'."
       },
       "extended": {
-        "es": "El undÃ©cimo Ã¡lbum marca una nueva era con un sonido moderno gracias a la mezcla de Andy Sneap, que le dio una producciÃ³n mÃ¡s pesada y contemporÃ¡nea. Este disco incluye la regrabaciÃ³n de 'A Tout Le Monde' junto a Lacuna Coil, mostrando la capacidad de Megadeth para reinventar sus clÃ¡sicos mientras mantiene la relevancia en el metal moderno.",
+        "es": "El undécimo álbum marca una nueva era con un sonido moderno gracias a la mezcla de Andy Sneap, que le dio una producción más pesada y contemporánea. Este disco incluye la regrabación de 'A Tout Le Monde' junto a Lacuna Coil, mostrando la capacidad de Megadeth para reinventar sus clásicos mientras mantiene la relevancia en el metal moderno.",
         "en": "The eleventh album marks a new era with a modern sound thanks to Andy Sneap's mix, which gave it a heavier and more contemporary production. This record includes the re-recording of 'A Tout Le Monde' featuring Lacuna Coil, showing Megadeth's ability to reinvent their classics while maintaining relevance in modern metal."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Glen Drover",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "James LoMenzo",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Shawn Drover",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "spotify": "https://open.spotify.com/album/4YeGSTxQshqOyT6DIOaT2b"
     },
@@ -560,14 +740,44 @@
     "producers": ["Dave Mustaine", "Jeff Balding"],
     "description": {
       "short": {
-        "es": "Regreso tras la lesiÃ³n de Mustaine; participaciÃ³n de Chris Poland en guitarras.",
+        "es": "Regreso tras la lesión de Mustaine; participación de Chris Poland en guitarras.",
         "en": "Return after Mustaine's injury; featuring Chris Poland on guitars."
       },
       "extended": {
-        "es": "El dÃ©cimo Ã¡lbum marca el dramÃ¡tico regreso de Dave Mustaine despuÃ©s de sufrir una lesiÃ³n en el brazo que casi termina con su carrera. Este disco representa la resurrecciÃ³n de Megadeth con la participaciÃ³n especial de Chris Poland, guitarrista original de la banda, aÃ±adiendo un toque nostÃ¡lgico al sonido renovado y demostrando que la creatividad de Mustaine permanecÃ­a intacta.",
+        "es": "El décimo álbum marca el dramático regreso de Dave Mustaine después de sufrir una lesión en el brazo que casi termina con su carrera. Este disco representa la resurrección de Megadeth con la participación especial de Chris Poland, guitarrista original de la banda, añadiendo un toque nostálgico al sonido renovado y demostrando que la creatividad de Mustaine permanecía intacta.",
         "en": "The tenth album marks Dave Mustaine's dramatic return after suffering an arm injury that nearly ended his career. This record represents Megadeth's resurrection with special participation from Chris Poland, the band's original guitarist, adding a nostalgic touch to the renewed sound and proving that Mustaine's creativity remained intact."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Chris Poland",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "James MacDonough",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Vinnie Colaiuta",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_l3p-K0XPW1jpZP0zdTXWUih7xTWGWLHOg"
     },
@@ -655,14 +865,44 @@
     "producers": ["Bill Kennedy", "Dave Mustaine"],
     "description": {
       "short": {
-        "es": "Vuelta a un sonido mÃ¡s heavy tras la etapa de fines de los 90.",
+        "es": "Vuelta a un sonido más heavy tras la etapa de fines de los 90.",
         "en": "Return to a heavier sound after the late 90s period."
       },
       "extended": {
-        "es": "El noveno Ã¡lbum marca el regreso de Megadeth a un sonido mÃ¡s pesado despuÃ©s de los experimentos de los aÃ±os 90. Aunque sin alcanzar la intensidad de los Ã¡lbumes clÃ¡sicos, este disco muestra la intenciÃ³n de la banda de reconectar con sus raÃ­ces thrash, respondiendo a las crÃ­ticas de los fanes que demandaban un retorno al metal mÃ¡s agresivo.",
+        "es": "El noveno álbum marca el regreso de Megadeth a un sonido más pesado después de los experimentos de los años 90. Aunque sin alcanzar la intensidad de los álbumes clásicos, este disco muestra la intención de la banda de reconectar con sus raíces thrash, respondiendo a las críticas de los fanes que demandaban un retorno al metal más agresivo.",
         "en": "The ninth album marks Megadeth's return to a heavier sound after the 90s experiments. While not reaching the intensity of the classic albums, this record shows the band's intention to reconnect with their thrash roots, responding to fan criticism demanding a return to more aggressive metal."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Al Pitrelli",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Jimmy DeGrasso",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "spotify": "https://open.spotify.com/album/5YFrdrFUHGgAvK8iXFxULa"
     },
@@ -750,14 +990,44 @@
     "producers": ["Dann Huff", "Dave Mustaine"],
     "description": {
       "short": {
-        "es": "Apuesta de hard rock/alt metal; Ãºltimo con Marty Friedman.",
+        "es": "Apuesta de hard rock/alt metal; Último con Marty Friedman.",
         "en": "Hard rock/alt metal gamble; last with Marty Friedman."
       },
       "extended": {
-        "es": "El octavo Ã¡lbum representa el mayor alejamiento de Megadeth del thrash metal, explorando sonidos de hard rock alternativo que dividieron a la base de fans. Este experimento comercial marca el final de la era dorada con la partida de Marty Friedman, cerrando asÃ­ el capÃ­tulo mÃ¡s exitoso creativamente de la banda. A pesar de la controversia, demostrÃ³ la voluntad de Megadeth de arriesgar y experimentar.",
+        "es": "El octavo álbum representa el mayor alejamiento de Megadeth del thrash metal, explorando sonidos de hard rock alternativo que dividieron a la base de fans. Este experimento comercial marca el final de la era dorada con la partida de Marty Friedman, cerrando así el capítulo más exitoso creativamente de la banda. A pesar de la controversia, demostró la voluntad de Megadeth de arriesgar y experimentar.",
         "en": "The eighth album represents Megadeth's greatest departure from thrash metal, exploring alternative hard rock sounds that divided the fanbase. This commercial experiment marks the end of the golden era with Marty Friedman's departure, thus closing the band's most creatively successful chapter. Despite the controversy, it demonstrated Megadeth's willingness to take risks and experiment."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Marty Friedman",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Jimmy DeGrasso",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "spotify": "https://open.spotify.com/album/0iI53eVNLCjdlfcdngAUyH"
     },
@@ -845,14 +1115,44 @@
     "producers": ["Dann Huff"],
     "description": {
       "short": {
-        "es": "Corte mÃ¡s melÃ³dico y orientado a radio; Ãºltimo con Nick Menza.",
+        "es": "Corte más melódico y orientado a radio; último con Nick Menza.",
         "en": "More melodic and radio-oriented approach; last with Nick Menza."
       },
       "extended": {
-        "es": "El sÃ©ptimo Ã¡lbum de estudio representa la mayor aproximaciÃ³n de Megadeth al sonido mainstream, con un enfoque mÃ¡s melÃ³dico y orientado a la radio bajo la producciÃ³n de Dann Huff. Marca el final de una era siendo el Ãºltimo disco con el baterista Nick Menza, quien habÃ­a sido parte integral del sonido clÃ¡sico de la banda desde 'Rust in Peace'.",
+        "es": "El séptimo álbum de estudio representa la mayor aproximación de Megadeth al sonido mainstream, con un enfoque más melódico y orientado a la radio bajo la producción de Dann Huff. Marca el final de una era siendo el último disco con el baterista Nick Menza, quien había sido parte integral del sonido clásico de la banda desde 'Rust in Peace'.",
         "en": "The seventh studio album represents Megadeth's closest approach to mainstream sound, with a more melodic and radio-oriented focus under Dann Huff's production. It marks the end of an era being the last record with drummer Nick Menza, who had been an integral part of the band's classic sound since 'Rust in Peace'."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Marty Friedman",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Nick Menza",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mVpayAum5S7IRdUGfnhdEGP7tmeNnLI8k"
     },
@@ -940,14 +1240,44 @@
     "producers": ["Max Norman", "Dave Mustaine"],
     "description": {
       "short": {
-        "es": "Sexto LP; enfoque mÃ¡s groove y melodÃ­as; arte icÃ³nico de bebÃ©s colgando.",
+        "es": "Sexto LP; enfoque más groove y melodías; arte icónico de bebés colgando.",
         "en": "Sixth LP; more groove and melodies; iconic hanging babies artwork."
       },
       "extended": {
-        "es": "El sexto Ã¡lbum de estudio explora un territorio mÃ¡s groove-orientado sin abandonar la intensidad que caracteriza a Megadeth. Con una producciÃ³n refinada de Max Norman y una mayor atenciÃ³n a las melodÃ­as, este disco presenta un equilibrio entre accesibilidad y complejidad. Su portada controversial con bebÃ©s colgando se convirtiÃ³ en una de las imÃ¡genes mÃ¡s reconocibles del metal.",
+        "es": "El sexto álbum de estudio explora un territorio más groove-orientado sin abandonar la intensidad que caracteriza a Megadeth. Con una producción refinada de Max Norman y una mayor atención a las melodías, este disco presenta un equilibrio entre accesibilidad y complejidad. Su portada controversial con bebés colgando se convirtió en una de las imágenes más reconocibles del metal.",
         "en": "The sixth studio album explores more groove-oriented territory without abandoning the intensity that characterizes Megadeth. With refined production by Max Norman and greater attention to melodies, this record presents a balance between accessibility and complexity. Its controversial cover featuring hanging babies became one of metal's most recognizable images."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Marty Friedman",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Nick Menza",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "spotify": "https://open.spotify.com/album/5iBvQWRRazoyt7CrEPFBsW"
     },
@@ -1035,14 +1365,44 @@
     "producers": ["Max Norman", "Dave Mustaine"],
     "description": {
       "short": {
-        "es": "ClÃ¡sico multiplatino con hits masivos como 'Symphony of Destruction'.",
+        "es": "Clásico multiplatino con hits masivos como 'Symphony of Destruction'.",
         "en": "Multi-platinum classic with massive hits like 'Symphony of Destruction'."
       },
       "extended": {
-        "es": "El quinto Ã¡lbum de estudio representa el pico comercial de Megadeth, alcanzando el doble platino en Estados Unidos. Con una producciÃ³n mÃ¡s pulida de Max Norman y composiciones mÃ¡s accesibles sin perder intensidad, canciones como 'Symphony of Destruction' y 'Sweating Bullets' se convirtieron en himnos del metal que trascienden generaciones, consolidando a la banda como una de las Big Four del thrash.",
+        "es": "El quinto álbum de estudio representa el pico comercial de Megadeth, alcanzando el doble platino en Estados Unidos. Con una producción más pulida de Max Norman y composiciones más accesibles sin perder intensidad, canciones como 'Symphony of Destruction' y 'Sweating Bullets' se convirtieron en himnos del metal que trascienden generaciones, consolidando a la banda como una de las Big Four del thrash.",
         "en": "The fifth studio album represents Megadeth's commercial peak, achieving double platinum status in the United States. With more polished production by Max Norman and more accessible compositions without losing intensity, songs like 'Symphony of Destruction' and 'Sweating Bullets' became metal anthems that transcend generations, cementing the band as one of the Big Four of thrash."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Marty Friedman",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Nick Menza",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "spotify": "https://open.spotify.com/album/1w9opfGdFtR3ulNHxnnO1e"
     },
@@ -1124,14 +1484,44 @@
     "producers": ["Dave Mustaine", "Mike Clink"],
     "description": {
       "short": {
-        "es": "Piedra angular del thrash; primera apariciÃ³n de Marty Friedman y Nick Menza.",
+        "es": "Piedra angular del thrash; primera aparición de Marty Friedman y Nick Menza.",
         "en": "Thrash cornerstone; first appearance of Marty Friedman and Nick Menza."
       },
       "extended": {
-        "es": "Considerado una de las obras maestras absolutas del thrash metal, este cuarto Ã¡lbum marca la llegada de la formaciÃ³n clÃ¡sica con Marty Friedman en guitarra y Nick Menza en baterÃ­a. Con una producciÃ³n impecable de Mike Clink y composiciones legendarias como 'Holy Wars' y 'Hangar 18', este disco definiÃ³ los estÃ¡ndares tÃ©cnicos y compositivos del gÃ©nero para toda una generaciÃ³n.",
+        "es": "Considerado una de las obras maestras absolutas del thrash metal, este cuarto álbum marca la llegada de la formación clásica con Marty Friedman en guitarra y Nick Menza en batería. Con una producción impecable de Mike Clink y composiciones legendarias como 'Holy Wars' y 'Hangar 18', este disco definió los estándares técnicos y compositivos del género para toda una generación.",
         "en": "Considered one of the absolute masterpieces of thrash metal, this fourth album marks the arrival of the classic lineup with Marty Friedman on guitar and Nick Menza on drums. With impeccable production by Mike Clink and legendary compositions like 'Holy Wars' and 'Hangar 18', this record defined the technical and compositional standards of the genre for an entire generation."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Marty Friedman",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Nick Menza",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "spotify": "https://open.spotify.com/album/4e6ML9RBhDyyKTaTwbiRZv"
     },
@@ -1201,14 +1591,44 @@
     "producers": ["Paul Lani", "Dave Mustaine"],
     "description": {
       "short": {
-        "es": "Tercer LP; sonido crudo y veloz; Ãºnica apariciÃ³n de Behler/Young.",
+        "es": "Tercer LP; sonido crudo y veloz; única aparición de Behler/Young.",
         "en": "Third LP; raw and fast sound; only appearance of Behler/Young."
       },
       "extended": {
-        "es": "El tercer Ã¡lbum de estudio marca una etapa de transiciÃ³n con la Ãºnica participaciÃ³n del baterista Chuck Behler y el guitarrista Jeff Young. Con un sonido mÃ¡s crudo y agresivo que su predecesor, este disco captura la energÃ­a salvaje de Megadeth en un momento de cambios, manteniendo la velocidad y ferocidad que caracterizarÃ­a su sonido clÃ¡sico.",
+        "es": "El tercer álbum de estudio marca una etapa de transición con la única participación del baterista Chuck Behler y el guitarrista Jeff Young. Con un sonido más crudo y agresivo que su predecesor, este disco captura la energía salvaje de Megadeth en un momento de cambios, manteniendo la velocidad y ferocidad que caracterizaría su sonido clásico.",
         "en": "The third studio album marks a transitional period with the only participation of drummer Chuck Behler and guitarist Jeff Young. With a rawer and more aggressive sound than its predecessor, this record captures Megadeth's wild energy during a time of changes, maintaining the speed and ferocity that would characterize their classic sound."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Jeff Young",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Chuck Behler",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "spotify": "https://open.spotify.com/intl-es/album/4rW8n1hOkavPGIxPvEnT18"
     },
@@ -1272,14 +1692,44 @@
     "producers": ["Dave Mustaine", "Randy Burns"],
     "description": {
       "short": {
-        "es": "El despegue comercial; base del sonido clÃ¡sico de la banda.",
+        "es": "El despegue comercial; base del sonido clásico de la banda.",
         "en": "Commercial breakthrough; foundation of the band's classic sound."
       },
       "extended": {
-        "es": "El segundo Ã¡lbum y primer gran Ã©xito comercial de Megadeth estableciÃ³ las bases del sonido clÃ¡sico que definirÃ­a a la banda. Con la icÃ³nica lÃ­nea de bajo de 'Peace Sells' y composiciones mÃ¡s sofisticadas, este disco demostrÃ³ que el thrash metal podÃ­a ser tanto brutal como comercialmente viable, convirtiendo a Megadeth en una de las fuerzas principales del gÃ©nero.",
+        "es": "El segundo álbum y primer gran éxito comercial de Megadeth estableció las bases del sonido clásico que definiría a la banda. Con la icónica línea de bajo de 'Peace Sells' y composiciones más sofisticadas, este disco demostró que el thrash metal podía ser tanto brutal como comercialmente viable, convirtiendo a Megadeth en una de las fuerzas principales del género.",
         "en": "The second album and first major commercial success established the foundation of the classic sound that would define the band. With the iconic bass line of 'Peace Sells' and more sophisticated compositions, this record proved that thrash metal could be both brutal and commercially viable, making Megadeth one of the genre's major forces."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Chris Poland",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Gar Samuelson",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "spotify": "https://open.spotify.com/album/4U8ZF5zDIRy4lBnnXBN2uO"
     },
@@ -1347,10 +1797,40 @@
         "en": "Fierce and vertiginous debut; the genesis of Megadeth's thrash."
       },
       "extended": {
-        "es": "El Ã¡lbum debut de Megadeth establece las bases del sonido thrash que definirÃ­a a la banda. Grabado con un presupuesto mÃ­nimo y una producciÃ³n cruda, este disco captura la rabia y la velocidad pura que Dave Mustaine buscaba tras su salida de Metallica. Con riffs demoledores y una actitud despiadada, marca el nacimiento de una de las fuerzas mÃ¡s importantes del metal extremo.",
+        "es": "El álbum debut de Megadeth establece las bases del sonido thrash que definiría a la banda. Grabado con un presupuesto mínimo y una producción cruda, este disco captura la rabia y la velocidad pura que Dave Mustaine buscaba tras su salida de Metallica. Con riffs demoledores y una actitud despiadada, marca el nacimiento de una de las fuerzas más importantes del metal extremo.",
         "en": "Megadeth's debut album establishes the foundation of the thrash sound that would define the band. Recorded on a minimal budget with raw production, this record captures the pure rage and speed that Dave Mustaine sought after his departure from Metallica. With devastating riffs and a ruthless attitude, it marks the birth of one of extreme metal's most important forces."
       }
     },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Chris Poland",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Gar Samuelson",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
     "streaming": {
       "spotify": "https://open.spotify.com/album/0TFQuO4m3XR5pTJCFS88Qk"
     },

@@ -1,4 +1,4 @@
-import type { Album } from '@/types/album';
+import type { Album, MusicianInstrument } from '@/types/album';
 
 /**
  * Helper para obtener la descripción de un álbum de forma segura
@@ -29,4 +29,15 @@ export function getAlbumDescription(
     console.warn('Error accessing album description:', error);
     return '';
   }
+}
+
+/**
+ * Helper para obtener el instrumento de un músico en el idioma correcto
+ */
+export function getMusicianInstrument(
+  instrument: MusicianInstrument,
+  locale: string = 'es'
+): string {
+  const normalizedLocale = locale === 'en' ? 'en' : 'es'; // Por defecto español
+  return instrument[normalizedLocale] || instrument['es'] || '';
 }

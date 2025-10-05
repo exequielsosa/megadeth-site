@@ -23,7 +23,10 @@ import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import ContainerGradient from "./atoms/ContainerGradient";
 import type { Album, Track } from "@/types/album";
-import { getAlbumDescription } from "@/utils/albumHelpers";
+import {
+  getAlbumDescription,
+  getMusicianInstrument,
+} from "@/utils/albumHelpers";
 import LyricsIcon from "@mui/icons-material/MusicNote";
 
 interface AlbumDetailProps {
@@ -141,6 +144,38 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
             </Stack>
           </Grid>
         </Grid>
+
+        {/* Formación de la banda */}
+        {album.musicians && album.musicians.length > 0 && (
+          <Box sx={{ mt: 6 }}>
+            <Typography
+              variant="h4"
+              component="h2"
+              sx={{ mb: 3, fontWeight: 700 }}
+            >
+              {t("lineup") || "Formación"}
+            </Typography>
+
+            <Card variant="outlined">
+              <Box sx={{ p: 3 }}>
+                <Grid container spacing={2}>
+                  {album.musicians.map((musician, index) => (
+                    <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+                      <Stack spacing={0.5}>
+                        <Typography variant="body1" sx={{ fontWeight: 600 }}>
+                          {musician.name}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {getMusicianInstrument(musician.instrument, locale)}
+                        </Typography>
+                      </Stack>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Box>
+            </Card>
+          </Box>
+        )}
 
         {/* Lista de canciones */}
         {album.tracks && album.tracks.length > 0 && (

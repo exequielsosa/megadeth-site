@@ -7,6 +7,16 @@ export type StreamingLinks = Partial<{
   bandcamp: string;
 }>;
 
+export type MusicianInstrument = {
+  es: string;
+  en: string;
+};
+
+export type Musician = {
+  name: string;
+  instrument: MusicianInstrument;
+};
+
 export type Track = {
   n: number;
   title: string;
@@ -23,6 +33,7 @@ export type Album = {
   label?: string;
   producers?: string[];
   description?: string;       // breve
+  musicians?: Musician[];     // Formación del álbum
   streaming?: StreamingLinks;
   tracks?: Track[];
   isUpcoming?: boolean;       // para el disco nuevo

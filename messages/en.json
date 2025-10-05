@@ -74,7 +74,8 @@
     "duration": "Duration",
     "writers": "Writers",
     "noLyrics": "Lyrics not available",
-    "close": "Close"
+    "close": "Close",
+    "lineup": "Lineup"
   },
   "footer": {
     "disclaimer": "Unofficial fan site. © {year}"
