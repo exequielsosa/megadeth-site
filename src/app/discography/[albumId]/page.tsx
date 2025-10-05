@@ -1,24 +1,26 @@
 import { notFound } from "next/navigation";
-import { getLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import AlbumDetail from "@/components/AlbumDetail";
 import discographyData from "@/constants/discography.json";
 import type { Album } from "@/types/album";
 
 interface Props {
-  params: {
+  params: Promise<{
     albumId: string;
-  };
+  }>;
 }
 
 // Función para buscar el álbum por ID
 function getAlbumById(id: string): Album | undefined {
-  return discographyData.find((album) => album.id === id);
+  return discographyData.find((album) => album.id === id) as unknown as
+    | Album
+    | undefined;
 }
 
 // Generar metadata dinámico
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const album = getAlbumById(params.albumId);
+  const resolvedParams = await params;
+  const album = getAlbumById(resolvedParams.albumId);
 
   if (!album) {
     return {
@@ -64,8 +66,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function AlbumPage({ params }: Props) {
-  const album = getAlbumById(params.albumId);
+export default async function AlbumPage({ params }: Props) {
+  const resolvedParams = await params;
+  const album = getAlbumById(resolvedParams.albumId);
 
   if (!album) {
     notFound();
