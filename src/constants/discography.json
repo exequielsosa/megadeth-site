@@ -11,18 +11,78 @@
       "spotify": "https://open.spotify.com/intl-es/album/1ziUtOuRT545OI4cnHEMhC?utm_campaign=fAfTD_96_fmly&utm_source=Original_Original&utm_medium=Original&utm_content=3fc3f4b8-7496-40c0-ab05-2543d0240164_none_Megadeth_none_The%20Sick%2C%20The%20Dying%E2%80%A6%20And%20The%20Dead%21_none_20220606_https%3A%2F%2Fwww.megadeth.com%2F_universal-music-enterprises-ume_US_megadeth.lnk.to%2FSickDyingDead"
     },
     "tracks": [
-      { "n": 1, "title": "The Sick, The Dying... And The Dead!", "duration": "9:03", "writers": ["Dave Mustaine"] },
-      { "n": 2, "title": "Life In Hell", "duration": "4:11", "writers": ["Dave Mustaine"] },
-      { "n": 3, "title": "Night Stalkers", "duration": "4:13", "writers": ["Dave Mustaine"] },
-      { "n": 4, "title": "Dogs of Chernobyl", "duration": "6:30", "writers": ["Dave Mustaine"] },
-      { "n": 5, "title": "Sacrifice", "duration": "3:42", "writers": ["Dave Mustaine"] },
-      { "n": 6, "title": "Junkie", "duration": "3:24", "writers": ["Dave Mustaine"] },
-      { "n": 7, "title": "Psychopathy", "duration": "2:29", "writers": ["Dave Mustaine"] },
-      { "n": 8, "title": "Killing Time", "duration": "5:04", "writers": ["Dave Mustaine"] },
-      { "n": 9, "title": "Soldier On!", "duration": "4:46", "writers": ["Dave Mustaine"] },
-      { "n": 10, "title": "Celebutante", "duration": "4:14", "writers": ["Dave Mustaine"] },
-      { "n": 11, "title": "Mission to Mars", "duration": "4:40", "writers": ["Dave Mustaine"] },
-      { "n": 12, "title": "We'll Be Back", "duration": "5:07", "writers": ["Dave Mustaine"] }
+      {
+        "n": 1,
+        "title": "The Sick, The Dying... And The Dead!",
+        "duration": "9:03",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Life In Hell",
+        "duration": "4:11",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Night Stalkers",
+        "duration": "4:13",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "Dogs of Chernobyl",
+        "duration": "6:30",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Sacrifice",
+        "duration": "3:42",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "Junkie",
+        "duration": "3:24",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "Psychopathy",
+        "duration": "2:29",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "Killing Time",
+        "duration": "5:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 9,
+        "title": "Soldier On!",
+        "duration": "4:46",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "Celebutante",
+        "duration": "4:14",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Mission to Mars",
+        "duration": "4:40",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 12,
+        "title": "We'll Be Back",
+        "duration": "5:07",
+        "writers": ["Dave Mustaine"]
+      }
     ]
   },
   {
@@ -37,17 +97,72 @@
       "spotify": "https://open.spotify.com/album/4sP7CAPrmdBD1ojBBrPxiV"
     },
     "tracks": [
-      { "n": 1, "title": "The Threat Is Real", "duration": "4:21", "writers": ["Dave Mustaine"] },
-      { "n": 2, "title": "Dystopia", "duration": "4:31", "writers": ["Dave Mustaine"] },
-      { "n": 3, "title": "Fatal Illusion", "duration": "4:16", "writers": ["Kiko Loureiro", "Dave Mustaine"] },
-      { "n": 4, "title": "Death From Within", "duration": "4:48", "writers": ["Dave Mustaine"] },
-      { "n": 5, "title": "Bullet To The Brain", "duration": "4:29", "writers": ["Dave Mustaine", "Kiko Loureiro"] },
-      { "n": 6, "title": "Post American World", "duration": "4:25", "writers": ["Dave Mustaine"] },
-      { "n": 7, "title": "Poisonous Shadows", "duration": "6:02", "writers": ["Dave Mustaine", "Kiko Loureiro"] },
-      { "n": 8, "title": "Conquer Or Die!", "duration": "3:33", "writers": ["Dave Mustaine"] },
-      { "n": 9, "title": "Lying In State", "duration": "3:33", "writers": ["Dave Mustaine", "Kiko Loureiro"] },
-      { "n": 10, "title": "The Emperor", "duration": "3:53", "writers": ["Dave Mustaine"] },
-      { "n": 11, "title": "Foreign Policy", "duration": "2:26", "writers": ["Fear (cover)"] }
+      {
+        "n": 1,
+        "title": "The Threat Is Real",
+        "duration": "4:21",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Dystopia",
+        "duration": "4:31",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Fatal Illusion",
+        "duration": "4:16",
+        "writers": ["Kiko Loureiro", "Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "Death From Within",
+        "duration": "4:48",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Bullet To The Brain",
+        "duration": "4:29",
+        "writers": ["Dave Mustaine", "Kiko Loureiro"]
+      },
+      {
+        "n": 6,
+        "title": "Post American World",
+        "duration": "4:25",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "Poisonous Shadows",
+        "duration": "6:02",
+        "writers": ["Dave Mustaine", "Kiko Loureiro"]
+      },
+      {
+        "n": 8,
+        "title": "Conquer Or Die!",
+        "duration": "3:33",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 9,
+        "title": "Lying In State",
+        "duration": "3:33",
+        "writers": ["Dave Mustaine", "Kiko Loureiro"]
+      },
+      {
+        "n": 10,
+        "title": "The Emperor",
+        "duration": "3:53",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Foreign Policy",
+        "duration": "2:26",
+        "writers": ["Fear (cover)"]
+      }
     ]
   },
   {
@@ -62,17 +177,72 @@
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_lZb_JnxiNLxOH5BPpiTIB7lu7uVMddYRw"
     },
     "tracks": [
-      { "n": 1, "title": "Kingmaker", "duration": "4:16", "writers": ["Dave Mustaine"] },
-      { "n": 2, "title": "Super Collider", "duration": "4:12", "writers": ["Dave Mustaine"] },
-      { "n": 3, "title": "Burn!", "duration": "4:16", "writers": ["Dave Mustaine"] },
-      { "n": 4, "title": "Built for War", "duration": "3:54", "writers": ["Dave Mustaine"] },
-      { "n": 5, "title": "Off the Edge", "duration": "4:13", "writers": ["Dave Mustaine"] },
-      { "n": 6, "title": "Dance in the Rain", "duration": "4:47", "writers": ["Dave Mustaine", "David Draiman"] },
-      { "n": 7, "title": "Beginning of Sorrow", "duration": "3:52", "writers": ["Dave Mustaine"] },
-      { "n": 8, "title": "The Blackest Crow", "duration": "4:28", "writers": ["Dave Mustaine"] },
-      { "n": 9, "title": "Forget to Remember", "duration": "4:33", "writers": ["Dave Mustaine"] },
-      { "n": 10, "title": "Don't Turn Your Back", "duration": "3:45", "writers": ["Dave Mustaine"] },
-      { "n": 11, "title": "Cold Sweat", "duration": "3:07", "writers": ["Thin Lizzy (cover)"] }
+      {
+        "n": 1,
+        "title": "Kingmaker",
+        "duration": "4:16",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Super Collider",
+        "duration": "4:12",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Burn!",
+        "duration": "4:16",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "Built for War",
+        "duration": "3:54",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Off the Edge",
+        "duration": "4:13",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "Dance in the Rain",
+        "duration": "4:47",
+        "writers": ["Dave Mustaine", "David Draiman"]
+      },
+      {
+        "n": 7,
+        "title": "Beginning of Sorrow",
+        "duration": "3:52",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "The Blackest Crow",
+        "duration": "4:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 9,
+        "title": "Forget to Remember",
+        "duration": "4:33",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "Don't Turn Your Back",
+        "duration": "3:45",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Cold Sweat",
+        "duration": "3:07",
+        "writers": ["Thin Lizzy (cover)"]
+      }
     ]
   },
   {
@@ -87,19 +257,84 @@
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mxtFZed8Xp9EaJbX-I9yTmUEOsWQMC0ag"
     },
     "tracks": [
-      { "n": 1, "title": "Sudden Death", "duration": "4:17", "writers": ["Dave Mustaine"] },
-      { "n": 2, "title": "Public Enemy No. 1", "duration": "4:14", "writers": ["Dave Mustaine"] },
-      { "n": 3, "title": "Whose Life (Is It Anyways?)", "duration": "3:55", "writers": ["Dave Mustaine"] },
-      { "n": 4, "title": "We the People", "duration": "4:32", "writers": ["Dave Mustaine"] },
-      { "n": 5, "title": "Guns, Drugs & Money", "duration": "4:19", "writers": ["Dave Mustaine"] },
-      { "n": 6, "title": "Never Dead", "duration": "4:23", "writers": ["Dave Mustaine"] },
-      { "n": 7, "title": "New World Order", "duration": "3:56", "writers": ["Dave Mustaine"] },
-      { "n": 8, "title": "Fast Lane", "duration": "4:10", "writers": ["Dave Mustaine"] },
-      { "n": 9, "title": "Black Swan", "duration": "4:28", "writers": ["Dave Mustaine"] },
-      { "n": 10, "title": "Wrecker", "duration": "4:14", "writers": ["Dave Mustaine"] },
-      { "n": 11, "title": "Millennium of the Blind", "duration": "4:25", "writers": ["Dave Mustaine"] },
-      { "n": 12, "title": "Deadly Nightshade", "duration": "4:58", "writers": ["Dave Mustaine"] },
-      { "n": 13, "title": "13", "duration": "4:19", "writers": ["Dave Mustaine"] }
+      {
+        "n": 1,
+        "title": "Sudden Death",
+        "duration": "4:17",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Public Enemy No. 1",
+        "duration": "4:14",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Whose Life (Is It Anyways?)",
+        "duration": "3:55",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "We the People",
+        "duration": "4:32",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Guns, Drugs & Money",
+        "duration": "4:19",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "Never Dead",
+        "duration": "4:23",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "New World Order",
+        "duration": "3:56",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "Fast Lane",
+        "duration": "4:10",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 9,
+        "title": "Black Swan",
+        "duration": "4:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "Wrecker",
+        "duration": "4:14",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Millennium of the Blind",
+        "duration": "4:25",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 12,
+        "title": "Deadly Nightshade",
+        "duration": "4:58",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 13,
+        "title": "13",
+        "duration": "4:19",
+        "writers": ["Dave Mustaine"]
+      }
     ]
   },
   {
@@ -114,17 +349,72 @@
       "spotify": "https://open.spotify.com/album/0G5qC48D3MI8YBKTVwIiz1"
     },
     "tracks": [
-      { "n": 1, "title": "Dialectic Chaos", "duration": "2:26", "writers": ["Dave Mustaine", "Chris Broderick"] },
-      { "n": 2, "title": "This Day We Fight!", "duration": "3:27", "writers": ["Dave Mustaine"] },
-      { "n": 3, "title": "44 Minutes", "duration": "4:36", "writers": ["Dave Mustaine"] },
-      { "n": 4, "title": "1,320'", "duration": "3:49", "writers": ["Dave Mustaine"] },
-      { "n": 5, "title": "Bite the Hand", "duration": "4:02", "writers": ["Dave Mustaine"] },
-      { "n": 6, "title": "Bodies", "duration": "3:33", "writers": ["Dave Mustaine"] },
-      { "n": 7, "title": "Endgame", "duration": "5:57", "writers": ["Dave Mustaine"] },
-      { "n": 8, "title": "The Hardest Part of Letting Go... Sealed with a Kiss", "duration": "4:38", "writers": ["Dave Mustaine"] },
-      { "n": 9, "title": "Head Crusher", "duration": "3:26", "writers": ["Dave Mustaine"] },
-      { "n": 10, "title": "How the Story Ends", "duration": "4:31", "writers": ["Dave Mustaine"] },
-      { "n": 11, "title": "Washington Is Next!", "duration": "5:20", "writers": ["Dave Mustaine"] }
+      {
+        "n": 1,
+        "title": "Dialectic Chaos",
+        "duration": "2:26",
+        "writers": ["Dave Mustaine", "Chris Broderick"]
+      },
+      {
+        "n": 2,
+        "title": "This Day We Fight!",
+        "duration": "3:27",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "44 Minutes",
+        "duration": "4:36",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "1,320'",
+        "duration": "3:49",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Bite the Hand",
+        "duration": "4:02",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "Bodies",
+        "duration": "3:33",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "Endgame",
+        "duration": "5:57",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "The Hardest Part of Letting Go... Sealed with a Kiss",
+        "duration": "4:38",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 9,
+        "title": "Head Crusher",
+        "duration": "3:26",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "How the Story Ends",
+        "duration": "4:31",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Washington Is Next!",
+        "duration": "5:20",
+        "writers": ["Dave Mustaine"]
+      }
     ]
   },
   {
@@ -139,17 +429,72 @@
       "spotify": "https://open.spotify.com/album/4YeGSTxQshqOyT6DIOaT2b"
     },
     "tracks": [
-      { "n": 1, "title": "Sleepwalker", "duration": "4:12", "writers": ["Dave Mustaine"] },
-      { "n": 2, "title": "Washington Is Next!", "duration": "5:20", "writers": ["Dave Mustaine"] },
-      { "n": 3, "title": "Never Walk Alone... A Call to Arms", "duration": "4:35", "writers": ["Dave Mustaine"] },
-      { "n": 4, "title": "United Abominations", "duration": "5:36", "writers": ["Dave Mustaine"] },
-      { "n": 5, "title": "Gears of War", "duration": "4:25", "writers": ["Dave Mustaine"] },
-      { "n": 6, "title": "Blessed Are the Dead", "duration": "4:03", "writers": ["Dave Mustaine"] },
-      { "n": 7, "title": "Play for Blood", "duration": "3:52", "writers": ["Dave Mustaine"] },
-      { "n": 8, "title": "À Tout le Monde (Set Me Free)", "duration": "4:12", "writers": ["Dave Mustaine", "Cristina Scabbia"] },
-      { "n": 9, "title": "Amerikhastan", "duration": "3:44", "writers": ["Dave Mustaine"] },
-      { "n": 10, "title": "You're Dead", "duration": "3:20", "writers": ["Dave Mustaine"] },
-      { "n": 11, "title": "Burnt Ice", "duration": "3:46", "writers": ["Dave Mustaine"] }
+      {
+        "n": 1,
+        "title": "Sleepwalker",
+        "duration": "4:12",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Washington Is Next!",
+        "duration": "5:20",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Never Walk Alone... A Call to Arms",
+        "duration": "4:35",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "United Abominations",
+        "duration": "5:36",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Gears of War",
+        "duration": "4:25",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "Blessed Are the Dead",
+        "duration": "4:03",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "Play for Blood",
+        "duration": "3:52",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "À Tout le Monde (Set Me Free)",
+        "duration": "4:12",
+        "writers": ["Dave Mustaine", "Cristina Scabbia"]
+      },
+      {
+        "n": 9,
+        "title": "Amerikhastan",
+        "duration": "3:44",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "You're Dead",
+        "duration": "3:20",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Burnt Ice",
+        "duration": "3:46",
+        "writers": ["Dave Mustaine"]
+      }
     ]
   },
   {
@@ -164,18 +509,78 @@
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_l3p-K0XPW1jpZP0zdTXWUih7xTWGWLHOg"
     },
     "tracks": [
-      { "n": 1, "title": "Blackmail the Universe", "duration": "4:33", "writers": ["Dave Mustaine"] },
-      { "n": 2, "title": "Die Dead Enough", "duration": "4:18", "writers": ["Dave Mustaine"] },
-      { "n": 3, "title": "Kick the Chair", "duration": "3:57", "writers": ["Dave Mustaine"] },
-      { "n": 4, "title": "The Scorpion", "duration": "5:53", "writers": ["Dave Mustaine"] },
-      { "n": 5, "title": "Tears in a Vial", "duration": "5:21", "writers": ["Dave Mustaine"] },
-      { "n": 6, "title": "I Know Jack", "duration": "4:09", "writers": ["Dave Mustaine"] },
-      { "n": 7, "title": "Back in the Day", "duration": "3:27", "writers": ["Dave Mustaine"] },
-      { "n": 8, "title": "Something That I'm Not", "duration": "5:07", "writers": ["Dave Mustaine"] },
-      { "n": 9, "title": "Truth Be Told", "duration": "5:41", "writers": ["Dave Mustaine"] },
-      { "n": 10, "title": "Of Mice and Men", "duration": "4:04", "writers": ["Dave Mustaine"] },
-      { "n": 11, "title": "Shadow of Deth", "duration": "2:15", "writers": ["Dave Mustaine"] },
-      { "n": 12, "title": "My Kingdom", "duration": "3:05", "writers": ["Dave Mustaine"] }
+      {
+        "n": 1,
+        "title": "Blackmail the Universe",
+        "duration": "4:33",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Die Dead Enough",
+        "duration": "4:18",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Kick the Chair",
+        "duration": "3:57",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "The Scorpion",
+        "duration": "5:53",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Tears in a Vial",
+        "duration": "5:21",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "I Know Jack",
+        "duration": "4:09",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "Back in the Day",
+        "duration": "3:27",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "Something That I'm Not",
+        "duration": "5:07",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 9,
+        "title": "Truth Be Told",
+        "duration": "5:41",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "Of Mice and Men",
+        "duration": "4:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Shadow of Deth",
+        "duration": "2:15",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 12,
+        "title": "My Kingdom",
+        "duration": "3:05",
+        "writers": ["Dave Mustaine"]
+      }
     ]
   },
   {
@@ -190,18 +595,78 @@
       "spotify": "https://open.spotify.com/album/5YFrdrFUHGgAvK8iXFxULa"
     },
     "tracks": [
-      { "n": 1, "title": "Disconnect", "duration": "5:21", "writers": ["Dave Mustaine"] },
-      { "n": 2, "title": "The World Needs a Hero", "duration": "3:52", "writers": ["Dave Mustaine"] },
-      { "n": 3, "title": "Moto Psycho", "duration": "3:06", "writers": ["Dave Mustaine"] },
-      { "n": 4, "title": "1000 Times Goodbye", "duration": "6:26", "writers": ["Dave Mustaine"] },
-      { "n": 5, "title": "Burning Bridges", "duration": "5:21", "writers": ["Dave Mustaine"] },
-      { "n": 6, "title": "Promises", "duration": "4:28", "writers": ["Dave Mustaine"] },
-      { "n": 7, "title": "Recipe for Hate... Warhorse", "duration": "5:18", "writers": ["Dave Mustaine"] },
-      { "n": 8, "title": "Losing My Senses", "duration": "4:02", "writers": ["Dave Mustaine"] },
-      { "n": 9, "title": "Dread and the Fugitive Mind", "duration": "4:25", "writers": ["Dave Mustaine"] },
-      { "n": 10, "title": "Silent Scorn", "duration": "1:34", "writers": ["Dave Mustaine"] },
-      { "n": 11, "title": "Return to Hangar", "duration": "3:58", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 12, "title": "When", "duration": "9:14", "writers": ["Dave Mustaine"] }
+      {
+        "n": 1,
+        "title": "Disconnect",
+        "duration": "5:21",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "The World Needs a Hero",
+        "duration": "3:52",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Moto Psycho",
+        "duration": "3:06",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "1000 Times Goodbye",
+        "duration": "6:26",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Burning Bridges",
+        "duration": "5:21",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "Promises",
+        "duration": "4:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "Recipe for Hate... Warhorse",
+        "duration": "5:18",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "Losing My Senses",
+        "duration": "4:02",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 9,
+        "title": "Dread and the Fugitive Mind",
+        "duration": "4:25",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "Silent Scorn",
+        "duration": "1:34",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Return to Hangar",
+        "duration": "3:58",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 12,
+        "title": "When",
+        "duration": "9:14",
+        "writers": ["Dave Mustaine"]
+      }
     ]
   },
   {
@@ -216,18 +681,78 @@
       "spotify": "https://open.spotify.com/album/0iI53eVNLCjdlfcdngAUyH"
     },
     "tracks": [
-      { "n": 1, "title": "Insomnia", "duration": "4:18", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 2, "title": "Prince of Darkness", "duration": "6:26", "writers": ["Dave Mustaine"] },
-      { "n": 3, "title": "Enter the Arena", "duration": "0:52", "writers": ["Dave Mustaine"] },
-      { "n": 4, "title": "Crush 'Em", "duration": "4:57", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 5, "title": "Breadline", "duration": "4:24", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 6, "title": "The Doctor Is Calling", "duration": "5:15", "writers": ["Dave Mustaine"] },
-      { "n": 7, "title": "I'll Get Even", "duration": "4:21", "writers": ["Dave Mustaine"] },
-      { "n": 8, "title": "Wanderlust", "duration": "5:49", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 9, "title": "Ecstasy", "duration": "4:28", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 10, "title": "Seven", "duration": "5:00", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 11, "title": "Time: The Beginning", "duration": "3:05", "writers": ["Dave Mustaine"] },
-      { "n": 12, "title": "Time: The End", "duration": "2:26", "writers": ["Dave Mustaine"] }
+      {
+        "n": 1,
+        "title": "Insomnia",
+        "duration": "4:18",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 2,
+        "title": "Prince of Darkness",
+        "duration": "6:26",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Enter the Arena",
+        "duration": "0:52",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "Crush 'Em",
+        "duration": "4:57",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 5,
+        "title": "Breadline",
+        "duration": "4:24",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 6,
+        "title": "The Doctor Is Calling",
+        "duration": "5:15",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "I'll Get Even",
+        "duration": "4:21",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "Wanderlust",
+        "duration": "5:49",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 9,
+        "title": "Ecstasy",
+        "duration": "4:28",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 10,
+        "title": "Seven",
+        "duration": "5:00",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 11,
+        "title": "Time: The Beginning",
+        "duration": "3:05",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 12,
+        "title": "Time: The End",
+        "duration": "2:26",
+        "writers": ["Dave Mustaine"]
+      }
     ]
   },
   {
@@ -242,18 +767,78 @@
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mVpayAum5S7IRdUGfnhdEGP7tmeNnLI8k"
     },
     "tracks": [
-      { "n": 1, "title": "Trust", "duration": "5:12", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 2, "title": "Almost Honest", "duration": "4:05", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 3, "title": "Use the Man", "duration": "4:35", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 4, "title": "Mastermind", "duration": "3:46", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 5, "title": "The Disintegrators", "duration": "3:07", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 6, "title": "I'll Get Even", "duration": "4:16", "writers": ["Dave Mustaine"] },
-      { "n": 7, "title": "Sin", "duration": "3:17", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 8, "title": "A Secret Place", "duration": "5:27", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 9, "title": "Have Cool, Will Travel", "duration": "3:16", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 10, "title": "She-Wolf", "duration": "7:17", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 11, "title": "Vortex", "duration": "3:24", "writers": ["Dave Mustaine"] },
-      { "n": 12, "title": "FFF", "duration": "2:27", "writers": ["Dave Mustaine"] }
+      {
+        "n": 1,
+        "title": "Trust",
+        "duration": "5:12",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 2,
+        "title": "Almost Honest",
+        "duration": "4:05",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 3,
+        "title": "Use the Man",
+        "duration": "4:35",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 4,
+        "title": "Mastermind",
+        "duration": "3:46",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 5,
+        "title": "The Disintegrators",
+        "duration": "3:07",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 6,
+        "title": "I'll Get Even",
+        "duration": "4:16",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "Sin",
+        "duration": "3:17",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 8,
+        "title": "A Secret Place",
+        "duration": "5:27",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 9,
+        "title": "Have Cool, Will Travel",
+        "duration": "3:16",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 10,
+        "title": "She-Wolf",
+        "duration": "7:17",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 11,
+        "title": "Vortex",
+        "duration": "3:24",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 12,
+        "title": "FFF",
+        "duration": "2:27",
+        "writers": ["Dave Mustaine"]
+      }
     ]
   },
   {
@@ -268,18 +853,78 @@
       "spotify": "https://open.spotify.com/album/5iBvQWRRazoyt7CrEPFBsW"
     },
     "tracks": [
-      { "n": 1, "title": "Reckoning Day", "duration": "4:34", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 2, "title": "Train of Consequences", "duration": "3:26", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 3, "title": "Addicted to Chaos", "duration": "5:26", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 4, "title": "A Tout le Monde", "duration": "4:28", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 5, "title": "Elysian Fields", "duration": "4:02", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 6, "title": "The Killing Road", "duration": "3:57", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 7, "title": "Blood of Heroes", "duration": "3:57", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 8, "title": "Family Tree", "duration": "4:06", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 9, "title": "Youthanasia", "duration": "4:09", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 10, "title": "I Thought I Knew It All", "duration": "3:44", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 11, "title": "Black Curtains", "duration": "3:39", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 12, "title": "Victory", "duration": "4:27", "writers": ["Dave Mustaine", "Marty Friedman"] }
+      {
+        "n": 1,
+        "title": "Reckoning Day",
+        "duration": "4:34",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 2,
+        "title": "Train of Consequences",
+        "duration": "3:26",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 3,
+        "title": "Addicted to Chaos",
+        "duration": "5:26",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 4,
+        "title": "A Tout le Monde",
+        "duration": "4:28",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 5,
+        "title": "Elysian Fields",
+        "duration": "4:02",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 6,
+        "title": "The Killing Road",
+        "duration": "3:57",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 7,
+        "title": "Blood of Heroes",
+        "duration": "3:57",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 8,
+        "title": "Family Tree",
+        "duration": "4:06",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 9,
+        "title": "Youthanasia",
+        "duration": "4:09",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 10,
+        "title": "I Thought I Knew It All",
+        "duration": "3:44",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 11,
+        "title": "Black Curtains",
+        "duration": "3:39",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 12,
+        "title": "Victory",
+        "duration": "4:27",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      }
     ]
   },
   {
@@ -294,17 +939,72 @@
       "spotify": "https://open.spotify.com/album/1w9opfGdFtR3ulNHxnnO1e"
     },
     "tracks": [
-      { "n": 1, "title": "Skin O' My Teeth", "duration": "3:14", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 2, "title": "Symphony of Destruction", "duration": "4:03", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 3, "title": "Architecture of Aggression", "duration": "3:34", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 4, "title": "Foreclosure of a Dream", "duration": "4:16", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 5, "title": "Sweating Bullets", "duration": "5:03", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 6, "title": "This Was My Life", "duration": "3:43", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 7, "title": "Countdown to Extinction", "duration": "4:16", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 8, "title": "High Speed Dirt", "duration": "4:29", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 9, "title": "Psychotron", "duration": "4:42", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 10, "title": "Captive Honour", "duration": "4:05", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 11, "title": "Ashes in Your Mouth", "duration": "6:11", "writers": ["Dave Mustaine", "Marty Friedman"] }
+      {
+        "n": 1,
+        "title": "Skin O' My Teeth",
+        "duration": "3:14",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 2,
+        "title": "Symphony of Destruction",
+        "duration": "4:03",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 3,
+        "title": "Architecture of Aggression",
+        "duration": "3:34",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 4,
+        "title": "Foreclosure of a Dream",
+        "duration": "4:16",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 5,
+        "title": "Sweating Bullets",
+        "duration": "5:03",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 6,
+        "title": "This Was My Life",
+        "duration": "3:43",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 7,
+        "title": "Countdown to Extinction",
+        "duration": "4:16",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 8,
+        "title": "High Speed Dirt",
+        "duration": "4:29",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 9,
+        "title": "Psychotron",
+        "duration": "4:42",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 10,
+        "title": "Captive Honour",
+        "duration": "4:05",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 11,
+        "title": "Ashes in Your Mouth",
+        "duration": "6:11",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      }
     ]
   },
   {
@@ -319,15 +1019,60 @@
       "spotify": "https://open.spotify.com/album/4e6ML9RBhDyyKTaTwbiRZv"
     },
     "tracks": [
-      { "n": 1, "title": "Holy Wars... The Punishment Due", "duration": "6:32", "writers": ["Dave Mustaine"] },
-      { "n": 2, "title": "Hangar 18", "duration": "5:14", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 3, "title": "Take No Prisoners", "duration": "3:28", "writers": ["Dave Mustaine"] },
-      { "n": 4, "title": "Five Magics", "duration": "5:42", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 5, "title": "Poison Was the Cure", "duration": "2:58", "writers": ["Dave Mustaine"] },
-      { "n": 6, "title": "Lucretia", "duration": "3:58", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 7, "title": "Tornado of Souls", "duration": "5:22", "writers": ["Dave Mustaine", "Marty Friedman"] },
-      { "n": 8, "title": "Dawn Patrol", "duration": "1:51", "writers": ["Dave Ellefson"] },
-      { "n": 9, "title": "Rust in Peace... Polaris", "duration": "5:44", "writers": ["Dave Mustaine", "Marty Friedman"] }
+      {
+        "n": 1,
+        "title": "Holy Wars... The Punishment Due",
+        "duration": "6:32",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Hangar 18",
+        "duration": "5:14",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 3,
+        "title": "Take No Prisoners",
+        "duration": "3:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "Five Magics",
+        "duration": "5:42",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 5,
+        "title": "Poison Was the Cure",
+        "duration": "2:58",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "Lucretia",
+        "duration": "3:58",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 7,
+        "title": "Tornado of Souls",
+        "duration": "5:22",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 8,
+        "title": "Dawn Patrol",
+        "duration": "1:51",
+        "writers": ["Dave Ellefson"]
+      },
+      {
+        "n": 9,
+        "title": "Rust in Peace... Polaris",
+        "duration": "5:44",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      }
     ]
   },
   {
@@ -342,14 +1087,54 @@
       "spotify": "https://open.spotify.com/intl-es/album/4rW8n1hOkavPGIxPvEnT18"
     },
     "tracks": [
-      { "n": 1, "title": "Into the Lungs of Hell", "duration": "3:29", "writers": ["Dave Mustaine"] },
-      { "n": 2, "title": "Set the World Afire", "duration": "5:48", "writers": ["Dave Mustaine"] },
-      { "n": 3, "title": "Anarchy in the U.K.", "duration": "3:00", "writers": ["Sex Pistols (cover)"] },
-      { "n": 4, "title": "Mary Jane", "duration": "4:25", "writers": ["Dave Mustaine"] },
-      { "n": 5, "title": "502", "duration": "3:28", "writers": ["Dave Mustaine"] },
-      { "n": 6, "title": "In My Darkest Hour", "duration": "6:16", "writers": ["Dave Mustaine", "Cliff Burton"] },
-      { "n": 7, "title": "Liar", "duration": "3:20", "writers": ["Dave Mustaine"] },
-      { "n": 8, "title": "Hook in Mouth", "duration": "4:40", "writers": ["Dave Mustaine"] }
+      {
+        "n": 1,
+        "title": "Into the Lungs of Hell",
+        "duration": "3:29",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Set the World Afire",
+        "duration": "5:48",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Anarchy in the U.K.",
+        "duration": "3:00",
+        "writers": ["Sex Pistols (cover)"]
+      },
+      {
+        "n": 4,
+        "title": "Mary Jane",
+        "duration": "4:25",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "502",
+        "duration": "3:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "In My Darkest Hour",
+        "duration": "6:16",
+        "writers": ["Dave Mustaine", "Cliff Burton"]
+      },
+      {
+        "n": 7,
+        "title": "Liar",
+        "duration": "3:20",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "Hook in Mouth",
+        "duration": "4:40",
+        "writers": ["Dave Mustaine"]
+      }
     ]
   },
   {
@@ -364,14 +1149,54 @@
       "spotify": "https://open.spotify.com/album/4U8ZF5zDIRy4lBnnXBN2uO"
     },
     "tracks": [
-      { "n": 1, "title": "Wake Up Dead", "duration": "3:38", "writers": ["Dave Mustaine"] },
-      { "n": 2, "title": "The Conjuring", "duration": "5:04", "writers": ["Dave Mustaine"] },
-      { "n": 3, "title": "Peace Sells", "duration": "4:04", "writers": ["Dave Mustaine"] },
-      { "n": 4, "title": "Devils Island", "duration": "5:05", "writers": ["Dave Mustaine"] },
-      { "n": 5, "title": "Good Mourning / Black Friday", "duration": "6:41", "writers": ["Dave Mustaine"] },
-      { "n": 6, "title": "Bad Omen", "duration": "4:06", "writers": ["Dave Mustaine"] },
-      { "n": 7, "title": "I Ain't Superstitious", "duration": "2:47", "writers": ["Willie Dixon (cover)"] },
-      { "n": 8, "title": "My Last Words", "duration": "4:54", "writers": ["Dave Mustaine"] }
+      {
+        "n": 1,
+        "title": "Wake Up Dead",
+        "duration": "3:38",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "The Conjuring",
+        "duration": "5:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Peace Sells",
+        "duration": "4:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "Devils Island",
+        "duration": "5:05",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Good Mourning / Black Friday",
+        "duration": "6:41",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "Bad Omen",
+        "duration": "4:06",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "I Ain't Superstitious",
+        "duration": "2:47",
+        "writers": ["Willie Dixon (cover)"]
+      },
+      {
+        "n": 8,
+        "title": "My Last Words",
+        "duration": "4:54",
+        "writers": ["Dave Mustaine"]
+      }
     ]
   },
   {
@@ -386,14 +1211,54 @@
       "spotify": "https://open.spotify.com/album/0TFQuO4m3XR5pTJCFS88Qk"
     },
     "tracks": [
-      { "n": 1, "title": "Last Rites / Loved to Deth", "duration": "4:38", "writers": ["Dave Mustaine"] },
-      { "n": 2, "title": "Killing Is My Business... And Business Is Good!", "duration": "3:05", "writers": ["Dave Mustaine"] },
-      { "n": 3, "title": "Skull Beneath the Skin", "duration": "3:45", "writers": ["Dave Mustaine"] },
-      { "n": 4, "title": "These Boots", "duration": "3:44", "writers": ["Lee Hazlewood (cover)"] },
-      { "n": 5, "title": "Rattlehead", "duration": "3:42", "writers": ["Dave Mustaine"] },
-      { "n": 6, "title": "Chosen Ones", "duration": "2:54", "writers": ["Dave Mustaine"] },
-      { "n": 7, "title": "Looking Down the Cross", "duration": "4:59", "writers": ["Dave Mustaine"] },
-      { "n": 8, "title": "Mechanix", "duration": "4:22", "writers": ["Dave Mustaine"] }
+      {
+        "n": 1,
+        "title": "Last Rites / Loved to Deth",
+        "duration": "4:38",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Killing Is My Business... And Business Is Good!",
+        "duration": "3:05",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Skull Beneath the Skin",
+        "duration": "3:45",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "These Boots",
+        "duration": "3:44",
+        "writers": ["Lee Hazlewood (cover)"]
+      },
+      {
+        "n": 5,
+        "title": "Rattlehead",
+        "duration": "3:42",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "Chosen Ones",
+        "duration": "2:54",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "Looking Down the Cross",
+        "duration": "4:59",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "Mechanix",
+        "duration": "4:22",
+        "writers": ["Dave Mustaine"]
+      }
     ]
   }
 ]
