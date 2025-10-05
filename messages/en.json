@@ -6,7 +6,8 @@
   },
   "navigation": {
     "home": "Home",
-    "tour": "Tour"
+    "tour": "Tour",
+    "discography": "Discography"
   },
   "hero": {
     "title": "Latest album · Farewell tour",
@@ -63,7 +64,23 @@
   "shorts": {
     "title": "New Album Previews"
   },
+  "albumDetail": {
+    "upcoming": "Upcoming",
+    "details": "Details",
+    "label": "Label",
+    "producers": "Producers",
+    "releaseDate": "Release Date",
+    "tracklist": "Tracklist",
+    "duration": "Duration",
+    "writers": "Writers",
+    "noLyrics": "Lyrics not available",
+    "close": "Close",
+    "lineup": "Lineup"
+  },
   "footer": {
     "disclaimer": "Unofficial fan site. © {year}"
+  },
+  "discography": {
+    "title": "Discography"
   }
 }

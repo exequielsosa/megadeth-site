@@ -6,7 +6,8 @@
   },
   "navigation": {
     "home": "Inicio",
-    "tour": "Gira"
+    "tour": "Gira",
+    "discography": "Discografía"
   },
   "hero": {
     "title": "Último disco · Megadeth",
@@ -63,7 +64,23 @@
   "shorts": {
     "title": "Adelantos del Nuevo Álbum"
   },
+  "albumDetail": {
+    "upcoming": "Próximo",
+    "details": "Detalles",
+    "label": "Sello",
+    "producers": "Productores",
+    "releaseDate": "Fecha de lanzamiento",
+    "tracklist": "Lista de canciones",
+    "duration": "Duración",
+    "writers": "Compositores",
+    "noLyrics": "Letras no disponibles",
+    "close": "Cerrar",
+    "lineup": "Formación"
+  },
   "footer": {
     "disclaimer": "Fan site no oficial. © {year}"
+  },
+  "discography": {
+    "title": "Discografía"
   }
 }
