@@ -11,27 +11,14 @@ import {
   Typography,
   IconButton,
   Tooltip,
-  Divider,
-  Collapse,
 } from "@mui/material";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+
 import AppleIcon from "@mui/icons-material/Apple";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { styled } from "@mui/material/styles";
+
 import type { Album } from "@/types/album";
 import { useState } from "react";
-
-const Expand = styled((props: any) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }: any) => ({
-  transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
-  transition: theme.transitions.create("transform", {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
 
 function StreamingIcons({ links }: { links?: Album["streaming"] }) {
   if (!links) return null;
@@ -53,7 +40,12 @@ function StreamingIcons({ links }: { links?: Album["streaming"] }) {
 
   return (
     <Stack direction="row" spacing={0.5}>
-      {spotify && iconBtn(spotify, "Escuchar en Spotify", <PlayArrowIcon />)}
+      {spotify &&
+        iconBtn(
+          spotify,
+          "Escuchar en Spotify",
+          <Image src="/spotify.png" alt="Spotify" width={20} height={20} />
+        )}
       {appleMusic &&
         iconBtn(appleMusic, "Escuchar en Apple Music", <AppleIcon />)}
       {youtube && iconBtn(youtube, "Ver en YouTube", <YouTubeIcon />)}
@@ -65,11 +57,8 @@ function StreamingIcons({ links }: { links?: Album["streaming"] }) {
 }
 
 export default function AlbumCard({ album }: { album: Album }) {
-  const [expanded, setExpanded] = useState(false);
-  const toggle = () => setExpanded((v) => !v);
-
   const metaChips = (
-    <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+    <Stack direction="row" spacing={1.5} flexWrap="wrap" useFlexGap>
       <Chip size="small" label={album.year} />
       {album.label && (
         <Chip size="small" label={album.label} variant="outlined" />
@@ -88,7 +77,12 @@ export default function AlbumCard({ album }: { album: Album }) {
 
   return (
     <Card
-      sx={{ height: "100%", display: "flex", flexDirection: "column" }}
+      sx={{
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        borderColor: "primary.main  ||",
+      }}
       variant="outlined"
     >
       <Box
@@ -128,7 +122,10 @@ export default function AlbumCard({ album }: { album: Album }) {
 
       <CardHeader
         title={
-          <Typography variant="h6" sx={{ fontWeight: 700, lineHeight: 1.2 }}>
+          <Typography
+            variant="h6"
+            sx={{ fontWeight: 700, lineHeight: 1.2, mb: 1 }}
+          >
             {album.title}
           </Typography>
         }
@@ -153,38 +150,6 @@ export default function AlbumCard({ album }: { album: Album }) {
       <Box sx={{ px: 2, pb: 1 }}>
         <StreamingIcons links={album.streaming} />
       </Box>
-
-      {album.tracks?.length ? (
-        <>
-          <Divider />
-          <Box
-            sx={{ px: 1, py: 0.5, display: "flex", justifyContent: "flex-end" }}
-          >
-            <Expand
-              expand={expanded ? 1 : 0}
-              onClick={toggle}
-              aria-expanded={expanded}
-              aria-label="Mostrar tracklist"
-            >
-              <ExpandMoreIcon />
-            </Expand>
-          </Box>
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
-            <Box sx={{ px: 2, pb: 2 }}>
-              <Stack spacing={0.5} component="ol" sx={{ m: 0, pl: 2 }}>
-                {album.tracks.map((t) => (
-                  <li key={t.n}>
-                    <Typography variant="body2">
-                      <strong>{t.n}.</strong> {t.title}{" "}
-                      {t.duration ? `— ${t.duration}` : ""}
-                    </Typography>
-                  </li>
-                ))}
-              </Stack>
-            </Box>
-          </Collapse>
-        </>
-      ) : null}
     </Card>
   );
 }

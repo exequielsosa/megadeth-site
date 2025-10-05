@@ -51,6 +51,7 @@ export default function Header() {
   const navigationItems = [
     { label: t("home"), href: "/" },
     { label: t("tour"), href: "/tour" },
+    { label: t("discography"), href: "/discography" },
   ];
 
   const handleLanguageClick = (event: React.MouseEvent<HTMLElement>) => {

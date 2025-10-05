@@ -1,5 +1,6 @@
 import DiscographyGrid from "@/components/DiscographyGrid";
 import data from "../../constants/discography.json";
+import ContainerGradient from "../../components/atoms/ContainerGradient";
 
 export const metadata = {
   title: "Discografía — Megadeth Fan",
@@ -8,5 +9,9 @@ export const metadata = {
 };
 
 export default function AlbumsPage() {
-  return <DiscographyGrid albums={data} />;
+  return (
+    <ContainerGradient>
+      <DiscographyGrid albums={data} />
+    </ContainerGradient>
+  );
 }

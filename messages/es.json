@@ -6,7 +6,8 @@
   },
   "navigation": {
     "home": "Inicio",
-    "tour": "Gira"
+    "tour": "Gira",
+    "discography": "Discografía"
   },
   "hero": {
     "title": "Último disco · Megadeth",
@@ -65,5 +66,8 @@
   },
   "footer": {
     "disclaimer": "Fan site no oficial. © {year}"
+  },
+  "discography": {
+    "title": "Discografía"
   }
 }

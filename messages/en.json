@@ -6,7 +6,8 @@
   },
   "navigation": {
     "home": "Home",
-    "tour": "Tour"
+    "tour": "Tour",
+    "discography": "Discography"
   },
   "hero": {
     "title": "Latest album · Farewell tour",
@@ -65,5 +66,8 @@
   },
   "footer": {
     "disclaimer": "Unofficial fan site. © {year}"
+  },
+  "discography": {
+    "title": "Discography"
   }
 }
