@@ -29,12 +29,12 @@ function StreamingIcons({ links }: { links?: Album["streaming"] }) {
     <Tooltip title={label} key={label}>
       <IconButton
         size="small"
-        component="a"
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
         aria-label={label}
-        onClick={(e) => e.stopPropagation()}
+        onClick={(e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          window.open(href, "_blank", "noopener,noreferrer");
+        }}
       >
         {icon}
       </IconButton>

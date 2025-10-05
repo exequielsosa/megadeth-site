@@ -237,11 +237,16 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                           </Stack>
                         }
                         secondary={
-                          <Stack spacing={0.5} sx={{ mt: 0.5 }}>
+                          <Box
+                            component="span"
+                            sx={{ display: "block", mt: 0.5 }}
+                          >
                             {track.duration && (
                               <Typography
                                 variant="caption"
                                 color="text.secondary"
+                                component="span"
+                                sx={{ display: "block", mb: 0.5 }}
                               >
                                 {t("duration") || "Duración"}: {track.duration}
                               </Typography>
@@ -250,12 +255,14 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                               <Typography
                                 variant="caption"
                                 color="text.secondary"
+                                component="span"
+                                sx={{ display: "block" }}
                               >
                                 {t("writers") || "Compositores"}:{" "}
                                 {track.writers.join(", ")}
                               </Typography>
                             )}
-                          </Stack>
+                          </Box>
                         }
                       />
                     </ListItem>
