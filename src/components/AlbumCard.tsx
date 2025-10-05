@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   Box,
   Card,
@@ -76,80 +77,91 @@ export default function AlbumCard({ album }: { album: Album }) {
   );
 
   return (
-    <Card
-      sx={{
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        borderColor: "primary.main  ||",
-      }}
-      variant="outlined"
+    <Link
+      href={`/discography/${album.id}`}
+      style={{ textDecoration: "none", color: "inherit" }}
     >
-      <Box
+      <Card
         sx={{
-          position: "relative",
-          aspectRatio: "1/1",
-          bgColor: "background.paper",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          borderColor: "primary.main",
+          cursor: "pointer",
+          transition: "transform 0.2s ease-in-out",
+          "&:hover": {
+            transform: "translateY(-4px)",
+            boxShadow: 4,
+          },
         }}
+        variant="outlined"
       >
-        <Image
-          src={album.cover}
-          alt={`${album.title} cover`}
-          fill
-          sizes="(max-width: 600px) 100vw, 33vw"
-          style={{ objectFit: "cover" }}
-          priority={album.isUpcoming}
+        <Box
+          sx={{
+            position: "relative",
+            aspectRatio: "1/1",
+            bgColor: "background.paper",
+          }}
+        >
+          <Image
+            src={album.cover}
+            alt={`${album.title} cover`}
+            fill
+            sizes="(max-width: 600px) 100vw, 33vw"
+            style={{ objectFit: "cover" }}
+            priority={album.isUpcoming}
+          />
+          {album.isUpcoming && (
+            <Box
+              sx={{
+                position: "absolute",
+                top: 8,
+                left: 8,
+                bgcolor: "primary.main",
+                color: "primary.contrastText",
+                px: 1,
+                py: 0.5,
+                borderRadius: 1,
+                fontSize: 12,
+                fontWeight: 700,
+              }}
+            >
+              Próximo lanzamiento
+            </Box>
+          )}
+        </Box>
+
+        <CardHeader
+          title={
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: 700, lineHeight: 1.2, mb: 1 }}
+            >
+              {album.title}
+            </Typography>
+          }
+          subheader={metaChips}
+          sx={{ pb: 0 }}
         />
-        {album.isUpcoming && (
-          <Box
-            sx={{
-              position: "absolute",
-              top: 8,
-              left: 8,
-              bgcolor: "primary.main",
-              color: "primary.contrastText",
-              px: 1,
-              py: 0.5,
-              borderRadius: 1,
-              fontSize: 12,
-              fontWeight: 700,
-            }}
-          >
-            Próximo lanzamiento
-          </Box>
-        )}
-      </Box>
 
-      <CardHeader
-        title={
-          <Typography
-            variant="h6"
-            sx={{ fontWeight: 700, lineHeight: 1.2, mb: 1 }}
-          >
-            {album.title}
-          </Typography>
-        }
-        subheader={metaChips}
-        sx={{ pb: 0 }}
-      />
+        <CardContent sx={{ flexGrow: 1 }}>
+          {album.description && (
+            <Typography variant="body2" color="text.secondary" sx={{ mb: 1.5 }}>
+              {album.description}
+            </Typography>
+          )}
 
-      <CardContent sx={{ flexGrow: 1 }}>
-        {album.description && (
-          <Typography variant="body2" color="text.secondary" sx={{ mb: 1.5 }}>
-            {album.description}
-          </Typography>
-        )}
+          {album.producers?.length ? (
+            <Typography variant="caption" color="text.secondary">
+              Productores: {album.producers.join(", ")}
+            </Typography>
+          ) : null}
+        </CardContent>
 
-        {album.producers?.length ? (
-          <Typography variant="caption" color="text.secondary">
-            Productores: {album.producers.join(", ")}
-          </Typography>
-        ) : null}
-      </CardContent>
-
-      <Box sx={{ px: 2, pb: 1 }}>
-        <StreamingIcons links={album.streaming} />
-      </Box>
-    </Card>
+        <Box sx={{ px: 2, pb: 1 }}>
+          <StreamingIcons links={album.streaming} />
+        </Box>
+      </Card>
+    </Link>
   );
 }

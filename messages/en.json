@@ -64,6 +64,18 @@
   "shorts": {
     "title": "New Album Previews"
   },
+  "albumDetail": {
+    "upcoming": "Upcoming",
+    "details": "Details",
+    "label": "Label",
+    "producers": "Producers",
+    "releaseDate": "Release Date",
+    "tracklist": "Tracklist",
+    "duration": "Duration",
+    "writers": "Writers",
+    "noLyrics": "Lyrics not available",
+    "close": "Close"
+  },
   "footer": {
     "disclaimer": "Unofficial fan site. © {year}"
   },

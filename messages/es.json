@@ -64,6 +64,18 @@
   "shorts": {
     "title": "Adelantos del Nuevo Álbum"
   },
+  "albumDetail": {
+    "upcoming": "Próximo",
+    "details": "Detalles",
+    "label": "Sello",
+    "producers": "Productores",
+    "releaseDate": "Fecha de lanzamiento",
+    "tracklist": "Lista de canciones",
+    "duration": "Duración",
+    "writers": "Compositores",
+    "noLyrics": "Letras no disponibles",
+    "close": "Cerrar"
+  },
   "footer": {
     "disclaimer": "Fan site no oficial. © {year}"
   },

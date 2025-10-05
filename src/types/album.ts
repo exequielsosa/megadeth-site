@@ -11,6 +11,8 @@ export type Track = {
   n: number;
   title: string;
   duration?: string; // "4:32"
+  writers?: string[]; // Autores/compositores
+  lyrics?: string; // Letras de la canción (opcional)
 };
 
 export type Album = {
