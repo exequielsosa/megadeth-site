@@ -1,0 +1,584 @@
+[
+  {
+    "id": "warheads-on-foreheads",
+    "title": "Warheads on Foreheads",
+    "year": 2019,
+    "cover": "/images/albums/comp-wof.webp",
+    "label": "Capitol",
+    "producers": ["Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "Recopilación definitiva de 35 años de Megadeth; 35 canciones remasterizadas.",
+        "en": "Definitive compilation of 35 years of Megadeth; 35 remastered songs."
+      },
+      "extended": {
+        "es": "La recopilación más completa de la carrera de Megadeth, abarcando 35 años de música con 35 canciones cuidadosamente seleccionadas. Incluye clásicos remasterizados desde 'Killing Is My Business' hasta 'Dystopia', presentando la evolución musical de la banda a través de sus mejores momentos.",
+        "en": "The most comprehensive compilation of Megadeth's career, spanning 35 years of music with 35 carefully selected songs. Features remastered classics from 'Killing Is My Business' to 'Dystopia', showcasing the band's musical evolution through their finest moments."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Varios músicos",
+        "instrument": {
+          "es": "Instrumentos varios (1985-2019)",
+          "en": "Various instruments (1985-2019)"
+        }
+      }
+    ],
+    "streaming": {
+      "spotify": "https://open.spotify.com/intl-es/album/58p5IFT7CEcMHSrAIuO5DJ"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Rattlehead",
+        "duration": "3:42",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 2,
+        "title": "Mechanix",
+        "duration": "4:24",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Killing Is My Business... And Business Is Good!",
+        "duration": "3:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "Peace Sells",
+        "duration": "4:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Wake Up Dead",
+        "duration": "3:38",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "In My Darkest Hour",
+        "duration": "6:16",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 7,
+        "title": "Holy Wars... The Punishment Due",
+        "duration": "6:32",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "Hangar 18",
+        "duration": "5:14",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 9,
+        "title": "Tornado of Souls",
+        "duration": "5:19",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 10,
+        "title": "Symphony of Destruction",
+        "duration": "4:06",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Sweating Bullets",
+        "duration": "5:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 12,
+        "title": "Train of Consequences",
+        "duration": "3:26",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 13,
+        "title": "A Tout Le Monde",
+        "duration": "4:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 14,
+        "title": "Trust",
+        "duration": "5:14",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 15,
+        "title": "She-Wolf",
+        "duration": "7:17",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      }
+    ]
+  },
+  {
+    "id": "anthology-set-the-world-afire",
+    "title": "Anthology: Set the World Afire",
+    "year": 2008,
+    "cover": "/images/albums/comp-anto.jpg",
+    "label": "Capitol",
+    "producers": ["Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "Antología de 2 CDs abarcando los primeros 20 años; incluye rarezas y B-sides.",
+        "en": "2-CD anthology spanning the first 20 years; includes rarities and B-sides."
+      },
+      "extended": {
+        "es": "Completa antología que documenta las primeras dos décadas de la carrera de Megadeth, desde 1985 hasta 2005. Incluye no solo los éxitos más conocidos sino también rarezas, versiones alternativas y B-sides que raramente aparecían en recopilaciones, ofreciendo una perspectiva más profunda del catálogo de la banda.",
+        "en": "Complete anthology documenting the first two decades of Megadeth's career, from 1985 to 2005. Includes not only the best-known hits but also rarities, alternative versions and B-sides that rarely appeared on compilations, offering a deeper perspective on the band's catalog."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Varios músicos",
+        "instrument": {
+          "es": "Instrumentos varios (1985-2005)",
+          "en": "Various instruments (1985-2005)"
+        }
+      }
+    ],
+    "streaming": {
+      "spotify": "https://open.spotify.com/intl-es/album/2UpRdZUOrFVtAnXN0l2EfQ"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Killing Is My Business... And Business Is Good!",
+        "duration": "3:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Peace Sells",
+        "duration": "4:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Wake Up Dead",
+        "duration": "3:38",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "In My Darkest Hour",
+        "duration": "6:16",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 5,
+        "title": "Set the World Afire",
+        "duration": "5:48",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "No More Mr. Nice Guy",
+        "duration": "2:59",
+        "writers": ["Alice Cooper", "Michael Bruce"]
+      },
+      {
+        "n": 7,
+        "title": "Holy Wars... The Punishment Due",
+        "duration": "6:32",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "Hangar 18",
+        "duration": "5:14",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 9,
+        "title": "Symphony of Destruction",
+        "duration": "4:06",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "Train of Consequences",
+        "duration": "3:26",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      }
+    ]
+  },
+  {
+    "id": "warchest",
+    "title": "Warchest",
+    "year": 2007,
+    "cover": "/images/albums/comp-warchest.jpg",
+    "label": "Capitol",
+    "producers": ["Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "Box set de 4 CDs con material raro, demos y versiones en vivo inéditas.",
+        "en": "4-CD box set with rare material, demos and unreleased live versions."
+      },
+      "extended": {
+        "es": "Extenso box set de cuatro discos que reúne material raro y poco conocido de la carrera de Megadeth. Incluye demos, grabaciones en vivo inéditas, versiones alternativas y material de archivo que los fanáticos más dedicados habían estado esperando. Una verdadera joya para coleccionistas.",
+        "en": "Extensive four-disc box set gathering rare and little-known material from Megadeth's career. Includes demos, unreleased live recordings, alternative versions and archival material that the most dedicated fans had been waiting for. A true gem for collectors."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Varios músicos",
+        "instrument": {
+          "es": "Instrumentos varios (1985-2007)",
+          "en": "Various instruments (1985-2007)"
+        }
+      }
+    ],
+    "streaming": {
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_n3os-AhjVed2orJVCElQgJclpfw8OXvaA"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Killing Is My Business... And Business Is Good! (Demo)",
+        "duration": "3:15",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "The Skull Beneath the Skin (Demo)",
+        "duration": "3:45",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Peace Sells (Demo)",
+        "duration": "4:12",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "Wake Up Dead (Live)",
+        "duration": "3:48",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Anarchy in the U.K.",
+        "duration": "3:01",
+        "writers": ["Johnny Rotten", "Steve Jones", "Glen Matlock", "Paul Cook"]
+      }
+    ]
+  },
+  {
+    "id": "greatest-hits-back-to-the-start",
+    "title": "Greatest Hits: Back to the Start",
+    "year": 2005,
+    "cover": "/images/albums/comp-gh.jpg",
+    "label": "Capitol",
+    "producers": ["Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "Compilación de grandes éxitos con dos canciones nuevas; retrospectiva definitiva.",
+        "en": "Greatest hits compilation with two new songs; definitive retrospective."
+      },
+      "extended": {
+        "es": "Recopilación definitiva de los mayores éxitos de Megadeth hasta 2005, incluyendo dos canciones nuevas grabadas específicamente para esta compilación. Presenta una cuidadosa selección cronológica que muestra la evolución de la banda desde sus inicios thrash hasta su sonido más melódico de los 2000.",
+        "en": "Definitive compilation of Megadeth's greatest hits up to 2005, including two new songs recorded specifically for this compilation. Features a careful chronological selection that shows the band's evolution from their thrash beginnings to their more melodic sound of the 2000s."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Varios músicos",
+        "instrument": {
+          "es": "Instrumentos varios (1985-2005)",
+          "en": "Various instruments (1985-2005)"
+        }
+      }
+    ],
+    "streaming": {
+      "spotify": "https://open.spotify.com/intl-es/album/00sgBMhbJo1lEa1hHhYtw4"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Trust",
+        "duration": "5:14",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 2,
+        "title": "Symphony of Destruction",
+        "duration": "4:06",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Peace Sells",
+        "duration": "4:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "Sweating Bullets",
+        "duration": "5:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "A Tout Le Monde",
+        "duration": "4:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "Hangar 18",
+        "duration": "5:14",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 7,
+        "title": "Angry Again",
+        "duration": "3:47",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "In My Darkest Hour",
+        "duration": "6:16",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 9,
+        "title": "Back in the Day",
+        "duration": "3:27",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "Something That I'm Not",
+        "duration": "3:34",
+        "writers": ["Dave Mustaine"]
+      }
+    ]
+  },
+  {
+    "id": "still-alive-and-well",
+    "title": "Still Alive... and Well?",
+    "year": 2002,
+    "cover": "/images/albums/comp-saaw.jpg",
+    "label": "Sanctuary",
+    "producers": ["Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "Compilación de regreso tras el hiatus; incluye clásicos remasterizados y rarezas.",
+        "en": "Comeback compilation after hiatus; includes remastered classics and rarities."
+      },
+      "extended": {
+        "es": "Compilación especial lanzada durante el regreso de Megadeth tras el hiatus forzado por los problemas de salud de Dave Mustaine. Incluye versiones remasterizadas de clásicos junto con rarezas y grabaciones poco conocidas, marcando el renacimiento de la banda en la década de 2000.",
+        "en": "Special compilation released during Megadeth's comeback after the hiatus forced by Dave Mustaine's health problems. Includes remastered versions of classics along with rarities and little-known recordings, marking the band's rebirth in the 2000s decade."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Varios músicos",
+        "instrument": {
+          "es": "Instrumentos varios (1985-2002)",
+          "en": "Various instruments (1985-2002)"
+        }
+      }
+    ],
+    "streaming": {
+      "spotify": "https://open.spotify.com/intl-es/album/2E5NamILke1AkaS4n09QH7"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Symphony of Destruction",
+        "duration": "4:06",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Trust",
+        "duration": "5:14",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 3,
+        "title": "Sweating Bullets",
+        "duration": "5:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "Almost Honest",
+        "duration": "4:05",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Angry Again",
+        "duration": "3:47",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "A Tout Le Monde",
+        "duration": "4:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "Train of Consequences",
+        "duration": "3:26",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 8,
+        "title": "Hangar 18",
+        "duration": "5:14",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      }
+    ]
+  },
+  {
+    "id": "capitol-punishment",
+    "title": "Capitol Punishment: The Megadeth Years",
+    "year": 2000,
+    "cover": "/images/albums/comp-cp.webp",
+    "label": "Capitol",
+    "producers": ["Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "Compilación de los años Capitol; últimos éxitos antes del hiatus temporal.",
+        "en": "Capitol years compilation; last hits before temporary hiatus."
+      },
+      "extended": {
+        "es": "Compilación que reúne los mejores momentos de Megadeth durante sus años en Capitol Records, desde 'Countdown to Extinction' hasta 'Risk'. Esta colección captura la transición de la banda hacia un sonido más comercial y accesible, siendo el último lanzamiento antes del hiatus temporal por los problemas de salud de Mustaine.",
+        "en": "Compilation gathering Megadeth's best moments during their Capitol Records years, from 'Countdown to Extinction' to 'Risk'. This collection captures the band's transition toward a more commercial and accessible sound, being the last release before the temporary hiatus due to Mustaine's health problems."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Varios músicos",
+        "instrument": {
+          "es": "Instrumentos varios (1992-2000)",
+          "en": "Various instruments (1992-2000)"
+        }
+      }
+    ],
+    "streaming": {
+      "spotify": "https://open.spotify.com/playlist/3Y59Mf9DfJt95uiVXV3HFq"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Kill the King",
+        "duration": "3:24",
+        "writers": ["Ritchie Blackmore", "Ronnie James Dio", "Cozy Powell"]
+      },
+      {
+        "n": 2,
+        "title": "Dread and the Fugitive Mind",
+        "duration": "4:25",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Crush 'Em",
+        "duration": "4:57",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 4,
+        "title": "Use the Man",
+        "duration": "4:00",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 5,
+        "title": "Almost Honest",
+        "duration": "4:05",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "Trust",
+        "duration": "5:14",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 7,
+        "title": "A Tout Le Monde",
+        "duration": "4:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "Train of Consequences",
+        "duration": "3:26",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 9,
+        "title": "Sweating Bullets",
+        "duration": "5:04",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "Symphony of Destruction",
+        "duration": "4:06",
+        "writers": ["Dave Mustaine"]
+      }
+    ]
+  }
+]

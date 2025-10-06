@@ -1,0 +1,776 @@
+[
+  {
+    "id": "unplugged-in-boston-live-2001",
+    "title": "Unplugged in Boston: Live 2001",
+    "year": 2021,
+    "cover": "/images/albums/live-boston.jpg",
+    "label": "Tradecraft / Universal",
+    "producers": ["Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "Registro acústico inédito grabado en Boston en 2001; lanzamiento tardío de sesión histórica.",
+        "en": "Unreleased acoustic recording from Boston 2001; late release of historic session."
+      },
+      "extended": {
+        "es": "Grabación acústica históricamente significativa realizada en Boston durante 2001, finalmente lanzada dos décadas después. Este registro íntimo muestra una faceta poco explorada de Megadeth, con versiones despojadas de sus clásicos que revelan la fortaleza compositiva de las canciones más allá de su potencia eléctrica.",
+        "en": "Historically significant acoustic recording made in Boston during 2001, finally released two decades later. This intimate recording shows a rarely explored facet of Megadeth, with stripped-down versions of their classics that reveal the compositional strength of the songs beyond their electric power."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra acústica",
+          "en": "Vocals and acoustic guitar"
+        }
+      },
+      {
+        "name": "Al Pitrelli",
+        "instrument": {
+          "es": "Guitarra acústica",
+          "en": "Acoustic guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo acústico",
+          "en": "Acoustic bass"
+        }
+      },
+      {
+        "name": "Jimmy DeGrasso",
+        "instrument": {
+          "es": "Percusión",
+          "en": "Percussion"
+        }
+      }
+    ],
+    "streaming": {
+      "spotify": "https://open.spotify.com/intl-es/album/48lh8DY2GOeVtEbLHPVyod"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Symphony of Destruction",
+        "duration": "4:45",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Peace Sells",
+        "duration": "4:12",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Trust",
+        "duration": "5:28",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 4,
+        "title": "Sweating Bullets",
+        "duration": "5:02",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "A Tout Le Monde",
+        "duration": "4:38",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "In My Darkest Hour",
+        "duration": "6:15",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      }
+    ]
+  },
+  {
+    "id": "countdown-to-extinction-live",
+    "title": "Countdown to Extinction: Live",
+    "year": 2013,
+    "cover": "/images/albums/live-countdown.jpg",
+    "label": "Tradecraft / Universal",
+    "producers": ["Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "Álbum completo 'Countdown' ejecutado en vivo para celebrar su 20º aniversario.",
+        "en": "Complete 'Countdown' album performed live to celebrate its 20th anniversary."
+      },
+      "extended": {
+        "es": "Celebración especial del 20º aniversario de 'Countdown to Extinction', donde Megadeth interpretó el álbum completo en vivo. Este registro captura la madurez y precisión técnica de la banda, reimaginando uno de sus trabajos más exitosos comercialmente con la energía y experiencia acumulada a lo largo de dos décadas.",
+        "en": "Special celebration of the 20th anniversary of 'Countdown to Extinction', where Megadeth performed the complete album live. This recording captures the band's maturity and technical precision, reimagining one of their most commercially successful works with the energy and experience accumulated over two decades."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Chris Broderick",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Shawn Drover",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
+    "streaming": {
+      "spotify": "https://open.spotify.com/intl-es/album/0vf3fKamMi3yfjApyZaAE1"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Skin O' My Teeth",
+        "duration": "3:18",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 2,
+        "title": "Symphony of Destruction",
+        "duration": "4:08",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Architecture of Aggression",
+        "duration": "3:38",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 4,
+        "title": "Foreclosure of a Dream",
+        "duration": "4:22",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 5,
+        "title": "Sweating Bullets",
+        "duration": "5:06",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "This Was My Life",
+        "duration": "3:48",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "Countdown to Extinction",
+        "duration": "4:18",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 8,
+        "title": "High Speed Dirt",
+        "duration": "4:25",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 9,
+        "title": "Psychotron",
+        "duration": "4:45",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "Captive Honour",
+        "duration": "4:12",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Ashes in Your Mouth",
+        "duration": "6:28",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      }
+    ]
+  },
+  {
+    "id": "the-big-four-live-from-sofia-bulgaria",
+    "title": "The Big Four: Live from Sofia, Bulgaria",
+    "year": 2010,
+    "cover": "/images/albums/live-big4.jpg",
+    "label": "Universal",
+    "producers": ["Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "Histórico concierto Big Four con Metallica, Slayer y Anthrax en Sofía.",
+        "en": "Historic Big Four concert with Metallica, Slayer and Anthrax in Sofia."
+      },
+      "extended": {
+        "es": "Registro histórico del legendario concierto Big Four en Sofía, Bulgaria, donde las cuatro bandas fundacionales del thrash metal (Metallica, Megadeth, Slayer y Anthrax) compartieron escenario por primera vez en décadas. Este evento marcó la reconciliación pública entre Dave Mustaine y Metallica, siendo un momento definitorio para el género.",
+        "en": "Historic recording of the legendary Big Four concert in Sofia, Bulgaria, where the four founding bands of thrash metal (Metallica, Megadeth, Slayer and Anthrax) shared the stage for the first time in decades. This event marked the public reconciliation between Dave Mustaine and Metallica, being a defining moment for the genre."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Chris Broderick",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Shawn Drover",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
+    "streaming": {
+      "youtube": "https://music.youtube.com/watch?v=VQTbOXkbxVA"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Holy Wars... The Punishment Due",
+        "duration": "6:42",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Hangar 18",
+        "duration": "5:28",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 3,
+        "title": "Take No Prisoners",
+        "duration": "3:25",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "Skin O' My Teeth",
+        "duration": "3:22",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 5,
+        "title": "In My Darkest Hour",
+        "duration": "6:18",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 6,
+        "title": "She-Wolf",
+        "duration": "7:15",
+        "writers": ["Dave Mustaine", "Johnny K"]
+      },
+      {
+        "n": 7,
+        "title": "Trust",
+        "duration": "5:45",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 8,
+        "title": "Symphony of Destruction",
+        "duration": "4:32",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 9,
+        "title": "Peace Sells",
+        "duration": "4:18",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "Head Crusher",
+        "duration": "3:42",
+        "writers": ["Dave Mustaine"]
+      }
+    ]
+  },
+  {
+    "id": "rust-in-peace-live",
+    "title": "Rust In Peace Live",
+    "year": 2010,
+    "cover": "/images/albums/live-rip.jpg",
+    "label": "Shout! Factory",
+    "producers": ["Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "Álbum completo 'Rust in Peace' interpretado en vivo para celebrar su 20º aniversario.",
+        "en": "Complete 'Rust in Peace' album performed live to celebrate its 20th anniversary."
+      },
+      "extended": {
+        "es": "Celebración especial del 20º aniversario de 'Rust in Peace', considerado por muchos como la obra maestra de Megadeth. La banda interpretó el álbum completo en vivo, demostrando que la complejidad técnica y compositiva de estas canciones permanece intacta décadas después de su creación original.",
+        "en": "Special celebration of the 20th anniversary of 'Rust in Peace', considered by many as Megadeth's masterpiece. The band performed the complete album live, demonstrating that the technical and compositional complexity of these songs remains intact decades after their original creation."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Chris Broderick",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Shawn Drover",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
+    "streaming": {
+      "youtube": "https://music.youtube.com/watch?v=1jqZ37fy9tY"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Holy Wars... The Punishment Due",
+        "duration": "6:48",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Hangar 18",
+        "duration": "5:32",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 3,
+        "title": "Take No Prisoners",
+        "duration": "3:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "Five Magics",
+        "duration": "5:45",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 5,
+        "title": "Poison Was the Cure",
+        "duration": "3:18",
+        "writers": ["Dave Mustaine", "Jeff Young"]
+      },
+      {
+        "n": 6,
+        "title": "Lucretia",
+        "duration": "3:58",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 7,
+        "title": "Tornado of Souls",
+        "duration": "5:28",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 8,
+        "title": "Dawn Patrol",
+        "duration": "1:52",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 9,
+        "title": "Rust in Peace... Polaris",
+        "duration": "5:45",
+        "writers": ["Dave Mustaine", "Chris Poland"]
+      }
+    ]
+  },
+  {
+    "id": "that-one-night-live-in-buenos-aires",
+    "title": "That One Night: Live in Buenos Aires",
+    "year": 2007,
+    "cover": "/images/albums/live-twn.jpg",
+    "label": "Capitol",
+    "producers": ["Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "Registro en vivo desde Buenos Aires con la formación Drover; energía sudamericana única.",
+        "en": "Live recording from Buenos Aires with the Drover lineup; unique South American energy."
+      },
+      "extended": {
+        "es": "Grabación en vivo desde Buenos Aires que captura la energía especial que Megadeth experimenta en Sudamérica. Con la formación de los hermanos Drover, este registro muestra a la banda en un momento de revitalización creativa, interpretando tanto clásicos como material de 'United Abominations' ante una audiencia particularmente entusiasta.",
+        "en": "Live recording from Buenos Aires that captures the special energy that Megadeth experiences in South America. With the Drover brothers lineup, this recording shows the band in a moment of creative revitalization, performing both classics and material from 'United Abominations' before a particularly enthusiastic audience."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Glen Drover",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "James LoMenzo",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Shawn Drover",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
+    "streaming": {
+      "spotify": "https://open.spotify.com/intl-es/album/3ALthL9fEWggZRgRklZeEf"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Sleepwalker",
+        "duration": "4:25",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Take No Prisoners",
+        "duration": "3:32",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 3,
+        "title": "Skin O' My Teeth",
+        "duration": "3:28",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 4,
+        "title": "Washington Is Next!",
+        "duration": "5:18",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 5,
+        "title": "Tornado of Souls",
+        "duration": "5:42",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 6,
+        "title": "A Tout Le Monde",
+        "duration": "4:45",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 7,
+        "title": "Hangar 18",
+        "duration": "5:38",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 8,
+        "title": "Return to Hangar",
+        "duration": "4:12",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 9,
+        "title": "In My Darkest Hour",
+        "duration": "6:25",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 10,
+        "title": "1000 Times Goodbye",
+        "duration": "6:18",
+        "writers": ["Dave Mustaine", "Al Pitrelli"]
+      },
+      {
+        "n": 11,
+        "title": "Mechanix",
+        "duration": "4:35",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 12,
+        "title": "Train of Consequences",
+        "duration": "3:48",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 13,
+        "title": "Trust",
+        "duration": "5:52",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 14,
+        "title": "Symphony of Destruction",
+        "duration": "4:42",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 15,
+        "title": "Peace Sells",
+        "duration": "4:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 16,
+        "title": "Holy Wars... The Punishment Due",
+        "duration": "7:05",
+        "writers": ["Dave Mustaine"]
+      }
+    ]
+  },
+  {
+    "id": "rude-awakening",
+    "title": "Rude Awakening",
+    "year": 2002,
+    "cover": "/images/albums/live-rude.jpg",
+    "label": "Sanctuary",
+    "producers": ["Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "Primer álbum en vivo oficial; grabado durante la gira de reunión con Ellefson.",
+        "en": "First official live album; recorded during the reunion tour with Ellefson."
+      },
+      "extended": {
+        "es": "El primer álbum en vivo oficial de Megadeth, grabado durante la exitosa gira de reunión tras el regreso de David Ellefson. Este registro histórico documenta el renacimiento de la banda después de los problemas de salud de Dave Mustaine, mostrando una energía renovada y la química musical que había definido sus mejores momentos.",
+        "en": "Megadeth's first official live album, recorded during the successful reunion tour following David Ellefson's return. This historic recording documents the band's rebirth after Dave Mustaine's health problems, showing renewed energy and the musical chemistry that had defined their best moments."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Al Pitrelli",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Jimmy DeGrasso",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
+    "streaming": {
+      "spotify": "https://open.spotify.com/intl-es/album/76sULlhKykxfr9CwYjNU5H"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Dread and the Fugitive Mind",
+        "duration": "4:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 2,
+        "title": "Kill the King",
+        "duration": "3:45",
+        "writers": ["Ritchie Blackmore", "Ronnie James Dio", "Cozy Powell"]
+      },
+      {
+        "n": 3,
+        "title": "Wake Up Dead",
+        "duration": "3:52",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 4,
+        "title": "In My Darkest Hour",
+        "duration": "6:35",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 5,
+        "title": "Angry Again",
+        "duration": "3:48",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "She-Wolf",
+        "duration": "7:25",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 7,
+        "title": "Reckoning Day",
+        "duration": "4:52",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 8,
+        "title": "Devil's Island",
+        "duration": "5:18",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 9,
+        "title": "Train of Consequences",
+        "duration": "3:48",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 10,
+        "title": "A Tout Le Monde",
+        "duration": "4:42",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Burning Bridges",
+        "duration": "5:28",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 12,
+        "title": "Hangar 18",
+        "duration": "5:45",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 13,
+        "title": "Return to Hangar",
+        "duration": "4:18",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 14,
+        "title": "Hook in Mouth",
+        "duration": "4:55",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 15,
+        "title": "Almost Honest",
+        "duration": "4:12",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 16,
+        "title": "1000 Times Goodbye",
+        "duration": "6:22",
+        "writers": ["Dave Mustaine", "Al Pitrelli"]
+      },
+      {
+        "n": 17,
+        "title": "The Mechanix",
+        "duration": "4:38",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 18,
+        "title": "Tornado of Souls",
+        "duration": "5:35",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 19,
+        "title": "Ashes in Your Mouth",
+        "duration": "6:45",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 20,
+        "title": "Sweating Bullets",
+        "duration": "5:18",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 21,
+        "title": "Trust",
+        "duration": "5:48",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 22,
+        "title": "Symphony of Destruction",
+        "duration": "4:35",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 23,
+        "title": "Peace Sells",
+        "duration": "4:25",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 24,
+        "title": "Holy Wars... The Punishment Due",
+        "duration": "7:12",
+        "writers": ["Dave Mustaine"]
+      }
+    ]
+  }
+]
