@@ -81,6 +81,10 @@
     "disclaimer": "Fan site no oficial. © {year}"
   },
   "discography": {
-    "title": "Discografía"
+    "title": "Discografía",
+    "studioAlbums": "Álbumes de Estudio",
+    "liveAlbums": "Álbumes en Vivo",
+    "compilations": "Compilaciones",
+    "eps": "EPs"
   }
 }

@@ -2,7 +2,11 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import AlbumDetail from "@/components/AlbumDetail";
 import discographyData from "@/constants/discography.json";
+import liveAlbumsData from "@/constants/liveAlbums.json";
+import compilationsData from "@/constants/compilations.json";
+import epsData from "@/constants/eps.json";
 import type { Album } from "@/types/album";
+import { getAlbumDescription } from "@/utils/albumHelpers";
 
 interface Props {
   params: Promise<{
@@ -10,11 +14,31 @@ interface Props {
   }>;
 }
 
-// Función para buscar el álbum por ID
+// Función para buscar el álbum por ID en todos los archivos
 function getAlbumById(id: string): Album | undefined {
-  return discographyData.find((album) => album.id === id) as unknown as
+  // Buscar primero en álbumes de estudio
+  const studioAlbum = discographyData.find(
+    (album) => album.id === id
+  ) as unknown as Album | undefined;
+  if (studioAlbum) return studioAlbum;
+
+  // Si no se encuentra, buscar en álbumes en vivo
+  const liveAlbum = liveAlbumsData.find(
+    (album) => album.id === id
+  ) as unknown as Album | undefined;
+  if (liveAlbum) return liveAlbum;
+
+  // Si no se encuentra, buscar en compilaciones
+  const compilation = compilationsData.find(
+    (album) => album.id === id
+  ) as unknown as Album | undefined;
+  if (compilation) return compilation;
+
+  // Si no se encuentra, buscar en EPs
+  const ep = epsData.find((album) => album.id === id) as unknown as
     | Album
     | undefined;
+  return ep;
 }
 
 // Generar metadata dinámico
@@ -29,11 +53,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const albumDescription =
+    getAlbumDescription(album, "es", "short") ||
+    `Álbum de Megadeth lanzado en ${album.year}.`;
+
   return {
     title: `${album.title} (${album.year}) - Megadeth Fan`,
-    description: `${album.title} - ${
-      album.description || `Álbum de Megadeth lanzado en ${album.year}.`
-    }`,
+    description: `${album.title} - ${albumDescription}`,
     keywords: [
       "Megadeth",
       album.title,
@@ -45,8 +71,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ],
     openGraph: {
       title: `${album.title} (${album.year})`,
-      description:
-        album.description || `Álbum de Megadeth lanzado en ${album.year}.`,
+      description: albumDescription,
       images: [
         {
           url: album.cover,
@@ -61,11 +86,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Generar rutas estáticas en build time
 export async function generateStaticParams() {
-  return discographyData.map((album) => ({
+  // Combinar álbumes de estudio, en vivo, compilaciones y EPs
+  const studioParams = discographyData.map((album) => ({
     albumId: album.id,
   }));
-}
 
+  const liveParams = liveAlbumsData.map((album) => ({
+    albumId: album.id,
+  }));
+
+  const compilationParams = compilationsData.map((album) => ({
+    albumId: album.id,
+  }));
+
+  const epParams = epsData.map((album) => ({
+    albumId: album.id,
+  }));
+
+  return [...studioParams, ...liveParams, ...compilationParams, ...epParams];
+}
 export default async function AlbumPage({ params }: Props) {
   const resolvedParams = await params;
   const album = getAlbumById(resolvedParams.albumId);
