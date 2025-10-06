@@ -19,17 +19,6 @@ export default function DiscographyGrid({ albums }: Props) {
 
   return (
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 6 }}>
-        <Typography
-          variant="h1"
-          component="h1"
-          gutterBottom
-          sx={{ fontSize: { xs: 28, md: 56 }, fontWeight: 700 }}
-        >
-          {t("discography.title")}
-        </Typography>
-      </Box>
-
       <Grid container spacing={2}>
         {sorted.map((album) => (
           <Grid key={album.id} size={{ xs: 12, sm: 6, md: 4 }}>
