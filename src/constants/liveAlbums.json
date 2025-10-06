@@ -4,8 +4,8 @@
     "title": "Unplugged in Boston: Live 2001",
     "year": 2021,
     "cover": "/images/albums/live-boston.jpg",
-    "label": "Tradecraft / Universal",
-    "producers": ["Dave Mustaine"],
+    "label": "Cleopatra Records",
+    "producers": ["WAAF 107.3 FM (Grabación)", "Cleopatra Records"],
     "description": {
       "short": {
         "es": "Registro acústico inédito grabado en Boston en 2001; lanzamiento tardío de sesión histórica.",
@@ -52,39 +52,63 @@
     "tracks": [
       {
         "n": 1,
-        "title": "Symphony of Destruction",
-        "duration": "4:45",
+        "title": "Dread and the Fugitive Mind (Live)",
+        "duration": "4:31",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 2,
-        "title": "Peace Sells",
-        "duration": "4:12",
-        "writers": ["Dave Mustaine"]
-      },
-      {
-        "n": 3,
-        "title": "Trust",
-        "duration": "5:28",
+        "title": "Trust (Live)",
+        "duration": "4:21",
         "writers": ["Dave Mustaine", "Marty Friedman"]
       },
       {
+        "n": 3,
+        "title": "Time: The Beginning (Live)",
+        "duration": "3:27",
+        "writers": ["Dave Mustaine", "Marty Friedman", "Bud Prager"]
+      },
+      {
         "n": 4,
-        "title": "Sweating Bullets",
-        "duration": "5:02",
-        "writers": ["Dave Mustaine"]
+        "title": "Use the Man (Live)",
+        "duration": "3:51",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
       },
       {
         "n": 5,
-        "title": "A Tout Le Monde",
-        "duration": "4:38",
+        "title": "Holy Wars...The Punishment Due (Excerpt - Live)",
+        "duration": "2:23",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 6,
-        "title": "In My Darkest Hour",
-        "duration": "6:15",
-        "writers": ["Dave Mustaine", "David Ellefson"]
+        "title": "Almost Honest (Live)",
+        "duration": "3:29",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 7,
+        "title": "Promises (Live)",
+        "duration": "6:09",
+        "writers": ["Dave Mustaine", "Al Pitrelli"]
+      },
+      {
+        "n": 8,
+        "title": "She-Wolf (Live)",
+        "duration": "3:41",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 9,
+        "title": "Moto Psycho (Live)",
+        "duration": "3:15",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "Symphony of Destruction (Live)",
+        "duration": "5:43",
+        "writers": ["Dave Mustaine"]
       }
     ]
   },
@@ -94,15 +118,15 @@
     "year": 2013,
     "cover": "/images/albums/live-countdown.jpg",
     "label": "Tradecraft / Universal",
-    "producers": ["Dave Mustaine"],
+    "producers": ["Dave Mustaine", "Barry Ehrmann"],
     "description": {
       "short": {
-        "es": "Álbum completo 'Countdown' ejecutado en vivo para celebrar su 20º aniversario.",
-        "en": "Complete 'Countdown' album performed live to celebrate its 20th anniversary."
+        "es": "Álbum completo 'Countdown' más clásicos extra, grabado en vivo por el 20º aniversario.",
+        "en": "Complete 'Countdown' album plus extra classics, recorded live for the 20th anniversary."
       },
       "extended": {
-        "es": "Celebración especial del 20º aniversario de 'Countdown to Extinction', donde Megadeth interpretó el álbum completo en vivo. Este registro captura la madurez y precisión técnica de la banda, reimaginando uno de sus trabajos más exitosos comercialmente con la energía y experiencia acumulada a lo largo de dos décadas.",
-        "en": "Special celebration of the 20th anniversary of 'Countdown to Extinction', where Megadeth performed the complete album live. This recording captures the band's maturity and technical precision, reimagining one of their most commercially successful works with the energy and experience accumulated over two decades."
+        "es": "Grabado en el Fox Theatre de Pomona, California, el 7 de diciembre de 2012. Celebra el 20º aniversario de 'Countdown to Extinction' con la interpretación íntegra del álbum, flanqueada por varios clásicos de la banda. Este registro captura la madurez y precisión técnica de la formación con Dave Mustaine, David Ellefson, Chris Broderick y Shawn Drover.",
+        "en": "Recorded at the Fox Theatre in Pomona, California, on December 7, 2012. It celebrates the 20th anniversary of 'Countdown to Extinction' with a full performance of the album, bookended by several of the band's classics. This recording captures the maturity and technical precision of the lineup featuring Dave Mustaine, David Ellefson, Chris Broderick, and Shawn Drover."
       }
     },
     "musicians": [
@@ -141,69 +165,120 @@
     "tracks": [
       {
         "n": 1,
-        "title": "Skin O' My Teeth",
-        "duration": "3:18",
+        "title": "Trust (Live)",
+        "duration": "5:10",
         "writers": ["Dave Mustaine", "Marty Friedman"]
       },
       {
         "n": 2,
-        "title": "Symphony of Destruction",
-        "duration": "4:08",
+        "title": "Hangar 18 (Live)",
+        "duration": "5:15",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 3,
-        "title": "Architecture of Aggression",
-        "duration": "3:38",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "title": "Public Enemy No. 1 (Live)",
+        "duration": "4:42",
+        "writers": ["Dave Mustaine", "Johnny K"]
       },
       {
         "n": 4,
-        "title": "Foreclosure of a Dream",
-        "duration": "4:22",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "title": "Skin o' My Teeth (Live)",
+        "duration": "3:45",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 5,
-        "title": "Sweating Bullets",
-        "duration": "5:06",
+        "title": "Symphony of Destruction (Live)",
+        "duration": "3:56",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 6,
-        "title": "This Was My Life",
-        "duration": "3:48",
-        "writers": ["Dave Mustaine"]
+        "title": "Architecture of Aggression (Live)",
+        "duration": "3:43",
+        "writers": ["Dave Mustaine", "David Ellefson"]
       },
       {
         "n": 7,
-        "title": "Countdown to Extinction",
-        "duration": "4:18",
-        "writers": ["Dave Mustaine"]
+        "title": "Foreclosure of a Dream (Live)",
+        "duration": "4:15",
+        "writers": ["Dave Mustaine", "David Ellefson"]
       },
       {
         "n": 8,
-        "title": "High Speed Dirt",
-        "duration": "4:25",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "title": "Sweating Bullets (Live)",
+        "duration": "4:55",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 9,
-        "title": "Psychotron",
-        "duration": "4:45",
+        "title": "This Was My Life (Live)",
+        "duration": "3:46",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 10,
-        "title": "Captive Honour",
-        "duration": "4:12",
-        "writers": ["Dave Mustaine"]
+        "title": "Countdown to Extinction (Live)",
+        "duration": "4:15",
+        "writers": [
+          "Dave Mustaine",
+          "David Ellefson",
+          "Nick Menza",
+          "Marty Friedman"
+        ]
       },
       {
         "n": 11,
-        "title": "Ashes in Your Mouth",
-        "duration": "6:28",
+        "title": "High Speed Dirt (Live)",
+        "duration": "4:16",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 12,
+        "title": "Psychotron (Live)",
+        "duration": "4:36",
         "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 13,
+        "title": "Captive Honour (Live)",
+        "duration": "4:15",
+        "writers": [
+          "Dave Mustaine",
+          "David Ellefson",
+          "Nick Menza",
+          "Marty Friedman"
+        ]
+      },
+      {
+        "n": 14,
+        "title": "Ashes in Your Mouth (Live)",
+        "duration": "6:23",
+        "writers": [
+          "Dave Mustaine",
+          "David Ellefson",
+          "Nick Menza",
+          "Marty Friedman"
+        ]
+      },
+      {
+        "n": 15,
+        "title": "She-Wolf (Live)",
+        "duration": "3:45",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 16,
+        "title": "Peace Sells (Live)",
+        "duration": "4:52",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 17,
+        "title": "Holy Wars... The Punishment Due (Live)",
+        "duration": "8:19",
+        "writers": ["Dave Mustaine"]
       }
     ]
   },
@@ -212,8 +287,8 @@
     "title": "The Big Four: Live from Sofia, Bulgaria",
     "year": 2010,
     "cover": "/images/albums/live-big4.jpg",
-    "label": "Universal",
-    "producers": ["Dave Mustaine"],
+    "label": "Universal Music DVD Video / Warner Bros. Records",
+    "producers": ["Dave Mustaine (Executive)", "Nick Wickham (Director)"],
     "description": {
       "short": {
         "es": "Histórico concierto Big Four con Metallica, Slayer y Anthrax en Sofía.",
@@ -261,61 +336,78 @@
       {
         "n": 1,
         "title": "Holy Wars... The Punishment Due",
-        "duration": "6:42",
+        "duration": "5:49",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 2,
         "title": "Hangar 18",
-        "duration": "5:28",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "duration": "5:39",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 3,
-        "title": "Take No Prisoners",
-        "duration": "3:25",
+        "title": "Wake Up Dead",
+        "duration": "3:39",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 4,
-        "title": "Skin O' My Teeth",
-        "duration": "3:22",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "title": "Head Crusher",
+        "duration": "3:49",
+        "writers": ["Dave Mustaine", "Shawn Drover"]
       },
       {
         "n": 5,
         "title": "In My Darkest Hour",
-        "duration": "6:18",
+        "duration": "4:59",
         "writers": ["Dave Mustaine", "David Ellefson"]
       },
       {
         "n": 6,
-        "title": "She-Wolf",
-        "duration": "7:15",
-        "writers": ["Dave Mustaine", "Johnny K"]
+        "title": "Skin O' My Teeth",
+        "duration": "3:14",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 7,
-        "title": "Trust",
-        "duration": "5:45",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "title": "À Tout le Monde",
+        "duration": "4:24",
+        "writers": [
+          "Dave Mustaine",
+          "Marty Friedman",
+          "David Ellefson",
+          "Nick Menza"
+        ]
       },
       {
         "n": 8,
-        "title": "Symphony of Destruction",
-        "duration": "4:32",
-        "writers": ["Dave Mustaine"]
+        "title": "Hook in Mouth",
+        "duration": "4:39",
+        "writers": ["Dave Mustaine", "David Ellefson"]
       },
       {
         "n": 9,
-        "title": "Peace Sells",
-        "duration": "4:18",
-        "writers": ["Dave Mustaine"]
+        "title": "Trust",
+        "duration": "5:09",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
       },
       {
         "n": 10,
-        "title": "Head Crusher",
-        "duration": "3:42",
+        "title": "Sweating Bullets",
+        "duration": "4:59",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Symphony of Destruction",
+        "duration": "4:09",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 12,
+        "title": "Peace Sells / Holy Wars Reprise",
+        "duration": "9:40",
         "writers": ["Dave Mustaine"]
       }
     ]
@@ -374,38 +466,38 @@
       {
         "n": 1,
         "title": "Holy Wars... The Punishment Due",
-        "duration": "6:48",
+        "duration": "7:02",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 2,
         "title": "Hangar 18",
-        "duration": "5:32",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "duration": "5:05",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 3,
         "title": "Take No Prisoners",
-        "duration": "3:28",
+        "duration": "3:24",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 4,
         "title": "Five Magics",
-        "duration": "5:45",
-        "writers": ["Dave Mustaine", "David Ellefson"]
+        "duration": "6:00",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 5,
         "title": "Poison Was the Cure",
-        "duration": "3:18",
-        "writers": ["Dave Mustaine", "Jeff Young"]
+        "duration": "3:36",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 6,
         "title": "Lucretia",
-        "duration": "3:58",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "duration": "3:59",
+        "writers": ["Dave Mustaine", "David Ellefson"]
       },
       {
         "n": 7,
@@ -417,13 +509,55 @@
         "n": 8,
         "title": "Dawn Patrol",
         "duration": "1:52",
-        "writers": ["Dave Mustaine", "David Ellefson"]
+        "writers": ["David Ellefson"]
       },
       {
         "n": 9,
         "title": "Rust in Peace... Polaris",
-        "duration": "5:45",
-        "writers": ["Dave Mustaine", "Chris Poland"]
+        "duration": "6:10",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 10,
+        "title": "Holy Wars... the Punishment Due (Reprise)",
+        "duration": "4:15",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 11,
+        "title": "Skin o' My Teeth",
+        "duration": "3:19",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 12,
+        "title": "In My Darkest Hour",
+        "duration": "6:12",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 13,
+        "title": "She-Wolf",
+        "duration": "3:36",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 14,
+        "title": "Trust",
+        "duration": "5:10",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 15,
+        "title": "Symphony of Destruction",
+        "duration": "4:00",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 16,
+        "title": "Peace Sells",
+        "duration": "4:46",
+        "writers": ["Dave Mustaine"]
       }
     ]
   },
@@ -432,7 +566,7 @@
     "title": "That One Night: Live in Buenos Aires",
     "year": 2007,
     "cover": "/images/albums/live-twn.jpg",
-    "label": "Capitol",
+    "label": "Image Entertainment",
     "producers": ["Dave Mustaine"],
     "description": {
       "short": {
@@ -460,7 +594,7 @@
         }
       },
       {
-        "name": "James LoMenzo",
+        "name": "James MacDonough",
         "instrument": {
           "es": "Bajo",
           "en": "Bass"
@@ -480,98 +614,134 @@
     "tracks": [
       {
         "n": 1,
-        "title": "Sleepwalker",
-        "duration": "4:25",
+        "title": "Jet Intro",
+        "duration": "0:36",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 2,
-        "title": "Take No Prisoners",
-        "duration": "3:32",
+        "title": "Blackmail the Universe",
+        "duration": "4:08",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 3,
-        "title": "Skin O' My Teeth",
-        "duration": "3:28",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "title": "Set the World Afire",
+        "duration": "5:27",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 4,
-        "title": "Washington Is Next!",
-        "duration": "5:18",
-        "writers": ["Dave Mustaine"]
-      },
-      {
-        "n": 5,
-        "title": "Tornado of Souls",
-        "duration": "5:42",
-        "writers": ["Dave Mustaine", "David Ellefson"]
-      },
-      {
-        "n": 6,
-        "title": "A Tout Le Monde",
-        "duration": "4:45",
-        "writers": ["Dave Mustaine"]
-      },
-      {
-        "n": 7,
-        "title": "Hangar 18",
-        "duration": "5:38",
+        "title": "Skin o' My Teeth",
+        "duration": "3:22",
         "writers": ["Dave Mustaine", "Marty Friedman"]
       },
       {
+        "n": 5,
+        "title": "Wake Up Dead",
+        "duration": "3:35",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 6,
+        "title": "In My Darkest Hour",
+        "duration": "6:07",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
+        "n": 7,
+        "title": "Die Dead Enough",
+        "duration": "3:55",
+        "writers": ["Dave Mustaine"]
+      },
+      {
         "n": 8,
-        "title": "Return to Hangar",
-        "duration": "4:12",
+        "title": "She-Wolf",
+        "duration": "3:31",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 9,
-        "title": "In My Darkest Hour",
-        "duration": "6:25",
-        "writers": ["Dave Mustaine", "David Ellefson"]
+        "title": "Reckoning Day",
+        "duration": "4:39",
+        "writers": ["Dave Mustaine", "David Ellefson", "Marty Friedman"]
       },
       {
         "n": 10,
-        "title": "1000 Times Goodbye",
-        "duration": "6:18",
-        "writers": ["Dave Mustaine", "Al Pitrelli"]
-      },
-      {
-        "n": 11,
-        "title": "Mechanix",
-        "duration": "4:35",
-        "writers": ["Dave Mustaine"]
-      },
-      {
-        "n": 12,
-        "title": "Train of Consequences",
-        "duration": "3:48",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
-      },
-      {
-        "n": 13,
-        "title": "Trust",
-        "duration": "5:52",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
-      },
-      {
-        "n": 14,
-        "title": "Symphony of Destruction",
-        "duration": "4:42",
-        "writers": ["Dave Mustaine"]
-      },
-      {
-        "n": 15,
-        "title": "Peace Sells",
+        "title": "A Tout le Monde",
         "duration": "4:28",
         "writers": ["Dave Mustaine"]
       },
       {
+        "n": 11,
+        "title": "Angry Again",
+        "duration": "3:36",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 12,
+        "title": "Hangar 18",
+        "duration": "5:06",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 13,
+        "title": "Return to Hangar",
+        "duration": "3:51",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 14,
+        "title": "I'll Be There",
+        "duration": "5:36",
+        "writers": ["Dave Mustaine", "Bud Prager", "Marty Friedman"]
+      },
+      {
+        "n": 15,
+        "title": "Tornado of Souls",
+        "duration": "5:22",
+        "writers": ["Dave Mustaine", "David Ellefson"]
+      },
+      {
         "n": 16,
+        "title": "Trust",
+        "duration": "6:00",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 17,
+        "title": "Something That I'm Not",
+        "duration": "4:46",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 18,
+        "title": "Kick the Chair",
+        "duration": "4:03",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 19,
+        "title": "Coming Home to Argentina",
+        "duration": "2:35",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 20,
+        "title": "Symphony of Destruction",
+        "duration": "4:23",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 21,
+        "title": "Peace Sells",
+        "duration": "4:40",
+        "writers": ["Dave Mustaine"]
+      },
+      {
+        "n": 22,
         "title": "Holy Wars... The Punishment Due",
-        "duration": "7:05",
+        "duration": "8:33",
         "writers": ["Dave Mustaine"]
       }
     ]
@@ -582,7 +752,7 @@
     "year": 2002,
     "cover": "/images/albums/live-rude.jpg",
     "label": "Sanctuary",
-    "producers": ["Dave Mustaine"],
+    "producers": ["Dave Mustaine", "Bill Kennedy"],
     "description": {
       "short": {
         "es": "Primer álbum en vivo oficial; grabado durante la gira de reunión con Ellefson.",
@@ -630,145 +800,150 @@
       {
         "n": 1,
         "title": "Dread and the Fugitive Mind",
-        "duration": "4:28",
+        "duration": "4:12",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 2,
         "title": "Kill the King",
-        "duration": "3:45",
-        "writers": ["Ritchie Blackmore", "Ronnie James Dio", "Cozy Powell"]
+        "duration": "3:51",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 3,
         "title": "Wake Up Dead",
-        "duration": "3:52",
+        "duration": "3:26",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 4,
         "title": "In My Darkest Hour",
-        "duration": "6:35",
+        "duration": "5:28",
         "writers": ["Dave Mustaine", "David Ellefson"]
       },
       {
         "n": 5,
         "title": "Angry Again",
-        "duration": "3:48",
+        "duration": "3:22",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 6,
         "title": "She-Wolf",
-        "duration": "7:25",
-        "writers": ["Dave Mustaine", "David Ellefson"]
+        "duration": "8:17",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 7,
         "title": "Reckoning Day",
-        "duration": "4:52",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "duration": "4:24",
+        "writers": ["Dave Mustaine", "David Ellefson", "Marty Friedman"]
       },
       {
         "n": 8,
         "title": "Devil's Island",
-        "duration": "5:18",
+        "duration": "5:06",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 9,
         "title": "Train of Consequences",
-        "duration": "3:48",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "duration": "4:30",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 10,
-        "title": "A Tout Le Monde",
-        "duration": "4:42",
+        "title": "À Tout Le Monde",
+        "duration": "4:49",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 11,
         "title": "Burning Bridges",
-        "duration": "5:28",
+        "duration": "4:56",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 12,
         "title": "Hangar 18",
-        "duration": "5:45",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "duration": "4:45",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 13,
         "title": "Return to Hangar",
-        "duration": "4:18",
+        "duration": "3:54",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 14,
         "title": "Hook in Mouth",
-        "duration": "4:55",
+        "duration": "4:40",
         "writers": ["Dave Mustaine", "David Ellefson"]
       },
       {
         "n": 15,
         "title": "Almost Honest",
-        "duration": "4:12",
-        "writers": ["Dave Mustaine"]
+        "duration": "3:57",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
       },
       {
         "n": 16,
         "title": "1000 Times Goodbye",
-        "duration": "6:22",
-        "writers": ["Dave Mustaine", "Al Pitrelli"]
+        "duration": "6:14",
+        "writers": ["Dave Mustaine"]
       },
       {
         "n": 17,
-        "title": "The Mechanix",
-        "duration": "4:38",
+        "title": "Mechanix",
+        "duration": "4:36",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 18,
         "title": "Tornado of Souls",
-        "duration": "5:35",
+        "duration": "5:47",
         "writers": ["Dave Mustaine", "David Ellefson"]
       },
       {
         "n": 19,
         "title": "Ashes in Your Mouth",
-        "duration": "6:45",
-        "writers": ["Dave Mustaine", "Marty Friedman"]
+        "duration": "6:04",
+        "writers": [
+          "Dave Mustaine",
+          "David Ellefson",
+          "Marty Friedman",
+          "Nick Menza"
+        ]
       },
       {
         "n": 20,
         "title": "Sweating Bullets",
-        "duration": "5:18",
+        "duration": "4:38",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 21,
         "title": "Trust",
-        "duration": "5:48",
+        "duration": "6:46",
         "writers": ["Dave Mustaine", "Marty Friedman"]
       },
       {
         "n": 22,
         "title": "Symphony of Destruction",
-        "duration": "4:35",
+        "duration": "4:50",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 23,
         "title": "Peace Sells",
-        "duration": "4:25",
+        "duration": "5:22",
         "writers": ["Dave Mustaine"]
       },
       {
         "n": 24,
         "title": "Holy Wars... The Punishment Due",
-        "duration": "7:12",
+        "duration": "8:51",
         "writers": ["Dave Mustaine"]
       }
     ]

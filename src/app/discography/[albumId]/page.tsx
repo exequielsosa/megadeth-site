@@ -46,7 +46,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const albumDescription = getAlbumDescription(album, "es", "short") || `Álbum de Megadeth lanzado en ${album.year}.`;
+  const albumDescription =
+    getAlbumDescription(album, "es", "short") ||
+    `Álbum de Megadeth lanzado en ${album.year}.`;
 
   return {
     title: `${album.title} (${album.year}) - Megadeth Fan`,
@@ -81,15 +83,15 @@ export async function generateStaticParams() {
   const studioParams = discographyData.map((album) => ({
     albumId: album.id,
   }));
-  
+
   const liveParams = liveAlbumsData.map((album) => ({
     albumId: album.id,
   }));
-  
+
   const compilationParams = compilationsData.map((album) => ({
     albumId: album.id,
   }));
-  
+
   return [...studioParams, ...liveParams, ...compilationParams];
 }
 
