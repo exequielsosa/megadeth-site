@@ -1,10 +1,8 @@
 "use client";
 
-import { Grid, Container, Typography } from "@mui/material";
+import { Grid, Container } from "@mui/material";
 import type { Album } from "@/types/album";
 import AlbumCard from "./AlbumCard";
-import { Box } from "@mui/material";
-import { useTranslations } from "next-intl";
 
 type Props = {
   albums: Album[];
@@ -14,8 +12,6 @@ type Props = {
 export default function DiscographyGrid({ albums }: Props) {
   // Orden por año DESC (primero lo nuevo)
   const sorted = [...albums].sort((a, b) => b.year - a.year);
-
-  const t = useTranslations();
 
   return (
     <Container maxWidth="lg">
