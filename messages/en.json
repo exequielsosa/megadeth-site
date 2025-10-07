@@ -8,7 +8,8 @@
     "home": "Home",
     "tour": "Tour",
     "discography": "Discography",
-    "videos": "Videos"
+    "videos": "Videos",
+    "dvds": "DVDs"
   },
   "hero": {
     "title": "Latest album · Farewell tour",
@@ -84,6 +85,11 @@
   "videos": {
     "title": "Videos",
     "subtitle": "Official music videos, live performances and exclusive Megadeth content"
+  },
+  "dvds": {
+    "title": "DVDs",
+    "subtitle": "Music videos, documentaries and live concerts from Megadeth",
+    "totalCount": "{count, plural, =1 {1 DVD} other {# DVDs}} in the collection"
   },
   "discography": {
     "title": "Discography",
