@@ -8,7 +8,8 @@
     "home": "Inicio",
     "tour": "Gira",
     "discography": "Discografía",
-    "videos": "Videos"
+    "videos": "Videos",
+    "dvds": "DVDs"
   },
   "hero": {
     "title": "Último disco · Megadeth",
@@ -84,6 +85,11 @@
   "videos": {
     "title": "Videos",
     "subtitle": "Videoclips oficiales, performances en vivo y contenido exclusivo de Megadeth"
+  },
+  "dvds": {
+    "title": "DVDs",
+    "subtitle": "Videos musicales, documentales y conciertos en vivo de Megadeth",
+    "totalCount": "{count, plural, =1 {1 DVD} other {# DVDs}} en la colección"
   },
   "discography": {
     "title": "Discografía",

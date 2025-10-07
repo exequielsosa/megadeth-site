@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/tour', priority: 0.8, changeFreq: 'weekly' as const },
     { path: '/discography', priority: 0.9, changeFreq: 'monthly' as const },
     { path: '/videos', priority: 0.9, changeFreq: 'weekly' as const },
+    { path: '/dvds', priority: 0.9, changeFreq: 'monthly' as const },
   ];
 
   const sitemap: MetadataRoute.Sitemap = [];

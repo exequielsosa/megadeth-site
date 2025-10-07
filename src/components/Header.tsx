@@ -53,6 +53,7 @@ export default function Header() {
     { label: t("tour"), href: "/tour" },
     { label: t("discography"), href: "/discography" },
     { label: t("videos"), href: "/videos" },
+    { label: t("dvds"), href: "/dvds" },
   ];
 
   const handleLanguageClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -68,8 +69,6 @@ export default function Header() {
     window.location.reload();
     handleLanguageClose();
   };
-
-  console.log("Current locale:", mode);
 
   // Función para obtener el color de fondo basado en scroll y modo
   const getBackgroundColor = () => {
