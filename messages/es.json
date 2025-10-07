@@ -7,7 +7,8 @@
   "navigation": {
     "home": "Inicio",
     "tour": "Gira",
-    "discography": "Discografía"
+    "discography": "Discografía",
+    "videos": "Videos"
   },
   "hero": {
     "title": "Último disco · Megadeth",
@@ -79,6 +80,10 @@
   },
   "footer": {
     "disclaimer": "Fan site no oficial. © {year}"
+  },
+  "videos": {
+    "title": "Videos",
+    "subtitle": "Videoclips oficiales, performances en vivo y contenido exclusivo de Megadeth"
   },
   "discography": {
     "title": "Discografía",

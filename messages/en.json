@@ -7,7 +7,8 @@
   "navigation": {
     "home": "Home",
     "tour": "Tour",
-    "discography": "Discography"
+    "discography": "Discography",
+    "videos": "Videos"
   },
   "hero": {
     "title": "Latest album · Farewell tour",
@@ -79,6 +80,10 @@
   },
   "footer": {
     "disclaimer": "Unofficial fan site. © {year}"
+  },
+  "videos": {
+    "title": "Videos",
+    "subtitle": "Official music videos, live performances and exclusive Megadeth content"
   },
   "discography": {
     "title": "Discography",

@@ -52,6 +52,7 @@ export default function Header() {
     { label: t("home"), href: "/" },
     { label: t("tour"), href: "/tour" },
     { label: t("discography"), href: "/discography" },
+    { label: t("videos"), href: "/videos" },
   ];
 
   const handleLanguageClick = (event: React.MouseEvent<HTMLElement>) => {
