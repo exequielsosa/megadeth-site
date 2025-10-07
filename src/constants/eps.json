@@ -1,5 +1,89 @@
 [
   {
+    "id": "cryptic-sounds-no-voices-in-your-head",
+    "title": "Cryptic Sounds: No Voices in Your Head",
+    "year": 1998,
+    "release_date": "1997-12-08",
+    "cover": "/images/albums/ep-cs.webp",
+    "label": "Capitol",
+    "producers": ["Max Norman", "Dave Mustaine"],
+    "description": {
+      "short": {
+        "es": "EP de archivo y rareza lanzado solo en Japón, que contiene versiones instrumentales, alternativas y en vivo de temas de 'Cryptic Writings'.",
+        "en": "Japan-only archive and rarity EP containing instrumental, alternative, and live versions of tracks from 'Cryptic Writings'."
+      },
+      "extended": {
+        "es": "Este EP de rarezas fue lanzado exclusivamente en Japón para capitalizar el éxito de Cryptic Writings. Contiene versiones alternativas, la versión instrumental de 'Trust' y una grabación en vivo de 'A Tout Le Monde'. Aunque a menudo se confunde con un EP totalmente en vivo, es una colección de rarezas de estudio y una pista en directo.",
+        "en": "This rarities EP was released exclusively in Japan to capitalize on the success of Cryptic Writings. It features alternate versions, the instrumental version of 'Trust', and one live recording of 'A Tout Le Monde'. Although often mistaken for a fully live EP, it is a collection of studio outtakes and one live track."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Marty Friedman",
+        "instrument": {
+          "es": "Guitarra líder",
+          "en": "Lead guitar"
+        }
+      },
+      {
+        "name": "David Ellefson",
+        "instrument": {
+          "es": "Bajo",
+          "en": "Bass"
+        }
+      },
+      {
+        "name": "Nick Menza",
+        "instrument": {
+          "es": "Batería",
+          "en": "Drums"
+        }
+      }
+    ],
+    "streaming": {
+      "youtube": "https://www.youtube.com/watch?v=6qKSOkzj2oo&list=RD6qKSOkzj2oo&start_radio=1"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Trust (Instrumental)",
+        "duration": "5:26",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 2,
+        "title": "Evil That Will Remain (Almost Honest Demo)",
+        "duration": "4:19",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 3,
+        "title": "Vortex (Instrumental)",
+        "duration": "4:24",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 4,
+        "title": "FFF (Instrumental)",
+        "duration": "3:43",
+        "writers": ["Dave Mustaine", "Marty Friedman"]
+      },
+      {
+        "n": 5,
+        "title": "A Tout Le Monde (Live)",
+        "duration": "4:45",
+        "writers": ["Dave Mustaine"]
+      }
+    ]
+  },
+  {
     "id": "live-trax-ii",
     "title": "Live Trax II",
     "year": 1998,
