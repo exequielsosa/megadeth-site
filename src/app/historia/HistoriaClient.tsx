@@ -143,7 +143,7 @@ export default function HistoriaClient() {
 
         {/* Sección de Timeline */}
         <Box sx={{ mb: 8 }}>
-          <Box sx={{ textAlign: "center", mb: "150px" }}>
+          <Box sx={{ textAlign: "center", mb: { xs: "20px", lg: "150px" } }}>
             <Typography
               variant="h2"
               sx={{
@@ -206,7 +206,7 @@ export default function HistoriaClient() {
             borderRadius: { xs: 0, md: 4 },
             p: 4,
             textAlign: "center",
-            marginTop: "150px",
+            marginTop: { xs: "20px", lg: "150px" },
             backgroundColor: "background.paper",
             boxShadow: "0 3px 12px rgba(0,0,0,0.1)",
             border: "1px solid",
