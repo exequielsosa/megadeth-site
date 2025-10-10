@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Button, Typography, useTheme } from "@mui/material";
-import { ArrowBack, ArrowForward, Timeline } from "@mui/icons-material";
+import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { HistoryChapter } from "@/types/historia";
 import { useRouter } from "next/navigation";
 
@@ -38,15 +38,15 @@ export default function HistoryNavigation({
     }
   };
 
-  const handleTimeline = () => {
-    router.push("/historia");
-  };
+  console.log(currentChapter.id, "currentChapter");
 
   return (
     <Box
       sx={{
-        position: "sticky",
+        position: "fixed",
         bottom: 0,
+        left: 0,
+        right: 0,
         backgroundColor: theme.palette.background.paper,
         borderTop: `1px solid ${theme.palette.divider}`,
         boxShadow: "0 -4px 20px rgba(0,0,0,0.1)",
@@ -76,17 +76,34 @@ export default function HistoryNavigation({
             }}
           />
         </Box>
-        <Typography
-          variant="caption"
+        <Box
           sx={{
-            display: "block",
-            textAlign: "center",
-            mt: 0.5,
-            color: theme.palette.text.secondary,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 1,
+            mt: 1.5,
           }}
         >
-          Capítulo {currentIndex + 1} de {allChapters.length}
-        </Typography>
+          <Typography
+            variant="caption"
+            sx={{
+              color: theme.palette.text.secondary,
+            }}
+          >
+            Capítulo {currentIndex + 1} de {allChapters.length}
+          </Typography>
+          <Typography
+            variant="caption"
+            sx={{
+              color: currentChapter.color,
+              fontWeight: 600,
+            }}
+          >
+            {currentChapter.icon} {currentChapter.title} (
+            {currentChapter.period})
+          </Typography>
+        </Box>
       </Box>
 
       {/* Navegación */}
@@ -99,70 +116,46 @@ export default function HistoryNavigation({
         }}
       >
         {/* Botón anterior */}
-        <Button
-          variant="outlined"
-          startIcon={<ArrowBack />}
-          onClick={handlePrevious}
-          disabled={!previousChapter}
-          sx={{
-            minWidth: "120px",
-            borderColor: currentChapter.color,
-            color: currentChapter.color,
-            "&:hover": {
+        {currentChapter.id === "origenes" ? (
+          <Box></Box>
+        ) : (
+          <Button
+            variant="outlined"
+            startIcon={<ArrowBack />}
+            onClick={handlePrevious}
+            disabled={!previousChapter}
+            sx={{
+              minWidth: "120px",
               borderColor: currentChapter.color,
-              backgroundColor: `${currentChapter.color}10`,
-            },
-            "&.Mui-disabled": {
-              borderColor: theme.palette.grey[300],
-              color: theme.palette.grey[400],
-            },
-          }}
-        >
-          <Box sx={{ textAlign: "left" }}>
-            <Typography variant="caption" display="block">
-              Anterior
-            </Typography>
-            {previousChapter && (
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: "0.75rem",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  whiteSpace: "nowrap",
-                  maxWidth: "100px",
-                }}
-              >
-                {previousChapter.title}
-              </Typography>
-            )}
-          </Box>
-        </Button>
-
-        {/* Botón timeline central */}
-        <Button
-          variant="contained"
-          startIcon={<Timeline />}
-          onClick={handleTimeline}
-          sx={{
-            backgroundColor: currentChapter.color,
-            "&:hover": {
-              backgroundColor: currentChapter.color,
-              filter: "brightness(0.9)",
-            },
-            minWidth: "140px",
-            fontWeight: 600,
-          }}
-        >
-          <Box sx={{ textAlign: "center" }}>
-            <Typography variant="body2" display="block">
-              Timeline
-            </Typography>
-            <Typography variant="caption" sx={{ opacity: 0.9 }}>
-              Ver todo
-            </Typography>
-          </Box>
-        </Button>
+              color: currentChapter.color,
+              "&:hover": {
+                borderColor: currentChapter.color,
+                backgroundColor: `${currentChapter.color}10`,
+              },
+              "&.Mui-disabled": {
+                borderColor: theme.palette.grey[300],
+                color: theme.palette.grey[400],
+              },
+            }}
+          >
+            <Box sx={{ textAlign: "left" }}>
+              {previousChapter && (
+                <Typography
+                  variant="body2"
+                  sx={{
+                    fontSize: "0.75rem",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    whiteSpace: "nowrap",
+                    maxWidth: "100px",
+                  }}
+                >
+                  {previousChapter.title}
+                </Typography>
+              )}
+            </Box>
+          </Button>
+        )}
 
         {/* Botón siguiente */}
         <Button
@@ -185,9 +178,6 @@ export default function HistoryNavigation({
           }}
         >
           <Box sx={{ textAlign: "right" }}>
-            <Typography variant="caption" display="block">
-              Siguiente
-            </Typography>
             {nextChapter && (
               <Typography
                 variant="body2"
@@ -204,19 +194,6 @@ export default function HistoryNavigation({
             )}
           </Box>
         </Button>
-      </Box>
-
-      {/* Información del capítulo actual */}
-      <Box sx={{ textAlign: "center", mt: 2 }}>
-        <Typography
-          variant="body2"
-          sx={{
-            color: currentChapter.color,
-            fontWeight: 600,
-          }}
-        >
-          {currentChapter.icon} {currentChapter.title} ({currentChapter.period})
-        </Typography>
       </Box>
     </Box>
   );

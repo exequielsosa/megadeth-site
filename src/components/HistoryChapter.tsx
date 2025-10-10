@@ -24,7 +24,7 @@ function HistorySectionComponent({
     const paragraphs = section.content.split("\n\n");
 
     return (
-      <Box>
+      <Box mb="600px">
         {paragraphs.map((paragraph, index) => (
           <Typography
             key={index}

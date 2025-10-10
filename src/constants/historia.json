@@ -44,7 +44,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/dave-ellefson-early.jpg",
+              "src": "/images/historia/daves.jpg",
               "alt": "Dave Mustaine y David Ellefson en los inicios",
               "position": "left",
               "layout": "float",
@@ -52,7 +52,7 @@
               "caption": "Dave Mustaine y David Ellefson, los fundadores de Megadeth"
             },
             {
-              "src": "/images/historia/megadeth-logo-evolution.jpg",
+              "src": "/images/historia/firstlogo.png",
               "alt": "Evolución del logo de Megadeth",
               "position": "center",
               "layout": "gallery",
@@ -67,21 +67,21 @@
           "layout": "image-gallery",
           "images": [
             {
-              "src": "/images/historia/gar-samuelson.jpg",
+              "src": "/images/historia/gar.jpg",
               "alt": "Gar Samuelson, primer baterista oficial",
               "layout": "gallery",
               "size": "medium",
               "caption": "Gar Samuelson"
             },
             {
-              "src": "/images/historia/chris-poland.jpg",
+              "src": "/images/historia/chris.jpeg",
               "alt": "Chris Poland, primer guitarrista líder",
               "layout": "gallery",
               "size": "medium",
               "caption": "Chris Poland"
             },
             {
-              "src": "/images/historia/kerry-king-megadeth.jpg",
+              "src": "/images/historia/kerry-king.webp",
               "alt": "Kerry King tocando con Megadeth",
               "layout": "gallery",
               "size": "medium",
@@ -96,7 +96,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/killing-is-my-business-cover.jpg",
+              "src": "/images/historia/Killing-is-My-Business.webp",
               "alt": "Portada de Killing Is My Business… and Business Is Good!",
               "position": "right",
               "layout": "float",
@@ -104,7 +104,7 @@
               "caption": "Debut discográfico que marcó el inicio de la leyenda"
             },
             {
-              "src": "/images/historia/vic-rattlehead-first.jpg",
+              "src": "/images/historia/firstvic.jpg",
               "alt": "Primera aparición de Vic Rattlehead",
               "position": "left",
               "layout": "float",

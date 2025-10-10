@@ -134,6 +134,7 @@ export default function HistoryImageComponent({
               overflow: "hidden",
               boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              position: "relative",
               "&:hover": {
                 transform: "scale(1.02)",
                 boxShadow: "0 8px 25px rgba(0,0,0,0.25)",
@@ -322,6 +323,7 @@ export default function HistoryImageComponent({
               transform: "rotate(-2deg)",
               boxShadow: "0 8px 30px rgba(0,0,0,0.15)",
               transition: "all 0.4s ease",
+              position: "relative",
               "&:hover": {
                 transform: "rotate(0deg) scale(1.05)",
                 boxShadow: "0 15px 40px rgba(0,0,0,0.25)",
