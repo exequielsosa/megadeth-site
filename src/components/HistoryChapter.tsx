@@ -184,7 +184,7 @@ export default function HistoryChapterComponent({
   const chapterColor = chapter.color || theme.palette.primary.main;
 
   return (
-    <Box>
+    <Box width="100%">
       {/* Header del capítulo */}
       <Box
         sx={{
@@ -288,7 +288,7 @@ export default function HistoryChapterComponent({
       </Box>
 
       {/* Contenido de las secciones */}
-      <Box sx={{ maxWidth: "1200px", mx: "auto", px: { xs: 2, md: 4 } }}>
+      <Box sx={{ maxWidth: "1392px", mx: "auto", px: { xs: 2, md: 4 } }}>
         {chapter.sections.map((section) => (
           <HistorySectionComponent
             key={section.id}

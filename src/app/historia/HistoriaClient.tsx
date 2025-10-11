@@ -1,10 +1,10 @@
 "use client";
 
-import { Box, Container, Typography, Button, Chip } from "@mui/material";
+import { Box, Typography, Button, Chip } from "@mui/material";
 import HistoryTimeline from "@/components/HistoryTimeline";
 import historiaData from "@/constants/historia.json";
 import { HistoryData } from "@/types/historia";
-import { History, AutoStories, Timeline } from "@mui/icons-material";
+import { History, AutoStories } from "@mui/icons-material";
 
 export default function HistoriaClient() {
   const data = historiaData as HistoryData;
@@ -24,7 +24,7 @@ export default function HistoriaClient() {
       width={"100%"}
       flexDirection={"column"}
     >
-      <Box sx={{ maxWidth: "1440px", padding: 0 }} width={"100%"}>
+      <Box sx={{ maxWidth: "1392px", padding: 0 }} width={"100%"}>
         {/* Hero Section */}
         <Box
           sx={{

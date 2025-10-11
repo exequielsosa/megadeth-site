@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import HistoryChapterComponent from "@/components/HistoryChapter";
 import HistoryNavigation from "@/components/HistoryNavigation";
 import historiaData from "@/constants/historia.json";
@@ -165,9 +165,16 @@ export default async function CapituloPage({ params }: PageProps) {
       />
 
       {/* Contenido principal */}
-      <Container maxWidth="xl" sx={{ py: 4, pb: 10, mb: "600px" }}>
-        <HistoryChapterComponent chapter={chapter} />
-      </Container>
+      <Box
+        display="flex"
+        alignItems="center"
+        flexDirection="column"
+        width={"100%"}
+      >
+        <Box maxWidth="1392px" sx={{ py: 4, pb: 10, mb: "600px" }} width="100%">
+          <HistoryChapterComponent chapter={chapter} />
+        </Box>
+      </Box>
 
       {/* Navegación sticky */}
       <HistoryNavigation
