@@ -587,7 +587,7 @@
       "color": "#1E90FF",
       "icon": "🏆",
       "coverImage": {
-        "src": "/images/historia/big-four-reunion.jpg",
+        "src": "/images/historia/20162.jpg",
         "alt": "Reunión de los Big Four",
         "position": "background",
         "layout": "parallax"
@@ -600,7 +600,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/ellefson-returns.jpg",
+              "src": "/images/historia/elle.jpg",
               "alt": "David Ellefson regresa a Megadeth",
               "position": "right",
               "layout": "float",
@@ -616,21 +616,21 @@
           "layout": "image-gallery",
           "images": [
             {
-              "src": "/images/historia/big-four-sofia.jpg",
+              "src": "/images/historia/TheBigFour.jpg",
               "alt": "Big Four en Sofía, Bulgaria",
               "layout": "gallery",
               "size": "large",
               "caption": "El momento histórico en Sofía"
             },
             {
-              "src": "/images/historia/mustaine-hetfield-hug.jpg",
+              "src": "/images/historia/b4.jpg",
               "alt": "Mustaine y Hetfield se abrazan",
               "layout": "gallery",
               "size": "medium",
               "caption": "Reconciliación después de décadas"
             },
             {
-              "src": "/images/historia/am-i-evil-performance.jpg",
+              "src": "/images/historia/n4.jpg",
               "alt": "Tocando Am I Evil juntos",
               "layout": "gallery",
               "size": "medium",
@@ -639,20 +639,109 @@
           ]
         },
         {
-          "id": "dystopia-grammy",
-          "title": "Dystopia y el primer Grammy",
-          "content": "Con Kiko Loureiro, virtuoso guitarrista brasileño de la banda Angra, y Chris Adler (de Lamb of God) para grabar el próximo álbum, Megadeth grabó Dystopia (2016). El disco resultante fue aclamado como una vuelta triunfal al thrash agresivo y complejo. Canciones como \"The Threat Is Real\", \"Fatal Illusion\" y la titular \"Dystopia\" mostraron a Mustaine inspirado por temáticas distópicas y riffs demoledores, mientras que Kiko Loureiro contribuyó con solos melódicos y arreglos exquisitos. Dystopia revitalizó totalmente la imagen de Megadeth y recibió numerosos premios. De hecho, en la 59ª entrega de los Grammy Awards (2017), Megadeth finalmente ganó su primer Grammy tras 12 nominaciones previas, llevándose el trofeo a Mejor Interpretación de Metal por la canción \"Dystopia\".",
+          "id": "rust-in-peace-anniversary",
+          "title": "20º aniversario de Rust in Peace",
+          "content": "Ese mismo año, Megadeth celebró el 20º aniversario de Rust in Peace tocando el álbum completo en una gira especial, cuyo show final en Los Ángeles quedó plasmado en el CD/DVD Rust in Peace Live (2010). Con la formación Mustaine–Ellefson–Broderick–Drover, la banda demostró que los clásicos seguían sonando poderosos después de dos décadas, reviviendo la magia de su obra cumbre ante audiencias extasiadas.",
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/dystopia-cover.jpg",
+              "src": "/images/albums/live-rip.jpg",
+              "alt": "Rust in Peace Live 2010",
+              "position": "center",
+              "layout": "gallery",
+              "size": "large",
+              "caption": "Celebrando 20 años de la obra maestra"
+            }
+          ]
+        },
+        {
+          "id": "th1rt3en",
+          "title": "TH1RT3EN: Superstición y renovación",
+          "content": "Con la formación estabilizada, lanzaron TH1RT3EN (2011), decimotercer álbum de estudio titulado así en parte por superstición (Mustaine, nacido un 13 de septiembre, le dio simbolismo al número) y porque incluía 13 canciones. Thirteen combinó temas nuevos con algunos rescatados de años anteriores (por ejemplo \"Sudden Death\", compuesto para un videojuego de Guitar Hero). El disco fue bien recibido: destacó la pegadiza \"Public Enemy No. 1\" (nominada al Grammy) y \"Whose Life (Is It Anyways?)\". Megadeth giró intensamente en 2011-2012, incluyendo su participación como acto de apertura en la gira \"Maiden England\" de Iron Maiden en 2013, mostrando humildad al apoyar a otra leyenda del metal.",
+          "layout": "text-with-images",
+          "images": [
+            {
+              "src": "/images/albums/13-13.webp",
+              "alt": "Portada de TH1RT3EN",
+              "position": "left",
+              "layout": "float",
+              "size": "large",
+              "caption": "El decimotercer álbum, cargado de simbolismo"
+            },
+            {
+              "src": "/images/historia/pen1.jpg",
+              "alt": "Video de Public Enemy No. 1",
+              "position": "right",
+              "layout": "float",
+              "size": "medium",
+              "caption": "Public Enemy No. 1 - Nominada al Grammy"
+            }
+          ]
+        },
+        {
+          "id": "super-collider",
+          "title": "Super Collider: Experimentación polémica",
+          "content": "En 2013 llegó Super Collider, un álbum donde Mustaine buscó expandir su sonido con influencias de hard rock e incluso country en algunos riffs. Fue lanzado bajo su propio sello Tradecraft (en alianza con Universal) y tuvo colaboraciones inesperadas, como el guitarrista country-legendario en un solo. Super Collider polarizó a los fans y críticos: algunos apreciaron la experimentación en canciones como \"Kingmaker\", pero otros extrañaron la agresividad. Aun así, debutó en el Top 10 de Billboard, lo que demostraba la leal base de seguidores de la banda.",
+          "layout": "text-with-images",
+          "images": [
+            {
+              "src": "/images/albums/14-super.webp",
+              "alt": "Portada de Super Collider",
+              "position": "center",
+              "layout": "gallery",
+              "size": "large",
+              "caption": "Experimentación que dividió opiniones"
+            },
+            {
+              "src": "/images/historia/super.jpg",
+              "alt": "Video de Super Collider",
+              "position": "right",
+              "layout": "float",
+              "size": "medium",
+              "caption": "Super Collider - Explorando nuevos territorios"
+            }
+          ]
+        },
+        {
+          "id": "broderick-drover-departure",
+          "title": "Éxodo masivo y renovación",
+          "content": "Tras la gira de Super Collider, ocurrió otra sacudida: en noviembre de 2014, el guitarrista Chris Broderick y el baterista Shawn Drover anunciaron simultáneamente su salida de Megadeth, citando diferencias artísticas y ganas de perseguir proyectos propios. De un plumazo, Mustaine y Ellefson se quedaron solos al frente del grupo (por segunda vez en la historia, la primera fue en 2002). Lejos de amilanarse, Mustaine vio esto como una oportunidad de renovación. El 2015 trajo refuerzos de alto calibre: Kiko Loureiro, virtuoso guitarrista brasileño de la banda Angra, se unió oficialmente a Megadeth, aportando su maestría técnica y aire fresco a la composición.",
+          "layout": "text-with-images",
+          "images": [
+            {
+              "src": "/images/historia/bye.jpg",
+              "alt": "Salida de Broderick y Drover",
+              "position": "left",
+              "layout": "float",
+              "size": "medium",
+              "caption": "El éxodo que cambió todo"
+            },
+            {
+              "src": "/images/historia/kiko.jpg",
+              "alt": "Kiko Loureiro se une a Megadeth",
+              "position": "right",
+              "layout": "float",
+              "size": "large",
+              "caption": "Kiko Loureiro aporta virtuosismo brasileño"
+            }
+          ]
+        },
+        {
+          "id": "dystopia-grammy",
+          "title": "Dystopia y el primer Grammy",
+          "content": "Asimismo, Mustaine reclutó al baterista Chris Adler (de Lamb of God) para grabar el próximo álbum –Adler participó como miembro oficial invitado, ya que continuaba con Lamb of God paralelamente. Con esta potente formación, Megadeth grabó Dystopia (2016). El disco resultante fue aclamado como una vuelta triunfal al thrash agresivo y complejo. Canciones como \"The Threat Is Real\", \"Fatal Illusion\" y la titular \"Dystopia\" mostraron a Mustaine inspirado por temáticas distópicas y riffs demoledores, mientras que Kiko Loureiro contribuyó con solos melódicos y arreglos exquisitos. Dystopia revitalizó totalmente la imagen de Megadeth y recibió numerosos premios. De hecho, en la 59ª entrega de los Grammy Awards (2017), Megadeth finalmente ganó su primer Grammy tras 12 nominaciones previas, llevándose el trofeo a Mejor Interpretación de Metal por la canción \"Dystopia\". Cuando Mustaine subió al escenario a recoger el Grammy, la house band de la ceremonia insólitamente tocó \"Master of Puppets\" de Metallica como música de fondo, a lo que Dave reaccionó con humor haciendo air guitar mientras sonreía. El momento, muy comentado, simbolizó con ironía la larga sombra de Metallica en la historia de Mustaine, pero ahora este finalmente tenía un Grammy con el nombre de Megadeth grabado en él.",
+          "layout": "text-with-images",
+          "images": [
+            {
+              "src": "/images/albums/15-dystopia.webp",
               "alt": "Portada de Dystopia",
               "position": "left",
               "layout": "float",
-              "size": "large"
+              "size": "large",
+              "caption": "El álbum que trajo el Grammy"
             },
             {
-              "src": "/images/historia/grammy-win-2017.jpg",
+              "src": "/images/historia/grammy.webp",
               "alt": "Megadeth gana su primer Grammy",
               "position": "right",
               "layout": "float",
@@ -660,12 +749,36 @@
               "caption": "¡Finalmente el Grammy!"
             },
             {
-              "src": "/images/historia/kiko-loureiro.jpg",
-              "alt": "Kiko Loureiro con Megadeth",
+              "src": "/images/historia/error.webp",
+              "alt": "Momento irónico con Master of Puppets",
               "position": "center",
               "layout": "gallery",
               "size": "medium",
-              "caption": "Kiko Loureiro aporta virtuosismo brasileño"
+              "caption": "El momento irónico con Master of Puppets"
+            }
+          ]
+        },
+        {
+          "id": "dirk-verbeuren-joins",
+          "title": "Dirk Verbeuren y la consolidación",
+          "content": "Durante la gira mundial de Dystopia (2016-2017), Megadeth incorporó al baterista belga Dirk Verbeuren (ex Soilwork) para sustituir a Chris Adler, quien debía volver a sus compromisos con Lamb of God. Verbeuren se convirtió en miembro permanente a mediados de 2016, consolidando una alineación sumamente técnica con Mustaine, Ellefson, Loureiro y Dirk. La banda se mantuvo muy activa: organizaron el Megacruise (crucero temático de heavy metal) en 2019 e ingresaron a estudio ese año para trabajar en el siguiente álbum.",
+          "layout": "text-with-images",
+          "images": [
+            {
+              "src": "/images/historia/Dirk-Verbeuren.webp",
+              "alt": "Dirk Verbeuren se une como baterista",
+              "position": "center",
+              "layout": "gallery",
+              "size": "large",
+              "caption": "Dirk Verbeuren, precisión belga en la batería"
+            },
+            {
+              "src": "/images/historia/megagruise.webp",
+              "alt": "Megacruise 2019",
+              "position": "right",
+              "layout": "float",
+              "size": "medium",
+              "caption": "El innovador crucero temático"
             }
           ]
         },
@@ -676,7 +789,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/mustaine-cancer-fight.jpg",
+              "src": "/images/historia/dave-mustaine-megadeth-sofa.jpg",
               "alt": "Mustaine durante su tratamiento",
               "position": "center",
               "layout": "gallery",
@@ -694,11 +807,11 @@
         {
           "id": "sick-dying-dead",
           "title": "The Sick, the Dying... and the Dead!",
-          "content": "A pesar de estos obstáculos, Mustaine perseveró y consiguió finalizar el decimosexto álbum de estudio de Megadeth. Finalmente, en septiembre de 2022, los metaleros pudieron escuchar The Sick, the Dying... and the Dead!, primer álbum de Megadeth tras seis años. El disco aborda temáticas oscuras (plagas, guerra, corrupción) muy en línea con los tiempos pandémicos recientes. Musicalmente combina el virtuosismo de Loureiro y Verbeuren con la inconfundible agresión de Mustaine. Destacan temas como \"We'll Be Back\", \"Night Stalkers\" (con un cameo del rapero Ice-T) y \"Soldier On!\". The Sick, the Dying... recibió críticas positivas y demostró que, a sus casi 60 años, Mustaine seguía \"disfrutando su trabajo\" y sonando revitalizado.",
+          "content": "A pesar de estos obstáculos, Mustaine perseveró y consiguió finalizar el decimosexto álbum de estudio de Megadeth. Finalmente, en septiembre de 2022, los metaleros pudieron escuchar The Sick, the Dying... and the Dead!, primer álbum de Megadeth tras seis años. El disco aborda temáticas oscuras (plagas, guerra, corrupción) muy en línea con los tiempos pandémicos recientes. Musicalmente combina el virtuosismo de Loureiro y Verbeuren con la inconfundible agresión de Mustaine. Destacan temas como \"We'll Be Back\", \"Night Stalkers\" (con un cameo del rapero Ice-T) y \"Soldier On!\". The Sick, the Dying... recibió críticas positivas y demostró que, a sus casi 60 años, Mustaine seguía \"disfrutando su trabajo\" y sonando revitalizado. El álbum debutó en el Top 5 del Billboard 200, alzándose como otro éxito comercial tardío para la banda. Además, el sencillo \"We'll Be Back\" fue nominado al Grammy 2023 a Mejor Canción de Metal, manteniendo la presencia de Megadeth en premiaciones.",
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/sick-dying-dead-cover.jpg",
+              "src": "/images/albums/16-sick.webp",
               "alt": "Portada de The Sick, the Dying... and the Dead!",
               "position": "center",
               "layout": "gallery",
@@ -706,11 +819,58 @@
               "caption": "El regreso después de 6 años"
             },
             {
-              "src": "/images/historia/we-will-be-back-video.jpg",
+              "src": "/images/historia/wbb.jpeg",
               "alt": "Video de We'll Be Back",
               "position": "right",
               "layout": "float",
-              "size": "medium"
+              "size": "medium",
+              "caption": "We'll Be Back - Nominada al Grammy 2023"
+            }
+          ]
+        },
+        {
+          "id": "marty-reunion-moments",
+          "title": "Reuniones especiales con Marty Friedman",
+          "content": "Durante 2022 y 2023, Megadeth salió de gira bajo el lema \"Crush the World\", llevando su show a Norteamérica, Europa, Asia y Latinoamérica. En este periodo ocurrieron algunos eventos notables para los fans de la vieja escuela: en febrero de 2023, durante un concierto en el mítico Budokan de Tokio, Marty Friedman –el ex guitarrista de la época dorada– se unió como invitado sorpresa para tocar varios clásicos tras 23 años de ausencia. La emotiva reunión con Friedman se repitió en agosto de 2023 en el festival Wacken Open Air en Alemania, donde Marty volvió a tocar junto a Megadeth en cuatro canciones (incluyendo \"Holy Wars\" y \"Trust\") ante una ovación masiva. Estas apariciones alimentaron esperanzas de algunos fanáticos sobre una posible colaboración más extensa, pero Friedman dejó claro que fueron participaciones especiales y amistosas.",
+          "layout": "image-gallery",
+          "images": [
+            {
+              "src": "/images/historia/mb.jpg",
+              "alt": "Marty Friedman en Budokan 2023",
+              "layout": "gallery",
+              "size": "large",
+              "caption": "Reunión histórica en el Budokan después de 23 años"
+            },
+            {
+              "src": "/images/historia/wacken.jpg",
+              "alt": "Marty en Wacken 2023",
+              "layout": "gallery",
+              "size": "medium",
+              "caption": "Wacken Open Air - Ovación masiva"
+            }
+          ]
+        },
+        {
+          "id": "kiko-departure-teemu-arrival",
+          "title": "Cambio de guitarrista: de Kiko a Teemu",
+          "content": "Por otra parte, el guitarrista Kiko Loureiro anunció en septiembre de 2023 que no podría continuar las giras de Megadeth por el momento, ya que necesitaba dedicar tiempo a su familia (acababa de tener gemelos). Inicialmente se comunicó que sería una ausencia temporal, con el finlandés Teemu Mäntysaari (de Wintersun) cubriendo su puesto en conciertos; sin embargo, en noviembre de 2023 Kiko confirmó que extendía indefinidamente su ausencia y dejaba vacante su puesto de forma amistosa. En agosto de 2024, Mustaine oficializó que Loureiro efectivamente salía de Megadeth en buenos términos para enfocarse en proyectos personales, y a la vez anunció a Teemu Mäntysaari como miembro oficial y nuevo guitarrista líder de la banda. Con ello, Megadeth incorporaba sangre joven a sus filas una vez más, preparando el terreno para la que sería su etapa final.",
+          "layout": "text-with-images",
+          "images": [
+            {
+              "src": "/images/historia/byekiko.webp",
+              "alt": "Despedida amistosa de Kiko Loureiro",
+              "position": "left",
+              "layout": "float",
+              "size": "large",
+              "caption": "Kiko se despide para dedicarse a la familia"
+            },
+            {
+              "src": "/images/historia/Teemu.jpg",
+              "alt": "Teemu Mäntysaari nuevo guitarrista oficial",
+              "position": "right",
+              "layout": "float",
+              "size": "medium",
+              "caption": "Teemu Mäntysaari, sangre joven para el final"
             }
           ]
         }
@@ -728,7 +888,7 @@
       "color": "#1E90FF",
       "icon": "🌅",
       "coverImage": {
-        "src": "/images/historia/farewell-era.jpg",
+        "src": "/images/historia/byemega.webp",
         "alt": "Megadeth en su era de despedida",
         "position": "background",
         "layout": "parallax"
@@ -741,14 +901,14 @@
           "layout": "image-gallery",
           "images": [
             {
-              "src": "/images/historia/crush-world-tour.jpg",
+              "src": "/images/historia/cwt.jpg",
               "alt": "Gira Crush The World",
               "layout": "gallery",
               "size": "large",
               "caption": "La penúltima gran gira mundial"
             },
             {
-              "src": "/images/historia/argentina-2024.jpg",
+              "src": "/images/historia/2024arg.jpg",
               "alt": "Buenos Aires 2024 streaming",
               "layout": "gallery",
               "size": "medium",
@@ -763,7 +923,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/farewell-announcement.jpg",
+              "src": "/images/historia/vicends.jpg",
               "alt": "Anuncio de despedida con Vic Rattlehead",
               "position": "center",
               "layout": "gallery",
@@ -779,27 +939,19 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/tipping-point-single.jpg",
+              "src": "/images/historia/tipping.jpg",
               "alt": "Single Tipping Point",
               "position": "left",
               "layout": "float",
               "size": "large",
               "caption": "El primer anticipo del álbum final"
-            },
-            {
-              "src": "/images/historia/teemu-mantysaari.jpg",
-              "alt": "Teemu Mäntysaari nuevo guitarrista",
-              "position": "right",
-              "layout": "float",
-              "size": "medium",
-              "caption": "Teemu Mäntysaari, sangre nueva para el final"
             }
           ]
         },
         {
           "id": "gira-despedida",
-          "title": "La gira mundial de despedida",
-          "content": "La gira de despedida mundial de Megadeth comenzará a inicios de 2026, bajo un nombre aún por anunciar pero que bien podría apelar a una de sus canciones emblemáticas. Mustaine ha indicado que será una gira extensa de varios años, para poder llegar con Megadeth a todos los rincones del planeta por última vez. \"Hemos hecho muchos amigos a lo largo de los años y espero verlos a todos en nuestra gira global de despedida\", declaró Dave, invitando a los fans a celebrar en vez de lamentar el final. La promesa es ofrecer shows especiales, llenos de clásicos que abarcarán toda su discografía, e incluso tocar canciones poco habituales para complacer a los seguidores más fieles.",
+          "title": "Gira mundial de despedida",
+          "content": "La gira de despedida mundial de Megadeth comenzará a inicios de 2026, bajo un nombre aún por anunciar. Mustaine ha indicado que será una gira extensa de varios años, para poder llegar con Megadeth a todos los rincones del planeta. \"Hemos hecho muchos amigos a lo largo de los años y espero verlos a todos en nuestra gira global de despedida\", declaró Dave, invitando a los fans a celebrar en vez de lamentar el final. La promesa es ofrecer shows especiales, llenos de clásicos que abarcarán toda su discografía, e incluso tocar canciones poco habituales para complacer a los seguidores más fieles.",
           "layout": "text-only"
         },
         {
@@ -809,7 +961,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/megadeth-legacy.jpg",
+              "src": "/images/historia/megadeth.webp",
               "alt": "El legado completo de Megadeth",
               "position": "full",
               "layout": "gallery",
