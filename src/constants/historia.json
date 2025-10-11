@@ -63,7 +63,7 @@
         {
           "id": "primera-formacion",
           "title": "Completando la formación",
-          "content": "Lleno de entusiasmo pero con pocos recursos, Mustaine enfrentó dificultades para completar la formación. Él y Ellefson audicionaron a decenas de bateristas sin éxito; incluso contaron brevemente con Kerry King de Slayer como segundo guitarrista en algunos shows locales. Finalmente reclutaron al baterista de jazz-fusión Gar Samuelson y al guitarrista Chris Poland a finales de 1984. Con Mustaine ocupándose también de las voces (al no encontrar un cantante adecuado), el cuarteto empezó a componer material de altísima velocidad y complejidad técnica.",
+          "content": "Lleno de entusiasmo pero con pocos recursos, Mustaine enfrentó dificultades para completar la formación. Él y Ellefson audicionaron a decenas de bateristas sin éxito; incluso contaron brevemente con Kerry King de Slayer como segundo guitarrista en algunos shows locales, una colaboración que mostraba la fraternidad temprana de la escena thrash. Finalmente reclutaron al baterista de jazz-fusión Gar Samuelson y al guitarrista Chris Poland a finales de 1984, músicos que aportarían complejidad técnica y sofisticación al sonido brutal que Mustaine buscaba. Con Mustaine ocupándose también de las voces (al no encontrar un cantante adecuado), el cuarteto empezó a componer material de altísima velocidad y complejidad técnica que elevaría los estándares del thrash metal emergente.",
           "layout": "image-gallery",
           "images": [
             {
@@ -91,8 +91,8 @@
         },
         {
           "id": "killing-is-my-business",
-          "title": "Killing Is My Business",
-          "content": "En 1984 grabaron un demo de tres canciones –\"Last Rites/Loved to Death\", \"Skull Beneath the Skin\" y \"Mechanix\"– que circuló en la escena underground y llamó la atención de sellos discográficos. Mustaine firmó con Combat Records, un sello independiente que les ofreció $8,000 para grabar su primer álbum. El presupuesto se esfumó rápidamente en drogas, alcohol y diversión, reflejando el estilo de vida desenfrenado del joven grupo. Tras despedir al productor original, Megadeth terminó de producir el álbum por su cuenta con calidad lo-fi, pero aun así su debut Killing Is My Business… and Business Is Good! (1985) se convirtió en un éxito del metal underground.",
+          "title": "Killing Is My Business… and Business Is Good!",
+          "content": "En 1984 grabaron un demo de tres canciones –\"Last Rites/Loved to Death\", \"Skull Beneath the Skin\" y \"Mechanix\"– que circuló en la escena underground y llamó la atención de sellos discográficos. Mustaine firmó con Combat Records, un sello independiente que les ofreció $8,000 para grabar su primer álbum. El presupuesto se esfumó rápidamente en drogas, alcohol y diversión, reflejando el estilo de vida desenfrenado del joven grupo. Tras despedir al productor original, Megadeth terminó de producir el álbum por su cuenta con calidad lo-fi, pero aun así su debut Killing Is My Business… and Business Is Good! (1985) se convirtió en un éxito del metal underground. El disco, lanzado en verano de 1985, mostró una técnica feroz que elevó el estándar del thrash metal emergente. Incluyó \"Mechanix\", un tema que Mustaine había compuesto en Metallica y que esa banda re-grabó (más lento) como \"The Four Horsemen\" en Kill 'Em All, marcando una de las primeras venganzas musicales de Dave. También presentó la primera aparición de Vic Rattlehead, la ahora famosa mascota calavérica de Megadeth, en la portada. Con canciones agresivas y veloces, Killing Is My Business... puso a Megadeth en el mapa y les consiguió un contrato con el gigante Capitol Records para su siguiente lanzamiento.",
           "layout": "text-with-images",
           "images": [
             {
@@ -125,7 +125,7 @@
       "yearEnd": 1990,
       "summary": "Con Capitol Records, Megadeth alcanzó fama mundial con 'Peace Sells', pero las adicciones devastaron la banda. Múltiples cambios de formación marcaron una era de éxito externo y caos interno.",
       "color": "#1E90FF",
-      "icon": "⚡",
+      "icon": "",
       "coverImage": {
         "src": "/images/historia/1986.jpg",
         "alt": "Megadeth en la era Peace Sells",
@@ -136,7 +136,7 @@
         {
           "id": "peace-sells",
           "title": "Peace Sells... but Who's Buying?",
-          "content": "Ya con Capitol Records, Megadeth tuvo la oportunidad de llevar su música a un público mayor, pero el ascenso vino acompañado de caos interno. Su segundo álbum, Peace Sells... but Who's Buying? (1986), marcó un antes y un después: con himnos como \"Peace Sells\", la banda se volvió una de las más populares del thrash estadounidense, vendiendo más de un millón de copias en su país. El sencillo \"Peace Sells\" contó con un video rotado en MTV, presentando a Vic Rattlehead frente a las ruinas de las Naciones Unidas –una imagen icónica del metal ochentero.",
+          "content": "Ya con Capitol Records, Megadeth tuvo la oportunidad de llevar su música a un público mayor, pero el ascenso vino acompañado de caos interno. Su segundo álbum, Peace Sells... but Who's Buying? (1986), marcó un antes y un después en su carrera: con himnos como \"Peace Sells\", la banda se volvió una de las más populares del thrash estadounidense, vendiendo más de un millón de copias en su país natal. El disco presentó un sonido más maduro y técnicamente superior al debut, con riffs complejos y solos virtuosos que definirían el estilo distintivo de Megadeth. El sencillo \"Peace Sells\" contó con un video rotado en MTV que se convirtió en icónico: presentaba a Vic Rattlehead frente a las ruinas de las Naciones Unidas, una imagen que capturó perfectamente el espíritu rebelde y político del metal ochentero. La exposición en MTV fue crucial para expandir su audiencia más allá del underground.",
           "layout": "text-with-images",
           "images": [
             {
@@ -160,13 +160,13 @@
         {
           "id": "adicciones-despidos",
           "title": "Adicciones y despidos",
-          "content": "Sin embargo, pese al éxito externo, la adicción a la heroína de Mustaine, Poland y Samuelson empeoraba. Tras la gira del álbum, Mustaine terminó despidiendo a Poland y Gar Samuelson por sus graves drogodependencias, acusándolos incluso de vender equipo de la banda para costear sus hábitos. Era finales de 1987 y Megadeth perdía a dos miembros clave justo cuando su fama crecía.",
+          "content": "Sin embargo, pese al éxito externo, la adicción a la heroína de Mustaine, Poland y Samuelson empeoraba dramáticamente. El consumo de drogas alcanzó niveles destructivos que amenazaban la supervivencia misma de la banda. Los problemas de puntualidad, rendimiento errático en vivo y comportamientos impredecibles se volvieron constantes durante las giras. Tras la gira del álbum Peace Sells, Mustaine tomó la difícil decisión de despedir a Poland y Gar Samuelson por sus graves drogodependencias, acusándolos incluso de vender equipo de la banda para costear sus hábitos destructivos. La situación había llegado a un punto insostenible donde la adicción superaba cualquier compromiso profesional. Era finales de 1987 y Megadeth perdía a dos miembros clave –arquitectos del sonido que los había llevado al éxito– justo cuando su fama crecía exponencialmente.",
           "layout": "text-only"
         },
         {
           "id": "so-far-so-good",
           "title": "So Far, So Good... So What!",
-          "content": "Mustaine y Ellefson reclutaron rápidamente al guitarrista Jeff Young y al baterista Chuck Behler (quien había sido técnico de batería de Gar) apenas seis semanas antes de entrar al estudio a grabar el tercer disco. El resultado fue So Far, So Good... So What! (1988), un álbum furioso con destellos brillantes –como \"In My Darkest Hour\", emotiva pieza que Mustaine compuso tras la muerte de Cliff Burton de Metallica– pero también caótico en su producción. Entre las canciones destacaba un cover acelerado de \"Anarchy in the U.K.\" de los Sex Pistols.",
+          "content": "Con la banda desestabilizada, Mustaine y Ellefson se apresuraron a reclutar reemplazos: el guitarrista Jeff Young y el baterista Chuck Behler (quien había sido técnico de batería de Gar y conocía bien el material) se unieron apenas seis semanas antes de entrar al estudio a grabar el tercer disco. Esta urgencia marcó tanto las fortalezas como las debilidades del resultado. So Far, So Good... So What! (1988) emergió como un álbum furioso y crudo, con destellos de brillantez genuina –como \"In My Darkest Hour\", emotiva y melancólica pieza que Mustaine compuso tras enterarse de la muerte de Cliff Burton de Metallica, mostrando una faceta más introspectiva– pero también reflejando el caos en su producción acelerada. Entre las canciones destacaba un cover frenético y acelerado de \"Anarchy in the U.K.\" de los Sex Pistols, que capturaba perfectamente el espíritu destructivo del momento que vivía la banda.",
           "layout": "text-with-images",
           "images": [
             {
@@ -175,7 +175,15 @@
               "position": "left",
               "layout": "float",
               "size": "large"
-            },
+            }
+          ]
+        },
+        {
+          "id": "monsters-of-rock",
+          "title": "Monsters of Rock y más caos",
+          "content": "Aunque So Far, So Good... logró buenas ventas y mantuvo a Megadeth en una intensa gira mundial durante 1988, el comportamiento cada vez más errático de Mustaine –entonces en el pico absoluto de sus adicciones– causó serios problemas logísticos y artísticos. En verano de 1988, Megadeth logró una exposición masiva al participar en el prestigioso festival Monsters of Rock en Donington Park (Inglaterra) frente a más de 100.000 personas, compartiendo cartel con gigantes como Iron Maiden, Kiss y Guns N' Roses. Fue una oportunidad dorada para consolidar su estatus internacional, pero el caos interno seguía creciendo. Inmediatamente después del festival, en una decisión impulsiva que ejemplificaba su estado mental deteriorado, Mustaine despidió también a Behler y Young, cancelando abruptamente la gira programada que tenían por Australia y dejando a la banda nuevamente desmantelada en pleno momento de éxito.",
+          "layout": "image-gallery",
+          "images": [
             {
               "src": "/images/historia/1987.webp",
               "alt": "Jeff Young y Chuck Behler",
@@ -183,15 +191,7 @@
               "layout": "float",
               "size": "medium",
               "caption": "Jeff Young y Chuck Behler, la nueva dupla"
-            }
-          ]
-        },
-        {
-          "id": "monsters-of-rock",
-          "title": "Monsters of Rock y más caos",
-          "content": "Aunque So Far, So Good... logró buenas ventas y mantuvo a Megadeth en gira mundial de 1988, el comportamiento errático de Mustaine (entonces en el pico de sus adicciones) causó problemas. En verano de 1988, Megadeth logró una gran exposición al tocar en el festival Monsters of Rock en Donington Park (Inglaterra) frente a 100.000 personas, compartiendo cartel con Iron Maiden, Kiss y Guns N' Roses. Pero inmediatamente después, Mustaine despidió también a Behler y Young, cancelando la gira que tenían por Australia.",
-          "layout": "image-gallery",
-          "images": [
+            },
             {
               "src": "/images/historia/donnington.jpg",
               "alt": "Megadeth en Donington 1988",
@@ -210,7 +210,7 @@
         {
           "id": "nueva-formacion",
           "title": "Reinvención desde el caos",
-          "content": "Ellefson ingresó a rehabilitación tras ese tour, y Mustaine hizo lo mismo (aunque este último tuvo una recaída semanas después). A finales de 1988, Megadeth se encontraba prácticamente destrozado por los excesos: Mustaine enfrentaba su adicción en clínica, la formación estaba otra vez incompleta y el futuro era incierto. Sin embargo, de ese caos surgiría una reinvención. En 1989 Mustaine conoció al talentoso guitarrista Marty Friedman –ex miembro de Cacophony– y decidió integrarlo a la banda tras barajar otros nombres (entre ellos Dimebag Darrell de Pantera). Junto con Nick Menza (ex técnico de batería de la banda, ascendido a baterista oficial tras la salida de Chuck), Megadeth se preparó para un nuevo comienzo.",
+          "content": "Reconociendo finalmente la gravedad de la situación, Ellefson ingresó a rehabilitación tras ese turbulento tour, y Mustaine hizo lo mismo (aunque este último sufrió una recaída semanas después, evidenciando lo profundo de su batalla personal). A finales de 1988, Megadeth se encontraba prácticamente destrozado por los excesos: Mustaine enfrentaba su adicción en clínica, la formación estaba otra vez incompleta y el futuro de la banda era completamente incierto. Los años de éxito habían sido eclipsados por la autodestrucción. Sin embargo, de ese caos total surgiría la reinvención más importante en la historia de Megadeth. En 1989, ya más sobrio y determinado, Mustaine conoció al extraordinariamente talentoso guitarrista Marty Friedman –ex virtuoso de la banda de metal neoclásico Cacophony– y decidió integrarlo a la banda tras considerar varios candidatos (entre ellos nada menos que Dimebag Darrell de Pantera). Junto con Nick Menza (ex técnico de batería de la banda que conocía perfectamente el repertorio, ascendido a baterista oficial tras demostrar su talento durante la salida de Chuck), Megadeth se preparó para lo que sería su reinvención más exitosa. Recién salido de rehabilitación y con una formación renovada que combinaba experiencia y virtuosismo técnico, Mustaine entró al estudio a mediados de 1990 con una determinación feroz y una claridad mental recuperada. El resultado sería histórico.",
           "layout": "text-with-images",
           "images": [
             {
