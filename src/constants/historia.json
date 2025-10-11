@@ -243,7 +243,7 @@
       "yearEnd": 1997,
       "summary": "Con la formación clásica Mustaine-Friedman-Ellefson-Menza, Megadeth alcanzó su pico creativo y comercial. 'Rust in Peace' y 'Countdown to Extinction' los establecieron como gigantes del metal mundial.",
       "color": "#1E90FF",
-      "icon": "👑",
+      "icon": "",
       "coverImage": {
         "src": "/images/historia/1989.png",
         "alt": "Megadeth en la era Rust in Peace",
@@ -285,6 +285,7 @@
               "src": "/images/historia/cot.jpg",
               "alt": "Póster de Clash of the Titans",
               "layout": "gallery",
+              "position": "full",
               "size": "large",
               "caption": "La gira que definió el thrash metal"
             },
@@ -292,7 +293,8 @@
               "src": "/images/historia/n4.jpg",
               "alt": "Los cuatro grandes del thrash",
               "layout": "gallery",
-              "size": "medium",
+              "size": "large",
+              "position": "full",
               "caption": "Los Big Four en los 90s"
             }
           ]
@@ -300,22 +302,22 @@
         {
           "id": "countdown-to-extinction",
           "title": "Countdown to Extinction: Mainstream",
-          "content": "El siguiente álbum llevó a Megadeth del estatus de culto al mainstream. Countdown to Extinction (1992) debutó en el #2 del Billboard estadounidense (solo por detrás de Billy Ray Cyrus), fue certificado Doble Platino y obtuvo una nominación al Grammy. Canciones como \"Symphony of Destruction\", \"Sweating Bullets\" y \"Countdown to Extinction\" se volvieron himnos metaleros de los 90 y ampliaron la audiencia de la banda más allá del thrash tradicional. Countdown... presentaba un sonido algo más accesible y pulido, sin sacrificar la furia ni el contenido crítico (el tema título denuncia la matanza de especies animales).",
-          "layout": "text-with-images",
+          "content": "El siguiente álbum llevó a Megadeth del estatus de culto al mainstream absoluto. Countdown to Extinction (1992) debutó en el #2 del Billboard estadounidense (solo por detrás de Billy Ray Cyrus), fue certificado Doble Platino y obtuvo una nominación al Grammy. Canciones como \"Symphony of Destruction\", \"Sweating Bullets\" y \"Countdown to Extinction\" se volvieron himnos metaleros de los 90 y ampliaron dramáticamente la audiencia de la banda más allá del thrash tradicional. Countdown... presentaba un sonido algo más accesible y pulido, sin sacrificar la furia ni el contenido crítico (el tema título denuncia la matanza de especies animales). La banda filmó videos populares que dominaron MTV y realizó una gira mundial masiva en estadios y festivales, tocando junto a grupos como Pantera y Suicidal Tendencies. Para esta época Megadeth ya acumulaba seis discos de Oro/Platino consecutivos en EE.UU., confirmando que su éxito era sostenido y no una casualidad. Mustaine y sus compañeros recibieron elogios mediáticos e incluso se involucraron en eventos de alto perfil, como cuando Dave fue corresponsal de MTV en la Convención Demócrata de 1992, mostrando que Megadeth había trascendido completamente la esfera del metal underground para convertirse en iconos culturales.",
+          "layout": "image-gallery",
           "images": [
             {
               "src": "/images/albums/05-countdown.jpg",
               "alt": "Portada de Countdown to Extinction",
-              "position": "left",
-              "layout": "float",
+              "position": "full",
+              "layout": "gallery",
               "size": "large"
             },
             {
               "src": "/images/historia/videosy.jpg",
               "alt": "Video de Symphony of Destruction",
-              "position": "right",
-              "layout": "float",
-              "size": "medium",
+              "position": "full",
+              "layout": "gallery",
+              "size": "large",
               "caption": "El himno que conquistó MTV"
             }
           ]
@@ -323,7 +325,7 @@
         {
           "id": "youthanasia",
           "title": "Youthanasia: Madurez creativa",
-          "content": "En 1994 el grupo siguió evolucionando con Youthanasia, un álbum más melódico y mid-tempo que reflejó la madurez compositiva de Mustaine. Lanzado en Halloween de 1994, Youthanasia (con portada mostrando a ancianas colgando bebés en un tendedero) causó impacto visual y vendió muy bien, destacando temas como \"Train of Consequences\" y la balada \"À Tout Le Monde\". Aunque algunos fans extrañaron la velocidad de trabajos previos, Megadeth mostró su versatilidad sin perder su filo. El disco fue certificado Platino y su gira mundial los llevó por primera vez a Sudamérica a fines de 1994, donde tocaron ante multitudes apasionadas.",
+          "content": "En 1994 el grupo siguió evolucionando con Youthanasia, un álbum más melódico y mid-tempo que reflejó la madurez compositiva de Mustaine. Lanzado en Halloween de 1994, Youthanasia (con portada mostrando a ancianas colgando bebés en un tendedero) causó impacto visual y vendió muy bien, destacando temas como \"Train of Consequences\" y la balada \"À Tout Le Monde\". Aunque algunos fans extrañaron la velocidad de trabajos previos, Megadeth mostró su versatilidad sin perder su filo. El disco fue certificado Platino y su gira mundial los llevó por primera vez a Sudamérica a fines de 1994, donde tocaron ante multitudes apasionadas que los recibieron como verdaderas estrellas de rock. En 1995 publicaron el EP Hidden Treasures, compilando canciones hasta entonces dispersas en soundtracks (como \"Angry Again\" del filme Last Action Hero y el cover \"Paranoid\" de Black Sabbath), demostrando la calidad constante de su material. Ese mismo año, encabezaron el prestigioso Monsters of Rock en Argentina y Brasil junto a leyendas como Alice Cooper y Ozzy Osbourne, confirmando definitivamente su lugar en la cima del metal mundial y su capacidad de liderar festivales masivos.",
           "layout": "text-with-images",
           "images": [
             {
@@ -347,7 +349,7 @@
         {
           "id": "cryptic-writings",
           "title": "Cryptic Writings: Éxito radial",
-          "content": "Para 1997, ya con 14 años de carrera, Megadeth era un gigante establecido. Ese año lanzaron Cryptic Writings, disco que continuó la senda más accesible e incluso coqueteó con el hard rock moderno. El sencillo \"Trust\" se convirtió en su canción de mayor éxito en radio, alcanzando el #5 en la lista Mainstream Rock de Billboard (su posición más alta en ese chart). Cryptic Writings fue certificado Oro rápidamente, impulsado también por otros temas destacados como \"Almost Honest\" y \"Secret Place\". La banda ganó en 1997 el premio Metal Edge Readers' Choice a Mejor Banda en Vivo, reflejo de su potente actuación en escenarios.",
+          "content": "Para 1997, ya con 14 años de carrera, Megadeth era un gigante establecido del metal mundial. Ese año lanzaron Cryptic Writings, disco que continuó la senda más accesible e incluso coqueteó audazmente con el hard rock moderno. El sencillo \"Trust\" se convirtió en su canción de mayor éxito en radio, alcanzando el #5 en la lista Mainstream Rock de Billboard (su posición más alta en ese chart hasta la fecha). Cryptic Writings fue certificado Oro rápidamente, impulsado también por otros temas destacados como \"Almost Honest\" y \"Secret Place\". La banda ganó en 1997 el premio Metal Edge Readers' Choice a Mejor Banda en Vivo, reflejo de su potente actuación en escenarios que seguía siendo impecable. Sin embargo, bajo la superficie del éxito había señales preocupantes de problemas internos: durante la gira de Cryptic Writings, el baterista Nick Menza descubrió un tumor en su rodilla que requirió cirugía inmediata y debió abandonar abruptamente la gira. Mustaine, siempre temiendo por la estabilidad del grupo después de tantos cambios pasados, tomó la controvertida decisión de reemplazar a Menza definitivamente en lugar de esperarlo. En julio de 1998 anunció la incorporación del baterista Jimmy DeGrasso (ex Alice Cooper, Suicidal Tendencies), marcando el primer cambio de integrante en la exitosa era noventera y anticipando una fase más inestable por venir. Poco después, Marty Friedman empezó a expresar abiertamente su creciente descontento con la dirección musical más comercial que la banda estaba tomando, sembrando las semillas de futuras tensiones creativas.",
           "layout": "text-with-images",
           "images": [
             {
@@ -379,7 +381,7 @@
       "yearEnd": 2009,
       "summary": "Una era turbulenta marcada por 'Risk', la partida de Marty Friedman, la lesión de Mustaine que llevó a la disolución temporal, y el eventual renacimiento con 'The System Has Failed'.",
       "color": "#1E90FF",
-      "icon": "🔄",
+      "icon": "",
       "coverImage": {
         "src": "/images/historia/1998.webp",
         "alt": "Megadeth en la era experimental",
@@ -396,7 +398,7 @@
             {
               "src": "/images/albums/08-risk.webp",
               "alt": "Portada de Risk",
-              "position": "center",
+              "position": "left",
               "layout": "gallery",
               "size": "large",
               "caption": "El álbum más controversial de su carrera"
@@ -405,21 +407,21 @@
               "src": "/images/historia/crush.jpg",
               "alt": "Video de Crush 'Em",
               "position": "right",
-              "layout": "float",
-              "size": "medium"
+              "layout": "gallery",
+              "size": "large"
             }
           ]
         },
         {
           "id": "marty-friedman-departure",
-          "title": "La partida de Marty Friedman",
+          "title": "Despedida de Marty Friedman",
           "content": "La tensión creativa alcanzó su pico: Marty Friedman dejó la banda en diciembre de 1999, citando \"diferencias musicales\" con Mustaine. Tras casi diez años, Megadeth perdía a su aclamado guitarrista líder. Mustaine contrató al experimentado Al Pitrelli (ex Savatage, Alice Cooper) para cubrir la vacante en 2000, y la banda se apresuró a componer material nuevo para reencontrarse con sus raíces metálicas y reconectar con el público más antiguo.",
           "layout": "text-with-images",
           "images": [
             {
               "src": "/images/historia/last.jpg",
               "alt": "Último show de Marty Friedman con Megadeth",
-              "position": "left",
+              "position": "right",
               "layout": "float",
               "size": "large",
               "caption": "El final de una era - Marty se despide"
@@ -443,14 +445,14 @@
             {
               "src": "/images/albums/09-twnah.webp",
               "alt": "Portada de The World Needs a Hero",
-              "position": "right",
+              "position": "center",
               "layout": "float",
               "size": "large"
             },
             {
               "src": "/images/albums/live-rude.jpg",
               "alt": "Rude Awakening",
-              "position": "left",
+              "position": "right",
               "layout": "float",
               "size": "medium",
               "caption": "Primer álbum en vivo - Rude Awakening"
@@ -472,7 +474,7 @@
             {
               "src": "/images/albums/10-tshf.webp",
               "alt": "Portada de The System Has Failed",
-              "position": "center",
+              "position": "full",
               "layout": "gallery",
               "size": "large",
               "caption": "El álbum del renacimiento"
@@ -490,22 +492,24 @@
         {
           "id": "nueva-era",
           "title": "Nueva formación y Gigantour",
-          "content": "Mustaine, ahora el único miembro original, armó una nueva alineación para la gira mundial: reclutó al guitarrista Glen Drover, al bajista James MacDonough (ex Iced Earth) y al baterista Shawn Drover (hermano de Glen). Curiosamente, Nick Menza había intentado volver a la batería al inicio de la gira 2004, pero tras unos ensayos se vio incapaz físicamente de cumplir con el tour y Shawn Drover tomó su lugar permanentemente a los pocos días de iniciado el recorrido. Con esta formación, Megadeth se embarcó en la gira Blackmail the Universe Tour (2004-2005), demostrando que estaban de vuelta. En paralelo, Mustaine fundó ese año su propio festival itinerante, la Gigantour, convocando a legendarias y nuevas bandas de metal para girar juntos. La primera edición en 2005 incluyó a Dream Theater, Nevermore, Anthrax y, por supuesto, Megadeth como cierre.",
+          "content": "Mustaine, ahora el único miembro original, armó una nueva alineación para la gira mundial: reclutó al guitarrista Glen Drover, al bajista James MacDonough (ex Iced Earth) y al baterista Shawn Drover (hermano de Glen). Curiosamente, Nick Menza había intentado volver a la batería al inicio de la gira 2004, pero tras unos ensayos se vio incapaz físicamente de cumplir con el tour y Shawn Drover tomó su lugar permanentemente a los pocos días de iniciado el recorrido. Con esta formación, Megadeth se embarcó en la gira Blackmail the Universe Tour (2004-2005), demostrando que estaban de vuelta. En paralelo, Mustaine fundó ese año su propio festival itinerante, la Gigantour, convocando a legendarias y nuevas bandas de metal para girar juntos. La primera edición en 2005 incluyó a Dream Theater, Nevermore, Anthrax y, por supuesto, Megadeth como cierre. Mustaine se estableció como curador visionario de la comunidad metalera, seleccionando cuidadosamente un line-up que abarcaba desde veteranos respetados hasta nuevas promesas del género. La segunda edición en 2006 amplió su alcance con Lamb of God, Opeth, Arch Enemy y Overkill, demostrando el compromiso de Mustaine con la diversidad estilística dentro del metal. El concepto de Gigantour revolucionó la forma en que las bandas de metal podían colaborar y promover el género, estableciendo un legado que influenciaría futuros festivales itinerantes.",
           "layout": "image-gallery",
           "images": [
             {
               "src": "/images/historia/drovers.jpeg",
               "alt": "Glen y Shawn Drover",
               "layout": "gallery",
-              "size": "medium",
-              "caption": "Los hermanos Drover se unen"
+              "size": "large",
+              "caption": "Los hermanos Drover se unen",
+              "position": "full"
             },
             {
               "src": "/images/historia/gigant.webp",
               "alt": "Primer Gigantour 2005",
               "layout": "gallery",
               "size": "large",
-              "caption": "Nace el festival Gigantour"
+              "caption": "Nace el festival Gigantour",
+              "position": "full"
             }
           ]
         },
@@ -518,7 +522,7 @@
             {
               "src": "/images/albums/11-united.webp",
               "alt": "Portada de United Abominations",
-              "position": "center",
+              "position": "full",
               "layout": "gallery",
               "size": "large",
               "caption": "Crítica política y colaboraciones especiales"
@@ -568,7 +572,7 @@
               "alt": "Video de Head Crusher",
               "position": "right",
               "layout": "float",
-              "size": "medium",
+              "size": "large",
               "caption": "Head Crusher - Ferocidad renovada"
             }
           ]
@@ -585,7 +589,7 @@
       "yearEnd": 2022,
       "summary": "El regreso de Ellefson, los históricos conciertos de los Big Four, un Grammy finalmente ganado con 'Dystopia', y la superación del cáncer de Mustaine. Una era de triunfos y estabilidad.",
       "color": "#1E90FF",
-      "icon": "🏆",
+      "icon": "",
       "coverImage": {
         "src": "/images/historia/20162.jpg",
         "alt": "Reunión de los Big Four",
@@ -606,6 +610,13 @@
               "layout": "float",
               "size": "large",
               "caption": "Ellefson vuelve después de 8 años"
+            },
+            {
+              "src": "/images/historia/TheBigFour.jpg",
+              "alt": "Big Four en Sofía, Bulgaria",
+              "layout": "gallery",
+              "size": "large",
+              "caption": "El momento histórico en Sofía"
             }
           ]
         },
@@ -616,24 +627,19 @@
           "layout": "image-gallery",
           "images": [
             {
-              "src": "/images/historia/TheBigFour.jpg",
-              "alt": "Big Four en Sofía, Bulgaria",
-              "layout": "gallery",
-              "size": "large",
-              "caption": "El momento histórico en Sofía"
-            },
-            {
               "src": "/images/historia/b4.jpg",
               "alt": "Mustaine y Hetfield se abrazan",
               "layout": "gallery",
-              "size": "medium",
+              "position": "full",
+              "size": "large",
               "caption": "Reconciliación después de décadas"
             },
             {
               "src": "/images/historia/n4.jpg",
               "alt": "Tocando Am I Evil juntos",
               "layout": "gallery",
-              "size": "medium",
+              "position": "full",
+              "size": "large",
               "caption": "Los cuatro gigantes juntos en escena"
             }
           ]
@@ -647,7 +653,7 @@
             {
               "src": "/images/albums/live-rip.jpg",
               "alt": "Rust in Peace Live 2010",
-              "position": "center",
+              "position": "full",
               "layout": "gallery",
               "size": "large",
               "caption": "Celebrando 20 años de la obra maestra"
@@ -687,7 +693,7 @@
             {
               "src": "/images/albums/14-super.webp",
               "alt": "Portada de Super Collider",
-              "position": "center",
+              "position": "full",
               "layout": "gallery",
               "size": "large",
               "caption": "Experimentación que dividió opiniones"
@@ -711,7 +717,7 @@
             {
               "src": "/images/historia/bye.jpg",
               "alt": "Salida de Broderick y Drover",
-              "position": "left",
+              "position": "center",
               "layout": "float",
               "size": "medium",
               "caption": "El éxodo que cambió todo"
@@ -733,28 +739,28 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/albums/15-dystopia.webp",
-              "alt": "Portada de Dystopia",
-              "position": "left",
-              "layout": "float",
+              "src": "/images/historia/error.webp",
+              "alt": "Momento irónico con Master of Puppets",
+              "position": "right",
+              "layout": "gallery",
               "size": "large",
-              "caption": "El álbum que trajo el Grammy"
+              "caption": "El momento irónico con Master of Puppets"
             },
             {
               "src": "/images/historia/grammy.webp",
               "alt": "Megadeth gana su primer Grammy",
-              "position": "right",
-              "layout": "float",
-              "size": "medium",
+              "position": "left",
+              "layout": "gallery",
+              "size": "large",
               "caption": "¡Finalmente el Grammy!"
             },
             {
-              "src": "/images/historia/error.webp",
-              "alt": "Momento irónico con Master of Puppets",
-              "position": "center",
+              "src": "/images/albums/15-dystopia.webp",
+              "alt": "Portada de Dystopia",
+              "position": "full",
               "layout": "gallery",
-              "size": "medium",
-              "caption": "El momento irónico con Master of Puppets"
+              "size": "large",
+              "caption": "El álbum que trajo el Grammy"
             }
           ]
         },
@@ -767,7 +773,7 @@
             {
               "src": "/images/historia/Dirk-Verbeuren.webp",
               "alt": "Dirk Verbeuren se une como baterista",
-              "position": "center",
+              "position": "full",
               "layout": "gallery",
               "size": "large",
               "caption": "Dirk Verbeuren, precisión belga en la batería"
@@ -777,7 +783,7 @@
               "alt": "Megacruise 2019",
               "position": "right",
               "layout": "float",
-              "size": "medium",
+              "size": "large",
               "caption": "El innovador crucero temático"
             }
           ]
@@ -823,7 +829,7 @@
               "alt": "Video de We'll Be Back",
               "position": "right",
               "layout": "float",
-              "size": "medium",
+              "size": "large",
               "caption": "We'll Be Back - Nominada al Grammy 2023"
             }
           ]
@@ -839,14 +845,16 @@
               "alt": "Marty Friedman en Budokan 2023",
               "layout": "gallery",
               "size": "large",
-              "caption": "Reunión histórica en el Budokan después de 23 años"
+              "caption": "Reunión histórica en el Budokan después de 23 años",
+              "position": "full"
             },
             {
               "src": "/images/historia/wacken.jpg",
               "alt": "Marty en Wacken 2023",
               "layout": "gallery",
-              "size": "medium",
-              "caption": "Wacken Open Air - Ovación masiva"
+              "size": "large",
+              "caption": "Wacken Open Air - Ovación masiva",
+              "position": "full"
             }
           ]
         },
@@ -869,7 +877,7 @@
               "alt": "Teemu Mäntysaari nuevo guitarrista oficial",
               "position": "right",
               "layout": "float",
-              "size": "medium",
+              "size": "large",
               "caption": "Teemu Mäntysaari, sangre joven para el final"
             }
           ]
@@ -886,7 +894,7 @@
       "yearEnd": 2026,
       "summary": "Los últimos años activos de Megadeth, el anuncio de su retiro, el álbum final homónimo y la gira mundial de despedida que cerrará cuatro décadas de thrash metal.",
       "color": "#1E90FF",
-      "icon": "🌅",
+      "icon": "",
       "coverImage": {
         "src": "/images/historia/byemega.webp",
         "alt": "Megadeth en su era de despedida",
@@ -905,14 +913,16 @@
               "alt": "Gira Crush The World",
               "layout": "gallery",
               "size": "large",
-              "caption": "La penúltima gran gira mundial"
+              "caption": "La penúltima gran gira mundial",
+              "position": "full"
             },
             {
               "src": "/images/historia/2024arg.jpg",
               "alt": "Buenos Aires 2024 streaming",
               "layout": "gallery",
-              "size": "medium",
-              "caption": "Show histórico transmitido mundialmente"
+              "size": "large",
+              "caption": "Show histórico transmitido mundialmente",
+              "position": "full"
             }
           ]
         },
