@@ -127,7 +127,7 @@
       "color": "#1E90FF",
       "icon": "⚡",
       "coverImage": {
-        "src": "/images/historia/peace-sells-era.jpg",
+        "src": "/images/historia/1986.jpg",
         "alt": "Megadeth en la era Peace Sells",
         "position": "background",
         "layout": "parallax"
@@ -140,7 +140,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/peace-sells-cover.jpg",
+              "src": "/images/albums/02-peace.webp",
               "alt": "Portada de Peace Sells... but Who's Buying?",
               "position": "center",
               "layout": "gallery",
@@ -148,12 +148,12 @@
               "caption": "El álbum que los catapultó al estrellato"
             },
             {
-              "src": "/images/historia/peace-sells-video.jpg",
+              "src": "/images/historia/psvideo.jpg",
               "alt": "Video de Peace Sells en MTV",
               "position": "right",
               "layout": "float",
               "size": "medium",
-              "caption": "Vic Rattlehead en el icónico video de MTV"
+              "caption": "Icónico video de MTV"
             }
           ]
         },
@@ -170,14 +170,14 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/so-far-so-good-cover.jpg",
+              "src": "/images/albums/03-sfsgsw.webp",
               "alt": "Portada de So Far, So Good... So What!",
               "position": "left",
               "layout": "float",
               "size": "large"
             },
             {
-              "src": "/images/historia/jeff-young-chuck-behler.jpg",
+              "src": "/images/historia/1987.webp",
               "alt": "Jeff Young y Chuck Behler",
               "position": "right",
               "layout": "float",
@@ -193,14 +193,14 @@
           "layout": "image-gallery",
           "images": [
             {
-              "src": "/images/historia/donington-1988.jpg",
+              "src": "/images/historia/donnington.jpg",
               "alt": "Megadeth en Donington 1988",
               "layout": "gallery",
               "size": "large",
               "caption": "Monsters of Rock 1988 - 100,000 personas"
             },
             {
-              "src": "/images/historia/monsters-of-rock-lineup.jpg",
+              "src": "/images/historia/monster-of-rock-88-cartel.jpg",
               "alt": "Cartel del Monsters of Rock 1988",
               "layout": "gallery",
               "size": "medium"
@@ -214,7 +214,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/marty-friedman-join.jpg",
+              "src": "/images/historia/maxresdefault.jpg",
               "alt": "Marty Friedman se une a Megadeth",
               "position": "right",
               "layout": "float",
@@ -222,7 +222,7 @@
               "caption": "Marty Friedman, el virtuoso que cambiaría todo"
             },
             {
-              "src": "/images/historia/nick-menza-young.jpg",
+              "src": "/images/historia/nm.jpg",
               "alt": "Nick Menza en sus inicios",
               "position": "left",
               "layout": "float",
@@ -245,7 +245,7 @@
       "color": "#1E90FF",
       "icon": "👑",
       "coverImage": {
-        "src": "/images/historia/rust-in-peace-era.jpg",
+        "src": "/images/historia/1989.png",
         "alt": "Megadeth en la era Rust in Peace",
         "position": "background",
         "layout": "parallax"
@@ -258,7 +258,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/rust-in-peace-cover.jpg",
+              "src": "/images/albums/04-rip.webp",
               "alt": "Portada de Rust in Peace",
               "position": "center",
               "layout": "gallery",
@@ -266,7 +266,7 @@
               "caption": "La obra maestra que definió el thrash metal"
             },
             {
-              "src": "/images/historia/classic-lineup.jpg",
+              "src": "/images/historia/19892.jpg",
               "alt": "Formación clásica de Megadeth",
               "position": "full",
               "layout": "gallery",
@@ -282,14 +282,14 @@
           "layout": "image-gallery",
           "images": [
             {
-              "src": "/images/historia/clash-of-titans-poster.jpg",
+              "src": "/images/historia/cot.jpg",
               "alt": "Póster de Clash of the Titans",
               "layout": "gallery",
               "size": "large",
               "caption": "La gira que definió el thrash metal"
             },
             {
-              "src": "/images/historia/big-four-early.jpg",
+              "src": "/images/historia/n4.jpg",
               "alt": "Los cuatro grandes del thrash",
               "layout": "gallery",
               "size": "medium",
@@ -304,14 +304,14 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/countdown-extinction-cover.jpg",
+              "src": "/images/albums/05-countdown.jpg",
               "alt": "Portada de Countdown to Extinction",
               "position": "left",
               "layout": "float",
               "size": "large"
             },
             {
-              "src": "/images/historia/symphony-destruction-video.jpg",
+              "src": "/images/historia/videosy.jpg",
               "alt": "Video de Symphony of Destruction",
               "position": "right",
               "layout": "float",
@@ -327,7 +327,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/youthanasia-cover.jpg",
+              "src": "/images/albums/06-youthanasia.webp",
               "alt": "Portada controvertida de Youthanasia",
               "position": "center",
               "layout": "gallery",
@@ -335,7 +335,7 @@
               "caption": "Portada que causó polémica en 1994"
             },
             {
-              "src": "/images/historia/south-america-1994.jpg",
+              "src": "/images/historia/megarg.avif",
               "alt": "Megadeth en Sudamérica 1994",
               "position": "right",
               "layout": "float",
@@ -351,14 +351,14 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/cryptic-writings-cover.jpg",
+              "src": "/images/albums/07-cryptic.webp",
               "alt": "Portada de Cryptic Writings",
               "position": "left",
               "layout": "float",
               "size": "large"
             },
             {
-              "src": "/images/historia/trust-video.jpg",
+              "src": "/images/historia/trust.webp",
               "alt": "Video de Trust",
               "position": "right",
               "layout": "float",
@@ -381,7 +381,7 @@
       "color": "#1E90FF",
       "icon": "🔄",
       "coverImage": {
-        "src": "/images/historia/risk-era.jpg",
+        "src": "/images/historia/1998.webp",
         "alt": "Megadeth en la era experimental",
         "position": "background",
         "layout": "parallax"
@@ -394,7 +394,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/risk-cover.jpg",
+              "src": "/images/albums/08-risk.webp",
               "alt": "Portada de Risk",
               "position": "center",
               "layout": "gallery",
@@ -402,7 +402,7 @@
               "caption": "El álbum más controversial de su carrera"
             },
             {
-              "src": "/images/historia/crush-em-video.jpg",
+              "src": "/images/historia/crush.jpg",
               "alt": "Video de Crush 'Em",
               "position": "right",
               "layout": "float",
@@ -417,7 +417,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/marty-friedman-farewell.jpg",
+              "src": "/images/historia/last.jpg",
               "alt": "Último show de Marty Friedman con Megadeth",
               "position": "left",
               "layout": "float",
@@ -425,7 +425,7 @@
               "caption": "El final de una era - Marty se despide"
             },
             {
-              "src": "/images/historia/al-pitrelli.jpg",
+              "src": "/images/historia/megall.jpg",
               "alt": "Al Pitrelli se une a Megadeth",
               "position": "right",
               "layout": "float",
@@ -436,30 +436,30 @@
         },
         {
           "id": "world-needs-hero",
-          "title": "The World Needs a Hero",
-          "content": "El nuevo milenio trajo un intento de corrección de rumbo con The World Needs a Hero (2001). Este álbum buscó recuperar el tono heavy clásico de la banda tras las críticas a Risk. Con Mustaine nuevamente a cargo de casi todas las composiciones, The World Needs a Hero ofreció temas como \"Moto Psycho\" y \"Dread and the Fugitive Mind\", que si bien no alcanzaron el brillo de los clásicos, sí mostraban a Megadeth intentando revitalizar su identidad metalera. Durante 2001 realizaron giras más modestas, pero muy memorables en ciertos lugares –incluyendo una explosiva presentación en Buenos Aires en 2001 que evidenció el fervor de la base de fans latinoamericanos (años más tarde, ese show de Argentina sería lanzado oficialmente en el DVD That One Night: Live in Buenos Aires de 2007).",
+          "title": "World Needs a Hero",
+          "content": "El nuevo milenio trajo un intento de corrección de rumbo con World Needs a Hero (2001). Este álbum buscó recuperar el tono heavy clásico de la banda tras las críticas a Risk. Con Mustaine nuevamente a cargo de casi todas las composiciones, World Needs a Hero ofreció temas como \"Moto Psycho\" y \"Dread and the Fugitive Mind\", que si bien no alcanzaron el brillo de los clásicos, sí mostraban a Megadeth intentando revitalizar su identidad metalera. Durante 2001 realizaron giras más modestas, pero muy memorables en ciertos lugares. Tambien sacaron su primer disco en vivo 'Rude Awakening'. El álbum estaba planeado para ser grabado en directo en un concierto en Argentina, pero debido a los atentados del 11 de septiembre en el 2001, la banda decidió grabarlo en directo en los Estados Unidos. El álbum fue un rechazo total de mucho del material suave de Megadeth (como el álbum Risk, del cual no se incluyeron pistas) y fue visto como el regreso a sus días más 'pesados' de los 80 y de principios de los 90. (Mucho del material escogido, si no es que todo, fue elegido por seguidores que votaron por ellos en Megadeth.com).",
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/world-needs-hero-cover.jpg",
+              "src": "/images/albums/09-twnah.webp",
               "alt": "Portada de The World Needs a Hero",
               "position": "right",
               "layout": "float",
               "size": "large"
             },
             {
-              "src": "/images/historia/buenos-aires-2001.jpg",
-              "alt": "Megadeth en Buenos Aires 2001",
+              "src": "/images/albums/live-rude.jpg",
+              "alt": "Rude Awakening",
               "position": "left",
               "layout": "float",
               "size": "medium",
-              "caption": "El legendario show en Argentina"
+              "caption": "Primer álbum en vivo - Rude Awakening"
             }
           ]
         },
         {
           "id": "disolucion",
-          "title": "La disolución temporal",
+          "title": "Disolución temporal",
           "content": "Sin embargo, justo cuando parecía que Megadeth navegaba de nuevo en buena dirección, ocurrió una catástrofe personal: en abril de 2002, Dave Mustaine sufrió una grave lesión en un nervio de su brazo izquierdo (una neuropatía radial causada, increíblemente, por quedarse dormido con el brazo en mala posición). Incapaz de tocar la guitarra temporalmente y enfrentando una recuperación incierta, Mustaine decidió disolver Megadeth. El anuncio de separación tomó por sorpresa al mundo del metal. David Ellefson, el bajista cofundador, también se apartó (no sin antes entablar acciones legales contra Mustaine en disputas de royalties, lo que enfrió su relación durante un tiempo). Se editó en 2002 el álbum en vivo Rude Awakening –grabado poco antes– como despedida para los fans, capturando la potencia de la banda en directo en sus últimos shows de esa era.",
           "layout": "text-only"
         },
@@ -470,7 +470,7 @@
           "layout": "text-with-images",
           "images": [
             {
-              "src": "/images/historia/system-has-failed-cover.jpg",
+              "src": "/images/albums/10-tshf.webp",
               "alt": "Portada de The System Has Failed",
               "position": "center",
               "layout": "gallery",
@@ -478,7 +478,7 @@
               "caption": "El álbum del renacimiento"
             },
             {
-              "src": "/images/historia/mustaine-recovery.jpg",
+              "src": "/images/historia/dm.jpg",
               "alt": "Dave Mustaine durante su recuperación",
               "position": "left",
               "layout": "float",
@@ -494,14 +494,14 @@
           "layout": "image-gallery",
           "images": [
             {
-              "src": "/images/historia/drover-brothers.jpg",
+              "src": "/images/historia/drovers.jpeg",
               "alt": "Glen y Shawn Drover",
               "layout": "gallery",
               "size": "medium",
               "caption": "Los hermanos Drover se unen"
             },
             {
-              "src": "/images/historia/gigantour-2005.jpg",
+              "src": "/images/historia/gigant.webp",
               "alt": "Primer Gigantour 2005",
               "layout": "gallery",
               "size": "large",

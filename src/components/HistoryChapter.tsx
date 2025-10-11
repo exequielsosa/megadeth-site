@@ -24,7 +24,7 @@ function HistorySectionComponent({
     const paragraphs = section.content.split("\n\n");
 
     return (
-      <Box mb="600px">
+      <Box>
         {paragraphs.map((paragraph, index) => (
           <Typography
             key={index}
@@ -95,7 +95,7 @@ function HistorySectionComponent({
   );
 
   const renderParallaxSection = () => (
-    <Box sx={{ my: 6 }}>
+    <Box sx={{ my: 4 }}>
       {section.images?.[0] && (
         <HistoryImageComponent
           image={{
@@ -107,7 +107,7 @@ function HistorySectionComponent({
         />
       )}
 
-      <Box sx={{ mt: 4 }}>
+      <Box sx={{ mt: 3 }}>
         <Typography
           variant="body1"
           paragraph
@@ -141,10 +141,10 @@ function HistorySectionComponent({
   );
 
   return (
-    <Box sx={{ mb: 6 }}>
+    <Box sx={{ mb: 4 }}>
       {/* Título de la sección */}
       {section.title && (
-        <Box sx={{ mb: 3 }}>
+        <Box sx={{ mb: 2 }}>
           <Typography
             variant="h4"
             sx={{
@@ -161,7 +161,7 @@ function HistorySectionComponent({
               width: "60px",
               height: "3px",
               backgroundColor: chapterColor,
-              mb: 3,
+              mb: 2,
             }}
           />
         </Box>
@@ -189,7 +189,7 @@ export default function HistoryChapterComponent({
       <Box
         sx={{
           position: "relative",
-          mb: 6,
+          mb: 4,
           overflow: "hidden",
           borderRadius: 4,
         }}
@@ -220,18 +220,6 @@ export default function HistoryChapterComponent({
             minHeight: "400px",
           }}
         >
-          {/* Icono */}
-          <Typography
-            variant="h1"
-            sx={{
-              fontSize: "4rem",
-              mb: 2,
-              filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.5))",
-            }}
-          >
-            {chapter.icon}
-          </Typography>
-
           {/* Chip con período */}
           <Chip
             label={chapter.period}

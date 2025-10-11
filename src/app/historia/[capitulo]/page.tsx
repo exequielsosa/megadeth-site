@@ -165,7 +165,7 @@ export default async function CapituloPage({ params }: PageProps) {
       />
 
       {/* Contenido principal */}
-      <Container maxWidth="xl" sx={{ py: 4, pb: 10 }}>
+      <Container maxWidth="xl" sx={{ py: 4, pb: 10, mb: "600px" }}>
         <HistoryChapterComponent chapter={chapter} />
       </Container>
 
