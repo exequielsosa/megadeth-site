@@ -399,7 +399,7 @@
               "src": "/images/albums/08-risk.webp",
               "alt": "Portada de Risk",
               "position": "left",
-              "layout": "gallery",
+              "layout": "float",
               "size": "large",
               "caption": "El álbum más controversial de su carrera"
             },
@@ -407,8 +407,8 @@
               "src": "/images/historia/crush.jpg",
               "alt": "Video de Crush 'Em",
               "position": "right",
-              "layout": "gallery",
-              "size": "large"
+              "layout": "float",
+              "size": "medium"
             }
           ]
         },
@@ -421,7 +421,7 @@
             {
               "src": "/images/historia/last.jpg",
               "alt": "Último show de Marty Friedman con Megadeth",
-              "position": "right",
+              "position": "left",
               "layout": "float",
               "size": "large",
               "caption": "El final de una era - Marty se despide"
@@ -445,7 +445,7 @@
             {
               "src": "/images/albums/09-twnah.webp",
               "alt": "Portada de The World Needs a Hero",
-              "position": "center",
+              "position": "left",
               "layout": "float",
               "size": "large"
             },
@@ -474,8 +474,8 @@
             {
               "src": "/images/albums/10-tshf.webp",
               "alt": "Portada de The System Has Failed",
-              "position": "full",
-              "layout": "gallery",
+              "position": "right",
+              "layout": "float",
               "size": "large",
               "caption": "El álbum del renacimiento"
             },
@@ -522,8 +522,8 @@
             {
               "src": "/images/albums/11-united.webp",
               "alt": "Portada de United Abominations",
-              "position": "full",
-              "layout": "gallery",
+              "position": "right",
+              "layout": "float",
               "size": "large",
               "caption": "Crítica política y colaboraciones especiales"
             },
