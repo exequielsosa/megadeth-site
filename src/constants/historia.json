@@ -398,7 +398,7 @@
             {
               "src": "/images/albums/08-risk.webp",
               "alt": "Portada de Risk",
-              "position": "left",
+              "position": "full",
               "layout": "float",
               "size": "large",
               "caption": "El álbum más controversial de su carrera"
@@ -421,7 +421,7 @@
             {
               "src": "/images/historia/last.jpg",
               "alt": "Último show de Marty Friedman con Megadeth",
-              "position": "left",
+              "position": "center",
               "layout": "float",
               "size": "large",
               "caption": "El final de una era - Marty se despide"
@@ -445,16 +445,17 @@
             {
               "src": "/images/albums/09-twnah.webp",
               "alt": "Portada de The World Needs a Hero",
-              "position": "left",
+              "position": "center",
               "layout": "float",
-              "size": "large"
+              "size": "large",
+              "caption": "Intento de retorno a sus raíces metálicas"
             },
             {
               "src": "/images/albums/live-rude.jpg",
               "alt": "Rude Awakening",
               "position": "right",
               "layout": "float",
-              "size": "medium",
+              "size": "large",
               "caption": "Primer álbum en vivo - Rude Awakening"
             }
           ]
@@ -474,7 +475,7 @@
             {
               "src": "/images/albums/10-tshf.webp",
               "alt": "Portada de The System Has Failed",
-              "position": "right",
+              "position": "full",
               "layout": "float",
               "size": "large",
               "caption": "El álbum del renacimiento"
@@ -522,7 +523,7 @@
             {
               "src": "/images/albums/11-united.webp",
               "alt": "Portada de United Abominations",
-              "position": "right",
+              "position": "full",
               "layout": "float",
               "size": "large",
               "caption": "Crítica política y colaboraciones especiales"
@@ -532,7 +533,7 @@
               "alt": "James LoMenzo se une al bajo",
               "position": "left",
               "layout": "float",
-              "size": "medium",
+              "size": "large",
               "caption": "James LoMenzo, veterano del bajo"
             }
           ]

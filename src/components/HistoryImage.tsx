@@ -57,6 +57,12 @@ export default function HistoryImageComponent({
           float: "left" as const,
           marginRight: "20px",
           marginBottom: "20px",
+          // Media query para mobile
+          "@media (max-width: 600px)": {
+            width: "100%",
+            float: "none",
+            margin: "20px 0",
+          },
         };
       case "right":
         return {
@@ -66,6 +72,12 @@ export default function HistoryImageComponent({
           float: "right" as const,
           marginLeft: "20px",
           marginBottom: "20px",
+          // Media query para mobile
+          "@media (max-width: 600px)": {
+            width: "100%",
+            float: "none",
+            margin: "20px 0",
+          },
         };
       case "center":
         return {
@@ -74,6 +86,11 @@ export default function HistoryImageComponent({
           ...aspectStyles,
           margin: "20px auto",
           display: "block",
+          // Media query para mobile
+          "@media (max-width: 600px)": {
+            width: "100%",
+            margin: "20px 0",
+          },
         };
       case "full":
         return {
@@ -96,6 +113,11 @@ export default function HistoryImageComponent({
           ...aspectStyles,
           margin: "20px auto",
           display: "block",
+          // Media query para mobile
+          "@media (max-width: 600px)": {
+            width: "100%",
+            margin: "20px 0",
+          },
         };
     }
   };
