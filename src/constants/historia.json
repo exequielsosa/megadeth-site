@@ -508,6 +508,70 @@
               "caption": "Nace el festival Gigantour"
             }
           ]
+        },
+        {
+          "id": "united-abominations",
+          "title": "United Abominations: Crítica política",
+          "content": "En 2006, el bajista original Ellefson seguía ausente (aún distanciado de Mustaine), así que James LoMenzo –veterano de Black Label Society y White Lion– entró al bajo, reemplazando a MacDonough. Con Glen y Shawn Drover más LoMenzo, Megadeth grabó United Abominations (2007) bajo el sello Roadrunner. Este álbum retomó temáticas político-sociales (Mustaine criticaba abiertamente a las Naciones Unidas en la canción título) y presentó colaboraciones interesantes, como la voz invitada de Cristina Scabbia (Lacuna Coil) en una nueva versión de \"À Tout Le Monde\". United Abominations recibió críticas positivas y se ubicó en el Top 10 de Billboard, señal de que la banda mantenía relevancia. La gira mundial 2007-08 fue exitosa, pero nuevamente hubo cambios: a inicios de 2008, Glen Drover se retiró alegando querer dedicar más tiempo a su familia y cierta insatisfacción personal.",
+          "layout": "text-with-images",
+          "images": [
+            {
+              "src": "/images/albums/11-united.webp",
+              "alt": "Portada de United Abominations",
+              "position": "center",
+              "layout": "gallery",
+              "size": "large",
+              "caption": "Crítica política y colaboraciones especiales"
+            },
+            {
+              "src": "/images/historia/lomenzo.jpg",
+              "alt": "James LoMenzo se une al bajo",
+              "position": "left",
+              "layout": "float",
+              "size": "medium",
+              "caption": "James LoMenzo, veterano del bajo"
+            }
+          ]
+        },
+        {
+          "id": "chris-broderick-llega",
+          "title": "La llegada de Chris Broderick",
+          "content": "Mustaine aplaudió la honestidad de Glen Drover y rápidamente encontró un reemplazo formidable: Chris Broderick, virtuoso ex guitarrista de Nevermore y Jag Panzer. Broderick debutó en vivo con Megadeth en febrero de 2008 y encajó a la perfección, aportando precisión técnica y energía renovada. Su incorporación marcó el inicio de una nueva etapa creativa para la banda, que se prepararía para uno de sus álbumes más aclamados en años.",
+          "layout": "text-with-images",
+          "images": [
+            {
+              "src": "/images/historia/chrisb.jpg",
+              "alt": "Chris Broderick se une a Megadeth",
+              "position": "center",
+              "layout": "gallery",
+              "size": "large",
+              "caption": "Chris Broderick, virtuosismo técnico renovado"
+            }
+          ]
+        },
+        {
+          "id": "endgame",
+          "title": "Endgame: Regreso al thrash feroz",
+          "content": "Con Broderick en filas, Megadeth lanzó Endgame en 2009, álbum que muchos fans celebraron como un regreso pleno al thrash metal vertiginoso. Canciones como \"Head Crusher\" y \"This Day We Fight!\" mostraban a un Mustaine furibundo, inspirado en temas socio-políticos contemporáneos. Endgame recibió elogios por su ferocidad –incluso Dave Ellefson comentó que le recordaba a la agresividad de Rust in Peace–. Comercialmente se ubicó Top 10 en varios países. Tras su lanzamiento, ocurrió algo que los seguidores añoraban: en febrero de 2010, David Ellefson (tras reconciliarse con Mustaine después de años de alejamiento) regresó al bajo de Megadeth. Shawn Drover contactó a Ellefson cuando supo que LoMenzo planeaba irse, y Mustaine y Ellefson aprovecharon la oportunidad para dejar atrás viejas rencillas. Así, al cerrar la década 2000, Megadeth se reinventaba nuevamente, combinando sangre nueva (Broderick, Shawn) con la química clásica Mustaine–Ellefson.",
+          "layout": "text-with-images",
+          "images": [
+            {
+              "src": "/images/albums/12-endgame.webp",
+              "alt": "Portada de Endgame",
+              "position": "left",
+              "layout": "float",
+              "size": "large",
+              "caption": "El regreso al thrash vertiginoso"
+            },
+            {
+              "src": "/images/historia/head.jpg",
+              "alt": "Video de Head Crusher",
+              "position": "right",
+              "layout": "float",
+              "size": "medium",
+              "caption": "Head Crusher - Ferocidad renovada"
+            }
+          ]
         }
       ]
     },
