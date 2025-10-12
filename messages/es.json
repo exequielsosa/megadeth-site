@@ -239,6 +239,24 @@
       }
     }
   },
+  "newTour": {
+    "title": "Megadeth anuncia su gira final: This Was Our… Life Tour",
+    "paragraph1": "La leyenda del thrash metal, Megadeth, confirmó oficialmente su despedida de los escenarios con una gira final por Sudamérica, el territorio donde la banda encontró algunos de sus públicos más apasionados.",
+    "paragraph2": {
+      "start": "El anuncio se realizó sorpresivamente durante un show de Guns N' Roses en Colombia, donde una proyección en pantalla reveló el mensaje:",
+      "quote": "Prepárense. Última chance para verlos en vivo. Megadeth: This Was Our Life Tour.",
+      "end": "La noticia recorrió el mundo en minutos y desató una ola de emoción y nostalgia entre los fans. Las redes se llenaron de mensajes, fotos y recuerdos de recitales pasados, celebrando el cierre de una historia que marcó a generaciones enteras de metaleros."
+    },
+    "paragraph3": "Aunque las fechas y ciudades aún no fueron confirmadas, se espera que el tour pase por Argentina, Brasil, Chile y México, los países donde Megadeth cosechó algunos de los shows más multitudinarios de su carrera.",
+    "paragraph4": "Con más de 40 años de trayectoria, 16 discos de estudio y una influencia imposible de medir, la banda liderada por Dave Mustaine promete una despedida a la altura de su legado: poderosa, emotiva y cargada de historia.",
+    "paragraph5": {
+      "quote": "Sudamérica siempre fue nuestra segunda casa",
+      "attribution": "declaró Mustaine en una entrevista reciente. \"Queremos cerrar este capítulo donde el público nos dio tanto.\""
+    },
+    "paragraph6": "This Was Our… Life Tour no solo marcará el final de una era, sino también una celebración de todo lo que Megadeth representó: velocidad, virtuosismo, rebeldía y conexión eterna con sus fans.",
+    "videoTitle": "Anuncio nueva gira",
+    "videoCardTitle": "Nueva gira Anuncio"
+  },
   "historyPage": {
     "title": "Megadeth: Historia",
     "description": "Historia completa de Megadeth desde 1983 hasta 2026. Cuatro décadas de thrash metal, cambios de formación, éxitos y controversias de una de las bandas más influyentes del metal.",
