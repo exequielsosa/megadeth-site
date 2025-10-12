@@ -55,6 +55,8 @@ export default function Header() {
     { label: t("videos"), href: "/videos" },
     { label: t("dvds"), href: "/dvds" },
     { label: t("history"), href: "/historia" },
+    { label: t("lineups"), href: "/formaciones" },
+    { label: t("members"), href: "/miembros" },
   ];
 
   const handleLanguageClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -121,7 +123,7 @@ export default function Header() {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", lg: "flex" },
+              display: { xs: "none", xl: "flex" },
               justifyContent: "center",
             }}
           >
@@ -171,7 +173,7 @@ export default function Header() {
           </Box>
 
           {/* Espaciador para mobile/tablet */}
-          <Box sx={{ flexGrow: 1, display: { xs: "block", lg: "none" } }} />
+          <Box sx={{ flexGrow: 1, display: { xs: "block", xl: "none" } }} />
 
           <Button
             startIcon={<LanguageIcon />}
@@ -200,7 +202,7 @@ export default function Header() {
           {/* Botón hamburguesa para mobile/tablet */}
           <IconButton
             sx={{
-              display: { xs: "block", lg: "none" },
+              display: { xs: "block", xl: "none" },
               color: mode === "dark" ? "white" : "black",
             }}
             onClick={() => setDrawerOpen(true)}
