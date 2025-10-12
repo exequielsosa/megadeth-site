@@ -1,7 +1,16 @@
 {
-  "title": "Megadeth: Historia",
-  "subtitle": "Cuatro décadas de furia, caos y gloria (1983–2026)",
-  "introduction": "Megadeth es una de las bandas más influyentes y duraderas del thrash metal, protagonista de una trayectoria marcada por la intensidad musical y la turbulencia personal. Fundada en 1983 por el guitarrista/vocalista Dave Mustaine tras su abrupta salida de Metallica, la banda forjó un sonido implacable que la colocó junto a Metallica, Slayer y Anthrax como parte de los \"cuatro grandes\" del género. A lo largo de más de cuarenta años, Megadeth ha lanzado 16 álbumes de estudio (con un 17.º y último en camino), ha vendido alrededor de 38 millones de discos en el mundo y ha sufrido innumerables cambios de formación, adicciones, peleas internas y reconciliaciones.",
+  "title": {
+    "es": "Megadeth: Historia",
+    "en": "Megadeth: History"
+  },
+  "subtitle": {
+    "es": "Cuatro décadas de furia, caos y gloria (1983–2026)",
+    "en": "Four decades of fury, chaos and glory (1983–2026)"
+  },
+  "introduction": {
+    "es": "Megadeth es una de las bandas más influyentes y duraderas del thrash metal, protagonista de una trayectoria marcada por la intensidad musical y la turbulencia personal. Fundada en 1983 por el guitarrista/vocalista Dave Mustaine tras su abrupta salida de Metallica, la banda forjó un sonido implacable que la colocó junto a Metallica, Slayer y Anthrax como parte de los \"cuatro grandes\" del género. A lo largo de más de cuarenta años, Megadeth ha lanzado 16 álbumes de estudio (con un 17.º y último en camino), ha vendido alrededor de 38 millones de discos en el mundo y ha sufrido innumerables cambios de formación, adicciones, peleas internas y reconciliaciones.",
+    "en": "Megadeth is one of the most influential and enduring thrash metal bands, protagonist of a trajectory marked by musical intensity and personal turbulence. Founded in 1983 by guitarist/vocalist Dave Mustaine after his abrupt departure from Metallica, the band forged a relentless sound that placed them alongside Metallica, Slayer and Anthrax as part of the \"Big Four\" of the genre. Over more than forty years, Megadeth has released 16 studio albums (with a 17th and final one on the way), sold around 38 million records worldwide and endured countless lineup changes, addictions, internal fights and reconciliations."
+  },
   "chapters": [
     {
       "id": "origenes",

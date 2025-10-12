@@ -5,11 +5,17 @@ import HistoryTimeline from "@/components/HistoryTimeline";
 import historiaData from "@/constants/historia.json";
 import { HistoryData } from "@/types/historia";
 import { History, AutoStories } from "@mui/icons-material";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function HistoriaClient() {
   const data = historiaData as HistoryData;
   const t = useTranslations("history");
+  const locale = useLocale() as "es" | "en";
+
+  // Función helper para obtener texto en el idioma actual
+  const getText = (bilingualText: { es: string; en: string }) => {
+    return bilingualText[locale];
+  };
 
   // Estadísticas interesantes
   const stats = [
@@ -64,7 +70,7 @@ export default function HistoriaClient() {
                 textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
               }}
             >
-              {data.title}
+              {getText(data.title)}
             </Typography>
 
             {/* Subtítulo */}
@@ -78,7 +84,7 @@ export default function HistoriaClient() {
                 opacity: 0.9,
               }}
             >
-              {data.subtitle}
+              {getText(data.subtitle)}
             </Typography>
 
             {/* Introducción */}
@@ -93,7 +99,7 @@ export default function HistoriaClient() {
                 fontSize: { xs: "1rem", md: "1.1rem" },
               }}
             >
-              {data.introduction}
+              {getText(data.introduction)}
             </Typography>
 
             {/* Estadísticas */}
@@ -154,7 +160,7 @@ export default function HistoriaClient() {
                 fontSize: { xs: "2rem", md: "3rem" },
               }}
             >
-              Timeline Interactivo
+              {t("interactiveTimeline")}
             </Typography>
             <Typography
               variant="h6"
@@ -165,9 +171,7 @@ export default function HistoriaClient() {
                 mb: 3,
               }}
             >
-              Explora cuatro décadas de historia a través de nuestro timeline
-              interactivo. Haz clic en cualquier período para conocer los
-              detalles.
+              {t("timelineDescription")}
             </Typography>
 
             <Box
@@ -180,18 +184,18 @@ export default function HistoriaClient() {
             >
               <Chip
                 icon={<AutoStories />}
-                label="6 Capítulos épicos"
+                label={t("epicChapters")}
                 variant="outlined"
                 sx={{ fontWeight: 600 }}
               />
               <Chip
                 icon={<History />}
-                label="43 años de historia"
+                label={t("yearsOfHistory")}
                 variant="outlined"
                 sx={{ fontWeight: 600 }}
               />
               <Chip
-                label="Contenido multimedia"
+                label={t("multimediaContent")}
                 variant="outlined"
                 sx={{ fontWeight: 600 }}
               />
@@ -216,17 +220,14 @@ export default function HistoriaClient() {
           }}
         >
           <Typography variant="h4" sx={{ fontWeight: 600, mb: 3 }}>
-            Una historia que trasciende generaciones
+            {t("transcendentHistory")}
           </Typography>
 
           <Typography
             variant="body1"
             sx={{ mb: 4, lineHeight: 1.8, maxWidth: "800px", mx: "auto" }}
           >
-            Desde los humildes comienzos en 1983 hasta el anunciado adiós en
-            2026, Megadeth ha sido testigo y protagonista de la evolución del
-            metal. Esta es más que una biografía: es el relato de cómo una banda
-            cambió para siempre el panorama musical mundial.
+            {t("finalDescription")}
           </Typography>
 
           <Box
@@ -247,7 +248,7 @@ export default function HistoriaClient() {
                 fontWeight: 600,
               }}
             >
-              Comenzar la historia
+              {t("startHistory")}
             </Button>
             <Button
               variant="outlined"
@@ -255,7 +256,7 @@ export default function HistoriaClient() {
               href="/historia/actualidad-despedida"
               sx={{ fontWeight: 600 }}
             >
-              Ver el final
+              {t("seeEnding")}
             </Button>
           </Box>
         </Box>

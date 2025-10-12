@@ -19,7 +19,16 @@
     "worldwideSales": "Ventas mundiales",
     "includingFinal": "Incluyendo el final",
     "multipleEras": "Múltiples eras",
-    "recordsSold": "Discos vendidos"
+    "recordsSold": "Discos vendidos",
+    "interactiveTimeline": "Timeline Interactivo",
+    "timelineDescription": "Explora cuatro décadas de historia a través de nuestro timeline interactivo. Haz clic en cualquier período para conocer los detalles.",
+    "epicChapters": "6 Capítulos épicos",
+    "yearsOfHistory": "43 años de historia",
+    "multimediaContent": "Contenido multimedia",
+    "transcendentHistory": "Una historia que trasciende generaciones",
+    "finalDescription": "Desde los humildes comienzos en 1983 hasta el anunciado adiós en 2026, Megadeth ha sido testigo y protagonista de la evolución del metal. Esta es más que una biografía: es el relato de cómo una banda cambió para siempre el panorama musical mundial.",
+    "startHistory": "Comenzar la historia",
+    "seeEnding": "Ver el final"
   },
   "historyPage": {
     "title": "Megadeth: Historia",

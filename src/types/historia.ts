@@ -1,3 +1,9 @@
+// Tipo para textos bilingües
+export interface BilingualText {
+  es: string;
+  en: string;
+}
+
 export interface HistoryImage {
   src: string;
   alt: string;
@@ -32,9 +38,9 @@ export interface HistoryChapter {
 }
 
 export interface HistoryData {
-  title: string;
-  subtitle: string;
-  introduction: string;
+  title: BilingualText;
+  subtitle: BilingualText;
+  introduction: BilingualText;
   chapters: HistoryChapter[];
 }
 
