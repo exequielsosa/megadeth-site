@@ -21,6 +21,18 @@
     "multipleEras": "Multiple eras",
     "recordsSold": "Records sold"
   },
+  "historyPage": {
+    "title": "Megadeth: History",
+    "description": "Complete history of Megadeth from 1983 to 2026. Four decades of thrash metal, lineup changes, success and controversies of one of metal's most influential bands.",
+    "imageAlt": "Complete Megadeth history 1983-2026",
+    "keywords": "Megadeth history, Dave Mustaine biography, thrash metal history, Big Four, Metallica, Megadeth timeline, metal chronology, metal history, 1983-2026, Rust in Peace, Countdown to Extinction, Peace Sells, Dystopia"
+  },
+  "chapterPage": {
+    "notFoundTitle": "Chapter not found | Megadeth History",
+    "notFoundDescription": "The requested chapter does not exist.",
+    "historyMegadeth": "Megadeth History",
+    "megadethHistory": "Megadeth History"
+  },
   "hero": {
     "title": "Latest album · Farewell tour",
     "description": "News, dates and discography of Megadeth. Curated for fans. Fast, simple and fully responsive.",

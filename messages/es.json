@@ -21,6 +21,18 @@
     "multipleEras": "Múltiples eras",
     "recordsSold": "Discos vendidos"
   },
+  "historyPage": {
+    "title": "Megadeth: Historia",
+    "description": "Historia completa de Megadeth desde 1983 hasta 2026. Cuatro décadas de thrash metal, cambios de formación, éxitos y controversias de una de las bandas más influyentes del metal.",
+    "imageAlt": "Historia completa de Megadeth 1983-2026",
+    "keywords": "Megadeth historia, Dave Mustaine biografía, thrash metal historia, Big Four, Metallica, timeline Megadeth, cronología metal, historia del metal, 1983-2026, Rust in Peace, Countdown to Extinction, Peace Sells, Dystopia"
+  },
+  "chapterPage": {
+    "notFoundTitle": "Capítulo no encontrado | Historia Megadeth",
+    "notFoundDescription": "El capítulo solicitado no existe.",
+    "historyMegadeth": "Historia Megadeth",
+    "megadethHistory": "Historia de Megadeth"
+  },
   "hero": {
     "title": "Último disco · Megadeth",
     "description": "Noticias, fechas y discografía de Megadeth. Curado para fans. Rápido, simple y full responsive.",

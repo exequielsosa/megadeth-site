@@ -4,6 +4,7 @@ import { Box, Container } from "@mui/material";
 import HistoryChapterComponent from "@/components/HistoryChapter";
 import HistoryNavigation from "@/components/HistoryNavigation";
 import historiaData from "@/constants/historia.json";
+import { getTranslations } from "next-intl/server";
 import {
   HistoryData,
   findChapterBySlug,
@@ -29,11 +30,12 @@ export async function generateMetadata({
   const { capitulo } = await params;
   const data = historiaData as HistoryData;
   const chapter = findChapterBySlug(data.chapters, capitulo);
+  const t = await getTranslations("chapterPage");
 
   if (!chapter) {
     return {
-      title: "Capítulo no encontrado | Historia Megadeth",
-      description: "El capítulo solicitado no existe.",
+      title: t("notFoundTitle"),
+      description: t("notFoundDescription"),
     };
   }
 
@@ -49,11 +51,11 @@ export async function generateMetadata({
   ];
 
   return {
-    title: `${chapter.title} (${chapter.period}) | Historia Megadeth`,
+    title: `${chapter.title} (${chapter.period}) | ${t("historyMegadeth")}`,
     description: chapter.summary,
     keywords: keywords.join(", "),
     openGraph: {
-      title: `${chapter.title} | Historia Megadeth`,
+      title: `${chapter.title} | ${t("historyMegadeth")}`,
       description: chapter.summary,
       type: "article",
       images: chapter.coverImage
@@ -70,13 +72,13 @@ export async function generateMetadata({
               url: "/images/historia/megadeth-default-chapter.jpg",
               width: 1200,
               height: 630,
-              alt: `${chapter.title} - Historia de Megadeth`,
+              alt: `${chapter.title} - ${t("megadethHistory")}`,
             },
           ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${chapter.title} | Historia Megadeth`,
+      title: `${chapter.title} | ${t("historyMegadeth")}`,
       description: chapter.summary,
       images: chapter.coverImage
         ? [chapter.coverImage.src]

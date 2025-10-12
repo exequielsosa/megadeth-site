@@ -1,44 +1,32 @@
 import { Metadata } from "next";
 import HistoriaClient from "./HistoriaClient";
-import historiaData from "@/constants/historia.json";
 import ContainerGradient from "@/components/atoms/ContainerGradient";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("historyPage");
+
   return {
-    title: `${historiaData.title} | Megadeth`,
-    description: historiaData.introduction.substring(0, 160),
-    keywords: [
-      "Megadeth historia",
-      "Dave Mustaine biografía",
-      "thrash metal historia",
-      "Big Four",
-      "Metallica",
-      "timeline Megadeth",
-      "cronología metal",
-      "historia del metal",
-      "1983-2026",
-      "Rust in Peace",
-      "Countdown to Extinction",
-      "Peace Sells",
-      "Dystopia",
-    ].join(", "),
+    title: `${t("title")} | Megadeth`,
+    description: t("description"),
+    keywords: t("keywords"),
     openGraph: {
-      title: `${historiaData.title} | Megadeth`,
-      description: historiaData.introduction.substring(0, 160),
+      title: `${t("title")} | Megadeth`,
+      description: t("description"),
       type: "article",
       images: [
         {
           url: "/images/historia/megadeth-timeline-hero.jpg",
           width: 1200,
           height: 630,
-          alt: "Historia completa de Megadeth 1983-2026",
+          alt: t("imageAlt"),
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${historiaData.title} | Megadeth`,
-      description: historiaData.introduction.substring(0, 160),
+      title: `${t("title")} | Megadeth`,
+      description: t("description"),
       images: ["/images/historia/megadeth-timeline-hero.jpg"],
     },
     alternates: {
