@@ -9,9 +9,10 @@ import {
   Container,
   useMediaQuery,
 } from "@mui/material";
-import { HistoryChapter } from "@/types/historia";
+import { HistoryChapter, getText } from "@/types/historia";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useLocale } from "next-intl";
 
 interface HistoryTimelineProps {
   chapters: HistoryChapter[];
@@ -24,6 +25,7 @@ export default function HistoryTimeline({
 }: HistoryTimelineProps) {
   const theme = useTheme();
   const router = useRouter();
+  const locale = useLocale() as "es" | "en";
   const [hoveredChapter, setHoveredChapter] = useState<string | null>(null);
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
   const isVerySmallScreen = useMediaQuery("(max-width:600px)");
@@ -110,7 +112,7 @@ export default function HistoryTimeline({
             lineHeight: 1.2,
           }}
         >
-          {chapter.title}
+          {getText(chapter.title, locale)}
         </Typography>
 
         {/* Subtítulo */}
@@ -125,7 +127,7 @@ export default function HistoryTimeline({
               fontStyle: "italic",
             }}
           >
-            {chapter.subtitle}
+            {getText(chapter.subtitle, locale)}
           </Typography>
         )}
 
@@ -143,7 +145,7 @@ export default function HistoryTimeline({
             overflow: "hidden",
           }}
         >
-          {chapter.summary}
+          {getText(chapter.summary, locale)}
         </Typography>
       </Box>
     );
@@ -323,7 +325,7 @@ export default function HistoryTimeline({
                       lineHeight: 1.2,
                     }}
                   >
-                    {chapter.title}
+                    {getText(chapter.title, locale)}
                   </Typography>
 
                   {/* Subtítulo */}
@@ -338,7 +340,7 @@ export default function HistoryTimeline({
                         fontStyle: "italic",
                       }}
                     >
-                      {chapter.subtitle}
+                      {getText(chapter.subtitle, locale)}
                     </Typography>
                   )}
 
@@ -355,7 +357,7 @@ export default function HistoryTimeline({
                       overflow: "hidden",
                     }}
                   >
-                    {chapter.summary}
+                    {getText(chapter.summary, locale)}
                   </Typography>
 
                   {/* Indicador de flecha */}

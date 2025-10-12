@@ -1,9 +1,10 @@
 "use client";
 
 import { Box, Typography, Chip, Divider } from "@mui/material";
-import { HistoryChapter, HistorySection } from "@/types/historia";
+import { HistoryChapter, HistorySection, getText } from "@/types/historia";
 import HistoryImageComponent from "./HistoryImage";
 import { useTheme } from "@mui/material/styles";
+import { useLocale } from "next-intl";
 
 interface HistoryChapterComponentProps {
   chapter: HistoryChapter;
@@ -19,13 +20,19 @@ function HistorySectionComponent({
   chapterColor,
 }: HistorySectionComponentProps) {
   const theme = useTheme();
+  const locale = useLocale() as "es" | "en";
+
+  const sectionContent = getText(section.content, locale);
+  const sectionTitle = section.title
+    ? getText(section.title, locale)
+    : undefined;
 
   const renderTextWithImages = () => {
-    const paragraphs = section.content.split("\n\n");
+    const paragraphs = sectionContent.split("\n\n");
 
     return (
       <Box>
-        {paragraphs.map((paragraph, index) => (
+        {paragraphs.map((paragraph: string, index: number) => (
           <Typography
             key={index}
             variant="body1"
@@ -67,7 +74,7 @@ function HistorySectionComponent({
           mb: 4,
         }}
       >
-        {section.content}
+        {sectionContent}
       </Typography>
 
       <Box
@@ -118,7 +125,7 @@ function HistorySectionComponent({
             textAlign: "justify",
           }}
         >
-          {section.content}
+          {sectionContent}
         </Typography>
       </Box>
     </Box>
@@ -136,7 +143,7 @@ function HistorySectionComponent({
         mb: 3,
       }}
     >
-      {section.content}
+      {sectionContent}
     </Typography>
   );
 
@@ -154,7 +161,7 @@ function HistorySectionComponent({
               fontSize: { xs: "1.5rem", md: "2rem" },
             }}
           >
-            {section.title}
+            {sectionTitle}
           </Typography>
           <Divider
             sx={{
@@ -181,7 +188,14 @@ export default function HistoryChapterComponent({
   chapter,
 }: HistoryChapterComponentProps) {
   const theme = useTheme();
+  const locale = useLocale() as "es" | "en";
   const chapterColor = chapter.color || theme.palette.primary.main;
+
+  const chapterTitle = getText(chapter.title, locale);
+  const chapterSubtitle = chapter.subtitle
+    ? getText(chapter.subtitle, locale)
+    : undefined;
+  const chapterSummary = getText(chapter.summary, locale);
 
   return (
     <Box width="100%">
@@ -247,7 +261,7 @@ export default function HistoryChapterComponent({
               lineHeight: 1.1,
             }}
           >
-            {chapter.title}
+            {chapterTitle}
           </Typography>
 
           {/* Subtítulo */}
@@ -265,7 +279,7 @@ export default function HistoryChapterComponent({
                 opacity: 0.9,
               }}
             >
-              {chapter.subtitle}
+              {chapterSubtitle}
             </Typography>
           )}
 
@@ -282,7 +296,7 @@ export default function HistoryChapterComponent({
                 : "none",
             }}
           >
-            {chapter.summary}
+            {chapterSummary}
           </Typography>
         </Box>
       </Box>

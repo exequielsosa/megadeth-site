@@ -1,15 +1,16 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 import HistoryChapterComponent from "@/components/HistoryChapter";
 import HistoryNavigation from "@/components/HistoryNavigation";
 import historiaData from "@/constants/historia.json";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import {
   HistoryData,
   findChapterBySlug,
   getNextChapter,
   getPreviousChapter,
+  getText,
 } from "@/types/historia";
 
 interface PageProps {
@@ -31,6 +32,7 @@ export async function generateMetadata({
   const data = historiaData as HistoryData;
   const chapter = findChapterBySlug(data.chapters, capitulo);
   const t = await getTranslations("chapterPage");
+  const locale = (await getLocale()) as "es" | "en";
 
   if (!chapter) {
     return {
@@ -39,24 +41,27 @@ export async function generateMetadata({
     };
   }
 
+  const chapterTitle = getText(chapter.title, locale);
+  const chapterSummary = getText(chapter.summary, locale);
+
   const keywords = [
-    `Megadeth ${chapter.title}`,
+    `Megadeth ${chapterTitle}`,
     `Historia ${chapter.period}`,
     "Dave Mustaine",
     "thrash metal",
-    chapter.title.toLowerCase(),
+    chapterTitle.toLowerCase(),
     ...chapter.sections.flatMap((section) =>
-      section.title ? [section.title] : []
+      section.title ? [getText(section.title, locale)] : []
     ),
   ];
 
   return {
-    title: `${chapter.title} (${chapter.period}) | ${t("historyMegadeth")}`,
-    description: chapter.summary,
+    title: `${chapterTitle} (${chapter.period}) | ${t("historyMegadeth")}`,
+    description: chapterSummary,
     keywords: keywords.join(", "),
     openGraph: {
-      title: `${chapter.title} | ${t("historyMegadeth")}`,
-      description: chapter.summary,
+      title: `${chapterTitle} | ${t("historyMegadeth")}`,
+      description: chapterSummary,
       type: "article",
       images: chapter.coverImage
         ? [
@@ -72,14 +77,14 @@ export async function generateMetadata({
               url: "/images/historia/megadeth-default-chapter.jpg",
               width: 1200,
               height: 630,
-              alt: `${chapter.title} - ${t("megadethHistory")}`,
+              alt: `${chapterTitle} - ${t("megadethHistory")}`,
             },
           ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${chapter.title} | ${t("historyMegadeth")}`,
-      description: chapter.summary,
+      title: `${chapterTitle} | ${t("historyMegadeth")}`,
+      description: chapterSummary,
       images: chapter.coverImage
         ? [chapter.coverImage.src]
         : ["/images/historia/megadeth-default-chapter.jpg"],
@@ -97,12 +102,16 @@ export async function generateMetadata({
 export default async function CapituloPage({ params }: PageProps) {
   const { capitulo } = await params;
   const data = historiaData as HistoryData;
+  const locale = (await getLocale()) as "es" | "en";
 
   const chapter = findChapterBySlug(data.chapters, capitulo);
 
   if (!chapter) {
     notFound();
   }
+
+  const chapterTitle = getText(chapter.title, locale);
+  const chapterSummary = getText(chapter.summary, locale);
 
   const previousChapter = getPreviousChapter(data.chapters, capitulo);
   const nextChapter = getNextChapter(data.chapters, capitulo);
@@ -111,8 +120,8 @@ export default async function CapituloPage({ params }: PageProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${chapter.title} (${chapter.period})`,
-    description: chapter.summary,
+    headline: `${chapterTitle} (${chapter.period})`,
+    description: chapterSummary,
     image:
       chapter.coverImage?.src ||
       "/images/historia/megadeth-default-chapter.jpg",

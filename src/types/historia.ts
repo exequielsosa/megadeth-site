@@ -7,7 +7,7 @@ export interface BilingualText {
 export interface HistoryImage {
   src: string;
   alt: string;
-  caption?: string;
+  caption?: string | BilingualText;
   position?: 'left' | 'right' | 'center' | 'full' | 'background';
   layout?: 'float' | 'gallery' | 'parallax' | 'carousel' | 'collage';
   size?: 'small' | 'medium' | 'large' | 'full';
@@ -16,8 +16,8 @@ export interface HistoryImage {
 
 export interface HistorySection {
   id: string;
-  title?: string;
-  content: string;
+  title?: string | BilingualText;
+  content: string | BilingualText;
   images?: HistoryImage[];
   layout?: 'text-only' | 'text-with-images' | 'image-gallery' | 'parallax';
 }
@@ -25,12 +25,12 @@ export interface HistorySection {
 export interface HistoryChapter {
   id: string;
   slug: string;
-  title: string;
-  subtitle?: string;
+  title: string | BilingualText;
+  subtitle?: string | BilingualText;
   period: string; // ej: "1983-1990"
   yearStart: number;
   yearEnd: number;
-  summary: string;
+  summary: string | BilingualText;
   sections: HistorySection[];
   coverImage?: HistoryImage;
   color?: string; // Color temático del capítulo
@@ -45,6 +45,10 @@ export interface HistoryData {
 }
 
 // Utilidades helper
+export function getText(text: string | BilingualText, locale: "es" | "en"): string {
+  return typeof text === "string" ? text : text[locale];
+}
+
 export function generateChapterSlug(title: string): string {
   return title
     .toLowerCase()

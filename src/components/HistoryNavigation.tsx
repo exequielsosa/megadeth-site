@@ -2,8 +2,9 @@
 
 import { Box, Button, Typography, useTheme } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
-import { HistoryChapter } from "@/types/historia";
+import { HistoryChapter, getText } from "@/types/historia";
 import { useRouter } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 
 interface HistoryNavigationProps {
   currentChapter: HistoryChapter;
@@ -20,6 +21,8 @@ export default function HistoryNavigation({
 }: HistoryNavigationProps) {
   const theme = useTheme();
   const router = useRouter();
+  const locale = useLocale() as "es" | "en";
+  const t = useTranslations("history");
 
   const currentIndex = allChapters.findIndex(
     (ch) => ch.slug === currentChapter.slug
@@ -91,7 +94,7 @@ export default function HistoryNavigation({
               color: theme.palette.text.secondary,
             }}
           >
-            Capítulo {currentIndex + 1} de {allChapters.length}
+            {t("chapters")} {currentIndex + 1} de {allChapters.length}
           </Typography>
           <Typography
             variant="caption"
@@ -100,7 +103,7 @@ export default function HistoryNavigation({
               fontWeight: 600,
             }}
           >
-            {currentChapter.icon} {currentChapter.title} (
+            {currentChapter.icon} {getText(currentChapter.title, locale)} (
             {currentChapter.period})
           </Typography>
         </Box>
@@ -150,7 +153,7 @@ export default function HistoryNavigation({
                     maxWidth: "100px",
                   }}
                 >
-                  {previousChapter.title}
+                  {getText(previousChapter.title, locale)}
                 </Typography>
               )}
             </Box>
@@ -158,42 +161,47 @@ export default function HistoryNavigation({
         )}
 
         {/* Botón siguiente */}
-        <Button
-          variant="outlined"
-          endIcon={<ArrowForward />}
-          onClick={handleNext}
-          disabled={!nextChapter}
-          sx={{
-            minWidth: "120px",
-            borderColor: currentChapter.color,
-            color: currentChapter.color,
-            "&:hover": {
+
+        {currentChapter.id === "actualidad-despedida" ? (
+          <Box></Box>
+        ) : (
+          <Button
+            variant="outlined"
+            endIcon={<ArrowForward />}
+            onClick={handleNext}
+            disabled={!nextChapter}
+            sx={{
+              minWidth: "120px",
               borderColor: currentChapter.color,
-              backgroundColor: `${currentChapter.color}10`,
-            },
-            "&.Mui-disabled": {
-              borderColor: theme.palette.grey[300],
-              color: theme.palette.grey[400],
-            },
-          }}
-        >
-          <Box sx={{ textAlign: "right" }}>
-            {nextChapter && (
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: "0.75rem",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  whiteSpace: "nowrap",
-                  maxWidth: "100px",
-                }}
-              >
-                {nextChapter.title}
-              </Typography>
-            )}
-          </Box>
-        </Button>
+              color: currentChapter.color,
+              "&:hover": {
+                borderColor: currentChapter.color,
+                backgroundColor: `${currentChapter.color}10`,
+              },
+              "&.Mui-disabled": {
+                borderColor: theme.palette.grey[300],
+                color: theme.palette.grey[400],
+              },
+            }}
+          >
+            <Box sx={{ textAlign: "right" }}>
+              {nextChapter && (
+                <Typography
+                  variant="body2"
+                  sx={{
+                    fontSize: "0.75rem",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    whiteSpace: "nowrap",
+                    maxWidth: "100px",
+                  }}
+                >
+                  {getText(nextChapter.title, locale)}
+                </Typography>
+              )}
+            </Box>
+          </Button>
+        )}
       </Box>
     </Box>
   );

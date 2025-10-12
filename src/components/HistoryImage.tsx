@@ -2,7 +2,8 @@
 
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import { HistoryImage } from "@/types/historia";
+import { HistoryImage, getText } from "@/types/historia";
+import { useLocale } from "next-intl";
 
 interface HistoryImageComponentProps {
   image: HistoryImage;
@@ -13,6 +14,8 @@ export default function HistoryImageComponent({
   image,
   priority = false,
 }: HistoryImageComponentProps) {
+  const locale = useLocale() as "es" | "en";
+
   const getImageSizeStyles = () => {
     switch (image.size) {
       case "small":
@@ -183,7 +186,7 @@ export default function HistoryImageComponent({
                   fontSize: "0.75rem",
                 }}
               >
-                {image.caption}
+                {image.caption && getText(image.caption, locale)}
               </Typography>
             )}
           </Box>
@@ -224,7 +227,7 @@ export default function HistoryImageComponent({
                 }}
               >
                 <Typography variant="body2" sx={{ fontWeight: 500 }}>
-                  {image.caption}
+                  {image.caption && getText(image.caption, locale)}
                 </Typography>
               </Box>
             )}
@@ -270,7 +273,7 @@ export default function HistoryImageComponent({
                 }}
               >
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                  {image.caption}
+                  {image.caption && getText(image.caption, locale)}
                 </Typography>
               </Box>
             )}
@@ -329,7 +332,7 @@ export default function HistoryImageComponent({
                   fontSize: "0.7rem",
                 }}
               >
-                {image.caption}
+                {image.caption && getText(image.caption, locale)}
               </Typography>
             )}
           </Box>
@@ -375,7 +378,7 @@ export default function HistoryImageComponent({
                   fontFamily: "monospace",
                 }}
               >
-                {image.caption}
+                {image.caption && getText(image.caption, locale)}
               </Typography>
             )}
           </Box>
@@ -408,7 +411,7 @@ export default function HistoryImageComponent({
                   color: "text.secondary",
                 }}
               >
-                {image.caption}
+                {image.caption && getText(image.caption, locale)}
               </Typography>
             )}
           </Box>
