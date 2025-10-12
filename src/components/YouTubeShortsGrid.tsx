@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
-import { useTranslations } from "next-intl";
 
 interface YouTubeShort {
   videoId: string;
@@ -13,8 +12,6 @@ interface YouTubeShortsGridProps {
 }
 
 export default function YouTubeShortsGrid({ shorts }: YouTubeShortsGridProps) {
-  const t = useTranslations("shorts");
-
   return (
     <Box sx={{ width: "100%", mt: 4 }}>
       <Grid container spacing={3}>

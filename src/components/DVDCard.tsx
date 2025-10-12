@@ -9,7 +9,7 @@ import {
   IconButton,
   Tooltip,
 } from "@mui/material";
-import { PlayArrow, Launch } from "@mui/icons-material";
+import { PlayArrow } from "@mui/icons-material";
 import { useLocale } from "next-intl";
 import DVDImage from "./DVDImage";
 import Link from "next/link";

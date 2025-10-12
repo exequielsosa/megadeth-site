@@ -2,13 +2,6 @@ import { LineupFormation } from "@/types";
 import lineupsData from "@/constants/lineups.json";
 import { Metadata } from "next";
 
-interface LayoutProps {
-  children: React.ReactNode;
-  params: {
-    lineupId: string;
-  };
-}
-
 // Generate static params for all lineups
 export async function generateStaticParams() {
   const lineups: LineupFormation[] = lineupsData.lineups;
@@ -22,9 +15,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { lineupId: string };
+  params: Promise<{ lineupId: string }>;
 }): Promise<Metadata> {
-  const { lineupId } = params;
+  const { lineupId } = await params;
   const lineups: LineupFormation[] = lineupsData.lineups;
   const lineup = lineups.find((l) => l.id === lineupId);
 
@@ -48,6 +41,6 @@ export async function generateMetadata({
   };
 }
 
-export default function LineupLayout({ children }: LayoutProps) {
-  return <>{children}</>;
+export default function LineupLayout(props: unknown) {
+  return <>{(props as { children: React.ReactNode }).children}</>;
 }

@@ -1,18 +1,26 @@
 "use client";
 
-import {
-  Container,
-  Typography,
-  Box,
-  Grid,
-  Card,
-  CardContent,
-  Chip,
-  Avatar,
-} from "@mui/material";
+import { Typography, Box, Grid, Card, CardContent, Chip } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
 import { BilingualText } from "@/types";
 import membersData from "@/constants/members.json";
+
+type Member = {
+  id: string;
+  name: string;
+  fullName: { es: string; en: string };
+  nickname?: { es: string; en: string };
+  period: { es: string; en: string };
+  instruments: { es: string[]; en: string[] };
+  role: { es: string; en: string };
+  albums?: string[];
+  otherProjects?: { es: string[]; en: string[] };
+  biography?: { es: string; en: string };
+  image?: string;
+  birthYear?: number;
+  deathYear?: number;
+  country: { es: string; en: string };
+};
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,7 +28,7 @@ export default function MembersPage() {
   const t = useTranslations("lineups");
   const locale = useLocale() as "es" | "en";
 
-  const members = Object.values(membersData.members);
+  const members = Object.values(membersData.members) as Member[];
 
   const getLocalizedText = (text: BilingualText): string => {
     if (!text || typeof text !== "object") return "";
@@ -31,7 +39,9 @@ export default function MembersPage() {
   const sortedMembers = [...members].sort((a, b) => {
     if (a.id === "dave-mustaine") return -1;
     if (b.id === "dave-mustaine") return 1;
-    return a.birthYear - b.birthYear;
+    const aYear = typeof a.birthYear === "number" ? a.birthYear : 9999;
+    const bYear = typeof b.birthYear === "number" ? b.birthYear : 9999;
+    return aYear - bYear;
   });
 
   const currentMembers = sortedMembers.filter(
@@ -64,7 +74,7 @@ export default function MembersPage() {
     >
       <CardContent sx={{ textAlign: "center" }}>
         <Image
-          src={member.image}
+          src={member.image ?? "/images/default.jpg"}
           alt={member.name}
           width={200}
           height={200}
@@ -76,7 +86,7 @@ export default function MembersPage() {
         </Typography>
 
         <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-          {getLocalizedText(member.nickname)}
+          {member.nickname && getLocalizedText(member.nickname)}
         </Typography>
 
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
@@ -95,9 +105,9 @@ export default function MembersPage() {
           {getLocalizedText(member.role)}
         </Typography>
 
-        {"deathYear" in member && member.deathYear && (
+        {member.birthYear && member.deathYear && (
           <Typography variant="body2" sx={{ mt: 1, fontStyle: "italic" }}>
-            {member.birthYear} - {member.deathYear}
+            {`${member.birthYear} - ${member.deathYear}`}
           </Typography>
         )}
       </CardContent>
