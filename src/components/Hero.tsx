@@ -8,6 +8,7 @@ import YouTubeEmbed from "./YouTubeEmbed";
 import Image from "next/image";
 import Divider from "@mui/material/Divider";
 import AlbumTeasers from "./AlbumTeasers";
+import NewTour from "./NewTour";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -150,7 +151,10 @@ export default function Hero() {
           </Box>
         </Stack>
         <Divider sx={{ my: 6, width: "100%" }} />
-        {/* YouTube Video */}
+
+        <NewTour />
+
+        <Divider sx={{ my: 6, width: "100%" }} />
 
         <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 } }}>
           {t("newVideoTitle")}
