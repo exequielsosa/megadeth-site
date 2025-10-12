@@ -23,7 +23,8 @@ export default function MembersPage() {
   const members = Object.values(membersData.members);
 
   const getLocalizedText = (text: BilingualText): string => {
-    return text[locale] || text.es;
+    if (!text || typeof text !== "object") return "";
+    return text[locale] || text.es || "";
   };
 
   // Sort members by importance (Dave first, then by start year)
@@ -62,22 +63,13 @@ export default function MembersPage() {
       }}
     >
       <CardContent sx={{ textAlign: "center" }}>
-        <Avatar
-          sx={{
-            width: 100,
-            height: 100,
-            mx: "auto",
-            mb: 2,
-          }}
-        >
-          <Image
-            src={member.image}
-            alt={member.name}
-            width={100}
-            height={100}
-            style={{ borderRadius: "50%" }}
-          />
-        </Avatar>
+        <Image
+          src={member.image}
+          alt={member.name}
+          width={200}
+          height={200}
+          style={{ borderRadius: "16px", objectFit: "cover" }}
+        />
 
         <Typography variant="h5" component="h3" gutterBottom>
           {member.name}
@@ -113,51 +105,69 @@ export default function MembersPage() {
   );
 
   return (
-    <Container maxWidth="lg" sx={{ py: 4 }}>
-      {/* Header */}
-      <Box textAlign="center" mb={6}>
-        <Typography variant="h1" component="h1" gutterBottom>
-          {t("members")}
-        </Typography>
-        <Typography
-          variant="h6"
-          color="text.secondary"
-          sx={{ maxWidth: 800, mx: "auto" }}
-        >
-          Conoce a todos los músicos que han formado parte de Megadeth a lo
-          largo de su historia
-        </Typography>
+    <Box display={"flex"} justifyContent={"center"} width="100%" px={1}>
+      <Box maxWidth={"1350px"} sx={{ py: 4 }}>
+        {/* Header */}
+        <Box textAlign="center" mb={6}>
+          <Typography
+            variant="h1"
+            component="h1"
+            gutterBottom
+            sx={{ fontSize: { xs: 28, md: 48 } }}
+            fontWeight={600}
+          >
+            {t("members")}
+          </Typography>
+          <Typography
+            variant="h6"
+            color="text.secondary"
+            sx={{ maxWidth: 800, mx: "auto" }}
+          >
+            Conoce a todos los músicos que han formado parte de Megadeth a lo
+            largo de su historia
+          </Typography>
+        </Box>
+
+        {/* Current Members */}
+        <Box mb={8}>
+          <Typography
+            variant="h3"
+            component="h2"
+            gutterBottom
+            sx={{ fontSize: { xs: 20, md: 30 } }}
+          >
+            {t("currentLineup")}
+          </Typography>
+
+          <Grid container spacing={3}>
+            {currentMembers.map((member) => (
+              <Grid key={member.id} size={{ xs: 12, sm: 6, md: 3 }}>
+                <MemberCard member={member} />
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+        {/* Former Members */}
+        <Box>
+          <Typography
+            variant="h3"
+            component="h2"
+            gutterBottom
+            sx={{ fontSize: { xs: 20, md: 30 } }}
+          >
+            Miembros Anteriores
+          </Typography>
+
+          <Grid container spacing={3}>
+            {formerMembers.map((member) => (
+              <Grid key={member.id} size={{ xs: 12, sm: 6, md: 3 }}>
+                <MemberCard member={member} />
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
       </Box>
-
-      {/* Current Members */}
-      <Box mb={8}>
-        <Typography variant="h3" component="h2" gutterBottom>
-          {t("currentLineup")}
-        </Typography>
-
-        <Grid container spacing={3}>
-          {currentMembers.map((member) => (
-            <Grid key={member.id} size={{ xs: 12, sm: 6, md: 3 }}>
-              <MemberCard member={member} />
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-
-      {/* Former Members */}
-      <Box>
-        <Typography variant="h3" component="h2" gutterBottom>
-          Miembros Anteriores
-        </Typography>
-
-        <Grid container spacing={3}>
-          {formerMembers.map((member) => (
-            <Grid key={member.id} size={{ xs: 12, sm: 6, md: 4 }}>
-              <MemberCard member={member} />
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-    </Container>
+    </Box>
   );
 }

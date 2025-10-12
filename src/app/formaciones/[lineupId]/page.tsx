@@ -13,18 +13,19 @@ import { useTranslations, useLocale } from "next-intl";
 import { LineupFormation, BilingualText } from "@/types";
 import lineupsData from "@/constants/lineups.json";
 import membersData from "@/constants/members.json";
+import { use } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     lineupId: string;
-  };
+  }>;
 }
 
 export default function LineupDetailPage({ params }: PageProps) {
-  const { lineupId } = params;
+  const { lineupId } = use(params);
   const t = useTranslations("lineups");
   const locale = useLocale();
   const currentLocale = locale as "es" | "en";
@@ -45,7 +46,7 @@ export default function LineupDetailPage({ params }: PageProps) {
   };
 
   return (
-    <Box display={"flex"} width={"100%"} justifyContent={"center"}>
+    <Box display={"flex"} width={"100%"} justifyContent={"center"} px={1}>
       <Box sx={{ py: 4, maxWidth: "1350px", width: "100%" }}>
         {/* Header */}
         <Box sx={{ mb: 6 }}>
@@ -91,9 +92,12 @@ export default function LineupDetailPage({ params }: PageProps) {
           <Typography
             variant="h6"
             color="text.secondary"
-            sx={{ fontSize: { xs: 16, md: 20 } }}
+            sx={{
+              fontSize: { xs: 16, md: 20 },
+              whiteSpace: "pre-line",
+            }}
           >
-            {getLocalizedText(lineup.description)}
+            {getLocalizedText(lineup.longDescription || lineup.description)}
           </Typography>
         </Box>
 
@@ -118,7 +122,12 @@ export default function LineupDetailPage({ params }: PageProps) {
 
         {/* Members */}
         <Box sx={{ mb: 6 }}>
-          <Typography variant="h3" component="h2" gutterBottom>
+          <Typography
+            variant="h3"
+            component="h2"
+            gutterBottom
+            sx={{ fontSize: { xs: 20, md: 30 } }}
+          >
             {t("formation.members")}
           </Typography>
 
@@ -145,23 +154,13 @@ export default function LineupDetailPage({ params }: PageProps) {
                     >
                       <CardContent sx={{ textAlign: "center" }}>
                         {memberData ? (
-                          <Avatar
-                            sx={{
-                              width: 80,
-                              height: 80,
-                              mx: "auto",
-                              mb: 2,
-                              fontSize: "2rem",
-                            }}
-                          >
-                            <Image
-                              src={memberData.image}
-                              alt={memberData.name}
-                              width={80}
-                              height={80}
-                              style={{ borderRadius: "50%" }}
-                            />
-                          </Avatar>
+                          <Image
+                            src={memberData.image}
+                            alt={memberData.name}
+                            width={200}
+                            height={200}
+                            style={{ borderRadius: "16px", objectFit: "cover" }}
+                          />
                         ) : (
                           <Avatar
                             sx={{

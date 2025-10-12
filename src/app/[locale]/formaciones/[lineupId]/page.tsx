@@ -69,8 +69,15 @@ export default function LineupDetailPage({ params }: PageProps) {
           </Box>
         </Box>
 
-        <Typography variant="h6" color="text.secondary" sx={{ maxWidth: 800 }}>
-          {getLocalizedText(lineup.description)}
+        <Typography
+          variant="h6"
+          color="text.secondary"
+          sx={{
+            maxWidth: 800,
+            whiteSpace: "pre-line",
+          }}
+        >
+          {getLocalizedText(lineup.longDescription || lineup.description)}
         </Typography>
       </Box>
 

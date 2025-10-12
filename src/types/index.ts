@@ -31,6 +31,7 @@ export interface LineupFormation {
   yearEnd: number;
   title: BilingualText;
   description: BilingualText;
+  longDescription?: BilingualText; // Optional for backward compatibility
   members: LineupMember[];
   albums: string[];
   image: string;
