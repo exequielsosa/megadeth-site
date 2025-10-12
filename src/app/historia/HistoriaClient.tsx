@@ -5,16 +5,18 @@ import HistoryTimeline from "@/components/HistoryTimeline";
 import historiaData from "@/constants/historia.json";
 import { HistoryData } from "@/types/historia";
 import { History, AutoStories } from "@mui/icons-material";
+import { useTranslations } from "next-intl";
 
 export default function HistoriaClient() {
   const data = historiaData as HistoryData;
+  const t = useTranslations("history");
 
   // Estadísticas interesantes
   const stats = [
-    { label: "Años activos", value: "43", detail: "1983-2026" },
-    { label: "Álbumes de estudio", value: "17", detail: "Incluyendo el final" },
-    { label: "Cambios de formación", value: "20+", detail: "Múltiples eras" },
-    { label: "Ventas mundiales", value: "38M", detail: "Discos vendidos" },
+    { label: t("activeYears"), value: "43", detail: "1983-2026" },
+    { label: t("studioAlbums"), value: "17", detail: t("includingFinal") },
+    { label: t("lineupChanges"), value: "20+", detail: t("multipleEras") },
+    { label: t("worldwideSales"), value: "38M", detail: t("recordsSold") },
   ];
 
   return (

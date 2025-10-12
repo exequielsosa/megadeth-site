@@ -9,7 +9,17 @@
     "tour": "Tour",
     "discography": "Discography",
     "videos": "Videos",
-    "dvds": "DVDs"
+    "dvds": "DVDs",
+    "history": "History"
+  },
+  "history": {
+    "activeYears": "Active years",
+    "studioAlbums": "Studio albums",
+    "lineupChanges": "Lineup changes",
+    "worldwideSales": "Worldwide sales",
+    "includingFinal": "Including the final",
+    "multipleEras": "Multiple eras",
+    "recordsSold": "Records sold"
   },
   "hero": {
     "title": "Latest album · Farewell tour",

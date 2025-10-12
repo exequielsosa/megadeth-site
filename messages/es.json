@@ -9,7 +9,17 @@
     "tour": "Gira",
     "discography": "Discografía",
     "videos": "Videos",
-    "dvds": "DVDs"
+    "dvds": "DVDs",
+    "history": "Historia"
+  },
+  "history": {
+    "activeYears": "Años activos",
+    "studioAlbums": "Álbumes de estudio",
+    "lineupChanges": "Cambios de formación",
+    "worldwideSales": "Ventas mundiales",
+    "includingFinal": "Incluyendo el final",
+    "multipleEras": "Múltiples eras",
+    "recordsSold": "Discos vendidos"
   },
   "hero": {
     "title": "Último disco · Megadeth",
