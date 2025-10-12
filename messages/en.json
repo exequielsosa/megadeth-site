@@ -10,7 +10,9 @@
     "discography": "Discography",
     "videos": "Videos",
     "dvds": "DVDs",
-    "history": "History"
+    "history": "History",
+    "lineups": "Lineups",
+    "members": "Members"
   },
   "history": {
     "activeYears": "Active years",
@@ -355,5 +357,60 @@
     "liveAlbums": "Live Albums",
     "compilations": "Compilations",
     "eps": "EPs"
+  },
+  "lineups": {
+    "title": "Lineups",
+    "subtitle": "Evolution of Megadeth's lineup through 40 years",
+    "timeline": "Timeline",
+    "members": "Members",
+    "membersSubtitle": "Meet all the musicians who have been part of Megadeth throughout its history",
+    "currentLineup": "Current Lineup",
+    "classicLineup": "Classic Lineup",
+    "formerMembers": "Former Members",
+    "currentPeriod": "2023 – present",
+    "classicPeriod": "1990 – 1998",
+    "currentMembersNames": "Dave Mustaine, James LoMenzo, Dirk Verbeuren, Teemu Mäntysaari",
+    "classicMembersNames": "Dave Mustaine, David Ellefson, Marty Friedman, Nick Menza",
+    "member": {
+      "biography": "Biography",
+      "albums": "Albums with Megadeth",
+      "otherProjects": "Other Projects",
+      "instruments": "Instruments",
+      "period": "Period",
+      "role": "Role",
+      "birthYear": "Born in",
+      "deathYear": "Died in",
+      "country": "Country",
+      "nickname": "Nickname",
+      "personalInfo": "Personal Information"
+    },
+    "formation": {
+      "period": "Period",
+      "albums": "Albums",
+      "members": "Members",
+      "description": "Description"
+    },
+    "classifications": {
+      "founder": "Founder",
+      "leader": "Leader",
+      "founding": "Founding Member",
+      "first": "First Member",
+      "core": "Core Member",
+      "guest": "Guest",
+      "session": "Session Musician",
+      "touring": "Touring Musician",
+      "temporary": "Temporary",
+      "new": "New",
+      "virtuoso": "Virtuoso",
+      "returning": "Returning",
+      "stable": "Stable",
+      "international": "International",
+      "veteran": "Veteran",
+      "precision": "Precision",
+      "eternal": "Eternal",
+      "current": "Current",
+      "powerhouse": "Powerhouse",
+      "continuing": "Continuing"
+    }
   }
 }

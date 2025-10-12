@@ -1,4 +1,6 @@
 import { MetadataRoute } from 'next';
+import lineupsData from '@/constants/lineups.json';
+import membersData from '@/constants/members.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://megadeth.com.ar';
@@ -9,6 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/discography', priority: 0.9, changeFreq: 'monthly' as const },
     { path: '/videos', priority: 0.9, changeFreq: 'weekly' as const },
     { path: '/dvds', priority: 0.9, changeFreq: 'monthly' as const },
+    { path: '/historia', priority: 0.9, changeFreq: 'monthly' as const },
+    { path: '/formaciones', priority: 0.8, changeFreq: 'monthly' as const },
+    { path: '/miembros', priority: 0.8, changeFreq: 'monthly' as const },
   ];
 
   const sitemap: MetadataRoute.Sitemap = [];
@@ -45,6 +50,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: page.priority,
       });
     }
+  });
+
+  // Agregar páginas individuales de formaciones
+  const lineups = lineupsData.lineups;
+  lineups.forEach(lineup => {
+    sitemap.push({
+      url: `${base}/formaciones/${lineup.id}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  });
+
+  // Agregar páginas individuales de miembros
+  const memberIds = Object.keys(membersData.members);
+  memberIds.forEach(memberId => {
+    sitemap.push({
+      url: `${base}/miembros/${memberId}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
   });
 
   return sitemap;

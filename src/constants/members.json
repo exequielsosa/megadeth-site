@@ -1,0 +1,486 @@
+{
+  "members": {
+    "dave-mustaine": {
+      "id": "dave-mustaine",
+      "name": "Dave Mustaine",
+      "fullName": {
+        "es": "David Scott Mustaine",
+        "en": "David Scott Mustaine"
+      },
+      "nickname": {
+        "es": "MegaDave",
+        "en": "MegaDave"
+      },
+      "period": {
+        "es": "1983 – 2002; 2004 – presente",
+        "en": "1983 – 2002; 2004 – present"
+      },
+      "instruments": {
+        "es": ["Voz principal", "Guitarra rítmica", "Guitarra líder"],
+        "en": ["Lead vocals", "Rhythm guitar", "Lead guitar"]
+      },
+      "role": {
+        "es": "Fundador y único miembro constante",
+        "en": "Founder and only constant member"
+      },
+      "albums": [
+        "Killing Is My Business... And Business Is Good!",
+        "Peace Sells... But Who's Buying?",
+        "So Far, So Good... So What!",
+        "Rust in Peace",
+        "Countdown to Extinction",
+        "Youthanasia",
+        "Cryptic Writings",
+        "Risk",
+        "The World Needs a Hero",
+        "The System Has Failed",
+        "United Abominations",
+        "Endgame",
+        "Th1rt3en",
+        "Super Collider",
+        "Dystopia",
+        "The Sick, The Dying... and The Dead!"
+      ],
+      "otherProjects": {
+        "es": [
+          "Primer guitarrista de Metallica (1982-83)",
+          "MD.45",
+          "Gigantour (organizador)"
+        ],
+        "en": [
+          "First guitarist of Metallica (1982-83)",
+          "MD.45",
+          "Gigantour (organizer)"
+        ]
+      },
+      "biography": {
+        "es": "Dave Mustaine es el fundador, principal compositor y líder de Megadeth. Nacido en 1961 en California, Mustaine fue brevemente guitarrista de Metallica a inicios de los '80, experiencia que terminó abruptamente al ser expulsado de la banda en 1983. Ese mismo año, determinado a superarse, formó Megadeth junto al bajista David Ellefson, estableciendo los cimientos del movimiento thrash metal en la costa oeste. Como vocalista y guitarrista, Mustaine imprimió a Megadeth un estilo técnico, agresivo y veloz, diferenciándose por su composición compleja y solos afilados.",
+        "en": "Dave Mustaine is the founder, main composer and leader of Megadeth. Born in 1961 in California, Mustaine was briefly a guitarist for Metallica in the early '80s, an experience that ended abruptly when he was expelled from the band in 1983. That same year, determined to excel, he formed Megadeth with bassist David Ellefson, laying the foundations of the thrash metal movement on the west coast. As vocalist and guitarist, Mustaine gave Megadeth a technical, aggressive and fast style, distinguished by complex composition and sharp solos."
+      },
+      "image": "/images/members/dave-mustaine.webp",
+      "birthYear": 1961,
+      "country": {
+        "es": "Estados Unidos",
+        "en": "United States"
+      }
+    },
+    "david-ellefson": {
+      "id": "david-ellefson",
+      "name": "David Ellefson",
+      "fullName": {
+        "es": "David Warren Ellefson",
+        "en": "David Warren Ellefson"
+      },
+      "nickname": {
+        "es": "Junior",
+        "en": "Junior"
+      },
+      "period": {
+        "es": "1983 – 2002; 2010 – 2021",
+        "en": "1983 – 2002; 2010 – 2021"
+      },
+      "instruments": {
+        "es": ["Bajo eléctrico", "Coros"],
+        "en": ["Electric bass", "Backing vocals"]
+      },
+      "role": {
+        "es": "Co-fundador y bajista clásico",
+        "en": "Co-founder and classic bassist"
+      },
+      "albums": [
+        "Killing Is My Business... And Business Is Good!",
+        "Peace Sells... But Who's Buying?",
+        "So Far, So Good... So What!",
+        "Rust in Peace",
+        "Countdown to Extinction",
+        "Youthanasia",
+        "Cryptic Writings",
+        "Risk",
+        "The World Needs a Hero",
+        "Th1rt3en",
+        "Super Collider",
+        "Dystopia"
+      ],
+      "otherProjects": {
+        "es": [
+          "F5",
+          "Altitudes & Attitude",
+          "Metal Allegiance",
+          "Kings of Thrash"
+        ],
+        "en": [
+          "F5",
+          "Altitudes & Attitude",
+          "Metal Allegiance",
+          "Kings of Thrash"
+        ]
+      },
+      "biography": {
+        "es": "David Ellefson nació en 1964 en Minnesota y es conocido como el eterno bajista de Megadeth, banda que co-fundó a los 19 años junto a Dave Mustaine. Su estilo al bajo combina solidez rítmica con líneas melódicas fluidas, aportando tanto potencia como técnica. En los comienzos, Ellefson fue pieza fundamental: su departamento en Los Ángeles sirvió como local de ensayo y él proveyó recursos para los demo iniciales.",
+        "en": "David Ellefson was born in 1964 in Minnesota and is known as Megadeth's eternal bassist, a band he co-founded at age 19 with Dave Mustaine. His bass style combines rhythmic solidity with fluid melodic lines, providing both power and technique. In the beginning, Ellefson was a fundamental piece: his apartment in Los Angeles served as a rehearsal space and he provided resources for the initial demos."
+      },
+      "image": "/images/members/david-ellefson.webp",
+      "birthYear": 1964,
+      "country": {
+        "es": "Estados Unidos",
+        "en": "United States"
+      }
+    },
+    "marty-friedman": {
+      "id": "marty-friedman",
+      "name": "Marty Friedman",
+      "fullName": {
+        "es": "Martin Adam Friedman",
+        "en": "Martin Adam Friedman"
+      },
+      "nickname": {
+        "es": "Marty",
+        "en": "Marty"
+      },
+      "period": {
+        "es": "1990 – 2000",
+        "en": "1990 – 2000"
+      },
+      "instruments": {
+        "es": ["Guitarra líder"],
+        "en": ["Lead guitar"]
+      },
+      "role": {
+        "es": "Guitarrista de la era dorada",
+        "en": "Golden era guitarist"
+      },
+      "albums": [
+        "Rust in Peace",
+        "Countdown to Extinction",
+        "Youthanasia",
+        "Cryptic Writings",
+        "Risk"
+      ],
+      "otherProjects": {
+        "es": [
+          "Cacophony",
+          "Carrera solista",
+          "Televisión japonesa",
+          "Colaboraciones J-Pop"
+        ],
+        "en": [
+          "Cacophony",
+          "Solo career",
+          "Japanese television",
+          "J-Pop collaborations"
+        ]
+      },
+      "biography": {
+        "es": "Marty Friedman es mundialmente reconocido como uno de los guitarristas más virtuosos e innovadores del metal, y en el seno de Megadeth protagonizó la era de mayor éxito comercial de la banda. Nació en 1962 en Washington D.C., y se dio a conocer en la escena metalera con el dúo Cacophony junto al prodigio Jason Becker. Dave Mustaine lo incorporó a Megadeth en 1990, impresionado por la musicalidad única de Marty –capaz de combinar escalas orientales, feeling melódico y velocidad abrasadora.",
+        "en": "Marty Friedman is worldwide recognized as one of the most virtuosic and innovative guitarists in metal, and within Megadeth he starred in the band's most commercially successful era. Born in 1962 in Washington D.C., he became known in the metal scene with the duo Cacophony alongside prodigy Jason Becker. Dave Mustaine incorporated him into Megadeth in 1990, impressed by Marty's unique musicality –capable of combining oriental scales, melodic feeling and scorching speed."
+      },
+      "image": "/images/members/marty-friedman.webp",
+      "birthYear": 1962,
+      "country": {
+        "es": "Estados Unidos / Japón",
+        "en": "United States / Japan"
+      }
+    },
+    "nick-menza": {
+      "id": "nick-menza",
+      "name": "Nick Menza",
+      "fullName": {
+        "es": "Nicholas Menza",
+        "en": "Nicholas Menza"
+      },
+      "nickname": {
+        "es": "Nick",
+        "en": "Nick"
+      },
+      "period": {
+        "es": "1989 – 1998; 2004 (regreso fallido)",
+        "en": "1989 – 1998; 2004 (failed return)"
+      },
+      "instruments": {
+        "es": ["Batería"],
+        "en": ["Drums"]
+      },
+      "role": {
+        "es": "Baterista de la era clásica",
+        "en": "Classic era drummer"
+      },
+      "albums": [
+        "Rust in Peace",
+        "Countdown to Extinction",
+        "Youthanasia",
+        "Cryptic Writings"
+      ],
+      "otherProjects": {
+        "es": ["OHM:", "Proyectos solistas"],
+        "en": ["OHM:", "Solo projects"]
+      },
+      "biography": {
+        "es": "Nick Menza fue el carismático baterista de la era clásica de Megadeth, conocido tanto por su poderoso estilo tras los tambores como por su personalidad jovial. Hijo de un respetado músico de jazz (Don Menza), Nick nació en Alemania en 1964 pero creció en Los Ángeles rodeado de música. Participó en cuatro álbumes de estudio consecutivos, llevando a la banda a las listas de éxitos. Tristemente, el 21 de mayo de 2016, Nick Menza falleció a los 51 años víctima de un infarto masivo mientras estaba tocando en vivo.",
+        "en": "Nick Menza was the charismatic drummer of Megadeth's classic era, known for both his powerful drumming style and jovial personality. Son of a respected jazz musician (Don Menza), Nick was born in Germany in 1964 but grew up in Los Angeles surrounded by music. He participated in four consecutive studio albums, taking the band to the hit charts. Sadly, on May 21, 2016, Nick Menza died at age 51 from a massive heart attack while performing live."
+      },
+      "image": "/images/members/nick-menza.webp",
+      "birthYear": 1964,
+      "deathYear": 2016,
+      "country": {
+        "es": "Alemania / Estados Unidos",
+        "en": "Germany / United States"
+      }
+    },
+    "chris-poland": {
+      "id": "chris-poland",
+      "name": "Chris Poland",
+      "fullName": {
+        "es": "Christopher Poland",
+        "en": "Christopher Poland"
+      },
+      "nickname": {
+        "es": "Chris",
+        "en": "Chris"
+      },
+      "period": {
+        "es": "1984 – 1987; 2004 (sesión)",
+        "en": "1984 – 1987; 2004 (session)"
+      },
+      "instruments": {
+        "es": ["Guitarra líder"],
+        "en": ["Lead guitar"]
+      },
+      "role": {
+        "es": "Primer guitarrista líder en estudio",
+        "en": "First lead guitarist in studio"
+      },
+      "albums": [
+        "Killing Is My Business... And Business Is Good!",
+        "Peace Sells... But Who's Buying?",
+        "The System Has Failed"
+      ],
+      "otherProjects": {
+        "es": ["OHM:", "OHMphrey", "Damn The Machine", "Return to Metalopolis"],
+        "en": ["OHM:", "OHMphrey", "Damn The Machine", "Return to Metalopolis"]
+      },
+      "biography": {
+        "es": "Chris Poland fue el primer guitarrista líder de Megadeth en estudio y es reconocido por aportar un estilo distintivo, con influencias de jazz fusion, que enriqueció los dos primeros álbumes de la banda. Neoyorquino de nacimiento (1957), Poland empezó tocando jazz-rock en los '70 antes de unirse a Megadeth en 1984. Sus solos en temas como 'Killing Is My Business...' y 'Peace Sells' combinaban agresividad metalera con escalas melódicas y bendings expresivos.",
+        "en": "Chris Poland was Megadeth's first lead guitarist in studio and is recognized for bringing a distinctive style, with jazz fusion influences, that enriched the band's first two albums. Born in New York (1957), Poland started playing jazz-rock in the '70s before joining Megadeth in 1984. His solos on tracks like 'Killing Is My Business...' and 'Peace Sells' combined metal aggression with melodic scales and expressive bends."
+      },
+      "image": "/images/members/chris-poland.webp",
+      "birthYear": 1957,
+      "country": {
+        "es": "Estados Unidos",
+        "en": "United States"
+      }
+    },
+    "gar-samuelson": {
+      "id": "gar-samuelson",
+      "name": "Gar Samuelson",
+      "fullName": {
+        "es": "Gary Charles 'Gar' Samuelson",
+        "en": "Gary Charles 'Gar' Samuelson"
+      },
+      "nickname": {
+        "es": "Gar",
+        "en": "Gar"
+      },
+      "period": {
+        "es": "1984 – 1987",
+        "en": "1984 – 1987"
+      },
+      "instruments": {
+        "es": ["Batería"],
+        "en": ["Drums"]
+      },
+      "role": {
+        "es": "Baterista original en grabaciones",
+        "en": "Original drummer on recordings"
+      },
+      "albums": [
+        "Killing Is My Business... And Business Is Good!",
+        "Peace Sells... But Who's Buying?"
+      ],
+      "otherProjects": {
+        "es": ["Fatal Opera", "The New Yorkers"],
+        "en": ["Fatal Opera", "The New Yorkers"]
+      },
+      "biography": {
+        "es": "Gar Samuelson, nacido en 1958 en Nueva York, fue el baterista original de Megadeth en sus primeras grabaciones y pieza clave en definir el sonido técnico de la banda. Provenía del mundo del jazz fusion, lo que le dio una habilidad inusual para el metal: Gar podía ejecutar intrincados fills, síncopas y patrones poco convencionales dentro de la furia del thrash. Gar Samuelson falleció prematuramente en 1999 por complicaciones de salud a los 41 años.",
+        "en": "Gar Samuelson, born in 1958 in New York, was Megadeth's original drummer on their first recordings and a key piece in defining the band's technical sound. He came from the jazz fusion world, which gave him unusual ability for metal: Gar could execute intricate fills, syncopations and unconventional patterns within thrash fury. Gar Samuelson died prematurely in 1999 from health complications at age 41."
+      },
+      "image": "/images/members/gar-samuelson.webp",
+      "birthYear": 1958,
+      "deathYear": 1999,
+      "country": {
+        "es": "Estados Unidos",
+        "en": "United States"
+      }
+    },
+    "kiko-loureiro": {
+      "id": "kiko-loureiro",
+      "name": "Kiko Loureiro",
+      "fullName": {
+        "es": "Pedro Henrique 'Kiko' Loureiro",
+        "en": "Pedro Henrique 'Kiko' Loureiro"
+      },
+      "nickname": {
+        "es": "Kiko",
+        "en": "Kiko"
+      },
+      "period": {
+        "es": "2015 – 2023",
+        "en": "2015 – 2023"
+      },
+      "instruments": {
+        "es": ["Guitarra líder"],
+        "en": ["Lead guitar"]
+      },
+      "role": {
+        "es": "Primer miembro sudamericano",
+        "en": "First South American member"
+      },
+      "albums": ["Dystopia", "The Sick, The Dying... and The Dead!"],
+      "otherProjects": {
+        "es": ["Angra", "Carrera solista", "Educación musical"],
+        "en": ["Angra", "Solo career", "Music education"]
+      },
+      "biography": {
+        "es": "Kiko Loureiro es uno de los guitarristas más aclamados de la escena metal melódica, y su integración a Megadeth en 2015 aportó una nueva dimensión internacional al grupo. Nacido en 1972 en Río de Janeiro, Kiko cofundó Angra, la emblemática banda de metal progresivo brasileño, a los 19 años. Con Angra alcanzó proyección global en los '90, siendo reconocido por su técnica virtuosa, incorporando elementos de música clásica y brasileña en sus solos.",
+        "en": "Kiko Loureiro is one of the most acclaimed guitarists in the melodic metal scene, and his integration into Megadeth in 2015 brought a new international dimension to the group. Born in 1972 in Rio de Janeiro, Kiko co-founded Angra, the emblematic Brazilian progressive metal band, at age 19. With Angra he achieved global projection in the '90s, being recognized for his virtuosic technique, incorporating elements of classical and Brazilian music in his solos."
+      },
+      "image": "/images/members/kiko-loureiro.webp",
+      "birthYear": 1972,
+      "country": {
+        "es": "Brasil",
+        "en": "Brazil"
+      }
+    },
+    "teemu-mantysaari": {
+      "id": "teemu-mantysaari",
+      "name": "Teemu Mäntysaari",
+      "fullName": {
+        "es": "Teemu Mäntysaari",
+        "en": "Teemu Mäntysaari"
+      },
+      "nickname": {
+        "es": "Teemu",
+        "en": "Teemu"
+      },
+      "period": {
+        "es": "2023 – presente",
+        "en": "2023 – present"
+      },
+      "instruments": {
+        "es": ["Guitarra líder"],
+        "en": ["Lead guitar"]
+      },
+      "role": {
+        "es": "Guitarrista actual",
+        "en": "Current guitarist"
+      },
+      "albums": [],
+      "otherProjects": {
+        "es": ["Wintersun", "Smackbound"],
+        "en": ["Wintersun", "Smackbound"]
+      },
+      "biography": {
+        "es": "Teemu Mäntysaari es un virtuoso guitarrista finlandés que recientemente se unió a las filas de Megadeth para cubrir la vacante dejada por Kiko Loureiro, trayendo consigo la influencia del metal nórdico. Nacido en 1987 en Tampere, Finlandia, Teemu es mejor conocido por su rol en Wintersun, banda de death metal sinfónico liderada por Jari Mäenpää. Se unió a Wintersun en 2004, con solo 17 años, sorprendiendo a todos por su técnica sobresaliente y madurez musical precoz.",
+        "en": "Teemu Mäntysaari is a virtuoso Finnish guitarist who recently joined Megadeth's ranks to fill the vacancy left by Kiko Loureiro, bringing with him Nordic metal influence. Born in 1987 in Tampere, Finland, Teemu is best known for his role in Wintersun, a symphonic death metal band led by Jari Mäenpää. He joined Wintersun in 2004, at only 17 years old, surprising everyone with his outstanding technique and precocious musical maturity."
+      },
+      "image": "/images/members/teemu-mantysaari.webp",
+      "birthYear": 1987,
+      "country": {
+        "es": "Finlandia",
+        "en": "Finland"
+      }
+    },
+    "james-lomenzo": {
+      "id": "james-lomenzo",
+      "name": "James LoMenzo",
+      "fullName": {
+        "es": "James LoMenzo",
+        "en": "James LoMenzo"
+      },
+      "nickname": {
+        "es": "JLo",
+        "en": "JLo"
+      },
+      "period": {
+        "es": "2006 – 2010; 2021 – presente",
+        "en": "2006 – 2010; 2021 – present"
+      },
+      "instruments": {
+        "es": ["Bajo eléctrico", "Coros"],
+        "en": ["Electric bass", "Backing vocals"]
+      },
+      "role": {
+        "es": "Bajista veterano",
+        "en": "Veteran bassist"
+      },
+      "albums": [
+        "United Abominations",
+        "Endgame",
+        "The Sick, The Dying... and The Dead!"
+      ],
+      "otherProjects": {
+        "es": [
+          "White Lion",
+          "Black Label Society",
+          "Pride & Glory",
+          "Slash's Snakepit"
+        ],
+        "en": [
+          "White Lion",
+          "Black Label Society",
+          "Pride & Glory",
+          "Slash's Snakepit"
+        ]
+      },
+      "biography": {
+        "es": "James LoMenzo es un consumado bajista neoyorquino cuyo currículum abarca desde el glam metal de los 80 hasta el heavy metal clásico, y que ha tenido dos etapas en Megadeth separadas por más de una década. Nacido en 1959 en Brooklyn, LoMenzo saltó a la fama en los años 80 como miembro de White Lion, banda con la que logró discos multi-platino y giras mundiales. Su estilo en ese entonces combinaba melodía y técnica, con líneas de bajo claras en baladas y contundentes en temas rock.",
+        "en": "James LoMenzo is an accomplished New York bassist whose resume spans from 80s glam metal to classic heavy metal, and who has had two stints in Megadeth separated by more than a decade. Born in 1959 in Brooklyn, LoMenzo rose to fame in the 80s as a member of White Lion, a band with which he achieved multi-platinum albums and world tours. His style back then combined melody and technique, with clear bass lines in ballads and forceful ones in rock tracks."
+      },
+      "image": "/images/members/james-lomenzo.webp",
+      "birthYear": 1959,
+      "country": {
+        "es": "Estados Unidos",
+        "en": "United States"
+      }
+    },
+    "dirk-verbeuren": {
+      "id": "dirk-verbeuren",
+      "name": "Dirk Verbeuren",
+      "fullName": {
+        "es": "Dirk Verbeuren",
+        "en": "Dirk Verbeuren"
+      },
+      "nickname": {
+        "es": "Dirkblast",
+        "en": "Dirkblast"
+      },
+      "period": {
+        "es": "2016 – presente",
+        "en": "2016 – present"
+      },
+      "instruments": {
+        "es": ["Batería"],
+        "en": ["Drums"]
+      },
+      "role": {
+        "es": "Baterista de precisión extrema",
+        "en": "Extreme precision drummer"
+      },
+      "albums": ["The Sick, The Dying... and The Dead!"],
+      "otherProjects": {
+        "es": ["Soilwork", "Scarve", "Bent Sea"],
+        "en": ["Soilwork", "Scarve", "Bent Sea"]
+      },
+      "biography": {
+        "es": "Dirk Verbeuren es un baterista belga cuya precisión y velocidad en los ritmos extremos lo convirtieron en uno de los referentes modernos del metal, y desde 2016 es el responsable de la base rítmica en Megadeth. Nacido en 1975 en Amberes, Bélgica, Dirk inició en el metal extremo con la banda Scarve en los '90, demostrando talento para los patrones técnicos y complejos. Su gran salto llegó al unirse en 2004 a Soilwork, prominente banda de death metal melódico sueco.",
+        "en": "Dirk Verbeuren is a Belgian drummer whose precision and speed in extreme rhythms made him one of the modern references in metal, and since 2016 he has been responsible for the rhythmic foundation in Megadeth. Born in 1975 in Antwerp, Belgium, Dirk started in extreme metal with the band Scarve in the '90s, showing talent for technical and complex patterns. His big breakthrough came when he joined Soilwork, a prominent Swedish melodic death metal band, in 2004."
+      },
+      "image": "/images/members/dirk-verbeuren.webp",
+      "birthYear": 1975,
+      "country": {
+        "es": "Bélgica",
+        "en": "Belgium"
+      }
+    }
+  }
+}

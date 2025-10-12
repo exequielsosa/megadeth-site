@@ -1,0 +1,927 @@
+{
+  "lineups": [
+    {
+      "id": "inicios-1983",
+      "period": "1983",
+      "yearStart": 1983,
+      "yearEnd": 1983,
+      "title": {
+        "es": "Los Inicios",
+        "en": "The Beginning"
+      },
+      "description": {
+        "es": "La formación original de Megadeth se gestó en Los Ángeles en 1983, tras la expulsión de Dave Mustaine de Metallica. Las primeras semanas fueron experimentales, con Lor Kane como vocalista y Dave explorando un sonido más técnico y agresivo. Esta formación embrionaria sentó las bases de lo que se convertiría en una de las bandas más influyentes del thrash metal.",
+        "en": "Megadeth's original formation was conceived in Los Angeles in 1983, following Dave Mustaine's expulsion from Metallica. The first weeks were experimental, with Lor Kane as vocalist and Dave exploring a more technical and aggressive sound. This embryonic formation laid the foundations for what would become one of the most influential thrash metal bands."
+      },
+      "albums": [],
+      "image": "/images/formaciones/missing.png",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Guitarra",
+            "en": "Guitar"
+          },
+          "role": "founder"
+        },
+        {
+          "id": "lor-kane",
+          "name": "Lawrence \"Lor\" Kane",
+          "instrument": {
+            "es": "Voz",
+            "en": "Vocals"
+          },
+          "role": "temporary"
+        },
+        {
+          "id": "greg-handevidt",
+          "name": "Greg Handevidt",
+          "instrument": {
+            "es": "Guitarra",
+            "en": "Guitar"
+          },
+          "role": "founding"
+        },
+        {
+          "id": "david-ellefson",
+          "name": "David Ellefson",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "founding"
+        }
+      ]
+    },
+    {
+      "id": "primeros-conciertos-1983-1984",
+      "period": "1983-1984",
+      "yearStart": 1983,
+      "yearEnd": 1984,
+      "title": {
+        "es": "Primeros Conciertos",
+        "en": "First Concerts"
+      },
+      "description": {
+        "es": "Kerry King de Slayer se une temporalmente como segundo guitarrista, aportando su agresividad característica al sonido emergente. Lee Rausch se convierte en el primer baterista estable, permitiendo que la banda comience a tocar en vivo en clubes de Los Ángeles. Esta formación marca los primeros pasos de Megadeth en el circuito underground californiano.",
+        "en": "Kerry King from Slayer temporarily joins as second guitarist, contributing his characteristic aggression to the emerging sound. Lee Rausch becomes the first stable drummer, allowing the band to start performing live at Los Angeles clubs. This formation marks Megadeth's first steps in the Californian underground circuit."
+      },
+      "albums": [],
+      "image": "/images/formaciones/83-84.webp",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "kerry-king",
+          "name": "Kerry King",
+          "instrument": {
+            "es": "Guitarra",
+            "en": "Guitar"
+          },
+          "role": "guest"
+        },
+        {
+          "id": "david-ellefson",
+          "name": "David Ellefson",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "core"
+        },
+        {
+          "id": "lee-rausch",
+          "name": "Lee Rausch",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "first"
+        }
+      ]
+    },
+    {
+      "id": "killing-is-my-business-1984-1986",
+      "period": "1984-1986",
+      "yearStart": 1984,
+      "yearEnd": 1986,
+      "title": {
+        "es": "Era Killing Is My Business",
+        "en": "Killing Is My Business Era"
+      },
+      "description": {
+        "es": "Primera formación clásica con Chris Poland y Gar Samuelson, ambos provenientes del mundo del jazz fusion. Esta alineación marca el verdadero nacimiento del sonido distintivo de Megadeth: técnico, agresivo y melódicamente complejo. Con ellos se graba 'Killing Is My Business... And Business Is Good!', estableciendo las bases del thrash metal técnico que caracterizaría a la banda.",
+        "en": "First classic lineup with Chris Poland and Gar Samuelson, both coming from the jazz fusion world. This alignment marks the true birth of Megadeth's distinctive sound: technical, aggressive and melodically complex. With them they record 'Killing Is My Business... And Business Is Good!', establishing the foundations of the technical thrash metal that would characterize the band."
+      },
+      "albums": ["Killing Is My Business... And Business Is Good!"],
+      "image": "/images/historia/1983.webp",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "chris-poland",
+          "name": "Chris Poland",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "core"
+        },
+        {
+          "id": "david-ellefson",
+          "name": "David Ellefson",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "core"
+        },
+        {
+          "id": "gar-samuelson",
+          "name": "Gar Samuelson",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "core"
+        }
+      ]
+    },
+    {
+      "id": "peace-sells-1986-1987",
+      "period": "1986-1987",
+      "yearStart": 1986,
+      "yearEnd": 1987,
+      "title": {
+        "es": "Era Peace Sells",
+        "en": "Peace Sells Era"
+      },
+      "description": {
+        "es": "Consolidación del sonido clásico de Megadeth con la llegada del guitarrista Chris Poland y el baterista Gar Samuelson. Esta formación perfeccionó el equilibrio entre velocidad thrash y melodías sofisticadas. Peace Sells... But Who's Buying? se convirtió en el álbum que definió a Megadeth, con Poland aportando solos únicos con su estilo jazz-fusion y Samuelson proporcionando la base rítmica más compleja de la banda hasta ese momento. La química entre los cuatro músicos alcanzó su punto máximo durante las giras mundiales de 1986-1987.",
+        "en": "Consolidation of Megadeth's classic sound with the arrival of guitarist Chris Poland and drummer Gar Samuelson. This lineup perfected the balance between thrash speed and sophisticated melodies. Peace Sells... But Who's Buying? became the album that defined Megadeth, with Poland contributing unique solos with his jazz-fusion style and Samuelson providing the most complex rhythmic foundation the band had achieved to that point. The chemistry between the four musicians reached its peak during the 1986-1987 world tours."
+      },
+      "albums": ["Peace Sells... But Who's Buying?"],
+      "image": "/images/historia/1986.jpg",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "chris-poland",
+          "name": "Chris Poland",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "core"
+        },
+        {
+          "id": "david-ellefson",
+          "name": "David Ellefson",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "core"
+        },
+        {
+          "id": "gar-samuelson",
+          "name": "Gar Samuelson",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "core"
+        }
+      ]
+    },
+    {
+      "id": "so-far-so-good-1987-1989",
+      "period": "1987-1989",
+      "yearStart": 1987,
+      "yearEnd": 1989,
+      "title": {
+        "es": "Era So Far, So Good",
+        "en": "So Far, So Good Era"
+      },
+      "description": {
+        "es": "Jeff Young y Chuck Behler reemplazan a Poland y Samuelson. Grabación de So Far, So Good... So What!",
+        "en": "Jeff Young and Chuck Behler replace Poland and Samuelson. Recording of So Far, So Good... So What!"
+      },
+      "albums": ["So Far, So Good... So What!"],
+      "image": "/images/historia/1987.webp",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "jeff-young",
+          "name": "Jeff Young",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "core"
+        },
+        {
+          "id": "david-ellefson",
+          "name": "David Ellefson",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "core"
+        },
+        {
+          "id": "chuck-behler",
+          "name": "Chuck Behler",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "core"
+        }
+      ]
+    },
+    {
+      "id": "era-clasica-1989-1998",
+      "period": "1989-1998",
+      "yearStart": 1989,
+      "yearEnd": 1998,
+      "title": {
+        "es": "Era Clásica",
+        "en": "Classic Era"
+      },
+      "description": {
+        "es": "La formación más exitosa y aclamada de la historia de Megadeth. Con la llegada de Marty Friedman y Nick Menza, la banda alcanzó su apogeo artístico y comercial. Esta alineación dorada combinó la agresividad thrash clásica con una sofisticación musical sin precedentes. Rust in Peace es considerado universalmente como una obra maestra del metal, con composiciones complejas como 'Holy Wars' y 'Hangar 18' que muestran la perfecta química entre Mustaine y Friedman. La precisión rítmica de Menza y el bajo melódico de Ellefson completaron una sección rítmica imparable. Esta formación dominó los años 90 y estableció estándares técnicos que influenciaron generaciones de músicos de metal.",
+        "en": "The most successful and acclaimed lineup in Megadeth's history. With the arrival of Marty Friedman and Nick Menza, the band reached its artistic and commercial peak. This golden lineup combined classic thrash aggression with unprecedented musical sophistication. Rust in Peace is universally considered a metal masterpiece, with complex compositions like 'Holy Wars' and 'Hangar 18' showcasing the perfect chemistry between Mustaine and Friedman. Menza's rhythmic precision and Ellefson's melodic bass completed an unstoppable rhythm section. This lineup dominated the 90s and set technical standards that influenced generations of metal musicians."
+      },
+      "albums": [
+        "Rust in Peace",
+        "Countdown to Extinction",
+        "Youthanasia",
+        "Cryptic Writings"
+      ],
+      "image": "/images/historia/1989.jpg",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "marty-friedman",
+          "name": "Marty Friedman",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "core"
+        },
+        {
+          "id": "david-ellefson",
+          "name": "David Ellefson",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "core"
+        },
+        {
+          "id": "nick-menza",
+          "name": "Nick Menza",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "core"
+        }
+      ]
+    },
+    {
+      "id": "cambio-baterista-1998-2000",
+      "period": "1998-2000",
+      "yearStart": 1998,
+      "yearEnd": 2000,
+      "title": {
+        "es": "Cambio de Baterista",
+        "en": "Drummer Change"
+      },
+      "description": {
+        "es": "Jimmy DeGrasso reemplaza a Nick Menza. La banda explora nuevos sonidos con Risk.",
+        "en": "Jimmy DeGrasso replaces Nick Menza. The band explores new sounds with Risk."
+      },
+      "albums": ["Risk"],
+      "image": "/images/historia/1998.webp",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "marty-friedman",
+          "name": "Marty Friedman",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "core"
+        },
+        {
+          "id": "david-ellefson",
+          "name": "David Ellefson",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "core"
+        },
+        {
+          "id": "jimmy-degrasso",
+          "name": "Jimmy DeGrasso",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "new"
+        }
+      ]
+    },
+    {
+      "id": "world-needs-hero-2000-2002",
+      "period": "2000-2002",
+      "yearStart": 2000,
+      "yearEnd": 2002,
+      "title": {
+        "es": "Era The World Needs a Hero",
+        "en": "The World Needs a Hero Era"
+      },
+      "description": {
+        "es": "Al Pitrelli reemplaza a Marty Friedman. Regreso a sonidos más pesados antes de la disolución temporal.",
+        "en": "Al Pitrelli replaces Marty Friedman. Return to heavier sounds before temporary dissolution."
+      },
+      "albums": ["The World Needs a Hero"],
+      "image": "/images/historia/2000.webp",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "al-pitrelli",
+          "name": "Al Pitrelli",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "new"
+        },
+        {
+          "id": "david-ellefson",
+          "name": "David Ellefson",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "core"
+        },
+        {
+          "id": "jimmy-degrasso",
+          "name": "Jimmy DeGrasso",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "continuing"
+        }
+      ]
+    },
+    {
+      "id": "system-has-failed-2004",
+      "period": "2004",
+      "yearStart": 2004,
+      "yearEnd": 2004,
+      "title": {
+        "es": "El Renacimiento",
+        "en": "The Rebirth"
+      },
+      "description": {
+        "es": "Regreso de Mustaine tras su lesión en el brazo. Para The System Has Failed empleó músicos de sesión de primer nivel, incluyendo el regreso fugaz de Chris Poland tras 17 años. El álbum marcó oficialmente el renacimiento de Megadeth, aunque inicialmente fue concebido como proyecto solista.",
+        "en": "Mustaine's return after his arm injury. For The System Has Failed he employed top-level session musicians, including Chris Poland's brief return after 17 years. The album officially marked Megadeth's rebirth, although initially conceived as a solo project."
+      },
+      "albums": ["The System Has Failed"],
+      "image": "/images/formaciones/missing.png",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "chris-poland",
+          "name": "Chris Poland",
+          "instrument": {
+            "es": "Guitarra (Sesión)",
+            "en": "Guitar (Session)"
+          },
+          "role": "guest"
+        },
+        {
+          "id": "jimmie-lee-sloas",
+          "name": "Jimmie Lee Sloas",
+          "instrument": {
+            "es": "Bajo (Sesión)",
+            "en": "Bass (Session)"
+          },
+          "role": "session"
+        },
+        {
+          "id": "vinnie-colaiuta",
+          "name": "Vinnie Colaiuta",
+          "instrument": {
+            "es": "Batería (Sesión)",
+            "en": "Drums (Session)"
+          },
+          "role": "session"
+        }
+      ]
+    },
+    {
+      "id": "that-one-night-2004-2006",
+      "period": "2004-2006",
+      "yearStart": 2004,
+      "yearEnd": 2006,
+      "title": {
+        "es": "Era That One Night",
+        "en": "That One Night Era"
+      },
+      "description": {
+        "es": "Primera formación de gira del regreso. Glen y Shawn Drover se unen a Mustaine, junto con James MacDonough al bajo. Nick Menza ensayó brevemente pero fue reemplazado por Shawn Drover seis días antes del primer show. Esta alineación grabó el DVD en vivo 'That One Night: Live in Buenos Aires'.",
+        "en": "First touring lineup of the comeback. Glen and Shawn Drover join Mustaine, along with James MacDonough on bass. Nick Menza rehearsed briefly but was replaced by Shawn Drover six days before the first show. This lineup recorded the live DVD 'That One Night: Live in Buenos Aires'."
+      },
+      "albums": ["That One Night: Live in Buenos Aires"],
+      "image": "/images/historia/2004.webp",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "glen-drover",
+          "name": "Glen Drover",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "new"
+        },
+        {
+          "id": "james-macdonough",
+          "name": "James MacDonough",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "new"
+        },
+        {
+          "id": "shawn-drover",
+          "name": "Shawn Drover",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "new"
+        }
+      ]
+    },
+    {
+      "id": "united-abominations-2006-2008",
+      "period": "2006-2008",
+      "yearStart": 2006,
+      "yearEnd": 2008,
+      "title": {
+        "es": "Era United Abominations",
+        "en": "United Abominations Era"
+      },
+      "description": {
+        "es": "James LoMenzo reemplaza a MacDonough en 2006. Esta formación combinó la experiencia de Mustaine con la química de los hermanos Drover y el oficio de LoMenzo. Grabaron 'United Abominations', que devolvió a Megadeth a un sonido thrash poderoso e incluyó un dueto con Cristina Scabbia en una nueva versión de 'À Tout le Monde'.",
+        "en": "James LoMenzo replaces MacDonough in 2006. This lineup combined Mustaine's experience with the Drover brothers' chemistry and LoMenzo's craftsmanship. They recorded 'United Abominations', which returned Megadeth to a powerful thrash sound and included a duet with Cristina Scabbia on a new version of 'À Tout le Monde'."
+      },
+      "albums": ["United Abominations"],
+      "image": "/images/historia/2006.webp",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "glen-drover",
+          "name": "Glen Drover",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "core"
+        },
+        {
+          "id": "james-lomenzo",
+          "name": "James LoMenzo",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "new"
+        },
+        {
+          "id": "shawn-drover",
+          "name": "Shawn Drover",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "core"
+        }
+      ]
+    },
+    {
+      "id": "endgame-era-2008-2010",
+      "period": "2008-2010",
+      "yearStart": 2008,
+      "yearEnd": 2010,
+      "title": {
+        "es": "Era Endgame",
+        "en": "Endgame Era"
+      },
+      "description": {
+        "es": "Chris Broderick reemplaza a Glen Drover en 2008, aportando virtuosismo técnico excepcional. Esta formación grabó el aclamado 'Endgame' y participó en el histórico tour Big Four junto a Metallica, Slayer y Anthrax. También grabaron 'Rust in Peace Live', celebrando el 20º aniversario del álbum clásico.",
+        "en": "Chris Broderick replaces Glen Drover in 2008, bringing exceptional technical virtuosity. This lineup recorded the acclaimed 'Endgame' and participated in the historic Big Four tour alongside Metallica, Slayer and Anthrax. They also recorded 'Rust in Peace Live', celebrating the 20th anniversary of the classic album."
+      },
+      "albums": ["Endgame", "Rust in Peace Live"],
+      "image": "/images/historia/2008.webp",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "chris-broderick",
+          "name": "Chris Broderick",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "virtuoso"
+        },
+        {
+          "id": "james-lomenzo",
+          "name": "James LoMenzo",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "core"
+        },
+        {
+          "id": "shawn-drover",
+          "name": "Shawn Drover",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "core"
+        }
+      ]
+    },
+    {
+      "id": "ellefson-return-2010-2014",
+      "period": "2010-2014",
+      "yearStart": 2010,
+      "yearEnd": 2014,
+      "title": {
+        "es": "Regreso de Ellefson",
+        "en": "Ellefson's Return"
+      },
+      "description": {
+        "es": "David Ellefson regresa oficialmente en 2010 tras ocho años de ausencia, reemplazando a LoMenzo. Esta formación grabó 'Th1rt3en' (primera grabación de Ellefson desde 2001) y 'Super Collider'. Participaron en múltiples giras mundiales hasta que Broderick y Shawn Drover anunciaron inesperadamente su salida a fines de 2014.",
+        "en": "David Ellefson officially returns in 2010 after eight years of absence, replacing LoMenzo. This lineup recorded 'Th1rt3en' (Ellefson's first recording since 2001) and 'Super Collider'. They participated in multiple world tours until Broderick and Shawn Drover unexpectedly announced their departure at the end of 2014."
+      },
+      "albums": ["Th1rt3en", "Super Collider"],
+      "image": "/images/historia/2010.jpg",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "chris-broderick",
+          "name": "Chris Broderick",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "virtuoso"
+        },
+        {
+          "id": "david-ellefson",
+          "name": "David Ellefson",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "returning"
+        },
+        {
+          "id": "shawn-drover",
+          "name": "Shawn Drover",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "stable"
+        }
+      ]
+    },
+    {
+      "id": "dystopia-kiko-adler-2015-2016",
+      "period": "2015-2016",
+      "yearStart": 2015,
+      "yearEnd": 2016,
+      "title": {
+        "es": "Era Dystopia (Kiko & Adler)",
+        "en": "Dystopia Era (Kiko & Adler)"
+      },
+      "description": {
+        "es": "Renovación completa con Kiko Loureiro (ex-Angra) y Chris Adler (Lamb of God). Esta formación grabó 'Dystopia', que le valió a Megadeth su primer Grammy. Kiko aportó melodías progresivas y Adler grabó como músico invitado. El álbum devolvió a la banda a un sonido thrash contundente tras años de experimentación.",
+        "en": "Complete renewal with Kiko Loureiro (ex-Angra) and Chris Adler (Lamb of God). This lineup recorded 'Dystopia', which earned Megadeth their first Grammy. Kiko contributed progressive melodies and Adler recorded as a guest musician. The album returned the band to a forceful thrash sound after years of experimentation."
+      },
+      "albums": ["Dystopia"],
+      "image": "/images/historia/2015.webp",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "kiko-loureiro",
+          "name": "Kiko Loureiro",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "international"
+        },
+        {
+          "id": "david-ellefson",
+          "name": "David Ellefson",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "veteran"
+        },
+        {
+          "id": "chris-adler",
+          "name": "Chris Adler",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "guest"
+        }
+      ]
+    },
+    {
+      "id": "verbeuren-era-2016-2021",
+      "period": "2016-2021",
+      "yearStart": 2016,
+      "yearEnd": 2021,
+      "title": {
+        "es": "Era Verbeuren",
+        "en": "Verbeuren Era"
+      },
+      "description": {
+        "es": "Dirk Verbeuren (ex-Soilwork) reemplaza a Chris Adler como baterista permanente a mediados de 2016. Esta alineación realizó giras extensas y trabajó en nuevo material. Mustaine superó su batalla contra el cáncer de garganta durante este período. La era terminó abruptamente en mayo de 2021 cuando Ellefson fue desvinculado debido a una controversia personal.",
+        "en": "Dirk Verbeuren (ex-Soilwork) replaces Chris Adler as permanent drummer in mid-2016. This lineup performed extensive tours and worked on new material. Mustaine overcame his throat cancer battle during this period. The era ended abruptly in May 2021 when Ellefson was dismissed due to a personal controversy."
+      },
+      "albums": ["The Sick, The Dying... and The Dead!"],
+      "image": "/images/historia/20162.jpg",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "leader"
+        },
+        {
+          "id": "kiko-loureiro",
+          "name": "Kiko Loureiro",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "core"
+        },
+        {
+          "id": "david-ellefson",
+          "name": "David Ellefson",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "veteran"
+        },
+        {
+          "id": "dirk-verbeuren",
+          "name": "Dirk Verbeuren",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "precision"
+        }
+      ]
+    },
+    {
+      "id": "lomenzo-return-2021-2023",
+      "period": "2021-2023",
+      "yearStart": 2021,
+      "yearEnd": 2023,
+      "title": {
+        "es": "Regreso de LoMenzo",
+        "en": "LoMenzo's Return"
+      },
+      "description": {
+        "es": "James LoMenzo regresa como bajista tras la salida de Ellefson. Inicialmente como músico de gira en 2021, se convierte en miembro oficial en 2022. Esta formación realizó las giras de 'The Sick, The Dying... and The Dead!' con Steve Di Giorgio grabando el bajo en el álbum como sesionista. A mediados de 2023, Kiko Loureiro se alejó temporalmente por asuntos familiares.",
+        "en": "James LoMenzo returns as bassist after Ellefson's departure. Initially as touring musician in 2021, he becomes official member in 2022. This lineup performed 'The Sick, The Dying... and The Dead!' tours with Steve Di Giorgio recording bass on the album as session player. In mid-2023, Kiko Loureiro temporarily stepped away for family matters."
+      },
+      "albums": [],
+      "image": "/images/formaciones/2021.jpg",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "eternal"
+        },
+        {
+          "id": "kiko-loureiro",
+          "name": "Kiko Loureiro",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "core"
+        },
+        {
+          "id": "james-lomenzo",
+          "name": "James LoMenzo",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "veteran"
+        },
+        {
+          "id": "dirk-verbeuren",
+          "name": "Dirk Verbeuren",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "powerhouse"
+        }
+      ]
+    },
+    {
+      "id": "formacion-actual-2023-presente",
+      "period": "2023-presente",
+      "yearStart": 2023,
+      "yearEnd": 2025,
+      "title": {
+        "es": "Formación Actual",
+        "en": "Current Lineup"
+      },
+      "description": {
+        "es": "Teemu Mäntysaari (ex-Wintersun) reemplaza a Kiko Loureiro como guitarrista oficial tras ser recomendado por el propio Kiko. En noviembre de 2023, Mustaine confirmó a Teemu como miembro permanente, mientras Loureiro anunció su salida definitiva. Esta alineación combina la presencia fundacional de Mustaine con talentos internacionales, asegurando la continuidad hacia el futuro.",
+        "en": "Teemu Mäntysaari (ex-Wintersun) replaces Kiko Loureiro as official guitarist after being recommended by Kiko himself. In November 2023, Mustaine confirmed Teemu as permanent member, while Loureiro announced his definitive departure. This lineup combines Mustaine's foundational presence with international talents, ensuring continuity toward the future."
+      },
+      "albums": [],
+      "image": "/images/formaciones/2025.webp",
+      "members": [
+        {
+          "id": "dave-mustaine",
+          "name": "Dave Mustaine",
+          "instrument": {
+            "es": "Voz y Guitarra",
+            "en": "Vocals & Guitar"
+          },
+          "role": "eternal"
+        },
+        {
+          "id": "teemu-mantysaari",
+          "name": "Teemu Mäntysaari",
+          "instrument": {
+            "es": "Guitarra Líder",
+            "en": "Lead Guitar"
+          },
+          "role": "current"
+        },
+        {
+          "id": "james-lomenzo",
+          "name": "James LoMenzo",
+          "instrument": {
+            "es": "Bajo",
+            "en": "Bass"
+          },
+          "role": "veteran"
+        },
+        {
+          "id": "dirk-verbeuren",
+          "name": "Dirk Verbeuren",
+          "instrument": {
+            "es": "Batería",
+            "en": "Drums"
+          },
+          "role": "powerhouse"
+        }
+      ]
+    }
+  ]
+}

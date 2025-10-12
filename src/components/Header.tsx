@@ -55,6 +55,8 @@ export default function Header() {
     { label: t("videos"), href: "/videos" },
     { label: t("dvds"), href: "/dvds" },
     { label: t("history"), href: "/historia" },
+    { label: t("lineups"), href: "/formaciones" },
+    { label: t("members"), href: "/miembros" },
   ];
 
   const handleLanguageClick = (event: React.MouseEvent<HTMLElement>) => {

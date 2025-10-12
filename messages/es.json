@@ -10,7 +10,9 @@
     "discography": "Discografía",
     "videos": "Videos",
     "dvds": "DVDs",
-    "history": "Historia"
+    "history": "Historia",
+    "lineups": "Formaciones",
+    "members": "Miembros"
   },
   "history": {
     "activeYears": "Años activos",
@@ -355,5 +357,60 @@
     "liveAlbums": "Álbumes en Vivo",
     "compilations": "Compilaciones",
     "eps": "EPs"
+  },
+  "lineups": {
+    "title": "Formaciones",
+    "subtitle": "Evolución de la alineación de Megadeth a través de 40 años",
+    "timeline": "Línea de Tiempo",
+    "members": "Miembros",
+    "membersSubtitle": "Conoce a todos los músicos que han formado parte de Megadeth a lo largo de su historia",
+    "currentLineup": "Formación Actual",
+    "classicLineup": "Formación Clásica",
+    "formerMembers": "Miembros Anteriores",
+    "currentPeriod": "2023 – presente",
+    "classicPeriod": "1990 – 1998",
+    "currentMembersNames": "Dave Mustaine, James LoMenzo, Dirk Verbeuren, Teemu Mäntysaari",
+    "classicMembersNames": "Dave Mustaine, David Ellefson, Marty Friedman, Nick Menza",
+    "member": {
+      "biography": "Biografía",
+      "albums": "Álbumes con Megadeth",
+      "otherProjects": "Otros Proyectos",
+      "instruments": "Instrumentos",
+      "period": "Período",
+      "role": "Rol",
+      "birthYear": "Nacido en",
+      "deathYear": "Fallecido en",
+      "country": "País",
+      "nickname": "Apodo",
+      "personalInfo": "Información Personal"
+    },
+    "formation": {
+      "period": "Período",
+      "albums": "Álbumes",
+      "members": "Miembros",
+      "description": "Descripción"
+    },
+    "classifications": {
+      "founder": "Fundador",
+      "leader": "Líder",
+      "founding": "Miembro Fundador",
+      "first": "Primer Miembro",
+      "core": "Miembro Principal",
+      "guest": "Invitado",
+      "session": "Músico de Sesión",
+      "touring": "Músico de Gira",
+      "temporary": "Temporal",
+      "new": "Nuevo",
+      "virtuoso": "Virtuoso",
+      "returning": "Regresando",
+      "stable": "Estable",
+      "international": "Internacional",
+      "veteran": "Veterano",
+      "precision": "Precisión",
+      "eternal": "Eterno",
+      "current": "Actual",
+      "powerhouse": "Fuerza",
+      "continuing": "Continuando"
+    }
   }
 }
