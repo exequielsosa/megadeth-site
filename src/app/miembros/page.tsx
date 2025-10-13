@@ -131,10 +131,10 @@ export default function MembersPage() {
           <Typography
             variant="h6"
             color="text.secondary"
-            sx={{ maxWidth: 800, mx: "auto" }}
+            fontWeight={500}
+            sx={{ mx: "auto", fontSize: { xs: 16, md: 20 } }}
           >
-            Conoce a todos los músicos que han formado parte de Megadeth a lo
-            largo de su historia
+            {t("meet")}
           </Typography>
         </Box>
 
