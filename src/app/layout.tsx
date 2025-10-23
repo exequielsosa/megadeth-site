@@ -20,8 +20,11 @@ export async function generateMetadata(): Promise<Metadata> {
   const keywordsByLocale = {
     es: [
       "Megadeth",
-      "metal",
-      "thrash metal",
+      "Iron Maiden",
+      "Anthrax",
+      "Run For Your Lives Tour",
+      "gira conjunta",
+      "gira norteamericana",
       "gira final",
       "despedida",
       "This Was Our Life Tour",
@@ -51,11 +54,16 @@ export async function generateMetadata(): Promise<Metadata> {
       "farewell tour",
       "retiro",
       "fin de una era",
+      "invitados especiales",
+      "colaboración metal",
     ],
     en: [
       "Megadeth",
-      "metal",
-      "thrash metal",
+      "Iron Maiden",
+      "Anthrax",
+      "Run For Your Lives Tour",
+      "joint tour",
+      "North American tour",
       "final tour",
       "farewell",
       "This Was Our Life Tour",
@@ -85,17 +93,19 @@ export async function generateMetadata(): Promise<Metadata> {
       "retirement",
       "end of an era",
       "goodbye tour",
+      "special guests",
+      "metal collaboration",
     ],
   };
 
   const titleByLocale = {
-    es: "Megadeth — Gira Final 'This Was Our Life Tour' y Álbum de Despedida",
-    en: "Megadeth — Final Tour 'This Was Our Life Tour' and Farewell Album",
+    es: "Megadeth + Iron Maiden + Anthrax — Gira 'Run For Your Lives' y Despedida",
+    en: "Megadeth + Iron Maiden + Anthrax — 'Run For Your Lives' Tour & Farewell",
   };
 
   const descriptionByLocale = {
-    es: "Megadeth anuncia su gira final 'This Was Our Life Tour' por Sudamérica. Noticias, fechas y adelantos del álbum de despedida. Burnation, Portals to Oblivion y más. Fan site no oficial.",
-    en: "Megadeth announces final tour 'This Was Our Life Tour' through South America. News, dates and previews of the farewell album. Burnation, Portals to Oblivion and more. Unofficial fan site.",
+    es: "Megadeth se une a Iron Maiden y Anthrax para la gira 'Run For Your Lives' por Norteamérica y Europa, como parte de su despedida. Noticias, fechas, álbum final y adelantos exclusivos. Fan site no oficial.",
+    en: "Megadeth joins Iron Maiden and Anthrax for the 'Run For Your Lives' tour across North America and Europe, as part of their farewell. News, dates, final album and exclusive previews. Unofficial fan site.",
   };
 
   return {
