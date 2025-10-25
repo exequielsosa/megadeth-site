@@ -1,6 +1,7 @@
 import { LineupFormation } from "@/types";
 import lineupsData from "@/constants/lineups.json";
 import { Metadata } from "next";
+import { getLocale } from "next-intl/server";
 
 // Generate static params for all lineups
 export async function generateStaticParams() {
@@ -18,24 +19,28 @@ export async function generateMetadata({
   params: Promise<{ lineupId: string }>;
 }): Promise<Metadata> {
   const { lineupId } = await params;
+  const locale = await getLocale();
   const lineups: LineupFormation[] = lineupsData.lineups;
   const lineup = lineups.find((l) => l.id === lineupId);
 
   if (!lineup) {
     return {
-      title: "Formación no encontrada",
+      title: locale === "en" ? "Lineup not found" : "Formación no encontrada",
     };
   }
 
-  const title = lineup.title.es; // Default to Spanish for metadata
-  const description = lineup.description.es;
+  const lang = (locale === "en" ? "en" : "es") as "es" | "en";
+  const title = lineup.title[lang] || lineup.title.es;
+  const description = lineup.description[lang] || lineup.description.es;
 
   return {
-    title: `${title} - Formaciones Megadeth`,
-    description: description,
+    title: `${title} - ${
+      locale === "en" ? "Megadeth Lineups" : "Formaciones Megadeth"
+    }`,
+    description,
     openGraph: {
       title: `${title} - Megadeth`,
-      description: description,
+      description,
       images: [lineup.image],
     },
   };
