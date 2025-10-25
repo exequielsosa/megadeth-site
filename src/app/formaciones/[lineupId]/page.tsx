@@ -188,10 +188,10 @@ export default function LineupDetailPage({ params }: PageProps) {
                         </Typography>
 
                         <Chip
-                          label={
-                            t(`classifications.${lineupMember.role}`) ||
-                            lineupMember.role
-                          }
+                          label={getLocalizedText({
+                            es: t(`classifications.${lineupMember.role}`),
+                            en: t(`classifications.${lineupMember.role}`),
+                          })}
                           size="small"
                           color={
                             lineupMember.role === "founder"
