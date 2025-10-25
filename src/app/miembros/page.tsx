@@ -1,4 +1,83 @@
-"use client";
+// This file is a server component, so 'use client' should not be present.
+// Removing 'use client' to allow for export of generateMetadata.
+
+// "use client"; // This line is being removed
+import { getLocale, getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const t = await getTranslations("lineups");
+
+  const title = `${t("members")} | Megadeth`;
+  const description = t("membersSubtitle");
+  const keywords = [
+    "Megadeth",
+    "miembros",
+    "members",
+    "músicos Megadeth",
+    "Dave Mustaine",
+    "Nick Menza",
+    "Marty Friedman",
+    "David Ellefson",
+    "James LoMenzo",
+    "Dirk Verbeuren",
+    "Teemu Mäntysaari",
+    "alineaciones Megadeth",
+    "thrash metal",
+    "bandas metal",
+    "historia Megadeth",
+  ];
+
+  return {
+    title,
+    description,
+    keywords,
+    openGraph: {
+      title,
+      description,
+      url: "/miembros",
+      siteName: "Megadeth Fan Site",
+      locale: locale === "es" ? "es_ES" : "en_US",
+      type: "website",
+      images: [
+        {
+          url: "/images/lineups/og-members.jpg",
+          width: 1200,
+          height: 630,
+          alt:
+            locale === "es"
+              ? "Miembros de Megadeth - Todos los músicos de la banda"
+              : "Megadeth Members - All musicians in the band",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/lineups/og-members.jpg"],
+      creator: "@MegadethFanSite",
+    },
+    alternates: {
+      canonical: "/miembros",
+      languages: {
+        es: "/es/miembros",
+        en: "/en/miembros",
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+  };
+}
 
 import { Typography, Box, Grid, Card, CardContent, Chip } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
