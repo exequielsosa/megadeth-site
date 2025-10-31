@@ -56,6 +56,21 @@ export async function generateMetadata(): Promise<Metadata> {
       "fin de una era",
       "invitados especiales",
       "colaboración metal",
+      "Ride The Lightning",
+      "Metallica",
+      "versión Megadeth",
+      "cover Metallica",
+      "James Hetfield",
+      "Dave Mustaine Metallica",
+      "noticia Ride The Lightning",
+      "gira Argentina",
+      "Megadeth en Argentina",
+      "Megadeth Lima",
+      "Megadeth Bogotá",
+      "Megadeth Buenos Aires",
+      "Megadeth São Paulo",
+      "Megadeth Santiago",
+      "Megadeth México",
     ],
     en: [
       "Megadeth",
@@ -95,17 +110,32 @@ export async function generateMetadata(): Promise<Metadata> {
       "goodbye tour",
       "special guests",
       "metal collaboration",
+      "Ride The Lightning",
+      "Metallica",
+      "Megadeth version",
+      "Metallica cover",
+      "James Hetfield",
+      "Dave Mustaine Metallica",
+      "Ride The Lightning news",
+      "Megadeth Argentina tour",
+      "Megadeth in Argentina",
+      "Megadeth Lima",
+      "Megadeth Bogotá",
+      "Megadeth Buenos Aires",
+      "Megadeth São Paulo",
+      "Megadeth Santiago",
+      "Megadeth Mexico",
     ],
   };
 
   const titleByLocale = {
-    es: "Megadeth + Iron Maiden + Anthrax — Gira 'Run For Your Lives' y Despedida",
-    en: "Megadeth + Iron Maiden + Anthrax — 'Run For Your Lives' Tour & Farewell",
+    es: "Megadeth: Gira Argentina, Ride The Lightning y Run For Your Lives — Iron Maiden + Anthrax",
+    en: "Megadeth: Argentina Tour, Ride The Lightning & Run For Your Lives — Iron Maiden + Anthrax",
   };
 
   const descriptionByLocale = {
-    es: "Megadeth se une a Iron Maiden y Anthrax para la gira 'Run For Your Lives' por Norteamérica y Europa, como parte de su despedida. Noticias, fechas, álbum final y adelantos exclusivos. Fan site no oficial.",
-    en: "Megadeth joins Iron Maiden and Anthrax for the 'Run For Your Lives' tour across North America and Europe, as part of their farewell. News, dates, final album and exclusive previews. Unofficial fan site.",
+    es: "Megadeth anuncia gira por Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México en 2026. Además, publicará una versión de Ride The Lightning de Metallica en su álbum despedida. Toda la info de la gira 'Run For Your Lives' junto a Iron Maiden y Anthrax, fechas, noticias y adelantos exclusivos. Fan site no oficial.",
+    en: "Megadeth announces tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico in 2026. Also, will release a version of Metallica's Ride The Lightning on their farewell album. All info about the 'Run For Your Lives' tour with Iron Maiden and Anthrax, dates, news and exclusive previews. Unofficial fan site.",
   };
 
   return {

@@ -87,6 +87,11 @@ export default function TourPage() {
   const t = useTranslations("tour");
   const locale = useLocale();
 
+  // Ordenar por fecha ascendente
+  const sortedTourDates = [...tourDates].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
     <ContainerGradient>
       <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
@@ -109,7 +114,7 @@ export default function TourPage() {
         </Box>
 
         <Grid container spacing={3}>
-          {tourDates.map((show, index) => (
+          {sortedTourDates.map((show, index) => (
             <Grid key={index} size={{ xs: 12, md: 6, lg: 4 }}>
               <Card
                 sx={{

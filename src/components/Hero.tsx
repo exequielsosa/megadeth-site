@@ -10,6 +10,8 @@ import Divider from "@mui/material/Divider";
 import AlbumTeasers from "./AlbumTeasers";
 import NewTour from "./NewTour";
 import IronMaidenTour from "./IronMaidenTour";
+import LatamTour from "./LatamTour";
+import Ride from "./Ride";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -180,7 +182,14 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+
         <Divider sx={{ my: 6, width: "100%" }} />
+        <LatamTour />
+        <Divider sx={{ my: 6, width: "100%" }} />
+
+        <Ride />
+        <Divider sx={{ my: 6, width: "100%" }} />
+
         <IronMaidenTour />
         <Divider sx={{ my: 6, width: "100%" }} />
 
