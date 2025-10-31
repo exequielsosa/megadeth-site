@@ -7,7 +7,7 @@ import Countdown from "./Countdown";
 import YouTubeEmbed from "./YouTubeEmbed";
 import Image from "next/image";
 import Divider from "@mui/material/Divider";
-import AlbumTeasers from "./AlbumTeasers";
+// import AlbumTeasers from "./AlbumTeasers";
 import NewTour from "./NewTour";
 import IronMaidenTour from "./IronMaidenTour";
 import LatamTour from "./LatamTour";
@@ -204,7 +204,7 @@ export default function Hero() {
           <YouTubeEmbed videoId="ECXg-a7XZQI" title={t("latestVideo")} />
         </Box>
       </Container>
-      <AlbumTeasers />
+      {/* <AlbumTeasers /> */}
     </ContainerGradient>
   );
 }
