@@ -197,7 +197,7 @@ export default async function RootLayout({
               <Header />
               <main style={{ flex: 1 }}>
                 {children}
-                <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
+                <GoogleAnalytics gaId="G-3MT8DZR057" />
               </main>
               <Footer />
             </ThemeRegistry>
