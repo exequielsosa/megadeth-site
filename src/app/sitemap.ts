@@ -1,6 +1,3 @@
-export const runtime = 'nodejs';     
-export const revalidate = 86400;     
-
 import { MetadataRoute } from 'next';
 import lineupsData from '@/constants/lineups.json';
 import membersData from '@/constants/members.json';
