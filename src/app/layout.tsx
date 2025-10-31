@@ -6,7 +6,7 @@ import ThemeRegistry from "@/theme/ThemeRegistry";
 import { ColorModeProvider } from "@/theme/useColorMode";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -182,9 +182,6 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={poppins.variable} suppressHydrationWarning>
-      <head>
-        <GoogleAnalytics />
-      </head>
       <body
         style={{
           margin: 0,
@@ -198,7 +195,10 @@ export default async function RootLayout({
           <ColorModeProvider>
             <ThemeRegistry>
               <Header />
-              <main style={{ flex: 1 }}>{children}</main>
+              <main style={{ flex: 1 }}>
+                {children}
+                <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
+              </main>
               <Footer />
             </ThemeRegistry>
           </ColorModeProvider>
