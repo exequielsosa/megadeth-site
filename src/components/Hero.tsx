@@ -10,6 +10,8 @@ import Divider from "@mui/material/Divider";
 import AlbumTeasers from "./AlbumTeasers";
 import NewTour from "./NewTour";
 import IronMaidenTour from "./IronMaidenTour";
+import LatamTour from "./LatamTour";
+import Ride from "./Ride";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -53,7 +55,7 @@ export default function Hero() {
               />
             </Box>
             <Box>
-              <Stack spacing={2} sx={{ mt: 3 }}>
+              <Stack spacing={2} sx={{ mt: 0 }}>
                 <Typography
                   variant="h4"
                   color="primary"
@@ -81,7 +83,6 @@ export default function Hero() {
                     <strong>{tAlbum("releaseDate")}:</strong>{" "}
                     {tAlbum("releaseDateValue")}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ fontSize: { xs: 14, md: 17 } }}
@@ -89,7 +90,6 @@ export default function Hero() {
                     <strong>{tAlbum("firstSingle")}:</strong> &quot;
                     {tAlbum("firstSingleValue")}&quot;
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ fontSize: { xs: 14, md: 17 } }}
@@ -97,7 +97,6 @@ export default function Hero() {
                     <strong>{tAlbum("producedBy")}:</strong>{" "}
                     {tAlbum("producedByValue")}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ fontSize: { xs: 14, md: 17 } }}
@@ -105,7 +104,6 @@ export default function Hero() {
                     <strong>{tAlbum("finalLineup")}:</strong>{" "}
                     {tAlbum("finalLineupValue")}
                   </Typography>
-
                   <Typography
                     variant="body1"
                     sx={{ fontSize: { xs: 14, md: 17 } }}
@@ -113,13 +111,9 @@ export default function Hero() {
                     <strong>{tAlbum("includes")}:</strong>{" "}
                     {tAlbum("includesValue")}
                   </Typography>
-
                   <Typography
                     variant="body1"
-                    sx={{
-                      fontSize: { xs: 14, md: 17 },
-                      mt: 1,
-                    }}
+                    sx={{ fontSize: { xs: 14, md: 17 }, mt: 1 }}
                   >
                     <strong>{tAlbum("preOrder")}:</strong>{" "}
                     <Typography
@@ -143,6 +137,43 @@ export default function Hero() {
                   </Typography>
                 </Stack>
 
+                {/* Tracklist Section */}
+                <Box mt={3}>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 600,
+                      mb: 1,
+                      fontSize: { xs: 16, md: 22 },
+                    }}
+                  >
+                    Tracklist
+                  </Typography>
+                  <Stack spacing={0.5}>
+                    {[
+                      "TIPPING POINT",
+                      "I DON'T CARE",
+                      "HEY, GOD?!",
+                      "LET THERE BE SHRED",
+                      "PUPPET PARADE",
+                      "ANOTHER BAD DAY",
+                      "MADE TO KILL",
+                      "OBEY THE CALL",
+                      "I AM WAR",
+                      "THE LAST NOTE",
+                      "RIDE THE LIGHTNING (BONUS)",
+                    ].map((track, idx) => (
+                      <Typography
+                        key={track}
+                        variant="body2"
+                        sx={{ fontSize: { xs: 13, md: 16 }, pl: 1 }}
+                      >
+                        <strong>{idx + 1}.</strong> {track}
+                      </Typography>
+                    ))}
+                  </Stack>
+                </Box>
+
                 {/* Countdown Component */}
                 <Box mt={1}>
                   <Countdown />
@@ -151,7 +182,14 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+
         <Divider sx={{ my: 6, width: "100%" }} />
+        <LatamTour />
+        <Divider sx={{ my: 6, width: "100%" }} />
+
+        <Ride />
+        <Divider sx={{ my: 6, width: "100%" }} />
+
         <IronMaidenTour />
         <Divider sx={{ my: 6, width: "100%" }} />
 
