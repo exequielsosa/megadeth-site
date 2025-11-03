@@ -14,6 +14,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/historia', priority: 0.9, changeFreq: 'monthly' as const },
     { path: '/formaciones', priority: 0.8, changeFreq: 'monthly' as const },
     { path: '/miembros', priority: 0.8, changeFreq: 'monthly' as const },
+    { path: '/faq', priority: 0.7, changeFreq: 'monthly' as const },
+    { path: '/terminos', priority: 0.6, changeFreq: 'yearly' as const },
+    { path: '/privacidad', priority: 0.6, changeFreq: 'yearly' as const },
+    { path: '/contacto', priority: 0.7, changeFreq: 'monthly' as const },
   ];
 
   const sitemap: MetadataRoute.Sitemap = [];
