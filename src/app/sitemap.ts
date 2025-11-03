@@ -1,10 +1,12 @@
 import { MetadataRoute } from 'next';
 import lineupsData from '@/constants/lineups.json';
 import membersData from '@/constants/members.json';
+import discographyData from '@/constants/discography.json';
+import dvdData from '@/constants/dvd.json';
+import historiaData from '@/constants/historia.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://megadeth.com.ar';
-  
   const pages = [
     { path: '/', priority: 1, changeFreq: 'daily' as const },
     { path: '/tour', priority: 0.8, changeFreq: 'weekly' as const },
@@ -32,31 +34,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // Agregar versiones en español
-  pages.forEach(page => {
-    if (page.path !== '/') {
-      sitemap.push({
-        url: `${base}/es${page.path}`,
-        lastModified: new Date(),
-        changeFrequency: page.changeFreq,
-        priority: page.priority,
-      });
-    }
-  });
-
-  // Agregar versiones en inglés  
-  pages.forEach(page => {
-    if (page.path !== '/') {
-      sitemap.push({
-        url: `${base}/en${page.path}`,
-        lastModified: new Date(),
-        changeFrequency: page.changeFreq,
-        priority: page.priority,
-      });
-    }
-  });
-
   // Agregar páginas individuales de formaciones
+  // Formaciones dinámicas
   const lineups = lineupsData.lineups;
   lineups.forEach(lineup => {
     sitemap.push({
@@ -67,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // Agregar páginas individuales de miembros
+  // Miembros dinámicos
   const memberIds = Object.keys(membersData.members);
   memberIds.forEach(memberId => {
     sitemap.push({
@@ -77,6 +56,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     });
   });
+
+  // Discografía dinámica
+  if (Array.isArray(discographyData)) {
+    discographyData.forEach(album => {
+      if (album.id) {
+        sitemap.push({
+          url: `${base}/discography/${album.id}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        });
+      }
+    });
+  }
+
+  // DVDs dinámica
+  if (Array.isArray(dvdData)) {
+    // Función para normalizar el título a slug
+    const slugify = (str: string) =>
+      str
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+
+    dvdData.forEach((dvd) => {
+      const slug = dvd.title ? slugify(dvd.title) : undefined;
+      if (slug) {
+        sitemap.push({
+          url: `${base}/dvds/${slug}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        });
+      }
+    });
+  }
+
+  // Historia dinámica
+  if (historiaData && Array.isArray(historiaData.chapters)) {
+    historiaData.chapters.forEach(chapter => {
+      if (chapter.slug) {
+        sitemap.push({
+          url: `${base}/historia/${chapter.slug}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        });
+      }
+    });
+  }
 
   return sitemap;
 }
