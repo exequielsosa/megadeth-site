@@ -9,29 +9,29 @@ export default function FAQPage() {
     const faqJsonLd = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [
+      mainEntity: [
         {
           "@type": "Question",
-          "name": t("q1"),
-          "acceptedAnswer": {
+          name: t("q1"),
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": t("a1"),
+            text: t("a1"),
           },
         },
         {
           "@type": "Question",
-          "name": t("q2"),
-          "acceptedAnswer": {
+          name: t("q2"),
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": t("a2"),
+            text: t("a2"),
           },
         },
         {
           "@type": "Question",
-          "name": t("q3"),
-          "acceptedAnswer": {
+          name: t("q3"),
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": t("a3"),
+            text: t("a3"),
           },
         },
       ],
