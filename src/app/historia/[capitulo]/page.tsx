@@ -90,10 +90,10 @@ export async function generateMetadata({
         : ["/images/historia/megadeth-default-chapter.jpg"],
     },
     alternates: {
-      canonical: `/historia/${chapter.slug}`,
+      canonical: `https://www.megadeth.com.ar/historia/${chapter.slug}`,
       languages: {
-        es: `/es/historia/${chapter.slug}`,
-        en: `/en/historia/${chapter.slug}`,
+        es: `https://www.megadeth.com.ar/es/historia/${chapter.slug}`,
+        en: `https://www.megadeth.com.ar/en/historia/${chapter.slug}`,
       },
     },
   };

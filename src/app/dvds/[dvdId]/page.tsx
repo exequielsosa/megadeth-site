@@ -110,10 +110,10 @@ export async function generateMetadata({
     category: "entertainment",
     classification: "Thrash Metal DVD",
     alternates: {
-      canonical: `/dvds/${dvdId}`,
+      canonical: `https://www.megadeth.com.ar/dvds/${dvdId}`,
       languages: {
-        "es-ES": `/es/dvds/${dvdId}`,
-        "en-US": `/en/dvds/${dvdId}`,
+        "es-ES": `https://www.megadeth.com.ar/es/dvds/${dvdId}`,
+        "en-US": `https://www.megadeth.com.ar/en/dvds/${dvdId}`,
       },
     },
     robots: {
