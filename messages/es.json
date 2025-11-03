@@ -352,6 +352,11 @@
     "lineup": "Formación"
   },
   "footer": {
+    "siteDescription": "Noticias, fechas y discografía de Megadeth. Curado para fans. Rápido, simple y full responsive.",
+    "faq": "Preguntas frecuentes",
+    "terms": "Términos y condiciones",
+    "privacy": "Política de privacidad",
+    "contact": "Contacto",
     "disclaimer": "Fan site no oficial. © {year}"
   },
   "videos": {
@@ -425,5 +430,27 @@
       "powerhouse": "Fuerza",
       "continuing": "Continuando"
     }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Este sitio es oficial de Megadeth?",
+    "a1": "No, es un fan site no oficial dedicado a la banda Megadeth.",
+    "q2": "¿Dónde puedo encontrar fechas de la gira?",
+    "a2": "Las fechas se actualizan en la sección 'Gira' y en la página principal.",
+    "q3": "¿Cómo puedo contactar al equipo del sitio?",
+    "a3": "Puedes usar el formulario de contacto o escribir a megadethargentina77@gmail.com."
+  },
+  "terms": {
+    "title": "Términos y condiciones",
+    "body": "Este sitio es un fan site no oficial de Megadeth. El contenido es solo informativo y no representa a la banda ni a sus miembros. No se recopilan datos personales ni se realiza venta de productos. El uso del sitio implica la aceptación de estos términos."
+  },
+  "privacy": {
+    "title": "Política de privacidad",
+    "body": "Este sitio no recopila datos personales de los usuarios. No se utilizan cookies ni se realiza seguimiento de actividad. El único medio de contacto es el correo electrónico proporcionado en la sección de contacto."
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "¿Tienes dudas, sugerencias o quieres colaborar? Escríbenos a nuestro correo y te responderemos a la brevedad.",
+    "emailButton": "Enviar correo a megadethargentina77@gmail.com"
   }
 }
