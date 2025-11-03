@@ -182,6 +182,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={poppins.variable} suppressHydrationWarning>
+      <head>
+        <link rel="icon" type="image/webp" href="/icon.webp" />
+      </head>
       <body
         style={{
           margin: 0,
