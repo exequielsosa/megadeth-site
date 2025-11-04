@@ -96,7 +96,7 @@ export default function Footer() {
             color="text.secondary"
             sx={{ fontWeight: 400 }}
           >
-            © {new Date().getFullYear()} Megadeth Fan Site. {t("disclaimer")}
+            {t("disclaimer", { year: new Date().getFullYear() })}
           </Typography>
         </Box>
       </Container>
