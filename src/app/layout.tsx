@@ -130,13 +130,13 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 
   const titleByLocale = {
-    es: "Megadeth: Gira Argentina, Ride The Lightning y Run For Your Lives — Iron Maiden + Anthrax",
-    en: "Megadeth: Argentina Tour, Ride The Lightning & Run For Your Lives — Iron Maiden + Anthrax",
+    es: "Megadeth: Nuevo single 'I don't care', álbum final y gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
+    en: "Megadeth: New single 'I don't care', final album & 2026 Argentina / LATAM tour — Iron Maiden + Anthrax",
   };
 
   const descriptionByLocale = {
-    es: "Megadeth anuncia gira por Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México en 2026. Además, publicará una versión de Ride The Lightning de Metallica en su álbum despedida. Toda la info de la gira 'Run For Your Lives' junto a Iron Maiden y Anthrax, fechas, noticias y adelantos exclusivos. Fan site no oficial.",
-    en: "Megadeth announces tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico in 2026. Also, will release a version of Metallica's Ride The Lightning on their farewell album. All info about the 'Run For Your Lives' tour with Iron Maiden and Anthrax, dates, news and exclusive previews. Unofficial fan site.",
+    es: "Megadeth anuncia el lanzamiento de su nuevo single 'I don't care', adelanto del álbum final 'Megadeth' que saldrá el 23 de enero de 2026. Además, gira por Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México junto a Iron Maiden y Anthrax. Noticias, fechas y adelantos exclusivos. Fan site no oficial.",
+    en: "Megadeth announces the release of their new single 'I don't care', preview of the final self-titled album 'Megadeth' coming January 23, 2026. Plus, tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico with Iron Maiden and Anthrax. News, dates and exclusive previews. Unofficial fan site.",
   };
 
   return {
