@@ -12,6 +12,7 @@ import NewTour from "./NewTour";
 import IronMaidenTour from "./IronMaidenTour";
 import LatamTour from "./LatamTour";
 import Ride from "./Ride";
+import NewSingle from "./NewSingle";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -182,6 +183,8 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+        <Divider sx={{ my: 6, width: "100%" }} />
+        <NewSingle />
 
         <Divider sx={{ my: 6, width: "100%" }} />
         <LatamTour />
