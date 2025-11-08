@@ -57,6 +57,7 @@ export default function Header() {
     { label: t("history"), href: "/historia" },
     { label: t("lineups"), href: "/formaciones" },
     { label: t("members"), href: "/miembros" },
+    { label: t("songs"), href: "/songs" },
   ];
 
   const handleLanguageClick = (event: React.MouseEvent<HTMLElement>) => {

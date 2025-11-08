@@ -17,8 +17,10 @@ import {
   Button,
   Divider,
   Stack,
+  Tooltip,
 } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import ContainerGradient from "./atoms/ContainerGradient";
@@ -28,6 +30,7 @@ import {
   getMusicianInstrument,
 } from "@/utils/albumHelpers";
 import LyricsIcon from "@mui/icons-material/MusicNote";
+import InfoIcon from "@mui/icons-material/Info";
 
 interface AlbumDetailProps {
   album: Album;
@@ -162,9 +165,33 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                   {album.musicians.map((musician, index) => (
                     <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                       <Stack spacing={0.5}>
-                        <Typography variant="body1" sx={{ fontWeight: 600 }}>
-                          {musician.name}
-                        </Typography>
+                        <Link
+                          href={
+                            musician.name === "VA"
+                              ? "/miembros"
+                              : `/miembros/${musician.name
+                                  .toLowerCase()
+                                  .replace(/[^a-z0-9 ]/gi, "")
+                                  .replace(/ /g, "-")}`
+                          }
+                          passHref
+                          legacyBehavior
+                        >
+                          <Typography
+                            variant="body1"
+                            sx={{
+                              fontWeight: 600,
+                              cursor: "pointer",
+                              transition: "color 0.2s",
+                              color: "text.primary",
+                              "&:hover": {
+                                color: "primary.main",
+                              },
+                            }}
+                          >
+                            {musician.name}
+                          </Typography>
+                        </Link>
                         <Typography variant="body2" color="text.secondary">
                           {getMusicianInstrument(musician.instrument, locale)}
                         </Typography>
@@ -196,14 +223,7 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                       sx={{
                         py: 2,
                         px: 3,
-                        cursor: track.lyrics ? "pointer" : "default",
-                        "&:hover": track.lyrics
-                          ? {
-                              backgroundColor: "action.hover",
-                            }
-                          : {},
                       }}
-                      onClick={() => handleTrackClick(track)}
                     >
                       <ListItemText
                         primary={
@@ -229,10 +249,18 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                               {track.title}
                             </Typography>
                             {track.lyrics && (
-                              <LyricsIcon
-                                fontSize="small"
-                                sx={{ color: "primary.main" }}
-                              />
+                              <Tooltip title={t("viewLyrics") || "Ver letras"}>
+                                <Box
+                                  onClick={() => handleTrackClick(track)}
+                                  padding="4px"
+                                  sx={{ cursor: "pointer" }}
+                                >
+                                  <LyricsIcon
+                                    fontSize="small"
+                                    sx={{ color: "primary.main" }}
+                                  />
+                                </Box>
+                              </Tooltip>
                             )}
                           </Stack>
                         }
@@ -265,6 +293,30 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                           </Box>
                         }
                       />
+                      {track.lyrics && (
+                        <Link
+                          href={`/songs/${track.title
+                            .toLowerCase()
+                            .replace(/[^a-z0-9 ]/gi, "")
+                            .replace(/ /g, "-")}`}
+                          passHref
+                          legacyBehavior
+                        >
+                          <Tooltip
+                            title={
+                              t("viewSongDetails") ||
+                              "Ver detalle de la canción"
+                            }
+                          >
+                            <Box padding="4px" sx={{ cursor: "pointer" }}>
+                              <InfoIcon
+                                fontSize="large"
+                                sx={{ color: "primary.main" }}
+                              />
+                            </Box>
+                          </Tooltip>
+                        </Link>
+                      )}
                     </ListItem>
                     {index < (album.tracks?.length || 0) - 1 && <Divider />}
                   </Box>

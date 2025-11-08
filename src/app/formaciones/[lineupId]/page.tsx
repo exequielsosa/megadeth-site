@@ -115,14 +115,27 @@ export default function LineupDetailPage({ params }: PageProps) {
                 {t("formation.albums")}
               </Typography>
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
-                {lineup.albums.map((album, index) => (
-                  <Chip
-                    key={index}
-                    label={album}
-                    variant="outlined"
-                    color="secondary"
-                  />
-                ))}
+                {lineup.albums.map((album, index) => {
+                  const albumSlug = album
+                    .toLowerCase()
+                    .replace(/[^a-z0-9 ]/gi, "")
+                    .replace(/ /g, "-");
+                  return (
+                    <Link
+                      href={`/discography/${albumSlug}`}
+                      passHref
+                      legacyBehavior
+                      key={index}
+                    >
+                      <Chip
+                        label={album}
+                        variant="outlined"
+                        color="secondary"
+                        sx={{ cursor: "pointer" }}
+                      />
+                    </Link>
+                  );
+                })}
               </Box>
             </Box>
           )}

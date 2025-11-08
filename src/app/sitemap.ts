@@ -3,6 +3,7 @@ import lineupsData from '@/constants/lineups.json';
 import membersData from '@/constants/members.json';
 import discographyData from '@/constants/discography.json';
 import dvdData from '@/constants/dvd.json';
+import songsData from '@/constants/songs.json';
 import historiaData from '@/constants/historia.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -20,9 +21,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/terminos', priority: 0.6, changeFreq: 'yearly' as const },
     { path: '/privacidad', priority: 0.6, changeFreq: 'yearly' as const },
     { path: '/contacto', priority: 0.7, changeFreq: 'monthly' as const },
+    { path: '/songs', priority: 0.9, changeFreq: 'monthly' as const },
   ];
-
   const sitemap: MetadataRoute.Sitemap = [];
+
+  // Canciones dinámicas
+  if (Array.isArray(songsData)) {
+    songsData.forEach(song => {
+      if (song.id) {
+        sitemap.push({
+          url: `${base}/songs/${song.id}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        });
+      }
+    });
+  }
 
   // Agregar páginas principales
   pages.forEach(page => {
