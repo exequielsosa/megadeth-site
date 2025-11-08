@@ -7,14 +7,16 @@ export async function generateStaticParams() {
   return songsData.map((song) => ({ songId: song.id }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { songId: string };
-}): Promise<Metadata> {
-  const locale = await getLocale();
+interface Props {
+  params: Promise<{
+    songId: string;
+  }>;
+}
 
-  const song = songsData.find((s) => s.id === params.songId);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const resolvedParams = await params;
+  const locale = await getLocale();
+  const song = songsData.find((s) => s.id === resolvedParams.songId);
   if (!song) return { title: "Song not found" };
 
   const title = song.title;
@@ -81,6 +83,7 @@ export async function generateMetadata({
   };
 }
 
-export default function SongPage({ params }: { params: { songId: string } }) {
-  return <SongDetailPage songId={params.songId} />;
+export default async function SongPage({ params }: Props) {
+  const resolvedParams = await params;
+  return <SongDetailPage songId={resolvedParams.songId} />;
 }

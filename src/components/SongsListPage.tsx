@@ -33,7 +33,8 @@ interface Song {
   credits: {
     musicians: Array<{
       name: string;
-      instrument: { es: string; en: string };
+      id: string;
+      instrument: { es: string; en: string } | string;
     }>;
     writers: {
       lyrics: string[];
@@ -44,8 +45,8 @@ interface Song {
     track_number: number;
     duration: string;
   };
-  theme: { es: string; en: string };
-  lyrics: { es: string; en: string };
+  theme?: { es?: string; en?: string };
+  lyrics?: { es?: string; en?: string };
 }
 
 function getFilterValue(song: Song, filter: string) {
@@ -54,7 +55,16 @@ function getFilterValue(song: Song, filter: string) {
     song.title.toLowerCase().includes(lower) ||
     song.album.title.toLowerCase().includes(lower) ||
     song.album.year.toString().includes(lower) ||
-    song.credits.musicians.some((m) => m.name.toLowerCase().includes(lower)) ||
+    song.credits.musicians.some((m) => {
+      const nameMatch = m.name.toLowerCase().includes(lower);
+      let instrumentText = "";
+      if (typeof m.instrument === "string") {
+        instrumentText = m.instrument.toLowerCase();
+      } else if (m.instrument && typeof m.instrument === "object") {
+        instrumentText = `${m.instrument.es.toLowerCase()} ${m.instrument.en.toLowerCase()}`;
+      }
+      return nameMatch || instrumentText.includes(lower);
+    }) ||
     song.credits.writers.lyrics
       .concat(song.credits.writers.music)
       .some((w) => w.toLowerCase().includes(lower))
