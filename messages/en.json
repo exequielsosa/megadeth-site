@@ -1,4 +1,23 @@
 {
+  "songs": {
+    "title": "Songs",
+    "songsListTitle": "Songs list",
+    "songsListDescription": "Explore all Megadeth songs, with lyrics, musicians and details for each track.",
+    "search": "Search song, album, year, musician, writer...",
+    "duration": "Duration",
+    "track": "Track number",
+    "theme": "Theme",
+    "lyrics": "Lyrics",
+    "showEs": "Show lyrics in Spanish",
+    "showEn": "Show lyrics in English",
+    "musicians": "Musicians",
+    "writers": "Writers",
+    "lyricsBy": "Lyrics by",
+    "musicBy": "Music by",
+    "notFound": "Song not found",
+    "album": "Album",
+    "year": "Year"
+  },
   "newSingle": {
     "title": "Megadeth announces the release of their new single",
     "description": "Megadeth announced today the release of their new single 'I don't care', available Friday, November 14. This track is the second preview of the upcoming and final self-titled album 'Megadeth', set for release on January 23, 2026.",
@@ -31,7 +50,8 @@
     "dvds": "DVDs",
     "history": "History",
     "lineups": "Lineups",
-    "members": "Members"
+    "members": "Members",
+    "songs": "Songs"
   },
   "history": {
     "activeYears": "Active years",
@@ -356,7 +376,9 @@
     "writers": "Writers",
     "noLyrics": "Lyrics not available",
     "close": "Close",
-    "lineup": "Lineup"
+    "lineup": "Lineup",
+    "viewLyrics": "View Lyric",
+    "viewSongDetails": "View Song Details"
   },
   "footer": {
     "siteDescription": "News, dates and discography of Megadeth. Curated for fans. Fast, simple and fully responsive.",

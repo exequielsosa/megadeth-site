@@ -126,17 +126,6 @@ export default function LineupsPage() {
 
       {/* Timeline */}
       <Box mb={6}>
-        {/* <Typography
-          variant="h3"
-          component="h2"
-          gutterBottom
-          textAlign="center"
-          fontWeight={600}
-          sx={{ fontSize: { xs: "28px", sm: "36px" } }}
-        >
-          {t("timeline")}
-        </Typography> */}
-
         <Box position="relative" sx={{ mt: 4 }}>
           {/* Timeline line */}
           <Box
@@ -178,59 +167,59 @@ export default function LineupsPage() {
                   size={{ xs: 12, md: 6 }}
                   order={{ xs: 1, md: index % 2 === 0 ? 1 : 2 }}
                 >
-                  <Card
-                    sx={{
-                      height: "100%",
-                      transition: "transform 0.2s, box-shadow 0.2s",
-                      "&:hover": {
-                        transform: "translateY(-4px)",
-                        boxShadow: 8,
-                      },
+                  <Link
+                    href={`/formaciones/${lineup.id}`}
+                    style={{
+                      textDecoration: "none",
+                      color: "inherit",
                     }}
                   >
-                    <CardContent
+                    <Card
                       sx={{
                         height: "100%",
-                        display: "flex",
-                        flexDirection: "column",
+                        transition: "transform 0.2s, box-shadow 0.2s",
+                        "&:hover": {
+                          transform: "translateY(-4px)",
+                          boxShadow: 8,
+                        },
                       }}
                     >
-                      <Box
+                      <CardContent
                         sx={{
+                          height: "100%",
                           display: "flex",
-                          alignItems: "center",
-                          mb: 2,
                           flexDirection: "column",
-                          justifyContent: "center",
-                          width: "100%",
                         }}
                       >
-                        <Image
-                          src={lineup.image}
-                          alt={getLocalizedText(lineup.title)}
-                          width={532}
-                          height={300}
-                          style={{
-                            borderRadius: "8px",
-                            objectFit: "cover",
-                          }}
-                        />
                         <Box
                           sx={{
-                            flex: 1,
                             display: "flex",
-                            justifyContent: "flex-start",
                             alignItems: "center",
-                            mt: 2,
-                            gap: 2,
+                            mb: 2,
+                            flexDirection: "column",
+                            justifyContent: "center",
                             width: "100%",
                           }}
                         >
-                          <Link
-                            href={`/formaciones/${lineup.id}`}
+                          <Image
+                            src={lineup.image}
+                            alt={getLocalizedText(lineup.title)}
+                            width={532}
+                            height={300}
                             style={{
-                              textDecoration: "none",
-                              color: "inherit",
+                              borderRadius: "8px",
+                              objectFit: "cover",
+                            }}
+                          />
+                          <Box
+                            sx={{
+                              flex: 1,
+                              display: "flex",
+                              justifyContent: "flex-start",
+                              alignItems: "center",
+                              mt: 2,
+                              gap: 2,
+                              width: "100%",
                             }}
                           >
                             <Typography
@@ -245,81 +234,82 @@ export default function LineupsPage() {
                             >
                               {getLocalizedText(lineup.title)}
                             </Typography>
-                          </Link>
-                          <Chip
-                            label={lineup.period}
-                            color="primary"
-                            size="small"
-                          />
+
+                            <Chip
+                              label={lineup.period}
+                              color="primary"
+                              size="small"
+                            />
+                          </Box>
                         </Box>
-                      </Box>
 
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        sx={{ mb: 2, flex: 1 }}
-                      >
-                        {getLocalizedText(lineup.description)}
-                      </Typography>
-
-                      <Divider sx={{ my: 1 }} />
-
-                      {/* Lista de miembros con links */}
-                      <Box sx={{ mb: 2 }}>
                         <Typography
-                          variant="subtitle2"
-                          color="primary"
-                          gutterBottom
+                          variant="body2"
+                          color="text.secondary"
+                          sx={{ mb: 2, flex: 1 }}
                         >
-                          {t("formation.members")}:
+                          {getLocalizedText(lineup.description)}
                         </Typography>
+
+                        <Divider sx={{ my: 1 }} />
+
+                        {/* Lista de miembros con links */}
+                        <Box sx={{ mb: 2 }}>
+                          <Typography
+                            variant="subtitle2"
+                            color="primary"
+                            gutterBottom
+                          >
+                            {t("formation.members")}:
+                          </Typography>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              flexDirection: "column",
+                              gap: 0.5,
+                            }}
+                          >
+                            {lineup.members.map((member) => (
+                              <Link
+                                key={member.id}
+                                href={`/miembros/${member.id}`}
+                                style={{
+                                  textDecoration: "none",
+                                  color: "inherit",
+                                }}
+                              >
+                                <Typography
+                                  variant="body2"
+                                  sx={{
+                                    cursor: "pointer",
+                                    "&:hover": {
+                                      color: "primary.main",
+                                      textDecoration: "underline",
+                                    },
+                                  }}
+                                >
+                                  <strong>{member.name}</strong> -{" "}
+                                  {getLocalizedText(member.instrument)}
+                                </Typography>
+                              </Link>
+                            ))}
+                          </Box>
+                        </Box>
+
                         <Box
                           sx={{
                             display: "flex",
-                            flexDirection: "column",
-                            gap: 0.5,
+                            justifyContent: "flex-end",
+                            alignItems: "center",
                           }}
                         >
-                          {lineup.members.map((member) => (
-                            <Link
-                              key={member.id}
-                              href={`/miembros/${member.id}`}
-                              style={{
-                                textDecoration: "none",
-                                color: "inherit",
-                              }}
-                            >
-                              <Typography
-                                variant="body2"
-                                sx={{
-                                  cursor: "pointer",
-                                  "&:hover": {
-                                    color: "primary.main",
-                                    textDecoration: "underline",
-                                  },
-                                }}
-                              >
-                                <strong>{member.name}</strong> -{" "}
-                                {getLocalizedText(member.instrument)}
-                              </Typography>
-                            </Link>
-                          ))}
+                          <Typography variant="body2" color="text.secondary">
+                            {t("formation.albums")}: {lineup.albums.length}
+                          </Typography>
                         </Box>
-                      </Box>
-
-                      <Box
-                        sx={{
-                          display: "flex",
-                          justifyContent: "flex-end",
-                          alignItems: "center",
-                        }}
-                      >
-                        <Typography variant="body2" color="text.secondary">
-                          {t("formation.albums")}: {lineup.albums.length}
-                        </Typography>
-                      </Box>
-                    </CardContent>
-                  </Card>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 </Grid>
 
                 {/* Empty space for opposite side */}

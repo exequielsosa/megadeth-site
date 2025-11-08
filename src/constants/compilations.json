@@ -25,7 +25,7 @@
         }
       },
       {
-        "name": "Varios músicos",
+        "name": "VA",
         "instrument": {
           "es": "Instrumentos varios (1985-2019)",
           "en": "Various instruments (1985-2019)"
@@ -274,7 +274,7 @@
         }
       },
       {
-        "name": "Varios músicos",
+        "name": "VA",
         "instrument": {
           "es": "Instrumentos varios (1985-2005)",
           "en": "Various instruments (1985-2005)"
@@ -552,7 +552,7 @@
         }
       },
       {
-        "name": "Varios músicos",
+        "name": "VA",
         "instrument": {
           "es": "Instrumentos varios (1985-2007)",
           "en": "Various instruments (1985-2007)"
@@ -868,7 +868,13 @@
         "n": 48,
         "title": "Never Say Die (Black Sabbath Cover)",
         "duration": "3:46",
-        "writers": ["Geezer Butler", "Tony Iommi", "Ozzy Osbourne", "Bill Ward"]
+        "writers": [
+          "Geezer Butler",
+          "Tony Iommi",
+          "Ozzy Osbourne",
+          "Bill Ward"
+        ],
+        "lyrics": "People going nowhere, taken for a ride\nLooking for the answers that they know inside\nSearching for a reason, looking for a rhyme\nSnow White's mirror said \"partners in crime!\"\nDon't they ever have to worry?\nDon't you ever wonder why?\nIt's a part of me that tells you\nOh, don't you ever, don't ever say die\n**Never, never, never say die again**\n\nSunday's satisfaction, Monday's home and dry\nTruth is on the doorstep, welcome in the lie\nAll dressed up in sorrow, got no place to go\nHold back, `till it's ready, taking it slow\nDon't they ever have to worry?\nDon't you ever wonder why?\nIt's a part of me that tells you\nOh, don't you ever, don't ever say die\n**Never, never, never say die again**\nDon't you ever say die\nDon't you ever say die\n**Never say die**\n\nPanic, silver lining, writing's on the wall\nChildren get together, you can save us all\nFuture's on the corner, throwing us a die\nSlow down, turn around, everything's fine\nThere's no need to have a reason\nThere's no need to wonder why\nIt's a part of me that tells you\nOh, don't you ever, don't ever say die\n**Never, never, never say die again**"
       },
       {
         "n": 49,
@@ -1026,7 +1032,7 @@
         }
       },
       {
-        "name": "Varios músicos",
+        "name": "VA",
         "instrument": {
           "es": "Instrumentos varios (1985-2005)",
           "en": "Various instruments (1985-2005)"
@@ -1065,7 +1071,8 @@
         "n": 5,
         "title": "Angry Again",
         "duration": "3:47",
-        "writers": ["Dave Mustaine"]
+        "writers": ["Dave Mustaine"],
+        "lyrics": "The more of you that I inspect\nThe more of me I see reflect\nThe more I try to read your lips\nThe more the mask you're wearing rips\nBut when I seek out your voice\nMy ears are overcome with noise\nYou show and tell with greatest ease\nRaving impossibilities\nEngaged in crime I grasp my throat\nEnraged my mind starts to smoke\nEnforce a mental overload\n**Angry again, angry again, angry** ow\nAnd when the story takes a twist\nIf folds like a contortionist\nSlight of hand and quick exchange\nThe old tricks have been rearranged\nEngaged in crime I grasp my throat\nEnraged my mind starts to smoke\nEnforce a mental overload\n**Angry again, angry again, angry**\nThe searing of the sinew\nMy body fights for air\nThe ripping of the tissue\nMy lungs begin to tear\nGravity's got my bones\nIt pulls my flesh away\nThe steam finally dissipates\nI make out my sweaty face\nAssociation that I choose\nGame I inevitably lose\nGoverned by laws set up by me\nFracture its jaw to let me be\nA cut-out cardboard condo maze\nFilled with an insubordinate race\nIrrational youths stop to stare\nAs music rubber hosed the air\nEngaged in crime I grasp my throat\nEnraged my mind starts to smoke\nEnforce a mental overload\n**Angry again, angry again, angry again**\nAnd again and again, again\nEngaged in crime I grasp my throat\nEnraged my mind starts to smoke\nEnforce a mental overload\n**Angry again, angry again, angry** ow"
       },
       {
         "n": 6,
@@ -1178,7 +1185,7 @@
         }
       },
       {
-        "name": "Varios músicos",
+        "name": "VA",
         "instrument": {
           "es": "Instrumentos varios (1985-2002)",
           "en": "Various instruments (1985-2002)"
@@ -1313,7 +1320,7 @@
         }
       },
       {
-        "name": "Varios músicos",
+        "name": "VA",
         "instrument": {
           "es": "Instrumentos varios (1992-2000)",
           "en": "Various instruments (1992-2000)"
