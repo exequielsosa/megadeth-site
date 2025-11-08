@@ -184,6 +184,26 @@ export default async function RootLayout({
     <html lang={locale} className={poppins.variable} suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/webp" href="/icon.webp" />
+        {/* Script para inicializar color mode antes de hidratar React */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var mode = localStorage.getItem('color-mode');
+                  if (!mode) {
+                    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                      mode = 'dark';
+                    } else {
+                      mode = 'light';
+                    }
+                  }
+                  document.documentElement.setAttribute('data-color-mode', mode);
+                } catch(e) {}
+              })();
+            `,
+          }}
+        />
       </head>
       <body
         style={{

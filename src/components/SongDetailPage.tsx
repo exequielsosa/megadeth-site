@@ -66,7 +66,6 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                   .replace(/[^a-z0-9 ]/gi, "")
                   .replace(/ /g, "-")}`}
                 passHref
-                legacyBehavior
               >
                 <Image
                   src={song.album.cover}
@@ -93,7 +92,6 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                 .replace(/[^a-z0-9 ]/gi, "")
                 .replace(/ /g, "-")}`}
               passHref
-              legacyBehavior
             >
               <Chip label={song.album.title} sx={{ mr: 1, mb: 1 }} />
             </Link>
@@ -168,11 +166,7 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                 )[memberId];
                 return (
                   <Grid size={{ xs: 12, sm: 6, md: 4 }} key={m.name}>
-                    <Link
-                      href={`/miembros/${memberId}`}
-                      passHref
-                      legacyBehavior
-                    >
+                    <Link href={`/miembros/${memberId}`} passHref>
                       <Card
                         sx={{
                           height: "100%",
@@ -208,11 +202,6 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                             </Avatar>
                           )}
                           <Box>
-                            {/* <Link
-                            href={`/miembros/${memberId}`}
-                            passHref
-                            legacyBehavior
-                          > */}
                             <Typography
                               variant="body1"
                               fontWeight={600}
@@ -225,7 +214,6 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                             >
                               {m.name}
                             </Typography>
-                            {/* </Link> */}
                             <Typography variant="body2" color="text.secondary">
                               {typeof m.instrument === "string"
                                 ? m.instrument
