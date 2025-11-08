@@ -168,46 +168,51 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                 )[memberId];
                 return (
                   <Grid size={{ xs: 12, sm: 6, md: 4 }} key={m.name}>
-                    <Card
-                      sx={{
-                        height: "100%",
-                        cursor: "pointer",
-                        transition: "transform 0.2s, box-shadow 0.2s",
-                        "&:hover": {
-                          transform: "translateY(-4px)",
-                          boxShadow: 8,
-                        },
-                      }}
+                    <Link
+                      href={`/miembros/${memberId}`}
+                      passHref
+                      legacyBehavior
                     >
-                      <CardContent sx={{ textAlign: "center" }}>
-                        {memberObj && memberObj.image ? (
-                          <Image
-                            src={memberObj.image}
-                            alt={m.name}
-                            width={200}
-                            height={200}
-                            style={{
-                              borderRadius: "16px",
-                              objectFit: "cover",
-                            }}
-                          />
-                        ) : (
-                          <Avatar
-                            sx={{
-                              bgcolor: "primary.main",
-                              width: 56,
-                              height: 56,
-                            }}
-                          >
-                            {m.name[0]}
-                          </Avatar>
-                        )}
-                        <Box>
-                          <Link
+                      <Card
+                        sx={{
+                          height: "100%",
+                          cursor: "pointer",
+                          transition: "transform 0.2s, box-shadow 0.2s",
+                          "&:hover": {
+                            transform: "translateY(-4px)",
+                            boxShadow: 8,
+                          },
+                        }}
+                      >
+                        <CardContent sx={{ textAlign: "center" }}>
+                          {memberObj && memberObj.image ? (
+                            <Image
+                              src={memberObj.image}
+                              alt={m.name}
+                              width={200}
+                              height={200}
+                              style={{
+                                borderRadius: "16px",
+                                objectFit: "cover",
+                              }}
+                            />
+                          ) : (
+                            <Avatar
+                              sx={{
+                                bgcolor: "primary.main",
+                                width: 56,
+                                height: 56,
+                              }}
+                            >
+                              {m.name[0]}
+                            </Avatar>
+                          )}
+                          <Box>
+                            {/* <Link
                             href={`/miembros/${memberId}`}
                             passHref
                             legacyBehavior
-                          >
+                          > */}
                             <Typography
                               variant="body1"
                               fontWeight={600}
@@ -220,18 +225,19 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                             >
                               {m.name}
                             </Typography>
-                          </Link>
-                          <Typography variant="body2" color="text.secondary">
-                            {typeof m.instrument === "string"
-                              ? m.instrument
-                              : m.instrument &&
-                                (m.instrument as { es: string; en: string })[
-                                  instrumentKey
-                                ]}
-                          </Typography>
-                        </Box>
-                      </CardContent>
-                    </Card>
+                            {/* </Link> */}
+                            <Typography variant="body2" color="text.secondary">
+                              {typeof m.instrument === "string"
+                                ? m.instrument
+                                : m.instrument &&
+                                  (m.instrument as { es: string; en: string })[
+                                    instrumentKey
+                                  ]}
+                            </Typography>
+                          </Box>
+                        </CardContent>
+                      </Card>
+                    </Link>
                   </Grid>
                 );
               })}
