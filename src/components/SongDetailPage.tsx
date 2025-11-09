@@ -166,12 +166,17 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                 )[memberId];
                 return (
                   <Grid size={{ xs: 12, sm: 6, md: 4 }} key={m.name}>
-                    <Link href={`/miembros/${memberId}`} passHref>
+                    <Link
+                      href={`/miembros/${memberId}`}
+                      passHref
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       <Card
                         sx={{
                           height: "100%",
                           cursor: "pointer",
                           transition: "transform 0.2s, box-shadow 0.2s",
+                          textDecoration: "none",
                           "&:hover": {
                             transform: "translateY(-4px)",
                             boxShadow: 8,
@@ -206,15 +211,27 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                               variant="body1"
                               fontWeight={600}
                               color="primary"
-                              component="a"
                               sx={{
-                                textDecoration: "none",
-                                cursor: "pointer",
+                                textDecoration: "none !important",
+                                cursor: "default",
+                                "&, & *": {
+                                  textDecoration: "none !important",
+                                },
                               }}
                             >
                               {m.name}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography
+                              variant="body2"
+                              color="text.secondary"
+                              sx={{
+                                textDecoration: "none !important",
+                                cursor: "default",
+                                "&, & *": {
+                                  textDecoration: "none !important",
+                                },
+                              }}
+                            >
                               {typeof m.instrument === "string"
                                 ? m.instrument
                                 : m.instrument &&
