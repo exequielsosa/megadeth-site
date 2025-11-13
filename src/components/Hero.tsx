@@ -184,6 +184,18 @@ export default function Hero() {
           </Box>
         </Stack>
         <Divider sx={{ my: 6, width: "100%" }} />
+
+        <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 }, mb: 2 }}>
+          {t("countdownTitle")}
+        </Typography>
+
+        <Typography variant="h3" sx={{ fontSize: { xs: 14, md: 16 } }}>
+          {t("countdownDescription")}
+        </Typography>
+        <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
+          <YouTubeEmbed videoId="-E4O5VlRYOY" title={t("videoTitle")} />
+        </Box>
+        <Divider sx={{ my: 6, width: "100%" }} />
         <NewSingle />
 
         <Divider sx={{ my: 6, width: "100%" }} />
@@ -197,6 +209,13 @@ export default function Hero() {
         <Divider sx={{ my: 6, width: "100%" }} />
 
         <NewTour />
+
+        <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 } }}>
+          {t("newVideoTitle")}
+        </Typography>
+        <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
+          <YouTubeEmbed videoId="ECXg-a7XZQI" title={t("latestVideo")} />
+        </Box>
 
         <Divider sx={{ my: 6, width: "100%" }} />
 

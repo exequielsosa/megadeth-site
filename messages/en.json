@@ -311,12 +311,15 @@
     "megadethHistory": "Megadeth History"
   },
   "hero": {
-    "title": "Latest album · Farewell tour",
+    "title": "Latest Album · Megadeth",
     "description": "News, dates and discography of Megadeth. Curated for fans. Fast, simple and fully responsive.",
     "viewDates": "View dates",
     "listenSingle": "Listen single",
     "latestVideo": "Latest Megadeth video",
-    "newVideoTitle": "New video: \"Tipping Point\""
+    "newVideoTitle": "New video: \"Tipping Point\"",
+    "countdownTitle": "Countdown to I DON'T CARE",
+    "countdownDescription": "Tomorrow at 1:00 PM Argentina time, Megadeth's new single 'I Don't Care' premieres on all digital platforms. Don't miss it!",
+    "videoTitle": "New video I DON'T CARE"
   },
   "album": {
     "finalAlbumTitle": "Album 17 / Megadeth's Final",

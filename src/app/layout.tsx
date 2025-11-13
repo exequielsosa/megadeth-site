@@ -72,6 +72,9 @@ export async function generateMetadata(): Promise<Metadata> {
       "Megadeth São Paulo",
       "Megadeth Santiago",
       "Megadeth México",
+      "I don't care",
+      "nuevo single Megadeth",
+      "álbum Megadeth 2026",
     ],
     en: [
       "Megadeth",
@@ -126,6 +129,9 @@ export async function generateMetadata(): Promise<Metadata> {
       "Megadeth São Paulo",
       "Megadeth Santiago",
       "Megadeth Mexico",
+      "I don't care",
+      "new Megadeth single",
+      "Megadeth 2026 album",
     ],
   };
 
