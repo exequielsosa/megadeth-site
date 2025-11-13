@@ -316,7 +316,10 @@
     "viewDates": "Ver fechas",
     "listenSingle": "Escuchar single",
     "latestVideo": "Último video de Megadeth",
-    "newVideoTitle": "Nuevo video: \"Tipping Point\""
+    "newVideoTitle": "Nuevo video: \"Tipping Point\"",
+    "countdownTitle": "Cuenta regresiva para I DON'T CARE",
+    "countdownDescription": "Mañana a las 13:00 PM hora argentina se estrena el nuevo single de Megadeth 'I Don't Care' en todas las plataformas digitales. ¡No te lo pierdas!",
+    "videoTitle": "Nuevo video I DON'T CARE"
   },
   "album": {
     "finalAlbumTitle": "Álbum 17 / Final de Megadeth",
