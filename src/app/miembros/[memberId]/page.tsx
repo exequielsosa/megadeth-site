@@ -15,6 +15,7 @@ import membersData from "@/constants/members.json";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { use } from "react";
+import Link from "next/link";
 
 interface PageProps {
   params: Promise<{
@@ -44,7 +45,7 @@ export default function MemberDetailPage({ params }: PageProps) {
       <head>
         <link
           rel="canonical"
-          href={`https://www.megadeth.com.ar/miembros/${memberId}`}
+          href={`https://megadeth.com.ar/miembros/${memberId}`}
         />
       </head>
       <Box
@@ -224,13 +225,28 @@ export default function MemberDetailPage({ params }: PageProps) {
                     sx={{ display: "flex", flexDirection: "column", gap: 1 }}
                   >
                     {member.albums.map((album, index) => (
-                      <Typography
+                      <Link
                         key={index}
-                        variant="body2"
-                        color="text.secondary"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                        href={`/discography/${album
+                          .toLowerCase()
+                          .replace(/[^a-z0-9 ]/gi, "")
+                          .replace(/ /g, "-")}`}
                       >
-                        • {album}
-                      </Typography>
+                        <Typography
+                          key={index}
+                          variant="body2"
+                          color="text.secondary"
+                          sx={{
+                            cursor: "pointer",
+                            "&:hover": {
+                              color: "primary.main",
+                            },
+                          }}
+                        >
+                          • {album}
+                        </Typography>
+                      </Link>
                     ))}
                   </Box>
                 </CardContent>
