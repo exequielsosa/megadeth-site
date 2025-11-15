@@ -172,16 +172,12 @@ export default function LineupDetailPage({ params }: PageProps) {
                           <Image
                             src={memberData.image}
                             alt={memberData.name}
-                            width={150}
-                            height={150}
-                            sizes="(max-width: 768px) 100px, 150px"
+                            width={200}
+                            height={200}
                             style={{
                               borderRadius: "16px",
                               objectFit: "cover",
-                              width: "100%",
-                              height: "auto",
                             }}
-                            priority={false}
                           />
                         ) : (
                           <Avatar
