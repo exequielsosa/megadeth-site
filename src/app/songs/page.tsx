@@ -58,11 +58,7 @@ export async function generateMetadata(): Promise<Metadata> {
       creator: "@MegadethFanSite",
     },
     alternates: {
-      canonical: "https://megadeth.com.ar/songs",
-      languages: {
-        es: "https://megadeth.com.ar/es/songs",
-        en: "https://megadeth.com.ar/en/songs",
-      },
+      canonical: "/songs",
     },
     robots: {
       index: true,

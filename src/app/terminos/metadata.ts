@@ -32,6 +32,12 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     twitter: { card: "summary_large_image" },
-    metadataBase: new URL("https://megadeth.com.ar"),
+    alternates: {
+      canonical: "/terminos",
+    },
+    robots: {
+      index: false,
+      follow: true,
+    },
   };
 }

@@ -60,11 +60,7 @@ export async function generateMetadata(): Promise<Metadata> {
       creator: "@MegadethFanSite",
     },
     alternates: {
-      canonical: "https://megadeth.com.ar/miembros",
-      languages: {
-        es: "https://megadeth.com.ar/es/miembros",
-        en: "https://megadeth.com.ar/en/miembros",
-      },
+      canonical: "/miembros",
     },
     robots: {
       index: true,

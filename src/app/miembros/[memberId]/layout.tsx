@@ -33,6 +33,9 @@ export async function generateMetadata({
       description,
       images: [member.image],
     },
+    alternates: {
+      canonical: `/miembros/${memberId}`,
+    },
   };
 }
 

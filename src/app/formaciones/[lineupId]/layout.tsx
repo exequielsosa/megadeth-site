@@ -43,6 +43,9 @@ export async function generateMetadata({
       description,
       images: [lineup.image],
     },
+    alternates: {
+      canonical: `/formaciones/${lineupId}`,
+    },
   };
 }
 
