@@ -94,13 +94,8 @@ export async function generateMetadata(): Promise<Metadata> {
     authors: [{ name: "Megadeth Fan Site" }],
     creator: "Megadeth Fan Site",
     publisher: "Megadeth Fan Site",
-    metadataBase: new URL("https://megadeth.com.ar"),
     alternates: {
-      canonical: "https://megadeth.com.ar/discography",
-      languages: {
-        "es-ES": "https://megadeth.com.ar/es/discography",
-        "en-US": "https://megadeth.com.ar/en/discography",
-      },
+      canonical: "/discography",
     },
     openGraph: {
       title:

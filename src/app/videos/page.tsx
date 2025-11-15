@@ -71,13 +71,8 @@ export async function generateMetadata(): Promise<Metadata> {
       address: false,
       telephone: false,
     },
-    metadataBase: new URL("https://megadeth.com.ar"),
     alternates: {
       canonical: "/videos",
-      languages: {
-        "es-ES": "/es/videos",
-        "en-US": "/en/videos",
-      },
     },
     openGraph: {
       title:

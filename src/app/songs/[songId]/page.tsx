@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     "letra",
     ...song.credits.musicians.map((m) => m.name),
   ];
-  const canonicalUrl = `https://megadeth.com.ar/songs/${song.id}`;
+  const canonicalUrl = `/songs/${song.id}`;
 
   return {
     title: `${title} | Megadeth`,
@@ -65,10 +65,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     alternates: {
       canonical: canonicalUrl,
-      languages: {
-        es: `https://megadeth.com.ar/es/songs/${song.id}`,
-        en: `https://megadeth.com.ar/en/songs/${song.id}`,
-      },
     },
     robots: {
       index: true,

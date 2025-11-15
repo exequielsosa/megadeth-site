@@ -71,13 +71,8 @@ export async function generateMetadata(): Promise<Metadata> {
       address: false,
       telephone: false,
     },
-    metadataBase: new URL("https://megadeth.com.ar"),
     alternates: {
-      canonical: "https://megadeth.com.ar/dvds",
-      languages: {
-        "es-ES": "https://megadeth.com.ar/es/dvds",
-        "en-US": "https://megadeth.com.ar/en/dvds",
-      },
+      canonical: "/dvds",
     },
     robots: {
       index: true,
