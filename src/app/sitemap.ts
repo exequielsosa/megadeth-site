@@ -5,6 +5,8 @@ import discographyData from '@/constants/discography.json';
 import dvdData from '@/constants/dvd.json';
 import songsData from '@/constants/songs.json';
 import historiaData from '@/constants/historia.json';
+import interviewsData from '@/constants/interviews.json';
+import { generateInterviewSlug } from '@/types/interview';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://megadeth.com.ar';
@@ -17,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/historia', priority: 0.9, changeFreq: 'monthly' as const },
     { path: '/formaciones', priority: 0.8, changeFreq: 'monthly' as const },
     { path: '/miembros', priority: 0.8, changeFreq: 'monthly' as const },
+    { path: '/entrevistas', priority: 0.9, changeFreq: 'monthly' as const },
     { path: '/faq', priority: 0.7, changeFreq: 'monthly' as const },
     { path: '/terminos', priority: 0.6, changeFreq: 'yearly' as const },
     { path: '/privacidad', priority: 0.6, changeFreq: 'yearly' as const },
@@ -114,6 +117,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       if (chapter.slug) {
         sitemap.push({
           url: `${base}/historia/${chapter.slug}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        });
+      }
+    });
+  }
+
+  // Entrevistas dinámicas
+  if (Array.isArray(interviewsData)) {
+    interviewsData.forEach(interview => {
+      const slug = generateInterviewSlug(interview.id);
+      if (slug) {
+        sitemap.push({
+          url: `${base}/entrevistas/${slug}`,
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.7,
