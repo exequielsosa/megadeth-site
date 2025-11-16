@@ -120,22 +120,22 @@ export default function SongsListPage() {
             <TableHead sx={{ backgroundColor: "primary.main", height: 50 }}>
               <TableRow>
                 <TableCell>
-                  <Typography fontWeight={600} fontSize={18}>
+                  <Typography fontWeight={600} fontSize={18} color="white">
                     {t("title")}
                   </Typography>
                 </TableCell>
                 <TableCell>
-                  <Typography fontWeight={600} fontSize={18}>
+                  <Typography fontWeight={600} fontSize={18} color="white">
                     {t("album")}
                   </Typography>
                 </TableCell>
                 <TableCell>
-                  <Typography fontWeight={600} fontSize={18}>
+                  <Typography fontWeight={600} fontSize={18} color="white">
                     {t("year")}
                   </Typography>
                 </TableCell>
                 <TableCell>
-                  <Typography fontWeight={600} fontSize={18}>
+                  <Typography fontWeight={600} fontSize={18} color="white">
                     {t("duration")}
                   </Typography>
                 </TableCell>

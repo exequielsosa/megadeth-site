@@ -54,6 +54,7 @@ export default function Header() {
     { label: t("discography"), href: "/discography" },
     { label: t("videos"), href: "/videos" },
     { label: t("dvds"), href: "/dvds" },
+    { label: t("interviews"), href: "/entrevistas" },
     { label: t("history"), href: "/historia" },
     { label: t("lineups"), href: "/formaciones" },
     { label: t("members"), href: "/miembros" },
@@ -143,7 +144,7 @@ export default function Header() {
                       fontWeight: 600,
                       fontSize: "0.9rem",
                       letterSpacing: "0.5px",
-                      px: 3,
+                      px: 1,
                       py: 1,
                       transition: "all 0.3s ease",
                       "&::after": {
