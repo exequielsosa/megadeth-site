@@ -13,6 +13,7 @@ import IronMaidenTour from "./IronMaidenTour";
 import LatamTour from "./LatamTour";
 import Ride from "./Ride";
 import NewSingle from "./NewSingle";
+import Space from "./Space";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -185,6 +186,8 @@ export default function Hero() {
         </Stack>
         <Divider sx={{ my: 6, width: "100%" }} />
 
+        <Space />
+        <Divider sx={{ my: 6, width: "100%" }} />
         <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 }, mb: 2 }}>
           {t("countdownTitle")}
         </Typography>
