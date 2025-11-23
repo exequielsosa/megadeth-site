@@ -14,10 +14,12 @@ import LatamTour from "./LatamTour";
 import Ride from "./Ride";
 import NewSingle from "./NewSingle";
 import Space from "./Space";
+import ArticleCard from "./ArticleCard";
 
 export default function Hero() {
   const t = useTranslations("hero");
   const tAlbum = useTranslations("album");
+  const tVic = useTranslations("vicSays");
 
   return (
     <ContainerGradient>
@@ -184,8 +186,18 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+
         <Divider sx={{ my: 6, width: "100%" }} />
 
+        <ArticleCard
+          title={tVic("title")}
+          description={tVic("description")}
+          imageUrl="/images/vicsays.jpg"
+          imageAlt={tVic("imageAlt")}
+          imageCaption={tVic("imageCaption")}
+        />
+
+        <Divider sx={{ my: 6, width: "100%" }} />
         <Space />
         <Divider sx={{ my: 6, width: "100%" }} />
         <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 }, mb: 2 }}>
@@ -220,13 +232,6 @@ export default function Hero() {
         <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
           <YouTubeEmbed videoId="ECXg-a7XZQI" title={t("latestVideo")} />
         </Box>
-
-        {/* <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 } }}>
-          {t("newVideoTitle")}
-        </Typography>
-        <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
-          <YouTubeEmbed videoId="ECXg-a7XZQI" title={t("latestVideo")} />
-        </Box> */}
       </Container>
       {/* <AlbumTeasers /> */}
     </ContainerGradient>
