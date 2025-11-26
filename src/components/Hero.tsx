@@ -20,6 +20,7 @@ export default function Hero() {
   const t = useTranslations("hero");
   const tAlbum = useTranslations("album");
   const tVic = useTranslations("vicSays");
+  const tCanada = useTranslations("canadaTour");
 
   return (
     <ContainerGradient>
@@ -186,6 +187,17 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+
+        <Divider sx={{ my: 6, width: "100%" }} />
+
+        <ArticleCard
+          title={tCanada("title")}
+          description={tCanada("description")}
+          imageUrl="/images/canada.jpg"
+          imageAlt={tCanada("imageAlt")}
+          imageCaption={tCanada("imageCaption")}
+          linkUrl="/tour"
+        />
 
         <Divider sx={{ my: 6, width: "100%" }} />
 
