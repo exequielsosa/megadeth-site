@@ -77,6 +77,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "álbum Megadeth 2026",
       "Megadeth ultimo concierto en el espacio",
       "Nuevo Single anunciado",
+      "Escucha el nuevo álbum de Megadeth antes que nadie",
     ],
     en: [
       "Megadeth",
@@ -136,6 +137,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Megadeth 2026 album",
       "Megadeth last concert in space",
       "New single announced",
+      "Hear the new Megadeth album before anyone else",
     ],
   };
 

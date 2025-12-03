@@ -524,5 +524,11 @@
     "title": "Contacto",
     "description": "¿Tienes dudas, sugerencias o quieres colaborar? Escríbenos a nuestro correo y te responderemos a la brevedad.",
     "emailButton": "Enviar correo a megadethargentina77@gmail.com"
+  },
+  "exclusiveEvent": {
+    "title": "Escucha el disco antes que nadie",
+    "description": "Adéntrate en la celebración inmersiva más exclusiva de Megadeth durante todo un día. Organizado a corta distancia de Nashville en La Vergne, TN el sábado 17 de enero de 2026, este evento de un día te permite acercarte a la banda, la música, las historias y el legado como nunca antes.\n\nEsta es una experiencia única en la vida, ultra limitada.\n\nDetalles del Evento\nFecha: Sábado 17 de enero de 2026\nUbicación: La Vergne, TN\nHorario: 12pm–10pm (hora estimada)\n\nEl día con acceso total incluye:\n• Escucha el nuevo álbum antes que nadie\n• Presentación Acústica de Megadeth\n• Clase Magistral de Megadeth\n• Sesión de Preguntas y Respuestas con la banda\n• Charla sobre Guitarras con Dave y el CEO de Gibson, César Gueikian\n• Sesión de Fotos con la Banda\n• Cena Catering, Cerveza Megadeth y Vino House of Mustaine\n• Experiencias de Fotos Inmersivas\n• Póster con arte del álbum autografiado\n• Mercancía Exclusiva\n• y más",
+    "imageAlt": "Evento Exclusivo",
+    "imageCaption": "Escucha el disco antes que nadie"
   }
 }
