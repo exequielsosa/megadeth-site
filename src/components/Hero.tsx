@@ -21,6 +21,7 @@ export default function Hero() {
   const tAlbum = useTranslations("album");
   const tVic = useTranslations("vicSays");
   const tCanada = useTranslations("canadaTour");
+  const tEvent = useTranslations("exclusiveEvent");
 
   return (
     <ContainerGradient>
@@ -187,6 +188,17 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+
+        <Divider sx={{ my: 6, width: "100%" }} />
+
+        <ArticleCard
+          title={tEvent("title")}
+          description={tEvent("description")}
+          imageUrl="/images/hear.png"
+          imageAlt={tEvent("imageAlt")}
+          imageCaption={tEvent("imageCaption")}
+          linkUrl="https://www.megadeth.com/pages/let-there-be-shred"
+        />
 
         <Divider sx={{ my: 6, width: "100%" }} />
 
