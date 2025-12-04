@@ -439,7 +439,7 @@ export default function InterviewDetailPage({
             variant="contained"
             size="large"
           >
-            Volver a entrevistas
+            {t("backToInterviews")}
           </Button>
         </Box>
       </Container>
