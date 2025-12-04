@@ -37,7 +37,8 @@
     "question": "Question",
     "answer": "Answer",
     "text": "Text",
-    "video": "Video"
+    "video": "Video",
+    "backToInterviews": "Back to interviews"
   },
   "newSingle": {
     "title": "Megadeth announces the release of their new single",
