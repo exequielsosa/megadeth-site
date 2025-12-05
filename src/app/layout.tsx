@@ -79,6 +79,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Nuevo Single anunciado",
       "Escucha el nuevo álbum de Megadeth antes que nadie",
       "Megadeth en el cine",
+      "Entradas Argentina Tu Ticket 10/12 preventa",
     ],
     en: [
       "Megadeth",
@@ -140,6 +141,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "New single announced",
       "Hear the new Megadeth album before anyone else",
       "Megadeth in cinema",
+      "Argentina tickets Tu Ticket 10/12 presale",
     ],
   };
 
