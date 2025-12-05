@@ -22,6 +22,7 @@ export default function Hero() {
   const tVic = useTranslations("vicSays");
   const tCanada = useTranslations("canadaTour");
   const tEvent = useTranslations("exclusiveEvent");
+  const tCinema = useTranslations("cinemaEvent");
 
   return (
     <ContainerGradient>
@@ -188,6 +189,16 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+
+        <Divider sx={{ my: 6, width: "100%" }} />
+
+        <ArticleCard
+          title={tCinema("title")}
+          description={tCinema("description")}
+          imageUrl="/images/megadethcine.webp"
+          imageAlt={tCinema("imageAlt")}
+          imageCaption={tCinema("imageCaption")}
+        />
 
         <Divider sx={{ my: 6, width: "100%" }} />
 
