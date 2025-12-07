@@ -80,6 +80,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Escucha el nuevo álbum de Megadeth antes que nadie",
       "Megadeth en el cine",
       "Entradas Argentina Tu Ticket 10/12 preventa",
+      "Estreno BEHIND THE MASK en Argentina",
     ],
     en: [
       "Megadeth",
@@ -138,7 +139,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "new Megadeth single",
       "Megadeth 2026 album",
       "Megadeth last concert in space",
-      "New single announced",
+      "BEHIND THE MASK premiere",
       "Hear the new Megadeth album before anyone else",
       "Megadeth in cinema",
       "Argentina tickets Tu Ticket 10/12 presale",
@@ -146,13 +147,13 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 
   const titleByLocale = {
-    es: "Megadeth: Nuevo single 'I don't care', álbum final y gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
-    en: "Megadeth: New single 'I don't care', final album & 2026 Argentina / LATAM tour — Iron Maiden + Anthrax",
+    es: "MEGADETH: BEHIND THE MASK se estrena en Argentina, álbum final y gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
+    en: "MEGADETH: BEHIND THE MASK premieres in Argentina, final album & 2026 Argentina / LATAM tour — Iron Maiden + Anthrax",
   };
 
   const descriptionByLocale = {
-    es: "Megadeth anuncia el lanzamiento de su nuevo single 'I don't care', adelanto del álbum final 'Megadeth' que saldrá el 23 de enero de 2026. Además, gira por Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México junto a Iron Maiden y Anthrax. Noticias, fechas y adelantos exclusivos. Fan site no oficial.",
-    en: "Megadeth announces the release of their new single 'I don't care', preview of the final self-titled album 'Megadeth' coming January 23, 2026. Plus, tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico with Iron Maiden and Anthrax. News, dates and exclusive previews. Unofficial fan site.",
+    es: "MEGADETH: BEHIND THE MASK se estrena en Argentina, adelanto del álbum final 'Megadeth' que saldrá el 23 de enero de 2026. Además, gira por Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México junto a Iron Maiden y Anthrax. Noticias, fechas y adelantos exclusivos. Fan site no oficial.",
+    en: "MEGADETH: BEHIND THE MASK premieres in Argentina, preview of the final self-titled album 'Megadeth' coming January 23, 2026. Plus, tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico with Iron Maiden and Anthrax. News, dates and exclusive previews. Unofficial fan site.",
   };
 
   return {
@@ -173,8 +174,10 @@ export async function generateMetadata(): Promise<Metadata> {
         descriptionByLocale[locale as keyof typeof descriptionByLocale] ||
         descriptionByLocale.es,
       siteName: "Megadeth Fan",
-      type: "website",
+      type: "article",
       locale: locale === "es" ? "es_AR" : "en_US",
+      publishedTime: "2025-11-01T00:00:00Z",
+      modifiedTime: "2025-12-06T00:00:00Z",
       images: [
         {
           url: "/images/megadeth-megadeth.jpg",

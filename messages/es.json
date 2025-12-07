@@ -47,6 +47,22 @@
     "videoTitle": "Adelanto oficial del nuevo single",
     "cardTitle": "Nuevo single: I don't care"
   },
+  "behindTheMaskArg": {
+    "title": "MEGADETH: BEHIND THE MASK se estrena en Argentina",
+    "description": "El documental se estrenará en cines el 22 de enero de 2026, con distribución de Cinemark Hoyts, coincidiendo con el lanzamiento del nuevo álbum de la banda.\n\nEsta función global única permitirá a los fans revivir los 40 años de la banda y escuchar el disco completo con comentarios de Dave Mustaine.\n\nDetalles Clave:\n• Fecha de Estreno: 22 de enero de 2026 (función única mundial)\n• En Cines: Salas de Argentina, distribuido por Cinemark Hoyts\n• Contenido: Documental dirigido por Dave Mustaine celebrando 40 años de la banda\n• Álbum: Presentación del nuevo álbum homónimo de estudio\n• Entradas: Disponibles desde el 12 de diciembre\n\nEste evento cinematográfico será una experiencia inmersiva para los fans antes de la gira de despedida de la banda en 2026, que incluirá una fecha en Tecnópolis, Argentina.",
+    "imageAlt": "Megadeth Behind The Mask",
+    "imageCaption": "Megadeth Behind The Mask Documentary",
+    "links": [
+      {
+        "text": "Comprar entradas en Megadeth Film",
+        "url": "https://www.megadethfilm.com"
+      },
+      {
+        "text": "Más información en Cinemark Hoyts",
+        "url": "https://www.cinemarkhoyts.com.ar/pelicula/megadeth-behind-the-mask"
+      }
+    ]
+  },
   "canadaTour": {
     "title": "Anuncio Gira Canadá 2026",
     "description": "Megadeth se complace en anunciar su próxima gira por Canadá en 2026. ¡Prepárate para una experiencia inolvidable llena de energía y clásicos del metal!. Acompaña a Megadeth en esta emocionante aventura junto a las legendarias bandas Anthrax y Exodus. Podes ver las fechas en nuestra seccion Tour",

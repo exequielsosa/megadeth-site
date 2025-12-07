@@ -1,6 +1,13 @@
-import { Box, CardContent, Typography, Link as MuiLink } from "@mui/material";
+import {
+  Box,
+  CardContent,
+  Typography,
+  Link as MuiLink,
+  Button,
+} from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 interface ArticleCardProps {
   title: string;
@@ -11,6 +18,10 @@ interface ArticleCardProps {
   linkUrl?: string;
   linkTarget?: "_blank" | "_self";
   priority?: boolean;
+  externalLinks?: Array<{
+    url: string;
+    text: string;
+  }>;
 }
 
 export default function ArticleCard({
@@ -22,6 +33,7 @@ export default function ArticleCard({
   linkUrl,
   linkTarget = "_self",
   priority = false,
+  externalLinks,
 }: ArticleCardProps) {
   const TitleComponent = linkUrl ? (
     <MuiLink
@@ -65,6 +77,41 @@ export default function ArticleCard({
           >
             {description}
           </Typography>
+
+          {externalLinks && externalLinks.length > 0 && (
+            <Box
+              sx={{ mt: 3, display: "flex", flexDirection: "column", gap: 1.5 }}
+            >
+              {externalLinks.map((link, index) => (
+                <Button
+                  key={index}
+                  component="a"
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="outlined"
+                  endIcon={<OpenInNewIcon />}
+                  sx={{
+                    justifyContent: "flex-start",
+                    textTransform: "none",
+                    fontSize: { xs: 14, md: 16 },
+                    fontWeight: 500,
+                    borderColor: "primary.main",
+                    color: "primary.main",
+                    width: "fit-content",
+
+                    "&:hover": {
+                      borderColor: "primary.dark",
+                      backgroundColor: "primary.main",
+                      color: "white",
+                    },
+                  }}
+                >
+                  {link.text}
+                </Button>
+              ))}
+            </Box>
+          )}
         </Box>
 
         <Box
