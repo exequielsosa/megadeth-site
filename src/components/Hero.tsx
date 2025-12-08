@@ -25,6 +25,7 @@ export default function Hero() {
   const tCinema = useTranslations("cinemaEvent");
   const tArgentina = useTranslations("argentinaShow");
   const tBTM = useTranslations("behindTheMaskArg");
+  const tTickets = useTranslations("argentinaTickets");
 
   return (
     <ContainerGradient>
@@ -191,6 +192,22 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+
+        <Divider sx={{ my: 6, width: "100%" }} />
+
+        <ArticleCard
+          title={tTickets("title")}
+          description={tTickets("description")}
+          imageUrl="/images/campo.jpg"
+          imageAlt={tTickets("imageAlt")}
+          imageCaption={tTickets("imageCaption")}
+          externalLinks={[
+            {
+              text: tTickets("links.0.text"),
+              url: tTickets("links.0.url"),
+            },
+          ]}
+        />
 
         <Divider sx={{ my: 6, width: "100%" }} />
 
