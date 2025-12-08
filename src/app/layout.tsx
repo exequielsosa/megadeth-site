@@ -147,8 +147,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 
   const titleByLocale = {
-    es: "MEGADETH: BEHIND THE MASK se estrena en Argentina, álbum final y gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
-    en: "MEGADETH: BEHIND THE MASK premieres in Argentina, final album & 2026 Argentina / LATAM tour — Iron Maiden + Anthrax",
+    es: "MEGADETH: BEHIND THE MASK se estrena en Argentina, Entradas a la venta!, álbum final y gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
+    en: "MEGADETH: BEHIND THE MASK premieres in Argentina, Tickets on sale!, final album & 2026 Argentina / LATAM tour — Iron Maiden + Anthrax",
   };
 
   const descriptionByLocale = {
@@ -177,7 +177,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "article",
       locale: locale === "es" ? "es_AR" : "en_US",
       publishedTime: "2025-11-01T00:00:00Z",
-      modifiedTime: "2025-12-06T00:00:00Z",
+      modifiedTime: "2025-12-08T00:00:00Z",
       images: [
         {
           url: "/images/megadeth-megadeth.jpg",

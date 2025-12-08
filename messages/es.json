@@ -559,5 +559,17 @@
     "description": "¡Después de mucha espera, Megadeth ha confirmado oficialmente su regreso a Argentina!\n\nFecha: 30 de abril de 2026\nLugar: Tecnópolis\n\nAún no se ha confirmado si será en el microestadio o en el estadio abierto.\n\nEntradas disponibles próximamente en https://fullticket.com\nPreventa: A partir del 10 de diciembre\n\n¡No te pierdas este épico concierto de despedida!",
     "imageAlt": "Megadeth en Tecnópolis",
     "imageCaption": "Megadeth en Tecnópolis, 30 de abril de 2026"
+  },
+  "argentinaTickets": {
+    "title": "¡Entradas disponibles para Megadeth en Argentina!",
+    "description": "Las entradas para el show de Megadeth en Tecnópolis el 30 de abril de 2026 ya están disponibles.\n\n🎫 PREVENTA EXCLUSIVA VISA BNA:\nDel 10 de diciembre a las 10:00 hs\nBeneficio: 10% de descuento y 3 cuotas sin interés con tarjetas VISA del BNA\n\n🎟️ VENTA GENERAL:\nDesde el 11 de diciembre a las 10:00 hs\nTodos los medios de pago disponibles\n\nPRECIOS:\n• Lounge con acceso a Campo VIP: $270.000 (Preventa: $40.500)\n• Campo VIP (sin ubicación): $170.000 (Preventa: $25.500)\n• Campo (sin ubicación): $90.000 (Preventa: $13.500)\n• Tribuna Central (5,6,7,8,9,10) Numeradas: $150.000 (Preventa: $22.500)\n• Tribuna Lateral (1,2,3,4,11,12,13,14) Numeradas: $130.000 (Preventa: $19.500)\n\n¡No te pierdas el show de despedida de Megadeth en Argentina!",
+    "imageAlt": "Entradas Megadeth Argentina",
+    "imageCaption": "Megadeth en Tecnópolis - 30 de abril de 2026",
+    "links": [
+      {
+        "text": "Comprar entradas en FullTicket",
+        "url": "https://fullticket.com/fans/es/entradas-musica-megadeth"
+      }
+    ]
   }
 }
