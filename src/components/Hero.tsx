@@ -26,6 +26,7 @@ export default function Hero() {
   const tArgentina = useTranslations("argentinaShow");
   const tBTM = useTranslations("behindTheMaskArg");
   const tTickets = useTranslations("argentinaTickets");
+  const tTeaser = useTranslations("behindTheMaskTeaser");
 
   return (
     <ContainerGradient>
@@ -192,6 +193,15 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+
+        <Divider sx={{ my: 6, width: "100%" }} />
+
+        <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 } }}>
+          {tTeaser("title")}
+        </Typography>
+        <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
+          <YouTubeEmbed videoId="qntDbiz75iI" title={tTeaser("videoTitle")} />
+        </Box>
 
         <Divider sx={{ my: 6, width: "100%" }} />
 
