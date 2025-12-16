@@ -27,6 +27,7 @@ export default function Hero() {
   const tBTM = useTranslations("behindTheMaskArg");
   const tTickets = useTranslations("argentinaTickets");
   const tTeaser = useTranslations("behindTheMaskTeaser");
+  const tLTBS = useTranslations("letThereBeShred");
 
   return (
     <ContainerGradient>
@@ -193,6 +194,16 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+
+        <Divider sx={{ my: 6, width: "100%" }} />
+
+        <ArticleCard
+          title={tLTBS("title")}
+          description={tLTBS("description")}
+          imageUrl="/images/ltbs.jpg"
+          imageAlt={tLTBS("imageAlt")}
+          imageCaption={tLTBS("imageCaption")}
+        />
 
         <Divider sx={{ my: 6, width: "100%" }} />
 

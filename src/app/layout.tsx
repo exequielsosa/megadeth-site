@@ -81,6 +81,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Megadeth en el cine",
       "Entradas Argentina Tu Ticket 10/12 preventa",
       "Estreno BEHIND THE MASK en Argentina",
+      "Let there be Shread",
     ],
     en: [
       "Megadeth",
@@ -143,6 +144,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Hear the new Megadeth album before anyone else",
       "Megadeth in cinema",
       "Argentina tickets Tu Ticket 10/12 presale",
+      "Let there be Shread",
     ],
   };
 
@@ -177,7 +179,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "article",
       locale: locale === "es" ? "es_AR" : "en_US",
       publishedTime: "2025-11-01T00:00:00Z",
-      modifiedTime: "2025-12-11T00:00:00Z",
+      modifiedTime: "2025-12-16T00:00:00Z",
       images: [
         {
           url: "/images/megadeth-megadeth.jpg",
