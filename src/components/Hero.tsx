@@ -196,6 +196,14 @@ export default function Hero() {
         </Stack>
 
         <Divider sx={{ my: 6, width: "100%" }} />
+        <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 }, mb: 2 }}>
+          {tLTBS("titleVideo")}
+        </Typography>
+        <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
+          <YouTubeEmbed videoId="4IL67t825cA" title={tLTBS("titleVideo")} />
+        </Box>
+
+        <Divider sx={{ my: 6, width: "100%" }} />
 
         <ArticleCard
           title={tLTBS("title")}
