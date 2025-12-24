@@ -7,28 +7,24 @@ import Countdown from "./Countdown";
 import YouTubeEmbed from "./YouTubeEmbed";
 import Image from "next/image";
 import Divider from "@mui/material/Divider";
-// import AlbumTeasers from "./AlbumTeasers";
-import NewTour from "./NewTour";
 import IronMaidenTour from "./IronMaidenTour";
 import LatamTour from "./LatamTour";
 import Ride from "./Ride";
-import NewSingle from "./NewSingle";
 import Space from "./Space";
 import ArticleCard from "./ArticleCard";
 
 export default function Hero() {
   const t = useTranslations("hero");
   const tAlbum = useTranslations("album");
-  const tVic = useTranslations("vicSays");
   const tCanada = useTranslations("canadaTour");
   const tEvent = useTranslations("exclusiveEvent");
   const tCinema = useTranslations("cinemaEvent");
-  const tArgentina = useTranslations("argentinaShow");
   const tBTM = useTranslations("behindTheMaskArg");
   const tTickets = useTranslations("argentinaTickets");
   const tTeaser = useTranslations("behindTheMaskTeaser");
   const tLTBS = useTranslations("letThereBeShred");
   const tNetflix = useTranslations("netflixSeries");
+  const tMustaine = useTranslations("mustaineInterview");
 
   return (
     <ContainerGradient>
@@ -204,6 +200,18 @@ export default function Hero() {
           imageUrl="/images/netflix.jpg"
           imageAlt={tNetflix("imageAlt")}
           imageCaption={tNetflix("imageCaption")}
+          publishedDate="2025-12-24"
+        />
+
+        <Divider sx={{ my: 6, width: "100%" }} />
+        <ArticleCard
+          title={tMustaine("title")}
+          description={tMustaine("description")}
+          imageUrl="/images/trunk.jpg"
+          imageAlt={tMustaine("imageAlt")}
+          imageCaption={tMustaine("imageCaption")}
+          publishedDate="2025-12-20"
+          linkUrl="/entrevistas/mustaine-trunk-2025"
         />
 
         <Divider sx={{ my: 6, width: "100%" }} />
@@ -213,16 +221,6 @@ export default function Hero() {
         <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
           <YouTubeEmbed videoId="4IL67t825cA" title={tLTBS("titleVideo")} />
         </Box>
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-
-        <ArticleCard
-          title={tLTBS("title")}
-          description={tLTBS("description")}
-          imageUrl="/images/ltbs.jpg"
-          imageAlt={tLTBS("imageAlt")}
-          imageCaption={tLTBS("imageCaption")}
-        />
 
         <Divider sx={{ my: 6, width: "100%" }} />
 
@@ -272,16 +270,6 @@ export default function Hero() {
         <Divider sx={{ my: 6, width: "100%" }} />
 
         <ArticleCard
-          title={tArgentina("title")}
-          description={tArgentina("description")}
-          imageUrl="/images/megarg.jpg"
-          imageAlt={tArgentina("imageAlt")}
-          imageCaption={tArgentina("imageCaption")}
-        />
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-
-        <ArticleCard
           title={tCinema("title")}
           description={tCinema("description")}
           imageUrl="/images/megadethcine.webp"
@@ -312,16 +300,6 @@ export default function Hero() {
         />
 
         <Divider sx={{ my: 6, width: "100%" }} />
-
-        <ArticleCard
-          title={tVic("title")}
-          description={tVic("description")}
-          imageUrl="/images/vicsays.jpg"
-          imageAlt={tVic("imageAlt")}
-          imageCaption={tVic("imageCaption")}
-        />
-
-        <Divider sx={{ my: 6, width: "100%" }} />
         <Space />
         <Divider sx={{ my: 6, width: "100%" }} />
         <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 }, mb: 2 }}>
@@ -334,8 +312,6 @@ export default function Hero() {
         <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
           <YouTubeEmbed videoId="-E4O5VlRYOY" title={t("videoTitle")} />
         </Box>
-        <Divider sx={{ my: 6, width: "100%" }} />
-        <NewSingle />
 
         <Divider sx={{ my: 6, width: "100%" }} />
         <LatamTour />
@@ -345,9 +321,7 @@ export default function Hero() {
         <Divider sx={{ my: 6, width: "100%" }} />
 
         <IronMaidenTour />
-        <Divider sx={{ my: 6, width: "100%" }} />
 
-        <NewTour />
         <Divider sx={{ my: 6, width: "100%" }} />
 
         <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 } }}>
@@ -357,7 +331,6 @@ export default function Hero() {
           <YouTubeEmbed videoId="ECXg-a7XZQI" title={t("latestVideo")} />
         </Box>
       </Container>
-      {/* <AlbumTeasers /> */}
     </ContainerGradient>
   );
 }
