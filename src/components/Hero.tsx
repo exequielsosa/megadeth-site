@@ -28,6 +28,7 @@ export default function Hero() {
   const tTickets = useTranslations("argentinaTickets");
   const tTeaser = useTranslations("behindTheMaskTeaser");
   const tLTBS = useTranslations("letThereBeShred");
+  const tNetflix = useTranslations("netflixSeries");
 
   return (
     <ContainerGradient>
@@ -194,6 +195,16 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+
+        <Divider sx={{ my: 6, width: "100%" }} />
+
+        <ArticleCard
+          title={tNetflix("title")}
+          description={tNetflix("description")}
+          imageUrl="/images/netflix.jpg"
+          imageAlt={tNetflix("imageAlt")}
+          imageCaption={tNetflix("imageCaption")}
+        />
 
         <Divider sx={{ my: 6, width: "100%" }} />
         <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 }, mb: 2 }}>
