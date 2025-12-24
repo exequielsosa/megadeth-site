@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   CardContent,
@@ -8,6 +10,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import { useLocale } from "next-intl";
 
 interface ArticleCardProps {
   title: string;
@@ -18,6 +22,7 @@ interface ArticleCardProps {
   linkUrl?: string;
   linkTarget?: "_blank" | "_self";
   priority?: boolean;
+  publishedDate?: string; // ISO 8601 format (YYYY-MM-DD) o formato de fecha legible
   externalLinks?: Array<{
     url: string;
     text: string;
@@ -33,8 +38,28 @@ export default function ArticleCard({
   linkUrl,
   linkTarget = "_self",
   priority = false,
+  publishedDate,
   externalLinks,
 }: ArticleCardProps) {
+  const locale = useLocale();
+
+  // Formatear la fecha para mostrarla de manera legible según el idioma actual
+  // Evita problemas de zona horaria parseando la fecha manualmente
+  const formatDate = (dateString: string) => {
+    try {
+      // Parsear la fecha como YYYY-MM-DD sin conversión de zona horaria
+      const [year, month, day] = dateString.split("-").map(Number);
+      const date = new Date(year, month - 1, day);
+      return date.toLocaleDateString(locale === "es" ? "es-ES" : "en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+    } catch {
+      return dateString;
+    }
+  };
+
   const TitleComponent = linkUrl ? (
     <MuiLink
       component={Link}
@@ -61,6 +86,43 @@ export default function ArticleCard({
   return (
     <>
       {TitleComponent}
+      {publishedDate && (
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+            mt: 1,
+            mb: 2,
+            color: "text.secondary",
+          }}
+        >
+          <CalendarTodayIcon sx={{ fontSize: { xs: 16, md: 18 } }} />
+          <Typography
+            variant="body2"
+            sx={{
+              fontSize: { xs: 12, md: 14 },
+            }}
+          >
+            {formatDate(publishedDate)}
+          </Typography>
+        </Box>
+      )}
+      {publishedDate && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: title,
+              description: description,
+              datePublished: publishedDate,
+              image: imageUrl,
+            }),
+          }}
+        />
+      )}
       <Box
         display={"flex"}
         flexDirection={{ xs: "column", md: "row" }}

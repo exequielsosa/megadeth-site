@@ -582,5 +582,17 @@
     "imageAlt": "Portada del nuevo tema Let There Be Shred",
     "imageCaption": "Let There Be Shred - Nuevo sencillo de Megadeth",
     "titleVideo": "Let There Be Shred - Video Oficial"
+  },
+  "netflixSeries": {
+    "title": "Rumor: Netflix anuncia una serie de 16 episodios con Dave Mustaine — \"Strings of Fire\"",
+    "description": "Netflix ha confirmado oficialmente una miniserie de 16 episodios, Dave Mustaine: Strings of Fire, que narra el ascenso, la ruptura, la reinvención y el perdurable legado del ícono del metal.\n\nDirigida y narrada por el propio Mustaine, la serie lleva a los espectadores a un viaje inquebrantable: desde una juventud inquieta y los primeros enfrentamientos entre bandas hasta la fundación de Megadeth, la dominación mundial del thrash metal y una carrera definida por la precisión, la intensidad y la supervivencia.\n\n\"Esta historia no se trata solo de metal\", dice Mustaine. \"Se trata de disciplina: de convertir la ira en estructura, el caos en control y el ruido en significado\".\n\nCada episodio traza su evolución, desde un forastero ambicioso hasta una de las figuras más influyentes de la historia de la música heavy. La serie no elude las duras verdades: los reveses que se convirtieron en combustible, los conflictos que forjaron claridad y la búsqueda incansable de la excelencia que exigió responsabilidad en todo momento.\n\nStrings of Fire profundiza en la creación de la obra más icónica de Mustaine, desde la urgencia incisiva de \"Peace Sells\" y la furia geopolítica de \"Holy Wars… The Punishment Due\", hasta la fuerza épica de \"Symphony of Destruction\". Explora su obsesión por el tempo, la técnica y la precisión lírica, y cómo esos estándares transformaron el ADN del metal.\n\nCombinando material de archivo inédito, maquetas inéditas, reflexiones personales y recreaciones cinematográficas, la serie ofrece una mirada sin precedentes a la mente de un músico que exigía más: de sus compañeros de banda, de su público y de sí mismo.",
+    "imageAlt": "Strings Of Fire",
+    "imageCaption": "Netflix: \"Strings of Fire\""
+  },
+  "mustaineInterview": {
+    "title": "Entrevista con Dave Mustaine sobre el nuevo álbum de Megadeth y más",
+    "description": "Dave Mustaine habló de la última gira de Megadeth y sus problemas de salud.\n\nEl líder de la legendaria banda dialogó sobre los problemas de salud que lo llevaron a tomar la decisión de cerrar Megadeth después de más de 40 años de carrera.\n\n\"Mis manos me estaban fallando\", confesó Mustaine.\n\nEl músico de 64 años sufre de artritis, discos inflamados, una fractura lumbar y tiene la espalda fusionada a la altura del cuello.\n\n\"Siempre dije que cuando llegara al punto en que no pudiera dar el cien por cien cada noche, sería cuando empezaría a considerar dejarlo\", explicó en una entrevista con Eddie Trunk.\n\nEl grupo lanzará su 17° y último álbum homónimo \"Megadeth\", seguido de una gira de despedida mundial que se extenderá por varios años.\n\nEn Argentina se presentarán el 30 de abril de 2026 en Tecnópolis.",
+    "imageAlt": "Entrevista con Dave Mustaine",
+    "imageCaption": "Entrevista con Eddie Trunk"
   }
 }
