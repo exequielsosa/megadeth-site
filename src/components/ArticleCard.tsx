@@ -27,6 +27,7 @@ interface ArticleCardProps {
     url: string;
     text: string;
   }>;
+  youtubeVideoId?: string; // ID del video de YouTube para mostrar al final
 }
 
 export default function ArticleCard({
@@ -40,6 +41,7 @@ export default function ArticleCard({
   priority = false,
   publishedDate,
   externalLinks,
+  youtubeVideoId,
 }: ArticleCardProps) {
   const locale = useLocale();
 
@@ -223,6 +225,55 @@ export default function ArticleCard({
           </CardContent>
         </Box>
       </Box>
+
+      {/* Video de YouTube al final, centrado */}
+      {youtubeVideoId && (
+        <Box
+          sx={{
+            width: "100%",
+            maxWidth: 800,
+            mx: "auto",
+            mt: 4,
+          }}
+        >
+          <Box
+            sx={{
+              position: "relative",
+              paddingBottom: "56.25%", // 16:9 aspect ratio
+              height: 0,
+              overflow: "hidden",
+              borderRadius: 2,
+              boxShadow: 4,
+              border: "2px solid",
+              borderColor: "primary.main",
+              background:
+                "linear-gradient(135deg, rgba(211, 47, 47, 0.1) 0%, rgba(211, 47, 47, 0.05) 100%)",
+              "&:hover": {
+                transform: "translateY(-2px)",
+                boxShadow: 6,
+                borderColor: "primary.dark",
+                transition: "all 0.3s ease",
+              },
+            }}
+          >
+            <iframe
+              src={`https://www.youtube.com/embed/${youtubeVideoId}?rel=0&modestbranding=1&iv_load_policy=3`}
+              title={title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                borderRadius: "8px",
+              }}
+            />
+          </Box>
+        </Box>
+      )}
     </>
   );
 }
