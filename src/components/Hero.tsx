@@ -25,6 +25,7 @@ export default function Hero() {
   const tLTBS = useTranslations("letThereBeShred");
   const tNetflix = useTranslations("netflixSeries");
   const tMustaine = useTranslations("mustaineInterview");
+  const tDupuytren = useTranslations("dupuytrenArticle");
 
   return (
     <ContainerGradient>
@@ -191,6 +192,19 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+
+        <Divider sx={{ my: 6, width: "100%" }} />
+
+        <ArticleCard
+          title={tDupuytren("title")}
+          description={tDupuytren("description")}
+          imageUrl="/images/imagenmustaine.webp"
+          imageAlt={tDupuytren("imageAlt")}
+          imageCaption={tDupuytren("imageCaption")}
+          publishedDate="2025-12-27"
+          linkUrl="/entrevistas/mustaine-mariskal-2025"
+          youtubeVideoId="bI5KD3dRQ5I"
+        />
 
         <Divider sx={{ my: 6, width: "100%" }} />
 

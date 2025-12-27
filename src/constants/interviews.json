@@ -9302,5 +9302,37 @@
       "es": "Dave Mustaine habla sobre el próximo álbum de Megadeth, la gira de despedida y su legado. Mustaine discute cómo el nuevo álbum encapsula la esencia de Megadeth mientras explora nuevos territorios musicales. También reflexiona sobre la importancia de la gira de despedida para conectar con los fans y cerrar este capítulo de su carrera. Además, comparte sus pensamientos sobre el impacto duradero de Megadeth en el metal y la música en general. Disponible también como podcast (solo audio). Escucha a Eddie hablar de rock todos los días en SiriusXM 103 Faction Talk, en cualquier momento con la aplicación SXM.",
       "en": "Dave Mustaine discusses the new Megadeth album and more. Also available as a podcast (audio only). Hear Eddie talking rock every day live on SiriusXM 103 Faction Talk, anytime with the SXM app."
     }
+  },
+  {
+    "id": "mustaine-mariskal-2025",
+    "title": {
+      "es": "Dave Mustaine de Megadeth en Mariskal Rock TV",
+      "en": "Dave Mustaine of Megadeth on Mariskal Rock TV"
+    },
+    "date": "2025-12-27",
+    "media": {
+      "name": "Mariskal Rock TV",
+      "type": "radio show/podcast",
+      "country": "US"
+    },
+    "interviewees": [
+      {
+        "name": "Dave Mustaine",
+        "role": "Vocals/Guitar (Megadeth)",
+        "id": "dave-mustaine"
+      }
+    ],
+    "interviewer": {
+      "name": "Mariskal",
+      "role": "MariskalRockTv"
+    },
+    "type": "video",
+    "language": "en",
+    "youtube_url": "https://www.youtube.com/watch?v=bI5KD3dRQ5I&t=28s",
+    "duration": "2:27",
+    "summary": {
+      "es": "Dave Mustaine habla sobre el dolor que siente en sus manos y le impide tocar al 100%.",
+      "en": "Dave Mustaine discusses the pain he feels in his hands that prevents him from playing at 100%."
+    }
   }
 ]
