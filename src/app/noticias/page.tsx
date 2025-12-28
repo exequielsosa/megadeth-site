@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import ArticleCard from "@/components/ArticleCard";
 import newsData from "@/constants/news.json";
 import { NewsArticle } from "@/types/news";
+import ContainerGradient from "../../components/atoms/ContainerGradient";
 
 export default function NoticiasPage() {
   const t = useTranslations("news");
@@ -59,47 +60,50 @@ export default function NoticiasPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Container
-        maxWidth={false}
-        sx={{ maxWidth: 1440, mx: "auto", px: { xs: 2, sm: 3 }, py: 6 }}
-      >
-        <Typography
-          variant="h1"
-          sx={{ fontSize: { xs: 32, md: 56 }, mb: 2, fontWeight: 700 }}
-        >
-          {t("title")}
-        </Typography>
+      <ContainerGradient>
+        <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
+          <Typography
+            variant="h1"
+            sx={{ fontSize: { xs: 32, md: 56 }, mb: 2, fontWeight: 700 }}
+          >
+            {t("title")}
+          </Typography>
 
-        <Typography
-          variant="body1"
-          sx={{ fontSize: { xs: 16, md: 18 }, mb: 6, color: "text.secondary" }}
-        >
-          {t("description")}
-        </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: { xs: 16, md: 18 },
+              mb: 6,
+              color: "text.secondary",
+            }}
+          >
+            {t("description")}
+          </Typography>
 
-        <Box>
-          {sortedNews.map((article: NewsArticle) => (
-            <Box key={article.id}>
-              <ArticleCard
-                title={article.title[locale]}
-                description={article.description[locale]}
-                imageUrl={article.imageUrl}
-                imageAlt={article.imageAlt?.[locale]}
-                imageCaption={article.imageCaption?.[locale]}
-                publishedDate={article.publishedDate}
-                linkUrl={article.linkUrl}
-                linkTarget={article.linkTarget}
-                youtubeVideoId={article.youtubeVideoId}
-                externalLinks={article.externalLinks?.map((link) => ({
-                  url: link.url,
-                  text: link.text[locale],
-                }))}
-              />
-              <Box sx={{ my: 6, borderBottom: 1, borderColor: "divider" }} />
-            </Box>
-          ))}
-        </Box>
-      </Container>
+          <Box>
+            {sortedNews.map((article: NewsArticle) => (
+              <Box key={article.id}>
+                <ArticleCard
+                  title={article.title[locale]}
+                  description={article.description[locale]}
+                  imageUrl={article.imageUrl}
+                  imageAlt={article.imageAlt?.[locale]}
+                  imageCaption={article.imageCaption?.[locale]}
+                  publishedDate={article.publishedDate}
+                  linkUrl={article.linkUrl}
+                  linkTarget={article.linkTarget}
+                  youtubeVideoId={article.youtubeVideoId}
+                  externalLinks={article.externalLinks?.map((link) => ({
+                    url: link.url,
+                    text: link.text[locale],
+                  }))}
+                />
+                <Box sx={{ my: 6, borderBottom: 1, borderColor: "divider" }} />
+              </Box>
+            ))}
+          </Box>
+        </Container>
+      </ContainerGradient>
     </>
   );
 }

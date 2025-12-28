@@ -16,6 +16,7 @@ import {
   Card,
   CardContent,
   CardActionArea,
+  Box,
 } from "@mui/material";
 import { useTranslations } from "next-intl";
 import songsData from "@/constants/songs.json";
@@ -87,22 +88,19 @@ export default function SongsListPage() {
   return (
     <ContainerGradient>
       <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
-        <Typography
-          variant="h1"
-          component="h1"
-          sx={{
-            fontSize: { xs: "2.5rem", md: "4rem" },
-            fontWeight: 600,
-            textAlign: "center",
-            mb: 2,
-            background: "linear-gradient(45deg, #ff6b6b, #4ecdc4)",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          width={"100%"}
         >
-          {t("title")}
-        </Typography>
+          <Typography
+            variant="h1"
+            sx={{ fontSize: { xs: 32, md: 56 }, mb: 3, fontWeight: 700 }}
+          >
+            {t("title")}
+          </Typography>
+        </Box>
         <TextField
           label={t("search")}
           variant="outlined"

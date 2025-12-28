@@ -40,59 +40,6 @@
     "video": "Video",
     "backToInterviews": "Volver a entrevistas"
   },
-  "newSingle": {
-    "title": "Megadeth anuncia la salida de su nuevo single",
-    "description": "Megadeth anunció hoy el lanzamiento de su nuevo single \"I don't care\", disponible el viernes 14 de noviembre. Este tema es el segundo adelanto del próximo y último álbum homónimo \"Megadeth\", que saldrá el 23 de enero de 2026.",
-    "details": "La canción \"I don't care\" marca una nueva etapa para la banda y anticipa el sonido del disco final. El video adelanto ya está disponible para todos los fans.",
-    "videoTitle": "Adelanto oficial del nuevo single",
-    "cardTitle": "Nuevo single: I don't care"
-  },
-  "behindTheMaskArg": {
-    "title": "MEGADETH: BEHIND THE MASK se estrena en Argentina",
-    "description": "El documental se estrenará en cines el 22 de enero de 2026, con distribución de Cinemark Hoyts, coincidiendo con el lanzamiento del nuevo álbum de la banda.\n\nEsta función global única permitirá a los fans revivir los 40 años de la banda y escuchar el disco completo con comentarios de Dave Mustaine.\n\nDetalles Clave:\n• Fecha de Estreno: 22 de enero de 2026 (función única mundial)\n• En Cines: Salas de Argentina, distribuido por Cinemark Hoyts\n• Contenido: Documental dirigido por Dave Mustaine celebrando 40 años de la banda\n• Álbum: Presentación del nuevo álbum homónimo de estudio\n• Entradas: Disponibles desde el 12 de diciembre\n\nEste evento cinematográfico será una experiencia inmersiva para los fans antes de la gira de despedida de la banda en 2026, que incluirá una fecha en Tecnópolis, Argentina.",
-    "imageAlt": "Megadeth Behind The Mask",
-    "imageCaption": "Megadeth Behind The Mask Documentary",
-    "links": [
-      {
-        "text": "Comprar entradas en Megadeth Film",
-        "url": "https://www.megadethfilm.com"
-      },
-      {
-        "text": "Más información en Cinemark Hoyts",
-        "url": "https://www.cinemarkhoyts.com.ar/pelicula/megadeth-behind-the-mask"
-      }
-    ]
-  },
-  "canadaTour": {
-    "title": "Anuncio Gira Canadá 2026",
-    "description": "Megadeth se complace en anunciar su próxima gira por Canadá en 2026. ¡Prepárate para una experiencia inolvidable llena de energía y clásicos del metal!. Acompaña a Megadeth en esta emocionante aventura junto a las legendarias bandas Anthrax y Exodus. Podes ver las fechas en nuestra seccion Tour",
-    "imageAlt": "Flyer oficial",
-    "imageCaption": "Flyer oficial"
-  },
-  "vicSays": {
-    "title": "Megadeth anuncia su tercer single",
-    "description": "El mismísimo Vic Rattlehead confirma en su cuenta de Instagram que el día de ayer Megadeth estuvo grabando el video musical para un tercer single del nuevo álbum.🤘",
-    "imageAlt": "Vic Rattlehead Instagram",
-    "imageCaption": "Vic anuncia"
-  },
-  "spaceInterview": {
-    "title": "El Último Show de Megadeth No Será en la Tierra: Mustaine Apunta al Espacio",
-    "description": "El líder de la banda de thrash metal explica por qué su despedida debe ser un 'full moon landing gig'. Mustaine detalla su ambición y por qué cree que los viajes espaciales comerciales harán posible un concierto más allá de la atmósfera.",
-    "imageAlt": "Space Interview",
-    "imageCaption": "Astronauta Mustaine"
-  },
-  "ironMaidenTour": {
-    "rideTitle": "MEGADETH publicará una versión de Ride The Lightning",
-    "rideParagraph": "Dave Mustaine confirmó que una adaptación de la canción que ayudó a escribir para Metallica estará en el álbum despedida de Megadeth para \"honrar su amistad con James Hetfield\" y \"cerrar el círculo\".",
-    "rideImageAlt": "Ride The Lightning",
-    "latamTitle": "¡Megadeth vuelve a Argentina y Latinoamérica!",
-    "latamParagraph": "<strong>Megadeth anuncia la gira This Was Our Life 2026 por Latinoamérica!</strong><br><br>La gira mundial This Was Our Life llega a Latinoamérica en 2026 — con shows masivos recién anunciados en Lima, Bogotá, Buenos Aires, São Paulo, Santiago, Ciudad de México y más.<br><br>Los miembros de Megadeth Cyber Army tienen acceso prioritario a las entradas en preventa exclusiva.<br><br><b>Lima:</b> Preventa Cyber Army 2 y 3 de noviembre a las 10am hora local<br>Venta general: 6 de noviembre a las 10am hora local<br><b>Colombia:</b> Preventa Cyber Army 3 y 4 de noviembre a las 10am hora local<br>Venta general: 7 de noviembre a las 10am hora local<br><b>Argentina:</b> Detalles de preventa próximamente<br><b>São Paulo:</b> Preventa Cyber Army 3 y 4 de noviembre a las 10am hora local<br>Venta general: 5 de noviembre a las 10am hora local<br><b>Santiago, Chile:</b> Preventa Cyber Army 2 y 3 de noviembre a las 10am hora local<br>Venta general: 4 de noviembre a las 10am hora local<br><b>México (los 3 shows):</b> Preventa Cyber Army 8 y 9 de noviembre a las 10am hora local<br>Venta general: 12 de noviembre a las 10am hora local",
-    "latamDates": "¡Nuevas fechas para Latinoamérica en 2026!",
-    "title": "MEGADETH se une a IRON MAIDEN y ANTHRAX para su próxima gira Run For Your Lives por Norteamérica",
-    "paragraph1": "La banda británica de Heavy Metal IRON MAIDEN ha confirmado las fechas de la parte norteamericana de la gira Run For Your Lives. El tour visitará Canadá y Estados Unidos después de pasar por Europa -con dos conciertos en España, en Resurrection Fest 2026 de Viveiro y Rock Imperium 2026 de Cartagena-, y lo hará con dos grupos invitados de excepción: MEGADETH -que precisamente estará inmerso en su gira de despedida- y ANTHRAX.",
-    "paragraph2": "La gira promete ser uno de los eventos más grandes del metal en 2026, reuniendo a tres leyendas del género en una serie de conciertos históricos. Los fans podrán disfrutar de un repertorio cargado de clásicos y sorpresas, en una experiencia única e irrepetible.",
-    "caption": "Gira con Maiden"
-  },
   "header": {
     "fanSite": "Megadeth • Fan",
     "changeTheme": "Cambiar tema",
@@ -347,24 +294,6 @@
       }
     }
   },
-  "newTour": {
-    "title": "Megadeth anuncia su gira final: This Was Our… Life Tour",
-    "paragraph1": "La leyenda del thrash metal, Megadeth, confirmó oficialmente su despedida de los escenarios con una gira final por Sudamérica, el territorio donde la banda encontró algunos de sus públicos más apasionados.",
-    "paragraph2": {
-      "start": "El anuncio se realizó sorpresivamente durante un show de Guns N' Roses en Colombia, donde una proyección en pantalla reveló el mensaje:",
-      "quote": "Prepárense. Última chance para verlos en vivo. Megadeth: This Was Our Life Tour.",
-      "end": "La noticia recorrió el mundo en minutos y desató una ola de emoción y nostalgia entre los fans. Las redes se llenaron de mensajes, fotos y recuerdos de recitales pasados, celebrando el cierre de una historia que marcó a generaciones enteras de metaleros."
-    },
-    "paragraph3": "Aunque las fechas y ciudades aún no fueron confirmadas, se espera que el tour pase por Argentina, Brasil, Chile y México, los países donde Megadeth cosechó algunos de los shows más multitudinarios de su carrera.",
-    "paragraph4": "Con más de 40 años de trayectoria, 16 discos de estudio y una influencia imposible de medir, la banda liderada por Dave Mustaine promete una despedida a la altura de su legado: poderosa, emotiva y cargada de historia.",
-    "paragraph5": {
-      "quote": "Sudamérica siempre fue nuestra segunda casa",
-      "attribution": "declaró Mustaine en una entrevista reciente. \"Queremos cerrar este capítulo donde el público nos dio tanto.\""
-    },
-    "paragraph6": "This Was Our… Life Tour no solo marcará el final de una era, sino también una celebración de todo lo que Megadeth representó: velocidad, virtuosismo, rebeldía y conexión eterna con sus fans.",
-    "videoTitle": "Anuncio nueva gira",
-    "videoCardTitle": "Nueva gira Anuncio"
-  },
   "historyPage": {
     "title": "Megadeth: Historia",
     "description": "Historia completa de Megadeth desde 1983 hasta 2026. Cuatro décadas de thrash metal, cambios de formación, éxitos y controversias de una de las bandas más influyentes del metal.",
@@ -451,7 +380,7 @@
     "viewSongDetails": "Ver detalles de la canción"
   },
   "footer": {
-    "siteDescription": "Noticias, fechas y discografía de Megadeth. Curado para fans. Rápido, simple y full responsive.",
+    "siteDescription": "Noticias, fechas y discografía de Megadeth.",
     "faq": "Preguntas frecuentes",
     "terms": "Términos y condiciones",
     "privacy": "Política de privacidad",
@@ -551,64 +480,5 @@
     "title": "Contacto",
     "description": "¿Tienes dudas, sugerencias o quieres colaborar? Escríbenos a nuestro correo y te responderemos a la brevedad.",
     "emailButton": "Enviar correo a megadethargentina77@gmail.com"
-  },
-  "exclusiveEvent": {
-    "title": "Escucha el disco antes que nadie",
-    "description": "Adéntrate en la celebración inmersiva más exclusiva de Megadeth durante todo un día. Organizado a corta distancia de Nashville en La Vergne, TN el sábado 17 de enero de 2026, este evento de un día te permite acercarte a la banda, la música, las historias y el legado como nunca antes.\n\nEsta es una experiencia única en la vida, ultra limitada.\n\nDetalles del Evento\nFecha: Sábado 17 de enero de 2026\nUbicación: La Vergne, TN\nHorario: 12pm–10pm (hora estimada)\n\nEl día con acceso total incluye:\n• Escucha el nuevo álbum antes que nadie\n• Presentación Acústica de Megadeth\n• Clase Magistral de Megadeth\n• Sesión de Preguntas y Respuestas con la banda\n• Charla sobre Guitarras con Dave y el CEO de Gibson, César Gueikian\n• Sesión de Fotos con la Banda\n• Cena Catering, Cerveza Megadeth y Vino House of Mustaine\n• Experiencias de Fotos Inmersivas\n• Póster con arte del álbum autografiado\n• Mercancía Exclusiva\n• y más",
-    "imageAlt": "Evento Exclusivo",
-    "imageCaption": "Escucha el disco antes que nadie"
-  },
-  "cinemaEvent": {
-    "title": "¡Megadeth va al cine!",
-    "description": "MEGADETH: BEHIND THE MASK\n\nMEGADETH: BEHIND THE MASK es un evento cinematográfico que celebra el legado de la banda, en el cual Dave Mustaine descorre el telón de 40 años de MEGADETH, compartiendo historias nunca antes contadas del increíble pasado de la banda y el fuego creativo que la impulsa. Mira el tráiler más abajo.\n\nEntrelazado a lo largo del evento, el público podrá experimentar el estreno mundial del nuevo álbum homónimo de MEGADETH en su totalidad, cobrado vida con una entrevista retrospectiva de 40 años que abarca toda su carrera y las reflexiones pista por pista de Mustaine sobre el álbum final de estudio de la banda. Este evento de escucha por una sola noche proporcionará una primera audición de este proyecto histórico. MEGADETH: BEHIND THE MASK es una celebración inmersiva de una de las bandas más influyentes en la historia del metal, capturando su legado mientras anuncia un nuevo y poderoso capítulo.\n\nExclusivamente en Cines el 22 de enero de 2026. Entradas a la venta el 11 de diciembre de 2025.",
-    "imageAlt": "Megadeth en el cine",
-    "imageCaption": "Megadeth en el cine"
-  },
-  "argentinaShow": {
-    "title": "Confirmado: Megadeth en Tecnópolis el 30 de abril",
-    "description": "¡Después de mucha espera, Megadeth ha confirmado oficialmente su regreso a Argentina!\n\nFecha: 30 de abril de 2026\nLugar: Tecnópolis\n\nAún no se ha confirmado si será en el microestadio o en el estadio abierto.\n\nEntradas disponibles próximamente en https://fullticket.com\nPreventa: A partir del 10 de diciembre\n\n¡No te pierdas este épico concierto de despedida!",
-    "imageAlt": "Megadeth en Tecnópolis",
-    "imageCaption": "Megadeth en Tecnópolis, 30 de abril de 2026"
-  },
-  "argentinaTickets": {
-    "title": "¡Entradas disponibles para Megadeth en Argentina!",
-    "description": "Las entradas para el show de Megadeth en Tecnópolis el 30 de abril de 2026 ya están disponibles.\n\n🎫 PREVENTA EXCLUSIVA VISA BNA:\nDel 10 de diciembre a las 10:00 hs\nBeneficio: 10% de descuento y 3 cuotas sin interés con tarjetas VISA del BNA\n\n🎟️ VENTA GENERAL:\nDesde el 11 de diciembre a las 10:00 hs\nTodos los medios de pago disponibles\n\nPRECIOS:\n• Lounge con acceso a Campo VIP: $270.000 (Preventa: $40.500)\n• Campo VIP (sin ubicación): $170.000 (Preventa: $25.500)\n• Campo (sin ubicación): $90.000 (Preventa: $13.500)\n• Tribuna Central (5,6,7,8,9,10) Numeradas: $150.000 (Preventa: $22.500)\n• Tribuna Lateral (1,2,3,4,11,12,13,14) Numeradas: $130.000 (Preventa: $19.500)\n\n¡No te pierdas el show de despedida de Megadeth en Argentina!",
-    "imageAlt": "Entradas Megadeth Argentina",
-    "imageCaption": "Megadeth en Tecnópolis - 30 de abril de 2026",
-    "links": [
-      {
-        "text": "Comprar entradas en FullTicket",
-        "url": "https://fullticket.com/fans/es/entradas-musica-megadeth"
-      }
-    ]
-  },
-  "behindTheMaskTeaser": {
-    "title": "Teaser de MEGADETH: BEHIND THE MASK",
-    "videoTitle": "Teaser de MEGADETH: BEHIND THE MASK"
-  },
-  "letThereBeShred": {
-    "title": "Este viernes se estrena el nuevo tema 'Let There Be Shred'",
-    "description": "Megadeth lanzará este viernes su nuevo sencillo 'Let There Be Shred', que formará parte de su próximo álbum homónimo 'Megadeth'. ¡No te pierdas este esperado lanzamiento!",
-    "imageAlt": "Portada del nuevo tema Let There Be Shred",
-    "imageCaption": "Let There Be Shred - Nuevo sencillo de Megadeth",
-    "titleVideo": "Let There Be Shred - Video Oficial"
-  },
-  "netflixSeries": {
-    "title": "Rumor: Netflix anuncia una serie de 16 episodios con Dave Mustaine — \"Strings of Fire\"",
-    "description": "Netflix ha confirmado oficialmente una miniserie de 16 episodios, Dave Mustaine: Strings of Fire, que narra el ascenso, la ruptura, la reinvención y el perdurable legado del ícono del metal.\n\nDirigida y narrada por el propio Mustaine, la serie lleva a los espectadores a un viaje inquebrantable: desde una juventud inquieta y los primeros enfrentamientos entre bandas hasta la fundación de Megadeth, la dominación mundial del thrash metal y una carrera definida por la precisión, la intensidad y la supervivencia.\n\n\"Esta historia no se trata solo de metal\", dice Mustaine. \"Se trata de disciplina: de convertir la ira en estructura, el caos en control y el ruido en significado\".\n\nCada episodio traza su evolución, desde un forastero ambicioso hasta una de las figuras más influyentes de la historia de la música heavy. La serie no elude las duras verdades: los reveses que se convirtieron en combustible, los conflictos que forjaron claridad y la búsqueda incansable de la excelencia que exigió responsabilidad en todo momento.\n\nStrings of Fire profundiza en la creación de la obra más icónica de Mustaine, desde la urgencia incisiva de \"Peace Sells\" y la furia geopolítica de \"Holy Wars… The Punishment Due\", hasta la fuerza épica de \"Symphony of Destruction\". Explora su obsesión por el tempo, la técnica y la precisión lírica, y cómo esos estándares transformaron el ADN del metal.\n\nCombinando material de archivo inédito, maquetas inéditas, reflexiones personales y recreaciones cinematográficas, la serie ofrece una mirada sin precedentes a la mente de un músico que exigía más: de sus compañeros de banda, de su público y de sí mismo.",
-    "imageAlt": "Strings Of Fire",
-    "imageCaption": "Netflix: \"Strings of Fire\""
-  },
-  "mustaineInterview": {
-    "title": "Entrevista con Dave Mustaine sobre el nuevo álbum de Megadeth y más",
-    "description": "Dave Mustaine habló de la última gira de Megadeth y sus problemas de salud.\n\nEl líder de la legendaria banda dialogó sobre los problemas de salud que lo llevaron a tomar la decisión de cerrar Megadeth después de más de 40 años de carrera.\n\n\"Mis manos me estaban fallando\", confesó Mustaine.\n\nEl músico de 64 años sufre de artritis, discos inflamados, una fractura lumbar y tiene la espalda fusionada a la altura del cuello.\n\n\"Siempre dije que cuando llegara al punto en que no pudiera dar el cien por cien cada noche, sería cuando empezaría a considerar dejarlo\", explicó en una entrevista con Eddie Trunk.\n\nEl grupo lanzará su 17° y último álbum homónimo \"Megadeth\", seguido de una gira de despedida mundial que se extenderá por varios años.\n\nEn Argentina se presentarán el 30 de abril de 2026 en Tecnópolis.",
-    "imageAlt": "Entrevista con Dave Mustaine",
-    "imageCaption": "Entrevista con Eddie Trunk"
-  },
-  "dupuytrenArticle": {
-    "title": "Dave Mustaine revela enfermedad en la mano que acelera su retiro",
-    "description": "En una nueva entrevista con nuestros compañeros de Mariskal Rock (vía Blabbermouth.net), el frontman de Megadeth, Dave Mustaine, ha hablado sobre el momento en el que decidió que iba a anunciar su retirada, que se prolongará en el tiempo con una gira final una vez la banda saque su disco final, homónimo. Esto ha dado pie a que el que fuera guitarrista de Metallica desvelara que sufre una dolencia en la mano que ha acortado su carrera.\n\n\"No. No, porque solo lo mencioné. No lo decidí. Estábamos trabajando en el estudio [en el próximo álbum homónimo de Megadeth] y habían sido unas semanas muy difíciles. Estábamos intentando terminarlo todo y, obviamente, para nosotros era importante asegurarnos de que el disco quedara bien. Teníamos un montón de plazos que cumplir, lo que lo hacía difícil y cosas así. Y me dolían mucho las manos. Entonces, un día le dije a mi representante: 'No sé cuánto tiempo más voy a poder seguir haciendo esto'. No le dije: 'Oye, quiero retirarme ahora mismo'\".\n\n¿Y qué le ocurre en la mano que no le permite tocar al 100%? Mustaine lo explica de la siguiente manera: \"Sí, puedes verlo aquí, en esta mano. Hay una línea justo ahí que sobresale. Se trata de algo llamado contractura de Dupuytren, y hará que mi dedo se doble así. Ya ha empezado, se está curvando un poco. Y si te fijas en las yemas de mis dedos, están muy artríticas. Así que todas esas protuberancias hacen que me resulte muy doloroso tocar\".\n\nDe momento, Dave no pasará por quirófano y el motivo es claro: \"Voy a esperar hasta estar listo para probarlo, porque si lo pruebo ahora y estoy al 95 %, y me operan y eso me retrasa, habría sido una mala decisión. Si espero hasta que mis manos me causen problemas y lo pruebo y no funciona, bueno, entonces habré hecho giras por todas partes, me habré despedido de todo el mundo y no dejaré nada sin decir ni sin terminar\".",
-    "imageAlt": "Dave Mustaine mostrando su mano con contractura de Dupuytren",
-    "imageCaption": "Dave Mustaine revela su condición de contractura de Dupuytren"
   }
 }
