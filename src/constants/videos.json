@@ -457,5 +457,23 @@
       "es": "Video conceptual de su material más reciente, con una estética de alta producción que se enfoca en un evento apocalíptico y el 'punto de inflexión' social.",
       "en": "A conceptual video for their most recent material, featuring a high-production aesthetic that focuses on an apocalyptic event and the societal 'tipping point'."
     }
+  },
+  {
+    "title": "I Don't Care",
+    "year": 2025,
+    "youtube": "https://www.youtube.com/watch?v=-E4O5VlRYOY",
+    "description": {
+      "es": "Segundo single de su album omonimo, un video con skaters, y estetica punk rock.",
+      "en": "Second single from their self-titled album, a video featuring skaters and a punk rock aesthetic."
+    }
+  },
+  {
+    "title": "Let There Be Shred",
+    "year": 2025,
+    "youtube": "https://www.youtube.com/watch?v=4IL67t825cA",
+    "description": {
+      "es": "Tercer adelanto del disco 'Megadeth', un video al mejor estilo Mortal Kombat.",
+      "en": "Third single from their self-titled album, a video in the style of Mortal Kombat."
+    }
   }
 ]
