@@ -354,7 +354,9 @@
     "subtitle": "No te pierdas los próximos conciertos de Megadeth",
     "moreInfo": "Más fechas serán anunciadas próximamente. ¡Mantente atento!",
     "buyTickets": "Comprar entradas",
-    "soldOut": "Agotado"
+    "soldOut": "Agotado",
+    "upcoming": "Próximos conciertos",
+    "past": "Conciertos pasados"
   },
   "albumTeasers": {
     "title": "Adelantos del Álbum",

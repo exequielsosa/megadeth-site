@@ -354,7 +354,9 @@
     "subtitle": "Don't miss the upcoming Megadeth concerts",
     "moreInfo": "More dates will be announced soon. Stay tuned!",
     "buyTickets": "Buy tickets",
-    "soldOut": "Sold out"
+    "soldOut": "Sold out",
+    "upcoming": "Upcoming concerts",
+    "past": "Past concerts"
   },
   "albumTeasers": {
     "title": "Album Previews",

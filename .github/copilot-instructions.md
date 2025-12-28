@@ -30,7 +30,7 @@ This is a Next.js 15 App Router project with Material-UI theming and internation
 **Internationalization:**
 
 - Use `next-intl` hooks: `useTranslations()`, `getLocale()`, `getMessages()`
-- Locale switching via `useRouter()` from `next-intl/navigation`
+- Locale switching via `useRouter()` from `next-intl/                                                                                                                                                                                                                                                                                                     `
 - All user-facing text must support es/en locales
 - Content descriptions often have `{es: "", en: ""}` structure in JSON
 
