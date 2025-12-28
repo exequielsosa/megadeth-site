@@ -1,31 +1,31 @@
 "use client";
 
-import { Box, Container, Stack, Typography } from "@mui/material";
-import { useTranslations } from "next-intl";
+import { Box, Container, Stack, Typography, Button } from "@mui/material";
+import { useTranslations, useLocale } from "next-intl";
 import ContainerGradient from "../components/atoms/ContainerGradient";
 import Countdown from "./Countdown";
-import YouTubeEmbed from "./YouTubeEmbed";
 import Image from "next/image";
 import Divider from "@mui/material/Divider";
-import IronMaidenTour from "./IronMaidenTour";
-import LatamTour from "./LatamTour";
-import Ride from "./Ride";
-import Space from "./Space";
 import ArticleCard from "./ArticleCard";
+import newsData from "@/constants/news.json";
+import { NewsArticle } from "@/types/news";
+import Link from "next/link";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function Hero() {
   const t = useTranslations("hero");
   const tAlbum = useTranslations("album");
-  const tCanada = useTranslations("canadaTour");
-  const tEvent = useTranslations("exclusiveEvent");
-  const tCinema = useTranslations("cinemaEvent");
-  const tBTM = useTranslations("behindTheMaskArg");
-  const tTickets = useTranslations("argentinaTickets");
-  const tTeaser = useTranslations("behindTheMaskTeaser");
-  const tLTBS = useTranslations("letThereBeShred");
-  const tNetflix = useTranslations("netflixSeries");
-  const tMustaine = useTranslations("mustaineInterview");
-  const tDupuytren = useTranslations("dupuytrenArticle");
+  const tNews = useTranslations("news");
+  const locale = useLocale() as "es" | "en";
+
+  // Obtener las últimas 3 noticias ordenadas por fecha
+  const latestNews = ([...newsData] as NewsArticle[])
+    .sort(
+      (a, b) =>
+        new Date(b.publishedDate).getTime() -
+        new Date(a.publishedDate).getTime()
+    )
+    .slice(0, 10);
 
   return (
     <ContainerGradient>
@@ -195,154 +195,50 @@ export default function Hero() {
 
         <Divider sx={{ my: 6, width: "100%" }} />
 
-        <ArticleCard
-          title={tDupuytren("title")}
-          description={tDupuytren("description")}
-          imageUrl="/images/imagenmustaine.webp"
-          imageAlt={tDupuytren("imageAlt")}
-          imageCaption={tDupuytren("imageCaption")}
-          publishedDate="2025-12-27"
-          linkUrl="/entrevistas/mustaine-mariskal-2025"
-          youtubeVideoId="bI5KD3dRQ5I"
-        />
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-
-        <ArticleCard
-          title={tNetflix("title")}
-          description={tNetflix("description")}
-          imageUrl="/images/netflix.jpg"
-          imageAlt={tNetflix("imageAlt")}
-          imageCaption={tNetflix("imageCaption")}
-          publishedDate="2025-12-24"
-        />
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-        <ArticleCard
-          title={tMustaine("title")}
-          description={tMustaine("description")}
-          imageUrl="/images/trunk.jpg"
-          imageAlt={tMustaine("imageAlt")}
-          imageCaption={tMustaine("imageCaption")}
-          publishedDate="2025-12-20"
-          linkUrl="/entrevistas/mustaine-trunk-2025"
-        />
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-        <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 }, mb: 2 }}>
-          {tLTBS("titleVideo")}
-        </Typography>
-        <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
-          <YouTubeEmbed videoId="4IL67t825cA" title={tLTBS("titleVideo")} />
-        </Box>
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-
-        <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 } }}>
-          {tTeaser("title")}
-        </Typography>
-        <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
-          <YouTubeEmbed videoId="qntDbiz75iI" title={tTeaser("videoTitle")} />
-        </Box>
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-
-        <ArticleCard
-          title={tTickets("title")}
-          description={tTickets("description")}
-          imageUrl="/images/campo.jpg"
-          imageAlt={tTickets("imageAlt")}
-          imageCaption={tTickets("imageCaption")}
-          externalLinks={[
-            {
-              text: tTickets("links.0.text"),
-              url: tTickets("links.0.url"),
-            },
-          ]}
-        />
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-
-        <ArticleCard
-          title={tBTM("title")}
-          description={tBTM("description")}
-          imageUrl="/images/btm.jpg"
-          imageAlt={tBTM("imageAlt")}
-          imageCaption={tBTM("imageCaption")}
-          externalLinks={[
-            {
-              text: tBTM("links.0.text"),
-              url: tBTM("links.0.url"),
-            },
-            {
-              text: tBTM("links.1.text"),
-              url: tBTM("links.1.url"),
-            },
-          ]}
-        />
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-
-        <ArticleCard
-          title={tCinema("title")}
-          description={tCinema("description")}
-          imageUrl="/images/megadethcine.webp"
-          imageAlt={tCinema("imageAlt")}
-          imageCaption={tCinema("imageCaption")}
-        />
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-
-        <ArticleCard
-          title={tEvent("title")}
-          description={tEvent("description")}
-          imageUrl="/images/hear.png"
-          imageAlt={tEvent("imageAlt")}
-          imageCaption={tEvent("imageCaption")}
-          linkUrl="https://www.megadeth.com/pages/let-there-be-shred"
-        />
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-
-        <ArticleCard
-          title={tCanada("title")}
-          description={tCanada("description")}
-          imageUrl="/images/canada.jpg"
-          imageAlt={tCanada("imageAlt")}
-          imageCaption={tCanada("imageCaption")}
-          linkUrl="/tour"
-        />
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-        <Space />
-        <Divider sx={{ my: 6, width: "100%" }} />
-        <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 }, mb: 2 }}>
-          {t("countdownTitle")}
+        {/* Sección de últimas noticias */}
+        <Typography variant="h2" sx={{ fontSize: { xs: 28, md: 48 }, mb: 4 }}>
+          {tNews("latestNews")}
         </Typography>
 
-        <Typography variant="h3" sx={{ fontSize: { xs: 14, md: 16 } }}>
-          {t("countdownDescription")}
-        </Typography>
-        <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
-          <YouTubeEmbed videoId="-E4O5VlRYOY" title={t("videoTitle")} />
-        </Box>
+        {latestNews.map((article: NewsArticle) => (
+          <Box key={article.id}>
+            <ArticleCard
+              title={article.title[locale]}
+              description={article.description[locale]}
+              imageUrl={article.imageUrl}
+              imageAlt={article.imageAlt?.[locale]}
+              imageCaption={article.imageCaption?.[locale]}
+              publishedDate={article.publishedDate}
+              linkUrl={article.linkUrl}
+              linkTarget={article.linkTarget}
+              youtubeVideoId={article.youtubeVideoId}
+              externalLinks={article.externalLinks?.map((link) => ({
+                url: link.url,
+                text: link.text[locale],
+              }))}
+            />
+            <Divider sx={{ my: 6, width: "100%" }} />
+          </Box>
+        ))}
 
-        <Divider sx={{ my: 6, width: "100%" }} />
-        <LatamTour />
-        <Divider sx={{ my: 6, width: "100%" }} />
-
-        <Ride />
-        <Divider sx={{ my: 6, width: "100%" }} />
-
-        <IronMaidenTour />
-
-        <Divider sx={{ my: 6, width: "100%" }} />
-
-        <Typography variant="h3" sx={{ fontSize: { xs: 22, md: 48 } }}>
-          {t("newVideoTitle")}
-        </Typography>
-        <Box sx={{ width: "100%", maxWidth: 800, mx: "auto" }} mt={5}>
-          <YouTubeEmbed videoId="ECXg-a7XZQI" title={t("latestVideo")} />
+        {/* Botón para ver todas las noticias */}
+        <Box sx={{ display: "flex", justifyContent: "center", my: 4 }}>
+          <Button
+            component={Link}
+            href="/noticias"
+            variant="contained"
+            size="large"
+            endIcon={<ArrowForwardIcon />}
+            sx={{
+              px: 4,
+              py: 1.5,
+              fontSize: { xs: 16, md: 18 },
+              fontWeight: 600,
+              textTransform: "uppercase",
+            }}
+          >
+            {tNews("viewAllNews")}
+          </Button>
         </Box>
       </Container>
     </ContainerGradient>
