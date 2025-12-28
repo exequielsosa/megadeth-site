@@ -101,6 +101,7 @@
   "navigation": {
     "home": "Home",
     "tour": "Tour",
+    "media": "Media",
     "discography": "Discography",
     "videos": "Videos",
     "dvds": "DVDs",
@@ -108,7 +109,16 @@
     "history": "History",
     "lineups": "Lineups",
     "members": "Members",
-    "songs": "Songs"
+    "songs": "Songs",
+    "news": "News"
+  },
+  "news": {
+    "title": "News",
+    "description": "Stay up to date with the latest news, announcements and updates from Megadeth.",
+    "pageTitle": "News - Megadeth",
+    "pageDescription": "Latest news, announcements and updates from Megadeth. Find out everything about the band, tours, releases and more.",
+    "latestNews": "Latest News",
+    "viewAllNews": "View all news"
   },
   "history": {
     "activeYears": "Active years",

@@ -31,6 +31,7 @@ import Image from "next/image";
 export default function Header() {
   const { mode, toggle } = useColorMode();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [mediaAnchorEl, setMediaAnchorEl] = useState<null | HTMLElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const currentLocale = useLocale();
@@ -48,12 +49,17 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navigationItems = [
-    { label: t("home"), href: "/" },
-    { label: t("tour"), href: "/tour" },
+  const mediaItems = [
     { label: t("discography"), href: "/discography" },
     { label: t("videos"), href: "/videos" },
     { label: t("dvds"), href: "/dvds" },
+  ];
+
+  const navigationItems = [
+    { label: t("home"), href: "/" },
+    { label: t("tour"), href: "/tour" },
+    { label: t("media"), href: "#", hasSubmenu: true },
+    { label: t("news"), href: "/noticias" },
     { label: t("interviews"), href: "/entrevistas" },
     { label: t("history"), href: "/historia" },
     { label: t("lineups"), href: "/formaciones" },
@@ -74,6 +80,16 @@ export default function Header() {
     window.location.reload();
     handleLanguageClose();
   };
+
+  const handleMediaMouseEnter = (event: React.MouseEvent<HTMLElement>) => {
+    setMediaAnchorEl(event.currentTarget);
+  };
+
+  const handleMediaMouseLeave = () => {
+    setMediaAnchorEl(null);
+  };
+
+  const isMediaActive = mediaItems.some((item) => pathname === item.href);
 
   // Función para obtener el color de fondo basado en scroll y modo
   const getBackgroundColor = () => {
@@ -131,7 +147,94 @@ export default function Header() {
           >
             <Box sx={{ display: "flex", gap: 1 }}>
               {navigationItems.map((item) => {
-                const isActive = pathname === item.href;
+                const isActive = item.hasSubmenu
+                  ? isMediaActive
+                  : pathname === item.href;
+
+                if (item.hasSubmenu) {
+                  return (
+                    <Box
+                      key="media"
+                      onMouseEnter={handleMediaMouseEnter}
+                      onMouseLeave={handleMediaMouseLeave}
+                    >
+                      <Button
+                        sx={{
+                          position: "relative",
+                          color: "text.primary",
+                          textTransform: "uppercase",
+                          fontWeight: 600,
+                          fontSize: "0.9rem",
+                          letterSpacing: "0.5px",
+                          px: 1,
+                          py: 1,
+                          transition: "all 0.3s ease",
+                          "&::after": {
+                            content: '""',
+                            position: "absolute",
+                            bottom: 0,
+                            left: "50%",
+                            transform: "translateX(-50%)",
+                            width: isActive ? "80%" : "0%",
+                            height: "2px",
+                            backgroundColor: "primary.main",
+                            transition: "width 0.3s ease",
+                          },
+                          "&:hover": {
+                            backgroundColor: "transparent",
+                            color: "primary.main",
+                            "&::after": {
+                              width: "80%",
+                            },
+                          },
+                        }}
+                      >
+                        {item.label}
+                      </Button>
+                      <Menu
+                        anchorEl={mediaAnchorEl}
+                        open={Boolean(mediaAnchorEl)}
+                        onClose={handleMediaMouseLeave}
+                        MenuListProps={{
+                          onMouseLeave: handleMediaMouseLeave,
+                        }}
+                        sx={{
+                          "& .MuiPaper-root": {
+                            mt: 1,
+                          },
+                        }}
+                      >
+                        {mediaItems.map((mediaItem) => (
+                          <MenuItem
+                            key={mediaItem.href}
+                            component={Link}
+                            href={mediaItem.href}
+                            onClick={handleMediaMouseLeave}
+                            sx={{
+                              backgroundColor:
+                                pathname === mediaItem.href
+                                  ? "primary.main"
+                                  : "transparent",
+                              color:
+                                pathname === mediaItem.href
+                                  ? "white"
+                                  : "text.primary",
+                              "&:hover": {
+                                backgroundColor:
+                                  pathname === mediaItem.href
+                                    ? "primary.dark"
+                                    : "action.hover",
+                              },
+                            }}
+                          >
+                            {mediaItem.label}
+                          </MenuItem>
+                        ))}
+                      </Menu>
+                    </Box>
+                  );
+                }
+
                 return (
                   <Button
                     key={item.href}
@@ -238,6 +341,77 @@ export default function Header() {
 
           <List>
             {navigationItems.map((item) => {
+              if (item.hasSubmenu) {
+                return (
+                  <Box key="media">
+                    <ListItem disablePadding>
+                      <ListItemButton
+                        sx={{
+                          borderRadius: 1,
+                          mb: 1,
+                          backgroundColor: isMediaActive
+                            ? "primary.main"
+                            : "transparent",
+                          color: isMediaActive ? "white" : "text.primary",
+                          "&:hover": {
+                            backgroundColor: isMediaActive
+                              ? "primary.dark"
+                              : "action.hover",
+                          },
+                        }}
+                      >
+                        <ListItemText
+                          primary={item.label}
+                          sx={{
+                            "& .MuiListItemText-primary": {
+                              fontWeight: isMediaActive ? 600 : 400,
+                              textTransform: "uppercase",
+                              letterSpacing: "0.5px",
+                            },
+                          }}
+                        />
+                      </ListItemButton>
+                    </ListItem>
+                    {mediaItems.map((mediaItem) => {
+                      const isActive = pathname === mediaItem.href;
+                      return (
+                        <ListItem key={mediaItem.href} disablePadding>
+                          <ListItemButton
+                            component={Link}
+                            href={mediaItem.href}
+                            onClick={() => setDrawerOpen(false)}
+                            sx={{
+                              borderRadius: 1,
+                              mb: 1,
+                              ml: 2,
+                              backgroundColor: isActive
+                                ? "primary.main"
+                                : "transparent",
+                              color: isActive ? "white" : "text.primary",
+                              "&:hover": {
+                                backgroundColor: isActive
+                                  ? "primary.dark"
+                                  : "action.hover",
+                              },
+                            }}
+                          >
+                            <ListItemText
+                              primary={mediaItem.label}
+                              sx={{
+                                "& .MuiListItemText-primary": {
+                                  fontWeight: isActive ? 600 : 400,
+                                  fontSize: "0.9rem",
+                                },
+                              }}
+                            />
+                          </ListItemButton>
+                        </ListItem>
+                      );
+                    })}
+                  </Box>
+                );
+              }
+
               const isActive = pathname === item.href;
               return (
                 <ListItem key={item.href} disablePadding>

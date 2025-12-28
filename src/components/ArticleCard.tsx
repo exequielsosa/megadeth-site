@@ -16,9 +16,9 @@ import { useLocale } from "next-intl";
 interface ArticleCardProps {
   title: string;
   description: string;
-  imageUrl: string;
-  imageAlt: string;
-  imageCaption: string;
+  imageUrl?: string;
+  imageAlt?: string;
+  imageCaption?: string;
   linkUrl?: string;
   linkTarget?: "_blank" | "_self";
   priority?: boolean;
@@ -178,52 +178,54 @@ export default function ArticleCard({
           )}
         </Box>
 
-        <Box
-          sx={{
-            width: "100%",
-            maxWidth: 400,
-            mx: "auto",
-          }}
-        >
+        {imageUrl && imageAlt && imageCaption && (
           <Box
             sx={{
-              position: "relative",
               width: "100%",
-              aspectRatio: "1 / 1",
-              overflow: "hidden",
-              height: { xs: 300, sm: 400 },
-              maxHeight: 400,
               maxWidth: 400,
-              minWidth: 200,
-              borderRadius: 2,
+              mx: "auto",
             }}
           >
-            <Image
-              src={imageUrl}
-              alt={imageAlt}
-              fill
-              style={{ objectFit: "cover" }}
-              priority={priority}
-              sizes="(max-width: 600px) 100vw, 400px"
-            />
-          </Box>
-
-          <CardContent sx={{ px: 0, pt: 0, pb: 0 }}>
-            <Typography
-              variant="h6"
-              component="h3"
+            <Box
               sx={{
-                textAlign: "center",
-                fontWeight: 600,
-                color: "text.primary",
-                fontSize: { xs: "1rem", sm: "1.1rem" },
-                pt: 1,
+                position: "relative",
+                width: "100%",
+                aspectRatio: "1 / 1",
+                overflow: "hidden",
+                height: { xs: 300, sm: 400 },
+                maxHeight: 400,
+                maxWidth: 400,
+                minWidth: 200,
+                borderRadius: 2,
               }}
             >
-              {imageCaption}
-            </Typography>
-          </CardContent>
-        </Box>
+              <Image
+                src={imageUrl}
+                alt={imageAlt}
+                fill
+                style={{ objectFit: "cover" }}
+                priority={priority}
+                sizes="(max-width: 600px) 100vw, 400px"
+              />
+            </Box>
+
+            <CardContent sx={{ px: 0, pt: 0, pb: 0 }}>
+              <Typography
+                variant="h6"
+                component="h3"
+                sx={{
+                  textAlign: "center",
+                  fontWeight: 600,
+                  color: "text.primary",
+                  fontSize: { xs: "1rem", sm: "1.1rem" },
+                  pt: 1,
+                }}
+              >
+                {imageCaption}
+              </Typography>
+            </CardContent>
+          </Box>
+        )}
       </Box>
 
       {/* Video de YouTube al final, centrado */}
