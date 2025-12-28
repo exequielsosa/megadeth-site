@@ -5,6 +5,7 @@ import HistoryChapterComponent from "@/components/HistoryChapter";
 import HistoryNavigation from "@/components/HistoryNavigation";
 import historiaData from "@/constants/historia.json";
 import { getTranslations, getLocale } from "next-intl/server";
+import ContainerGradientNoPadding from "../../../components/atoms/ContainerGradientNoPadding";
 import {
   HistoryData,
   findChapterBySlug,
@@ -176,16 +177,22 @@ export default async function CapituloPage({ params }: PageProps) {
       />
 
       {/* Contenido principal */}
-      <Box
-        display="flex"
-        alignItems="center"
-        flexDirection="column"
-        width={"100%"}
-      >
-        <Box maxWidth="1392px" sx={{ py: 4, pb: 10, mb: "600px" }} width="100%">
-          <HistoryChapterComponent chapter={chapter} />
+      <ContainerGradientNoPadding>
+        <Box
+          display="flex"
+          alignItems="center"
+          flexDirection="column"
+          width={"100%"}
+        >
+          <Box
+            maxWidth="1392px"
+            sx={{ py: 4, pb: 10, mb: "600px" }}
+            width="100%"
+          >
+            <HistoryChapterComponent chapter={chapter} />
+          </Box>
         </Box>
-      </Box>
+      </ContainerGradientNoPadding>
 
       {/* Navegación sticky */}
       <HistoryNavigation

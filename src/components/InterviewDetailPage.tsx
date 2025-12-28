@@ -337,16 +337,10 @@ export default function InterviewDetailPage({
 
           <Typography
             variant="h1"
-            component="h1"
             sx={{
               fontSize: { xs: "2rem", md: "3rem" },
-              fontWeight: 600,
               mb: 2,
-              background: "linear-gradient(45deg, #ff6b6b, #4ecdc4)",
-              backgroundClip: "text",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              lineHeight: 1.2,
+              fontWeight: 600,
             }}
           >
             {title}
@@ -354,7 +348,6 @@ export default function InterviewDetailPage({
 
           <Typography
             variant="h6"
-            color="text.secondary"
             sx={{
               maxWidth: 800,
               mx: "auto",

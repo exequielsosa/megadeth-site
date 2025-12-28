@@ -4,6 +4,7 @@
 // "use client"; // This line is being removed
 import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
+import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -190,69 +191,71 @@ export default function MembersPage() {
   );
 
   return (
-    <Box display={"flex"} justifyContent={"center"} width="100%" px={1}>
-      <Box maxWidth={"1350px"} sx={{ py: 4 }}>
-        {/* Header */}
-        <Box textAlign="center" mb={6}>
-          <Typography
-            variant="h1"
-            component="h1"
-            gutterBottom
-            sx={{ fontSize: { xs: 28, md: 48 } }}
-            fontWeight={600}
-          >
-            {t("members")}
-          </Typography>
-          <Typography
-            variant="h6"
-            color="text.secondary"
-            fontWeight={500}
-            sx={{ mx: "auto", fontSize: { xs: 16, md: 20 } }}
-          >
-            {t("meet")}
-          </Typography>
-        </Box>
+    <ContainerGradientNoPadding>
+      <Box display={"flex"} justifyContent={"center"} width="100%" px={1}>
+        <Box maxWidth={"1350px"} sx={{ py: 4 }}>
+          {/* Header */}
+          <Box textAlign="center" mb={6}>
+            <Typography
+              variant="h1"
+              component="h1"
+              gutterBottom
+              sx={{ fontSize: { xs: 28, md: 48 } }}
+              fontWeight={600}
+            >
+              {t("members")}
+            </Typography>
+            <Typography
+              variant="h6"
+              color="text.secondary"
+              fontWeight={500}
+              sx={{ mx: "auto", fontSize: { xs: 16, md: 20 } }}
+            >
+              {t("meet")}
+            </Typography>
+          </Box>
 
-        {/* Current Members */}
-        <Box mb={8}>
-          <Typography
-            variant="h3"
-            component="h2"
-            gutterBottom
-            sx={{ fontSize: { xs: 20, md: 30 } }}
-          >
-            {t("currentLineup")}
-          </Typography>
+          {/* Current Members */}
+          <Box mb={8}>
+            <Typography
+              variant="h3"
+              component="h2"
+              gutterBottom
+              sx={{ fontSize: { xs: 20, md: 30 } }}
+            >
+              {t("currentLineup")}
+            </Typography>
 
-          <Grid container spacing={3}>
-            {currentMembers.map((member) => (
-              <Grid key={member.id} size={{ xs: 12, sm: 6, md: 3 }}>
-                <MemberCard member={member} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+            <Grid container spacing={3}>
+              {currentMembers.map((member) => (
+                <Grid key={member.id} size={{ xs: 12, sm: 6, md: 3 }}>
+                  <MemberCard member={member} />
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
 
-        {/* Former Members */}
-        <Box>
-          <Typography
-            variant="h3"
-            component="h2"
-            gutterBottom
-            sx={{ fontSize: { xs: 20, md: 30 } }}
-          >
-            Miembros Anteriores
-          </Typography>
+          {/* Former Members */}
+          <Box>
+            <Typography
+              variant="h3"
+              component="h2"
+              gutterBottom
+              sx={{ fontSize: { xs: 20, md: 30 } }}
+            >
+              Miembros Anteriores
+            </Typography>
 
-          <Grid container spacing={3}>
-            {formerMembers.map((member) => (
-              <Grid key={member.id} size={{ xs: 12, sm: 6, md: 3 }}>
-                <MemberCard member={member} />
-              </Grid>
-            ))}
-          </Grid>
+            <Grid container spacing={3}>
+              {formerMembers.map((member) => (
+                <Grid key={member.id} size={{ xs: 12, sm: 6, md: 3 }}>
+                  <MemberCard member={member} />
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
         </Box>
       </Box>
-    </Box>
+    </ContainerGradientNoPadding>
   );
 }

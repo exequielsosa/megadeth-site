@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-export const ContainerGradient = ({
+export const ContainerGradientNoPadding = ({
   children,
 }: {
   children: React.ReactNode;
@@ -8,7 +8,6 @@ export const ContainerGradient = ({
   return (
     <Box
       sx={{
-        py: { xs: 4, md: 7 },
         background:
           "radial-gradient(60% 80% at 50% 0%, rgba(239,83,80,0.15), transparent 60%)",
       }}
@@ -18,4 +17,4 @@ export const ContainerGradient = ({
   );
 };
 
-export default ContainerGradient;
+export default ContainerGradientNoPadding;

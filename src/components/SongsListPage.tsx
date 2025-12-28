@@ -16,10 +16,16 @@ import {
   Card,
   CardContent,
   CardActionArea,
+  Box,
+  Pagination,
+  Button,
 } from "@mui/material";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import songsData from "@/constants/songs.json";
 import ContainerGradient from "./atoms/ContainerGradient";
+
+const ITEMS_PER_PAGE_DESKTOP = 10;
+const ITEMS_PER_PAGE_MOBILE = 10;
 
 interface Song {
   id: string;
@@ -72,11 +78,39 @@ function getFilterValue(song: Song, filter: string) {
 
 export default function SongsListPage() {
   const t = useTranslations("songs");
+  const locale = useLocale();
   const [filter, setFilter] = useState("");
+  const [pageDesktop, setPageDesktop] = useState(1);
+  const [displayCountMobile, setDisplayCountMobile] = useState(
+    ITEMS_PER_PAGE_MOBILE
+  );
   const songs: Song[] = songsData;
   const filtered = filter
     ? songs.filter((song) => getFilterValue(song, filter))
     : songs;
+
+  // Reset pagination cuando se filtra
+  const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFilter(e.target.value);
+    setPageDesktop(1);
+    setDisplayCountMobile(ITEMS_PER_PAGE_MOBILE);
+  };
+
+  // Paginación para desktop
+  const totalPagesDesktop = Math.ceil(filtered.length / ITEMS_PER_PAGE_DESKTOP);
+  const startIndexDesktop = (pageDesktop - 1) * ITEMS_PER_PAGE_DESKTOP;
+  const endIndexDesktop = startIndexDesktop + ITEMS_PER_PAGE_DESKTOP;
+  const displayedDesktop = filtered.slice(startIndexDesktop, endIndexDesktop);
+
+  // "Cargar más" para mobile
+  const displayedMobile = filtered.slice(0, displayCountMobile);
+  const hasMoreMobile = displayCountMobile < filtered.length;
+
+  const loadMoreMobile = () => {
+    setDisplayCountMobile((prev) =>
+      Math.min(prev + ITEMS_PER_PAGE_MOBILE, filtered.length)
+    );
+  };
   // const [mounted, setMounted] = useState(false);
   // useEffect(() => {
   //   console.log(mounted);
@@ -87,29 +121,26 @@ export default function SongsListPage() {
   return (
     <ContainerGradient>
       <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
-        <Typography
-          variant="h1"
-          component="h1"
-          sx={{
-            fontSize: { xs: "2.5rem", md: "4rem" },
-            fontWeight: 600,
-            textAlign: "center",
-            mb: 2,
-            background: "linear-gradient(45deg, #ff6b6b, #4ecdc4)",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          width={"100%"}
         >
-          {t("title")}
-        </Typography>
+          <Typography
+            variant="h1"
+            sx={{ fontSize: { xs: 32, md: 56 }, mb: 3, fontWeight: 700 }}
+          >
+            {t("title")}
+          </Typography>
+        </Box>
         <TextField
           label={t("search")}
           variant="outlined"
           fullWidth
           sx={{ mb: 4 }}
           value={filter}
-          onChange={(e) => setFilter(e.target.value)}
+          onChange={handleFilterChange}
         />
         {/* Tabla solo visible en desktop */}
         <TableContainer
@@ -142,7 +173,7 @@ export default function SongsListPage() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {filtered.map((song) => (
+              {displayedDesktop.map((song) => (
                 <TableRow
                   key={song.id}
                   hover
@@ -164,13 +195,35 @@ export default function SongsListPage() {
             </TableBody>
           </Table>
         </TableContainer>
+
+        {/* Paginación para desktop */}
+        {totalPagesDesktop > 1 && (
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              justifyContent: "center",
+              mb: 4,
+            }}
+          >
+            <Pagination
+              count={totalPagesDesktop}
+              page={pageDesktop}
+              onChange={(_, page) => setPageDesktop(page)}
+              color="primary"
+              size="large"
+              showFirstButton
+              showLastButton
+            />
+          </Box>
+        )}
+
         {/* Cards solo visibles en mobile/tablet */}
         <Grid
           container
           spacing={2}
           sx={{ mb: 4, display: { xs: "flex", md: "none" } }}
         >
-          {filtered.map((song) => (
+          {displayedMobile.map((song) => (
             <Grid size={{ xs: 12, sm: 6 }} key={song.id}>
               <Card>
                 <CardActionArea
@@ -195,6 +248,32 @@ export default function SongsListPage() {
             </Grid>
           ))}
         </Grid>
+
+        {/* Botón "Cargar más" para mobile */}
+        {hasMoreMobile && (
+          <Box
+            sx={{
+              display: { xs: "flex", md: "none" },
+              justifyContent: "center",
+              mt: 4,
+              mb: 4,
+            }}
+          >
+            <Button
+              variant="contained"
+              size="large"
+              onClick={loadMoreMobile}
+              sx={{
+                px: 6,
+                py: 1.5,
+                fontSize: 16,
+                fontWeight: 600,
+              }}
+            >
+              {locale === "es" ? "Cargar más canciones" : "Load more songs"}
+            </Button>
+          </Box>
+        )}
       </Container>
     </ContainerGradient>
   );
