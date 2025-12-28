@@ -10,7 +10,6 @@ import ArticleCard from "./ArticleCard";
 import newsData from "@/constants/news.json";
 import { NewsArticle } from "@/types/news";
 import Link from "next/link";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -228,7 +227,6 @@ export default function Hero() {
             href="/noticias"
             variant="contained"
             size="large"
-            endIcon={<ArrowForwardIcon />}
             sx={{
               px: 4,
               py: 1.5,
