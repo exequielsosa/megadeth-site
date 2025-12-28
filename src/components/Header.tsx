@@ -89,7 +89,9 @@ export default function Header() {
     setMediaAnchorEl(null);
   };
 
-  const isMediaActive = mediaItems.some((item) => pathname.startsWith(item.href));
+  const isMediaActive = mediaItems.some((item) =>
+    pathname.startsWith(item.href)
+  );
 
   // Función para obtener el color de fondo basado en scroll y modo
   const getBackgroundColor = () => {
@@ -213,19 +215,20 @@ export default function Header() {
                             href={mediaItem.href}
                             onClick={handleMediaMouseLeave}
                             sx={{
-                              backgroundColor:
-                                pathname.startsWith(mediaItem.href)
-                                  ? "primary.main"
-                                  : "transparent",
-                              color:
-                                pathname.startsWith(mediaItem.href)
-                                  ? "white"
-                                  : "text.primary",
+                              backgroundColor: pathname.startsWith(
+                                mediaItem.href
+                              )
+                                ? "primary.main"
+                                : "transparent",
+                              color: pathname.startsWith(mediaItem.href)
+                                ? "white"
+                                : "text.primary",
                               "&:hover": {
-                                backgroundColor:
-                                  pathname.startsWith(mediaItem.href)
-                                    ? "primary.dark"
-                                    : "action.hover",
+                                backgroundColor: pathname.startsWith(
+                                  mediaItem.href
+                                )
+                                  ? "primary.dark"
+                                  : "action.hover",
                               },
                             }}
                           >
@@ -414,7 +417,10 @@ export default function Header() {
                 );
               }
 
-              const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+              const isActive =
+                item.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(item.href);
               return (
                 <ListItem key={item.href} disablePadding>
                   <ListItemButton
