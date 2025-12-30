@@ -40,6 +40,25 @@
     "video": "Video",
     "backToInterviews": "Volver a entrevistas"
   },
+  "shows": {
+    "title": "Shows Históricos",
+    "listTitle": "Shows Históricos",
+    "listDescription": "Colección de los shows más emblemáticos e históricos de Megadeth desde 1988 hasta 2023. Fechas que marcaron la historia del thrash metal.",
+    "search": "Buscar show, ciudad, venue, era, canción...",
+    "date": "Fecha",
+    "venue": "Venue",
+    "city": "Ciudad",
+    "country": "País",
+    "era": "Era",
+    "location": "Ubicación",
+    "whyHistoric": "¿Por qué es histórico?",
+    "setlist": "Setlist",
+    "notFound": "Show no encontrado",
+    "backToShows": "Volver a shows",
+    "watchOnYouTube": "Ver en YouTube",
+    "searchOnYouTube": "Buscar en YouTube",
+    "viewOnSetlistFm": "Ver en Setlist.fm"
+  },
   "header": {
     "fanSite": "Megadeth • Fan",
     "changeTheme": "Cambiar tema",
@@ -52,6 +71,7 @@
     "discography": "Discografía",
     "videos": "Videos",
     "dvds": "DVDs",
+    "shows": "Shows",
     "interviews": "Entrevistas",
     "history": "Historia",
     "lineups": "Formaciones",
