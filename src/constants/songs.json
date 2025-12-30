@@ -4834,6 +4834,58 @@
     }
   },
   {
+    "id": "coming-home",
+    "title": "Coming Home",
+    "album": {
+      "title": "The World Needs a Hero",
+      "year": 2001,
+      "cover": "/images/albums/09-twnah.webp"
+    },
+    "credits": {
+      "musicians": [
+        {
+          "name": "Dave Mustaine",
+          "id": "dave-mustaine",
+          "instrument": {
+            "es": "Voz y guitarra rítmica",
+            "en": "Vocals and rhythm guitar"
+          }
+        },
+        {
+          "name": "Al Pitrelli",
+          "id": "al-pitrelli",
+          "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+        },
+        {
+          "name": "David Ellefson",
+          "id": "david-ellefson",
+          "instrument": { "es": "Bajo", "en": "Bass" }
+        },
+        {
+          "name": "Jimmy DeGrasso",
+          "id": "jimmy-degrasso",
+          "instrument": { "es": "Batería", "en": "Drums" }
+        }
+      ],
+      "writers": {
+        "lyrics": ["Dave Mustaine"],
+        "music": ["Dave Mustaine"]
+      }
+    },
+    "details": {
+      "track_number": 13,
+      "duration": "2:37"
+    },
+    "theme": {
+      "en": "The song deals with **nostalgia, distance, and the hope of returning** to a familiar place or loved one, using Arizona as a metaphor for that 'home'. It's a heartfelt reflection on leaving and the promise of coming back.",
+      "es": "La canción trata sobre la **nostalgia, la distancia y la esperanza de un regreso** a un lugar familiar o a un ser querido, usando Arizona como una metáfora de ese 'hogar'. Es una reflexión sincera sobre partir y la promesa de volver."
+    },
+    "lyrics": {
+      "en": "And today, I leave you\nBut I'll be back someday\nAnd as I fly away\nMy hope is that we'll meet again\nI'm off to my home away from home\nI will miss you\nBut I know\nI know you know\n\nI'm coming home to Arizona\nI'm coming home to Arizona\n\nI'll take you everywhere I go\nI'll show you everything I see\nAnd as we say so long\nI know your tears wish me well\nIt won't be long till I'm back again\nWe will meet again\nWe will meet again\nYou will see, oh\n\nI'm coming home to Arizona\nI'm coming home",
+      "es": "Y hoy, te dejo\nPero volveré algún día\nY mientras vuelo lejos\nMi esperanza es que nos volvamos a encontrar\nMe voy a mi casa lejos de casa\nTe echaré de menos\nPero lo sé\nSé que lo sabes\n\nVoy a volver a Arizona\nVoy a volver a Arizona\n\nTe llevaré a donde quiera que vaya\nTe mostraré todo lo que veo\nY como decimos tanto tiempo\nSé que tus lágrimas me desean bien\nNo pasará mucho tiempo hasta que vuelva\nNos volveremos a encontrar\nNos volveremos a encontrar\nYa verás, oh\n\nVoy a volver a Arizona\nVoy a volver a casa"
+    }
+  },
+  {
     "id": "blackmail-the-universe",
     "title": "Blackmail the Universe",
     "album": {
@@ -8436,7 +8488,7 @@
     }
   },
   {
-    "id": "the-sick-the-dying-and-the-dead-track",
+    "id": "the-sick-the-dying-and-the-dead",
     "title": "The Sick, The Dying... and The Dead!",
     "album": {
       "title": "The Sick, The Dying... and The Dead!",
