@@ -551,5 +551,117 @@
     ],
     "youtube": "https://www.youtube.com/watch?v=w3TMBfJ_qrE",
     "image": "/images/shows/2016.jpg"
+  },
+  {
+    "id": "detroit-1986",
+    "date": "1986-10-28",
+    "city": "Detroit",
+    "venue": "Token Lounge",
+    "country": "USA",
+    "era": "Killing Is My Business Era",
+    "linkEra": "killing-is-my-business-1984-1986",
+    "whyHistoric": {
+      "es": "Historico concierto en Detroit, de la epoca de Killing Is My Business y Peace Sells; setlist con varios clasicos.",
+      "en": "Historic concert in Detroit, from the Killing Is My Business and Peace Sells era; setlist with several classics."
+    },
+    "setlist": [
+      "Rattlehead",
+      "Wake Up Dead",
+      "The Conjuring",
+      "Peace Sells",
+      "These Boots",
+      "Devil's Island",
+      "Killing Is My Business.... And Business Is Good!",
+      "Bad Omen",
+      "My Last Words",
+      "Mechanix",
+      "Last Rites / Loved To Deth"
+    ],
+    "youtube": "https://www.youtube.com/watch?v=Q1dK8nBLfvU&t=21s",
+    "image": "/images/shows/1986.jpg"
+  },
+  {
+    "id": "germany-1988",
+    "date": "1988-05-20",
+    "city": "Essen",
+    "venue": "Grugahalle",
+    "country": "Germany",
+    "era": "So Far, So Good Era",
+    "linkEra": "so-far-so-good-1987-1989",
+    "whyHistoric": {
+      "es": "Brodcast de la TRv con un concierto de la gira de So Far, So Good... So What!; setlist con varios clasicos.",
+      "en": "Broadcast of the TRv with a concert from the So Far, So Good... So What! tour; setlist with several classics."
+    },
+    "setlist": [
+      "Set the World Afire",
+      "Hook in Mouth",
+      "Wake Up Dead",
+      "The Conjuring",
+      "Mary Jane",
+      "In My Darkest Hour",
+      "Devil's Island",
+      "These Boots",
+      "Peace Sells",
+      "Liar",
+      "Mechanix",
+      "Anarchy in the U.K."
+    ],
+    "youtube": "https://www.youtube.com/watch?v=2nQhEqvQvZ4&list=RD2nQhEqvQvZ4&start_radio=1",
+    "image": "/images/shows/1988.png"
+  },
+  {
+    "id": "musique-plus-2001",
+    "date": "2001-05-17",
+    "city": "Montreal",
+    "venue": "Musique Plus",
+    "country": "Canada",
+    "era": "The World Needs a Hero Era",
+    "linkEra": "world-needs-hero-2000-2002",
+    "whyHistoric": {
+      "es": "Entretenido show para TV en Montreal durante la gira de 'The World Needs a Hero'; setlist acustico.",
+      "en": "Entertaining TV show in Montreal during 'The World Needs a Hero' tour; acoustic setlist."
+    },
+    "setlist": [
+      "Dread and the Fugitive Mind",
+      "Trust",
+      "She-Wolf",
+      "Promises",
+      "Moto Psycho",
+      "Symphony of Destruction",
+      "A Tout Le Monde"
+    ],
+    "youtube": "https://www.youtube.com/watch?v=4KiIDFJQlTs",
+    "image": "/images/shows/20012.webp"
+  },
+  {
+    "id": "clash-of-titans-1990",
+    "date": "1990-10-13",
+    "city": "Birmingham",
+    "venue": "Birmingham NEC (Clash of the Titans Tour)",
+    "country": "UK",
+    "era": "Classic Era",
+    "linkEra": "classic-era-1989-1992",
+    "whyHistoric": {
+      "es": "Clasico show del Clash of the Titans Tour; setlist potente con varios clasicos de la epoca de Rust in Peace.",
+      "en": "Classic show from the Clash of the Titans Tour; powerful setlist with several classics from the Rust in Peace era."
+    },
+    "setlist": [
+      "Rattlehead",
+      "Wake Up Dead",
+      "Hangar 18",
+      "Hook in Mouth",
+      "Skull Beneath the Skin",
+      "The Conjuring",
+      "In My Darkest Hour",
+      "Lucretia",
+      "Devil's Island",
+      "Take No Prisoners",
+      "Peace Sells",
+      "Good Mourning / Black Friday",
+      "Holy Wars... The Punishment Due",
+      "Anarchy in the U.K."
+    ],
+    "youtube": "https://www.youtube.com/watch?v=8xfi2Wo3wFk&list=RD8xfi2Wo3wFk&start_radio=1",
+    "image": "/images/shows/1990.jpg"
   }
 ]
