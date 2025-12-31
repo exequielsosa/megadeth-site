@@ -6,6 +6,7 @@ import dvdData from '@/constants/dvd.json';
 import songsData from '@/constants/songs.json';
 import historiaData from '@/constants/historia.json';
 import interviewsData from '@/constants/interviews.json';
+import showsData from '@/constants/shows.json';
 import { generateInterviewSlug } from '@/types/interview';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -26,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/privacidad', priority: 0.6, changeFreq: 'yearly' as const },
     { path: '/contacto', priority: 0.7, changeFreq: 'monthly' as const },
     { path: '/songs', priority: 0.9, changeFreq: 'monthly' as const },
+    { path: '/shows', priority: 0.9, changeFreq: 'weekly' as const },
   ];
   const sitemap: MetadataRoute.Sitemap = [];
 
@@ -133,6 +135,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       if (slug) {
         sitemap.push({
           url: `${base}/entrevistas/${slug}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        });
+      }
+    });
+  }
+
+  // Shows dinámicas
+  if (Array.isArray(showsData)) {
+    showsData.forEach(show => {
+      const slug = generateInterviewSlug(show.id);
+      if (slug) {
+        sitemap.push({
+          url: `${base}/shows/${slug}`,
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.7,

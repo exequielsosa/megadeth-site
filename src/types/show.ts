@@ -22,7 +22,10 @@ export interface Show {
 
 // Helper para formatear la fecha del show según el locale
 export function formatShowDate(dateString: string, locale: string): string {
-  const date = new Date(dateString);
+  // Parsear la fecha manualmente para evitar problemas con zonas horarias
+  const [year, month, day] = dateString.split('-').map(Number);
+  const date = new Date(year, month - 1, day);
+  
   const formatted = date.toLocaleDateString(
     locale === "es" ? "es-ES" : "en-US",
     {

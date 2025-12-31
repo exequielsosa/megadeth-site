@@ -429,5 +429,127 @@
     "setlistUrl": "https://www.setlist.fm/setlist/megadeth/1999/griffiss-air-force-base-rome-ny-3bd45030.html",
     "youtube": "https://www.youtube.com/watch?v=TaMJ4px07mk&list=RDTaMJ4px07mk&start_radio=1",
     "image": "/images/shows/1999.jpg"
+  },
+  {
+    "id": "unplugged-1998",
+    "date": "1998-10-02",
+    "city": "Buenos Aires",
+    "venue": "Centro Cultural Recoleta",
+    "country": "Argentina",
+    "era": "Drummer Change",
+    "linkEra": "cambio-baterista-1998-2000",
+    "whyHistoric": {
+      "es": "Histórico show acustico en Buenos Aires, Argentina; uno de los pocos shows unplugged de la banda, mostrando una faceta diferente y más íntima de Megadeth.",
+      "en": "Historic acoustic show in Buenos Aires, Argentina; one of the few unplugged shows by the band, showcasing a different and more intimate side of Megadeth."
+    },
+    "setlist": [
+      "I'll Get Even",
+      "Angry Again",
+      "She-Wolf",
+      "A Secret Place",
+      "Countdown to Extinction",
+      "Foreclosure of a Dream",
+      "Almost Honest",
+      "Use the Man",
+      "Trust"
+    ],
+    "youtube": "https://www.youtube.com/watch?v=GP8zAxbH584",
+    "image": "/images/shows/1998.webp"
+  },
+  {
+    "id": "ferro-1997",
+    "date": "1997-12-13",
+    "city": "Buenos Aires",
+    "venue": "Estadio Ferro Carril Oeste - Monster of Rock Argentina",
+    "country": "Argentina",
+    "era": "Classic Era",
+    "linkEra": "era-clasica-1989-1998",
+    "whyHistoric": {
+      "es": "Show en el Monster of Rock Argentina 1997; setlist con varios clásicos y temas de 'Cryptic Writings'.",
+      "en": "Show at Monster of Rock Argentina 1997; setlist with several classics and tracks from 'Cryptic Writings'."
+    },
+    "setlist": [
+      "Holy Wars... The Punishment Due",
+      "Angry Again",
+      "A Tout Le Monde",
+      "She-Wolf",
+      "Almost Honest",
+      "Sin",
+      "Sweating Bullets",
+      "Paranoid",
+      "Anarchy In The U.K."
+    ],
+    "youtube": "https://www.youtube.com/watch?v=zveNrN0cUgQ",
+    "image": "/images/shows/1997.jpg"
+  },
+  {
+    "id": "vorterix-2014",
+    "date": "2014-05-02",
+    "city": "Buenos Aires",
+    "venue": "Teatro Vorterix",
+    "country": "Argentina",
+    "era": "Ellefson's Return",
+    "linkEra": "ellefson-return-2010-2014",
+    "whyHistoric": {
+      "es": "Hermoso show en el Teatro Vorterix de Buenos Aires; un lugar intimo y con un audio espectacular.",
+      "en": "Beautiful show at Teatro Vorterix in Buenos Aires; an intimate venue with spectacular sound."
+    },
+    "setlist": [
+      "Hangar 18",
+      "Reckoning Day",
+      "Wake Up Dead",
+      "In My Darkest Hour",
+      "Set The World Afire",
+      "Sweating Bullets",
+      "She-Wolf",
+      "Dawn Patrol",
+      "Poison Was The Cure",
+      "The Killing Road",
+      "Trust",
+      "Kingmaker",
+      "A Tout Le Monde",
+      "Youthanasia",
+      "Cold Sweat",
+      "Peace Sells",
+      "Symphony Of Destruction"
+    ],
+    "youtube": "https://www.youtube.com/watch?v=GYNJU7GkScs",
+    "image": "/images/shows/2014.jpg"
+  },
+  {
+    "id": "luna-park-2016",
+    "date": "2016-08-22",
+    "city": "Buenos Aires",
+    "venue": "Luna Park",
+    "country": "Argentina",
+    "era": "Verbeuren Era",
+    "linkEra": "verbeuren-era-2016-2021",
+    "whyHistoric": {
+      "es": "Otro gran show en argentina, esta vez en el emblemático Luna Park; setlist potente y gran energía de la banda y el público.",
+      "en": "Another great show in Argentina, this time at the emblematic Luna Park; powerful setlist and great energy from the band and the audience."
+    },
+    "setlist": [
+      "Hangar 18",
+      "The Threat Is Real",
+      "Tornado Of Souls",
+      "Poisonous Shadows",
+      "Wake Up Dead",
+      "In My Darkest Hour",
+      "Conquer Or Die!",
+      "Fatal Illusion",
+      "She-Wolf",
+      "Dawn Patrol",
+      "Poison Was the Cure",
+      "Sweating Bullets",
+      "A Tout Le Monde",
+      "Trust",
+      "Post American World",
+      "Dystopia",
+      "Symphony of Destruction",
+      "Peace Sells",
+      "Holy Wars... The Punishment Due"
+    ],
+    "youtube": "https://www.youtube.com/watch?v=w3TMBfJ_qrE",
+    "image": "/images/shows/2016.jpg"
   }
 ]
