@@ -345,5 +345,18 @@
     },
     "publishedDate": "2025-10-01",
     "youtubeVideoId": "ECXg-a7XZQI"
+  },
+  {
+    "id": "happy-year-recap",
+    "title": {
+      "es": "Feliz Año Nuevo de Megadeth: Recapitulación de 2025",
+      "en": "Happy New Year from Megadeth: 2025 Recap"
+    },
+    "description": {
+      "es": "Video especial de fin de año. Gracias por acompañarnos en este viaje. ¡Nos vemos en 2026!",
+      "en": "Special end-of-year video. Thank you for joining us on this journey. See you in 2026!"
+    },
+    "publishedDate": "2025-12-31",
+    "youtubeVideoId": "NOEotMzLThc"
   }
 ]
