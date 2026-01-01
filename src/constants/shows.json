@@ -663,5 +663,57 @@
     ],
     "youtube": "https://www.youtube.com/watch?v=8xfi2Wo3wFk&list=RD8xfi2Wo3wFk&start_radio=1",
     "image": "/images/shows/1990.jpg"
+  },
+  {
+    "id": "hellfest-2024",
+    "date": "2024-06-27",
+    "city": "Clisson",
+    "venue": "Hellfest",
+    "country": "France",
+    "era": "Current Lineup",
+    "linkEra": "formacion-actual-2023-presente",
+    "whyHistoric": {
+      "es": "Show destacado en Hellfest 2024; setlist que mezcla clásicos con temas del The Sick, the dying and the Dead!",
+      "en": "Highlighted show at Hellfest 2024; setlist mixing classics with tracks from The Sick, the Dying and the Dead!"
+    },
+    "setlist": [
+      "The Sick, The Dying... And the Dead!",
+      "Rattlehead",
+      "Kick The Chair",
+      "Skin O My Teeth",
+      "Tornado of Souls",
+      "A Tout Le Monde",
+      "We'll Be Back",
+      "Mechanix",
+      "Symphony of Destruction",
+      "Peace Sells",
+      "Holy Wars... The Punishment Due"
+    ],
+    "youtube": "https://www.youtube.com/watch?v=Hq-9-jLbloc&list=RDHq-9-jLbloc&start_radio=1",
+    "image": "/images/shows/2024hell.jpg"
+  },
+  {
+    "id": "vitus-2016-secret-show",
+    "date": "2016-06-27",
+    "city": "New York, NY",
+    "venue": "Vitus Bar",
+    "country": "USA",
+    "era": "Verbeuren Era",
+    "linkEra": "verbeuren-era-2016-2021",
+    "whyHistoric": {
+      "es": "Show secreto en Vitus Bar, NYC; setlist corto pero potente con varios clasicos. Presentado bajo el nombre de Vic and the Rattleheads.",
+      "en": "Secret show at Vitus Bar, NYC; short but powerful setlist with several classics. Presented under the name Vic and the Rattleheads."
+    },
+    "setlist": [
+      "Hangar 18",
+      "Rattlehead",
+      "Tornado Of Souls",
+      "Sweating Bullets",
+      "Dystopia",
+      "Symphony Of Destruccion",
+      "Peace Sells"
+    ],
+    "youtube": "https://www.youtube.com/watch?v=frmPoWzM-jk",
+    "image": "/images/shows/2016vitus.webp"
   }
 ]
