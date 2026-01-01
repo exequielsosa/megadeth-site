@@ -151,13 +151,13 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 
   const titleByLocale = {
-    es: "MEGADETH: BEHIND THE MASK se estrena en Argentina, Entradas a la venta!, álbum final y gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
-    en: "MEGADETH: BEHIND THE MASK premieres in Argentina, Tickets on sale!, final album & 2026 Argentina / LATAM tour — Iron Maiden + Anthrax",
+    es: "MEGADETH: Noticias, actualidad, shows y adelantos del álbum final & gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
+    en: "MEGADETH: News, updates, shows and previews of the final album & 2026 tour Argentina / LATAM — Iron Maiden + Anthrax",
   };
 
   const descriptionByLocale = {
-    es: "MEGADETH: BEHIND THE MASK se estrena en Argentina, adelanto del álbum final 'Megadeth' que saldrá el 23 de enero de 2026. Además, gira por Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México junto a Iron Maiden y Anthrax. Noticias, fechas y adelantos exclusivos. Fan site no oficial.",
-    en: "MEGADETH: BEHIND THE MASK premieres in Argentina, preview of the final self-titled album 'Megadeth' coming January 23, 2026. Plus, tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico with Iron Maiden and Anthrax. News, dates and exclusive previews. Unofficial fan site.",
+    es: "Todo sobre MEGADETH: Noticias, actualidad, discografía, shows y adelantos del álbum final 'Megadeth' que se lanza el 23 de enero de 2026. Además, gira en Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México con Iron Maiden y Anthrax. Noticias, fechas y adelantos exclusivos. Sitio no oficial de fans.",
+    en: "All about MEGADETH: News, updates, discography, shows and previews of the final album 'Megadeth' releasing on January 23, 2026. Also, tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico with Iron Maiden and Anthrax. Exclusive news, dates and previews. Unofficial fan site.",
   };
 
   return {
@@ -181,7 +181,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "article",
       locale: locale === "es" ? "es_AR" : "en_US",
       publishedTime: "2025-11-01T00:00:00Z",
-      modifiedTime: "2025-12-31T00:00:00Z",
+      modifiedTime: "2026-01-01T00:00:00Z",
       images: [
         {
           url: "/images/megadeth-megadeth.jpg",

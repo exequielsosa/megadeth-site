@@ -1,0 +1,62 @@
+[
+  {
+    "id": "shows-section-launch",
+    "title": {
+      "es": "Nueva Sección: Shows Históricos",
+      "en": "New Section: Historic Shows"
+    },
+    "description": {
+      "es": "Explora los conciertos más legendarios de Megadeth: setlists completos, videos y momentos históricos de todas las épocas.",
+      "en": "Explore Megadeth's most legendary concerts: complete setlists, videos and historic moments of all eras."
+    },
+    "imageUrl": "/images/site-updates/shows.jpg",
+    "linkUrl": "/shows",
+    "linkText": {
+      "es": "Explorar Shows",
+      "en": "Explore Shows"
+    },
+    "publishedDate": "2026-01-01",
+    "updatedDate": "2026-01-01",
+    "active": true
+  },
+  {
+    "id": "tour-section-update",
+    "title": {
+      "es": "Actualización: Sección de Gira Mejorada",
+      "en": "Update: Enhanced Tour Section"
+    },
+    "description": {
+      "es": "Nuevas fechas agregadas y mejoras funcionales en la sección de gira. Encuentra fácilmente los próximos conciertos de Megadeth.",
+      "en": "New dates added and functional improvements in the tour section. Easily find Megadeth's upcoming concerts."
+    },
+    "imageUrl": "/images/site-updates/tour.webp",
+    "linkUrl": "/tour",
+    "linkText": {
+      "es": "Ver Fechas",
+      "en": "View Dates"
+    },
+    "publishedDate": "2026-01-01",
+    "updatedDate": "2026-01-01",
+    "active": true
+  },
+  {
+    "id": "new-section-update",
+    "title": {
+      "es": "Actualización: Nueva sección de Noticias",
+      "en": "Update: New News Section"
+    },
+    "description": {
+      "es": "Mejoramos nuestra sección de noticias para mantenerte al día con las últimas novedades de Megadeth. En nuestra home veras las últimas cinco y en Noticias veras todo el historico",
+      "en": "We have improved our news section to keep you up to date with the latest Megadeth news. On our homepage, you will see the latest five, and in News, you will see the entire history."
+    },
+    "imageUrl": "/images/site-updates/news.webp",
+    "linkUrl": "/noticias",
+    "linkText": {
+      "es": "Ver Noticias",
+      "en": "View News"
+    },
+    "publishedDate": "2025-12-20",
+    "updatedDate": "2025-12-20",
+    "active": true
+  }
+]

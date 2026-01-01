@@ -7,7 +7,9 @@ import Countdown from "./Countdown";
 import Image from "next/image";
 import Divider from "@mui/material/Divider";
 import ArticleCard from "./ArticleCard";
+import SiteUpdatesBanner from "./SiteUpdatesBanner";
 import newsData from "@/constants/news.json";
+import siteUpdatesData from "@/constants/site-updates.json";
 import { NewsArticle } from "@/types/news";
 import Link from "next/link";
 
@@ -24,7 +26,7 @@ export default function Hero() {
         new Date(b.publishedDate).getTime() -
         new Date(a.publishedDate).getTime()
     )
-    .slice(0, 10);
+    .slice(0, 5);
 
   return (
     <ContainerGradient>
@@ -193,6 +195,15 @@ export default function Hero() {
         </Stack>
 
         <Divider sx={{ my: 6, width: "100%" }} />
+
+        {/* Banner de actualizaciones del sitio */}
+        {siteUpdatesData.length > 0 && (
+          <Box sx={{ width: "100%", mb: 4 }}>
+            <SiteUpdatesBanner updates={siteUpdatesData} />
+          </Box>
+        )}
+
+        <Divider sx={{ my: 8, width: "100%" }} />
 
         {/* Sección de últimas noticias */}
         <Typography variant="h2" sx={{ fontSize: { xs: 28, md: 48 }, mb: 4 }}>
