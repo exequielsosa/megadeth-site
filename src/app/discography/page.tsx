@@ -96,6 +96,10 @@ export async function generateMetadata(): Promise<Metadata> {
     publisher: "Megadeth Fan Site",
     alternates: {
       canonical: "/discography",
+      languages: {
+        es: "/discography",
+        en: "/discography",
+      },
     },
     openGraph: {
       title:

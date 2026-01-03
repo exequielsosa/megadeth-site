@@ -1,5 +1,25 @@
 [
   {
+    "id": "bootlegs-section-launch",
+    "title": {
+      "es": "Nueva Sección: Bootlegs",
+      "en": "New Section: Bootlegs"
+    },
+    "description": {
+      "es": "Explora los bootlegs más legendarios de Megadeth: setlists completos y momentos históricos de todas las épocas. Ire actualizando constantemente.",
+      "en": "Explore Megadeth's most legendary bootlegs: complete setlists and historic moments of all eras. I will be constantly updating."
+    },
+    "imageUrl": "/images/site-updates/bootleg.jpg",
+    "linkUrl": "/bootlegs",
+    "linkText": {
+      "es": "Explorar Bootlegs",
+      "en": "Explore Bootlegs"
+    },
+    "publishedDate": "2026-01-02",
+    "updatedDate": "2026-01-02",
+    "active": true
+  },
+  {
     "id": "shows-section-launch",
     "title": {
       "es": "Nueva Sección: Shows Históricos",

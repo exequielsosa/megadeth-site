@@ -32,8 +32,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "/historia",
       languages: {
-        es: "/es/historia",
-        en: "/en/historia",
+        es: "/historia",
+        en: "/historia",
       },
     },
   };

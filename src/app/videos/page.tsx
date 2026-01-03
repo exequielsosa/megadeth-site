@@ -73,6 +73,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     alternates: {
       canonical: "/videos",
+      languages: {
+        es: "/videos",
+        en: "/videos",
+      },
     },
     openGraph: {
       title:

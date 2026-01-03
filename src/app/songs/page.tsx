@@ -59,6 +59,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     alternates: {
       canonical: "/songs",
+      languages: {
+        es: "/songs",
+        en: "/songs",
+      },
     },
     robots: {
       index: true,

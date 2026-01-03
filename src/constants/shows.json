@@ -715,5 +715,60 @@
     ],
     "youtube": "https://www.youtube.com/watch?v=frmPoWzM-jk",
     "image": "/images/shows/2016vitus.webp"
+  },
+  {
+    "id": "webster-hall-1994-youthanasia-tour",
+    "date": "1994-10-25",
+    "city": "New York, NY",
+    "venue": "Webster Hall",
+    "country": "USA",
+    "era": "Classic Era",
+    "linkEra": "era-clasica-1989-1998",
+    "whyHistoric": {
+      "es": "Tremendo show de la gira de Youthanasia en NYC; setlist potente con varios clasicos de la epoca.",
+      "en": "Tremendous show from the Youthanasia tour in NYC; powerful setlist with several classics from the era."
+    },
+    "setlist": [
+      "Holy Wars... The Punishment Due",
+      "Reckoning Day",
+      "Sweating Bullets",
+      "Train of Consequences",
+      "In My Darkest Hour",
+      "A Tout le Monde",
+      "Symphony of Destruction",
+      "Peace Sells",
+      "Victory"
+    ],
+    "youtube": "https://www.youtube.com/watch?v=shbQhy9aRdc&list=PLYoxmbpW_bfWDtzPv7QF3lg_mC3xtiAp9&index=6",
+    "image": "/images/shows/1994.jpg"
+  },
+  {
+    "id": "monsters-of-rock-1992-reggio-emilia",
+    "date": "1992-09-12",
+    "city": "Reggio Emilia",
+    "venue": "Monsters Of Rock 1992",
+    "country": "Italy",
+    "era": "Classic Era",
+    "linkEra": "era-clasica-1989-1998",
+    "whyHistoric": {
+      "es": "Show en el Monsters of Rock en Italia, transmicion de TV; setlist potente con varios clasicos de la epoca de Rust in Peace.",
+      "en": "Show at Monsters of Rock in Italy, TV broadcast; powerful setlist with several classics from the Rust in Peace era."
+    },
+    "setlist": [
+      "Holy Wars... The Punishment Due",
+      "Skin o' My Teeth",
+      "Hangar 18",
+      "Lucretia",
+      "Sweating Bullets",
+      "Foreclosure of a Dream",
+      "In My Darkest Hour",
+      "Peace Sells",
+      "The Conjuring",
+      "Wake Up Dead",
+      "Symphony of Destruction",
+      "Anarchy in the U.K."
+    ],
+    "youtube": "https://www.youtube.com/watch?v=hL-MRKUtv0M&list=PLYoxmbpW_bfWDtzPv7QF3lg_mC3xtiAp9&index=23",
+    "image": "/images/shows/1992italy.webp"
   }
 ]

@@ -111,6 +111,10 @@ export async function generateMetadata({
     classification: "Thrash Metal DVD",
     alternates: {
       canonical: `/dvds/${dvdId}`,
+      languages: {
+        es: `/dvds/${dvdId}`,
+        en: `/dvds/${dvdId}`,
+      },
     },
     robots: {
       index: true,

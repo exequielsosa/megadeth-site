@@ -62,6 +62,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     alternates: {
       canonical: "/miembros",
+      languages: {
+        es: "/miembros",
+        en: "/miembros",
+      },
     },
     robots: {
       index: true,
