@@ -83,6 +83,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Estreno BEHIND THE MASK en Argentina",
       "Let there be Shread",
       "Shows en vivo de Megadeth",
+      "Megadeth bootlegs",
     ],
     en: [
       "Megadeth",
@@ -147,17 +148,18 @@ export async function generateMetadata(): Promise<Metadata> {
       "Argentina tickets Tu Ticket 10/12 presale",
       "Let there be Shread",
       "Live shows Megadeth",
+      "Megadeth bootlegs",
     ],
   };
 
   const titleByLocale = {
-    es: "MEGADETH: Noticias, actualidad, shows y adelantos del álbum final & gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
-    en: "MEGADETH: News, updates, shows and previews of the final album & 2026 tour Argentina / LATAM — Iron Maiden + Anthrax",
+    es: "MEGADETH: Noticias, actualidad, shows, letras, discografia, bootlegs y adelantos del álbum final & gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
+    en: "MEGADETH: News, updates, shows, lyrics, discography, bootlegs and previews of the final album & 2026 tour Argentina / LATAM — Iron Maiden + Anthrax",
   };
 
   const descriptionByLocale = {
-    es: "Todo sobre MEGADETH: Noticias, actualidad, discografía, shows y adelantos del álbum final 'Megadeth' que se lanza el 23 de enero de 2026. Además, gira en Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México con Iron Maiden y Anthrax. Noticias, fechas y adelantos exclusivos. Sitio no oficial de fans.",
-    en: "All about MEGADETH: News, updates, discography, shows and previews of the final album 'Megadeth' releasing on January 23, 2026. Also, tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico with Iron Maiden and Anthrax. Exclusive news, dates and previews. Unofficial fan site.",
+    es: "Todo sobre MEGADETH: Noticias, actualidad, discografía, shows, letras, bootlegs y adelantos del álbum final 'Megadeth' que se lanza el 23 de enero de 2026. Además, gira en Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México con Iron Maiden y Anthrax. Noticias, fechas y adelantos exclusivos. Sitio no oficial de fans.",
+    en: "All about MEGADETH: News, updates, discography, shows, lyrics, bootlegs and previews of the final album 'Megadeth' releasing on January 23, 2026. Also, tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico with Iron Maiden and Anthrax. Exclusive news, dates and previews. Unofficial fan site.",
   };
 
   return {
