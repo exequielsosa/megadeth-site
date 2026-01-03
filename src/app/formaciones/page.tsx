@@ -60,8 +60,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "/formaciones",
       languages: {
-        es: "/es/formaciones",
-        en: "/en/formaciones",
+        es: "/formaciones",
+        en: "/formaciones",
       },
     },
     robots: {

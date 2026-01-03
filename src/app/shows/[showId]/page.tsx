@@ -85,6 +85,10 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `/shows/${showId}`,
+      languages: {
+        es: `/shows/${showId}`,
+        en: `/shows/${showId}`,
+      },
     },
     other: {
       "article:published_time": show.date,

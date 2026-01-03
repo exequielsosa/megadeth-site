@@ -92,6 +92,10 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `/historia/${chapter.slug}`,
+      languages: {
+        es: `/historia/${chapter.slug}`,
+        en: `/historia/${chapter.slug}`,
+      },
     },
     robots: {
       index: true,

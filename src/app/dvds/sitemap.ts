@@ -20,8 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
     alternates: {
       languages: {
-        es: `${baseUrl}/es/dvds`,
-        en: `${baseUrl}/en/dvds`,
+        es: `${baseUrl}/dvds`,
+        en: `${baseUrl}/dvds`,
       },
     },
   }
@@ -38,8 +38,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.6,
         alternates: {
           languages: {
-            es: `${baseUrl}/es/dvds/${slug}`,
-            en: `${baseUrl}/en/dvds/${slug}`,
+            es: `${baseUrl}/dvds/${slug}`,
+            en: `${baseUrl}/dvds/${slug}`,
           },
         },
       }

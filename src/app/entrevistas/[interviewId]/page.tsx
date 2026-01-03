@@ -90,6 +90,10 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `/entrevistas/${interviewId}`,
+      languages: {
+        es: `/entrevistas/${interviewId}`,
+        en: `/entrevistas/${interviewId}`,
+      },
     },
     other: {
       "article:published_time": interview.date,

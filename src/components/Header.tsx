@@ -54,6 +54,7 @@ export default function Header() {
     { label: t("videos"), href: "/videos" },
     { label: t("dvds"), href: "/dvds" },
     { label: t("shows"), href: "/shows" },
+    { label: t("bootlegs"), href: "/bootlegs" },
   ];
 
   const navigationItems = [

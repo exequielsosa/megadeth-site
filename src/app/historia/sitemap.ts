@@ -4,7 +4,7 @@ import { HistoryData } from '@/types/historia';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const data = historiaData as HistoryData;
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://megadeth.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://megadeth.com.ar';
 
   // Página principal de historia
   const mainHistoryPage = {

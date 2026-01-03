@@ -73,6 +73,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     alternates: {
       canonical: "/dvds",
+      languages: {
+        es: "/dvds",
+        en: "/dvds",
+      },
     },
     robots: {
       index: true,

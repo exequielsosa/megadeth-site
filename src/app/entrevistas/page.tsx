@@ -60,6 +60,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     alternates: {
       canonical: "/entrevistas",
+      languages: {
+        es: "/entrevistas",
+        en: "/entrevistas",
+      },
     },
     robots: {
       index: true,

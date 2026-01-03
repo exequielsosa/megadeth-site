@@ -7,7 +7,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("pageTitle"),
     description: t("pageDescription"),
-    keywords: "Megadeth, noticias, news, metal, thrash metal, Dave Mustaine, actualidad, últimas noticias, tour, conciertos",
+    keywords:
+      "Megadeth, noticias, news, metal, thrash metal, Dave Mustaine, actualidad, últimas noticias, tour, conciertos",
     openGraph: {
       title: t("pageTitle"),
       description: t("pageDescription"),
@@ -33,8 +34,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "https://megadeth.com.ar/noticias",
       languages: {
-        "es": "https://megadeth.com.ar/es/noticias",
-        "en": "https://megadeth.com.ar/en/noticias",
+        es: "https://megadeth.com.ar/noticias",
+        en: "https://megadeth.com.ar/noticias",
       },
     },
     robots: {

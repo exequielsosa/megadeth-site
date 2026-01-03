@@ -1,16 +1,16 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import ShowsListPage from "@/components/ShowsListPage";
+import BootlegsListPage from "@/components/BootlegsListPage";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
-  const t = await getTranslations("shows");
+  const t = await getTranslations("bootlegs");
 
   const title = `${t("listTitle")} | Megadeth`;
   const description = t("listDescription");
   const keywords = [
     "Megadeth",
-    "shows",
+    "bootlegs",
     "conciertos",
     "concerts",
     "live",
@@ -18,11 +18,11 @@ export async function generateMetadata(): Promise<Metadata> {
     "thrash metal",
     "metal",
     "Dave Mustaine",
-    "historic shows",
-    "shows históricos",
-    "tour dates",
-    "fechas de gira",
-    "setlist",
+    "recordings",
+    "grabaciones",
+    "YouTube",
+    "unofficial",
+    "no oficial",
   ];
 
   return {
@@ -32,19 +32,16 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      url: "/shows",
+      url: "/bootlegs",
       siteName: "Megadeth Fan Site",
       locale: locale === "es" ? "es_ES" : "en_US",
       type: "website",
       images: [
         {
-          url: "/images/shows/og-shows.jpg",
+          url: "/images/bootlegs/og-bootlegs.jpg",
           width: 1200,
           height: 630,
-          alt:
-            locale === "es"
-              ? "Shows Históricos de Megadeth"
-              : "Megadeth Historic Shows",
+          alt: locale === "es" ? "Bootlegs de Megadeth" : "Megadeth Bootlegs",
         },
       ],
     },
@@ -52,29 +49,18 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: ["/images/shows/og-shows.jpg"],
-      creator: "@MegadethFanSite",
+      images: ["/images/bootlegs/og-bootlegs.jpg"],
     },
     alternates: {
-      canonical: "/shows",
+      canonical: "/bootlegs",
       languages: {
-        es: "/shows",
-        en: "/shows",
-      },
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-image-preview": "large",
-        "max-snippet": -1,
+        es: "/bootlegs",
+        en: "/bootlegs",
       },
     },
   };
 }
 
-export default function ShowsPage() {
-  return <ShowsListPage />;
+export default function BootlegsPage() {
+  return <BootlegsListPage />;
 }
