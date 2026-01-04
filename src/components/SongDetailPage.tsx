@@ -204,7 +204,7 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
               <Typography
                 variant="h1"
                 fontWeight={600}
-                sx={{ fontSize: { md: 48, xs: 40 } }}
+                sx={{ fontSize: { md: 48, xs: 36 } }}
               >
                 {song.title}
               </Typography>
@@ -216,20 +216,22 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                 />
               )}
             </Box>
-            <Link
-              href={`/discography/${song.album.title
-                .toLowerCase()
-                .replace(/[^a-z0-9 ]/gi, "")
-                .replace(/ /g, "-")}`}
-              passHref
-            >
-              <Chip label={song.album.title} sx={{ mr: 1, mb: 1 }} />
-            </Link>
-            <Chip
-              label={song.album.year}
-              color="secondary"
-              sx={{ mb: 1, mr: 1 }}
-            />
+            <Box pt={2}>
+              <Link
+                href={`/discography/${song.album.title
+                  .toLowerCase()
+                  .replace(/[^a-z0-9 ]/gi, "")
+                  .replace(/ /g, "-")}`}
+                passHref
+              >
+                <Chip label={song.album.title} sx={{ mr: 1, mb: 1 }} />
+              </Link>
+              <Chip
+                label={song.album.year}
+                color="secondary"
+                sx={{ mb: 1, mr: 1 }}
+              />
+            </Box>
             <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
               {t("duration")}: {song.details.duration}
             </Typography>
