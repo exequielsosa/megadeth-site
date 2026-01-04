@@ -84,6 +84,7 @@ import { Typography, Box, Grid, Card, CardContent, Chip } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
 import { BilingualText } from "@/types";
 import membersData from "@/constants/members.json";
+import Breadcrumb from "@/components/Breadcrumb";
 
 type Member = {
   id: string;
@@ -106,6 +107,7 @@ import Link from "next/link";
 
 export default function MembersPage() {
   const t = useTranslations("lineups");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale() as "es" | "en";
 
   const members = Object.values(membersData.members) as Member[];
@@ -196,7 +198,10 @@ export default function MembersPage() {
 
   return (
     <ContainerGradientNoPadding>
-      <Box display={"flex"} justifyContent={"center"} width="100%" px={1}>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+        <Breadcrumb items={[{ label: tb("members") }]} />
+      </Box>
+      <Box display={"flex"} justifyContent={"center"} width="100%" px={2}>
         <Box maxWidth={"1350px"} sx={{ py: 4 }}>
           {/* Header */}
           <Box textAlign="center" mb={6}>

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import HistoriaClient from "./HistoriaClient";
-import ContainerGradient from "@/components/atoms/ContainerGradient";
 import { getTranslations } from "next-intl/server";
+import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("historyPage");
@@ -41,8 +41,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function HistoriaPage() {
   return (
-    <ContainerGradient>
+    <ContainerGradientNoPadding>
       <HistoriaClient />
-    </ContainerGradient>
+    </ContainerGradientNoPadding>
   );
 }

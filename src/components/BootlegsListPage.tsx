@@ -23,6 +23,7 @@ import {
 import { useTranslations, useLocale } from "next-intl";
 import bootlegsData from "@/constants/bootlegs.json";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
   Bootleg,
   formatBootlegDate,
@@ -55,6 +56,7 @@ function getFilterValue(
 
 export default function BootlegsListPage() {
   const t = useTranslations("bootlegs");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale();
   const [filter, setFilter] = useState("");
   const [pageDesktop, setPageDesktop] = useState(1);
@@ -99,6 +101,9 @@ export default function BootlegsListPage() {
 
   return (
     <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 4 }}>
+        <Breadcrumb items={[{ label: tb("bootlegs") }]} />
+      </Box>
       <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
         <Box
           display="flex"

@@ -16,7 +16,8 @@ import { Launch, MusicNote } from "@mui/icons-material";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import ContainerGradient from "./atoms/ContainerGradient";
+import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
   Show,
   formatShowDate,
@@ -233,12 +234,18 @@ function Setlist({ songs }: { songs: string[] }) {
 
 export default function ShowDetailPage({ show }: ShowDetailPageProps) {
   const t = useTranslations("shows");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale();
 
   const title = `${show.venue} - ${show.city}`;
 
   return (
-    <ContainerGradient>
+    <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 2, md: 4 }}>
+        <Breadcrumb
+          items={[{ label: tb("shows"), href: "/shows" }, { label: title }]}
+        />
+      </Box>
       <Container maxWidth={false} sx={{ maxWidth: 1200, mx: "auto" }}>
         {/* Header del show */}
         <Box sx={{ textAlign: "center", mb: 4 }}>
@@ -347,7 +354,7 @@ export default function ShowDetailPage({ show }: ShowDetailPageProps) {
         <Setlist songs={show.setlist} />
 
         {/* Botón de vuelta */}
-        <Box sx={{ mt: 6, textAlign: "center" }}>
+        <Box sx={{ mt: 6, textAlign: "center", mb: 4 }}>
           <Button
             component={Link}
             href="/shows"
@@ -358,6 +365,6 @@ export default function ShowDetailPage({ show }: ShowDetailPageProps) {
           </Button>
         </Box>
       </Container>
-    </ContainerGradient>
+    </ContainerGradientNoPadding>
   );
 }

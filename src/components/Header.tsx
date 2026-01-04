@@ -120,7 +120,7 @@ export default function Header() {
       }}
     >
       <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
-        <Toolbar sx={{ gap: 2, px: { xs: 2, sm: 3 } }}>
+        <Toolbar sx={{ gap: 2, px: { xs: 0, sm: 0 } }}>
           <Typography variant="h6" sx={{ fontWeight: 800 }}>
             <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
               <Box

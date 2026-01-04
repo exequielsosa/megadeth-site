@@ -24,6 +24,7 @@ import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import showsData from "@/constants/shows.json";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
   Show,
   formatShowDate,
@@ -50,6 +51,7 @@ function getFilterValue(show: Show, filter: string, locale: string): boolean {
 
 export default function ShowsListPage() {
   const t = useTranslations("shows");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale();
   const [filter, setFilter] = useState("");
   const [pageDesktop, setPageDesktop] = useState(1);
@@ -92,6 +94,9 @@ export default function ShowsListPage() {
 
   return (
     <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+        <Breadcrumb items={[{ label: tb("shows") }]} />
+      </Box>
       <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
         <Box
           display="flex"

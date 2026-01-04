@@ -22,8 +22,9 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import ContainerGradient from "@/components/atoms/ContainerGradient";
+import Breadcrumb from "@/components/Breadcrumb";
 import { tourDates } from "@/constants/tourDates";
+import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -49,6 +50,7 @@ function TabPanel(props: TabPanelProps) {
 
 export default function TourPage() {
   const t = useTranslations("tour");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale();
   const [activeTab, setActiveTab] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
@@ -168,8 +170,11 @@ export default function TourPage() {
   );
 
   return (
-    <ContainerGradient>
-      <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
+    <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+        <Breadcrumb items={[{ label: tb("tour") }]} />
+      </Box>
+      <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
         <Box sx={{ textAlign: "center", mb: 4 }}>
           <Typography
             variant="h1"
@@ -306,6 +311,6 @@ export default function TourPage() {
           </Typography>
         </Box>
       </Container>
-    </ContainerGradient>
+    </ContainerGradientNoPadding>
   );
 }

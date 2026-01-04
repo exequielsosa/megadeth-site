@@ -17,6 +17,7 @@ import { notFound } from "next/navigation";
 import { use } from "react";
 import Link from "next/link";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
+import Breadcrumb from "@/components/Breadcrumb";
 
 interface PageProps {
   params: Promise<{
@@ -28,6 +29,7 @@ export default function MemberDetailPage({ params }: PageProps) {
   const { memberId } = use(params);
   const locale = useLocale();
   const t = useTranslations("lineups");
+  const tb = useTranslations("breadcrumb");
   const currentLocale = locale as "es" | "en";
 
   const member =
@@ -50,13 +52,22 @@ export default function MemberDetailPage({ params }: PageProps) {
         />
       </head>
       <ContainerGradientNoPadding>
+        <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+          <Breadcrumb
+            items={[
+              { label: tb("members"), href: "/miembros" },
+              { label: member.name },
+            ]}
+          />
+        </Box>
         <Box
           display={"flex"}
           width={"100%"}
           justifyContent={"center"}
-          sx={{ px: 1 }}
+          sx={{ px: 2 }}
+          pt={{ xs: 0, md: 1 }}
         >
-          <Box maxWidth={"1350px"} sx={{ py: 4 }}>
+          <Box maxWidth={"1350px"} sx={{ pt: 2, pb: 4 }}>
             {/* Header */}
             <Grid container spacing={4} sx={{ mb: 6 }}>
               <Grid size={{ xs: 12, md: 4 }}>

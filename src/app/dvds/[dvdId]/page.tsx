@@ -14,7 +14,7 @@ import {
   Divider,
 } from "@mui/material";
 import { Launch } from "@mui/icons-material";
-import ContainerGradient from "../../../components/atoms/ContainerGradient";
+import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import DVDImage from "../../../components/DVDImage";
 import DVDYouTubeButton from "../../../components/DVDYouTubeButton";
 import dvdsData from "../../../constants/dvd.json";
@@ -23,9 +23,10 @@ import {
   generateDVDSlug,
   type DVDDataItem,
 } from "@/types/dvd";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 
 interface DVDPageProps {
   params: Promise<{
@@ -161,6 +162,7 @@ export async function generateMetadata({
 export default async function DVDPage({ params }: DVDPageProps) {
   const { dvdId } = await params;
   const locale = await getLocale();
+  const tb = await getTranslations("breadcrumb");
   const dvd = findDVDBySlug(dvdId);
 
   if (!dvd) {
@@ -220,21 +222,17 @@ export default async function DVDPage({ params }: DVDPageProps) {
           __html: JSON.stringify(structuredData),
         }}
       />
-      <ContainerGradient>
-        <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
-          {/* Breadcrumb */}
-          <Box sx={{ mb: 4 }}>
-            <Typography variant="body2" color="text.secondary">
-              <Link
-                href="/dvds"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                DVDs
-              </Link>{" "}
-              / {dvdTitle}
-            </Typography>
-          </Box>
-
+      <ContainerGradientNoPadding>
+        {/* Breadcrumb */}
+        <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 2, md: 4 }}>
+          <Breadcrumb
+            items={[{ label: tb("dvds"), href: "/dvds" }, { label: dvdTitle }]}
+          />
+        </Box>
+        <Container
+          maxWidth={false}
+          sx={{ maxWidth: 1440, mx: "auto", marginBottom: 4 }}
+        >
           <Grid container spacing={4}>
             {/* Portada y información básica */}
             <Grid size={{ xs: 12, md: 4 }}>
@@ -410,7 +408,7 @@ export default async function DVDPage({ params }: DVDPageProps) {
             </Button>
           </Box>
         </Container>
-      </ContainerGradient>
+      </ContainerGradientNoPadding>
     </>
   );
 }
