@@ -13,8 +13,8 @@ import {
 } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
 import songsData from "@/constants/songs.json";
+import songsCountData from "@/constants/songs.counts.fixed.json";
 import Link from "next/link";
-import ContainerGradient from "./atoms/ContainerGradient";
 import Image from "next/image";
 import membersData from "@/constants/members.json";
 import Breadcrumb from "./Breadcrumb";
@@ -30,16 +30,123 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
   const [showEs, setShowEs] = useState(false);
   const locale = useLocale();
   const song = songsData.find((s) => s.id === songId);
+  const songsCounts: Record<string, number> = songsCountData;
+
   if (!song)
     return (
-      <Container>
-        <Typography>{t("notFound")}</Typography>
-      </Container>
+      <ContainerGradientNoPadding>
+        <Container
+          maxWidth="md"
+          sx={{ py: { xs: 2, md: 3 }, textAlign: "center" }}
+        >
+          <Box
+            sx={{
+              position: "relative",
+              width: { xs: 300, md: 600 },
+              height: { xs: 200, md: 400 },
+              mx: "auto",
+              mb: 0,
+            }}
+          >
+            <Image
+              src="/images/404.png"
+              alt="404"
+              fill
+              style={{ objectFit: "contain" }}
+              priority
+            />
+          </Box>
+          <Typography
+            variant="h3"
+            component="h1"
+            gutterBottom
+            color="primary"
+            sx={{
+              fontWeight: 700,
+              fontSize: { xs: "1.75rem", md: "2.5rem" },
+              mb: 2,
+            }}
+          >
+            {t("notFoundTitle")}
+          </Typography>
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{
+              fontSize: { xs: "1rem", md: "1.125rem" },
+              mb: 1,
+              lineHeight: 1.7,
+            }}
+          >
+            {t("notFoundMessage")}
+          </Typography>
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{
+              fontSize: { xs: "1rem", md: "1.125rem" },
+              mb: 4,
+              lineHeight: 1.7,
+            }}
+          >
+            {t("notFoundAction")}
+          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              gap: 2,
+              justifyContent: "center",
+              flexDirection: { xs: "column", sm: "row" },
+              alignItems: "center",
+            }}
+          >
+            <Button
+              component={Link}
+              href="/songs"
+              variant="contained"
+              size="large"
+              sx={{
+                px: 4,
+                py: 1.5,
+                fontSize: { xs: 16, md: 18 },
+                fontWeight: 600,
+                minWidth: { xs: 200, sm: "auto" },
+              }}
+            >
+              {t("backToSongs")}
+            </Button>
+            <Button
+              component={Link}
+              href="/contacto"
+              variant="outlined"
+              size="large"
+              sx={{
+                px: 4,
+                py: 1.5,
+                fontSize: { xs: 16, md: 18 },
+                fontWeight: 600,
+                minWidth: { xs: 200, sm: "auto" },
+              }}
+            >
+              {t("goToContact")}
+            </Button>
+          </Box>
+        </Container>
+      </ContainerGradientNoPadding>
     );
+
+  // Obtener top 10 canciones más tocadas
+  const top10Songs = Object.entries(songsCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([title]) => title);
+
+  const isTop10 = top10Songs.includes(song.title);
 
   // Instrument y theme dependen del idioma global
   const instrumentKey = locale === "es" ? "es" : "en";
   const themeText = song.theme[instrumentKey];
+  const timesPlayed = songsCounts[song.title] || 0;
 
   return (
     <ContainerGradientNoPadding>
@@ -93,14 +200,22 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
             </Box>
           </Card>
           <Box flex={1}>
-            <Typography
-              variant="h1"
-              fontWeight={600}
-              gutterBottom
-              sx={{ fontSize: { md: 48, xs: 40 } }}
-            >
-              {song.title}
-            </Typography>
+            <Box display="flex" alignItems="center" gap={2} flexWrap="wrap">
+              <Typography
+                variant="h1"
+                fontWeight={600}
+                sx={{ fontSize: { md: 48, xs: 40 } }}
+              >
+                {song.title}
+              </Typography>
+              {isTop10 && (
+                <Chip
+                  label="TOP 10"
+                  color="error"
+                  sx={{ fontWeight: 700, fontSize: { xs: 12, md: 14 } }}
+                />
+              )}
+            </Box>
             <Link
               href={`/discography/${song.album.title
                 .toLowerCase()
@@ -110,12 +225,19 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
             >
               <Chip label={song.album.title} sx={{ mr: 1, mb: 1 }} />
             </Link>
-            <Chip label={song.album.year} color="secondary" sx={{ mb: 1 }} />
+            <Chip
+              label={song.album.year}
+              color="secondary"
+              sx={{ mb: 1, mr: 1 }}
+            />
             <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
               {t("duration")}: {song.details.duration}
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
               {t("track")}: {song.details.track_number}
+            </Typography>
+            <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+              {t("timesPlayedLive")}: <strong>{timesPlayed}</strong>
             </Typography>
             <Card sx={{ padding: 2, mt: 3, boxShadow: 2 }}>
               <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1 }}>
