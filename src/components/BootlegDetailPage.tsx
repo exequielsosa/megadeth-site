@@ -16,7 +16,7 @@ import { Launch, MusicNote } from "@mui/icons-material";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import ContainerGradient from "./atoms/ContainerGradient";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
   Bootleg,
   formatBootlegDate,
@@ -24,6 +24,7 @@ import {
   getBootlegDescription,
   getBootlegYear,
 } from "@/types/bootleg";
+import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
 
 interface BootlegDetailPageProps {
   bootleg: Bootleg;
@@ -234,10 +235,21 @@ function Setlist({ songs }: { songs: string[] }) {
 
 export default function BootlegDetailPage({ bootleg }: BootlegDetailPageProps) {
   const t = useTranslations("bootlegs");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale();
 
+  const title = `${bootleg.title} - ${bootleg.city}`;
+
   return (
-    <ContainerGradient>
+    <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 2, md: 4 }}>
+        <Breadcrumb
+          items={[
+            { label: tb("bootlegs"), href: "/bootlegs" },
+            { label: title },
+          ]}
+        />
+      </Box>
       <Container maxWidth={false} sx={{ maxWidth: 1200, mx: "auto" }}>
         {/* Header del bootleg */}
         <Box sx={{ textAlign: "center", mb: 4 }}>
@@ -333,7 +345,7 @@ export default function BootlegDetailPage({ bootleg }: BootlegDetailPageProps) {
         <Setlist songs={bootleg.setlist} />
 
         {/* Botón de vuelta */}
-        <Box sx={{ mt: 6, textAlign: "center" }}>
+        <Box sx={{ mt: 6, textAlign: "center", mb: 4 }}>
           <Button
             component={Link}
             href="/bootlegs"
@@ -344,6 +356,6 @@ export default function BootlegDetailPage({ bootleg }: BootlegDetailPageProps) {
           </Button>
         </Box>
       </Container>
-    </ContainerGradient>
+    </ContainerGradientNoPadding>
   );
 }

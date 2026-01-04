@@ -23,6 +23,8 @@ import {
 import { useTranslations, useLocale } from "next-intl";
 import songsData from "@/constants/songs.json";
 import ContainerGradient from "./atoms/ContainerGradient";
+import Breadcrumb from "./Breadcrumb";
+import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
 
 const ITEMS_PER_PAGE_DESKTOP = 10;
 const ITEMS_PER_PAGE_MOBILE = 10;
@@ -78,6 +80,7 @@ function getFilterValue(song: Song, filter: string) {
 
 export default function SongsListPage() {
   const t = useTranslations("songs");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale();
   const [filter, setFilter] = useState("");
   const [pageDesktop, setPageDesktop] = useState(1);
@@ -119,7 +122,10 @@ export default function SongsListPage() {
   // if (!mounted) return null; // o un loader
 
   return (
-    <ContainerGradient>
+    <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 2, md: 0 }}>
+        <Breadcrumb items={[{ label: tb("songs") }]} />
+      </Box>
       <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
         <Box
           display="flex"
@@ -275,6 +281,6 @@ export default function SongsListPage() {
           </Box>
         )}
       </Container>
-    </ContainerGradient>
+    </ContainerGradientNoPadding>
   );
 }

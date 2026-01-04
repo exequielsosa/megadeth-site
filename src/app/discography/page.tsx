@@ -3,12 +3,13 @@ import studioAlbums from "../../constants/discography.json";
 import liveAlbums from "../../constants/liveAlbums.json";
 import compilations from "../../constants/compilations.json";
 import eps from "../../constants/eps.json";
-import ContainerGradient from "../../components/atoms/ContainerGradient";
 import { Typography, Box } from "@mui/material";
 import type { Album } from "@/types/album";
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
+import Breadcrumb from "@/components/Breadcrumb";
+import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -148,9 +149,13 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function AlbumsPage() {
   const t = useTranslations("discography");
+  const tb = useTranslations("breadcrumb");
 
   return (
-    <ContainerGradient>
+    <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 2, md: 4 }}>
+        <Breadcrumb items={[{ label: tb("discography") }]} />
+      </Box>
       {/* Álbumes de Estudio */}
       <Box sx={{ mb: 6 }}>
         <Typography
@@ -215,7 +220,7 @@ export default function AlbumsPage() {
       </Box>
 
       {/* EPs */}
-      <Box>
+      <Box mb={4}>
         <Typography
           variant="h2"
           component="h2"
@@ -234,6 +239,6 @@ export default function AlbumsPage() {
         </Typography>
         <DiscographyGrid albums={eps as unknown as Album[]} />
       </Box>
-    </ContainerGradient>
+    </ContainerGradientNoPadding>
   );
 }

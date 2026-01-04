@@ -17,6 +17,8 @@ import Link from "next/link";
 import ContainerGradient from "./atoms/ContainerGradient";
 import Image from "next/image";
 import membersData from "@/constants/members.json";
+import Breadcrumb from "./Breadcrumb";
+import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
 
 interface SongDetailPageProps {
   songId: string;
@@ -24,6 +26,7 @@ interface SongDetailPageProps {
 
 export default function SongDetailPage({ songId }: SongDetailPageProps) {
   const t = useTranslations("songs");
+  const tb = useTranslations("breadcrumb");
   const [showEs, setShowEs] = useState(false);
   const locale = useLocale();
   const song = songsData.find((s) => s.id === songId);
@@ -39,13 +42,25 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
   const themeText = song.theme[instrumentKey];
 
   return (
-    <ContainerGradient>
-      <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
+    <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+        <Breadcrumb
+          items={[
+            { label: tb("songs"), href: "/songs" },
+            { label: song.title },
+          ]}
+        />
+      </Box>
+      <Container
+        maxWidth={false}
+        sx={{ maxWidth: 1440, mx: "auto", pt: { xs: 2, md: 4 } }}
+      >
         <Box
           display="flex"
           alignItems={{ xs: "center", md: "flex-start" }}
           flexDirection={{ xs: "column", md: "row" }}
           gap={4}
+          pb={4}
         >
           <Card sx={{ minWidth: 220, maxWidth: 220, boxShadow: 4 }}>
             <Box
@@ -250,6 +265,6 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
           </Box>
         </Box>
       </Container>
-    </ContainerGradient>
+    </ContainerGradientNoPadding>
   );
 }

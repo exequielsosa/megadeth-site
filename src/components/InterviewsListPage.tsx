@@ -24,6 +24,7 @@ import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import interviewsData from "@/constants/interviews.json";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
   Interview,
   generateInterviewSlug,
@@ -90,6 +91,7 @@ function capitalizeTitle(title: string): string {
 
 export default function InterviewsListPage() {
   const t = useTranslations("interviews");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale();
   const [filter, setFilter] = useState("");
   const [pageDesktop, setPageDesktop] = useState(1);
@@ -134,6 +136,9 @@ export default function InterviewsListPage() {
 
   return (
     <ContainerGradientNoPadding>
+      <Box sx={{ pt: { xs: 2, md: 4 }, px: { xs: 2, sm: 3 } }}>
+        <Breadcrumb items={[{ label: tb("interviews") }]} />
+      </Box>
       <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
         <Box
           display="flex"

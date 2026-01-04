@@ -92,9 +92,11 @@ import { LineupFormation, BilingualText } from "@/types";
 import lineupsData from "@/constants/lineups.json";
 import Image from "next/image";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function LineupsPage() {
   const t = useTranslations("lineups");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale() as "es" | "en";
 
   const lineups: LineupFormation[] = lineupsData.lineups;
@@ -105,6 +107,9 @@ export default function LineupsPage() {
 
   return (
     <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+        <Breadcrumb items={[{ label: tb("lineups") }]} />
+      </Box>
       <Container maxWidth="lg" sx={{ py: 4 }}>
         {/* Header */}
         <Box textAlign="center" mb={6}>

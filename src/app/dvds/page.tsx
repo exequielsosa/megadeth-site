@@ -1,10 +1,11 @@
 import DVDGrid from "@/components/DVDGrid";
 import dvdsData from "../../constants/dvd.json";
-import ContainerGradient from "../../components/atoms/ContainerGradient";
 import type { DVD } from "@/types/dvd";
-import { Container } from "@mui/material";
+import { Container, Box } from "@mui/material";
 import type { Metadata } from "next";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
+import Breadcrumb from "@/components/Breadcrumb";
+import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -220,6 +221,7 @@ function generateStructuredData(locale: string) {
 
 export default async function DVDsPage() {
   const locale = await getLocale();
+  const tb = await getTranslations("breadcrumb");
   const structuredData = generateStructuredData(locale);
 
   // Filtrar solo DVDs válidos que tengan la estructura esperada
@@ -237,11 +239,14 @@ export default async function DVDsPage() {
         }}
       />
 
-      <ContainerGradient>
-        <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
+      <ContainerGradientNoPadding>
+        <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+          <Breadcrumb items={[{ label: tb("dvds") }]} />
+        </Box>
+        <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
           <DVDGrid dvds={validDvds as unknown as DVD[]} />
         </Container>
-      </ContainerGradient>
+      </ContainerGradientNoPadding>
     </>
   );
 }

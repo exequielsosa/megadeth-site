@@ -15,12 +15,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import ContainerGradient from "./atoms/ContainerGradient";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
   Interview,
   getInterviewTitle,
   getInterviewDescription,
   InterviewContentItem,
 } from "@/types/interview";
+import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
 
 interface InterviewDetailPageProps {
   interview: Interview;
@@ -317,6 +319,7 @@ export default function InterviewDetailPage({
   interview,
 }: InterviewDetailPageProps) {
   const t = useTranslations("interviews");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale();
 
   const title = getInterviewTitle(interview, locale);
@@ -324,7 +327,15 @@ export default function InterviewDetailPage({
   const content = interview.content?.[locale as "es" | "en"] || [];
 
   return (
-    <ContainerGradient>
+    <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 2, md: 4 }}>
+        <Breadcrumb
+          items={[
+            { label: tb("interviews"), href: "/entrevistas" },
+            { label: title },
+          ]}
+        />
+      </Box>
       <Container maxWidth={false} sx={{ maxWidth: 1200, mx: "auto" }}>
         {/* Header de la entrevista */}
         <Box sx={{ textAlign: "center", mb: 4 }}>
@@ -425,7 +436,7 @@ export default function InterviewDetailPage({
         )}
 
         {/* Botón de vuelta */}
-        <Box sx={{ mt: 6, textAlign: "center" }}>
+        <Box sx={{ mt: 6, textAlign: "center", mb: 4 }}>
           <Button
             component={Link}
             href="/entrevistas"
@@ -436,6 +447,6 @@ export default function InterviewDetailPage({
           </Button>
         </Box>
       </Container>
-    </ContainerGradient>
+    </ContainerGradientNoPadding>
   );
 }

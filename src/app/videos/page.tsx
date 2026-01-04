@@ -1,10 +1,11 @@
 import VideosGrid from "@/components/VideosGrid";
 import videosData from "../../constants/videos.json";
-import ContainerGradient from "../../components/atoms/ContainerGradient";
 import type { Video } from "@/types/video";
-import { Container } from "@mui/material";
+import { Container, Box } from "@mui/material";
 import type { Metadata } from "next";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
+import Breadcrumb from "@/components/Breadcrumb";
+import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -196,6 +197,7 @@ function generateStructuredData(locale: string) {
 
 export default async function VideosPage() {
   const locale = await getLocale();
+  const tb = await getTranslations("breadcrumb");
   const structuredData = generateStructuredData(locale);
 
   return (
@@ -208,11 +210,14 @@ export default async function VideosPage() {
         }}
       />
 
-      <ContainerGradient>
-        <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
+      <ContainerGradientNoPadding>
+        <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+          <Breadcrumb items={[{ label: tb("videos") }]} />
+        </Box>
+        <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
           <VideosGrid videos={videosData as unknown as Video[]} />
         </Container>
-      </ContainerGradient>
+      </ContainerGradientNoPadding>
     </>
   );
 }

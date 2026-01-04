@@ -18,6 +18,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
+import Breadcrumb from "@/components/Breadcrumb";
 
 interface PageProps {
   params: Promise<{
@@ -28,6 +29,7 @@ interface PageProps {
 export default function LineupDetailPage({ params }: PageProps) {
   const { lineupId } = use(params);
   const t = useTranslations("lineups");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale();
   const currentLocale = locale as "es" | "en";
 
@@ -48,6 +50,14 @@ export default function LineupDetailPage({ params }: PageProps) {
 
   return (
     <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+        <Breadcrumb
+          items={[
+            { label: tb("lineups"), href: "/formaciones" },
+            { label: getLocalizedText(lineup.title) },
+          ]}
+        />
+      </Box>
       <Box display={"flex"} width={"100%"} justifyContent={"center"} px={1}>
         <Box sx={{ py: 4, maxWidth: "1350px", width: "100%" }}>
           {/* Header */}

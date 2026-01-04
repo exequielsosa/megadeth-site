@@ -525,5 +525,20 @@
     "title": "Contacto",
     "description": "¿Tienes dudas, sugerencias o quieres colaborar? Escríbenos a nuestro correo y te responderemos a la brevedad.",
     "emailButton": "Enviar correo a megadethargentina77@gmail.com"
+  },
+  "breadcrumb": {
+    "home": "Inicio",
+    "discography": "Discografía",
+    "videos": "Videos",
+    "dvds": "DVDs",
+    "shows": "Shows",
+    "bootlegs": "Bootlegs",
+    "tour": "Gira",
+    "news": "Noticias",
+    "interviews": "Entrevistas",
+    "history": "Historia",
+    "lineups": "Formaciones",
+    "members": "Miembros",
+    "songs": "Canciones"
   }
 }

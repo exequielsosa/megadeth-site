@@ -6,6 +6,7 @@ import HistoryNavigation from "@/components/HistoryNavigation";
 import historiaData from "@/constants/historia.json";
 import { getTranslations, getLocale } from "next-intl/server";
 import ContainerGradientNoPadding from "../../../components/atoms/ContainerGradientNoPadding";
+import Breadcrumb from "@/components/Breadcrumb";
 import {
   HistoryData,
   findChapterBySlug,
@@ -108,6 +109,7 @@ export default async function CapituloPage({ params }: PageProps) {
   const { capitulo } = await params;
   const data = historiaData as HistoryData;
   const locale = (await getLocale()) as "es" | "en";
+  const tb = await getTranslations("breadcrumb");
 
   const chapter = findChapterBySlug(data.chapters, capitulo);
 
@@ -182,6 +184,14 @@ export default async function CapituloPage({ params }: PageProps) {
 
       {/* Contenido principal */}
       <ContainerGradientNoPadding>
+        <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+          <Breadcrumb
+            items={[
+              { label: tb("history"), href: "/historia" },
+              { label: chapterTitle },
+            ]}
+          />
+        </Box>
         <Box
           display="flex"
           alignItems="center"

@@ -31,6 +31,8 @@ import {
 } from "@/utils/albumHelpers";
 import LyricsIcon from "@mui/icons-material/MusicNote";
 import InfoIcon from "@mui/icons-material/Info";
+import Breadcrumb from "@/components/Breadcrumb";
+import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
 
 interface AlbumDetailProps {
   album: Album;
@@ -40,6 +42,7 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
   const [selectedTrack, setSelectedTrack] = useState<Track | null>(null);
   const [lyricsOpen, setLyricsOpen] = useState(false);
   const t = useTranslations("albumDetail");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale();
 
   const handleTrackClick = (track: Track) => {
@@ -55,7 +58,15 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
   };
 
   return (
-    <ContainerGradient>
+    <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 4 }}>
+        <Breadcrumb
+          items={[
+            { label: tb("discography"), href: "/discography" },
+            { label: album.title },
+          ]}
+        />
+      </Box>
       <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
         <Grid container spacing={4}>
           {/* Portada del álbum */}
@@ -355,6 +366,6 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
           </DialogActions>
         </Dialog>
       </Container>
-    </ContainerGradient>
+    </ContainerGradientNoPadding>
   );
 }

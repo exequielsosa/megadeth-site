@@ -5,13 +5,15 @@ import { useTranslations, useLocale } from "next-intl";
 import ArticleCard from "@/components/ArticleCard";
 import newsData from "@/constants/news.json";
 import { NewsArticle } from "@/types/news";
-import ContainerGradient from "../../components/atoms/ContainerGradient";
+import Breadcrumb from "@/components/Breadcrumb";
 import { useState } from "react";
+import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 
 const ITEMS_PER_PAGE = 10;
 
 export default function NoticiasPage() {
   const t = useTranslations("news");
+  const tb = useTranslations("breadcrumb");
   const locale = useLocale() as "es" | "en";
   const [displayCount, setDisplayCount] = useState(ITEMS_PER_PAGE);
 
@@ -73,8 +75,11 @@ export default function NoticiasPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ContainerGradient>
-        <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
+      <ContainerGradientNoPadding>
+        <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+          <Breadcrumb items={[{ label: tb("news") }]} />
+        </Box>
+        <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
           <Typography
             variant="h1"
             sx={{ fontSize: { xs: 32, md: 56 }, mb: 2, fontWeight: 700 }}
@@ -136,7 +141,7 @@ export default function NoticiasPage() {
             </Box>
           )}
         </Container>
-      </ContainerGradient>
+      </ContainerGradientNoPadding>
     </>
   );
 }
