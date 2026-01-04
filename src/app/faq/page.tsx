@@ -2,9 +2,13 @@
 import { useTranslations } from "next-intl";
 import { Container, Typography, Box } from "@mui/material";
 import { useEffect } from "react";
+import Breadcrumb from "@/components/Breadcrumb";
+import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 
 export default function FAQPage() {
   const t = useTranslations("faq");
+  const tb = useTranslations("breadcrumb");
+
   useEffect(() => {
     const faqJsonLd = {
       "@context": "https://schema.org",
@@ -47,36 +51,69 @@ export default function FAQPage() {
     };
   }, [t]);
   return (
-    <Container maxWidth="md" sx={{ py: 6 }}>
-      <Typography
-        variant="h3"
-        component="h1"
-        gutterBottom
-        color="primary"
-        fontWeight={700}
-      >
-        {t("title")}
-      </Typography>
-      <Box sx={{ mt: 4 }}>
-        <Typography variant="h6" color="text.primary" fontWeight={600}>
-          {t("q1")}
-        </Typography>
-        <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-          {t("a1")}
-        </Typography>
-        <Typography variant="h6" color="text.primary" fontWeight={600}>
-          {t("q2")}
-        </Typography>
-        <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-          {t("a2")}
-        </Typography>
-        <Typography variant="h6" color="text.primary" fontWeight={600}>
-          {t("q3")}
-        </Typography>
-        <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-          {t("a3")}
-        </Typography>
+    <ContainerGradientNoPadding>
+      <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+        <Breadcrumb items={[{ label: tb("faq") }]} />
       </Box>
-    </Container>
+      <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
+        <Typography
+          variant="h3"
+          component="h1"
+          gutterBottom
+          color="primary"
+          fontWeight={700}
+          sx={{ fontSize: { xs: "1.75rem", md: "3rem" } }}
+        >
+          {t("title")}
+        </Typography>
+        <Box sx={{ mt: 4 }}>
+          <Typography
+            variant="h6"
+            color="text.primary"
+            fontWeight={600}
+            sx={{ fontSize: { xs: "1.1rem", md: "1.25rem" } }}
+          >
+            {t("q1")}
+          </Typography>
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{ mb: 3, fontSize: { xs: "0.9rem", md: "1rem" } }}
+          >
+            {t("a1")}
+          </Typography>
+          <Typography
+            variant="h6"
+            color="text.primary"
+            fontWeight={600}
+            sx={{ fontSize: { xs: "1.1rem", md: "1.25rem" } }}
+          >
+            {t("q2")}
+          </Typography>
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{ mb: 3, fontSize: { xs: "0.9rem", md: "1rem" } }}
+          >
+            {t("a2")}
+          </Typography>
+          <Typography
+            variant="h6"
+            color="text.primary"
+            fontWeight={600}
+            sx={{ fontSize: { xs: "1.1rem", md: "1.25rem" } }}
+          >
+            {t("q3")}
+          </Typography>
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{ mb: 3, fontSize: { xs: "0.9rem", md: "1rem" } }}
+          >
+            {t("a3")}
+          </Typography>
+        </Box>
+      </Container>
+    </ContainerGradientNoPadding>
   );
 }

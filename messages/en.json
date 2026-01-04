@@ -539,6 +539,15 @@
     "history": "History",
     "lineups": "Lineups",
     "members": "Members",
-    "songs": "Songs"
+    "songs": "Songs",
+    "faq": "FAQ",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "contact": "Contact"
+  },
+  "lastShows": {
+    "latestShow": "Latest Show",
+    "yearsAgo": "20 Years Ago...",
+    "setlist": "Setlist"
   }
 }

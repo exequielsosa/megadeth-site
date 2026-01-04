@@ -8,6 +8,7 @@ import Image from "next/image";
 import Divider from "@mui/material/Divider";
 import ArticleCard from "./ArticleCard";
 import SiteUpdatesBanner from "./SiteUpdatesBanner";
+import LastShowsCards from "./LastShowsCards";
 import newsData from "@/constants/news.json";
 import siteUpdatesData from "@/constants/site-updates.json";
 import { NewsArticle } from "@/types/news";
@@ -203,6 +204,10 @@ export default function Hero() {
           </Box>
         )}
 
+        {/* Cards de últimos shows */}
+        <Box sx={{ width: "100%" }} pt={3}>
+          <LastShowsCards />
+        </Box>
         <Divider sx={{ my: 8, width: "100%" }} />
 
         {/* Sección de últimas noticias */}
