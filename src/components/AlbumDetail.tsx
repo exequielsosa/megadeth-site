@@ -240,7 +240,7 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                         primary={
                           <Stack
                             direction="row"
-                            spacing={2}
+                            spacing={0}
                             alignItems="center"
                           >
                             <Typography
