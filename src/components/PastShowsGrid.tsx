@@ -127,7 +127,30 @@ function ShowDetailModal({
         </IconButton>
       </Box>
 
-      <DialogContent sx={{ pt: 0 }}>
+      <DialogContent
+        sx={{
+          pt: 0,
+          overflowY: "auto",
+          pr: 2,
+          "&::-webkit-scrollbar": {
+            width: "8px",
+          },
+          "&::-webkit-scrollbar-track": {
+            background: "transparent",
+            borderRadius: "4px",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            background: "rgba(144, 202, 249, 0.4)",
+            borderRadius: "4px",
+            transition: "background 0.3s ease",
+            "&:hover": {
+              background: "rgba(144, 202, 249, 0.7)",
+            },
+          },
+          scrollbarWidth: "thin",
+          scrollbarColor: "rgba(144, 202, 249, 0.4) transparent",
+        }}
+      >
         {loading ? (
           <Box
             sx={{
@@ -243,31 +266,7 @@ function ShowDetailModal({
                 >
                   Setlist ({showDetail.songs.length})
                 </Typography>
-                <List
-                  dense
-                  sx={{
-                    maxHeight: 400,
-                    overflow: "auto",
-                    pr: 1,
-                    "&::-webkit-scrollbar": {
-                      width: "8px",
-                    },
-                    "&::-webkit-scrollbar-track": {
-                      background: "transparent",
-                      borderRadius: "4px",
-                    },
-                    "&::-webkit-scrollbar-thumb": {
-                      background: "rgba(144, 202, 249, 0.4)",
-                      borderRadius: "4px",
-                      transition: "background 0.3s ease",
-                      "&:hover": {
-                        background: "rgba(144, 202, 249, 0.7)",
-                      },
-                    },
-                    scrollbarWidth: "thin",
-                    scrollbarColor: "rgba(144, 202, 249, 0.4) transparent",
-                  }}
-                >
+                <List dense sx={{ p: 0 }}>
                   {showDetail.songs.map((song, index) => (
                     <ListItem
                       key={index}
