@@ -544,5 +544,10 @@
     "terms": "Términos y condiciones",
     "privacy": "Política de privacidad",
     "contact": "Contacto"
+  },
+  "lastShows": {
+    "latestShow": "Último Show",
+    "yearsAgo": "Hace 20 Años...",
+    "setlist": "Setlist"
   }
 }
