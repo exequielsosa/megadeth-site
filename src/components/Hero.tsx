@@ -208,7 +208,7 @@ export default function Hero() {
         <Box sx={{ width: "100%" }} pt={3}>
           <LastShowsCards />
         </Box>
-        <Divider sx={{ my: 8, width: "100%" }} />
+        <Divider sx={{ mt: 8, mb: 4, width: "100%" }} />
 
         {/* Sección de últimas noticias */}
         <Typography variant="h2" sx={{ fontSize: { xs: 28, md: 48 }, mb: 4 }}>
