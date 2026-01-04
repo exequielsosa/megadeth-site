@@ -15,8 +15,19 @@
     "lyricsBy": "Letra por",
     "musicBy": "Música por",
     "notFound": "Canción no encontrada",
+    "notFoundTitle": "Lo sentimos, no se encuentra el tema seleccionado",
+    "notFoundMessage": "Si considera que esto es un error, puede comunicarse con nosotros en la sección de contacto.",
+    "notFoundAction": "Sino, intente nuevamente más tarde.",
+    "backToSongs": "Volver a canciones",
+    "goToContact": "Ir a contacto",
     "album": "Álbum",
-    "year": "Año"
+    "year": "Año",
+    "timesPlayed": "Veces tocada",
+    "timesPlayedLive": "Veces tocada en vivo",
+    "top10Title": "Top 10 Canciones Más Tocadas",
+    "top10Description": "Las canciones más interpretadas en vivo por Megadeth. Recuento a Octubre 2025",
+    "position": "Posición",
+    "titleTable": "Todas las canciones de Megadeth"
   },
   "interviews": {
     "title": "Entrevistas",
