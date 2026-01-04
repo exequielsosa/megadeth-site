@@ -539,6 +539,10 @@
     "history": "History",
     "lineups": "Lineups",
     "members": "Members",
-    "songs": "Songs"
+    "songs": "Songs",
+    "faq": "FAQ",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "contact": "Contact"
   }
 }
