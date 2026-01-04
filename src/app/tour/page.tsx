@@ -23,6 +23,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import Breadcrumb from "@/components/Breadcrumb";
+import PastShowsGrid from "@/components/PastShowsGrid";
 import { tourDates } from "@/constants/tourDates";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 
@@ -216,66 +217,72 @@ export default function TourPage() {
               aria-controls="tour-tabpanel-0"
             />
             <Tab
-              label={`${t("past")} (${pastConcerts.length})`}
+              label={t("past")}
               id="tour-tab-1"
               aria-controls="tour-tabpanel-1"
             />
           </Tabs>
         </Box>
 
-        {/* Buscador y botón de ordenamiento */}
-        <Box
-          sx={{
-            display: "flex",
-            gap: 1.5,
-            mb: 3,
-            alignItems: "center",
-          }}
-        >
-          <TextField
-            fullWidth
-            placeholder={
-              locale === "es"
-                ? "Buscar por ciudad, venue o país..."
-                : "Search by city, venue or country..."
-            }
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <SearchIcon />
-                </InputAdornment>
-              ),
-            }}
-            sx={{ flexGrow: 1 }}
-          />
-          <IconButton
-            onClick={toggleSortOrder}
-            color="primary"
+        {/* Buscador y botón de ordenamiento - solo para próximos shows */}
+        {activeTab === 0 && (
+          <Box
             sx={{
-              border: 1,
-              borderColor: "primary.main",
-              minWidth: 48,
-              height: 48,
-              "&:hover": {
-                backgroundColor: "primary.main",
-                color: "white",
-              },
+              display: "flex",
+              gap: 1.5,
+              mb: 3,
+              alignItems: "center",
             }}
-            title={
-              locale === "es"
-                ? sortOrder === "asc"
-                  ? "Ordenar descendente"
-                  : "Ordenar ascendente"
-                : sortOrder === "asc"
-                ? "Sort descending"
-                : "Sort ascending"
-            }
           >
-            {sortOrder === "asc" ? <ArrowUpwardIcon /> : <ArrowDownwardIcon />}
-          </IconButton>
-        </Box>
+            <TextField
+              fullWidth
+              placeholder={
+                locale === "es"
+                  ? "Buscar por ciudad, venue o país..."
+                  : "Search by city, venue or country..."
+              }
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon />
+                  </InputAdornment>
+                ),
+              }}
+              sx={{ flexGrow: 1 }}
+            />
+            <IconButton
+              onClick={toggleSortOrder}
+              color="primary"
+              sx={{
+                border: 1,
+                borderColor: "primary.main",
+                minWidth: 48,
+                height: 48,
+                "&:hover": {
+                  backgroundColor: "primary.main",
+                  color: "white",
+                },
+              }}
+              title={
+                locale === "es"
+                  ? sortOrder === "asc"
+                    ? "Ordenar descendente"
+                    : "Ordenar ascendente"
+                  : sortOrder === "asc"
+                  ? "Sort descending"
+                  : "Sort ascending"
+              }
+            >
+              {sortOrder === "asc" ? (
+                <ArrowUpwardIcon />
+              ) : (
+                <ArrowDownwardIcon />
+              )}
+            </IconButton>
+          </Box>
+        )}
 
         <TabPanel value={activeTab} index={0}>
           {upcomingConcerts.length > 0 ? (
@@ -292,17 +299,7 @@ export default function TourPage() {
         </TabPanel>
 
         <TabPanel value={activeTab} index={1}>
-          {pastConcerts.length > 0 ? (
-            renderConcerts(pastConcerts)
-          ) : (
-            <Box sx={{ textAlign: "center", py: 6 }}>
-              <Typography variant="h6" color="text.secondary">
-                {locale === "es"
-                  ? "No hay conciertos pasados registrados"
-                  : "No past concerts recorded"}
-              </Typography>
-            </Box>
-          )}
+          <PastShowsGrid />
         </TabPanel>
 
         <Box sx={{ textAlign: "center", mt: 6 }}>
