@@ -65,7 +65,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Dave Mustaine Metallica",
       "noticia Ride The Lightning",
       "gira Argentina",
-      "Megadeth en Argentina",
+      "Megadeth en Argentina 2026",
       "Megadeth Lima",
       "Megadeth Bogotá",
       "Megadeth Buenos Aires",
@@ -131,7 +131,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Dave Mustaine Metallica",
       "Ride The Lightning news",
       "Megadeth Argentina tour",
-      "Megadeth in Argentina",
+      "Megadeth in Argentina 2026",
       "Megadeth Lima",
       "Megadeth Bogotá",
       "Megadeth Buenos Aires",
@@ -153,13 +153,13 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 
   const titleByLocale = {
-    es: "MEGADETH: Noticias, actualidad, shows, letras, discografia, bootlegs y adelantos del álbum final & gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
-    en: "MEGADETH: News, updates, shows, lyrics, discography, bootlegs and previews of the final album & 2026 tour Argentina / LATAM — Iron Maiden + Anthrax",
+    es: "MEGADETH: Argentina 2026, Noticias, actualidad, shows, letras, discografia, bootlegs y adelantos del álbum final & gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
+    en: "MEGADETH: Argentina 2026, News, updates, shows, lyrics, discography, bootlegs and previews of the final album & 2026 tour Argentina / LATAM — Iron Maiden + Anthrax",
   };
 
   const descriptionByLocale = {
-    es: "Todo sobre MEGADETH: Noticias, actualidad, discografía, shows, letras, bootlegs y adelantos del álbum final 'Megadeth' que se lanza el 23 de enero de 2026. Además, gira en Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México con Iron Maiden y Anthrax. Noticias, fechas y adelantos exclusivos. Sitio no oficial de fans.",
-    en: "All about MEGADETH: News, updates, discography, shows, lyrics, bootlegs and previews of the final album 'Megadeth' releasing on January 23, 2026. Also, tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico with Iron Maiden and Anthrax. Exclusive news, dates and previews. Unofficial fan site.",
+    es: "Todo sobre MEGADETH: Argentina 2026, Noticias, actualidad, discografía, shows, letras, bootlegs y adelantos del álbum final 'Megadeth' que se lanza el 23 de enero de 2026. Además, gira en Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México con Iron Maiden y Anthrax. Noticias, fechas y adelantos exclusivos. Sitio no oficial de fans.",
+    en: "All about MEGADETH: Argentina 2026, News, updates, discography, shows, lyrics, bootlegs and previews of the final album 'Megadeth' releasing on January 23, 2026. Also, tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico with Iron Maiden and Anthrax. Exclusive news, dates and previews. Unofficial fan site.",
   };
 
   return {

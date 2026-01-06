@@ -1,5 +1,27 @@
 [
   {
+    "id": "megadeth-no-puppets",
+    "title": {
+      "es": "Megadeth no es un espectáculo de marionetas",
+      "en": "Megadeth is not a puppet show"
+    },
+    "description": {
+      "es": "En el último número de Guitar World, Dave Mustaine, abordó preguntas sobre la gira de despedida de la banda, incluyendo si algún exmiembro podría ser invitado a unirse al grupo en el escenario.\n\nMustaine: \"Ya lo hemos hecho con Marty Friedman. Veamos a las otras personas con las que he tocado... Hay mucha gente. Eso sería un gran reto, pero no quiero hacerlo. Simplemente no puedo, porque, para empezar, sería injusto para los demás miembros de la banda que yo no tocara también con todos ellos. Prefiero seguir haciendo lo que estamos haciendo y dejar que los fans experimenten la música actual de Megadeth y estén contentos con ello. No es un 'Megadeth de marionetas'.\"\n\nReflexionando sobre colaboraciones pasadas, Mustaine destacó su conexión especial con el exguitarrista Marty Friedman, quien se reincorporó a él en el escenario en Japón a principios de 2023.\n\n\"Lo que hicimos con Marty Friedman en Japón a principios de 2024, fue una decisión obvia. Eso fue brillante. Yo quiero a Marty. Nos separamos en su momento, él siguió su camino y nosotros seguimos el nuestro.\"\n\nTambién habló sobre sus relaciones con otros exguitarristas, señalando que, aunque eran positivas, no coincidían con la profundidad que compartía con Friedman. \"Mi relación con Chris Poland fue realmente buena, pero no tan buena como con Marty\", dijo Dave. \"Mi relación con Jeff Young era buena, pero no tan buena como con Marty\".\n\nMustaine aclaró que, aparte del fallecido Gar Samuelson, no tendría problema en actuar con la mayoría de los antiguos miembros. Aun así, enfatizó su reconocimiento hacia la formación actual: \"Simplemente no voy a hacer nada que vaya, de ninguna manera, a parecer injusto para los demás miembros actuales de la banda.\"",
+      "en": "In the latest issue of Guitar World, Dave Mustaine addressed questions about the band's farewell tour, including whether any former members might be invited to join the group on stage.\n\nMustaine: \"We've already done it with Marty Friedman. Let's look at the other people I've played with... There are a lot of people. That would be a big challenge, but I don't want to do it. I simply can't, because, to begin with, it would be unfair to the other band members if I didn't also play with all of them. I'd rather keep doing what we're doing and let the fans experience current Megadeth music and be happy with it. It's not a 'puppet Megadeth'.\"\n\nReflecting on past collaborations, Mustaine highlighted his special connection with former guitarist Marty Friedman, who rejoined him on stage in Japan in early 2023.\n\n\"What we did with Marty Friedman in Japan in early 2024 was an obvious decision. That was brilliant. I love Marty. We parted ways back then, he went his way and we went ours.\"\n\nHe also spoke about his relationships with other former guitarists, noting that while they were positive, they didn't match the depth he shared with Friedman. \"My relationship with Chris Poland was really good, but not as good as with Marty,\" Dave said. \"My relationship with Jeff Young was good, but not as good as with Marty.\"\n\nMustaine clarified that, aside from the late Gar Samuelson, he would have no problem performing with most former members. Still, he emphasized his recognition of the current lineup: \"I'm simply not going to do anything that would, in any way, seem unfair to the other current members of the band.\""
+    },
+    "imageUrl": "/images/site-updates/marionetas.jpg",
+    "imageAlt": {
+      "es": "Lo de Marty fue brillante",
+      "en": "Marty's was brilliant"
+    },
+    "imageCaption": {
+      "es": "Lo de Marty fue brillante",
+      "en": "Marty's was brilliant"
+    },
+    "publishedDate": "2026-01-06"
+  },
+
+  {
     "id": "mustaine-ride-the-lightning-2025",
     "title": {
       "es": "Dave Mustaine nos cuenta detalles sobre su versión de Ride The Lightning",
