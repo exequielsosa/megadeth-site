@@ -1,5 +1,61 @@
 [
   {
+    "id": "dirk-interview",
+    "title": {
+      "es": "Dirk Verbeuren dice que Dave Mustaine “te lo dirá directamente a la cara”",
+      "en": "Dirk Verbeuren Says Dave Mustaine “Will Tell You Straight To Your Face”"
+    },
+    "description": {
+      "es": "Hablando en el podcast Freddy And Friends, Verbeuren se abrió sobre la colaboración con el fundador de Megadeth mientras trabajaba en el próximo álbum final de la banda, explicando que la franqueza de Mustaine hace que las decisiones creativas sean más claras en lugar de más difíciles.",
+      "en": "Speaking on the Freddy And Friends podcast, Verbeuren opened up about collaborating with Megadeth’s founder while working on the band’s upcoming final album, explaining that Mustaine’s blunt honesty makes creative decisions clearer rather than harder."
+    },
+    "publishedDate": "2026-01-10",
+    "linkUrl": "/entrevistas/dirk-interview-2026",
+    "youtubeVideoId": "I2ZL2hkmBxU"
+  },
+  {
+    "id": "dirk-birthday-2026",
+    "title": {
+      "es": "Semana de cumpleaños: Feliz cumpleaños, Dirk!",
+      "en": "Dirk's Birthday Week: Happy Birthday, Dirk!"
+    },
+    "description": {
+      "es": "Felicidades a Dirk, nuestro brillante, amable, y increible baterista.",
+      "en": "Happy birthday to Dirk, our brilliant, kind, and amazing drummer."
+    },
+    "imageUrl": "/images/site-updates/dirkbirth.jpg",
+    "imageAlt": {
+      "es": "Feliz Cumpleaños Dirk!!",
+      "en": "Happy Birthday Dirk!!"
+    },
+    "imageCaption": {
+      "es": "Feliz Cumpleaños Dirk!!",
+      "en": "Happy Birthday Dirk!!"
+    },
+    "publishedDate": "2026-01-08"
+  },
+  {
+    "id": "temu-birthday-2026",
+    "title": {
+      "es": "Semana de cumpleaños: Feliz cumpleaños, Temu!",
+      "en": "Temu's Birthday Week: Happy Birthday, Temu!"
+    },
+    "description": {
+      "es": "Felicidades a Temu, nuestro brillante guitarrista.",
+      "en": "Happy birthday to Temu, our brilliant guitarist."
+    },
+    "imageUrl": "/images/site-updates/temubirth.jpg",
+    "imageAlt": {
+      "es": "Feliz Cumpleaños Temu!!",
+      "en": "Happy Birthday Temu!!"
+    },
+    "imageCaption": {
+      "es": "Feliz Cumpleaños Temu!!",
+      "en": "Happy Birthday Temu!!"
+    },
+    "publishedDate": "2026-01-07"
+  },
+  {
     "id": "megadeth-no-puppets",
     "title": {
       "es": "Megadeth no es un espectáculo de marionetas",
