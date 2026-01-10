@@ -26,6 +26,7 @@ import songsCountData from "@/constants/songs.counts.fixed.json";
 
 import Breadcrumb from "./Breadcrumb";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
+import RandomSectionBanner from "./NewsBanner";
 
 const ITEMS_PER_PAGE_DESKTOP = 10;
 const ITEMS_PER_PAGE_MOBILE = 10;
@@ -442,6 +443,9 @@ export default function SongsListPage() {
           </Box>
         )}
       </Container>
+      <Box pb={4}>
+        <RandomSectionBanner currentSection="songs" />
+      </Box>
     </ContainerGradientNoPadding>
   );
 }
