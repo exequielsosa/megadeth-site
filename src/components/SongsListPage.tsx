@@ -443,7 +443,12 @@ export default function SongsListPage() {
           </Box>
         )}
       </Container>
-      <Box pb={4}>
+      <Box
+        pb={4}
+        sx={{
+          px: { xs: 2, sm: 2, md: 0 },
+        }}
+      >
         <RandomSectionBanner currentSection="songs" />
       </Box>
     </ContainerGradientNoPadding>

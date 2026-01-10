@@ -21,8 +21,8 @@ const sections: Section[] = [
     route: "/discography",
     image: "/images/banners/discography.png",
     adText: {
-      es: "Explora todos los álbumes de Megadeth",
-      en: "Explore all Megadeth albums",
+      es: "Explora el legado: Albumes de Estudio, en vivo, compilaciones y más",
+      en: "Explore the legacy: Studio albums, live albums, compilations and more",
     },
   },
   {
@@ -31,8 +31,8 @@ const sections: Section[] = [
     route: "/noticias",
     image: "/images/banners/news.png",
     adText: {
-      es: "Mantente al día con las últimas novedades",
-      en: "Stay up to date with the latest news",
+      es: "Mantente al día con las últimas novedades sobre Megadeth",
+      en: "Stay up to date with the latest news about Megadeth",
     },
   },
   {
@@ -41,8 +41,8 @@ const sections: Section[] = [
     route: "/tour",
     image: "/images/banners/tour.png",
     adText: {
-      es: "Conoce las próximas fechas de la gira",
-      en: "Check out the upcoming tour dates",
+      es: "Conoce las próximas fechas de la gira y el detalle de todos los shows de los ultimos 40 años",
+      en: "Discover upcoming tour dates and details of all shows from the last 40 years",
     },
   },
   {
@@ -51,8 +51,8 @@ const sections: Section[] = [
     route: "/songs",
     image: "/images/banners/songs.png",
     adText: {
-      es: "Descubre todas las canciones de Megadeth",
-      en: "Discover all Megadeth songs",
+      es: "Descubre todas las canciones de Megadeth, letras, analisis, veces tocadas en vivo y mas!",
+      en: "Discover all Megadeth songs, lyrics, analysis, live play counts and more!",
     },
   },
   {
@@ -61,8 +61,8 @@ const sections: Section[] = [
     route: "/dvds",
     image: "/images/banners/dvd.png",
     adText: {
-      es: "Revive los mejores conciertos en video",
-      en: "Relive the best concerts on video",
+      es: "Revive los mejores conciertos en video, documentales y mucho mas!",
+      en: "Relive the best concerts on video, documentaries and much more!",
     },
   },
   {
@@ -71,8 +71,8 @@ const sections: Section[] = [
     route: "/videos",
     image: "/images/banners/videos.png",
     adText: {
-      es: "Mira los videoclips oficiales",
-      en: "Watch the official music videos",
+      es: "Mira todos los videoclips oficiales",
+      en: "Watch all the official music videos",
     },
   },
   {
@@ -81,8 +81,8 @@ const sections: Section[] = [
     route: "/historia",
     image: "/images/banners/history.png",
     adText: {
-      es: "Conoce la historia completa de la banda",
-      en: "Learn the complete history of the band",
+      es: "La cronologia completa del legado: Linea de tiempo, hechos y mas",
+      en: "The complete chronology of the legacy: Timeline, facts and more",
     },
   },
   {
@@ -91,8 +91,8 @@ const sections: Section[] = [
     route: "/miembros",
     image: "/images/banners/members.png",
     adText: {
-      es: "Conoce a todos los miembros de Megadeth",
-      en: "Meet all Megadeth members",
+      es: "Profile a todos los miembros de Megadeth, conoce a los musicos detras de la leyenda",
+      en: "Profile all Megadeth members, meet the musicians behind the legend",
     },
   },
   {
@@ -101,8 +101,8 @@ const sections: Section[] = [
     route: "/formaciones",
     image: "/images/banners/lineup.png",
     adText: {
-      es: "Descubre las formaciones a lo largo de los años",
-      en: "Discover the lineups throughout the years",
+      es: "Descubre todas las formaciones a lo largo de los años",
+      en: "Discover all the lineups throughout the years",
     },
   },
   {
@@ -111,8 +111,8 @@ const sections: Section[] = [
     route: "/shows",
     image: "/images/banners/shows.png",
     adText: {
-      es: "Revive todos los conciertos históricos",
-      en: "Relive all the historic concerts",
+      es: "Revive todos los conciertos históricos a lo largo de los años y formaciones",
+      en: "Relive all the historic concerts throughout the years and lineups",
     },
   },
   {
@@ -121,8 +121,8 @@ const sections: Section[] = [
     route: "/entrevistas",
     image: "/images/banners/interviews.png",
     adText: {
-      es: "Lee las entrevistas más interesantes",
-      en: "Read the most interesting interviews",
+      es: "Lee y mira las entrevistas más interesantes a lo largo de los ultimos 40 años",
+      en: "Read the most interesting interviews throughout the last 40 years",
     },
   },
   {
@@ -131,8 +131,8 @@ const sections: Section[] = [
     route: "/bootlegs",
     image: "/images/banners/bootlegs.png",
     adText: {
-      es: "Descubre grabaciones no oficiales",
-      en: "Discover unofficial recordings",
+      es: "Descubre grabaciones no oficiales, tesoros escondidos para fans",
+      en: "Discover unofficial recordings, hidden treasures for fans",
     },
   },
 ];

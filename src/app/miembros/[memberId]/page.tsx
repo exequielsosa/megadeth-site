@@ -306,7 +306,12 @@ export default function MemberDetailPage({ params }: PageProps) {
             </Grid>
           </Box>
         </Box>
-        <Box mb={4}>
+        <Box
+          mb={4}
+          sx={{
+            px: { xs: 2, sm: 2, md: 0 },
+          }}
+        >
           <RandomSectionBanner currentSection="members" />
         </Box>
       </ContainerGradientNoPadding>
