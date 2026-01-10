@@ -186,10 +186,10 @@ export async function generateMetadata(): Promise<Metadata> {
       modifiedTime: "2026-01-10T00:00:00Z",
       images: [
         {
-          url: "/images/megadeth-megadeth.jpg",
+          url: "/images/meg-argentina.jpg",
           width: 1200,
           height: 630,
-          alt: "Megadeth",
+          alt: "Megadeth Argentina",
         },
       ],
     },
