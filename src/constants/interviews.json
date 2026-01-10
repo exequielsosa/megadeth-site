@@ -9334,5 +9334,37 @@
       "es": "Dave Mustaine habla sobre el dolor que siente en sus manos y le impide tocar al 100%.",
       "en": "Dave Mustaine discusses the pain he feels in his hands that prevents him from playing at 100%."
     }
+  },
+  {
+    "id": "dirk-interview-2026",
+    "title": {
+      "es": "Dirk Verbeuren dice que Dave Mustaine “te lo dirá directamente a la cara”",
+      "en": "Dirk Verbeuren Says Dave Mustaine “Will Tell You Straight To Your Face”"
+    },
+    "date": "2026-01-08",
+    "media": {
+      "name": " Freddy And Friends podcast",
+      "type": "radio show/podcast",
+      "country": "US"
+    },
+    "interviewees": [
+      {
+        "name": "Dirk Verbeuren",
+        "role": "Drums",
+        "id": "dirk-verbeuren"
+      }
+    ],
+    "interviewer": {
+      "name": "Freddy Charles",
+      "role": "Freddy Charles"
+    },
+    "type": "video",
+    "language": "en",
+    "youtube_url": "https://www.youtube.com/watch?v=I2ZL2hkmBxU&t=1s",
+    "duration": "56:39",
+    "summary": {
+      "es": "Hablando en el podcast Freddy And Friends, Verbeuren se abrió sobre la colaboración con el fundador de Megadeth mientras trabajaba en el próximo álbum final de la banda, explicando que la franqueza de Mustaine hace que las decisiones creativas sean más claras en lugar de más difíciles.",
+      "en": "Speaking on the Freddy And Friends podcast, Verbeuren opened up about collaborating with Megadeth’s founder while working on the band’s upcoming final album, explaining that Mustaine’s blunt honesty makes creative decisions clearer rather than harder."
+    }
   }
 ]

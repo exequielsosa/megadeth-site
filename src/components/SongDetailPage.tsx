@@ -19,6 +19,7 @@ import Image from "next/image";
 import membersData from "@/constants/members.json";
 import Breadcrumb from "./Breadcrumb";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
+import RandomSectionBanner from "./NewsBanner";
 
 interface SongDetailPageProps {
   songId: string;
@@ -389,6 +390,9 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
           </Box>
         </Box>
       </Container>
+      <Box pb={4} sx={{ px: { xs: 2, sm: 2, md: 0 } }}>
+        <RandomSectionBanner currentSection="songs" />
+      </Box>
     </ContainerGradientNoPadding>
   );
 }

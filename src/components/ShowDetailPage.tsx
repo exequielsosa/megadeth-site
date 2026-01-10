@@ -24,6 +24,7 @@ import {
   getYouTubeVideoId,
   getShowHistoricDescription,
 } from "@/types/show";
+import RandomSectionBanner from "./NewsBanner";
 
 interface ShowDetailPageProps {
   show: Show;
@@ -363,6 +364,9 @@ export default function ShowDetailPage({ show }: ShowDetailPageProps) {
           >
             {t("backToShows")}
           </Button>
+        </Box>
+        <Box my={4}>
+          <RandomSectionBanner currentSection="shows" />
         </Box>
       </Container>
     </ContainerGradientNoPadding>

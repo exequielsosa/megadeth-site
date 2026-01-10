@@ -19,6 +19,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import Breadcrumb from "@/components/Breadcrumb";
+import RandomSectionBanner from "@/components/NewsBanner";
 
 interface PageProps {
   params: Promise<{
@@ -59,7 +60,7 @@ export default function LineupDetailPage({ params }: PageProps) {
         />
       </Box>
       <Box display={"flex"} width={"100%"} justifyContent={"center"} px={1}>
-        <Box sx={{ py: 4, maxWidth: "1350px", width: "100%" }}>
+        <Box sx={{ pt: 4, maxWidth: "1350px", width: "100%" }}>
           {/* Header */}
           <Box sx={{ mb: 6 }}>
             <Box
@@ -238,6 +239,9 @@ export default function LineupDetailPage({ params }: PageProps) {
             </Grid>
           </Box>
         </Box>
+      </Box>
+      <Box mb={4}>
+        <RandomSectionBanner currentSection="lineups" />
       </Box>
     </ContainerGradientNoPadding>
   );

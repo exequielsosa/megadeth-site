@@ -18,6 +18,7 @@ import { use } from "react";
 import Link from "next/link";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import Breadcrumb from "@/components/Breadcrumb";
+import RandomSectionBanner from "@/components/NewsBanner";
 
 interface PageProps {
   params: Promise<{
@@ -304,6 +305,14 @@ export default function MemberDetailPage({ params }: PageProps) {
               </Grid>
             </Grid>
           </Box>
+        </Box>
+        <Box
+          mb={4}
+          sx={{
+            px: { xs: 2, sm: 2, md: 0 },
+          }}
+        >
+          <RandomSectionBanner currentSection="members" />
         </Box>
       </ContainerGradientNoPadding>
     </>

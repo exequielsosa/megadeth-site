@@ -7,6 +7,7 @@ import songsData from '@/constants/songs.json';
 import historiaData from '@/constants/historia.json';
 import interviewsData from '@/constants/interviews.json';
 import showsData from '@/constants/shows.json';
+import newsData from '@/constants/news.json';
 import { generateInterviewSlug } from '@/types/interview';
 import bootlegsData from '@/constants/bootlegs.json';
 
@@ -167,6 +168,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       if (slug) {
         sitemap.push({
           url: `${base}/bootlegs/${slug}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        });
+      }
+    });
+  }
+
+   // Noticias dinámicas
+  if (Array.isArray(newsData)) {
+    newsData.forEach(news => {
+      const slug = generateInterviewSlug(news.id);
+      if (slug) {
+        sitemap.push({
+          url: `${base}/noticias/${slug}`,
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.7,

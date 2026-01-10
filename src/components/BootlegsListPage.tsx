@@ -31,6 +31,7 @@ import {
   getBootlegDescription,
   getBootlegYear,
 } from "@/types/bootleg";
+import RandomSectionBanner from "./NewsBanner";
 
 const ITEMS_PER_PAGE_DESKTOP = 10;
 const ITEMS_PER_PAGE_MOBILE = 10;
@@ -334,13 +335,16 @@ export default function BootlegsListPage() {
           </Box>
         )}
 
-        <Typography
+        {/* <Typography
           variant="body2"
           color="text.secondary"
           sx={{ mt: 4, mb: 2 }}
         >
           {t("totalBootlegs", { count: filtered.length })}
-        </Typography>
+        </Typography> */}
+        <Box mb={4}>
+          <RandomSectionBanner currentSection="bootlegs" />
+        </Box>
       </Container>
     </ContainerGradientNoPadding>
   );

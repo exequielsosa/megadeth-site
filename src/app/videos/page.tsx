@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
+import RandomSectionBanner from "@/components/NewsBanner";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -216,6 +217,9 @@ export default async function VideosPage() {
         </Box>
         <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
           <VideosGrid videos={videosData as unknown as Video[]} />
+          <Box mt={4}>
+            <RandomSectionBanner currentSection="videos" />
+          </Box>
         </Container>
       </ContainerGradientNoPadding>
     </>

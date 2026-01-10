@@ -23,7 +23,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import ContainerGradient from "./atoms/ContainerGradient";
 import type { Album, Track } from "@/types/album";
 import {
   getAlbumDescription,
@@ -33,6 +32,7 @@ import LyricsIcon from "@mui/icons-material/MusicNote";
 import InfoIcon from "@mui/icons-material/Info";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
+import RandomSectionBanner from "./NewsBanner";
 
 interface AlbumDetailProps {
   album: Album;
@@ -365,6 +365,9 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
             </Button>
           </DialogActions>
         </Dialog>
+        <Box mt={4}>
+          <RandomSectionBanner currentSection="discography" />
+        </Box>
       </Container>
     </ContainerGradientNoPadding>
   );

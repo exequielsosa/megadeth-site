@@ -93,6 +93,7 @@ import lineupsData from "@/constants/lineups.json";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import RandomSectionBanner from "@/components/NewsBanner";
 
 export default function LineupsPage() {
   const t = useTranslations("lineups");
@@ -376,6 +377,9 @@ export default function LineupsPage() {
             </Card>
           </Grid>
         </Grid>
+        <Box mt={4}>
+          <RandomSectionBanner currentSection="lineups" />
+        </Box>
       </Container>
     </ContainerGradientNoPadding>
   );
