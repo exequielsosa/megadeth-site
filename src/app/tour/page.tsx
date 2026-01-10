@@ -26,6 +26,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import PastShowsGrid from "@/components/PastShowsGrid";
 import { tourDates } from "@/constants/tourDates";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
+import RandomSectionBanner from "@/components/NewsBanner";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -302,10 +303,8 @@ export default function TourPage() {
           <PastShowsGrid />
         </TabPanel>
 
-        <Box sx={{ textAlign: "center", mt: 6 }}>
-          <Typography variant="body1" color="text.secondary">
-            {t("moreInfo")}
-          </Typography>
+        <Box sx={{ textAlign: "center", mt: 2 }}>
+          <RandomSectionBanner currentSection="tour" />
         </Box>
       </Container>
     </ContainerGradientNoPadding>

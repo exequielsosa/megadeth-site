@@ -1,35 +1,65 @@
 "use client";
 
-import { Container, Typography, Box, Button } from "@mui/material";
+import { Container, Typography, Box, Tabs, Tab, Grid } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
-import ArticleCard from "@/components/ArticleCard";
 import newsData from "@/constants/news.json";
 import { NewsArticle } from "@/types/news";
 import Breadcrumb from "@/components/Breadcrumb";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
-
-const ITEMS_PER_PAGE = 10;
+import NewsCard from "@/components/NewsCard";
+import RandomSectionBanner from "@/components/NewsBanner";
 
 export default function NoticiasPage() {
   const t = useTranslations("news");
   const tb = useTranslations("breadcrumb");
   const locale = useLocale() as "es" | "en";
-  const [displayCount, setDisplayCount] = useState(ITEMS_PER_PAGE);
 
   // Ordenar noticias por fecha más reciente primero
-  const sortedNews = ([...newsData] as NewsArticle[]).sort(
-    (a, b) =>
-      new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+  const sortedNews = useMemo(
+    () =>
+      ([...newsData] as NewsArticle[]).sort(
+        (a, b) =>
+          new Date(b.publishedDate).getTime() -
+          new Date(a.publishedDate).getTime()
+      ),
+    []
   );
 
-  const hasMore = displayCount < sortedNews.length;
-  const displayedNews = sortedNews.slice(0, displayCount);
+  // Agrupar noticias por mes/año
+  const groupedByMonth = useMemo(() => {
+    const groups = new Map<string, NewsArticle[]>();
+    sortedNews.forEach((article) => {
+      const date = new Date(article.publishedDate);
+      const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(
+        2,
+        "0"
+      )}`;
+      if (!groups.has(key)) {
+        groups.set(key, []);
+      }
+      groups.get(key)!.push(article);
+    });
+    return Array.from(groups.entries()).map(([key, articles]) => ({
+      key,
+      articles,
+    }));
+  }, [sortedNews]);
 
-  const loadMore = () => {
-    setDisplayCount((prev) =>
-      Math.min(prev + ITEMS_PER_PAGE, sortedNews.length)
-    );
+  const [selectedTab, setSelectedTab] = useState(0);
+
+  const handleTabChange = (_: React.SyntheticEvent, newValue: number) => {
+    setSelectedTab(newValue);
+  };
+
+  // Formatear nombre del mes
+  const getMonthLabel = (key: string) => {
+    const [year, month] = key.split("-");
+    const date = new Date(parseInt(year), parseInt(month) - 1);
+    return date.toLocaleDateString(locale === "es" ? "es-ES" : "en-US", {
+      year: "numeric",
+      month: "long",
+    });
   };
 
   // JSON-LD para SEO
@@ -58,16 +88,18 @@ export default function NoticiasPage() {
           headline: article.title[locale],
           description: article.description[locale].substring(0, 200),
           datePublished: article.publishedDate,
-          url: article.linkUrl
-            ? `https://megadeth.com.ar${article.linkUrl}`
-            : `https://megadeth.com.ar/${locale}/noticias#${article.id}`,
+          url: `https://megadeth.com.ar/${locale}/noticias/${article.id}`,
           image: article.imageUrl
             ? `https://megadeth.com.ar${article.imageUrl}`
+            : article.youtubeVideoId
+            ? `https://img.youtube.com/vi/${article.youtubeVideoId}/hqdefault.jpg`
             : "https://megadeth.com.ar/logo-megadeth.png",
         },
       })),
     },
   };
+
+  const currentMonthArticles = groupedByMonth[selectedTab]?.articles || [];
 
   return (
     <>
@@ -91,55 +123,52 @@ export default function NoticiasPage() {
             variant="body1"
             sx={{
               fontSize: { xs: 16, md: 18 },
-              mb: 6,
+              mb: 4,
               color: "text.secondary",
             }}
           >
             {t("description")}
           </Typography>
 
-          <Box>
-            {displayedNews.map((article: NewsArticle) => (
-              <Box key={article.id}>
-                <ArticleCard
-                  title={article.title[locale]}
-                  description={article.description[locale]}
-                  imageUrl={article.imageUrl}
-                  imageAlt={article.imageAlt?.[locale]}
-                  imageCaption={article.imageCaption?.[locale]}
-                  publishedDate={article.publishedDate}
-                  linkUrl={article.linkUrl}
-                  linkTarget={article.linkTarget}
-                  youtubeVideoId={article.youtubeVideoId}
-                  externalLinks={article.externalLinks?.map((link) => ({
-                    url: link.url,
-                    text: link.text[locale],
-                  }))}
+          {/* Tabs de meses */}
+          <Box sx={{ borderBottom: 1, borderColor: "divider", mb: 4 }}>
+            <Tabs
+              value={selectedTab}
+              onChange={handleTabChange}
+              variant="scrollable"
+              scrollButtons="auto"
+              allowScrollButtonsMobile
+            >
+              {groupedByMonth.map((group) => (
+                <Tab
+                  key={group.key}
+                  label={`${getMonthLabel(group.key)} (${
+                    group.articles.length
+                  })`}
                 />
-                <Box sx={{ my: 6, borderBottom: 1, borderColor: "divider" }} />
-              </Box>
-            ))}
+              ))}
+            </Tabs>
           </Box>
 
-          {hasMore && (
-            <Box
-              sx={{ display: "flex", justifyContent: "center", mt: 4, mb: 6 }}
-            >
-              <Button
-                variant="contained"
-                size="large"
-                onClick={loadMore}
-                sx={{
-                  px: 6,
-                  py: 1.5,
-                  fontSize: 16,
-                  fontWeight: 600,
-                }}
-              >
-                {locale === "es" ? "Cargar más noticias" : "Load more news"}
-              </Button>
-            </Box>
+          {/* Grid de noticias del mes seleccionado */}
+          <Grid container spacing={3}>
+            {currentMonthArticles.map((article) => (
+              <Grid key={article.id} size={{ xs: 12, sm: 6, md: 4 }}>
+                <NewsCard article={article} />
+              </Grid>
+            ))}
+          </Grid>
+
+          {currentMonthArticles.length === 0 && (
+            <Typography variant="body1" sx={{ textAlign: "center", py: 8 }}>
+              {locale === "es"
+                ? "No hay noticias para este mes"
+                : "No news for this month"}
+            </Typography>
           )}
+          <Box mt={4}>
+            <RandomSectionBanner currentSection="news" />
+          </Box>
         </Container>
       </ContainerGradientNoPadding>
     </>

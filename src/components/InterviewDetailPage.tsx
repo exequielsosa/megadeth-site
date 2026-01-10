@@ -23,6 +23,7 @@ import {
   InterviewContentItem,
 } from "@/types/interview";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
+import RandomSectionBanner from "./NewsBanner";
 
 interface InterviewDetailPageProps {
   interview: Interview;
@@ -445,6 +446,9 @@ export default function InterviewDetailPage({
           >
             {t("backToInterviews")}
           </Button>
+        </Box>
+        <Box mb={4}>
+          <RandomSectionBanner currentSection="interviews" />
         </Box>
       </Container>
     </ContainerGradientNoPadding>

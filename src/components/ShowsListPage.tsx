@@ -31,6 +31,7 @@ import {
   generateShowSlug,
   getShowHistoricDescription,
 } from "@/types/show";
+import RandomSectionBanner from "./NewsBanner";
 
 const ITEMS_PER_PAGE_DESKTOP = 10;
 const ITEMS_PER_PAGE_MOBILE = 10;
@@ -330,6 +331,10 @@ export default function ShowsListPage() {
             </Button>
           </Box>
         )}
+
+        <Box my={4}>
+          <RandomSectionBanner currentSection="shows" />
+        </Box>
       </Container>
     </ContainerGradientNoPadding>
   );

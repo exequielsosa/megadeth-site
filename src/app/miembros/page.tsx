@@ -104,6 +104,7 @@ type Member = {
 };
 import Image from "next/image";
 import Link from "next/link";
+import RandomSectionBanner from "@/components/NewsBanner";
 
 export default function MembersPage() {
   const t = useTranslations("lineups");
@@ -202,7 +203,7 @@ export default function MembersPage() {
         <Breadcrumb items={[{ label: tb("members") }]} />
       </Box>
       <Box display={"flex"} justifyContent={"center"} width="100%" px={2}>
-        <Box maxWidth={"1350px"} sx={{ py: 4 }}>
+        <Box maxWidth={"1350px"} sx={{ pt: 4, pb: 2 }}>
           {/* Header */}
           <Box textAlign="center" mb={6}>
             <Typography
@@ -264,6 +265,9 @@ export default function MembersPage() {
             </Grid>
           </Box>
         </Box>
+      </Box>
+      <Box mb={4}>
+        <RandomSectionBanner currentSection="members" />
       </Box>
     </ContainerGradientNoPadding>
   );

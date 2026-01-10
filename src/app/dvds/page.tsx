@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
+import RandomSectionBanner from "@/components/NewsBanner";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -245,6 +246,9 @@ export default async function DVDsPage() {
         </Box>
         <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
           <DVDGrid dvds={validDvds as unknown as DVD[]} />
+          <Box mt={4}>
+            <RandomSectionBanner currentSection="dvds" />
+          </Box>
         </Container>
       </ContainerGradientNoPadding>
     </>

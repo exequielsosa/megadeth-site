@@ -13,6 +13,7 @@ import newsData from "@/constants/news.json";
 import siteUpdatesData from "@/constants/site-updates.json";
 import { NewsArticle } from "@/types/news";
 import Link from "next/link";
+import RandomSectionBanner from "./NewsBanner";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -254,6 +255,7 @@ export default function Hero() {
             {tNews("viewAllNews")}
           </Button>
         </Box>
+        <RandomSectionBanner currentSection="news" />
       </Container>
     </ContainerGradient>
   );

@@ -30,6 +30,7 @@ import {
   generateInterviewSlug,
   getInterviewTitle,
 } from "@/types/interview";
+import RandomSectionBanner from "./NewsBanner";
 
 const ITEMS_PER_PAGE_DESKTOP = 10;
 const ITEMS_PER_PAGE_MOBILE = 10;
@@ -397,6 +398,9 @@ export default function InterviewsListPage() {
             </Button>
           </Box>
         )}
+        <Box my={4}>
+          <RandomSectionBanner currentSection="interviews" />
+        </Box>
       </Container>
     </ContainerGradientNoPadding>
   );

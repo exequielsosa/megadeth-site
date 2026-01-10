@@ -10,6 +10,7 @@ import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
+import RandomSectionBanner from "@/components/NewsBanner";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -238,6 +239,9 @@ export default function AlbumsPage() {
           {t("eps")}
         </Typography>
         <DiscographyGrid albums={eps as unknown as Album[]} />
+        <Box mt={4}>
+          <RandomSectionBanner currentSection="discography" />
+        </Box>
       </Box>
     </ContainerGradientNoPadding>
   );

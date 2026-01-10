@@ -27,6 +27,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import RandomSectionBanner from "@/components/NewsBanner";
 
 interface DVDPageProps {
   params: Promise<{
@@ -406,6 +407,9 @@ export default async function DVDPage({ params }: DVDPageProps) {
             >
               {locale === "es" ? "Volver a DVDs" : "Back to DVDs"}
             </Button>
+          </Box>
+          <Box mt={4}>
+            <RandomSectionBanner currentSection="dvds" />
           </Box>
         </Container>
       </ContainerGradientNoPadding>
