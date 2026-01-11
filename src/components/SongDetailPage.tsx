@@ -166,8 +166,63 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
       .sort((a, b) => (a.track || 0) - (b.track || 0));
   }, [song.album.title, song.id]);
 
+  // Generar Schema.org MusicRecording
+  const songSchema = useMemo(() => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "MusicRecording",
+      name: song.title,
+      byArtist: {
+        "@type": "MusicGroup",
+        name: "Megadeth",
+      },
+      inAlbum: {
+        "@type": "MusicAlbum",
+        name: song.album.title,
+        image: `https://megadeth.com.ar${song.album.cover}`,
+      },
+      ...(song.duration && { duration: song.duration }),
+      ...(song.year && { datePublished: `${song.year}-01-01` }),
+      ...(song.writers &&
+        song.writers.length > 0 && {
+          composer: song.writers.map((w) => ({
+            "@type": "Person",
+            name: w,
+          })),
+        }),
+      ...(song.musicians &&
+        song.musicians.length > 0 && {
+          byArtist: song.musicians.map((m) => ({
+            "@type": "Person",
+            name: m.name,
+            ...(m.instrument && {
+              roleName:
+                typeof m.instrument === "string"
+                  ? m.instrument
+                  : m.instrument[instrumentKey],
+            }),
+          })),
+        }),
+      genre: ["Heavy Metal", "Thrash Metal"],
+      ...(song.lyrics &&
+        song.lyrics.en && {
+          lyrics: {
+            "@type": "CreativeWork",
+            text: song.lyrics.en,
+          },
+        }),
+    };
+  }, [song, instrumentKey]);
+
   return (
     <ContainerGradientNoPadding>
+      {/* Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(songSchema),
+        }}
+      />
       <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
         <Breadcrumb
           items={[

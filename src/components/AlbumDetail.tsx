@@ -82,8 +82,57 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
     setSelectedTrack(null);
   };
 
+  // Generar Schema.org MusicAlbum
+  const albumSchema = useMemo(() => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "MusicAlbum",
+      name: album.title,
+      byArtist: {
+        "@type": "MusicGroup",
+        name: "Megadeth",
+      },
+      datePublished: album.releaseDate || `${album.year}-01-01`,
+      genre: ["Heavy Metal", "Thrash Metal"],
+      image: `https://megadeth.com.ar${album.cover}`,
+      ...(album.label && { recordLabel: album.label }),
+      ...(album.producers &&
+        album.producers.length > 0 && {
+          producer: album.producers.map((p) => ({
+            "@type": "Person",
+            name: p,
+          })),
+        }),
+      ...(album.tracks &&
+        album.tracks.length > 0 && {
+          track: album.tracks.map((track) => ({
+            "@type": "MusicRecording",
+            name: track.title,
+            position: track.n,
+            ...(track.duration && { duration: track.duration }),
+            ...(track.writers &&
+              track.writers.length > 0 && {
+                composer: track.writers.map((w) => ({
+                  "@type": "Person",
+                  name: w,
+                })),
+              }),
+          })),
+          numTracks: album.tracks.length,
+        }),
+    };
+  }, [album]);
+
   return (
     <ContainerGradientNoPadding>
+      {/* Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(albumSchema),
+        }}
+      />
+
       <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 4 }}>
         <Breadcrumb
           items={[
