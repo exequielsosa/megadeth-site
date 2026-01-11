@@ -14,6 +14,9 @@ import newsData from "@/constants/news.json";
 import { NewsArticle } from "@/types/news";
 import Link from "next/link";
 import RandomSectionBanner from "./NewsBanner";
+import SiteUpdatesBanner from "./SiteUpdatesBanner";
+import siteUpdatesData from "@/constants/site-updates.json";
+import LastShowsCards from "./LastShowsCards";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -229,7 +232,18 @@ export default function Hero() {
           <TopSongsWidget />
         </Box>
 
-        {/* <Divider sx={{ my: 6, width: "100%" }} /> */}
+        {/* Banner de actualizaciones del sitio */}
+        {siteUpdatesData.length > 0 && (
+          <Box sx={{ width: "100%", mb: 4 }}>
+            <SiteUpdatesBanner updates={siteUpdatesData} />
+          </Box>
+        )}
+
+        {/* Cards de últimos shows */}
+        <Box sx={{ width: "100%" }} pt={3}>
+          <LastShowsCards />
+        </Box>
+        <Divider sx={{ mt: 8, mb: 4, width: "100%" }} />
 
         {/* Sección de últimas noticias */}
         <Typography
