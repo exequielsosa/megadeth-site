@@ -57,7 +57,10 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
     if (!song) return [];
     return songsData
       .filter((s) => s.album.title === song.album.title && s.id !== song.id)
-      .sort((a, b) => (a.details?.track_number || 0) - (b.details?.track_number || 0));
+      .sort(
+        (a, b) =>
+          (a.details?.track_number || 0) - (b.details?.track_number || 0)
+      );
   }, [song]);
 
   // Generar Schema.org MusicRecording (solo si song existe)

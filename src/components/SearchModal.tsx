@@ -64,8 +64,12 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
         (song) =>
           song.title.toLowerCase().includes(searchTerm) ||
           song.album.title.toLowerCase().includes(searchTerm) ||
-          song.credits?.writers?.lyrics?.some((w: string) => w.toLowerCase().includes(searchTerm)) ||
-          song.credits?.writers?.music?.some((w: string) => w.toLowerCase().includes(searchTerm))
+          song.credits?.writers?.lyrics?.some((w: string) =>
+            w.toLowerCase().includes(searchTerm)
+          ) ||
+          song.credits?.writers?.music?.some((w: string) =>
+            w.toLowerCase().includes(searchTerm)
+          )
       )
       .slice(0, 5);
 
