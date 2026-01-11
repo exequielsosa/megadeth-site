@@ -9,6 +9,9 @@ import Divider from "@mui/material/Divider";
 import ArticleCard from "./ArticleCard";
 import SiteUpdatesBanner from "./SiteUpdatesBanner";
 import LastShowsCards from "./LastShowsCards";
+import QuickAccessGrid from "./QuickAccessGrid";
+import TopSongsWidget from "./TopSongsWidget";
+import UpcomingToursWidget from "./UpcomingToursWidget";
 import newsData from "@/constants/news.json";
 import siteUpdatesData from "@/constants/site-updates.json";
 import { NewsArticle } from "@/types/news";
@@ -19,6 +22,7 @@ export default function Hero() {
   const t = useTranslations("hero");
   const tAlbum = useTranslations("album");
   const tNews = useTranslations("news");
+  const tIntro = useTranslations("heroIntro");
   const locale = useLocale() as "es" | "en";
 
   // Obtener las últimas 3 noticias ordenadas por fecha
@@ -39,6 +43,19 @@ export default function Hero() {
         <Stack spacing={3} alignItems="start">
           <Typography variant="h1" sx={{ fontSize: { xs: 24, md: 56 } }}>
             {t("title")}
+          </Typography>
+
+          {/* Intro SEO */}
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: { xs: 16, md: 18 },
+              color: "text.secondary",
+              maxWidth: 900,
+              lineHeight: 1.7,
+            }}
+          >
+            {tIntro("description")}
           </Typography>
 
           <Box
@@ -196,23 +213,32 @@ export default function Hero() {
           </Box>
         </Stack>
 
-        <Divider sx={{ my: 6, width: "100%" }} />
+        {/* Quick Access Grid */}
+        <QuickAccessGrid />
 
-        {/* Banner de actualizaciones del sitio */}
-        {siteUpdatesData.length > 0 && (
-          <Box sx={{ width: "100%", mb: 4 }}>
-            <SiteUpdatesBanner updates={siteUpdatesData} />
-          </Box>
-        )}
-
-        {/* Cards de últimos shows */}
-        <Box sx={{ width: "100%" }} pt={3}>
-          <LastShowsCards />
+        {/* Upcoming Tours & Top Songs - Side by Side */}
+        <Box
+          sx={{
+            width: "100%",
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" },
+            gap: 3,
+            mt: 6,
+            mb: 4,
+            alignItems: "stretch",
+          }}
+        >
+          <UpcomingToursWidget limit={8} />
+          <TopSongsWidget />
         </Box>
-        <Divider sx={{ mt: 8, mb: 4, width: "100%" }} />
+
+        {/* <Divider sx={{ my: 6, width: "100%" }} /> */}
 
         {/* Sección de últimas noticias */}
-        <Typography variant="h2" sx={{ fontSize: { xs: 28, md: 48 }, mb: 4 }}>
+        <Typography
+          variant="h2"
+          sx={{ fontSize: { xs: 28, md: 48 }, mb: 4, mt: 4 }}
+        >
           {tNews("latestNews")}
         </Typography>
 

@@ -560,5 +560,34 @@
     "latestShow": "Último Show",
     "yearsAgo": "Hace 20 Años...",
     "setlist": "Setlist"
+  },
+  "quickAccess": {
+    "title": "Explora el Contenido",
+    "discography": "Discografía",
+    "discographyCount": "17 álbumes",
+    "songs": "Canciones",
+    "songsCount": "150+ canciones",
+    "videos": "Videos",
+    "videosCount": "50+ videos",
+    "tour": "Tour 2026",
+    "tourCount": "Fechas en vivo",
+    "interviews": "Entrevistas",
+    "interviewsCount": "Entrevistas exclusivas",
+    "history": "Historia",
+    "historyCount": "40+ años"
+  },
+  "topSongs": {
+    "title": "Top 10 Canciones Más Tocadas en Vivo",
+    "subtitle": "Las canciones más interpretadas en la historia de Megadeth",
+    "timesPlayed": "veces tocada",
+    "viewAll": "Ver todas las canciones"
+  },
+  "upcomingTours": {
+    "title": "Próximos Shows",
+    "nextShow": "Próximo",
+    "viewAll": "Ver todas las fechas"
+  },
+  "heroIntro": {
+    "description": "Bienvenido al sitio más completo de Megadeth en español. Descubre toda la discografía, historia de la banda, shows en vivo, entrevistas exclusivas, letras de canciones y las últimas noticias sobre Dave Mustaine, Teemu Mäntysaari, James LoMenzo y Dirk Verbeuren."
   }
 }
