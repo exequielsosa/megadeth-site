@@ -7,13 +7,10 @@ import Countdown from "./Countdown";
 import Image from "next/image";
 import Divider from "@mui/material/Divider";
 import ArticleCard from "./ArticleCard";
-import SiteUpdatesBanner from "./SiteUpdatesBanner";
-import LastShowsCards from "./LastShowsCards";
 import QuickAccessGrid from "./QuickAccessGrid";
 import TopSongsWidget from "./TopSongsWidget";
 import UpcomingToursWidget from "./UpcomingToursWidget";
 import newsData from "@/constants/news.json";
-import siteUpdatesData from "@/constants/site-updates.json";
 import { NewsArticle } from "@/types/news";
 import Link from "next/link";
 import RandomSectionBanner from "./NewsBanner";
@@ -49,9 +46,9 @@ export default function Hero() {
           <Typography
             variant="body1"
             sx={{
-              fontSize: { xs: 16, md: 18 },
+              fontSize: { xs: 14, md: 18 },
               color: "text.secondary",
-              maxWidth: 900,
+              maxWidth: 1200,
               lineHeight: 1.7,
             }}
           >
