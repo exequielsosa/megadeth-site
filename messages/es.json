@@ -1,4 +1,13 @@
 {
+  "notFound": {
+    "title": "404 - Página no encontrada",
+    "heading": "Página no encontrada",
+    "message": "Lo sentimos, la página que estás buscando no existe o ha sido movida.",
+    "suggestions": "Puede que hayas escrito mal la dirección o que la página se haya eliminado.",
+    "goHome": "Volver al inicio",
+    "goDiscography": "Ver discografía",
+    "contact": "Contactar"
+  },
   "songs": {
     "title": "Canciones",
     "songsListTitle": "Listado de canciones",
