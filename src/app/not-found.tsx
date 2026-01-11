@@ -3,10 +3,9 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale();
   const t = await getTranslations("notFound");
 
   const title = t("title");

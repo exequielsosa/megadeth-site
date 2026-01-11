@@ -86,7 +86,7 @@ export default function Footer() {
         {/* Sección de enlaces internos */}
         <Grid container spacing={4} sx={{ mb: 4 }}>
           {/* Música */}
-          <Grid item xs={6} sm={6} md={3}>
+          <Grid size={{ xs: 6, sm: 6, md: 3 }}>
             <Typography
               variant="h6"
               sx={{
@@ -121,7 +121,7 @@ export default function Footer() {
           </Grid>
 
           {/* La Banda */}
-          <Grid item xs={6} sm={6} md={3}>
+          <Grid size={{ xs: 6, sm: 6, md: 3 }}>
             <Typography
               variant="h6"
               sx={{
@@ -156,7 +156,7 @@ export default function Footer() {
           </Grid>
 
           {/* En Vivo */}
-          <Grid item xs={6} sm={6} md={3}>
+          <Grid size={{ xs: 6, sm: 6, md: 3 }}>
             <Typography
               variant="h6"
               sx={{
@@ -191,7 +191,7 @@ export default function Footer() {
           </Grid>
 
           {/* Información */}
-          <Grid item xs={6} sm={6} md={3}>
+          <Grid size={{ xs: 6, sm: 6, md: 3 }}>
             <Typography
               variant="h6"
               sx={{
