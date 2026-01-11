@@ -212,6 +212,73 @@ export default async function RootLayout({
     <html lang={locale} className={poppins.variable} suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/webp" href="/icon.webp" />
+        {/* Schema.org MusicGroup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MusicGroup",
+              name: "Megadeth",
+              genre: ["Heavy Metal", "Thrash Metal", "Speed Metal"],
+              foundingDate: "1983",
+              foundingLocation: {
+                "@type": "Place",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Los Angeles",
+                  addressRegion: "CA",
+                  addressCountry: "US",
+                },
+              },
+              member: [
+                {
+                  "@type": "Person",
+                  name: "Dave Mustaine",
+                  roleName: "Lead Vocals, Rhythm & Lead Guitar",
+                },
+                {
+                  "@type": "Person",
+                  name: "James LoMenzo",
+                  roleName: "Bass",
+                },
+                {
+                  "@type": "Person",
+                  name: "Dirk Verbeuren",
+                  roleName: "Drums",
+                },
+                {
+                  "@type": "Person",
+                  name: "Teemu Mäntysaari",
+                  roleName: "Lead Guitar",
+                },
+              ],
+              url: "https://megadeth.com.ar",
+              sameAs: [
+                "https://www.facebook.com/Megadeth",
+                "https://twitter.com/Megadeth",
+                "https://www.instagram.com/megadeth",
+                "https://www.youtube.com/megadeth",
+                "https://en.wikipedia.org/wiki/Megadeth",
+              ],
+              description:
+                locale === "es"
+                  ? "Megadeth es una banda estadounidense de thrash metal fundada en 1983 por Dave Mustaine. Con 16 álbumes de estudio y más de 38 millones de copias vendidas, es una de las bandas más influyentes del heavy metal."
+                  : "Megadeth is an American thrash metal band founded in 1983 by Dave Mustaine. With 16 studio albums and over 38 million copies sold, it is one of the most influential heavy metal bands.",
+            }),
+          }}
+        />
+
+        {/* Preconnect a recursos externos críticos */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://img.youtube.com" />
+
         {/* Script para inicializar color mode antes de hidratar React */}
         <script
           dangerouslySetInnerHTML={{

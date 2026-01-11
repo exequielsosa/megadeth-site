@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import {
   Box,
   Container,
@@ -10,6 +10,9 @@ import {
   CardContent,
   Button,
   Avatar,
+  List,
+  ListItem,
+  ListItemText,
 } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
 import songsData from "@/constants/songs.json";
@@ -25,6 +28,13 @@ interface SongDetailPageProps {
   songId: string;
 }
 
+function songNameToUrl(songName: string): string {
+  return songName
+    .toLowerCase()
+    .replace(/[^a-z0-9 ]/gi, "")
+    .replace(/ /g, "-");
+}
+
 export default function SongDetailPage({ songId }: SongDetailPageProps) {
   const t = useTranslations("songs");
   const tb = useTranslations("breadcrumb");
@@ -32,6 +42,75 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
   const locale = useLocale();
   const song = songsData.find((s) => s.id === songId);
   const songsCounts: Record<string, number> = songsCountData;
+
+  // Obtener top 10 canciones más tocadas
+  const top10Songs = Object.entries(songsCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([title]) => title);
+
+  // Instrument y theme dependen del idioma global
+  const instrumentKey = locale === "es" ? "es" : "en";
+
+  // Obtener otras canciones del mismo álbum (solo si song existe)
+  const albumSongs = useMemo(() => {
+    if (!song) return [];
+    return songsData
+      .filter((s) => s.album.title === song.album.title && s.id !== song.id)
+      .sort(
+        (a, b) =>
+          (a.details?.track_number || 0) - (b.details?.track_number || 0)
+      );
+  }, [song]);
+
+  // Generar Schema.org MusicRecording (solo si song existe)
+  const songSchema = useMemo(() => {
+    if (!song) return null;
+    return {
+      "@context": "https://schema.org",
+      "@type": "MusicRecording",
+      name: song.title,
+      byArtist: {
+        "@type": "MusicGroup",
+        name: "Megadeth",
+      },
+      inAlbum: {
+        "@type": "MusicAlbum",
+        name: song.album.title,
+        image: `https://megadeth.com.ar${song.album.cover}`,
+      },
+      ...(song.details?.duration && { duration: song.details.duration }),
+      ...(song.album?.year && { datePublished: `${song.album.year}-01-01` }),
+      ...(song.credits?.writers?.lyrics &&
+        song.credits.writers.lyrics.length > 0 && {
+          author: song.credits.writers.lyrics.map((writer) => ({
+            "@type": "Person",
+            name: writer,
+          })),
+        }),
+      ...(song.credits?.musicians &&
+        song.credits.musicians.length > 0 && {
+          byArtist: song.credits.musicians.map((m) => ({
+            "@type": "Person",
+            name: m.name,
+            ...(m.instrument && {
+              roleName:
+                typeof m.instrument === "string"
+                  ? m.instrument
+                  : m.instrument[instrumentKey],
+            }),
+          })),
+        }),
+      genre: ["Heavy Metal", "Thrash Metal"],
+      ...(song.lyrics &&
+        song.lyrics.en && {
+          lyrics: {
+            "@type": "CreativeWork",
+            text: song.lyrics.en,
+          },
+        }),
+    };
+  }, [song, instrumentKey]);
 
   if (!song)
     return (
@@ -136,21 +215,21 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
       </ContainerGradientNoPadding>
     );
 
-  // Obtener top 10 canciones más tocadas
-  const top10Songs = Object.entries(songsCounts)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 10)
-    .map(([title]) => title);
-
   const isTop10 = top10Songs.includes(song.title);
-
-  // Instrument y theme dependen del idioma global
-  const instrumentKey = locale === "es" ? "es" : "en";
   const themeText = song.theme[instrumentKey];
   const timesPlayed = songsCounts[song.title] || 0;
 
   return (
     <ContainerGradientNoPadding>
+      {/* Schema.org JSON-LD */}
+      {songSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(songSchema),
+          }}
+        />
+      )}
       <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
         <Breadcrumb
           items={[
@@ -389,6 +468,83 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
             </Grid>
           </Box>
         </Box>
+
+        {/* Otras canciones del álbum */}
+        {albumSongs.length > 0 && (
+          <Box sx={{ maxWidth: 800, mx: "auto", mt: 0, mb: 4 }}>
+            <Typography
+              variant="h5"
+              component="h2"
+              sx={{
+                mb: 2,
+                fontWeight: 600,
+                fontSize: { xs: "1.25rem", md: "1.5rem" },
+              }}
+            >
+              {t("otherSongsFromAlbum") || "Otras canciones del álbum"}
+            </Typography>
+            <Card variant="outlined">
+              <List sx={{ p: 0 }}>
+                {albumSongs.map((albumSong, index) => (
+                  <ListItem
+                    key={albumSong.id}
+                    component={Link}
+                    href={`/songs/${songNameToUrl(albumSong.title)}`}
+                    sx={{
+                      py: 1.5,
+                      px: 2,
+                      borderBottom: index < albumSongs.length - 1 ? 1 : 0,
+                      borderColor: "divider",
+                      textDecoration: "none",
+                      color: "inherit",
+                      transition: "background-color 0.2s",
+                      "&:hover": {
+                        backgroundColor: "action.hover",
+                      },
+                    }}
+                  >
+                    <ListItemText
+                      primary={
+                        <Typography
+                          variant="body1"
+                          sx={{
+                            fontWeight: 500,
+                            fontSize: { xs: "0.9rem", md: "1rem" },
+                          }}
+                        >
+                          {albumSong.details?.track_number && (
+                            <Typography
+                              component="span"
+                              sx={{
+                                color: "text.secondary",
+                                mr: 1,
+                                fontSize: { xs: "0.85rem", md: "0.95rem" },
+                              }}
+                            >
+                              {albumSong.details.track_number}.
+                            </Typography>
+                          )}
+                          {albumSong.title}
+                        </Typography>
+                      }
+                      secondary={
+                        albumSong.details?.duration && (
+                          <Typography
+                            variant="caption"
+                            color="text.secondary"
+                            sx={{ fontSize: { xs: "0.75rem", md: "0.8rem" } }}
+                          >
+                            {albumSong.details.duration}
+                          </Typography>
+                        )
+                      }
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </Card>
+          </Box>
+        )}
       </Container>
       <Box pb={4} sx={{ px: { xs: 2, sm: 2, md: 0 } }}>
         <RandomSectionBanner currentSection="songs" />

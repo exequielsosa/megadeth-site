@@ -1,4 +1,13 @@
 {
+  "notFound": {
+    "title": "404 - Page not found",
+    "heading": "Page not found",
+    "message": "Sorry, the page you are looking for does not exist or has been moved.",
+    "suggestions": "You may have mistyped the address or the page may have been removed.",
+    "goHome": "Go to home",
+    "goDiscography": "View discography",
+    "contact": "Contact"
+  },
   "songs": {
     "title": "Songs",
     "songsListTitle": "Songs list",
@@ -27,7 +36,8 @@
     "top10Title": "Top 10 Most Played Songs",
     "top10Description": "The most performed songs live by Megadeth. Count as of October 2025",
     "position": "Position",
-    "titleTable": "All Megadeth Songs"
+    "titleTable": "All Megadeth songs",
+    "otherSongsFromAlbum": "Other songs from the album"
   },
   "interviews": {
     "title": "Interviews",
@@ -68,7 +78,8 @@
     "backToShows": "Back to shows",
     "watchOnYouTube": "Watch on YouTube",
     "searchOnYouTube": "Search on YouTube",
-    "viewOnSetlistFm": "View on Setlist.fm"
+    "viewOnSetlistFm": "View on Setlist.fm",
+    "otherShowsFromEra": "Other shows from the same era"
   },
   "bootlegs": {
     "titlePage": "Bootlegs",
@@ -433,7 +444,8 @@
     "close": "Close",
     "lineup": "Lineup",
     "viewLyrics": "View Lyric",
-    "viewSongDetails": "View Song Details"
+    "viewSongDetails": "View song details",
+    "relatedAlbums": "Related Albums"
   },
   "footer": {
     "siteDescription": "News, dates and discography of Megadeth.",
@@ -441,7 +453,26 @@
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
     "contact": "Contact",
-    "disclaimer": "Unofficial fan site. © {year}"
+    "disclaimer": "Unofficial fan site. © {year}",
+    "music": "Music",
+    "discography": "Discography",
+    "songs": "Songs",
+    "videos": "Videos",
+    "dvds": "DVDs",
+    "band": "The Band",
+    "history": "History",
+    "members": "Members",
+    "lineups": "Lineups",
+    "interviews": "Interviews",
+    "live": "Live",
+    "tour": "Tour",
+    "shows": "Shows",
+    "bootlegs": "Bootlegs",
+    "info": "Information",
+    "news": "News",
+    "legal": "Legal",
+    "seoDescription": "Megadeth is a pioneering thrash metal band founded by Dave Mustaine in 1983. This fan site compiles the complete Megadeth discography, including classic albums like Rust in Peace, Peace Sells... but Who's Buying?, and Countdown to Extinction. Explore the band's history, biographies of legendary members like Marty Friedman, Nick Menza, and David Ellefson, plus the current lineup featuring James LoMenzo, Dirk Verbeuren, and Teemu Mäntysaari. Find concert dates, live show setlists, bootlegs, official music videos, exclusive interviews, and the latest news about world tours and new releases.",
+    "sitemap": "Site Map"
   },
   "videos": {
     "title": "Videos",
@@ -560,5 +591,46 @@
     "latestShow": "Latest Show",
     "yearsAgo": "20 Years Ago...",
     "setlist": "Setlist"
+  },
+  "quickAccess": {
+    "title": "Explore Content",
+    "discography": "Discography",
+    "discographyCount": "17 albums",
+    "songs": "Songs",
+    "songsCount": "150+ songs",
+    "videos": "Videos",
+    "videosCount": "50+ videos",
+    "tour": "Tour 2026",
+    "tourCount": "Live dates",
+    "interviews": "Interviews",
+    "interviewsCount": "Exclusive interviews",
+    "history": "History",
+    "historyCount": "40+ years"
+  },
+  "topSongs": {
+    "title": "Top 10 Most Played Songs Live",
+    "subtitle": "The most performed songs in Megadeth's history",
+    "timesPlayed": "times played",
+    "viewAll": "View all songs"
+  },
+  "upcomingTours": {
+    "title": "Upcoming Shows",
+    "nextShow": "Next",
+    "viewAll": "View all dates"
+  },
+  "heroIntro": {
+    "description": "Welcome to the most complete Megadeth site in Spanish. Discover the entire discography, band history, live shows, exclusive interviews, song lyrics and the latest news about Dave Mustaine, Teemu Mäntysaári, James LoMenzo and Dirk Verbeuren."
+  },
+  "search": {
+    "placeholder": "Search songs, albums, shows, news...",
+    "typeToSearch": "Type at least 2 characters to search",
+    "noResults": "No results found for",
+    "tryWith": "Try with: 'Holy Wars', 'Rust in Peace', 'Buenos Aires'",
+    "songs": "Songs",
+    "albums": "Albums",
+    "shows": "Shows",
+    "news": "News",
+    "members": "Members",
+    "interviews": "Interviews"
   }
 }

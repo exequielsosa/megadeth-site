@@ -96,7 +96,7 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
   // JSON-LD para SEO
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "NewsArticle",
+    "@type": "Article",
     headline: article.title[locale],
     description: article.description[locale],
     datePublished: article.publishedDate,
@@ -104,23 +104,46 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
     author: {
       "@type": "Organization",
       name: "Megadeth Argentina",
+      url: "https://megadeth.com.ar",
     },
     publisher: {
       "@type": "Organization",
       name: "Megadeth Argentina",
+      url: "https://megadeth.com.ar",
       logo: {
         "@type": "ImageObject",
-        url: "https://megadeth.com.ar/logo-megadeth.png",
+        url: "https://megadeth.com.ar/images/meg-argentina.jpg",
+        width: 600,
+        height: 60,
       },
     },
     image: article.imageUrl
-      ? `https://megadeth.com.ar${article.imageUrl}`
+      ? {
+          "@type": "ImageObject",
+          url: `https://megadeth.com.ar${article.imageUrl}`,
+          ...(article.imageAlt && {
+            caption: article.imageAlt[locale],
+          }),
+        }
       : article.youtubeVideoId
-      ? `https://img.youtube.com/vi/${article.youtubeVideoId}/maxresdefault.jpg`
-      : "https://megadeth.com.ar/logo-megadeth.png",
+      ? {
+          "@type": "ImageObject",
+          url: `https://img.youtube.com/vi/${article.youtubeVideoId}/maxresdefault.jpg`,
+        }
+      : {
+          "@type": "ImageObject",
+          url: "https://megadeth.com.ar/images/meg-argentina.jpg",
+        },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://megadeth.com.ar/${locale}/noticias/${article.id}`,
+      "@id": `https://megadeth.com.ar${
+        locale === "es" ? "" : `/${locale}`
+      }/noticias/${article.id}`,
+    },
+    inLanguage: locale,
+    about: {
+      "@type": "MusicGroup",
+      name: "Megadeth",
     },
   };
 

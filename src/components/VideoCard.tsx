@@ -70,6 +70,7 @@ export default function VideoCard({ video }: VideoCardProps) {
               src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
               alt={`Miniatura del video ${video.title} de Megadeth (${video.year})`}
               itemProp="thumbnailUrl"
+              loading="lazy"
               sx={{
                 position: "absolute",
                 top: 0,

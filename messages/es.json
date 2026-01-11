@@ -1,4 +1,13 @@
 {
+  "notFound": {
+    "title": "404 - Página no encontrada",
+    "heading": "Página no encontrada",
+    "message": "Lo sentimos, la página que estás buscando no existe o ha sido movida.",
+    "suggestions": "Puede que hayas escrito mal la dirección o que la página se haya eliminado.",
+    "goHome": "Volver al inicio",
+    "goDiscography": "Ver discografía",
+    "contact": "Contactar"
+  },
   "songs": {
     "title": "Canciones",
     "songsListTitle": "Listado de canciones",
@@ -27,7 +36,8 @@
     "top10Title": "Top 10 Canciones Más Tocadas",
     "top10Description": "Las canciones más interpretadas en vivo por Megadeth. Recuento a Octubre 2025",
     "position": "Posición",
-    "titleTable": "Todas las canciones de Megadeth"
+    "titleTable": "Todas las canciones de Megadeth",
+    "otherSongsFromAlbum": "Otras canciones del álbum"
   },
   "interviews": {
     "title": "Entrevistas",
@@ -68,7 +78,8 @@
     "backToShows": "Volver a shows",
     "watchOnYouTube": "Ver en YouTube",
     "searchOnYouTube": "Buscar en YouTube",
-    "viewOnSetlistFm": "Ver en Setlist.fm"
+    "viewOnSetlistFm": "Ver en Setlist.fm",
+    "otherShowsFromEra": "Otros shows de la misma era"
   },
   "bootlegs": {
     "titlePage": "Bootlegs",
@@ -433,7 +444,8 @@
     "close": "Cerrar",
     "lineup": "Formación",
     "viewLyrics": "Ver letra",
-    "viewSongDetails": "Ver detalles de la canción"
+    "viewSongDetails": "Ver detalles de la canción",
+    "relatedAlbums": "Álbumes relacionados"
   },
   "footer": {
     "siteDescription": "Noticias, fechas y discografía de Megadeth.",
@@ -441,7 +453,26 @@
     "terms": "Términos y condiciones",
     "privacy": "Política de privacidad",
     "contact": "Contacto",
-    "disclaimer": "Fan site no oficial. © {year}"
+    "disclaimer": "Fan site no oficial. © {year}",
+    "music": "Música",
+    "discography": "Discografía",
+    "songs": "Canciones",
+    "videos": "Videos",
+    "dvds": "DVDs",
+    "band": "La Banda",
+    "history": "Historia",
+    "members": "Miembros",
+    "lineups": "Formaciones",
+    "interviews": "Entrevistas",
+    "live": "En Vivo",
+    "tour": "Gira",
+    "shows": "Shows",
+    "bootlegs": "Bootlegs",
+    "info": "Información",
+    "news": "Noticias",
+    "legal": "Legal",
+    "seoDescription": "Megadeth es una banda pionera del thrash metal fundada por Dave Mustaine en 1983. Este sitio de fans reúne la discografía completa de Megadeth, incluyendo álbumes clásicos como Rust in Peace, Peace Sells... but Who's Buying?, y Countdown to Extinction. Explora la historia de la banda, biografías de miembros legendarios como Marty Friedman, Nick Menza y David Ellefson, además de la formación actual con James LoMenzo, Dirk Verbeuren y Teemu Mäntysaari. Encuentra fechas de conciertos, setlists de shows en vivo, bootlegs, videoclips oficiales, entrevistas exclusivas y las últimas noticias sobre giras mundiales y nuevos lanzamientos.",
+    "sitemap": "Mapa del Sitio"
   },
   "videos": {
     "title": "Videos",
@@ -560,5 +591,46 @@
     "latestShow": "Último Show",
     "yearsAgo": "Hace 20 Años...",
     "setlist": "Setlist"
+  },
+  "quickAccess": {
+    "title": "Explora el Contenido",
+    "discography": "Discografía",
+    "discographyCount": "17 álbumes",
+    "songs": "Canciones",
+    "songsCount": "150+ canciones",
+    "videos": "Videos",
+    "videosCount": "50+ videos",
+    "tour": "Tour 2026",
+    "tourCount": "Fechas en vivo",
+    "interviews": "Entrevistas",
+    "interviewsCount": "Entrevistas exclusivas",
+    "history": "Historia",
+    "historyCount": "40+ años"
+  },
+  "topSongs": {
+    "title": "Top 10 Canciones Más Tocadas en Vivo",
+    "subtitle": "Las canciones más interpretadas en la historia de Megadeth",
+    "timesPlayed": "veces tocada",
+    "viewAll": "Ver todas las canciones"
+  },
+  "upcomingTours": {
+    "title": "Próximos Shows",
+    "nextShow": "Próximo",
+    "viewAll": "Ver todas las fechas"
+  },
+  "heroIntro": {
+    "description": "Bienvenido al sitio más completo de Megadeth en español. Descubre toda la discografía, historia de la banda, shows en vivo, entrevistas exclusivas, letras de canciones y las últimas noticias sobre Dave Mustaine, Teemu Mäntysaari, James LoMenzo y Dirk Verbeuren."
+  },
+  "search": {
+    "placeholder": "Buscar canciones, álbumes, shows, noticias...",
+    "typeToSearch": "Escribe al menos 2 caracteres para buscar",
+    "noResults": "No se encontraron resultados para",
+    "tryWith": "Intenta con: 'Holy Wars', 'Rust in Peace', 'Buenos Aires'",
+    "songs": "Canciones",
+    "albums": "Álbumes",
+    "shows": "Shows",
+    "news": "Noticias",
+    "members": "Miembros",
+    "interviews": "Entrevistas"
   }
 }

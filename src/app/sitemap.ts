@@ -184,8 +184,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         sitemap.push({
           url: `${base}/noticias/${slug}`,
           lastModified: new Date(),
-          changeFrequency: 'monthly',
-          priority: 0.7,
+          changeFrequency: 'weekly',
+          priority: 0.8,
         });
       }
     });

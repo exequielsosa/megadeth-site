@@ -114,6 +114,7 @@ export default function AlbumCard({ album }: { album: Album }) {
             sizes="(max-width: 600px) 100vw, 33vw"
             style={{ objectFit: "cover" }}
             priority={album.isUpcoming}
+            loading={album.isUpcoming ? undefined : "lazy"}
           />
           {album.isUpcoming && (
             <Box
