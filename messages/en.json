@@ -69,7 +69,8 @@
     "backToShows": "Back to shows",
     "watchOnYouTube": "Watch on YouTube",
     "searchOnYouTube": "Search on YouTube",
-    "viewOnSetlistFm": "View on Setlist.fm"
+    "viewOnSetlistFm": "View on Setlist.fm",
+    "otherShowsFromEra": "Other shows from the same era"
   },
   "bootlegs": {
     "titlePage": "Bootlegs",

@@ -1,4 +1,5 @@
 "use client";
+import { useMemo } from "react";
 import {
   Container,
   Typography,
@@ -25,6 +26,7 @@ import {
   getShowHistoricDescription,
 } from "@/types/show";
 import RandomSectionBanner from "./NewsBanner";
+import showsData from "@/constants/shows.json";
 
 interface ShowDetailPageProps {
   show: Show;
@@ -240,6 +242,15 @@ export default function ShowDetailPage({ show }: ShowDetailPageProps) {
 
   const title = `${show.venue} - ${show.city}`;
 
+  // Obtener otros shows de la misma era/tour
+  const relatedShows = useMemo(() => {
+    const allShows = showsData as Show[];
+    return allShows
+      .filter((s) => s.era === show.era && s.id !== show.id)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3);
+  }, [show.era, show.id]);
+
   return (
     <ContainerGradientNoPadding>
       <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 2, md: 4 }}>
@@ -353,6 +364,96 @@ export default function ShowDetailPage({ show }: ShowDetailPageProps) {
 
         {/* Setlist */}
         <Setlist songs={show.setlist} />
+
+        {/* Shows relacionados de la misma era */}
+        {relatedShows.length > 0 && (
+          <Box sx={{ maxWidth: 900, mx: "auto", mt: 6, mb: 4 }}>
+            <Typography
+              variant="h5"
+              component="h2"
+              sx={{
+                mb: 2,
+                fontWeight: 600,
+                fontSize: { xs: "1.25rem", md: "1.5rem" },
+              }}
+            >
+              {t("otherShowsFromEra") || "Otros shows de la misma era"}
+            </Typography>
+            <Grid container spacing={2}>
+              {relatedShows.map((relatedShow) => (
+                <Grid size={{ xs: 12, sm: 6, md: 4 }} key={relatedShow.id}>
+                  <Link
+                    href={`/shows/${relatedShow.id}`}
+                    passHref
+                    legacyBehavior
+                  >
+                    <Card
+                      component="a"
+                      sx={{
+                        textDecoration: "none",
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        cursor: "pointer",
+                        transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                        "&:hover": {
+                          transform: "translateY(-2px)",
+                          boxShadow: 3,
+                        },
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          position: "relative",
+                          width: "100%",
+                          paddingTop: "56.25%",
+                          overflow: "hidden",
+                        }}
+                      >
+                        <Image
+                          src={relatedShow.image}
+                          alt={`${relatedShow.venue} - ${relatedShow.city}`}
+                          fill
+                          style={{ objectFit: "cover" }}
+                        />
+                      </Box>
+                      <CardContent sx={{ p: 1.5, flexGrow: 1 }}>
+                        <Typography
+                          variant="body2"
+                          component="h3"
+                          sx={{
+                            fontWeight: 600,
+                            mb: 0.5,
+                            fontSize: { xs: "0.85rem", md: "0.95rem" },
+                            lineHeight: 1.3,
+                          }}
+                        >
+                          {relatedShow.venue}
+                        </Typography>
+                        <Typography
+                          variant="caption"
+                          color="text.secondary"
+                          sx={{
+                            display: "block",
+                            mb: 0.5,
+                            fontSize: { xs: "0.75rem", md: "0.8rem" },
+                          }}
+                        >
+                          {relatedShow.city}, {relatedShow.country}
+                        </Typography>
+                        <Chip
+                          label={formatShowDate(relatedShow.date, locale)}
+                          size="small"
+                          sx={{ fontSize: "0.7rem", height: 20 }}
+                        />
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        )}
 
         {/* Botón de vuelta */}
         <Box sx={{ mt: 6, textAlign: "center", mb: 4 }}>
