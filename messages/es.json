@@ -592,5 +592,17 @@
   },
   "heroIntro": {
     "description": "Bienvenido al sitio más completo de Megadeth en español. Descubre toda la discografía, historia de la banda, shows en vivo, entrevistas exclusivas, letras de canciones y las últimas noticias sobre Dave Mustaine, Teemu Mäntysaari, James LoMenzo y Dirk Verbeuren."
+  },
+  "search": {
+    "placeholder": "Buscar canciones, álbumes, shows, noticias...",
+    "typeToSearch": "Escribe al menos 2 caracteres para buscar",
+    "noResults": "No se encontraron resultados para",
+    "tryWith": "Intenta con: 'Holy Wars', 'Rust in Peace', 'Buenos Aires'",
+    "songs": "Canciones",
+    "albums": "Álbumes",
+    "shows": "Shows",
+    "news": "Noticias",
+    "members": "Miembros",
+    "interviews": "Entrevistas"
   }
 }

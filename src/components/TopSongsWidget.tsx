@@ -94,18 +94,14 @@ export default function TopSongsWidget() {
               {index > 0 && <Divider sx={{ my: 1.5 }} />}
               <Link
                 href={`/songs/${songNameToUrl(song.name)}`}
-                passHref
-                legacyBehavior
+                style={{ textDecoration: "none", color: "inherit" }}
               >
                 <Box
-                  component="a"
                   sx={{
                     display: "flex",
                     alignItems: "center",
                     gap: 2,
                     py: 1,
-                    textDecoration: "none",
-                    color: "inherit",
                     cursor: "pointer",
                     transition: "background-color 0.2s ease",
                     "&:hover": {

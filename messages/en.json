@@ -591,6 +591,18 @@
     "viewAll": "View all dates"
   },
   "heroIntro": {
-    "description": "Welcome to the most complete Megadeth site in Spanish. Discover the full discography, band history, live shows, exclusive interviews, song lyrics and the latest news about Dave Mustaine, Teemu Mäntysaari, James LoMenzo and Dirk Verbeuren."
+    "description": "Welcome to the most complete Megadeth site in Spanish. Discover the entire discography, band history, live shows, exclusive interviews, song lyrics and the latest news about Dave Mustaine, Teemu Mäntysaári, James LoMenzo and Dirk Verbeuren."
+  },
+  "search": {
+    "placeholder": "Search songs, albums, shows, news...",
+    "typeToSearch": "Type at least 2 characters to search",
+    "noResults": "No results found for",
+    "tryWith": "Try with: 'Holy Wars', 'Rust in Peace', 'Buenos Aires'",
+    "songs": "Songs",
+    "albums": "Albums",
+    "shows": "Shows",
+    "news": "News",
+    "members": "Members",
+    "interviews": "Interviews"
   }
 }
