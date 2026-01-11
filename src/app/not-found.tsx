@@ -19,13 +19,6 @@ export async function generateMetadata(): Promise<Metadata> {
       index: false,
       follow: true,
     },
-    alternates: {
-      canonical: `/${locale}/404`,
-      languages: {
-        es: "/es/404",
-        en: "/en/404",
-      },
-    },
   };
 }
 
