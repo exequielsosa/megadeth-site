@@ -10,7 +10,6 @@ import {
   List,
   ListItem,
   ListItemButton,
-  Divider,
   Chip,
   InputAdornment,
 } from "@mui/material";
@@ -65,7 +64,8 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
         (song) =>
           song.title.toLowerCase().includes(searchTerm) ||
           song.album.title.toLowerCase().includes(searchTerm) ||
-          song.writers?.some((w) => w.toLowerCase().includes(searchTerm))
+          song.credits?.writers?.lyrics?.some((w: string) => w.toLowerCase().includes(searchTerm)) ||
+          song.credits?.writers?.music?.some((w: string) => w.toLowerCase().includes(searchTerm))
       )
       .slice(0, 5);
 
@@ -87,7 +87,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
     // Buscar shows
     const shows = showsData
       .filter(
-        (show: any) =>
+        (show) =>
           show.city.toLowerCase().includes(searchTerm) ||
           show.venue.toLowerCase().includes(searchTerm) ||
           show.country.toLowerCase().includes(searchTerm) ||
@@ -98,7 +98,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
     // Buscar noticias
     const news = newsData
       .filter(
-        (article: any) =>
+        (article) =>
           article.title[locale].toLowerCase().includes(searchTerm) ||
           article.description[locale].toLowerCase().includes(searchTerm)
       )
@@ -106,14 +106,14 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
 
     // Buscar miembros
     const members = Object.values(membersData.members)
-      .filter((member: any) => member.name.toLowerCase().includes(searchTerm))
+      .filter((member) => member.name.toLowerCase().includes(searchTerm))
       .slice(0, 5);
 
     // Buscar entrevistas
     const interviews = interviewsData
       .filter(
-        (interview: any) =>
-          interview.interviewees?.some((person: any) =>
+        (interview) =>
+          interview.interviewees?.some((person) =>
             person.name?.toLowerCase().includes(searchTerm)
           ) || interview.media?.name?.toLowerCase().includes(searchTerm)
       )
@@ -232,7 +232,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
                   color="text.secondary"
                   sx={{ mb: 2 }}
                 >
-                  {t("noResults")} "{query}"
+                  {t("noResults")} &quot;{query}&quot;
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   {t("tryWith")}
@@ -250,7 +250,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
                       🎵 {t("songs")} ({searchResults.songs.length})
                     </Typography>
                     <List sx={{ p: 0 }}>
-                      {searchResults.songs.map((song: any) => (
+                      {searchResults.songs.map((song) => (
                         <ListItem key={song.id} disablePadding>
                           <Link
                             href={`/songs/${songNameToUrl(song.title)}`}
@@ -299,7 +299,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
                                     variant="caption"
                                     color="text.secondary"
                                   >
-                                    {song.album.title} ({song.year})
+                                    {song.album.title} ({song.album.year})
                                   </Typography>
                                 </Box>
                               </Box>
@@ -321,7 +321,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
                       💿 {t("albums")} ({searchResults.albums.length})
                     </Typography>
                     <List sx={{ p: 0 }}>
-                      {searchResults.albums.map((album: any) => (
+                      {searchResults.albums.map((album) => (
                         <ListItem key={album.id} disablePadding>
                           <Link
                             href={`/discography/${album.id}`}
@@ -391,7 +391,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
                       📍 {t("shows")} ({searchResults.shows.length})
                     </Typography>
                     <List sx={{ p: 0 }}>
-                      {searchResults.shows.map((show: any) => (
+                      {searchResults.shows.map((show) => (
                         <ListItem key={show.id} disablePadding>
                           <Link
                             href={`/shows/${show.id}`}
@@ -435,7 +435,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
                       📰 {t("news")} ({searchResults.news.length})
                     </Typography>
                     <List sx={{ p: 0 }}>
-                      {searchResults.news.map((article: any) => (
+                      {searchResults.news.map((article) => (
                         <ListItem key={article.id} disablePadding>
                           <Link
                             href={`/noticias/${article.id}`}
@@ -473,7 +473,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
                       👤 {t("members")} ({searchResults.members.length})
                     </Typography>
                     <List sx={{ p: 0 }}>
-                      {searchResults.members.map((member: any) => (
+                      {searchResults.members.map((member) => (
                         <ListItem key={member.id} disablePadding>
                           <Link
                             href={`/miembros#${member.id}`}
@@ -511,7 +511,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
                       🎤 {t("interviews")} ({searchResults.interviews.length})
                     </Typography>
                     <List sx={{ p: 0 }}>
-                      {searchResults.interviews.map((interview: any) => (
+                      {searchResults.interviews.map((interview) => (
                         <ListItem key={interview.id} disablePadding>
                           <Link
                             href={`/entrevistas/${interview.id}`}
@@ -529,7 +529,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
                                   sx={{ fontWeight: 500 }}
                                 >
                                   {interview.interviewees
-                                    ?.map((p: any) => p.name)
+                                    ?.map((p) => p.name)
                                     .join(", ")}
                                 </Typography>
                                 <Typography

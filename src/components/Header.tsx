@@ -28,7 +28,12 @@ import { useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import SearchModal from "./SearchModal";
+import dynamic from "next/dynamic";
+
+// Lazy load del SearchModal para mejor performance inicial
+const SearchModal = dynamic(() => import("./SearchModal"), {
+  ssr: false,
+});
 
 export default function Header() {
   const { mode, toggle } = useColorMode();

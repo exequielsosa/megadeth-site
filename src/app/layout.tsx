@@ -268,6 +268,17 @@ export default async function RootLayout({
             }),
           }}
         />
+
+        {/* Preconnect a recursos externos críticos */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://img.youtube.com" />
+
         {/* Script para inicializar color mode antes de hidratar React */}
         <script
           dangerouslySetInnerHTML={{

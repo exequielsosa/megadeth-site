@@ -43,6 +43,72 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
   const song = songsData.find((s) => s.id === songId);
   const songsCounts: Record<string, number> = songsCountData;
 
+  // Obtener top 10 canciones más tocadas
+  const top10Songs = Object.entries(songsCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([title]) => title);
+
+  // Instrument y theme dependen del idioma global
+  const instrumentKey = locale === "es" ? "es" : "en";
+
+  // Obtener otras canciones del mismo álbum (solo si song existe)
+  const albumSongs = useMemo(() => {
+    if (!song) return [];
+    return songsData
+      .filter((s) => s.album.title === song.album.title && s.id !== song.id)
+      .sort((a, b) => (a.details?.track_number || 0) - (b.details?.track_number || 0));
+  }, [song]);
+
+  // Generar Schema.org MusicRecording (solo si song existe)
+  const songSchema = useMemo(() => {
+    if (!song) return null;
+    return {
+      "@context": "https://schema.org",
+      "@type": "MusicRecording",
+      name: song.title,
+      byArtist: {
+        "@type": "MusicGroup",
+        name: "Megadeth",
+      },
+      inAlbum: {
+        "@type": "MusicAlbum",
+        name: song.album.title,
+        image: `https://megadeth.com.ar${song.album.cover}`,
+      },
+      ...(song.details?.duration && { duration: song.details.duration }),
+      ...(song.album?.year && { datePublished: `${song.album.year}-01-01` }),
+      ...(song.credits?.writers?.lyrics &&
+        song.credits.writers.lyrics.length > 0 && {
+          author: song.credits.writers.lyrics.map((writer) => ({
+            "@type": "Person",
+            name: writer,
+          })),
+        }),
+      ...(song.credits?.musicians &&
+        song.credits.musicians.length > 0 && {
+          byArtist: song.credits.musicians.map((m) => ({
+            "@type": "Person",
+            name: m.name,
+            ...(m.instrument && {
+              roleName:
+                typeof m.instrument === "string"
+                  ? m.instrument
+                  : m.instrument[instrumentKey],
+            }),
+          })),
+        }),
+      genre: ["Heavy Metal", "Thrash Metal"],
+      ...(song.lyrics &&
+        song.lyrics.en && {
+          lyrics: {
+            "@type": "CreativeWork",
+            text: song.lyrics.en,
+          },
+        }),
+    };
+  }, [song, instrumentKey]);
+
   if (!song)
     return (
       <ContainerGradientNoPadding>
@@ -146,83 +212,21 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
       </ContainerGradientNoPadding>
     );
 
-  // Obtener top 10 canciones más tocadas
-  const top10Songs = Object.entries(songsCounts)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 10)
-    .map(([title]) => title);
-
   const isTop10 = top10Songs.includes(song.title);
-
-  // Instrument y theme dependen del idioma global
-  const instrumentKey = locale === "es" ? "es" : "en";
   const themeText = song.theme[instrumentKey];
   const timesPlayed = songsCounts[song.title] || 0;
-
-  // Obtener otras canciones del mismo álbum
-  const albumSongs = useMemo(() => {
-    return songsData
-      .filter((s) => s.album.title === song.album.title && s.id !== song.id)
-      .sort((a, b) => (a.track || 0) - (b.track || 0));
-  }, [song.album.title, song.id]);
-
-  // Generar Schema.org MusicRecording
-  const songSchema = useMemo(() => {
-    return {
-      "@context": "https://schema.org",
-      "@type": "MusicRecording",
-      name: song.title,
-      byArtist: {
-        "@type": "MusicGroup",
-        name: "Megadeth",
-      },
-      inAlbum: {
-        "@type": "MusicAlbum",
-        name: song.album.title,
-        image: `https://megadeth.com.ar${song.album.cover}`,
-      },
-      ...(song.duration && { duration: song.duration }),
-      ...(song.year && { datePublished: `${song.year}-01-01` }),
-      ...(song.writers &&
-        song.writers.length > 0 && {
-          composer: song.writers.map((w) => ({
-            "@type": "Person",
-            name: w,
-          })),
-        }),
-      ...(song.musicians &&
-        song.musicians.length > 0 && {
-          byArtist: song.musicians.map((m) => ({
-            "@type": "Person",
-            name: m.name,
-            ...(m.instrument && {
-              roleName:
-                typeof m.instrument === "string"
-                  ? m.instrument
-                  : m.instrument[instrumentKey],
-            }),
-          })),
-        }),
-      genre: ["Heavy Metal", "Thrash Metal"],
-      ...(song.lyrics &&
-        song.lyrics.en && {
-          lyrics: {
-            "@type": "CreativeWork",
-            text: song.lyrics.en,
-          },
-        }),
-    };
-  }, [song, instrumentKey]);
 
   return (
     <ContainerGradientNoPadding>
       {/* Schema.org JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(songSchema),
-        }}
-      />
+      {songSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(songSchema),
+          }}
+        />
+      )}
       <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
         <Breadcrumb
           items={[
@@ -505,7 +509,7 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                             fontSize: { xs: "0.9rem", md: "1rem" },
                           }}
                         >
-                          {albumSong.track && (
+                          {albumSong.details?.track_number && (
                             <Typography
                               component="span"
                               sx={{
@@ -514,20 +518,20 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                                 fontSize: { xs: "0.85rem", md: "0.95rem" },
                               }}
                             >
-                              {albumSong.track}.
+                              {albumSong.details.track_number}.
                             </Typography>
                           )}
                           {albumSong.title}
                         </Typography>
                       }
                       secondary={
-                        albumSong.duration && (
+                        albumSong.details?.duration && (
                           <Typography
                             variant="caption"
                             color="text.secondary"
                             sx={{ fontSize: { xs: "0.75rem", md: "0.8rem" } }}
                           >
-                            {albumSong.duration}
+                            {albumSong.details.duration}
                           </Typography>
                         )
                       }

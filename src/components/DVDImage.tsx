@@ -28,6 +28,7 @@ export default function DVDImage({ src, alt }: DVDImageProps) {
       component="img"
       src={imageUrl}
       alt={alt}
+      loading="lazy"
       onError={handleImageError}
       sx={{
         width: "100%",

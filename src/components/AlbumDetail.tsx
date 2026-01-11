@@ -58,6 +58,7 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
     const isCompilation = compilationsData.some((a) => a.id === album.id);
     const isEP = epsData.some((a) => a.id === album.id);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let sourceData: any[] = [];
     if (isStudio) sourceData = discographyData;
     else if (isLive) sourceData = liveAlbumsData;
@@ -65,7 +66,7 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
     else if (isEP) sourceData = epsData;
 
     // Filtrar álbumes (excluir el actual) y seleccionar 3 aleatorios
-    const filtered = sourceData.filter((a) => a.id !== album.id) as Album[];
+    const filtered = sourceData.filter((a) => a.id !== album.id);
     const shuffled = [...filtered].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, 3);
   }, [album.id]);
