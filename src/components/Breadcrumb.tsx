@@ -17,24 +17,33 @@ interface BreadcrumbProps {
 
 export default function Breadcrumb({ items }: BreadcrumbProps) {
   const t = useTranslations("breadcrumb");
+  const locale = useLocale();
 
   // Generar datos estructurados JSON-LD para SEO
   const generateSchemaMarkup = () => {
     const baseUrl = "https://megadeth.com.ar";
+    const localePrefix = locale === "es" ? "" : `/${locale}`;
 
     const itemListElement = [
       {
         "@type": "ListItem",
         position: 1,
         name: t("home"),
-        item: baseUrl,
+        item: `${baseUrl}${localePrefix}`,
       },
-      ...items.map((item, index) => ({
-        "@type": "ListItem",
-        position: index + 2,
-        name: item.label,
-        ...(item.href && { item: `${baseUrl}${item.href}` }),
-      })),
+      ...items.map((item, index) => {
+        const position = index + 2;
+        const itemUrl = item.href
+          ? `${baseUrl}${localePrefix}${item.href}`
+          : null;
+
+        return {
+          "@type": "ListItem",
+          position,
+          name: item.label,
+          ...(itemUrl && { item: itemUrl }),
+        };
+      }),
     ];
 
     return {

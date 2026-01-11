@@ -433,7 +433,8 @@
     "close": "Cerrar",
     "lineup": "Formación",
     "viewLyrics": "Ver letra",
-    "viewSongDetails": "Ver detalles de la canción"
+    "viewSongDetails": "Ver detalles de la canción",
+    "relatedAlbums": "Álbumes relacionados"
   },
   "footer": {
     "siteDescription": "Noticias, fechas y discografía de Megadeth.",

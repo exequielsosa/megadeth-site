@@ -18,10 +18,11 @@ import {
   Divider,
   Stack,
   Tooltip,
+  CardContent,
 } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import type { Album, Track } from "@/types/album";
 import {
@@ -33,6 +34,10 @@ import InfoIcon from "@mui/icons-material/Info";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
 import RandomSectionBanner from "./NewsBanner";
+import discographyData from "@/constants/discography.json";
+import liveAlbumsData from "@/constants/liveAlbums.json";
+import compilationsData from "@/constants/compilations.json";
+import epsData from "@/constants/eps.json";
 
 interface AlbumDetailProps {
   album: Album;
@@ -44,6 +49,26 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
   const t = useTranslations("albumDetail");
   const tb = useTranslations("breadcrumb");
   const locale = useLocale();
+
+  // Determinar tipo de álbum y obtener álbumes relacionados
+  const relatedAlbums = useMemo(() => {
+    // Determinar qué tipo de álbum es el actual
+    const isStudio = discographyData.some((a) => a.id === album.id);
+    const isLive = liveAlbumsData.some((a) => a.id === album.id);
+    const isCompilation = compilationsData.some((a) => a.id === album.id);
+    const isEP = epsData.some((a) => a.id === album.id);
+
+    let sourceData: any[] = [];
+    if (isStudio) sourceData = discographyData;
+    else if (isLive) sourceData = liveAlbumsData;
+    else if (isCompilation) sourceData = compilationsData;
+    else if (isEP) sourceData = epsData;
+
+    // Filtrar álbumes (excluir el actual) y seleccionar 3 aleatorios
+    const filtered = sourceData.filter((a) => a.id !== album.id) as Album[];
+    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 3);
+  }, [album.id]);
 
   const handleTrackClick = (track: Track) => {
     if (track.lyrics) {
@@ -365,6 +390,86 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
             </Button>
           </DialogActions>
         </Dialog>
+
+        {/* Álbumes relacionados */}
+        {relatedAlbums.length > 0 && (
+          <Box sx={{ mt: 6, maxWidth: 900, mx: "auto" }}>
+            <Typography
+              variant="h5"
+              component="h2"
+              sx={{
+                mb: 2,
+                fontWeight: 600,
+                fontSize: { xs: "1.25rem", md: "1.5rem" },
+              }}
+            >
+              {t("relatedAlbums") || "Álbumes relacionados"}
+            </Typography>
+            <Grid container spacing={2}>
+              {relatedAlbums.map((relatedAlbum) => (
+                <Grid size={{ xs: 6, sm: 4, md: 4 }} key={relatedAlbum.id}>
+                  <Link
+                    href={`/discography/${relatedAlbum.id}`}
+                    passHref
+                    legacyBehavior
+                  >
+                    <Card
+                      component="a"
+                      sx={{
+                        textDecoration: "none",
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        cursor: "pointer",
+                        transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                        "&:hover": {
+                          transform: "translateY(-2px)",
+                          boxShadow: 3,
+                        },
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          position: "relative",
+                          width: "100%",
+                          paddingTop: "100%",
+                          overflow: "hidden",
+                        }}
+                      >
+                        <Image
+                          src={relatedAlbum.cover}
+                          alt={relatedAlbum.title}
+                          fill
+                          style={{ objectFit: "cover" }}
+                        />
+                      </Box>
+                      <CardContent sx={{ p: 1.5, flexGrow: 1 }}>
+                        <Typography
+                          variant="body2"
+                          component="h3"
+                          sx={{
+                            fontWeight: 600,
+                            mb: 0.5,
+                            fontSize: { xs: "0.85rem", md: "0.95rem" },
+                            lineHeight: 1.3,
+                          }}
+                        >
+                          {relatedAlbum.title}
+                        </Typography>
+                        <Chip
+                          label={relatedAlbum.year}
+                          size="small"
+                          sx={{ fontSize: "0.7rem", height: 20 }}
+                        />
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        )}
+
         <Box mt={4}>
           <RandomSectionBanner currentSection="discography" />
         </Box>
