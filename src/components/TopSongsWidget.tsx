@@ -6,6 +6,13 @@ import Link from "next/link";
 import Image from "next/image";
 import songsCountsData from "@/constants/songs.counts.fixed.json";
 
+function songNameToUrl(songName: string): string {
+  return songName
+    .toLowerCase()
+    .replace(/[^a-z0-9 ]/gi, "")
+    .replace(/ /g, "-");
+}
+
 export default function TopSongsWidget() {
   const t = useTranslations("topSongs");
 
@@ -85,46 +92,63 @@ export default function TopSongsWidget() {
           {topSongs.map((song, index) => (
             <Box key={song.name}>
               {index > 0 && <Divider sx={{ my: 1.5 }} />}
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 2,
-                  py: 1,
-                }}
+              <Link
+                href={`/songs/${songNameToUrl(song.name)}`}
+                passHref
+                legacyBehavior
               >
-                {/* Posición */}
                 <Box
+                  component="a"
                   sx={{
-                    minWidth: 35,
-                    fontSize: { xs: 18, md: 22 },
-                    fontWeight: 700,
-                    color: index < 3 ? "primary.main" : "text.secondary",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 2,
+                    py: 1,
+                    textDecoration: "none",
+                    color: "inherit",
+                    cursor: "pointer",
+                    transition: "background-color 0.2s ease",
+                    "&:hover": {
+                      backgroundColor: "action.hover",
+                    },
+                    borderRadius: 1,
+                    px: 1,
+                    mx: -1,
                   }}
                 >
-                  {index + 1}
-                </Box>
-
-                {/* Nombre de la canción */}
-                <Box sx={{ flex: 1 }}>
-                  <Typography
-                    variant="body1"
+                  {/* Posición */}
+                  <Box
                     sx={{
-                      fontSize: { xs: 14, md: 16 },
-                      fontWeight: 500,
+                      minWidth: 35,
+                      fontSize: { xs: 18, md: 22 },
+                      fontWeight: 700,
+                      color: index < 3 ? "primary.main" : "text.secondary",
                     }}
                   >
-                    {song.name}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ fontSize: { xs: 12, md: 13 } }}
-                  >
-                    {song.count.toLocaleString()} {t("timesPlayed")}
-                  </Typography>
+                    {index + 1}
+                  </Box>
+
+                  {/* Nombre de la canción */}
+                  <Box sx={{ flex: 1 }}>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        fontSize: { xs: 14, md: 16 },
+                        fontWeight: 500,
+                      }}
+                    >
+                      {song.name}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ fontSize: { xs: 12, md: 13 } }}
+                    >
+                      {song.count.toLocaleString()} {t("timesPlayed")}
+                    </Typography>
+                  </Box>
                 </Box>
-              </Box>
+              </Link>
             </Box>
           ))}
 
