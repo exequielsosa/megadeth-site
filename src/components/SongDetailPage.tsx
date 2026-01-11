@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import {
   Box,
   Container,
@@ -10,6 +10,9 @@ import {
   CardContent,
   Button,
   Avatar,
+  List,
+  ListItem,
+  ListItemText,
 } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
 import songsData from "@/constants/songs.json";
@@ -23,6 +26,13 @@ import RandomSectionBanner from "./NewsBanner";
 
 interface SongDetailPageProps {
   songId: string;
+}
+
+function songNameToUrl(songName: string): string {
+  return songName
+    .toLowerCase()
+    .replace(/[^a-z0-9 ]/gi, "")
+    .replace(/ /g, "-");
 }
 
 export default function SongDetailPage({ songId }: SongDetailPageProps) {
@@ -148,6 +158,13 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
   const instrumentKey = locale === "es" ? "es" : "en";
   const themeText = song.theme[instrumentKey];
   const timesPlayed = songsCounts[song.title] || 0;
+
+  // Obtener otras canciones del mismo álbum
+  const albumSongs = useMemo(() => {
+    return songsData
+      .filter((s) => s.album.title === song.album.title && s.id !== song.id)
+      .sort((a, b) => (a.track || 0) - (b.track || 0));
+  }, [song.album.title, song.id]);
 
   return (
     <ContainerGradientNoPadding>
@@ -389,6 +406,83 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
             </Grid>
           </Box>
         </Box>
+
+        {/* Otras canciones del álbum */}
+        {albumSongs.length > 0 && (
+          <Box sx={{ maxWidth: 800, mx: "auto", mt: 0, mb: 4 }}>
+            <Typography
+              variant="h5"
+              component="h2"
+              sx={{
+                mb: 2,
+                fontWeight: 600,
+                fontSize: { xs: "1.25rem", md: "1.5rem" },
+              }}
+            >
+              {t("otherSongsFromAlbum") || "Otras canciones del álbum"}
+            </Typography>
+            <Card variant="outlined">
+              <List sx={{ p: 0 }}>
+                {albumSongs.map((albumSong, index) => (
+                  <ListItem
+                    key={albumSong.id}
+                    component={Link}
+                    href={`/songs/${songNameToUrl(albumSong.title)}`}
+                    sx={{
+                      py: 1.5,
+                      px: 2,
+                      borderBottom: index < albumSongs.length - 1 ? 1 : 0,
+                      borderColor: "divider",
+                      textDecoration: "none",
+                      color: "inherit",
+                      transition: "background-color 0.2s",
+                      "&:hover": {
+                        backgroundColor: "action.hover",
+                      },
+                    }}
+                  >
+                    <ListItemText
+                      primary={
+                        <Typography
+                          variant="body1"
+                          sx={{
+                            fontWeight: 500,
+                            fontSize: { xs: "0.9rem", md: "1rem" },
+                          }}
+                        >
+                          {albumSong.track && (
+                            <Typography
+                              component="span"
+                              sx={{
+                                color: "text.secondary",
+                                mr: 1,
+                                fontSize: { xs: "0.85rem", md: "0.95rem" },
+                              }}
+                            >
+                              {albumSong.track}.
+                            </Typography>
+                          )}
+                          {albumSong.title}
+                        </Typography>
+                      }
+                      secondary={
+                        albumSong.duration && (
+                          <Typography
+                            variant="caption"
+                            color="text.secondary"
+                            sx={{ fontSize: { xs: "0.75rem", md: "0.8rem" } }}
+                          >
+                            {albumSong.duration}
+                          </Typography>
+                        )
+                      }
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </Card>
+          </Box>
+        )}
       </Container>
       <Box pb={4} sx={{ px: { xs: 2, sm: 2, md: 0 } }}>
         <RandomSectionBanner currentSection="songs" />

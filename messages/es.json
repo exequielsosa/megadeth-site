@@ -27,7 +27,8 @@
     "top10Title": "Top 10 Canciones Más Tocadas",
     "top10Description": "Las canciones más interpretadas en vivo por Megadeth. Recuento a Octubre 2025",
     "position": "Posición",
-    "titleTable": "Todas las canciones de Megadeth"
+    "titleTable": "Todas las canciones de Megadeth",
+    "otherSongsFromAlbum": "Otras canciones del álbum"
   },
   "interviews": {
     "title": "Entrevistas",

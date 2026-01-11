@@ -27,7 +27,8 @@
     "top10Title": "Top 10 Most Played Songs",
     "top10Description": "The most performed songs live by Megadeth. Count as of October 2025",
     "position": "Position",
-    "titleTable": "All Megadeth Songs"
+    "titleTable": "All Megadeth songs",
+    "otherSongsFromAlbum": "Other songs from the album"
   },
   "interviews": {
     "title": "Interviews",
