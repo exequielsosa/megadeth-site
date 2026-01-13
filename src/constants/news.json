@@ -1,5 +1,48 @@
 [
   {
+    "id": "final-credits-new-megadeth-album-2026",
+    "title": {
+      "es": "Créditos finales del nuevo álbum de Megadeth, ¿quien participo mas?",
+      "en": "Final Credits of the New Megadeth Album, Who Participated the Most?"
+    },
+    "description": {
+      "es": "Con el lanzamiento del nuevo álbum de Megadeth, se revelan los créditos finales que muestran la participación de cada miembro en las 12 canciones que componen este histórico trabajo.\n\nDave Mustaine, como líder y alma de la banda, participa en todas las canciones del álbum, liderando con su inconfundible estilo tanto en guitarra como en voz.\n\nTEEMU MÄNTYSAARI: EL GRAN PROTAGONISTA\n\nEl guitarrista finlandés Teemu Mäntysaari se ha convertido en el gran protagonista de este álbum, participando en 10 de las 12 canciones, lo que representa un impresionante 83% del tracklist. Su presencia se siente en temas como \"Tipping Point\", \"Hey, God?!\", \"Let There Be Shred\", \"Puppet Parade\", \"Another Bad Day\", \"Made To Kill\", \"Obey The Call\", \"I Am War\", \"The Last Note\" y \"Bloodlust\".\n\nDIRK VERBEUREN: LA BASE RÍTMICA\n\nEl baterista Dirk Verbeuren aporta su potencia en 4 canciones del álbum, representando el 33% de participación. Su trabajo se escucha en \"Let There Be Shred\", \"Puppet Parade\", \"Made To Kill\" y \"Obey The Call\", proporcionando la base rítmica característica del sonido de Megadeth.\n\nJAMES LOMENZO: PARTICIPACIÓN SELECTIVA\n\nEl bajista James LoMenzo participa en 2 canciones del álbum, con un 17% de presencia. Su bajo se puede apreciar en \"Made To Kill\" e \"I Am War\", dos temas donde su técnica y groove son fundamentales.\n\nEL TRACKLIST COMPLETO:\n1. Tipping Point\n2. I Don't Care\n3. Hey, God?!\n4. Let There Be Shred\n5. Puppet Parade\n6. Another Bad Day\n7. Made To Kill\n8. Obey The Call\n9. I Am War\n10. The Last Note\n11. Ride The Lightning (Bonus)\n12. Bloodlust\n\nEstos créditos finales demuestran la confianza de Dave Mustaine en Teemu Mäntysaari, quien ha asumido un papel protagónico en la creación de este nuevo capítulo en la historia de Megadeth.",
+      "en": "With the release of Megadeth's new album, the final credits reveal each member's participation in the 12 songs that make up this historic work.\n\nDave Mustaine, as the band's leader and soul, participates in all the album's songs, leading with his unmistakable style on both guitar and vocals.\n\nTEEMU MÄNTYSAARI: THE BIG STAR\n\nFinnish guitarist Teemu Mäntysaari has become the album's big star, participating in 10 of the 12 songs, representing an impressive 83% of the tracklist. His presence is felt on tracks like \"Tipping Point\", \"Hey, God?!\", \"Let There Be Shred\", \"Puppet Parade\", \"Another Bad Day\", \"Made To Kill\", \"Obey The Call\", \"I Am War\", \"The Last Note\", and \"Bloodlust\".\n\nDIRK VERBEUREN: THE RHYTHMIC FOUNDATION\n\nDrummer Dirk Verbeuren contributes his power on 4 songs of the album, representing 33% participation. His work can be heard on \"Let There Be Shred\", \"Puppet Parade\", \"Made To Kill\", and \"Obey The Call\", providing the rhythmic foundation characteristic of Megadeth's sound.\n\nJAMES LOMENZO: SELECTIVE PARTICIPATION\n\nBassist James LoMenzo participates in 2 songs of the album, with a 17% presence. His bass can be appreciated on \"Made To Kill\" and \"I Am War\", two tracks where his technique and groove are fundamental.\n\nTHE COMPLETE TRACKLIST:\n1. Tipping Point\n2. I Don't Care\n3. Hey, God?!\n4. Let There Be Shred\n5. Puppet Parade\n6. Another Bad Day\n7. Made To Kill\n8. Obey The Call\n9. I Am War\n10. The Last Note\n11. Ride The Lightning (Bonus)\n12. Bloodlust\n\nThese final credits demonstrate Dave Mustaine's confidence in Teemu Mäntysaari, who has taken on a leading role in creating this new chapter in Megadeth's history."
+    },
+    "imageUrl": "/images/site-updates/credits.jpg",
+    "imageAlt": {
+      "es": "Creditos del nuevo álbum de Megadeth",
+      "en": "Final Credits of the New Megadeth Album"
+    },
+    "imageCaption": {
+      "es": "Creditos del nuevo álbum de Megadeth",
+      "en": "Final Credits of the New Megadeth Album"
+    },
+    "publishedDate": "2026-01-13"
+  },
+
+  {
+    "id": "james-birthday-2026",
+    "title": {
+      "es": "Seguimos de cumpleaños: Feliz cumpleaños, James!",
+      "en": "James's Birthday Week: Happy Birthday, James!"
+    },
+    "description": {
+      "es": "Felicidades a James, nuestro talentoso y increible bajista.",
+      "en": "Happy birthday to James, our talented and amazing bassist."
+    },
+    "imageUrl": "/images/site-updates/jamesbirth.jpg",
+    "imageAlt": {
+      "es": "Feliz Cumpleaños James!!",
+      "en": "Happy Birthday James!!"
+    },
+    "imageCaption": {
+      "es": "Feliz Cumpleaños James!!",
+      "en": "Happy Birthday James!!"
+    },
+    "publishedDate": "2026-01-13"
+  },
+  {
     "id": "dave-talks-about-new-album-2026",
     "title": {
       "es": "Dave Mustaine dice que querrás volver a escuchar el nuevo álbum",
