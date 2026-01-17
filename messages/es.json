@@ -632,5 +632,29 @@
     "news": "Noticias",
     "members": "Miembros",
     "interviews": "Entrevistas"
+  },
+  "featuredArticle": {
+    "featured": "Artículo Destacado",
+    "readMore": "Leer más"
+  },
+  "reviews": {
+    "pageTitle": "Reviews - Megadeth Fan Site",
+    "pageDescription": "Lee críticas y análisis detallados de álbumes, conciertos y documentales de Megadeth",
+    "title": "Reviews",
+    "description": "Críticas y análisis detallados de la discografía y actuaciones de Megadeth",
+    "breadcrumb": {
+      "home": "Inicio",
+      "discography": "Discografía",
+      "reviews": "Reviews"
+    },
+    "category": {
+      "album": "Álbum",
+      "concert": "Concierto",
+      "documentary": "Documental",
+      "other": "Otro"
+    },
+    "rating": "Calificación",
+    "readMore": "Leer review completa",
+    "backToReviews": "Volver a Reviews"
   }
 }

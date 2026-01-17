@@ -1,0 +1,18 @@
+{
+  "id": "megadeth-final-album-review",
+  "isActive": true,
+  "title": {
+    "es": "Megadeth: el último acorde",
+    "en": "Megadeth: The Final Chord"
+  },
+  "subtitle": {
+    "es": "Ya escuché el nuevo album y te traigo una reseña personal y sin maquillaje sobre el disco final de la banda que marcó mi adolescencia y me acompañó toda la vida. Un cierre digno, honesto e inevitable.",
+    "en": "I have listened to the new album and bring you a personal and unfiltered review of the final album from the band that shaped my adolescence and stayed with me throughout my life. A worthy, honest, and inevitable ending."
+  },
+  "cta": {
+    "es": "Leer la reseña completa",
+    "en": "Read the full review"
+  },
+  "imageUrl": "/images/albums/17-megadeth.jpg",
+  "link": "/discography/reviews/megadeth-final-album-review-2026"
+}
