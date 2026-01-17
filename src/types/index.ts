@@ -4,6 +4,12 @@ export interface BilingualText {
   en: string;
 }
 
+// Featured Article types
+export * from "./featured-article";
+
+// Review types
+export * from "./review";
+
 // Historia types
 export interface HistoriaChapter {
   chapterTitle: BilingualText;

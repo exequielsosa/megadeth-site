@@ -17,6 +17,7 @@ import RandomSectionBanner from "./NewsBanner";
 import SiteUpdatesBanner from "./SiteUpdatesBanner";
 import siteUpdatesData from "@/constants/site-updates.json";
 import LastShowsCards from "./LastShowsCards";
+import FeaturedReviewBanner from "./FeaturedReviewBanner";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -212,6 +213,8 @@ export default function Hero() {
             </Box>
           </Box>
         </Stack>
+
+        <FeaturedReviewBanner />
 
         {/* Quick Access Grid */}
         <QuickAccessGrid />

@@ -8,6 +8,7 @@ import historiaData from '@/constants/historia.json';
 import interviewsData from '@/constants/interviews.json';
 import showsData from '@/constants/shows.json';
 import newsData from '@/constants/news.json';
+import reviewsData from '@/constants/reviews.json';
 import { generateInterviewSlug } from '@/types/interview';
 import bootlegsData from '@/constants/bootlegs.json';
 
@@ -31,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/songs', priority: 0.9, changeFreq: 'monthly' as const },
     { path: '/shows', priority: 0.9, changeFreq: 'weekly' as const },
     { path: '/bootlegs', priority: 0.9, changeFreq: 'weekly' as const },
+    { path: '/discography/reviews', priority: 0.9, changeFreq: 'weekly' as const },
   ];
   const sitemap: MetadataRoute.Sitemap = [];
 
@@ -185,6 +187,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
           url: `${base}/noticias/${slug}`,
           lastModified: new Date(),
           changeFrequency: 'weekly',
+          priority: 0.8,
+        });
+      }
+    });
+  }
+
+  // Reviews dinámicas
+  if (Array.isArray(reviewsData)) {
+    reviewsData.forEach(review => {
+      if (review.id) {
+        sitemap.push({
+          url: `${base}/discography/reviews/${review.id}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
           priority: 0.8,
         });
       }
