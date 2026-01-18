@@ -9366,5 +9366,37 @@
       "es": "Hablando en el podcast Freddy And Friends, Verbeuren se abrió sobre la colaboración con el fundador de Megadeth mientras trabajaba en el próximo álbum final de la banda, explicando que la franqueza de Mustaine hace que las decisiones creativas sean más claras en lugar de más difíciles.",
       "en": "Speaking on the Freddy And Friends podcast, Verbeuren opened up about collaborating with Megadeth’s founder while working on the band’s upcoming final album, explaining that Mustaine’s blunt honesty makes creative decisions clearer rather than harder."
     }
+  },
+  {
+    "id": "megadeth-talkshoplive-2026",
+    "title": {
+      "es": "Megadeth en TalkShopLive",
+      "en": "Megadeth on TalkShopLive"
+    },
+    "date": "2026-01-18",
+    "media": {
+      "name": "Megadeth Official",
+      "type": "Q&A livestream",
+      "country": "US"
+    },
+    "interviewees": [
+      {
+        "name": "Megadeth",
+        "role": "Band",
+        "id": "megadeth"
+      }
+    ],
+    "interviewer": {
+      "name": "Host",
+      "role": "Host"
+    },
+    "type": "video",
+    "language": "en",
+    "youtube_url": "https://www.youtube.com/watch?v=92kj3EM0drA",
+    "duration": "45:02",
+    "summary": {
+      "es": "Únete a Megadeth en el canal Rock n Roll para hablar sobre su último álbum de estudio, Megadeth. A principios de 2026, Megadeth lanzará su último álbum de estudio a través del sello Tradecraft de Dave Mustaine en asociación con el nuevo sello BLKIIBLK del Frontiers Label Group. Sirviendo como el capítulo final definitivo de uno de los catálogos más influyentes en la música pesada, este disco representa tanto un hito creativo como una oportunidad comercial única en una generación. La campaña está anclada por dos sencillos de alto impacto: la pista principal “Tipping Point” y el seguimiento “I Don’t Care”, que se lanzarán este otoño junto con los pedidos anticipados en todo el mundo. Comercialmente, el álbum se posiciona como la última oportunidad para poseer un lanzamiento completamente nuevo de Megadeth, vinculado directamente al lanzamiento de una gira mundial de despedida de varios años que comenzará en 2026. Esto no es solo otro lanzamiento, es la culminación de un legado de cuatro décadas.",
+      "en": "Join Megadeth on the Rock n Roll channel to discuss their final studio album, Megadeth. In early 2026, Megadeth will release their final studio album via Dave Mustaine’s Tradecraft imprint in partnership with Frontiers Label Group’s new BLKIIBLK label. Serving as the definitive closing chapter to one of the most influential catalogs in heavy music, this record represents both a creative milestone and a once-in-a-generation commercial opportunity. The campaign is anchored by two high-impact singles: lead track “Tipping Point” and follow-up “I Don’t Care”, launching this fall alongside worldwide pre-orders. Commercially, the album is positioned as the last chance to own a brand-new Megadeth release, tied directly to the launch of a multi-year global farewell tour beginning in 2026. This is not just another release, it is the culmination of a four-decade legacy."
+    }
   }
 ]
