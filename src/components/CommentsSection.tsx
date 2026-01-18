@@ -67,9 +67,9 @@ export function CommentsSection({
     try {
       const res = await fetch(
         `/api/comments?pageType=${encodeURIComponent(
-          pageType
+          pageType,
         )}&pageId=${encodeURIComponent(pageId)}&limit=50`,
-        { cache: "no-store" }
+        { cache: "no-store" },
       );
       const json = await res.json();
       setItems(Array.isArray(json.items) ? json.items : []);
@@ -140,9 +140,12 @@ export function CommentsSection({
               author: {
                 "@type": "Organization",
                 name: "Megadeth Fan Site",
-                url: "https://megadeth.com.ar"
+                url: "https://megadeth.com.ar",
               },
-              datePublished: items.length > 0 ? items[items.length - 1].created_at : new Date().toISOString(),
+              datePublished:
+                items.length > 0
+                  ? items[items.length - 1].created_at
+                  : new Date().toISOString(),
               commentCount: items.length,
               comment: items.map((c) => ({
                 "@type": "Comment",
@@ -150,7 +153,7 @@ export function CommentsSection({
                 author: {
                   "@type": "Person",
                   name: c.name,
-                  url: "https://megadeth.com.ar"
+                  url: "https://megadeth.com.ar",
                 },
                 dateCreated: c.created_at,
               })),
@@ -171,20 +174,23 @@ export function CommentsSection({
             author: {
               "@type": "Organization",
               name: "Megadeth Fan Site",
-              url: "https://megadeth.com.ar"
+              url: "https://megadeth.com.ar",
             },
             datePublished: new Date().toISOString(),
             commentCount: items.length,
-            comment: items.length > 0 ? items.slice(0, 3).map((c) => ({
-              "@type": "Comment",
-              text: c.content,
-              author: {
-                "@type": "Person",
-                name: c.name,
-                url: "https://megadeth.com.ar"
-              },
-              dateCreated: c.created_at,
-            })) : []
+            comment:
+              items.length > 0
+                ? items.slice(0, 3).map((c) => ({
+                    "@type": "Comment",
+                    text: c.content,
+                    author: {
+                      "@type": "Person",
+                      name: c.name,
+                      url: "https://megadeth.com.ar",
+                    },
+                    dateCreated: c.created_at,
+                  }))
+                : [],
           }),
         }}
       />
