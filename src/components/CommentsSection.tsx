@@ -308,7 +308,11 @@ export function CommentsSection({
             </Typography>
 
             {loading ? (
-              <Box sx={{ display: "flex", justifyContent: "center", py: 4 }} role="status" aria-live="polite">
+              <Box
+                sx={{ display: "flex", justifyContent: "center", py: 4 }}
+                role="status"
+                aria-live="polite"
+              >
                 <CircularProgress />
               </Box>
             ) : items.length === 0 ? (
@@ -376,10 +380,10 @@ export function CommentsSection({
                         flexWrap: "wrap",
                       }}
                     >
-                      <Typography 
-                        variant="subtitle2" 
-                        itemProp="author" 
-                        itemScope 
+                      <Typography
+                        variant="subtitle2"
+                        itemProp="author"
+                        itemScope
                         itemType="https://schema.org/Person"
                         sx={{ fontWeight: 700 }}
                       >
