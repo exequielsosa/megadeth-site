@@ -665,6 +665,7 @@
   "comments": {
     "title": "Comments",
     "subtitle": "Leave your comment about",
+    "leave": "Leave your comment about",
     "name": "Name",
     "email": "Email",
     "content": "Comment",

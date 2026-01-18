@@ -136,6 +136,13 @@ export function CommentsSection({
               "@context": "https://schema.org",
               "@type": "DiscussionForumPosting",
               headline: title,
+              text: customSubtitle || title,
+              author: {
+                "@type": "Organization",
+                name: "Megadeth Fan Site",
+                url: "https://megadeth.com.ar"
+              },
+              datePublished: items.length > 0 ? items[items.length - 1].created_at : new Date().toISOString(),
               commentCount: items.length,
               comment: items.map((c) => ({
                 "@type": "Comment",
@@ -143,6 +150,7 @@ export function CommentsSection({
                 author: {
                   "@type": "Person",
                   name: c.name,
+                  url: "https://megadeth.com.ar"
                 },
                 dateCreated: c.created_at,
               })),
@@ -150,6 +158,36 @@ export function CommentsSection({
           }}
         />
       )}
+
+      {/* JSON-LD para el formulario de comentarios */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "DiscussionForumPosting",
+            headline: `${t("leave")} "${title}"`,
+            text: t("subtitle"),
+            author: {
+              "@type": "Organization",
+              name: "Megadeth Fan Site",
+              url: "https://megadeth.com.ar"
+            },
+            datePublished: new Date().toISOString(),
+            commentCount: items.length,
+            comment: items.length > 0 ? items.slice(0, 3).map((c) => ({
+              "@type": "Comment",
+              text: c.content,
+              author: {
+                "@type": "Person",
+                name: c.name,
+                url: "https://megadeth.com.ar"
+              },
+              dateCreated: c.created_at,
+            })) : []
+          }),
+        }}
+      />
 
       {/* Card principal que contiene todo */}
       <Card
