@@ -38,6 +38,7 @@ import discographyData from "@/constants/discography.json";
 import liveAlbumsData from "@/constants/liveAlbums.json";
 import compilationsData from "@/constants/compilations.json";
 import epsData from "@/constants/eps.json";
+import { CommentsSection } from "./CommentsSection";
 
 interface AlbumDetailProps {
   album: Album;
@@ -523,6 +524,12 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
         <Box mt={4}>
           <RandomSectionBanner currentSection="discography" />
         </Box>
+
+        <CommentsSection
+          pageType="article"
+          pageId={album.id}
+          title={album.title}
+        />
       </Container>
     </ContainerGradientNoPadding>
   );

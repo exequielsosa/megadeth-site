@@ -20,6 +20,7 @@ export interface NewsArticle {
   publishedDate: string; // ISO format YYYY-MM-DD
   linkUrl?: string;
   linkTarget?: "_blank" | "_self";
+  commentsActive?: boolean;
   youtubeVideoId?: string;
   externalLinks?: Array<{
     url: string;

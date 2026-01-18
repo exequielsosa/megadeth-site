@@ -15,6 +15,8 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import Breadcrumb from "./Breadcrumb";
 import { useTranslations } from "next-intl";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
+import { CommentsSection } from "./CommentsSection";
+import RandomSectionBanner from "./NewsBanner";
 
 interface ReviewDetailPageProps {
   review: Review;
@@ -262,6 +264,16 @@ export default function ReviewDetailPage({
         <Box sx={{ maxWidth: 1440, mx: "auto" }}>
           {processContent(review.content[localeKey])}
         </Box>
+
+        <Box mt={4}>
+          <RandomSectionBanner currentSection="discography" />
+        </Box>
+
+        <CommentsSection
+          pageType="article"
+          pageId={review.id}
+          title={review.title[localeKey]}
+        />
       </Container>
     </ContainerGradientNoPadding>
   );

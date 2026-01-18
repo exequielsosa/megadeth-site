@@ -31,6 +31,7 @@ import {
   getInterviewTitle,
 } from "@/types/interview";
 import RandomSectionBanner from "./NewsBanner";
+import { CommentsSection } from "./CommentsSection";
 
 const ITEMS_PER_PAGE_DESKTOP = 10;
 const ITEMS_PER_PAGE_MOBILE = 10;
@@ -401,6 +402,11 @@ export default function InterviewsListPage() {
         <Box my={4}>
           <RandomSectionBanner currentSection="interviews" />
         </Box>
+        <CommentsSection
+          pageType="article"
+          pageId="interviews-list"
+          customSubtitle={t("preSubtitle")}
+        />
       </Container>
     </ContainerGradientNoPadding>
   );

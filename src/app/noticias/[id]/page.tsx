@@ -9,6 +9,7 @@ import Image from "next/image";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import Link from "next/link";
 import RandomSectionBanner from "@/components/NewsBanner";
+import { CommentsSection } from "@/components/CommentsSection";
 
 interface NewsPageProps {
   params: Promise<{
@@ -274,6 +275,13 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
           <Box>
             <RandomSectionBanner currentSection="news" />
           </Box>
+          {article.commentsActive && (
+            <CommentsSection
+              pageType="article"
+              pageId={article.id}
+              title={article.title[locale]}
+            />
+          )}
         </Container>
       </ContainerGradientNoPadding>
     </>

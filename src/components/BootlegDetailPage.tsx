@@ -26,6 +26,7 @@ import {
 } from "@/types/bootleg";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
 import RandomSectionBanner from "./NewsBanner";
+import { CommentsSection } from "./CommentsSection";
 
 interface BootlegDetailPageProps {
   bootleg: Bootleg;
@@ -359,6 +360,11 @@ export default function BootlegDetailPage({ bootleg }: BootlegDetailPageProps) {
         <Box mb={4}>
           <RandomSectionBanner currentSection="bootlegs" />
         </Box>
+        <CommentsSection
+          pageType="article"
+          pageId={bootleg.id}
+          title={bootleg.title}
+        />
       </Container>
     </ContainerGradientNoPadding>
   );

@@ -32,6 +32,7 @@ import {
   getShowHistoricDescription,
 } from "@/types/show";
 import RandomSectionBanner from "./NewsBanner";
+import { CommentsSection } from "./CommentsSection";
 
 const ITEMS_PER_PAGE_DESKTOP = 10;
 const ITEMS_PER_PAGE_MOBILE = 10;
@@ -335,6 +336,11 @@ export default function ShowsListPage() {
         <Box my={4}>
           <RandomSectionBanner currentSection="shows" />
         </Box>
+        <CommentsSection
+          pageType="article"
+          pageId="shows-page"
+          customSubtitle={t("preSubtitle")}
+        />
       </Container>
     </ContainerGradientNoPadding>
   );
