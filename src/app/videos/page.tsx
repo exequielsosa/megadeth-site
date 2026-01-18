@@ -7,6 +7,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import RandomSectionBanner from "@/components/NewsBanner";
+import { CommentsSection } from "@/components/CommentsSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -199,6 +200,7 @@ function generateStructuredData(locale: string) {
 export default async function VideosPage() {
   const locale = await getLocale();
   const tb = await getTranslations("breadcrumb");
+  const v = await getTranslations("videos");
   const structuredData = generateStructuredData(locale);
 
   return (
@@ -220,6 +222,11 @@ export default async function VideosPage() {
           <Box mt={4}>
             <RandomSectionBanner currentSection="videos" />
           </Box>
+          <CommentsSection
+            pageType="article"
+            pageId="videos-page"
+            customSubtitle={v("comment")}
+          />
         </Container>
       </ContainerGradientNoPadding>
     </>

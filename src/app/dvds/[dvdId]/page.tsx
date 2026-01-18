@@ -28,6 +28,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import RandomSectionBanner from "@/components/NewsBanner";
+import { CommentsSection } from "@/components/CommentsSection";
 
 interface DVDPageProps {
   params: Promise<{
@@ -411,6 +412,12 @@ export default async function DVDPage({ params }: DVDPageProps) {
           <Box mt={4}>
             <RandomSectionBanner currentSection="dvds" />
           </Box>
+
+          <CommentsSection
+            pageType="article"
+            pageId={`dvd-${dvdId}`}
+            title={dvdTitle}
+          />
         </Container>
       </ContainerGradientNoPadding>
     </>

@@ -37,7 +37,8 @@
     "top10Description": "The most performed songs live by Megadeth. Count as of October 2025",
     "position": "Position",
     "titleTable": "All Megadeth songs",
-    "otherSongsFromAlbum": "Other songs from the album"
+    "otherSongsFromAlbum": "Other songs from the album",
+    "preSubtitle": "Is there any song you remember that is not on the list? Leave it in the comments!"
   },
   "interviews": {
     "title": "Interviews",
@@ -59,7 +60,8 @@
     "answer": "Answer",
     "text": "Text",
     "video": "Video",
-    "backToInterviews": "Back to interviews"
+    "backToInterviews": "Back to interviews",
+    "preSubtitle": "Do you know any interview that is not on the list? Leave it in the comments!"
   },
   "shows": {
     "title": "Historic Shows",
@@ -79,7 +81,8 @@
     "watchOnYouTube": "Watch on YouTube",
     "searchOnYouTube": "Search on YouTube",
     "viewOnSetlistFm": "View on Setlist.fm",
-    "otherShowsFromEra": "Other shows from the same era"
+    "otherShowsFromEra": "Other shows from the same era",
+    "preSubtitle": "Is there any show you remember and want to share with us? Leave it in the comments!"
   },
   "bootlegs": {
     "titlePage": "Bootlegs",
@@ -101,7 +104,8 @@
     "watchOnYouTube": "Watch on YouTube",
     "searchOnYouTube": "Search on YouTube",
     "loadMore": "Load more",
-    "totalBootlegs": "{count} bootlegs found"
+    "totalBootlegs": "{count} bootlegs found",
+    "preSubtitle": "Is there any bootleg you remember and want to share with us? Leave it in the comments!"
   },
   "header": {
     "fanSite": "Megadeth • Fan",
@@ -476,7 +480,8 @@
   },
   "videos": {
     "title": "Videos",
-    "subtitle": "Official music videos, live performances and exclusive Megadeth content"
+    "subtitle": "Official music videos, live performances and exclusive Megadeth content",
+    "comment": "Are we missing any videos? Which are your favorites? Leave us your comment!"
   },
   "dvds": {
     "title": "DVDs",
@@ -656,5 +661,20 @@
     "rating": "Rating",
     "readMore": "Read full review",
     "backToReviews": "Back to Reviews"
+  },
+  "comments": {
+    "title": "Comments",
+    "subtitle": "Leave your comment about",
+    "name": "Name",
+    "email": "Email",
+    "content": "Comment",
+    "placeholder": "Write your comment (plain text, no links)",
+    "submit": "Submit comment",
+    "posting": "Submitting...",
+    "loading": "Loading comments...",
+    "none": "No comments yet. Be the first!",
+    "commentsTitle": "Comments",
+    "invalidEmail": "Please enter a valid email",
+    "error": "Error posting comment. Please try again."
   }
 }

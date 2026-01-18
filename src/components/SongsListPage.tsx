@@ -27,6 +27,7 @@ import songsCountData from "@/constants/songs.counts.fixed.json";
 import Breadcrumb from "./Breadcrumb";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
 import RandomSectionBanner from "./NewsBanner";
+import { CommentsSection } from "./CommentsSection";
 
 const ITEMS_PER_PAGE_DESKTOP = 10;
 const ITEMS_PER_PAGE_MOBILE = 10;
@@ -450,6 +451,13 @@ export default function SongsListPage() {
         }}
       >
         <RandomSectionBanner currentSection="songs" />
+        <Box sx={{ maxWidth: 1440, mx: "auto" }}>
+          <CommentsSection
+            pageType="article"
+            pageId="songs-list"
+            customSubtitle={t("preSubtitle")}
+          />
+        </Box>
       </Box>
     </ContainerGradientNoPadding>
   );

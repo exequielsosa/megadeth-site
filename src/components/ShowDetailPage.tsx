@@ -27,6 +27,7 @@ import {
 } from "@/types/show";
 import RandomSectionBanner from "./NewsBanner";
 import showsData from "@/constants/shows.json";
+import { CommentsSection } from "./CommentsSection";
 
 interface ShowDetailPageProps {
   show: Show;
@@ -469,6 +470,11 @@ export default function ShowDetailPage({ show }: ShowDetailPageProps) {
         <Box my={4}>
           <RandomSectionBanner currentSection="shows" />
         </Box>
+        <CommentsSection
+          pageType="article"
+          pageId={show.id}
+          title={show.venue + " - " + show.city + ", " + show.country}
+        />
       </Container>
     </ContainerGradientNoPadding>
   );

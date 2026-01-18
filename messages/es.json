@@ -37,7 +37,8 @@
     "top10Description": "Las canciones más interpretadas en vivo por Megadeth. Recuento a Octubre 2025",
     "position": "Posición",
     "titleTable": "Todas las canciones de Megadeth",
-    "otherSongsFromAlbum": "Otras canciones del álbum"
+    "otherSongsFromAlbum": "Otras canciones del álbum",
+    "preSubtitle": "¿Hay alguna canción que recuerdes y no esté en la lista?, ¡déjanosla en los comentarios!"
   },
   "interviews": {
     "title": "Entrevistas",
@@ -59,7 +60,8 @@
     "answer": "Respuesta",
     "text": "Texto",
     "video": "Video",
-    "backToInterviews": "Volver a entrevistas"
+    "backToInterviews": "Volver a entrevistas",
+    "preSubtitle": "¿Conoces alguna entrevista que no esté en la lista? ¡Déjanosla en los comentarios!"
   },
   "shows": {
     "title": "Shows Históricos",
@@ -79,7 +81,8 @@
     "watchOnYouTube": "Ver en YouTube",
     "searchOnYouTube": "Buscar en YouTube",
     "viewOnSetlistFm": "Ver en Setlist.fm",
-    "otherShowsFromEra": "Otros shows de la misma era"
+    "otherShowsFromEra": "Otros shows de la misma era",
+    "preSubtitle": "¿Hay algún show que recuerdes y nos quieras compartir?, ¡Dejanoslo en los comentarios!"
   },
   "bootlegs": {
     "titlePage": "Bootlegs",
@@ -101,7 +104,8 @@
     "watchOnYouTube": "Ver en YouTube",
     "searchOnYouTube": "Buscar en YouTube",
     "loadMore": "Cargar más",
-    "totalBootlegs": "{count} bootlegs encontrados"
+    "totalBootlegs": "{count} bootlegs encontrados",
+    "preSubtitle": "¿Hay algún Bootleg que recuerdes y nos quieras compartir?, ¡déjanoslo en los comentarios!"
   },
   "header": {
     "fanSite": "Megadeth • Fan",
@@ -476,7 +480,8 @@
   },
   "videos": {
     "title": "Videos",
-    "subtitle": "Videoclips oficiales, performances en vivo y contenido exclusivo de Megadeth"
+    "subtitle": "Videoclips oficiales, performances en vivo y contenido exclusivo de Megadeth",
+    "comment": "¿Nos falta algun video?, ¿Cuales son tus favoritos?, ¡Déjanos tu comentario!"
   },
   "dvds": {
     "title": "DVDs",
@@ -656,5 +661,20 @@
     "rating": "Calificación",
     "readMore": "Leer review completa",
     "backToReviews": "Volver a Reviews"
+  },
+  "comments": {
+    "title": "Comentarios",
+    "subtitle": "Deja tu comentario sobre",
+    "name": "Nombre",
+    "email": "Email",
+    "content": "Comentario",
+    "placeholder": "Escribe tu comentario (texto plano, sin enlaces)",
+    "submit": "Enviar comentario",
+    "posting": "Enviando...",
+    "loading": "Cargando comentarios...",
+    "none": "Aún no hay comentarios. ¡Sé el primero!",
+    "commentsTitle": "Comentarios",
+    "invalidEmail": "Ingresa un email válido",
+    "error": "Error al publicar comentario. Intenta nuevamente."
   }
 }
