@@ -3,7 +3,6 @@
 import { Box, Container, Stack, Typography, Button } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
 import ContainerGradient from "../components/atoms/ContainerGradient";
-import Countdown from "./Countdown";
 import Image from "next/image";
 import Divider from "@mui/material/Divider";
 import ArticleCard from "./ArticleCard";
@@ -18,6 +17,8 @@ import SiteUpdatesBanner from "./SiteUpdatesBanner";
 import siteUpdatesData from "@/constants/site-updates.json";
 import LastShowsCards from "./LastShowsCards";
 import FeaturedReviewBanner from "./FeaturedReviewBanner";
+import ArgentinaConcertBanner from "./ArgentinaConcertBanner";
+import { slugify } from "@/utils/slugify";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -31,7 +32,7 @@ export default function Hero() {
     .sort(
       (a, b) =>
         new Date(b.publishedDate).getTime() -
-        new Date(a.publishedDate).getTime()
+        new Date(a.publishedDate).getTime(),
     )
     .slice(0, 5);
 
@@ -73,17 +74,29 @@ export default function Hero() {
                 width: { xs: "300px", md: "600px" },
                 height: { xs: "300px", md: "600px" },
                 flexShrink: 0,
+                overflow: "hidden",
+                borderRadius: 0,
+                transition: "border-radius 0.3s ease",
+                "&:hover": {
+                  borderRadius: "24px",
+                },
               }}
             >
-              <Image
-                src="/images/megadeth-megadeth.jpg"
-                alt="Megadeth"
-                fill
-                style={{
-                  objectFit: "cover",
-                }}
-                priority
-              />
+              <Link
+                href="/discography/megadeth"
+                passHref
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <Image
+                  src="/images/megadeth-megadeth.jpg"
+                  alt="Megadeth"
+                  fill
+                  style={{
+                    objectFit: "cover",
+                  }}
+                  priority
+                />
+              </Link>
             </Box>
             <Box>
               <Stack spacing={2} sx={{ mt: 0 }}>
@@ -94,7 +107,6 @@ export default function Hero() {
                 >
                   {tAlbum("finalAlbumTitle")}
                 </Typography>
-
                 <Typography
                   variant="h5"
                   sx={{
@@ -105,15 +117,7 @@ export default function Hero() {
                 >
                   {tAlbum("albumName")}: &quot;{tAlbum("albumName")}&quot;
                 </Typography>
-
                 <Stack spacing={1.5}>
-                  <Typography
-                    variant="body1"
-                    sx={{ fontSize: { xs: 14, md: 17 } }}
-                  >
-                    <strong>{tAlbum("releaseDate")}:</strong>{" "}
-                    {tAlbum("releaseDateValue")}
-                  </Typography>
                   <Typography
                     variant="body1"
                     sx={{ fontSize: { xs: 14, md: 17 } }}
@@ -135,13 +139,7 @@ export default function Hero() {
                     <strong>{tAlbum("finalLineup")}:</strong>{" "}
                     {tAlbum("finalLineupValue")}
                   </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{ fontSize: { xs: 14, md: 17 } }}
-                  >
-                    <strong>{tAlbum("includes")}:</strong>{" "}
-                    {tAlbum("includesValue")}
-                  </Typography>
+
                   <Typography
                     variant="body1"
                     sx={{ fontSize: { xs: 14, md: 17 }, mt: 1 }}
@@ -166,8 +164,47 @@ export default function Hero() {
                       {tAlbum("officialStore")}
                     </Typography>
                   </Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{ fontSize: { xs: 14, md: 17 } }}
+                  >
+                    <strong>{tAlbum("updatedSections")}:</strong>{" "}
+                    <Typography
+                      component={Link}
+                      href="/discography"
+                      sx={{
+                        color: "primary.main",
+                        textDecoration: "none",
+                        fontWeight: 600,
+                        fontSize: "1.1rem",
+                        "&:hover": {
+                          color: "primary.dark",
+                          textDecoration: "underline",
+                        },
+                      }}
+                    >
+                      {tAlbum("discography")}
+                    </Typography>
+                    {" y "}
+                    <Typography
+                      component={Link}
+                      href="/songs"
+                      sx={{
+                        color: "primary.main",
+                        textDecoration: "none",
+                        fontWeight: 600,
+                        fontSize: "1.1rem",
+                        "&:hover": {
+                          color: "primary.dark",
+                          textDecoration: "underline",
+                        },
+                      }}
+                    >
+                      {tAlbum("songs")}
+                    </Typography>{" "}
+                    {tAlbum("withAllNews")}
+                  </Typography>
                 </Stack>
-
                 {/* Tracklist Section */}
                 <Box mt={3}>
                   <Typography
@@ -192,27 +229,45 @@ export default function Hero() {
                       "OBEY THE CALL",
                       "I AM WAR",
                       "THE LAST NOTE",
-                      "RIDE THE LIGHTNING (BONUS)",
+                      "RIDE THE LIGHTNING",
                     ].map((track, idx) => (
-                      <Typography
+                      <Link
                         key={track}
-                        variant="body2"
-                        sx={{ fontSize: { xs: 13, md: 16 }, pl: 1 }}
+                        href={`/songs/${slugify(track)}`}
+                        passHref
+                        style={{ textDecoration: "none", color: "inherit" }}
                       >
-                        <strong>{idx + 1}.</strong> {track}
-                      </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            fontSize: { xs: 13, md: 16 },
+                            pl: 1,
+                            cursor: "pointer",
+                            transition: "color 0.2s",
+                            "&:hover": {
+                              color: "primary.main",
+                            },
+                          }}
+                        >
+                          <strong>{idx + 1}.</strong> {track}
+                        </Typography>
+                      </Link>
                     ))}
                   </Stack>
                 </Box>
-
-                {/* Countdown Component */}
+                {/* Countdown Component
                 <Box mt={1}>
                   <Countdown />
-                </Box>
+                </Box> */}
               </Stack>
             </Box>
           </Box>
         </Stack>
+
+        {/* Banner de concierto en Argentina */}
+        <Box mt={4}>
+          <ArgentinaConcertBanner />
+        </Box>
 
         <FeaturedReviewBanner />
 
