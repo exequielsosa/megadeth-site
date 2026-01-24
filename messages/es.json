@@ -33,6 +33,7 @@
     "year": "Año",
     "timesPlayed": "Veces tocada",
     "timesPlayedLive": "Veces tocada en vivo",
+    "songArtwork": "Artwork de la Canción",
     "top10Title": "Top 10 Canciones Más Tocadas",
     "top10Description": "Las canciones más interpretadas en vivo por Megadeth. Recuento a Octubre 2025",
     "position": "Posición",
@@ -422,7 +423,9 @@
     "venue": "Tecnópolis",
     "date": "30 de Abril de 2026 - 21:00hs",
     "countdownTitle": "Cuenta regresiva para el show",
-    "imageAlt": "Megadeth en Argentina - Tecnópolis 2026"
+    "imageAlt": "Megadeth en Argentina - Tecnópolis 2026",
+    "buyTicketsText": "Comprá tus tickets en",
+    "fullticket": "Fullticket"
   },
   "video": {
     "defaultTitle": "Video de YouTube",

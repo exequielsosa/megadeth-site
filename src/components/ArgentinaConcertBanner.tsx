@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Box, Typography, Container, Grid } from "@mui/material";
+import { Box, Typography, Container, Grid, Button } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -142,7 +142,7 @@ export default function ArgentinaConcertBanner() {
         }}
       >
         <Image
-          src="/images/banners/banner-arg.jpg"
+          src="/images/banners/bannerarg3.jpg"
           alt={t("imageAlt")}
           fill
           style={{ objectFit: "cover" }}
@@ -210,11 +210,40 @@ export default function ArgentinaConcertBanner() {
             sx={{
               fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
               fontWeight: 500,
-              mb: { xs: 3, md: 4 },
+              mb: { xs: 0.5, md: 1 },
               textShadow: "0 2px 10px rgba(0,0,0,0.8)",
             }}
           >
             {t("date")}
+          </Typography>
+
+          {/* Link de compra de tickets */}
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: { xs: "0.875rem", sm: "1rem", md: "1.125rem" },
+              mb: { xs: 3, md: 4 },
+              textShadow: "0 2px 10px rgba(0,0,0,0.8)",
+            }}
+          >
+            {t("buyTicketsText")}{" "}
+            <Typography
+              component="a"
+              href="https://fullticket.com/tickets/ventas"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                color: "primary.light",
+                fontWeight: 700,
+                textDecoration: "underline",
+                transition: "color 0.2s ease",
+                "&:hover": {
+                  color: "primary.main",
+                },
+              }}
+            >
+              {t("fullticket")}
+            </Typography>
           </Typography>
 
           {/* Countdown */}
