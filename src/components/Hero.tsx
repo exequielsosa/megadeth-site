@@ -230,6 +230,8 @@ export default function Hero() {
                       "I AM WAR",
                       "THE LAST NOTE",
                       "RIDE THE LIGHTNING",
+                      "BLOODLUST",
+                      "NOBODY'S HERO",
                     ].map((track, idx) => (
                       <Link
                         key={track}

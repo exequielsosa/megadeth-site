@@ -250,7 +250,7 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
               sx={{
                 position: "relative",
                 aspectRatio: "1/1",
-                borderRadius: 2,
+                borderRadius: 1,
                 overflow: "hidden",
                 boxShadow: 4,
                 border: "1.5px solid",
@@ -359,6 +359,34 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                   ? renderLyricsWithBold(song.lyrics.en)
                   : t("lyricsNotAvailable")}
             </Box>
+
+            {/* Song Artwork */}
+            {song.album.songArtwork && (
+              <Box sx={{ mt: 4, mb: 3 }}>
+                <Typography variant="subtitle1" sx={{ mb: 2, fontWeight: 600 }}>
+                  {t("songArtwork")}
+                </Typography>
+                <Card sx={{ maxWidth: 400, boxShadow: 4 }}>
+                  <Box
+                    sx={{
+                      position: "relative",
+                      width: "100%",
+                      aspectRatio: "1/1",
+                      borderRadius: 1,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={song.album.songArtwork}
+                      alt={`${song.title} artwork`}
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </Box>
+                </Card>
+              </Box>
+            )}
+
             <Typography variant="subtitle1" sx={{ mt: 3, fontWeight: 600 }}>
               {t("musicians")}
             </Typography>

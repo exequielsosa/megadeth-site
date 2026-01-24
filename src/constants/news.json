@@ -1,5 +1,28 @@
 [
   {
+    "id": "nobodys-hero-2026",
+    "title": {
+      "es": "\"Nobody's Hero\" disponible solo por 6 DÍAS!",
+      "en": "\"Nobody's Hero\" is available for 6 DAYS ONLY!"
+    },
+    "description": {
+      "es": "Para celebrar la semana de lanzamiento, Megadeth ha publicado una edición digital expandida especial del álbum que incluye el tema exclusivo \"Nobody's Hero\", disponible hasta las 11:59pm del jueves 29 de enero (hora local).\n\n\"'Nobody's Hero' fue la primera canción en la que trabajamos durante la sesión, lo cual es gracioso porque no terminó en el álbum. Todo lo que habíamos escrito hasta ese momento tuvo que luchar por un lugar en el disco. Algunos riffs fueron reemplazados por otros mejores. Algunas canciones nunca se terminaron del todo, y otras llegaron a la cima. 'Nobody's Hero' ha estado dando vueltas por un tiempo y realmente muestra lo rápido que encontramos nuestro ritmo una vez que entramos al estudio, así que me alegra que finalmente vea la luz del día en nuestro lanzamiento digital exclusivo.\"\n- Dave Mustaine",
+      "en": "To celebrate release week Megadeth released a special expanded digital edition of the album including the exclusive track \"Nobody's Hero,\" available until 11:59pm on Thursday, January 29 (local time).\n\n\"'Nobody's Hero' was the first song we worked on during the session, which is funny because it didn't end up on the album. Everything we'd written up to that point had to fight for a place on the record. Some riffs were replaced by better ones. Some songs never quite got finished, and others rose to the top. 'Nobody's Hero' has been around for a while and it really shows how quickly we found our groove once we got into the studio, so I'm glad it's finally going to see the light of day in our exclusive digital release.\"\n- Dave Mustaine"
+    },
+    "imageUrl": "/images/albums/18-especial-edition.jpg",
+    "imageAlt": {
+      "es": "Edición Digital Especial de Megadeth",
+      "en": "Megadeth Special Digital Edition"
+    },
+    "imageCaption": {
+      "es": "Edición Digital Especial - Nobody's Hero",
+      "en": "Special Digital Edition - Nobody's Hero"
+    },
+    "publishedDate": "2026-01-24",
+    "youtubeVideoId": "MaPhlsnoG7k",
+    "commentsActive": true
+  },
+  {
     "id": "megadeth-talkshoplive-2026",
     "title": {
       "es": "Revivi los momentos destacados de Megadeth en TalkShopLive",
