@@ -24,16 +24,11 @@ import Breadcrumb from "./Breadcrumb";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
 import RandomSectionBanner from "./NewsBanner";
 import { CommentsSection } from "./CommentsSection";
+import { slugify } from "@/utils/slugify";
+import { renderLyricsWithBold } from "@/utils/renderLyrics";
 
 interface SongDetailPageProps {
   songId: string;
-}
-
-function songNameToUrl(songName: string): string {
-  return songName
-    .toLowerCase()
-    .replace(/[^a-z0-9 ]/gi, "")
-    .replace(/ /g, "-");
 }
 
 export default function SongDetailPage({ songId }: SongDetailPageProps) {
@@ -60,7 +55,7 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
       .filter((s) => s.album.title === song.album.title && s.id !== song.id)
       .sort(
         (a, b) =>
-          (a.details?.track_number || 0) - (b.details?.track_number || 0)
+          (a.details?.track_number || 0) - (b.details?.track_number || 0),
       );
   }, [song]);
 
@@ -263,13 +258,7 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                 cursor: "pointer",
               }}
             >
-              <Link
-                href={`/discography/${song.album.title
-                  .toLowerCase()
-                  .replace(/[^a-z0-9 ]/gi, "")
-                  .replace(/ /g, "-")}`}
-                passHref
-              >
+              <Link href={`/discography/${slugify(song.album.title)}`} passHref>
                 <Image
                   src={song.album.cover}
                   alt={song.album.title}
@@ -298,13 +287,7 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
               )}
             </Box>
             <Box pt={2}>
-              <Link
-                href={`/discography/${song.album.title
-                  .toLowerCase()
-                  .replace(/[^a-z0-9 ]/gi, "")
-                  .replace(/ /g, "-")}`}
-                passHref
-              >
+              <Link href={`/discography/${slugify(song.album.title)}`} passHref>
                 <Chip label={song.album.title} sx={{ mr: 1, mb: 1 }} />
               </Link>
               <Chip
@@ -369,15 +352,19 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
               }}
             >
               {showEs
-                ? song.lyrics?.es ?? t("lyricsNotAvailable")
-                : song.lyrics?.en ?? t("lyricsNotAvailable")}
+                ? song.lyrics?.es
+                  ? renderLyricsWithBold(song.lyrics.es)
+                  : t("lyricsNotAvailable")
+                : song.lyrics?.en
+                  ? renderLyricsWithBold(song.lyrics.en)
+                  : t("lyricsNotAvailable")}
             </Box>
             <Typography variant="subtitle1" sx={{ mt: 3, fontWeight: 600 }}>
               {t("musicians")}
             </Typography>
             <Grid container spacing={2} sx={{ mt: 1 }}>
               {song.credits.musicians.map((m) => {
-                const memberId = m.name.toLowerCase().replace(/ /g, "-");
+                const memberId = slugify(m.name);
                 const memberObj = (
                   membersData.members as Record<
                     string,
@@ -490,7 +477,7 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
                   <ListItem
                     key={albumSong.id}
                     component={Link}
-                    href={`/songs/${songNameToUrl(albumSong.title)}`}
+                    href={`/songs/${albumSong.id}`}
                     sx={{
                       py: 1.5,
                       px: 2,

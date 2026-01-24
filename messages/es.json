@@ -376,7 +376,7 @@
     "megadethHistory": "Historia de Megadeth"
   },
   "hero": {
-    "title": "Último disco · Megadeth",
+    "title": "Último disco \"Megadeth\"  · Ya disponible",
     "description": "Noticias, fechas y discografía de Megadeth. Curado para fans. Rápido, simple y full responsive.",
     "viewDates": "Ver fechas",
     "listenSingle": "Escuchar single",
@@ -389,8 +389,8 @@
   "album": {
     "finalAlbumTitle": "Álbum 17 / Final de Megadeth",
     "albumName": "Megadeth",
-    "releaseDate": "Fecha de lanzamiento",
-    "releaseDateValue": "23 de enero de 2026",
+    "releaseDate": "Ya a la venta",
+    "releaseDateValue": "",
     "firstSingle": "Singles",
     "firstSingleValue": "Tipping Point, I Don't Care y Let There Be Shred — ya lanzados",
     "producedBy": "Producido por",
@@ -399,7 +399,11 @@
     "finalLineupValue": "Dave Mustaine, Dirk Verbeuren, Teemu Mäntysaari y James LoMenzo",
     "includes": "Incluye",
     "includesValue": "Gira de despedida y libro de Mustaine",
-    "preOrder": "Pre-order",
+    "updatedSections": "Actualizadas las secciones",
+    "discography": "Discografía",
+    "songs": "Canciones",
+    "withAllNews": "con todas las novedades del nuevo disco",
+    "preOrder": "Compralo ahora",
     "officialStore": "Tienda oficial de Megadeth"
   },
   "countdown": {
@@ -407,7 +411,18 @@
     "days": "Días",
     "hours": "Horas",
     "minutes": "Minutos",
-    "seconds": "Segundos"
+    "seconds": "Segundos",
+    "daysShort": "D",
+    "hoursShort": "H",
+    "minutesShort": "Min",
+    "secondsShort": "Seg"
+  },
+  "argentinaConcert": {
+    "title": "Megadeth en Argentina",
+    "venue": "Tecnópolis",
+    "date": "30 de Abril de 2026 - 21:00hs",
+    "countdownTitle": "Cuenta regresiva para el show",
+    "imageAlt": "Megadeth en Argentina - Tecnópolis 2026"
   },
   "video": {
     "defaultTitle": "Video de YouTube",

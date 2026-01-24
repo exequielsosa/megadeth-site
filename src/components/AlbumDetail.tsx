@@ -29,6 +29,8 @@ import {
   getAlbumDescription,
   getMusicianInstrument,
 } from "@/utils/albumHelpers";
+import { slugify } from "@/utils/slugify";
+import { renderLyricsWithBold } from "@/utils/renderLyrics";
 import LyricsIcon from "@mui/icons-material/MusicNote";
 import InfoIcon from "@mui/icons-material/Info";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -256,10 +258,7 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                           href={
                             musician.name === "VA"
                               ? "/miembros"
-                              : `/miembros/${musician.name
-                                  .toLowerCase()
-                                  .replace(/[^a-z0-9 ]/gi, "")
-                                  .replace(/ /g, "-")}`
+                              : `/miembros/${slugify(musician.name)}`
                           }
                           passHref
                           legacyBehavior
@@ -419,9 +418,34 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
           onClose={handleCloseLyrics}
           maxWidth="md"
           fullWidth
+          PaperProps={{
+            sx: {
+              borderRadius: 2,
+              maxHeight: "85vh",
+            },
+          }}
         >
           <DialogTitle>{selectedTrack?.title}</DialogTitle>
-          <DialogContent>
+          <DialogContent
+            sx={{
+              "&::-webkit-scrollbar": {
+                width: "8px",
+              },
+              "&::-webkit-scrollbar-track": {
+                backgroundColor: "transparent",
+              },
+              "&::-webkit-scrollbar-thumb": {
+                backgroundColor: "rgba(0, 0, 0, 0.2)",
+                borderRadius: "4px",
+                "&:hover": {
+                  backgroundColor: "rgba(0, 0, 0, 0.3)",
+                },
+              },
+              // Para Firefox
+              scrollbarWidth: "thin",
+              scrollbarColor: "rgba(0, 0, 0, 0.2) transparent",
+            }}
+          >
             <Typography
               variant="body2"
               sx={{
@@ -430,9 +454,9 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                 lineHeight: 1.6,
               }}
             >
-              {selectedTrack?.lyrics ||
-                t("noLyrics") ||
-                "Letras no disponibles"}
+              {selectedTrack?.lyrics
+                ? renderLyricsWithBold(selectedTrack.lyrics)
+                : t("noLyrics") || "Letras no disponibles"}
             </Typography>
           </DialogContent>
           <DialogActions>

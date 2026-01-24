@@ -1,5 +1,136 @@
 ﻿[
   {
+    "id": "megadeth",
+    "title": "Megadeth",
+    "year": 2026,
+    "cover": "/images/albums/17-megadeth.jpg",
+    "label": "BlkIIBlk / Frontiers Records",
+    "producers": ["Dave Mustaine", "Chris Rakestraw"],
+    "description": {
+      "short": {
+        "es": "Último disco y despedida: cierre épico de una carrera legendaria.",
+        "en": "Final album and farewell: epic closure to a legendary career."
+      },
+      "extended": {
+        "es": "Un digno y emotivo cierre para la carrera de una de las bandas más influyentes del metal. Megadeth entrega un álbum que encapsula su legado, combinando la agresividad del thrash con melodías memorables y letras introspectivas.",
+        "en": "A worthy and emotional closure to the career of one of the most influential metal bands. Megadeth delivers an album that encapsulates their legacy, combining thrash aggression with memorable melodies and introspective lyrics."
+      }
+    },
+    "musicians": [
+      {
+        "name": "Dave Mustaine",
+        "instrument": {
+          "es": "Voz y guitarra rítmica",
+          "en": "Vocals and rhythm guitar"
+        }
+      },
+      {
+        "name": "Teemu Mäntysaari",
+        "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+      },
+      {
+        "name": "James LoMenzo",
+        "instrument": { "es": "Bajo", "en": "Bass" }
+      },
+      {
+        "name": "Dirk Verbeuren",
+        "instrument": { "es": "Batería", "en": "Drums" }
+      }
+    ],
+    "streaming": {
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mkaoG2b43n1gU2cr3Dt4r2Bt9T-BcQinM"
+    },
+    "tracks": [
+      {
+        "n": 1,
+        "title": "Tipping Point",
+        "duration": "4:29",
+        "writers": ["Dave Mustaine", "Teemu Mäntysaari"],
+        "lyrics": "[Instrumental Intro]\n\n[Verse 1]\nToday I may bleed, but tonight you will die\nSnatched in your sleep, in the blackest night\nYou buried the truth under layers of lies\nThere's no return, now you've crossed the line\n\n[Chorus]\nPush me, I push you back\nTipping point\nTipping point\n\n[Guitar Solo]\n\n[Verse 2]\nHiding your secrets out in plain sight\nDead men don't talk and bullets don't lie\nWatching the life drain out from your eyes\nCrossing my heart, how I hope you will die\n\n[Chorus]\nPush me, I push you back\nTipping point\nTipping point\n\n[Guitar Solo]\n\n[Bridge]\nI will invade your mind\nMake you fear the sound\nOf voices that aren't there\nWith no one else around\nYou try to stop the footsteps\nAnd stop the heart that beats\nYou will beg for silence\nYou will pray for peace, woah\n\n[Outro]\nYou won't defy me, you won't deny me\nI'm at my tipping point\nYou won't define me, you'll never find me\nI'm at my tipping point\nYou won't defy me, you won't deny me\nI'm at my tipping point\nYou won't define me, you'll never find me\nI'm at my tipping point"
+      },
+      {
+        "n": 2,
+        "title": "I Don't Care",
+        "duration": "3:10",
+        "writers": ["Dave Mustaine"],
+        "lyrics": "[Verse 1]\nI don't care if I'm out of line\nI don't care 'cause this life is mine\nI don't care, you don't like what I say\nI don't care and I won't obey\nI don't care if you're getting high\nI don't care when the truth is a lie\nI don't care when the rope gets tight\nI don't care if you live or die\nI don't care what the headline said\nI don't care if all hope is dead\nI don't care if I'm not your class\nI don't care, you can kiss my ass\n\n[Guitar Solo: Teemu Mäntysaari]\n\n[Chorus]\nHe was a hater and a thief, a maggot in dead meat\nA traitor and a creep, a jack-off and a sheep\nYou know a rat never learns, you get what you deserve\nYou gotta know that I just don't care\n\n[Post-Chorus]\nYou gotta know, gotta know, gotta know\nYou gotta know, gotta know, gotta know\nYou gotta know, gotta know, gotta know\nYou gotta know, gotta know, gotta know\n\n[Verse 2]\nI don't care if you're standing tall\nI don't care if you take the fall\nI don't care who you try to blame\nI don't care, I don't play that game\nI don't care if you're wrong or right\nI don't care if you came to fight\nI don't care if you call my bluff\nI don't care, enough is enough\n\n[Guitar Solo: Teemu Mäntysaari]\n\n[Chorus]\nHe was a hater and a thief, a maggot in dead meat\nA traitor and a creep, a jack-off and a sheep\nYou know a rat never learns, you get what you deserve\nYou gotta know that I just don't care\n\n[Guitar Solo: Dave Mustaine]\n\n[Guitar Solo: Teemu Mäntysaari]\n\n[Guitar Solo: Dave Mustaine]\n\n[Guitar Solo: Teemu Mäntysaari]\n\n[Chorus]\nHe was a hater and a thief, a maggot in dead meat\nA traitor and a creep, a jack-off and a sheep\nYou know a rat never learns, you get what you deserve\nYou gotta know that I just don't care\n\n[Post-Chorus]\nYou gotta know, gotta know, gotta know\nYou gotta know, gotta know, gotta know\nYou gotta know, gotta know, gotta know\nYou gotta know, gotta know, gotta know"
+      },
+      {
+        "n": 3,
+        "title": "Hey God?!",
+        "duration": "3:29",
+        "writers": ["Dave Mustaine", "Teemu Mäntysaari"],
+        "lyrics": "[Verse 1]\nHey, God\nI need a minute of your time\nI know that I've been missing lately\nI've had a lot of things on my mind\nHey, God\nI feel my life slipping away\nThere's so much left I wanna do\nThe years are passing by like days\n\n[Chorus]\nSometimes, I feel so insecure\nAs I walk these streets alone\n\n[Verse 2]\nHey, God\nIt feels like you're so far away\nI know that it was me that moved\nI never had that much to say\nHey, God\nI don't know why you care at all\nI'm always taking up your time\nI'm always missing when you call\n\n[Chorus]\nSometimes, I feel so insecure\nAs I walk these streets alone\nSo alone\n\n[Guitar Solo]\n\n[Guitar Solo]\n\n[Verse 3]\nHey, God\nI always take, I never give\nI know it doesn't look so good\nBut it ain't the way I wanna live\nHey, God\nThat's all I really got for now\nI thought that we'd have more to say\nPlease, let me know you're there somehow\n\n[Chorus]\nSometimes, I feel so insecure\nAs I walk these streets alone\nSometimes, I feel so insecure\nAs I walk these streets alone\n\n[Outro]\nCan you hear me?\nHey, God\nHey, God"
+      },
+      {
+        "n": 4,
+        "title": "Let There Be Shred",
+        "duration": "3:59",
+        "writers": ["Dave Mustaine", "Teemu Mäntysaari", "Dirk Verbeuren"],
+        "lyrics": "[Instrumental Intro]\n\n[Verse 1]\nThe stage has been lit, get up on your feet\nHearts start to pound, everyone get off your seat\nMy fingers spontaneously combust into flames\nDestroying pretenders, only ashes remain\n\n[Chorus]\nOn the day I was born, a guitar in my hands\nThe earth started rumbling a thunderous command\nTo bash and to thrash, to bang my head\nTo smash my guitar and let there be shred\n\n[Guitar Solo]\n\n[Verse 2]\nThe amps start to roar, a tsunami of sound\nControlling the air, shaking the ground\nGuitars are all screaming, they squeal with delight\nClawing fretboards away, at the speed of light\n\n[Chorus]\nOn the day I was born, a guitar in my hands\nThe earth started rumbling a thunderous command\nTo bash and to thrash, to bang my head\nTo smash my guitar and let there be shred\n\n[Guitar Solo]\n\n[Guitar Solo]\n\n[Verse 3]\nAt the end of it all, they are left in my wake\nOne by one they'd fall, one by one they'd break\nFaster than lightning, a machine gun on meth\nDead on arrival, a guitar beat to death\n\n[Chorus]\nOn the day I was born, a guitar in my hands\nThe earth started rumbling a thunderous command\nTo bash and to thrash, to bang my head\nTo smash my guitar and let there be shred"
+      },
+      {
+        "n": 5,
+        "title": "Puppet Parade",
+        "duration": "4:41",
+        "writers": ["Dave Mustaine", "Teemu Mäntysaari", "Dirk Verbeuren"],
+        "lyrics": "[Guitar Solo]\n\n[Verse 1]\nI punch your clock, I play a role\nBut every day it's the same\nThe party's loud, and the drinks are cold\nBut nothing dulls the pain\nI bite my tongue and sell the lie\nPretend that I belong\nAnother shot, another high, make it a double\nAnd make it strong\n\n[Pre-Chorus]\nNo voice, no choice\nYou must obey\n\n[Chorus]\nWhen the blood runs cold\nIn the plans we've made\nWhere the strings are pulled\nAnd the traps are laid\nWhere the lies are truth\nAnd our lives are trade\nAs we march in line\nIn a puppet parade\n\n[Verse 2]\nI ride the edge, I twist the blade\nJust try to spark a flame\nBut all the colors start to fade\nAnd blur into the same\nThey say I've got it all, yeah right\nA king without a crown\nBut when I crash against the floor\nI barely make a sound\n\n[Pre-Chorus]\nNo voice, no choice\nYou must obey\n\n[Chorus]\nWhen the blood runs cold\nIn the plans we've made\nWhere the strings are pulled\nAnd the traps are laid\nWhere the lies are truth\nAnd our lives are trade\nAs we march in line\nIn a puppet parade\n\n[Guitar Solo]\n\n[Bridge]\nStrings, tied to my back\nMust smile like a hangman, I know it's an act\nIt's a curse, tied to charade\nAs they dance for the crowd, in the puppet parade, ah\n\n[Guitar Solo]"
+      },
+      {
+        "n": 6,
+        "title": "Another Bad Day",
+        "duration": "3:38",
+        "writers": ["Dave Mustaine", "Teemu Mäntysaari"],
+        "lyrics": "[Verse 1]\nWoke up on the floor again\nNo idea just where I've been\nMy phone is dead, and the rent is due\nI lost my job and I lost a tooth\n\n[Chorus]\nIt's just another bad day\nAnother bad day\nAnother bad day\nIt's just another bad day\n\n[Instrumental Break]\n\n[Verse 2]\nI tried so hard to keep things straight\nBut every move just tempts my fate\nYou moved on, and I stayed behind\nTrapped in a life I can't rewind\n\n[Chorus]\nIt's just another bad day\nAnother bad day\nAnother bad day\nIt's just another bad day\n\n[Guitar Solo]\n\n[Verse 3]\nMy life's a mess, but I call it mine\nDusted dreams in a cluttered mind\nEvery scar is a line I drew\nOf evеrything that you put me through\n\n[Chorus]\nIt's just another bad day\nAnother bad day\nAnothеr bad day\nIt's just another bad day\nIt's just another bad day\nAnother bad day\nAnother bad day\nIt's just another bad day"
+      },
+      {
+        "n": 7,
+        "title": "Made to Kill",
+        "duration": "4:02",
+        "writers": [
+          "Dave Mustaine",
+          "Teemu Mäntysaari",
+          "Dirk Verbeuren",
+          "James LoMenzo"
+        ],
+        "lyrics": "[Guitar Solo]\n\n[Verse 1]\nBorn to lose, trained to fight\nHates the dark, defends the light\nTaught to pray, yet made to kill\nLife's a game, do as thou wilt\n\n[Refrain]\nWave the flag\nThen torch the town\nCome in peace\nThen burn it down\n\n[Verse 2]\nSmoke and fire, choke the dawn\nEvery trace of life is gone\nHot sun, the desert war\nBlood for gold, and guns will roar\nRed skies, bombs fall\nBlack smoke, a nation crawls\nFight for crude and oil fields\nThe mighty fall and the people kneel\n\n[Guitar Solo]\n\n[Chorus]\nDrones above, in desert skies\nTruth is sold, in streaming lies\nProfits grow, while children die\nThe people know that they won't survive\n\n[Guitar Solo]\n\n[Verse 3]\nBurning maps, foreign lands\nKings all drink the blood-soaked sand\nVotes are cast in smoke and steel\nYou say, \"We the people, what's the deal?\"\n\n[Refrain]\nWave the flag\nThen torch the town\nCome in peace\nThen burn it down\n\n[Verse 4]\nCold eyes, dead hands\nThe greedy own the desert lands\nRusty tanks, Saharan rain\nFleeting hope, and \"coming pain\"\nCrack a smile, bite your tongue\nPlay the fool or die too young\nIron mist on golden dunes\nFreedom fades underneath the moons\n\n[Guitar Solo]\n\n[Chorus]\nDrones above, in desert skies\nTruth is sold, in streaming lies\nProfits grow, while children die\nThe people know that they won't survive"
+      },
+      {
+        "n": 8,
+        "title": "Obey The Call",
+        "duration": "4:21",
+        "writers": ["Dave Mustaine", "Teemu Mäntysaari", "Dirk Verbeuren"],
+        "lyrics": "[Guitar Solo]\n\n[Verse 1]\nA cracked horizon\nAnd silent screams\nThere's burned-out cities\nThat haunt my dreams\nAnd there's ghosts in the gears\nOf the war machine\nIt feeds on faith\nBut it bleeds gasoline\n\n[Chorus]\nAnd the pawns will rise\nAnd empires fall\nAs the days unwind\nObey the call\n\n[Verse 2]\nFalse crusaders\nDressed in red\nAnd they write their laws\nWith molten lead\nFrostbitten prayers\nAnd coded lies\nAs we march down the path\nWhere all reason dies\n\n[Chorus]\nAnd the pawns will rise\nAnd empires fall\nAs the days unwind\nObey the call\n\n[Guitar Solo]\n\n[Chorus]\nAnd the pawns will rise\nAnd empires fall\nAs the days unwind\nObey the call\n\n[Guitar Solo]\n\n[Outro]\nObey the call!"
+      },
+      {
+        "n": 9,
+        "title": "I Am War",
+        "duration": "3:47",
+        "writers": ["Dave Mustaine", "Teemu Mäntysaari", "James LoMenzo"],
+        "lyrics": "[Verse 1]\nI know me\nI know myself\nI do not fear\nCountless battles ahead\nI will win\nThen I go to war\nSwifter than the wind\nAnd attack like fire\n\n[Chorus]\nI am war\nI am hurt and pain\nI am misery\nI am loss and sorrow\nI am war\n\n[Verse 2]\nTo know you\nI become you\nKnowing every fear\nOf each of my enemies\nYou go to war\nThen seek to win\nAppearing strong\nWhen clearly you are weak\n\n[Chorus]\nI am war\nI am hurt and pain\nI am misery\nI am loss and sorrow\nI am war\n\n[Guitar Solo]\n\n[Chorus]\nI am war\nI am hurt and pain\nI am misery\nI am loss and sorrow\nI am war\nI am hurt and pain\nI am misery\nI am loss and sorrow\nI am war\n\n[Outro]\nI am war\nI am war"
+      },
+      {
+        "n": 10,
+        "title": "The Last Note",
+        "duration": "5:31",
+        "writers": ["Dave Mustaine", "Teemu Mäntysaari"],
+        "lyrics": "[Intro]\nOne more spotlight (One more spotlight)\nStarts to fade to black (Starts to fade to black)\nOne more winding road (One more winding road)\nThat I won't come back (That I won't come back)\nThe roar I lived for (The roar I lived for)\nIt starts to die (It starts to die)\nAnd now it's time for me (And now it's time for me)\nTo say the long goodbye (To say the long goodbye)\n\n[Verse 1]\nEach mile, the road has worn me thin\nEach song has got beneath my skin\nThe strings and amps still scream and cry\nAnd I can't outrun the spinning hands of time\n\n[Pre-Chorus]\nOne last night before the silence falls\nOne last chord to echo through these walls\n\n[Chorus]\nThe final curtain falls, a quiet end to it all\nNow it's just memories in my mind\nJust fading lights and names, if I ever play again\nThen let this last note never die\n\n[Verse 2]\nI burned up my youth almost every night\nEach show became a battle and a fight\nRaised on chaos, fed by the crowd\nThe guitar got heavy, time to lay it down\n\n[Pre-Chorus]\nOne last night before the silence falls\nOne last chord to echo through these walls\n\n[Chorus]\nThe final curtain falls, a quiet end to it all\nNow it's just memories in my mind\nJust fading lights and names, if I ever play again\nThen let this last note never die\n\n[Guitar Solo]\n\n[Chorus]\nThe final curtain falls, a quiet end to it all\nNow it's just memories in my mind\nJust fading lights and names, if I ever play again\nThen let this last note never die\nThe final curtain falls, a quiet end to it all\nNow it's just memories in my mind\nJust fading lights and names, if I ever play again\nThen let this last note never die, never die\n\n[Outro]\nThey gave me gold\nThey gave me a name\nBut every deal\nWas signed in blood and flames\nSo here's my last will\nMy final testament, my sneer\nI came, I ruled\nNow I disappear"
+      },
+      {
+        "n": 11,
+        "title": "Ride The Lightning",
+        "duration": "6:12",
+        "writers": [
+          "James Hetfield",
+          "Lars Ulrich",
+          "Cliff Burton",
+          "Dave Mustaine"
+        ],
+        "lyrics": "[Instrumental Intro]\n\n[Verse 1]\nGuilty as charged, but damn it, it ain't right\nThere's someone else controlling me\nDeath in the air, strapped in the electric chair\nThis can't be happening to me\nWho made you, God to say\n\"I'll take your life from you\"?\n\n[Chorus]\nFlash before my eyes\nNow it's time to die\nBurning in my brain\nI can feel the flame\n\n[Verse 2]\nWait for the sign to flick the switch of death\nIt's the beginning of the end\nSweat, chilling cold, as I watch death unfold\nConsciousness, my only friend\nMy fingers grip with fear\nWhat am I doing herе?\n\n[Chorus]\nFlash before my eyеs\nNow it's time to die\nBurning in my brain\nI can feel the flame\n\n[Instrumental Break]\n\n[Bridge]\nSomeone help me\nOh please, God, help me\nThey're trying to take it all away\nI don't want to die (Ah)\n\n[Instrumental Break]\n\n[Guitar Solo]\n\n[Bridge]\nSomeone help me\nOh please, God, help me\nThey're trying to take it all away\nI don't want to die (Ah)\n\n[Instrumental Break]\n\n[Verse 3]\nTime moving slow, the minutes seem like hours\nThe final curtain call I see\nHow true is this? Just get it over with\nIf this is true, just let it be\nWakened by horrid scream\nFreed from this frightening dream\n\n[Chorus]\nFlash before my eyes\nNow it's time to die\nBurning in my brain\nI can feel the flame\n\n[Instrumental Outro]"
+      }
+    ]
+  },
+  {
     "id": "the-sick-the-dying-and-the-dead",
     "title": "The Sick, The Dying... and The Dead!",
     "year": 2022,

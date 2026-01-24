@@ -52,13 +52,13 @@ export async function generateMetadata({ params }: NewsPageProps) {
             },
           ]
         : article.youtubeVideoId
-        ? [
-            {
-              url: `https://img.youtube.com/vi/${article.youtubeVideoId}/maxresdefault.jpg`,
-              alt: article.title[locale],
-            },
-          ]
-        : [],
+          ? [
+              {
+                url: `https://img.youtube.com/vi/${article.youtubeVideoId}/maxresdefault.jpg`,
+                alt: article.title[locale],
+              },
+            ]
+          : [],
     },
     twitter: {
       card: "summary_large_image",
@@ -67,10 +67,10 @@ export async function generateMetadata({ params }: NewsPageProps) {
       images: article.imageUrl
         ? [`https://megadeth.com.ar${article.imageUrl}`]
         : article.youtubeVideoId
-        ? [
-            `https://img.youtube.com/vi/${article.youtubeVideoId}/maxresdefault.jpg`,
-          ]
-        : [],
+          ? [
+              `https://img.youtube.com/vi/${article.youtubeVideoId}/maxresdefault.jpg`,
+            ]
+          : [],
     },
   };
 }
@@ -91,7 +91,7 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
   // Formatear fecha
   const formattedDate = new Date(article.publishedDate).toLocaleDateString(
     locale === "es" ? "es-ES" : "en-US",
-    { year: "numeric", month: "long", day: "numeric" }
+    { year: "numeric", month: "long", day: "numeric" },
   );
 
   // JSON-LD para SEO
@@ -127,14 +127,14 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
           }),
         }
       : article.youtubeVideoId
-      ? {
-          "@type": "ImageObject",
-          url: `https://img.youtube.com/vi/${article.youtubeVideoId}/maxresdefault.jpg`,
-        }
-      : {
-          "@type": "ImageObject",
-          url: "https://megadeth.com.ar/images/meg-argentina.jpg",
-        },
+        ? {
+            "@type": "ImageObject",
+            url: `https://img.youtube.com/vi/${article.youtubeVideoId}/maxresdefault.jpg`,
+          }
+        : {
+            "@type": "ImageObject",
+            url: "https://megadeth.com.ar/images/meg-argentina.jpg",
+          },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://megadeth.com.ar${
@@ -202,6 +202,7 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
                 mb: 4,
                 color: "text.secondary",
                 lineHeight: 1.7,
+                whiteSpace: "pre-line",
               }}
             >
               {article.description[locale]}

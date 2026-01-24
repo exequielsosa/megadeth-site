@@ -9852,5 +9852,587 @@
       "en": "**Line up all of you and turn in your eyes**\n**You just won't need them anymore**\nAnd your **mind is ours to do with what we please**\n**Everything you own and everything you need**\n**Sacrifice you leaders: like it or not**\nOr else you're going down with ship; **death on the rocks**\n**Blind follow; blind lead**\nAll our **hopes and dreams, washed out to sea**\nAll your **money's ours to bankroll corrupt wars**\nYou **can't see what you're fighting for**\n**Trust your leaders as they send you out to die**\nThe **true face of evil can't be seen without eyes**\nAt the start of time; **many centuries ago**\nCame the **spawning of christ and the antichrist**\nAnd **darkness fell upon our people**\nAnd the **children, they were born faceless**\n**Without eyes they could not see**\n**Born unto themselves: they lived and they died**\nIn the **millennium of the blind**",
       "es": "**Pónganse todos en fila y entreguen sus ojos**\n**Ya no los necesitarán más**\nY su **mente es nuestra para hacer lo que nos plazca**\n**Todo lo que poseen y todo lo que necesitan**\n**Sacrifiquen a sus líderes: les guste o no**\nO se van a pique con el barco; **muerte en las rocas**\n**Ciego sigue; ciego guía**\nTodas nuestras **esperanzas y sueños, arrastrados al mar**\nTodo su **dinero es nuestro para financiar guerras corruptas**\n**No pueden ver por lo que están luchando**\n**Confíen en sus líderes mientras los envían a morir**\nLa **verdadera cara del mal no se puede ver sin ojos**\nAl comienzo del tiempo; **hace muchos siglos**\nVino la **generación de Cristo y el Anticristo**\nY la **oscuridad cayó sobre nuestra gente**\nY los **niños, nacieron sin rostro**\n**Sin ojos no podían ver**\n**Nacidos para sí mismos: vivieron y murieron**\nEn el **milenio de los ciegos**"
     }
+  },
+  {
+    "id": "tipping-point",
+    "title": "Tipping Point",
+    "album": {
+      "title": "Megadeth",
+      "year": 2026,
+      "cover": "/images/albums/17-megadeth.jpg"
+    },
+    "credits": {
+      "musicians": [
+        {
+          "name": "Dave Mustaine",
+          "id": "dave-mustaine",
+          "instrument": {
+            "es": "Voz y guitarra rítmica",
+            "en": "Vocals and rhythm guitar"
+          }
+        },
+        {
+          "name": "Teemu Mäntysaari",
+          "id": "teemu-mantysaari",
+          "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+        },
+        {
+          "name": "James LoMenzo",
+          "id": "james-lomenzo",
+          "instrument": { "es": "Bajo", "en": "Bass" }
+        },
+        {
+          "name": "Dirk Verbeuren",
+          "id": "dirk-verbeuren",
+          "instrument": { "es": "Batería", "en": "Drums" }
+        }
+      ],
+      "writers": {
+        "lyrics": ["Dave Mustaine"],
+        "music": ["Dave Mustaine", "Teemu Mäntysaari"]
+      }
+    },
+    "details": {
+      "track_number": 1,
+      "duration": "4:29"
+    },
+    "theme": {
+      "en": "This opening track sets a confrontational tone, exploring the moment of no return in a conflict. It's about a breaking point where the truth is unveiled, and the protagonist decides to push back against lies and deception.",
+      "es": "Esta pista de apertura establece un tono confrontativo, explorando el momento de no retorno en un conflicto. Trata sobre un punto de quiebre donde la verdad se revela y el protagonista decide contraatacar frente a las mentiras y el engaño."
+    },
+    "lyrics": {
+      "en": "[Instrumental Intro]\n\n[Verse 1]\n**Today I may bleed, but tonight you will die**\n**Snatched in your sleep, in the blackest night**\nYou buried the **truth under layers of lies**\nThere's **no return, now you've crossed the line**\n\n[Chorus]\n**Push me, I push you back**\n**Tipping point**\n**Tipping point**\n\n[Guitar Solo]\n\n[Verse 2]\n**Hiding your secrets out in plain sight**\n**Dead men don't talk and bullets don't lie**\nWatching the **life drain out from your eyes**\nCrossing my heart, how **I hope you will die**\n\n[Chorus]\n**Push me, I push you back**\n**Tipping point**\n**Tipping point**\n\n[Guitar Solo]\n\n[Bridge]\nI will **invade your mind**\nMake you **fear the sound**\nOf **voices that aren't there**\nWith **no one else around**\nYou try to stop the footsteps\nAnd stop the heart that beats\nYou will **beg for silence**\nYou will **pray for peace, woah**\n\n[Outro]\nYou **won't defy me, you won't deny me**\nI'm at my **tipping point**\nYou **won't define me, you'll never find me**\nI'm at my **tipping point**",
+      "es": "[Intro Instrumental]\n\n[Verso 1]\n**Hoy podré sangrar, pero esta noche morirás**\n**Arrancado de tus sueños en la oscuridad total**\nEnterraste la **verdad bajo capas de falsedad**\n**Ya no hay retorno, cruzaste el umbral**\n\n[Estribillo]\n**Presioname y te devolveré el golpe**\n**Punto de quiebre**\n**Punto de quiebre**\n\n[Solo de Guitarra]\n\n[Verso 2]\n**Escondiendo tus secretos a plena vista**\n**Los muertos no hablan y las balas no mienten**\nViéndote **perder la vida a través de tus ojos**\nLo juro por mi corazón, **cómo deseo que mueras**\n\n[Estribillo]\n**Presioname y te devolveré el golpe**\n**Punto de quiebre**\n**Punto de quiebre**\n\n[Solo de Guitarra]\n\n[Puente]\n**Invadiré tu mente**\nHaré que **temas al sonido**\nDe **voces que no están ahí**\nSin **nadie más alrededor**\nIntentás detener los pasos\nY detener el corazón que late\n**Suplicarás por silencio**\n**Rezarás por la paz, woah**\n\n[Outro]\nNo me desafiarás, no me negarás\nEstoy en mi **punto de quiebre**\nNo me definirás, nunca me encontrarás\nEstoy en mi **punto de quiebre**"
+    }
+  },
+  {
+    "id": "i-dont-care",
+    "title": "I Don't Care",
+    "album": {
+      "title": "Megadeth",
+      "year": 2026,
+      "cover": "/images/albums/17-megadeth.jpg"
+    },
+    "credits": {
+      "musicians": [
+        {
+          "name": "Dave Mustaine",
+          "id": "dave-mustaine",
+          "instrument": {
+            "es": "Voz y guitarra rítmica",
+            "en": "Vocals and rhythm guitar"
+          }
+        },
+        {
+          "name": "Teemu Mäntysaari",
+          "id": "teemu-mantysaari",
+          "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+        },
+        {
+          "name": "James LoMenzo",
+          "id": "james-lomenzo",
+          "instrument": { "es": "Bajo", "en": "Bass" }
+        },
+        {
+          "name": "Dirk Verbeuren",
+          "id": "dirk-verbeuren",
+          "instrument": { "es": "Batería", "en": "Drums" }
+        }
+      ],
+      "writers": {
+        "lyrics": ["Dave Mustaine"],
+        "music": ["Dave Mustaine"]
+      }
+    },
+    "details": {
+      "track_number": 2,
+      "duration": "3:10"
+    },
+    "theme": {
+      "en": "A raw and aggressive anthem of total indifference. It expresses a complete disregard for social norms, critics, and the opinions of others, reinforcing the idea of living life under one's own terms without looking back.",
+      "es": "Un himno crudo y agresivo de indiferencia total. Expresa un desprecio absoluto por las normas sociales, los críticos y las opiniones ajenas, reforzando la idea de vivir la vida bajo los propios términos sin mirar atrás."
+    },
+    "lyrics": {
+      "en": "[Verse 1]\n**I don't care if I'm out of line**\n**I don't care 'cause this life is mine**\nI don't care, **you don't like what I say**\nI don't care and **I won't obey**\nI don't care if you're getting high\nI don't care when the **truth is a lie**\nI don't care when the **rope gets tight**\nI don't care if you live or die\nI don't care what the **headline said**\nI don't care if **all hope is dead**\nI don't care if I'm not your class\n**I don't care, you can kiss my ass**\n\n[Guitar Solo: Teemu Mäntysaari]\n\n[Chorus]\nHe was a **hater and a thief, a maggot in dead meat**\nA **traitor and a creep, a jack-off and a sheep**\nYou know a **rat never learns, you get what you deserve**\nYou gotta know that **I just don't care**\n\n[Post-Chorus]\n**You gotta know, gotta know, gotta know**\n**You gotta know, gotta know, gotta know**\n**You gotta know, gotta know, gotta know**\n**You gotta know, gotta know, gotta know**\n\n[Verse 2]\nI don't care if you're standing tall\nI don't care if you **take the fall**\nI don't care who you try to blame\nI don't care, **I don't play that game**\nI don't care if you're wrong or right\nI don't care if you came to fight\nI don't care if you **call my bluff**\nI don't care, **enough is enough**\n\n[Guitar Solo: Teemu Mäntysaari]\n\n[Chorus]\nHe was a **hater and a thief, a maggot in dead meat**\nA **traitor and a creep, a jack-off and a sheep**\nYou know a **rat never learns, you get what you deserve**\nYou gotta know that **I just don't care**\n\n[Guitar Solo: Dave Mustaine]\n\n[Guitar Solo: Teemu Mäntysaari]\n\n[Guitar Solo: Dave Mustaine]\n\n[Guitar Solo: Teemu Mäntysaari]\n\n[Chorus]\nHe was a **hater and a thief, a maggot in dead meat**\nA **traitor and a creep, a jack-off and a sheep**\nYou know a **rat never learns, you get what you deserve**\nYou gotta know that **I just don't care**\n\n[Post-Chorus]\n**You gotta know, gotta know, gotta know**\n**You gotta know, gotta know, gotta know**\n**You gotta know, gotta know, gotta know**\n**You gotta know, gotta know, gotta know**",
+      "es": "[Verso 1]\nNo me importa si me paso de la raya\nNo me importa porque **esta vida es mía**\nNo me importa si no te gusta lo que digo\nNo me importa y **no pienso obedecer**\nNo me importa si te estás drogando\nNo me importa cuando la **verdad es una mentira**\nNo me importa cuando la **soga se aprieta**\nNo me importa si vivís o morís\nNo me importa lo que diga el titular\nNo me importa si **toda esperanza murió**\nNo me importa si no soy de tu clase\n**No me importa, me podés besar el culo**\n\n[Solo de Guitarra: Teemu Mäntysaari]\n\n[Estribillo]\nEra un **hater y un ladrón, una larva en carne podrida**\nUn **traidor y un tipo rastrero, un pajero y una oveja**\nSabés que una **rata nunca aprende, tenés lo que te merecés**\nTenés que saber que **simplemente no me importa**\n\n[Post-Estribillo]\n**Tenés que saber, tenés que saber**\n**Tenés que saber, tenés que saber**\n**Tenés que saber, tenés que saber**\n**Tenés que saber, tenés que saber**\n\n[Verso 2]\nNo me importa si estás en lo alto\nNo me importa si te **vas a pique**\nNo me importa a quién intentes culpar\nNo me importa, **yo no juego a ese juego**\nNo me importa si tenés razón o no\nNo me importa si viniste a pelear\nNo me importa si querés **ver mis cartas**\nNo me importa, **ya fue suficiente**\n\n[Solo de Guitarra: Teemu Mäntysaari]\n\n[Estribillo]\nEra un **hater y un ladrón, una larva en carne podrida**\nUn **traidor y un tipo rastrero, un pajero y una oveja**\nSabés que una **rata nunca aprende, tenés lo que te merecés**\nTenés que saber que **simplemente no me importa**\n\n[Solo de Guitarra: Dave Mustaine]\n\n[Solo de Guitarra: Teemu Mäntysaari]\n\n[Solo de Guitarra: Dave Mustaine]\n\n[Solo de Guitarra: Teemu Mäntysaari]\n\n[Estribillo]\nEra un **hater y un ladrón, una larva en carne podrida**\nUn **traidor y un tipo rastrero, un pajero y una oveja**\nSabés que una **rata nunca aprende, tenés lo que te merecés**\nTenés que saber que **simplemente no me importa**\n\n[Post-Estribillo]\n**Tenés que saber, tenés que saber**\n**Tenés que saber, tenés que saber**\n**Tenés que saber, tenés que saber**\n**Tenés que saber, tenés que saber**"
+    }
+  },
+  {
+    "id": "hey-god",
+    "title": "Hey God?!",
+    "album": {
+      "title": "Megadeth",
+      "year": 2026,
+      "cover": "/images/albums/17-megadeth.jpg"
+    },
+    "credits": {
+      "musicians": [
+        {
+          "name": "Dave Mustaine",
+          "id": "dave-mustaine",
+          "instrument": {
+            "es": "Voz y guitarra rítmica",
+            "en": "Vocals and rhythm guitar"
+          }
+        },
+        {
+          "name": "Teemu Mäntysaari",
+          "id": "teemu-mantysaari",
+          "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+        },
+        {
+          "name": "James LoMenzo",
+          "id": "james-lomenzo",
+          "instrument": { "es": "Bajo", "en": "Bass" }
+        },
+        {
+          "name": "Dirk Verbeuren",
+          "id": "dirk-verbeuren",
+          "instrument": { "es": "Batería", "en": "Drums" }
+        }
+      ],
+      "writers": {
+        "lyrics": ["Dave Mustaine"],
+        "music": ["Dave Mustaine", "Teemu Mäntysaari"]
+      }
+    },
+    "details": {
+      "track_number": 3,
+      "duration": "3:29"
+    },
+    "theme": {
+      "en": "An introspective conversation with the divine. The lyrics reflect vulnerability and the passage of time, questioning the distance between the human soul and God while acknowledging one's own shortcomings and the need for connection.",
+      "es": "Una conversación introspectiva con lo divino. Las letras reflejan vulnerabilidad y el paso del tiempo, cuestionando la distancia entre el alma humana y Dios, mientras se reconocen las propias fallas y la necesidad de conexión."
+    },
+    "lyrics": {
+      "en": "[Verse 1]\n**Hey, God**\n**I need a minute of your time**\nI know that **I've been missing lately**\nI've had **a lot of things on my mind**\n**Hey, God**\nI feel **my life slipping away**\nThere's **so much left I wanna do**\nThe **years are passing by like days**\n\n[Chorus]\n**Sometimes, I feel so insecure**\n**As I walk these streets alone**\n\n[Verse 2]\n**Hey, God**\nIt feels like **you're so far away**\nI know that **it was me that moved**\nI **never had that much to say**\n**Hey, God**\nI **don't know why you care at all**\nI'm **always taking up your time**\nI'm **always missing when you call**\n\n[Chorus]\n**Sometimes, I feel so insecure**\n**As I walk these streets alone**\n**So alone**\n\n[Guitar Solo]\n\n[Guitar Solo]\n\n[Verse 3]\n**Hey, God**\n**I always take, I never give**\nI know **it doesn't look so good**\nBut **it ain't the way I wanna live**\n**Hey, God**\nThat's **all I really got for now**\nI thought that **we'd have more to say**\nPlease, **let me know you're there somehow**\n\n[Chorus]\n**Sometimes, I feel so insecure**\n**As I walk these streets alone**\n**Sometimes, I feel so insecure**\n**As I walk these streets alone**\n\n[Outro]\n**Can you hear me?**\n**Hey, God**\n**Hey, God**",
+      "es": "[Verso 1]\n**Ey, Dios**\n**Necesito un minuto de Tu tiempo**\nSé que **estuve ausente últimamente**\nTuve **muchas cosas en la cabeza**\n**Ey, Dios**\nSiento que **la vida se me escapa**\nQueda **tanto por hacer**\nLos **años pasan como si fueran días**\n\n[Estribillo]\n**A veces, me siento tan inseguro**\n**Mientras camino solo por estas calles**\n\n[Verso 2]\n**Ey, Dios**\nSiento que **estás tan lejos**\nSé que **fui yo quien se alejó**\n**Nunca tuve mucho que decir**\n**Ey, Dios**\n**No sé por qué Te importa siquiera**\n**Siempre Te quito tiempo**\nY **nunca estoy cuando llamás**\n\n[Estribillo]\n**A veces, me siento tan inseguro**\n**Mientras camino solo por estas calles**\n**Tan solo**\n\n[Solo de Guitarra]\n\n[Solo de Guitarra]\n\n[Verso 3]\n**Ey, Dios**\n**Siempre recibo, nunca doy**\nSé que **no se ve nada bien**\nPero **no es la forma en que quiero vivir**\n**Ey, Dios**\nEso es **todo lo que tengo por ahora**\nPensé que **tendríamos más que decir**\nPor favor, **haceme saber de alguna forma que estás ahí**\n\n[Estribillo]\n**A veces, me siento tan inseguro**\n**Mientras camino solo por estas calles**\n**A veces, me siento tan inseguro**\n**Mientras camino solo por estas calles**\n\n[Outro]\n**¿Podés oírme?**\n**Ey, Dios**\n**Ey, Dios**"
+    }
+  },
+  {
+    "id": "let-there-be-shred",
+    "title": "Let There Be Shred",
+    "album": {
+      "title": "Megadeth",
+      "year": 2026,
+      "cover": "/images/albums/17-megadeth.jpg"
+    },
+    "credits": {
+      "musicians": [
+        {
+          "name": "Dave Mustaine",
+          "id": "dave-mustaine",
+          "instrument": {
+            "es": "Voz y guitarra rítmica",
+            "en": "Vocals and rhythm guitar"
+          }
+        },
+        {
+          "name": "Teemu Mäntysaari",
+          "id": "teemu-mantysaari",
+          "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+        },
+        {
+          "name": "James LoMenzo",
+          "id": "james-lomenzo",
+          "instrument": { "es": "Bajo", "en": "Bass" }
+        },
+        {
+          "name": "Dirk Verbeuren",
+          "id": "dirk-verbeuren",
+          "instrument": { "es": "Batería", "en": "Drums" }
+        }
+      ],
+      "writers": {
+        "lyrics": ["Dave Mustaine"],
+        "music": ["Dave Mustaine", "Teemu Mäntysaari", "Dirk Verbeuren"]
+      }
+    },
+    "details": {
+      "track_number": 4,
+      "duration": "3:59"
+    },
+    "theme": {
+      "en": "A high-octane tribute to the essence of Thrash Metal and the art of the electric guitar. The track celebrates the technical mastery (shredding) as a primal force of nature, framing the performer not just as a musician, but as a conduit for pure, unadulterated power that obliterates anything in its path.",
+      "es": "Un tributo de alto octanaje a la esencia del Thrash Metal y al arte de la guitarra eléctrica. La pista celebra la maestría técnica (el shredding) como una fuerza primordial de la naturaleza, presentando al intérprete no solo como un músico, sino como un conducto de poder puro y sin adulterar que arrasa con todo a su paso."
+    },
+    "lyrics": {
+      "en": "[Instrumental Intro]\n\n[Verse 1]\n**The stage has been lit, get up on your feet**\n**Hearts start to pound, everyone get off your seat**\nMy **fingers spontaneously combust into flames**\n**Destroying pretenders, only ashes remain**\n\n[Chorus]\n**On the day I was born, a guitar in my hands**\nThe **earth started rumbling a thunderous command**\nTo **bash and to thrash, to bang my head**\nTo **smash my guitar and let there be shred**\n\n[Guitar Solo]\n\n[Verse 2]\nThe **amps start to roar, a tsunami of sound**\n**Controlling the air, shaking the ground**\n**Guitars are all screaming, they squeal with delight**\n**Clawing fretboards away, at the speed of light**\n\n[Chorus]\n**On the day I was born, a guitar in my hands**\nThe **earth started rumbling a thunderous command**\nTo **bash and to thrash, to bang my head**\nTo **smash my guitar and let there be shred**\n\n[Guitar Solo]\n\n[Guitar Solo]\n\n[Verse 3]\nAt the **end of it all, they are left in my wake**\nOne by one they'd fall, one by one they'd break\n**Faster than lightning, a machine gun on meth**\n**Dead on arrival, a guitar beat to death**\n\n[Chorus]\n**On the day I was born, a guitar in my hands**\nThe **earth started rumbling a thunderous command**\nTo **bash and to thrash, to bang my head**\nTo **smash my guitar and let there be shred**",
+      "es": "[Intro Instrumental]\n\n[Verso 1]\n**El escenario se encendió, pónganse de pie**\nLos **corazones golpean, que todos salten del asiento**\nMis **dedos estallan en llamas espontáneas**\n**Destruyendo impostores, solo cenizas quedarán**\n\n[Estribillo]\n**El día en que nací, con una guitarra en mis manos**\nLa **tierra empezó a rugir un mandato estruendoso**\nPara **machacar y hacer thrash, para sacudir la cabeza**\nPara **destrozar mi guitarra y que haya shred**\n\n[Solo de Guitarra]\n\n[Verso 2]\nLos **equipos rugen, un tsunami de sonido**\n**Dominando el aire, sacudiendo el suelo**\nLas **guitarras gritan, chillan de puro placer**\n**Desgarrando los diapasones a la velocidad de la luz**\n\n[Estribillo]\n**El día en que nací, con una guitarra en mis manos**\nLa **tierra empezó a rugir un mandato estruendoso**\nPara **machacar y hacer thrash, para sacudir la cabeza**\nPara **destrozar mi guitarra y que haya shred**\n\n[Solo de Guitarra]\n\n[Solo de Guitarra]\n\n[Verso 3]\nAl **final de todo, quedan atrás en mi estela**\nUno a uno caen, uno a uno se quiebran\nMás **rápido que el rayo, una ametralladora con anfetas**\n**Muerto al llegar, una guitarra golpeada hasta morir**\n\n[Estribillo]\n**El día en que nací, con una guitarra en mis manos**\nLa **tierra empezó a rugir un mandato estruendoso**\nPara **machacar y hacer thrash, para sacudir la cabeza**\nPara **destrozar mi guitarra y que haya shred**"
+    }
+  },
+  {
+    "id": "puppet-parade",
+    "title": "Puppet Parade",
+    "album": {
+      "title": "Megadeth",
+      "year": 2026,
+      "cover": "/images/albums/17-megadeth.jpg"
+    },
+    "credits": {
+      "musicians": [
+        {
+          "name": "Dave Mustaine",
+          "id": "dave-mustaine",
+          "instrument": {
+            "es": "Voz y guitarra rítmica",
+            "en": "Vocals and rhythm guitar"
+          }
+        },
+        {
+          "name": "Teemu Mäntysaari",
+          "id": "teemu-mantysaari",
+          "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+        },
+        {
+          "name": "James LoMenzo",
+          "id": "james-lomenzo",
+          "instrument": { "es": "Bajo", "en": "Bass" }
+        },
+        {
+          "name": "Dirk Verbeuren",
+          "id": "dirk-verbeuren",
+          "instrument": { "es": "Batería", "en": "Drums" }
+        }
+      ],
+      "writers": {
+        "lyrics": ["Dave Mustaine"],
+        "music": ["Dave Mustaine", "Teemu Mäntysaari", "Dirk Verbeuren"]
+      }
+    },
+    "details": {
+      "track_number": 5,
+      "duration": "4:41"
+    },
+    "theme": {
+      "en": "A cynical look at the loss of individual agency within the machinery of fame and society. It depicts life as a choreographed performance where strings are pulled by unseen hands, and the 'performer' is forced to hide their pain behind a hollow, scripted smile.",
+      "es": "Una mirada cínica a la pérdida de la voluntad individual dentro de la maquinaria de la fama y la sociedad. Representa la vida como una actuación coreografiada donde los hilos son movidos por manos invisibles, y el 'intérprete' se ve obligado a esconder su dolor tras una sonrisa hueca y guionada."
+    },
+    "lyrics": {
+      "en": "[Guitar Solo]\n\n[Verse 1]\n**I punch your clock, I play a role**\n**But every day it's the same**\nThe **party's loud, and the drinks are cold**\nBut **nothing dulls the pain**\nI **bite my tongue and sell the lie**\n**Pretend that I belong**\nAnother **shot, another high, make it a double**\nAnd **make it strong**\n\n[Pre-Chorus]\n**No voice, no choice**\n**You must obey**\n\n[Chorus]\nWhen the **blood runs cold**\nIn the **plans we've made**\nWhere the **strings are pulled**\nAnd the **traps are laid**\nWhere the **lies are truth**\nAnd our **lives are trade**\nAs we **march in line**\nIn a **puppet parade**\n\n[Verse 2]\nI **ride the edge, I twist the blade**\nJust try to spark a flame\nBut **all the colors start to fade**\nAnd **blur into the same**\nThey say **I've got it all, yeah right**\nA **king without a crown**\nBut when **I crash against the floor**\nI **barely make a sound**\n\n[Pre-Chorus]\n**No voice, no choice**\n**You must obey**\n\n[Chorus]\nWhen the **blood runs cold**\nIn the **plans we've made**\nWhere the **strings are pulled**\nAnd the **traps are laid**\nWhere the **lies are truth**\nAnd our **lives are trade**\nAs we **march in line**\nIn a **puppet parade**\n\n[Guitar Solo]\n\n[Bridge]\n**Strings, tied to my back**\nMust **smile like a hangman, I know it's an act**\nIt's a **curse, tied to charade**\nAs they **dance for the crowd, in the puppet parade, ah**\n\n[Guitar Solo]",
+      "es": "[Solo de Guitarra]\n\n[Verso 1]\n**Ficho la entrada, cumplo un papel**\nPero **cada día es lo mismo**\nLa **fiesta aturde y los tragos están fríos**\nPero **nada anestesia el dolor**\nMe **muerdo la lengua y vendo la mentira**\n**Aparento que este es mi lugar**\nOtro **trago, otro viaje, hacelo doble**\nY **que pegue fuerte**\n\n[Pre-Estribillo]\n**Sin voz, sin elección**\n**Debés obedecer**\n\n[Estribillo]\nCuando la **sangre se congela**\nEn los **planes que trazamos**\nDonde **manejan los hilos**\nY las **trampas nos esperan**\nDonde las **mentiras son verdades**\nY nuestras **vidas son mercancía**\nMientras **marchamos en fila**\nEn un **desfile de marionetas**\n\n[Verso 2]\n**Camino por el borde, retuerzo la hoja**\nSolo intento encender una llama\nPero **todos los colores empiezan a desteñirse**\nY se **desdibujan en lo mismo**\nDicen que **lo tengo todo, sí, claro**\nUn **rey sin corona**\nPero cuando **me estrello contra el suelo**\n**Apenas emito un sonido**\n\n[Pre-Estribillo]\n**Sin voz, sin elección**\n**Debés obedecer**\n\n[Estribillo]\nCuando la **sangre se congela**\nEn los **planes que trazamos**\nDonde **manejan los hilos**\nY las **trampas nos esperan**\nDonde las **mentiras son verdades**\nY nuestras **vidas son mercancía**\nMientras **marchamos en fila**\nEn un **desfile de marionetas**\n\n[Solo de Guitarra]\n\n[Puente]\n**Hilos atados a mi espalda**\nTengo que **sonreír como un verdugo, sé que es una farsa**\nEs una **maldición, atada a esta parodia**\nMientras **bailan para la multitud, en el desfile de marionetas, ah**\n\n[Solo de Guitarra]"
+    }
+  },
+  {
+    "id": "another-bad-day",
+    "title": "Another Bad Day",
+    "album": {
+      "title": "Megadeth",
+      "year": 2026,
+      "cover": "/images/albums/17-megadeth.jpg"
+    },
+    "credits": {
+      "musicians": [
+        {
+          "name": "Dave Mustaine",
+          "id": "dave-mustaine",
+          "instrument": {
+            "es": "Voz y guitarra rítmica",
+            "en": "Vocals and rhythm guitar"
+          }
+        },
+        {
+          "name": "Teemu Mäntysaari",
+          "id": "teemu-mantysaari",
+          "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+        },
+        {
+          "name": "James LoMenzo",
+          "id": "james-lomenzo",
+          "instrument": { "es": "Bajo", "en": "Bass" }
+        },
+        {
+          "name": "Dirk Verbeuren",
+          "id": "dirk-verbeuren",
+          "instrument": { "es": "Batería", "en": "Drums" }
+        }
+      ],
+      "writers": {
+        "lyrics": ["Dave Mustaine"],
+        "music": ["Dave Mustaine", "Teemu Mäntysaari"]
+      }
+    },
+    "details": {
+      "track_number": 6,
+      "duration": "3:38"
+    },
+    "theme": {
+      "en": "A gritty, lo-fi narrative of personal decay and the crushing weight of bad luck. Unlike the epic themes of war, this track focuses on the mundane but devastating failures of daily life—job loss, addiction, and poverty—portraying a man trapped in a cycle of self-destruction where every scar is a map of past mistakes.",
+      "es": "Una narrativa cruda y 'lo-fi' de la decadencia personal y el peso aplastante de la mala suerte. A diferencia de los temas épicos de guerra, esta pista se centra en los fracasos mundanos pero devastadores de la vida diaria (la pérdida del empleo, las adicciones y la pobreza), retratando a un hombre atrapado en un ciclo de autodestrucción donde cada cicatriz es un mapa de errores pasados."
+    },
+    "lyrics": {
+      "en": "[Verse 1]\n**Woke up on the floor again**\n**No idea just where I've been**\nMy **phone is dead, and the rent is due**\nI **lost my job and I lost a tooth**\n\n[Chorus]\n**It's just another bad day**\n**Another bad day**\n**Another bad day**\n**It's just another bad day**\n\n[Instrumental Break]\n\n[Verse 2]\nI **tried so hard to keep things straight**\nBut **every move just tempts my fate**\nYou **moved on, and I stayed behind**\n**Trapped in a life I can't rewind**\n\n[Chorus]\n**It's just another bad day**\n**Another bad day**\n**Another bad day**\n**It's just another bad day**\n\n[Guitar Solo]\n\n[Verse 3]\n**My life's a mess, but I call it mine**\n**Dusted dreams in a cluttered mind**\nEvery **scar is a line I drew**\nOf **everything that you put me through**\n\n[Chorus]\n**It's just another bad day**\n**Another bad day**\n**Another bad day**\n**It's just another bad day**\n**It's just another bad day**\n**Another bad day**\n**Another bad day**\n**It's just another bad day**",
+      "es": "[Verso 1]\n**Desperté en el suelo otra vez**\n**Ni idea de dónde estuve metido**\nEl **celu muerto y el alquiler vencido**\n**Perdí el laburo y hasta un diente en el camino**\n\n[Estribillo]\n**Es solo otro día de mierda**\n**Otro día de mierda**\n**Otro día de mierda**\n**Es solo otro día de mierda**\n\n[Breve Instrumental]\n\n[Verso 2]\nHice lo **imposible por mantenerme en pie**\nPero **cada paso tienta a mi destino**\nVos **seguiste viaje y yo quedé atrás**\n**Atrapado en una vida que no puedo rebobinar**\n\n[Estribillo]\n**Es solo otro día de mierda**\n**Otro día de mierda**\n**Otro día de mierda**\n**Es solo otro día de mierda**\n\n[Solo de Guitarra]\n\n[Verso 3]\n**Mi vida es un desastre, pero es la mía**\n**Sueños empolvados en una mente caótica**\nCada **cicatriz es un trazo que dibujé**\nDe **todo lo que me hiciste pasar**\n\n[Estribillo]\n**Es solo otro día de mierda**\n**Otro día de mierda**\n**Otro día de mierda**\n**Es solo otro día de mierda**\n**Es solo otro día de mierda**\n**Otro día de mierda**\n**Otro día de mierda**\n**Es solo otro día de mierda**"
+    }
+  },
+  {
+    "id": "made-to-kill",
+    "title": "Made to Kill",
+    "album": {
+      "title": "Megadeth",
+      "year": 2026,
+      "cover": "/images/albums/17-megadeth.jpg"
+    },
+    "credits": {
+      "musicians": [
+        {
+          "name": "Dave Mustaine",
+          "id": "dave-mustaine",
+          "instrument": {
+            "es": "Voz y guitarra rítmica",
+            "en": "Vocals and rhythm guitar"
+          }
+        },
+        {
+          "name": "Teemu Mäntysaari",
+          "id": "teemu-mantysaari",
+          "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+        },
+        {
+          "name": "James LoMenzo",
+          "id": "james-lomenzo",
+          "instrument": { "es": "Bajo", "en": "Bass" }
+        },
+        {
+          "name": "Dirk Verbeuren",
+          "id": "dirk-verbeuren",
+          "instrument": { "es": "Batería", "en": "Drums" }
+        }
+      ],
+      "writers": {
+        "lyrics": ["Dave Mustaine"],
+        "music": [
+          "Dave Mustaine",
+          "Teemu Mäntysaari",
+          "Dirk Verbeuren",
+          "James LoMenzo"
+        ]
+      }
+    },
+    "details": {
+      "track_number": 7,
+      "duration": "4:02"
+    },
+    "theme": {
+      "en": "A sharp geopolitical critique of modern warfare and the military-industrial complex. The lyrics expose the paradox of nations that preach peace while engineering death for profit, utilizing drones and high-tech weaponry to dominate desert lands for oil and gold. It's a classic Mustaine exploration of systemic corruption and the disposable nature of human life in the eyes of the powerful.",
+      "es": "Una aguda crítica geopolítica a la guerra moderna y al complejo militar-industrial. Las letras exponen la paradoja de las naciones que predican la paz mientras orquestan la muerte con fines de lucro, utilizando drones y armamento de alta tecnología para dominar tierras desérticas por petróleo y oro. Es una exploración clásica de Mustaine sobre la corrupción sistémica y la naturaleza desechable de la vida humana a los ojos de los poderosos."
+    },
+    "lyrics": {
+      "en": "[Guitar Solo]\n\n[Verse 1]\n**Born to lose, trained to fight**\n**Hates the dark, defends the light**\n**Taught to pray, yet made to kill**\n**Life's a game, do as thou wilt**\n\n[Refrain]\n**Wave the flag**\n**Then torch the town**\n**Come in peace**\n**Then burn it down**\n\n[Verse 2]\n**Smoke and fire, choke the dawn**\n**Every trace of life is gone**\n**Hot sun, the desert war**\n**Blood for gold, and guns will roar**\n**Red skies, bombs fall**\n**Black smoke, a nation crawls**\n**Fight for crude and oil fields**\nThe **mighty fall and the people kneel**\n\n[Guitar Solo]\n\n[Chorus]\n**Drones above, in desert skies**\n**Truth is sold, in streaming lies**\n**Profits grow, while children die**\nThe **people know that they won't survive**\n\n[Guitar Solo]\n\n[Verse 3]\n**Burning maps, foreign lands**\n**Kings all drink the blood-soaked sand**\n**Votes are cast in smoke and steel**\nYou say, **\"We the people, what's the deal?\"**\n\n[Refrain]\n**Wave the flag**\n**Then torch the town**\n**Come in peace**\n**Then burn it down**\n\n[Verse 4]\n**Cold eyes, dead hands**\nThe **greedy own the desert lands**\n**Rusty tanks, Saharan rain**\n**Fleeting hope, and \"coming pain\"**\n**Crack a smile, bite your tongue**\n**Play the fool or die too young**\n**Iron mist on golden dunes**\n**Freedom fades underneath the moons**\n\n[Guitar Solo]\n\n[Chorus]\n**Drones above, in desert skies**\n**Truth is sold, in streaming lies**\n**Profits grow, while children die**\nThe **people know that they won't survive**",
+      "es": "[Solo de Guitarra]\n\n[Verso 1]\n**Nacido para perder, entrenado para luchar**\n**Odia la oscuridad, defiende la luz**\n**Instruido para rezar, pero hecho para matar**\n**La vida es un juego, hacé lo que quieras**\n\n[Refrain]\n**Ondeá la bandera**\n**Después incendiá el pueblo**\n**Venir en son de paz**\n**Para después quemarlo todo**\n\n[Verso 2]\n**Humo y fuego, asfixian el amanecer**\n**Todo rastro de vida desapareció**\n**Sol ardiente, la guerra del desierto**\n**Sangre por oro, y los cañones rugirán**\n**Cielos rojos, caen las bombas**\n**Humo negro, una nación se arrastra**\n**Luchando por el crudo y los campos de petróleo**\nLos **poderosos caen y el pueblo se arrodilla**\n\n[Solo de Guitarra]\n\n[Estribillo]\n**Drones arriba, en cielos desérticos**\n**La verdad se vende en mentiras por streaming**\n**Las ganancias crecen mientras los niños mueren**\nEl **pueblo sabe que no va a sobrevivir**\n\n[Solo de Guitarra]\n\n[Verso 3]\n**Mapas ardiendo, tierras extrañas**\n**Los reyes beben de la arena empapada en sangre**\n**Los votos se emiten entre humo y acero**\nY decís: **\"Nosotros, el pueblo, ¿qué onda?\"**\n\n[Refrain]\n**Ondeá la bandera**\n**Después incendiá el pueblo**\n**Venir en son de paz**\n**Para después quemarlo todo**\n\n[Verso 2]\n**Ojos fríos, manos muertas**\nLos **codiciosos son dueños de las tierras del desierto**\n**Tanques oxidados, lluvia sahariana**\n**Esperanza fugaz y un \"dolor por venir\"**\n**Forzá una sonrisa, mordete la lengua**\n**Hacete el tonto o morí demasiado joven**\n**Niebla de hierro sobre dunas doradas**\n**La libertad se desvanece bajo las lunas**\n\n[Solo de Guitarra]\n\n[Estribillo]\n**Drones arriba, en cielos desérticos**\n**La verdad se vende en mentiras por streaming**\n**Las ganancias crecen mientras los niños mueren**\nEl **pueblo sabe que no va a sobrevivir**"
+    }
+  },
+  {
+    "id": "obey-the-call",
+    "title": "Obey The Call",
+    "album": {
+      "title": "Megadeth",
+      "year": 2026,
+      "cover": "/images/albums/17-megadeth.jpg"
+    },
+    "credits": {
+      "musicians": [
+        {
+          "name": "Dave Mustaine",
+          "id": "dave-mustaine",
+          "instrument": {
+            "es": "Voz y guitarra rítmica",
+            "en": "Vocals and rhythm guitar"
+          }
+        },
+        {
+          "name": "Teemu Mäntysaari",
+          "id": "teemu-mantysaari",
+          "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+        },
+        {
+          "name": "James LoMenzo",
+          "id": "james-lomenzo",
+          "instrument": { "es": "Bajo", "en": "Bass" }
+        },
+        {
+          "name": "Dirk Verbeuren",
+          "id": "dirk-verbeuren",
+          "instrument": { "es": "Batería", "en": "Drums" }
+        }
+      ],
+      "writers": {
+        "lyrics": ["Dave Mustaine"],
+        "music": ["Dave Mustaine", "Teemu Mäntysaari", "Dirk Verbeuren"]
+      }
+    },
+    "details": {
+      "track_number": 8,
+      "duration": "4:21"
+    },
+    "theme": {
+      "en": "A dark exploration of socio-political manipulation and blind fanaticism. The track uses industrial and mechanical imagery—ghosts in the gears and blood-leaking war machines—to describe how empires are built on 'molten lead' and 'coded lies'. It serves as a stark warning about the inevitability of collapse when reason is replaced by unquestioning obedience to false crusaders.",
+      "es": "Una oscura exploración de la manipulación socio-política y el fanatismo ciego. La pista utiliza imágenes industriales y mecánicas (fantasmas en los engranajes y máquinas de guerra que sangran gasolina) para describir cómo los imperios se construyen sobre 'plomo fundido' y 'mentiras cifradas'. Sirve como una advertencia cruda sobre la inevitabilidad del colapso cuando la razón es reemplazada por la obediencia incuestionable a falsos cruzados."
+    },
+    "lyrics": {
+      "en": "[Guitar Solo]\n\n[Verse 1]\nA **cracked horizon**\nAnd **silent screams**\nThere's **burned-out cities**\nThat **haunt my dreams**\nAnd there's **ghosts in the gears**\nOf the **war machine**\nIt **feeds on faith**\nBut it **bleeds gasoline**\n\n[Chorus]\nAnd the **pawns will rise**\nAnd **empires fall**\nAs the **days unwind**\n**Obey the call**\n\n[Verse 2]\n**False crusaders**\n**Dressed in red**\nAnd they **write their laws**\nWith **molten lead**\n**Frostbitten prayers**\nAnd **coded lies**\nAs we **march down the path**\nWhere **all reason dies**\n\n[Chorus]\nAnd the **pawns will rise**\nAnd **empires fall**\nAs the **days unwind**\n**Obey the call**\n\n[Guitar Solo]\n\n[Chorus]\nAnd the **pawns will rise**\nAnd **empires fall**\nAs the **days unwind**\n**Obey the call**\n\n[Guitar Solo]\n\n[Outro]\n**Obey the call!**",
+      "es": "[Solo de Guitarra]\n\n[Verso 1]\nUn **horizonte agrietado**\nY **gritos silenciosos**\nHay **ciudades calcinadas**\nQue **rondan mis sueños**\nY hay **fantasmas en los engranajes**\nDe la **máquina de guerra**\nSe **alimenta de fe**\nPero **sangra gasolina**\n\n[Estribillo]\nY los **peones se alzarán**\nY los **imperios caerán**\nMientras los **días se agotan**\n**Obedece el llamado**\n\n[Verso 2]\n**Falsos cruzados**\n**Vestidos de rojo**\nY **escriben sus leyes**\nCon **plomo fundido**\n**Plegarias congeladas**\nY **mentiras cifradas**\nMientras **marchamos por la senda**\nDonde **toda razón muere**\n\n[Estribillo]\nY los **peones se alzarán**\nY los **imperios caerán**\nMientras los **días se agotan**\n**Obedece el llamado**\n\n[Solo de Guitarra]\n\n[Estribillo]\nY los **peones se alzarán**\nY los **imperios caerán**\nMientras los **días se agotan**\n**Obedece el llamado**\n\n[Solo de Guitarra]\n\n[Outro]\n**¡Obedece el llamado!**"
+    }
+  },
+  {
+    "id": "i-am-war",
+    "title": "I Am War",
+    "album": {
+      "title": "Megadeth",
+      "year": 2026,
+      "cover": "/images/albums/17-megadeth.jpg"
+    },
+    "credits": {
+      "musicians": [
+        {
+          "name": "Dave Mustaine",
+          "id": "dave-mustaine",
+          "instrument": {
+            "es": "Voz y guitarra rítmica",
+            "en": "Vocals and rhythm guitar"
+          }
+        },
+        {
+          "name": "Teemu Mäntysaari",
+          "id": "teemu-mantysaari",
+          "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+        },
+        {
+          "name": "James LoMenzo",
+          "id": "james-lomenzo",
+          "instrument": { "es": "Bajo", "en": "Bass" }
+        },
+        {
+          "name": "Dirk Verbeuren",
+          "id": "dirk-verbeuren",
+          "instrument": { "es": "Batería", "en": "Drums" }
+        }
+      ],
+      "writers": {
+        "lyrics": ["Dave Mustaine"],
+        "music": ["Dave Mustaine", "Teemu Mäntysaari", "James LoMenzo"]
+      }
+    },
+    "details": {
+      "track_number": 9,
+      "duration": "3:47"
+    },
+    "theme": {
+      "en": "A personification of conflict inspired by the philosophy of Sun Tzu's 'The Art of War'. The track delves into the psychology of the aggressor, emphasizing that true victory comes from understanding and exploiting the enemy's fears. It frames war not just as physical violence, but as a cold, calculating force of nature that thrives on the weaknesses and sorrows of humanity.",
+      "es": "Una personificación del conflicto inspirada en la filosofía de 'El Arte de la Guerra' de Sun Tzu. La pista profundiza en la psicología del agresor, enfatizando que la verdadera victoria proviene de comprender y explotar los miedos del enemigo. Presenta la guerra no solo como violencia física, sino como una fuerza de la naturaleza fría y calculadora que se alimenta de las debilidades y los pesares de la humanidad."
+    },
+    "lyrics": {
+      "en": "[Verse 1]\nI **know me**\nI **know myself**\nI **do not fear**\n**Countless battles ahead**\nI **will win**\nThen **I go to war**\n**Swifter than the wind**\nAnd **attack like fire**\n\n[Chorus]\n**I am war**\nI am **hurt and pain**\nI am **misery**\nI am **loss and sorrow**\n**I am war**\n\n[Verse 2]\nTo **know you**\nI **become you**\n**Knowing every fear**\nOf **each of my enemies**\nYou **go to war**\nThen **seek to win**\n**Appearing strong**\nWhen **clearly you are weak**\n\n[Chorus]\n**I am war**\nI am **hurt and pain**\nI am **misery**\nI am **loss and sorrow**\n**I am war**\n\n[Guitar Solo]\n\n[Chorus]\n**I am war**\nI am **hurt and pain**\nI am **misery**\nI am **loss and sorrow**\n**I am war**\nI am **hurt and pain**\nI am **misery**\nI am **loss and sorrow**\n**I am war**\n\n[Outro]\n**I am war**\n**I am war**",
+      "es": "[Verso 1]\n**Me conozco**\n**Sé quién soy**\n**No tengo miedo**\n**Incontables batallas por delante**\n**Voy a ganar**\nEntonces **voy a la guerra**\n**Más veloz que el viento**\nY **atacando como el fuego**\n\n[Estribillo]\n**Yo soy la guerra**\nSoy la **herida y el dolor**\nYo soy la **miseria**\nSoy la **pérdida y el lamento**\n**Yo soy la guerra**\n\n[Verso 2]\nPara **conocerte**\nMe **convierto en vos**\n**Conociendo cada miedo**\nDe **cada uno de mis enemigos**\n**Vas a la guerra**\nY después **buscás ganar**\n**Aparentando ser fuerte**\nCuando **claramente sos débil**\n\n[Estribillo]\n**Yo soy la guerra**\nSoy la **herida y el dolor**\nYo soy la **miseria**\nSoy la **pérdida y el lamento**\n**Yo soy la guerra**\n\n[Solo de Guitarra]\n\n[Estribillo]\n**Yo soy la guerra**\nSoy la **herida y el dolor**\nYo soy la **miseria**\nSoy la **pérdida y el lamento**\n**Yo soy la guerra**\nSoy la **herida y el dolor**\nYo soy la **miseria**\nSoy la **pérdida y el lamento**\n**Yo soy la guerra**\n\n[Outro]\n**Yo soy la guerra**\n**Yo soy la guerra**"
+    }
+  },
+  {
+    "id": "the-last-note",
+    "title": "The Last Note",
+    "album": {
+      "title": "Megadeth",
+      "year": 2026,
+      "cover": "/images/albums/17-megadeth.jpg"
+    },
+    "credits": {
+      "musicians": [
+        {
+          "name": "Dave Mustaine",
+          "id": "dave-mustaine",
+          "instrument": {
+            "es": "Voz y guitarra rítmica",
+            "en": "Vocals and rhythm guitar"
+          }
+        },
+        {
+          "name": "Teemu Mäntysaari",
+          "id": "teemu-mantysaari",
+          "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+        },
+        {
+          "name": "James LoMenzo",
+          "id": "james-lomenzo",
+          "instrument": { "es": "Bajo", "en": "Bass" }
+        },
+        {
+          "name": "Dirk Verbeuren",
+          "id": "dirk-verbeuren",
+          "instrument": { "es": "Batería", "en": "Drums" }
+        }
+      ],
+      "writers": {
+        "lyrics": ["Dave Mustaine"],
+        "music": ["Dave Mustaine", "Teemu Mäntysaari"]
+      }
+    },
+    "details": {
+      "track_number": 10,
+      "duration": "5:31"
+    },
+    "theme": {
+      "en": "A deeply emotional and definitive farewell that serves as the spiritual closure of the album. It reflects on the wear and tear of a lifetime spent on the road, where the roar of the crowd begins to fade into a quiet, introspective silence. The song frames Mustaine's legacy not through gold records, but through the visceral connection of a final, resonating chord that refuses to die even after he disappears from the stage.",
+      "es": "Una despedida profundamente emotiva y definitiva que sirve como cierre espiritual del álbum. Reflexiona sobre el desgaste de toda una vida en la carretera, donde el rugido de la multitud comienza a desvanecerse en un silencio tranquilo e introspectivo. La canción enmarca el legado de Mustaine no a través de discos de oro, sino a través de la conexión visceral de un último acorde resonante que se niega a morir incluso después de que él desaparezca del escenario."
+    },
+    "lyrics": {
+      "en": "[Intro]\n**One more spotlight** (One more spotlight)\n**Starts to fade to black** (Starts to fade to black)\n**One more winding road** (One more winding road)\n**That I won't come back** (That I won't come back)\nThe **roar I lived for** (The roar I lived for)\nIt **starts to die** (It starts to die)\nAnd now it's **time for me** (And now it's time for me)\nTo **say the long goodbye** (To say the long goodbye)\n\n[Verse 1]\nEach **mile, the road has worn me thin**\nEach **song has got beneath my skin**\nThe **strings and amps still scream and cry**\nAnd I **can't outrun the spinning hands of time**\n\n[Pre-Chorus]\n**One last night before the silence falls**\n**One last chord to echo through these walls**\n\n[Chorus]\nThe **final curtain falls, a quiet end to it all**\nNow it's **just memories in my mind**\nJust **fading lights and names, if I ever play again**\nThen **let this last note never die**\n\n[Verse 2]\nI **burned up my youth almost every night**\nEach **show became a battle and a fight**\n**Raised on chaos, fed by the crowd**\nThe **guitar got heavy, time to lay it down**\n\n[Pre-Chorus]\n**One last night before the silence falls**\n**One last chord to echo through these walls**\n\n[Chorus]\nThe **final curtain falls, a quiet end to it all**\nNow it's **just memories in my mind**\nJust **fading lights and names, if I ever play again**\nThen **let this last note never die**\n\n[Guitar Solo]\n\n[Chorus]\nThe **final curtain falls, a quiet end to it all**\nNow it's **just memories in my mind**\nJust **fading lights and names, if I ever play again**\nThen **let this last note never die**\nThe **final curtain falls, a quiet end to it all**\nNow it's **just memories in my mind**\nJust **fading lights and names, if I ever play again**\nThen **let this last note never die, never die**\n\n[Outro]\nThey **gave me gold**\nThey **gave me a name**\nBut **every deal**\nWas **signed in blood and flames**\nSo **here's my last will**\nMy **final testament, my sneer**\n**I came, I ruled**\n**Now I disappear**",
+      "es": "[Intro]\n**Un reflector más** (Un reflector más)\n**Empieza a fundirse a negro** (Empieza a fundirse a negro)\n**Un camino sinuoso más** (Un camino sinuoso más)\n**Del que no regresaré** (Del que no regresaré)\nEl **rugido por el que viví** (El rugido por el que viví)\n**Empieza a morir** (Empieza a morir)\nY ahora me **llegó el momento** (Y ahora me llegó el momento)\nDe **decir el largo adiós** (De decir el largo adiós)\n\n[Verso 1]\nCada **milla, el camino me ha consumido**\nCada **canción se me ha metido bajo la piel**\nLas **cuerdas y equipos todavía gritan y lloran**\nY **no puedo escapar de las manecillas del tiempo**\n\n[Pre-Estribillo]\n**Una última noche antes de que caiga el silencio**\n**Un último acorde para que resuene en estas paredes**\n\n[Estribillo]\n**Cae el telón final, un cierre silencioso para todo**\nAhora **solo son recuerdos en mi mente**\nSolo **luces y nombres que se apagan, si alguna vez vuelvo a tocar**\nEntonces **que esta última nota nunca muera**\n\n[Verso 2]\n**Quemé mi juventud casi cada noche**\nCada **show se volvió una batalla y una pelea**\n**Criado en el caos, alimentado por la multitud**\nLa **guitarra se hizo pesada, es hora de soltarla**\n\n[Pre-Estribillo]\n**Una última noche antes de que caiga el silencio**\n**Un último acorde para que resuene en estas paredes**\n\n[Estribillo]\n**Cae el telón final, un cierre silencioso para todo**\nAhora **solo son recuerdos en mi mente**\nSolo **luces y nombres que se apagan, si alguna vez vuelvo a tocar**\nEntonces **que esta última nota nunca muera**\n\n[Solo de Guitarra]\n\n[Estribillo]\n**Cae el telón final, un cierre silencioso para todo**\nAhora **solo son recuerdos en mi mente**\nSolo **luces y nombres que se apagan, si alguna vez vuelvo a tocar**\nEntonces **que esta última nota nunca muera**\n**Cae el telón final, un cierre silencioso para todo**\nAhora **solo son recuerdos en mi mente**\nSolo **luces y nombres que se apagan, si alguna vez vuelvo a tocar**\nEntonces **que esta última nota nunca muera, nunca muera**\n\n[Outro]\nMe **dieron oro**\nMe **dieron un nombre**\nPero **cada trato**\nFue **firmado en sangre y llamas**\nAsí que **aquí está mi última voluntad**\nMi **testamento final, mi mueca de desprecio**\n**Vine, dominé**\n**Ahora desaparezco**"
+    }
+  },
+  {
+    "id": "ride-the-lightning",
+    "title": "Ride the Lightning",
+    "album": {
+      "title": "Megadeth",
+      "year": 2026,
+      "cover": "/images/albums/17-megadeth.jpg"
+    },
+    "credits": {
+      "musicians": [
+        {
+          "name": "Dave Mustaine",
+          "id": "dave-mustaine",
+          "instrument": {
+            "es": "Voz y guitarra rítmica",
+            "en": "Vocals and rhythm guitar"
+          }
+        },
+        {
+          "name": "Teemu Mäntysaari",
+          "id": "teemu-mantysaari",
+          "instrument": { "es": "Guitarra líder", "en": "Lead guitar" }
+        },
+        {
+          "name": "James LoMenzo",
+          "id": "james-lomenzo",
+          "instrument": { "es": "Bajo", "en": "Bass" }
+        },
+        {
+          "name": "Dirk Verbeuren",
+          "id": "dirk-verbeuren",
+          "instrument": { "es": "Batería", "en": "Drums" }
+        }
+      ],
+      "writers": {
+        "lyrics": ["James Hetfield", "Dave Mustaine"],
+        "music": [
+          "James Hetfield",
+          "Lars Ulrich",
+          "Cliff Burton",
+          "Dave Mustaine"
+        ]
+      }
+    },
+    "details": {
+      "track_number": 11,
+      "duration": "6:12"
+    },
+    "theme": {
+      "en": "A powerful full-circle moment where Dave Mustaine reclaims a masterpiece he co-wrote. The song delivers a visceral first-person account of a prisoner facing execution by the electric chair. Beyond the horror of the event, it explores the loss of agency and the chilling realization that one's life is being terminated by a system that remains indifferent to the individual's humanity.",
+      "es": "Un poderoso momento de cierre de ciclo donde Dave Mustaine reclama una obra maestra que co-escribió. La canción ofrece un relato visceral en primera persona de un prisionero que se enfrenta a la ejecución en la silla eléctrica. Más allá del horror del evento, explora la pérdida de la voluntad y la escalofriante comprensión de que la vida de uno está siendo terminada por un sistema que permanece indiferente a la humanidad del individuo."
+    },
+    "lyrics": {
+      "en": "[Instrumental Intro]\n\n[Verse 1]\n**Guilty as charged, but damn it, it ain't right**\nThere's **someone else controlling me**\n**Death in the air, strapped in the electric chair**\nThis **can't be happening to me**\nWho made you, **God to say**\n**\"I'll take your life from you\"?**\n\n[Chorus]\n**Flash before my eyes**\n**Now it's time to die**\n**Burning in my brain**\n**I can feel the flame**\n\n[Verse 2]\n**Wait for the sign to flick the switch of death**\nIt's the **beginning of the end**\n**Sweat, chilling cold, as I watch death unfold**\n**Consciousness, my only friend**\nMy **fingers grip with fear**\n**What am I doing herе?**\n\n[Chorus]\n**Flash before my eyеs**\n**Now it's time to die**\n**Burning in my brain**\n**I can feel the flame**\n\n[Instrumental Break]\n\n[Bridge]\n**Someone help me**\n**Oh please, God, help me**\nThey're **trying to take it all away**\n**I don't want to die (Ah)**\n\n[Instrumental Break]\n\n[Guitar Solo]\n\n[Bridge]\n**Someone help me**\n**Oh please, God, help me**\nThey're **trying to take it all away**\n**I don't want to die (Ah)**\n\n[Instrumental Break]\n\n[Verse 3]\n**Time moving slow, the minutes seem like hours**\nThe **final curtain call I see**\nHow **true is this? Just get it over with**\nIf **this is true, just let it be**\n**Wakened by horrid scream**\n**Freed from this frightening dream**\n\n[Chorus]\n**Flash before my eyes**\n**Now it's time to die**\n**Burning in my brain**\n**I can feel the flame**\n\n[Instrumental Outro]",
+      "es": "[Intro Instrumental]\n\n[Verso 1]\n**Culpable de lo que me acusan, pero maldición, no está bien**\nHay **alguien más controlándome**\n**Muerte en el aire, atado a la silla eléctrica**\nEsto **no puede estar pasándome a mí**\n¿Quién te hizo **Dios para decir:**\n**\"Voy a quitarte la vida\"?**\n\n[Estribillo]\n**Un destello ante mis ojos**\n**Ahora es tiempo de morir**\n**Quemándose en mi cerebro**\n**Puedo sentir las llamas**\n\n[Verso 2]\n**Esperando la señal para accionar el interruptor de la muerte**\nEs el **comienzo del fin**\n**Sudor, frío escalofriante, mientras veo a la muerte desplegarse**\n**Consciencia, mi única amiga**\nMis **dedos se aferran con miedo**\n**¿Qué estoy haciendo acá?**\n\n[Estribillo]\n**Un destello ante mis ojos**\n**Ahora es tiempo de morir**\n**Quemándose en mi cerebro**\n**Puedo sentir las llamas**\n\n[Breve Instrumental]\n\n[Puente]\n**Alguien ayúdeme**\n**Oh, por favor, Dios, ayúdame**\nEstán **intentando quitármelo todo**\n**No quiero morir (Ah)**\n\n[Breve Instrumental]\n\n[Solo de Guitarra]\n\n[Puente]\n**Alguien ayúdeme**\n**Oh, por favor, Dios, ayúdame**\nEstán **intentando quitármelo todo**\n**No quiero morir (Ah)**\n\n[Breve Instrumental]\n\n[Verso 3]\nEl **tiempo se mueve lento, los minutos parecen horas**\n**Veo el llamado del telón final**\n¿Qué tan **real es esto? Solo terminen de una vez**\nSi **esto es verdad, que así sea**\n**Despertado por un grito horrendo**\n**Liberado de este sueño aterrador**\n\n[Estribillo]\n**Un destello ante mis ojos**\n**Ahora es tiempo de morir**\n**Quemándose en mi cerebro**\n**Puedo sentir las llamas**\n\n[Outro Instrumental]"
+    }
   }
 ]
