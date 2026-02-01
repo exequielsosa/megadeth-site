@@ -1,5 +1,27 @@
 [
   {
+    "id": "megadeth-2026-performance",
+    "title": {
+      "es": "Cómo viene rindiendo Megadeth (2026) hasta ahora",
+      "en": "How Megadeth (2026) is performing so far"
+    },
+    "description": {
+      "es": "A pocos días de su lanzamiento, Megadeth está teniendo un debut sólido y global. El disco entró directo al #1 en Australia (ARIA Albums y Vinyl Chart), alcanzó el #1 en iTunes Estados Unidos y debutó #3 en el UK Official Albums Chart, uno de los mercados más exigentes del mundo.\n\nMás allá de los números, el dato clave es la consistencia: el álbum respondió fuerte tanto en ventas físicas como digitales, confirmando que el interés no fue solo nostalgia o morbo por el \"último disco\", sino una recepción real y sostenida.\n\nTodavía faltan publicarse algunos rankings importantes (como Billboard y otros mercados europeos), pero el arranque deja una conclusión clara: Megadeth se despide con impacto, presencia global y un cierre comercial a la altura de su historia.",
+      "en": "Just days after its release, Megadeth is having a solid and global debut. The album went straight to #1 in Australia (ARIA Albums and Vinyl Chart), reached #1 on iTunes United States, and debuted at #3 on the UK Official Albums Chart, one of the world's most demanding markets.\n\nBeyond the numbers, the key fact is consistency: the album performed strongly in both physical and digital sales, confirming that the interest was not just nostalgia or morbid curiosity about the \"last album,\" but a real and sustained reception.\n\nSome important rankings (such as Billboard and other European markets) have yet to be published, but the start leaves a clear conclusion: Megadeth says goodbye with impact, global presence, and a commercial closing worthy of its history."
+    },
+    "imageUrl": "/images/site-updates/ranking.jpg",
+    "imageAlt": {
+      "es": "Megadeth alcanza el #1 en múltiples rankings globales",
+      "en": "Megadeth reaches #1 on multiple global charts"
+    },
+    "imageCaption": {
+      "es": "El álbum debutó fuerte en Australia, Estados Unidos y Reino Unido",
+      "en": "The album debuts strong in Australia, United States and United Kingdom"
+    },
+    "publishedDate": "2026-02-01",
+    "commentsActive": true
+  },
+  {
     "id": "no-talking-to-hames-hetfield",
     "title": {
       "es": "No me hablo con James desde hace años",
