@@ -84,6 +84,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Let there be Shread",
       "Shows en vivo de Megadeth",
       "Megadeth bootlegs",
+      "billboard Nro 1",
     ],
     en: [
       "Megadeth",
@@ -149,6 +150,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Let there be Shread",
       "Live shows Megadeth",
       "Megadeth bootlegs",
+      "billboard Nro 1",
     ],
   };
 
@@ -183,7 +185,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "article",
       locale: locale === "es" ? "es_AR" : "en_US",
       publishedTime: "2025-11-01T00:00:00Z",
-      modifiedTime: "2026-02-01T00:00:00Z",
+      modifiedTime: "2026-02-02T00:00:00Z",
       images: [
         {
           url: "/images/meg-argentina.jpg",
