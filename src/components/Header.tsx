@@ -58,23 +58,18 @@ export default function Header() {
   }, []);
 
   const mediaItems = [
-    { label: t("discography"), href: "/discography" },
-    { label: t("videos"), href: "/videos" },
-    { label: t("dvds"), href: "/dvds" },
-    { label: t("shows"), href: "/shows" },
-    { label: t("bootlegs"), href: "/bootlegs" },
+    { label: "Discografía", href: "/discography" },
+    { label: "Galería", href: "/galeria" },
+    { label: "Videos", href: "/videos" },
   ];
 
   const navigationItems = [
-    { label: t("home"), href: "/" },
-    { label: t("tour"), href: "/tour" },
-    { label: t("media"), href: "#", hasSubmenu: true },
-    { label: t("news"), href: "/noticias" },
-    { label: t("interviews"), href: "/entrevistas" },
-    { label: t("history"), href: "/historia" },
-    { label: t("lineups"), href: "/formaciones" },
-    { label: t("members"), href: "/miembros" },
-    { label: t("songs"), href: "/songs" },
+    { label: "Inicio", href: "/" },
+    { label: "Música", href: "/musica" },
+    { label: "Media", href: "#", hasSubmenu: true },
+    { label: "Noticias", href: "/noticias" },
+    { label: "Biografía", href: "/biografia" },
+    { label: "Tienda", href: "/tienda" },
   ];
 
   const handleLanguageClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -100,7 +95,7 @@ export default function Header() {
   };
 
   const isMediaActive = mediaItems.some((item) =>
-    pathname.startsWith(item.href)
+    pathname.startsWith(item.href),
   );
 
   // Función para obtener el color de fondo basado en scroll y modo
@@ -130,28 +125,18 @@ export default function Header() {
       >
         <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto" }}>
           <Toolbar sx={{ gap: 2, px: { xs: 0, sm: 0 } }}>
-            <Typography variant="h6" sx={{ fontWeight: 800 }}>
-              <Link
-                href="/"
-                style={{ textDecoration: "none", color: "inherit" }}
+            <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontWeight: 700,
+                  fontFamily: "var(--font-heading)",
+                  letterSpacing: 1,
+                }}
               >
-                <Box
-                  sx={{
-                    position: "relative",
-                    width: { xs: "150px", sm: "200px" },
-                    height: { xs: "35px", sm: "47px" },
-                  }}
-                >
-                  <Image
-                    src="/logo-megadeth.png"
-                    alt="Megadeth"
-                    fill
-                    style={{ objectFit: "contain" }}
-                    priority
-                  />
-                </Box>
-              </Link>
-            </Typography>
+                Taylor Swift
+              </Typography>
+            </Link>
 
             {/* Navegación centrada - solo desktop */}
             <Box
@@ -166,8 +151,8 @@ export default function Header() {
                   const isActive = item.hasSubmenu
                     ? isMediaActive
                     : item.href === "/"
-                    ? pathname === "/"
-                    : pathname.startsWith(item.href);
+                      ? pathname === "/"
+                      : pathname.startsWith(item.href);
 
                   if (item.hasSubmenu) {
                     return (
@@ -230,7 +215,7 @@ export default function Header() {
                               onClick={handleMediaMouseLeave}
                               sx={{
                                 backgroundColor: pathname.startsWith(
-                                  mediaItem.href
+                                  mediaItem.href,
                                 )
                                   ? "primary.main"
                                   : "transparent",
@@ -239,7 +224,7 @@ export default function Header() {
                                   : "text.primary",
                                 "&:hover": {
                                   backgroundColor: pathname.startsWith(
-                                    mediaItem.href
+                                    mediaItem.href,
                                   )
                                     ? "primary.dark"
                                     : "action.hover",
@@ -369,12 +354,15 @@ export default function Header() {
         >
           <Box sx={{ p: 2 }}>
             <Box width="100%" display="flex" justifyContent="center" mb={2}>
-              <Image
-                src="/logo-megadeth.png"
-                alt="Megadeth"
-                width={150}
-                height={30}
-              />
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: 700,
+                  fontFamily: "var(--font-heading)",
+                }}
+              >
+                Taylor Swift
+              </Typography>
             </Box>
 
             {/* Botones de acción para mobile */}
