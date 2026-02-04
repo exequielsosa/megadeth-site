@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getLocale } from "next-intl/server";
 import ThemeRegistry from "@/theme/ThemeRegistry";
@@ -8,17 +8,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const playfair = Playfair_Display({
+const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-heading",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-body",
+  variable: "--font-poppins",
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
@@ -27,62 +20,148 @@ export async function generateMetadata(): Promise<Metadata> {
 
   const keywordsByLocale = {
     es: [
-      "Taylor Swift",
-      "Fearless",
-      "1989",
-      "Folklore",
-      "Evermore",
-      "Midnights",
-      "Taylor's Version",
-      "discografía Taylor Swift",
-      "biografía Taylor Swift",
-      "noticias Taylor Swift",
-      "conciertos Taylor Swift",
-      "pop",
-      "country",
-      "folk",
-      "Estados Unidos",
-      "álbumes",
-      "actualizaciones",
-      "fotos",
-      "videos",
-      "tienda oficial",
-      "merchandising",
-      "playlist Spotify",
+      "Megadeth",
+      "Iron Maiden",
+      "Anthrax",
+      "Run For Your Lives Tour",
+      "gira conjunta",
+      "gira norteamericana",
+      "gira final",
+      "despedida",
+      "This Was Our Life Tour",
+      "última gira",
+      "tour",
+      "Dave Mustaine",
+      "conciertos",
+      "música",
+      "heavy metal",
+      "Argentina",
+      "Brasil",
+      "Chile",
+      "México",
+      "Sudamérica",
+      "álbum final",
+      "adelantos",
+      "Burnation",
+      "Portals to Oblivion",
+      "Sector 11",
+      "Tyranny of the Masses",
+      "Lethal Weapon",
+      "Alchemist",
+      "filtraciones",
+      "nuevas canciones",
+      "YouTube shorts",
+      "último tour",
+      "farewell tour",
+      "retiro",
+      "fin de una era",
+      "invitados especiales",
+      "colaboración metal",
+      "Ride The Lightning",
+      "Metallica",
+      "versión Megadeth",
+      "cover Metallica",
+      "James Hetfield",
+      "Dave Mustaine Metallica",
+      "noticia Ride The Lightning",
+      "gira Argentina",
+      "Megadeth en Argentina 2026",
+      "Megadeth Lima",
+      "Megadeth Bogotá",
+      "Megadeth Buenos Aires",
+      "Megadeth São Paulo",
+      "Megadeth Santiago",
+      "Megadeth México",
+      "I don't care",
+      "nuevo single Megadeth",
+      "álbum Megadeth 2026",
+      "Megadeth ultimo concierto en el espacio",
+      "Nuevo Single anunciado",
+      "Escucha el nuevo álbum de Megadeth antes que nadie",
+      "Megadeth en el cine",
+      "Entradas Argentina Tu Ticket 10/12 preventa",
+      "Estreno BEHIND THE MASK en Argentina",
+      "Let there be Shread",
+      "Shows en vivo de Megadeth",
+      "Megadeth bootlegs",
+      "billboard Nro 1",
     ],
     en: [
-      "Taylor Swift",
-      "Fearless",
-      "1989",
-      "Folklore",
-      "Evermore",
-      "Midnights",
-      "Taylor's Version",
-      "Taylor Swift discography",
-      "Taylor Swift biography",
-      "Taylor Swift news",
-      "Taylor Swift concerts",
-      "pop",
-      "country",
-      "folk",
-      "albums",
-      "updates",
-      "photos",
-      "videos",
-      "official store",
-      "merchandise",
-      "Spotify playlist",
+      "Megadeth",
+      "Iron Maiden",
+      "Anthrax",
+      "Run For Your Lives Tour",
+      "joint tour",
+      "North American tour",
+      "final tour",
+      "farewell",
+      "This Was Our Life Tour",
+      "last tour",
+      "tour",
+      "concert",
+      "Dave Mustaine",
+      "music",
+      "heavy metal",
+      "live shows",
+      "Argentina",
+      "Brazil",
+      "Chile",
+      "Mexico",
+      "South America",
+      "final album",
+      "previews",
+      "Burnation",
+      "Portals to Oblivion",
+      "Sector 11",
+      "Tyranny of the Masses",
+      "Lethal Weapon",
+      "Alchemist",
+      "leaks",
+      "new songs",
+      "YouTube shorts",
+      "retirement",
+      "end of an era",
+      "goodbye tour",
+      "special guests",
+      "metal collaboration",
+      "Ride The Lightning",
+      "Metallica",
+      "Megadeth version",
+      "Metallica cover",
+      "James Hetfield",
+      "Dave Mustaine Metallica",
+      "Ride The Lightning news",
+      "Megadeth Argentina tour",
+      "Megadeth in Argentina 2026",
+      "Megadeth Lima",
+      "Megadeth Bogotá",
+      "Megadeth Buenos Aires",
+      "Megadeth São Paulo",
+      "Megadeth Santiago",
+      "Megadeth Mexico",
+      "I don't care",
+      "new Megadeth single",
+      "Megadeth 2026 album",
+      "Megadeth last concert in space",
+      "BEHIND THE MASK premiere",
+      "Hear the new Megadeth album before anyone else",
+      "Megadeth in cinema",
+      "Argentina tickets Tu Ticket 10/12 presale",
+      "Let there be Shread",
+      "Live shows Megadeth",
+      "Megadeth bootlegs",
+      "billboard Nro 1",
     ],
   };
 
   const titleByLocale = {
-    es: "Taylor Swift: Discografía, biografía, noticias, fotos, videos, tienda y playlists",
-    en: "Taylor Swift: Discography, biography, news, photos, videos, store and playlists",
+    es: "MEGADETH: Argentina 2026, Noticias, actualidad, shows, letras, discografia, bootlegs y adelantos del álbum final & gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
+    en: "MEGADETH: Argentina 2026, News, updates, shows, lyrics, discography, bootlegs and previews of the final album & 2026 tour Argentina / LATAM — Iron Maiden + Anthrax",
   };
 
   const descriptionByLocale = {
-    es: "Sitio completo dedicado a Taylor Swift: discografía cronológica (incluyendo Taylor's Version), biografía detallada, noticias y eventos, galería de fotos, tienda oficial, reproductor de música con playlists, y diseño elegante pastel/vintage. Fan site no oficial.",
-    en: "Complete site dedicated to Taylor Swift: chronological discography (including Taylor's Version), detailed biography, news and events, photo gallery, official store, music player with curated playlists, and elegant pastel/vintage design. Unofficial fan site.",
+    es: "Todo sobre MEGADETH: Argentina 2026, Noticias, actualidad, discografía, shows, letras, bootlegs y adelantos del álbum final 'Megadeth' que se lanza el 23 de enero de 2026. Además, gira en Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México con Iron Maiden y Anthrax. Noticias, fechas y adelantos exclusivos. Sitio no oficial de fans.",
+    en: "All about MEGADETH: Argentina 2026, News, updates, discography, shows, lyrics, bootlegs and previews of the final album 'Megadeth' releasing on January 23, 2026. Also, tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico with Iron Maiden and Anthrax. Exclusive news, dates and previews. Unofficial fan site.",
   };
 
   return {
@@ -94,25 +173,25 @@ export async function generateMetadata(): Promise<Metadata> {
     keywords:
       keywordsByLocale[locale as keyof typeof keywordsByLocale] ||
       keywordsByLocale.es,
-    authors: [{ name: "Taylor Fans" }],
-    metadataBase: new URL("https://taylorswift.example.com"),
+    authors: [{ name: "Exequiel Sosa" }],
+    metadataBase: new URL("https://megadeth.com.ar"),
     openGraph: {
       title:
         titleByLocale[locale as keyof typeof titleByLocale] || titleByLocale.es,
       description:
         descriptionByLocale[locale as keyof typeof descriptionByLocale] ||
         descriptionByLocale.es,
-      siteName: "Taylor Swift Fan",
+      siteName: "Megadeth Fan",
       type: "article",
       locale: locale === "es" ? "es_AR" : "en_US",
-      publishedTime: "2026-02-04T00:00:00Z",
-      modifiedTime: "2026-02-04T00:00:00Z",
+      publishedTime: "2025-11-01T00:00:00Z",
+      modifiedTime: "2026-02-02T00:00:00Z",
       images: [
         {
-          url: "/images/taylor-cover.jpg",
+          url: "/images/meg-argentina.jpg",
           width: 1200,
           height: 630,
-          alt: "Taylor Swift",
+          alt: "Megadeth Argentina",
         },
       ],
     },
@@ -132,39 +211,62 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html
-      lang={locale}
-      className={`${playfair.variable} ${inter.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang={locale} className={poppins.variable} suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/webp" href="/icon.webp" />
-        {/* Schema.org Person (Taylor Swift) */}
+        {/* Schema.org MusicGroup */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Taylor Swift",
-              genre: ["Pop", "Country", "Folk"],
-              birthDate: "1989-12-13",
-              birthPlace: {
+              "@type": "MusicGroup",
+              name: "Megadeth",
+              genre: ["Heavy Metal", "Thrash Metal", "Speed Metal"],
+              foundingDate: "1983",
+              foundingLocation: {
                 "@type": "Place",
-                name: "Reading, Pennsylvania, US",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Los Angeles",
+                  addressRegion: "CA",
+                  addressCountry: "US",
+                },
               },
-              url: "https://taylorswift.example.com",
+              member: [
+                {
+                  "@type": "Person",
+                  name: "Dave Mustaine",
+                  roleName: "Lead Vocals, Rhythm & Lead Guitar",
+                },
+                {
+                  "@type": "Person",
+                  name: "James LoMenzo",
+                  roleName: "Bass",
+                },
+                {
+                  "@type": "Person",
+                  name: "Dirk Verbeuren",
+                  roleName: "Drums",
+                },
+                {
+                  "@type": "Person",
+                  name: "Teemu Mäntysaari",
+                  roleName: "Lead Guitar",
+                },
+              ],
+              url: "https://megadeth.com.ar",
               sameAs: [
-                "https://www.facebook.com/TaylorSwift",
-                "https://twitter.com/taylorswift13",
-                "https://www.instagram.com/taylorswift",
-                "https://www.youtube.com/taylorswift",
-                "https://en.wikipedia.org/wiki/Taylor_Swift",
+                "https://www.facebook.com/Megadeth",
+                "https://twitter.com/Megadeth",
+                "https://www.instagram.com/megadeth",
+                "https://www.youtube.com/megadeth",
+                "https://en.wikipedia.org/wiki/Megadeth",
               ],
               description:
                 locale === "es"
-                  ? "Taylor Swift es una artista estadounidense que evolucionó del country al pop y folk, con una discografía aclamada que incluye sus Taylor's Version."
-                  : "Taylor Swift is an American artist who evolved from country to pop and folk, with an acclaimed discography including her Taylor's Version releases.",
+                  ? "Megadeth es una banda estadounidense de thrash metal fundada en 1983 por Dave Mustaine. Con 16 álbumes de estudio y más de 38 millones de copias vendidas, es una de las bandas más influyentes del heavy metal."
+                  : "Megadeth is an American thrash metal band founded in 1983 by Dave Mustaine. With 16 studio albums and over 38 million copies sold, it is one of the most influential heavy metal bands.",
             }),
           }}
         />
