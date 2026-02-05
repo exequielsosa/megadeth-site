@@ -86,6 +86,8 @@ export async function GET(req: Request) {
     const res = NextResponse.json(cached, { status: 200 });
     res.headers.set("x-comments-cache", "HIT");
     res.headers.set("x-comments-version", String(version));
+    // Caché HTTP en CDN de Vercel
+    res.headers.set("Cache-Control", "public, s-maxage=60, stale-while-revalidate=120");
     return res;
   }
 
@@ -112,6 +114,8 @@ export async function GET(req: Request) {
   res.headers.set("x-comments-cache", "MISS");
   res.headers.set("x-comments-version", String(version));
   res.headers.set("x-comments-cache-ttl", String(GET_CACHE_TTL_SECONDS));
+  // Caché HTTP en CDN de Vercel
+  res.headers.set("Cache-Control", "public, s-maxage=60, stale-while-revalidate=120");
   return res;
 }
 

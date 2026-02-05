@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 import { kv } from "@vercel/kv";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 
 const BASE_URL = "https://api.setlist.fm/rest/1.0";
 
@@ -162,7 +162,7 @@ export async function GET(req: Request) {
       },
     });
 
-    return NextResponse.json(
+    const response = NextResponse.json(
       {
         ...result.value,
         meta: {
@@ -177,6 +177,11 @@ export async function GET(req: Request) {
       },
       { status: 200 }
     );
+    
+    // Caché HTTP en CDN de Vercel - mucho mayor porque los shows no cambian
+    response.headers.set("Cache-Control", "public, s-maxage=3600, stale-while-revalidate=86400");
+    
+    return response;
   } catch (e: any) {
     const status = Number(e?.status) || 500;
     return NextResponse.json(

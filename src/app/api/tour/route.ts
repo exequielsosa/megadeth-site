@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 import { kv } from "@vercel/kv";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 
 const BASE_URL = "https://api.setlist.fm/rest/1.0";
 const DEFAULT_MBID = "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e"; // Megadeth
@@ -160,7 +160,7 @@ export async function GET(req: Request) {
       },
     });
 
-    return NextResponse.json(
+    const response = NextResponse.json(
       {
         ...result.value,
         meta: {
@@ -176,6 +176,15 @@ export async function GET(req: Request) {
       },
       { status: 200 }
     );
+    
+    // Caché HTTP en CDN de Vercel
+    if (result.cache === "fresh" || result.cache === "stale") {
+      response.headers.set("Cache-Control", "public, s-maxage=300, stale-while-revalidate=3600");
+    } else {
+      response.headers.set("Cache-Control", "public, s-maxage=60, stale-while-revalidate=300");
+    }
+    
+    return response;
   } catch (e: any) {
     const status = Number(e?.status) || 500;
     return NextResponse.json(

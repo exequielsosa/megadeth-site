@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 import { kv } from "@vercel/kv";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 
 const BASE_URL = "https://api.setlist.fm/rest/1.0";
 
@@ -238,7 +238,7 @@ export async function GET(req: Request) {
 
     // si no está cacheado y no es warm, no hago 2do request (evita 429)
     if (!warm) {
-      return NextResponse.json(
+      const response = NextResponse.json(
         {
           latest: latestObj,
           yearsAgoPrev: null,
@@ -247,6 +247,9 @@ export async function GET(req: Request) {
         },
         { status: 200 }
       );
+      // Caché HTTP corto porque falta yearsAgoPrev
+      response.headers.set("Cache-Control", "public, s-maxage=60, stale-while-revalidate=300");
+      return response;
     }
 
     /** 3) warm: hago el 2do upstream call */
@@ -271,7 +274,7 @@ export async function GET(req: Request) {
     // cacheo (incluso null) por 24h fresco y 7 días retenido
     await kvSet(yearsKey, yearsAgoPrev ?? null, yearsFreshSeconds, yearsKeepSeconds);
 
-    return NextResponse.json(
+    const response = NextResponse.json(
       {
         latest: latestObj,
         yearsAgoPrev: yearsAgoPrev ?? null,
@@ -279,6 +282,11 @@ export async function GET(req: Request) {
       },
       { status: 200 }
     );
+    
+    // Caché HTTP largo porque combina ambos datasets
+    response.headers.set("Cache-Control", "public, s-maxage=600, stale-while-revalidate=3600");
+    
+    return response;
   } catch (e: any) {
     return NextResponse.json(
       { latest: null, yearsAgoPrev: null, error: "Unexpected error", details: String(e?.message ?? e) },
