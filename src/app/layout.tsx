@@ -185,7 +185,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "article",
       locale: locale === "es" ? "es_AR" : "en_US",
       publishedTime: "2025-11-01T00:00:00Z",
-      modifiedTime: "2026-02-02T00:00:00Z",
+      modifiedTime: "2026-02-07T00:00:00Z",
       images: [
         {
           url: "/images/meg-argentina.jpg",
