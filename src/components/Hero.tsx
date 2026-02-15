@@ -9,7 +9,6 @@ import ArticleCard from "./ArticleCard";
 import QuickAccessGrid from "./QuickAccessGrid";
 import TopSongsWidget from "./TopSongsWidget";
 import UpcomingToursWidget from "./UpcomingToursWidget";
-import newsData from "@/constants/news.json";
 import { NewsArticle } from "@/types/news";
 import Link from "next/link";
 import RandomSectionBanner from "./NewsBanner";
@@ -19,6 +18,8 @@ import LastShowsCards from "./LastShowsCards";
 import FeaturedReviewBanner from "./FeaturedReviewBanner";
 import ArgentinaConcertBanner from "./ArgentinaConcertBanner";
 import { slugify } from "@/utils/slugify";
+import { useState, useEffect } from "react";
+import { getAllNews } from "@/lib/supabase";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -27,14 +28,28 @@ export default function Hero() {
   const tIntro = useTranslations("heroIntro");
   const locale = useLocale() as "es" | "en";
 
-  // Obtener las últimas 3 noticias ordenadas por fecha
-  const latestNews = ([...newsData] as NewsArticle[])
-    .sort(
-      (a, b) =>
-        new Date(b.publishedDate).getTime() -
-        new Date(a.publishedDate).getTime(),
-    )
-    .slice(0, 5);
+  const [latestNews, setLatestNews] = useState<NewsArticle[]>([]);
+
+  // Cargar las últimas noticias desde Supabase
+  useEffect(() => {
+    async function loadNews() {
+      try {
+        const data = await getAllNews();
+        // Ordenar por fecha y obtener las primeras 5
+        const sorted = data
+          .sort(
+            (a, b) =>
+              new Date(b.publishedDate).getTime() -
+              new Date(a.publishedDate).getTime(),
+          )
+          .slice(0, 5);
+        setLatestNews(sorted);
+      } catch (error) {
+        console.error("Error loading news for hero:", error);
+      }
+    }
+    loadNews();
+  }, []);
 
   return (
     <ContainerGradient>
@@ -303,56 +318,65 @@ export default function Hero() {
         <Box sx={{ width: "100%" }} pt={3}>
           <LastShowsCards />
         </Box>
-        <Divider sx={{ mt: 8, mb: 4, width: "100%" }} />
 
-        {/* Sección de últimas noticias */}
-        <Typography
-          variant="h2"
-          sx={{ fontSize: { xs: 28, md: 48 }, mb: 4, mt: 4 }}
-        >
-          {tNews("latestNews")}
-        </Typography>
+        {/* Sección de últimas noticias - Solo mostrar si hay noticias */}
+        {latestNews.length > 0 && (
+          <>
+            <Divider sx={{ mt: 8, mb: 4, width: "100%" }} />
 
-        {latestNews.map((article: NewsArticle) => (
-          <Box key={article.id}>
-            <ArticleCard
-              title={article.title[locale]}
-              description={article.description[locale]}
-              imageUrl={article.imageUrl}
-              imageAlt={article.imageAlt?.[locale]}
-              imageCaption={article.imageCaption?.[locale]}
-              publishedDate={article.publishedDate}
-              linkUrl={article.linkUrl}
-              linkTarget={article.linkTarget}
-              youtubeVideoId={article.youtubeVideoId}
-              externalLinks={article.externalLinks?.map((link) => ({
-                url: link.url,
-                text: link.text[locale],
-              }))}
-            />
-            <Divider sx={{ my: 6, width: "100%" }} />
-          </Box>
-        ))}
+            <Typography
+              variant="h2"
+              sx={{ fontSize: { xs: 28, md: 48 }, mb: 4, mt: 4 }}
+            >
+              {tNews("latestNews")}
+            </Typography>
 
-        {/* Botón para ver todas las noticias */}
-        <Box sx={{ display: "flex", justifyContent: "center", my: 4 }}>
-          <Button
-            component={Link}
-            href="/noticias"
-            variant="contained"
-            size="large"
-            sx={{
-              px: 4,
-              py: 1.5,
-              fontSize: { xs: 16, md: 18 },
-              fontWeight: 600,
-              textTransform: "uppercase",
-            }}
-          >
-            {tNews("viewAllNews")}
-          </Button>
-        </Box>
-        <RandomSectionBanner currentSection="news" />
+            {latestNews.map((article: NewsArticle) => (
+              <Box key={article.id}>
+                <ArticleCard
+                  title={
+                    article.title?.[locale] ||
+                    (locale === "es" ? "Noticia sin título" : "Untitled news")
+                  }
+                  description={article.description?.[locale] || ""}
+                  imageUrl={article.imageUrl}
+                  imageAlt={article.imageAlt?.[locale]}
+                  imageCaption={article.imageCaption?.[locale]}
+                  publishedDate={article.publishedDate}
+                  linkUrl={article.linkUrl}
+                  linkTarget={article.linkTarget}
+                  youtubeVideoId={article.youtubeVideoId}
+                  externalLinks={article.externalLinks?.map((link) => ({
+                    url: link.url,
+                    text: link.text[locale],
+                  }))}
+                />
+                <Divider sx={{ my: 6, width: "100%" }} />
+              </Box>
+            ))}
+
+            {/* Botón para ver todas las noticias */}
+            <Box sx={{ display: "flex", justifyContent: "center", my: 4 }}>
+              <Button
+                component={Link}
+                href="/noticias"
+                variant="contained"
+                size="large"
+                sx={{
+                  px: 4,
+                  py: 1.5,
+                  fontSize: { xs: 16, md: 18 },
+                  fontWeight: 600,
+                  textTransform: "uppercase",
+                }}
+              >
+                {tNews("viewAllNews")}
+              </Button>
+            </Box>
+
+            <RandomSectionBanner currentSection="news" />
+          </>
+        )}
       </Container>
     </ContainerGradient>
   );

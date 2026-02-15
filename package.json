@@ -2,15 +2,23 @@
   "name": "megadeth-site",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "verify:supabase": "node scripts/verify-supabase.js",
+    "migrate:news": "node scripts/migrate-news.js",
+    "add:news": "node scripts/add-news.js",
+    "check:config": "node scripts/check-config.js",
+    "test:gemini": "node scripts/test-gemini.js",
+    "scrape:news": "node scripts/scrape-news.js"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@google/generative-ai": "^0.24.1",
     "@mui/icons-material": "^7.3.4",
     "@mui/material": "^7.3.4",
     "@next/third-parties": "^16.0.1",
@@ -19,13 +27,16 @@
     "next": "^15.5.9",
     "next-intl": "^4.3.9",
     "react": "^19.2.1",
-    "react-dom": "^19.2.1"
+    "react-dom": "^19.2.1",
+    "rss-parser": "^3.13.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^16.4.7",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
     "typescript": "^5"

@@ -2,18 +2,38 @@
 
 import { Container, Typography, Box, Tabs, Tab, Grid } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
-import newsData from "@/constants/news.json";
 import { NewsArticle } from "@/types/news";
 import Breadcrumb from "@/components/Breadcrumb";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import NewsCard from "@/components/NewsCard";
 import RandomSectionBanner from "@/components/NewsBanner";
+import { getAllNews } from "@/lib/supabase";
+import { getSafeTranslation } from "@/utils/safeContent";
+import VicLoader from "@/components/VicLoader";
 
 export default function NoticiasPage() {
   const t = useTranslations("news");
   const tb = useTranslations("breadcrumb");
   const locale = useLocale() as "es" | "en";
+
+  const [newsData, setNewsData] = useState<NewsArticle[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // Cargar noticias desde Supabase
+  useEffect(() => {
+    async function loadNews() {
+      try {
+        const data = await getAllNews();
+        setNewsData(data);
+      } catch (error) {
+        console.error("Error loading news:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadNews();
+  }, []);
 
   // Ordenar noticias por fecha más reciente primero
   const sortedNews = useMemo(
@@ -21,9 +41,9 @@ export default function NoticiasPage() {
       ([...newsData] as NewsArticle[]).sort(
         (a, b) =>
           new Date(b.publishedDate).getTime() -
-          new Date(a.publishedDate).getTime()
+          new Date(a.publishedDate).getTime(),
       ),
-    []
+    [newsData],
   );
 
   // Agrupar noticias por mes/año
@@ -33,7 +53,7 @@ export default function NoticiasPage() {
       const date = new Date(article.publishedDate);
       const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(
         2,
-        "0"
+        "0",
       )}`;
       if (!groups.has(key)) {
         groups.set(key, []);
@@ -85,21 +105,109 @@ export default function NoticiasPage() {
         position: index + 1,
         item: {
           "@type": "NewsArticle",
-          headline: article.title[locale],
-          description: article.description[locale].substring(0, 200),
+          headline: getSafeTranslation(
+            article.title,
+            locale,
+            locale === "es" ? "Noticia sin título" : "Untitled news"
+          ),
+          description: getSafeTranslation(
+            article.description,
+            locale,
+            locale === "es" ? "Descripción no disponible" : "Description unavailable"
+          ).substring(0, 200),
           datePublished: article.publishedDate,
           url: `https://megadeth.com.ar/${locale}/noticias/${article.id}`,
           image: article.imageUrl
             ? `https://megadeth.com.ar${article.imageUrl}`
             : article.youtubeVideoId
-            ? `https://img.youtube.com/vi/${article.youtubeVideoId}/hqdefault.jpg`
-            : "https://megadeth.com.ar/logo-megadeth.png",
+              ? `https://img.youtube.com/vi/${article.youtubeVideoId}/hqdefault.jpg`
+              : "https://megadeth.com.ar/logo-megadeth.png",
         },
       })),
     },
   };
 
   const currentMonthArticles = groupedByMonth[selectedTab]?.articles || [];
+
+  if (loading) {
+    return (
+      <ContainerGradientNoPadding>
+        <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              minHeight: "50vh",
+            }}
+          >
+            <VicLoader size={200} />
+            <Typography variant="body1" sx={{ mt: 3, color: "text.secondary" }}>
+              {locale === "es" ? "Cargando noticias..." : "Loading news..."}
+            </Typography>
+          </Box>
+        </Container>
+      </ContainerGradientNoPadding>
+    );
+  }
+
+  // Si no hay noticias en absoluto
+  if (newsData.length === 0) {
+    return (
+      <>
+        <ContainerGradientNoPadding>
+          <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+            <Breadcrumb items={[{ label: tb("news") }]} />
+          </Box>
+          <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
+            <Typography
+              variant="h1"
+              sx={{ fontSize: { xs: 32, md: 56 }, mb: 2, fontWeight: 700 }}
+            >
+              {t("title")}
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: { xs: 16, md: 18 },
+                mb: 4,
+                color: "text.secondary",
+              }}
+            >
+              {t("description")}
+            </Typography>
+
+            <Box
+              sx={{
+                textAlign: "center",
+                py: 8,
+                px: 2,
+                backgroundColor: "action.hover",
+                borderRadius: 2,
+              }}
+            >
+              <Typography variant="h6" gutterBottom>
+                {locale === "es"
+                  ? "No hay noticias disponibles"
+                  : "No news available"}
+              </Typography>
+              <Typography variant="body1" color="text.secondary">
+                {locale === "es"
+                  ? "Vuelve pronto para ver las últimas novedades sobre Megadeth."
+                  : "Check back soon for the latest Megadeth news."}
+              </Typography>
+            </Box>
+
+            <Box mt={4}>
+              <RandomSectionBanner currentSection="news" />
+            </Box>
+          </Container>
+        </ContainerGradientNoPadding>
+      </>
+    );
+  }
 
   return (
     <>

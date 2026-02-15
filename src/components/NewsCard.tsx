@@ -3,7 +3,6 @@
 import {
   Card,
   CardContent,
-  CardMedia,
   Typography,
   Box,
   Chip,
@@ -11,6 +10,8 @@ import {
 import { NewsArticle } from "@/types/news";
 import Link from "next/link";
 import { useLocale } from "next-intl";
+import { getSafeTranslation, formatSafeDate, getSafeUrl } from "@/utils/safeContent";
+import SafeNewsImage from "./SafeNewsImage";
 
 interface NewsCardProps {
   article: NewsArticle;
@@ -19,14 +20,31 @@ interface NewsCardProps {
 export default function NewsCard({ article }: NewsCardProps) {
   const locale = useLocale() as "es" | "en";
 
-  // Formatear fecha
-  const formattedDate = new Date(article.publishedDate).toLocaleDateString(
-    locale === "es" ? "es-ES" : "en-US",
-    { year: "numeric", month: "long", day: "numeric" }
+  // Obtener datos de forma segura con fallbacks
+  const title = getSafeTranslation(
+    article.title,
+    locale,
+    locale === "es" ? "Noticia sin título" : "Untitled news"
+  );
+  
+  const description = getSafeTranslation(
+    article.description,
+    locale,
+    locale === "es" ? "Descripción no disponible" : "Description unavailable"
+  );
+  
+  const imageAlt = getSafeTranslation(
+    article.imageAlt,
+    locale,
+    title
   );
 
+  // Formatear fecha de forma segura
+  const formattedDate = formatSafeDate(article.publishedDate, locale);
+
   const hasYouTube = !!article.youtubeVideoId;
-  const hasImage = !!article.imageUrl;
+  const imageUrl = getSafeUrl(article.imageUrl);
+  const hasImage = !!imageUrl;
 
   return (
     <Card
@@ -45,16 +63,18 @@ export default function NewsCard({ article }: NewsCardProps) {
       }}
     >
       {(hasImage || hasYouTube) && (
-        <CardMedia
-          component="img"
-          height="200"
-          image={
-            article.imageUrl ||
-            `https://img.youtube.com/vi/${article.youtubeVideoId}/hqdefault.jpg`
-          }
-          alt={article.imageAlt?.[locale] || article.title[locale]}
-          sx={{ objectFit: "cover" }}
-        />
+        <Box sx={{ position: "relative", width: "100%", height: 200 }}>
+          <SafeNewsImage
+            src={
+              imageUrl ||
+              `https://img.youtube.com/vi/${article.youtubeVideoId}/hqdefault.jpg`
+            }
+            alt={imageAlt}
+            fill
+            style={{ objectFit: "cover" }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </Box>
       )}
       <CardContent
         sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}
@@ -87,7 +107,7 @@ export default function NewsCard({ article }: NewsCardProps) {
             WebkitBoxOrient: "vertical",
           }}
         >
-          {article.title[locale]}
+          {title}
         </Typography>
         <Typography
           variant="body2"
@@ -102,7 +122,7 @@ export default function NewsCard({ article }: NewsCardProps) {
             minHeight: "4.5em", // 3 líneas * 1.5 line-height
           }}
         >
-          {article.description[locale]}
+          {description}
         </Typography>
       </CardContent>
     </Card>
