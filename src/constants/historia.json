@@ -1626,8 +1626,8 @@
             "en": "Megadeth: The Final Self-Titled Album"
           },
           "content": {
-            "es": "El álbum final de Megadeth, aún sin título revelado en ese momento (posteriormente se ha confirmado que será un disco homónimo, es decir, titulado Megadeth), está programado para lanzarse el 23 de enero de 2026. Como anticipo, el 3 de octubre de 2025 la banda publicó el primer sencillo, \"Tipping Point\", un tema thrasher furioso que los críticos alabaron por recordar el estilo clásico del grupo. \"Tipping Point\" es la primera grabación de estudio de Megadeth que presenta al nuevo guitarrista Teemu Mäntysaari (en lugar de Kiko) y marca también el retorno de James LoMenzo en bajo en un disco desde Endgame (2009). El video musical de la canción muestra a Mustaine y compañía tocando en una prisión abandonada, con elementos simbólicos como Dave en la silla eléctrica siendo acosado por demonios.",
-            "en": "Megadeth's final album, still without a revealed title at that time (it has subsequently been confirmed to be a self-titled album, i.e., titled Megadeth), is scheduled to be released on January 23, 2026. As a preview, on October 3, 2025, the band released the first single, \"Tipping Point\", a furious thrasher track that critics praised for recalling the group's classic style. \"Tipping Point\" is Megadeth's first studio recording featuring new guitarist Teemu Mäntysaari (instead of Kiko) and also marks James LoMenzo's return on bass on an album since Endgame (2009). The song's music video shows Mustaine and company playing in an abandoned prison, with symbolic elements like Dave in the electric chair being harassed by demons."
+            "es": "El álbum final de Megadeth, titulado oficialmente \"Megadeth\", fue lanzado el 23 de enero de 2026 como cierre de una carrera de más de cuatro décadas. Producido por Dave Mustaine y Chris Rakestraw, este decimoséptimo disco presenta al guitarrista Teemu Mäntysaari —su única aparición en estudio con la banda— y marca el regreso de James LoMenzo al bajo desde Endgame (2009). Desde el lanzamiento del primer sencillo, \"Tipping Point\", un tema thrash enérgico que evoca el sonido clásico del grupo, el disco generó grandes expectativas y posteriormente sumó otros sencillos que reforzaron su impacto.\n\nLa recepción crítica fue generalmente positiva, destacándose el equilibrio entre la agresividad tradicional de Megadeth y un tono retrospectivo que funciona como despedida. A nivel comercial, el álbum debutó en el número 1 del Billboard 200 —el primer disco en la historia de la banda en alcanzar esa posición— y también encabezó múltiples listas de ventas y rankings de rock, consolidando uno de los hitos más importantes de su trayectoria.\n\nEl video musical de \"Tipping Point\" muestra a Mustaine y la banda tocando en una prisión abandonada, con una estética simbólica que incluye a Dave en una silla eléctrica acosado por demonios, reforzando el clima oscuro y narrativo del adelanto.",
+            "en": "Megadeth’s final album, officially titled \"Megadeth\", was released on January 23, 2026, bringing to a close a career spanning more than four decades. Co-produced by Dave Mustaine and Chris Rakestraw, the seventeenth studio record features guitarist Teemu Mäntysaari —his only studio appearance with the band— and marks the return of bassist James LoMenzo since Endgame (2009). Beginning with the release of the lead single \"Tipping Point\", a furious thrash track recalling the band’s classic sound, anticipation for the album grew steadily as additional singles reinforced its momentum.\n\nCritical reception was generally positive, highlighting the balance between Megadeth’s traditional aggression and a reflective tone that serves as a farewell. Commercially, the album debuted at No. 1 on the Billboard 200 —the first time in the band’s history to reach that position— while also topping several sales and rock charts, marking one of the most significant achievements of their career.\n\nThe \"Tipping Point\" music video depicts Mustaine and the band performing inside an abandoned prison, featuring symbolic imagery such as Dave in an electric chair surrounded by demons, reinforcing the song’s dark and narrative atmosphere."
           },
           "layout": "text-with-images",
           "images": [
@@ -1637,12 +1637,40 @@
                 "es": "Single Tipping Point",
                 "en": "Single Tipping Point"
               },
-              "position": "left",
-              "layout": "float",
+              "position": "right",
+              "layout": "collage",
               "size": "large",
               "caption": {
                 "es": "El primer anticipo del álbum final",
                 "en": "The first preview of the final album"
+              }
+            }
+          ]
+        },
+        {
+          "id": "megadeth-number-one-legacy",
+          "title": {
+            "es": "El primer Nº 1 y un cierre histórico",
+            "en": "The First No. 1 and a Historic Farewell"
+          },
+          "content": {
+            "es": "Con el lanzamiento de su álbum homónimo en 2026, Megadeth alcanzó por primera vez en su historia el puesto Nº 1 del Billboard 200, un logro largamente esperado tras más de cuatro décadas de carrera dentro del thrash metal. El disco también lideró múltiples listas de ventas, rankings de vinilo y clasificaciones de rock en distintos mercados, confirmando no solo su impacto comercial sino también la vigencia artística de la banda en su etapa final.\n\nMás allá de los números, este hito funciona como un cierre simbólico: un reconocimiento masivo que llegó en el momento justo. Para una banda que definió el sonido y la intensidad del metal desde los años ochenta, despedirse con su mayor éxito comercial refuerza la idea de un final digno, coherente y poderoso. Lejos de ser una simple despedida, este Nº 1 consolida el legado de Megadeth como una de las fuerzas más influyentes y perdurables de la historia del metal.",
+            "en": "With the release of their self-titled album in 2026, Megadeth reached No. 1 on the Billboard 200 for the first time in their history—an achievement long anticipated after more than four decades within the thrash metal scene. The record also topped multiple sales charts, vinyl rankings, and rock classifications across several markets, confirming not only its commercial impact but also the band’s artistic relevance in its final chapter.\n\nBeyond the numbers, this milestone serves as a symbolic conclusion: a moment of widespread recognition arriving at exactly the right time. For a band that helped define the sound and intensity of metal since the 1980s, ending their journey with their greatest commercial success reinforces the sense of a dignified, coherent, and powerful farewell. Rather than a simple goodbye, this No. 1 cements Megadeth’s legacy as one of the most influential and enduring forces in metal history."
+          },
+          "layout": "text-with-images",
+          "images": [
+            {
+              "src": "/images/site-updates/nro1.jpg",
+              "alt": {
+                "es": "Primer nro. 1 en Billboard 200",
+                "en": "First No. 1 on Billboard 200"
+              },
+              "position": "left",
+              "layout": "collage",
+              "size": "large",
+              "caption": {
+                "es": "Megadeth se despide con su primer Nº 1 en Billboard 200",
+                "en": "Megadeth bids farewell with their first No. 1 on Billboard 200"
               }
             }
           ]
