@@ -1,11 +1,16 @@
 /**
  * Script de scraping automático de noticias sobre Megadeth
- * Ejecutado por GitHub Actions 2 veces por semana
+ * Ejecutado por GitHub Actions DIARIAMENTE con rotación de feeds
+ *
+ * Estrategia de rotación:
+ * - 2 feeds por día (dentro del límite de 100K tokens/día de Groq)
+ * - Feeds top (Blabbermouth, Loudwire, Metal Injection) se procesan 2 veces/semana
+ * - Feeds secundarios se procesan 1 vez/semana
  *
  * Flujo:
- * 1. Consume RSS feeds de sitios de metal
+ * 1. Consume RSS feeds de sitios de metal (2 por día según rotación)
  * 2. Filtra noticias sobre Megadeth
- * 3. Procesa con Gemini AI (traducción + optimización)
+ * 3. Procesa con Groq AI (traducción + optimización)
  * 4. Crea noticias vía API
  */
 
@@ -13,7 +18,7 @@ import Parser from "rss-parser";
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
-import { processNewsWithAI, isRelevantToMegadeth } from "../src/lib/gemini.ts";
+import { processNewsWithAI, isRelevantToMegadeth } from "../src/lib/ai.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,26 +29,56 @@ dotenv.config({ path: path.join(__dirname, "..", ".env") });
 const API_URL =
   process.env.NEWS_API_URL || "http://localhost:3000/api/news/create";
 const API_KEY = process.env.NEWS_API_KEY;
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
-// RSS Feeds de sitios de noticias de metal
-const RSS_FEEDS = [
-  // Originales (4)
-  "https://www.blabbermouth.net/feed/",
-  "https://loudwire.com/feed/",
-  "https://metalinjection.net/feed",
-  "https://www.metalsucks.net/feed/",
+// Definición de todos los feeds disponibles
+const ALL_FEEDS = {
+  blabbermouth: "https://www.blabbermouth.net/feed/",
+  loudwire: "https://loudwire.com/feed/",
+  metalinjection: "https://metalinjection.net/feed",
+  metalsucks: "https://www.metalsucks.net/feed/",
+  bravewords: "https://bravewords.com/rss",
+  loudersound: "https://www.loudersound.com/metal-hammer/feed",
+  revolver: "https://www.revolvermag.com/feed",
+  consequence: "https://consequence.net/category/heavy-consequence/feed/",
+  theprp: "https://www.theprp.com/feed/",
+  mariskalrock: "https://mariskalrock.com/feed",
+};
 
-  // Nuevas fuentes - Alta prioridad (5)
-  "https://bravewords.com/rss", // 300 items - Sitio especializado metal/rock
-  "https://www.loudersound.com/metal-hammer/feed", // 50 items - Revista legendaria desde 1983
-  "https://www.revolvermag.com/feed", // 9 items - Revista prestigiosa con exclusivas
-  "https://consequence.net/category/heavy-consequence/feed/", // 15 items - Gran sitio, sección heavy dedicada
-  "https://www.theprp.com/feed/", // 10 items - Punk/hardcore/metal especializado
+/**
+ * Rotación semanal de feeds (2 por día)
+ * Feeds top (blabbermouth, loudwire, metalinjection) aparecen 2 veces/semana
+ * El resto aparece 1 vez/semana
+ */
+const FEED_ROTATION = {
+  0: ["blabbermouth", "metalinjection"], // Domingo
+  1: ["loudwire", "bravewords"], // Lunes
+  2: ["blabbermouth", "loudersound"], // Martes (repite blabbermouth)
+  3: ["metalinjection", "metalsucks"], // Miércoles (repite metalinjection)
+  4: ["loudwire", "consequence"], // Jueves (repite loudwire)
+  5: ["revolver", "theprp"], // Viernes
+  6: ["mariskalrock", "blabbermouth"], // Sábado (3ra vez blabbermouth)
+};
 
-  // Medios españoles (1)
-  "https://mariskalrock.com/feed", // 12 items - Medio español de rock/metal
-];
+/**
+ * Obtiene los feeds que deben procesarse hoy según el día de la semana
+ * @returns {string[]} Array de URLs de feeds para procesar hoy
+ */
+function getTodaysFeeds() {
+  const today = new Date().getDay(); // 0=Domingo, 1=Lunes, ..., 6=Sábado
+  const feedKeys = FEED_ROTATION[today];
+  const feedUrls = feedKeys.map((key) => ALL_FEEDS[key]);
+
+  console.log(
+    `📅 Día de la semana: ${today} (${["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"][today]})`,
+  );
+  console.log(`🎯 Feeds programados: ${feedKeys.join(", ")}`);
+
+  return feedUrls;
+}
+
+// RSS Feeds que se procesarán HOY
+const RSS_FEEDS = getTodaysFeeds();
 
 const parser = new Parser({
   customFields: {
@@ -244,8 +279,8 @@ async function main() {
     process.exit(1);
   }
 
-  if (!GEMINI_API_KEY) {
-    console.error("❌ ERROR: GEMINI_API_KEY no configurada");
+  if (!GROQ_API_KEY) {
+    console.error("❌ ERROR: GROQ_API_KEY no configurada");
     process.exit(1);
   }
 
@@ -265,16 +300,16 @@ async function main() {
     for (let i = 0; i < relevantNews.length; i++) {
       const news = relevantNews[i];
 
-      // Delay de 15 segundos entre noticias (Gemini free tier: 5 RPM)
+      // Delay de 8 segundos entre noticias (Groq free tier: 30 RPM)
       if (i > 0) {
         console.log(
-          `\n⏱️  Esperando 15 segundos para respetar rate limit de Gemini...`,
+          `\n⏱️  Esperando 8 segundos para respetar rate limit de Groq...`,
         );
-        await new Promise((resolve) => setTimeout(resolve, 15000));
+        await new Promise((resolve) => setTimeout(resolve, 8000));
       }
 
       console.log(
-        `\n🤖 Procesando con Gemini AI [${i + 1}/${relevantNews.length}]: "${news.title.substring(0, 60)}..."`,
+        `\n🤖 Procesando con Groq AI [${i + 1}/${relevantNews.length}]: "${news.title.substring(0, 60)}..."`,
       );
 
       try {
@@ -325,7 +360,7 @@ async function main() {
         await new Promise((resolve) => setTimeout(resolve, 2000));
       } catch (error) {
         console.error(
-          `   ❌ Error en Gemini AI: Noticia descartada - ${error.message}`,
+          `   ❌ Error en Groq AI: Noticia descartada - ${error.message}`,
         );
         console.log(
           `   ℹ️  Esta noticia NO se guardará (solo contenido correctamente procesado)`,
