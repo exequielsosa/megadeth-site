@@ -261,10 +261,20 @@ async function main() {
     const relevantNews = await processFeed(feedUrl);
     totalFound += relevantNews.length;
 
-    // Procesar cada noticia relevante
-    for (const news of relevantNews) {
+    // Procesar cada noticia relevante con delay para respetar rate limit
+    for (let i = 0; i < relevantNews.length; i++) {
+      const news = relevantNews[i];
+
+      // Delay de 15 segundos entre noticias (Gemini free tier: 5 RPM)
+      if (i > 0) {
+        console.log(
+          `\n⏱️  Esperando 15 segundos para respetar rate limit de Gemini...`,
+        );
+        await new Promise((resolve) => setTimeout(resolve, 15000));
+      }
+
       console.log(
-        `\n🤖 Procesando con Gemini AI: "${news.title.substring(0, 60)}..."`,
+        `\n🤖 Procesando con Gemini AI [${i + 1}/${relevantNews.length}]: "${news.title.substring(0, 60)}..."`,
       );
 
       try {
@@ -314,7 +324,12 @@ async function main() {
         // Pausa para no saturar la API
         await new Promise((resolve) => setTimeout(resolve, 2000));
       } catch (error) {
-        console.error(`   ❌ Error procesando noticia:`, error.message);
+        console.error(
+          `   ❌ Error en Gemini AI: Noticia descartada - ${error.message}`,
+        );
+        console.log(
+          `   ℹ️  Esta noticia NO se guardará (solo contenido correctamente procesado)`,
+        );
         totalSkipped++;
       }
     }
@@ -326,7 +341,7 @@ async function main() {
   console.log("╚═══════════════════════════════════════════════╝");
   console.log(`📊 Noticias relevantes encontradas: ${totalFound}`);
   console.log(`✅ Noticias creadas exitosamente:   ${totalCreated}`);
-  console.log(`⏭️  Noticias omitidas/duplicadas:   ${totalSkipped}`);
+  console.log(`⏭️  Noticias descartadas (duplicadas/errores): ${totalSkipped}`);
   console.log(`\n🎉 Proceso completado a las ${new Date().toLocaleString()}`);
 }
 
