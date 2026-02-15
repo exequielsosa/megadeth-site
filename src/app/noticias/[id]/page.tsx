@@ -1,15 +1,16 @@
 import { Container, Typography, Box, Chip } from "@mui/material";
 import { notFound } from "next/navigation";
 import { getTranslations, getLocale } from "next-intl/server";
-import newsData from "@/constants/news.json";
 import { NewsArticle } from "@/types/news";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
-import Image from "next/image";
+import SafeNewsImage from "@/components/SafeNewsImage";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import Link from "next/link";
 import RandomSectionBanner from "@/components/NewsBanner";
 import { CommentsSection } from "@/components/CommentsSection";
+import { getAllNews, getNewsById } from "@/lib/supabase";
+import { getSafeTranslation } from "@/utils/safeContent";
 
 interface NewsPageProps {
   params: Promise<{
@@ -18,6 +19,7 @@ interface NewsPageProps {
 }
 
 export async function generateStaticParams() {
+  const newsData = await getAllNews();
   return newsData.map((article) => ({
     id: article.id,
   }));
@@ -26,9 +28,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: NewsPageProps) {
   const resolvedParams = await params;
   const locale = (await getLocale()) as "es" | "en";
-  const article = newsData.find((a) => a.id === resolvedParams.id) as
-    | NewsArticle
-    | undefined;
+  const article = await getNewsById(resolvedParams.id);
 
   if (!article) {
     return {
@@ -36,34 +36,49 @@ export async function generateMetadata({ params }: NewsPageProps) {
     };
   }
 
+  // Obtener título y descripción de forma segura
+  const title = getSafeTranslation(
+    article.title,
+    locale,
+    locale === "es" ? "Noticia sin título" : "Untitled news",
+  );
+
+  const description = getSafeTranslation(
+    article.description,
+    locale,
+    locale === "es" ? "Descripción no disponible" : "Description unavailable",
+  );
+
+  const imageAlt = getSafeTranslation(article.imageAlt, locale, title);
+
   return {
-    title: `${article.title[locale]} | Megadeth Argentina`,
-    description: article.description[locale],
+    title: `${title} | Megadeth Argentina`,
+    description: description,
     openGraph: {
-      title: article.title[locale],
-      description: article.description[locale],
+      title: title,
+      description: description,
       type: "article",
       publishedTime: article.publishedDate,
       images: article.imageUrl
         ? [
             {
               url: `https://megadeth.com.ar${article.imageUrl}`,
-              alt: article.imageAlt?.[locale] || article.title[locale],
+              alt: imageAlt,
             },
           ]
         : article.youtubeVideoId
           ? [
               {
                 url: `https://img.youtube.com/vi/${article.youtubeVideoId}/maxresdefault.jpg`,
-                alt: article.title[locale],
+                alt: title,
               },
             ]
           : [],
     },
     twitter: {
       card: "summary_large_image",
-      title: article.title[locale],
-      description: article.description[locale],
+      title: title,
+      description: description,
       images: article.imageUrl
         ? [`https://megadeth.com.ar${article.imageUrl}`]
         : article.youtubeVideoId
@@ -80,13 +95,26 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
   const locale = (await getLocale()) as "es" | "en";
   const tb = await getTranslations("breadcrumb");
 
-  const article = newsData.find((a) => a.id === resolvedParams.id) as
-    | NewsArticle
-    | undefined;
+  const article = await getNewsById(resolvedParams.id);
 
   if (!article) {
     notFound();
   }
+
+  // Obtener título, descripción e imageAlt de forma segura
+  const title = getSafeTranslation(
+    article.title,
+    locale,
+    locale === "es" ? "Noticia sin título" : "Untitled news",
+  );
+
+  const description = getSafeTranslation(
+    article.description,
+    locale,
+    locale === "es" ? "Descripción no disponible" : "Description unavailable",
+  );
+
+  const imageAlt = getSafeTranslation(article.imageAlt, locale, title);
 
   // Formatear fecha
   const formattedDate = new Date(article.publishedDate).toLocaleDateString(
@@ -98,8 +126,8 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: article.title[locale],
-    description: article.description[locale],
+    headline: title,
+    description: description,
     datePublished: article.publishedDate,
     dateModified: article.publishedDate,
     author: {
@@ -123,7 +151,7 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
           "@type": "ImageObject",
           url: `https://megadeth.com.ar${article.imageUrl}`,
           ...(article.imageAlt && {
-            caption: article.imageAlt[locale],
+            caption: imageAlt,
           }),
         }
       : article.youtubeVideoId
@@ -157,10 +185,7 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
       <ContainerGradientNoPadding>
         <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
           <Breadcrumb
-            items={[
-              { label: tb("news"), href: `/noticias` },
-              { label: article.title[locale] },
-            ]}
+            items={[{ label: tb("news"), href: `/noticias` }, { label: title }]}
           />
         </Box>
         <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
@@ -191,7 +216,7 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
                 lineHeight: 1.2,
               }}
             >
-              {article.title[locale]}
+              {title}
             </Typography>
 
             {/* Descripción */}
@@ -205,24 +230,21 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
                 whiteSpace: "pre-line",
               }}
             >
-              {article.description[locale]}
+              {description}
             </Typography>
 
             {/* Imagen o Video */}
             {article.youtubeVideoId && (
               <Box sx={{ mb: 4 }}>
-                <YouTubeEmbed
-                  videoId={article.youtubeVideoId}
-                  title={article.title[locale]}
-                />
+                <YouTubeEmbed videoId={article.youtubeVideoId} title={title} />
               </Box>
             )}
 
             {article.imageUrl && !article.youtubeVideoId && (
               <Box sx={{ mb: 4, position: "relative", width: "100%" }}>
-                <Image
+                <SafeNewsImage
                   src={article.imageUrl}
-                  alt={article.imageAlt?.[locale] || article.title[locale]}
+                  alt={imageAlt}
                   width={1200}
                   height={675}
                   style={{

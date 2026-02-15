@@ -135,7 +135,8 @@
     "pageTitle": "News - Megadeth",
     "pageDescription": "Latest news, announcements and updates from Megadeth. Find out everything about the band, tours, releases and more.",
     "latestNews": "Latest News",
-    "viewAllNews": "View all news"
+    "viewAllNews": "View all news",
+    "loading": "Loading news..."
   },
   "history": {
     "activeYears": "Active years",

@@ -7,12 +7,12 @@ import songsData from '@/constants/songs.json';
 import historiaData from '@/constants/historia.json';
 import interviewsData from '@/constants/interviews.json';
 import showsData from '@/constants/shows.json';
-import newsData from '@/constants/news.json';
 import reviewsData from '@/constants/reviews.json';
 import { generateInterviewSlug } from '@/types/interview';
 import bootlegsData from '@/constants/bootlegs.json';
+import { getAllNews } from '@/lib/supabase';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = 'https://megadeth.com.ar';
   const pages = [
     { path: '/', priority: 1, changeFreq: 'daily' as const },
@@ -178,19 +178,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-   // Noticias dinámicas
-  if (Array.isArray(newsData)) {
-    newsData.forEach(news => {
-      const slug = generateInterviewSlug(news.id);
-      if (slug) {
-        sitemap.push({
-          url: `${base}/noticias/${slug}`,
-          lastModified: new Date(),
-          changeFrequency: 'weekly',
-          priority: 0.8,
-        });
-      }
-    });
+  // Noticias dinámicas desde Supabase
+  try {
+    const newsData = await getAllNews();
+    if (Array.isArray(newsData)) {
+      newsData.forEach(news => {
+        const slug = generateInterviewSlug(news.id);
+        if (slug) {
+          sitemap.push({
+            url: `${base}/noticias/${slug}`,
+            lastModified: new Date(news.publishedDate || new Date()),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+          });
+        }
+      });
+    }
+  } catch (error) {
+    console.error('Error loading news for sitemap:', error);
   }
 
   // Reviews dinámicas

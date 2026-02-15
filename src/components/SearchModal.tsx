@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import {
   Dialog,
   DialogContent,
@@ -23,9 +23,10 @@ import liveAlbumsData from "@/constants/liveAlbums.json";
 import compilationsData from "@/constants/compilations.json";
 import epsData from "@/constants/eps.json";
 import showsData from "@/constants/shows.json";
-import newsData from "@/constants/news.json";
 import membersData from "@/constants/members.json";
 import interviewsData from "@/constants/interviews.json";
+import { getAllNews } from "@/lib/supabase";
+import { NewsArticle } from "@/types/news";
 
 interface SearchModalProps {
   open: boolean;
@@ -41,8 +42,22 @@ function songNameToUrl(songName: string): string {
 
 export default function SearchModal({ open, onClose }: SearchModalProps) {
   const [query, setQuery] = useState("");
+  const [newsData, setNewsData] = useState<NewsArticle[]>([]);
   const t = useTranslations("search");
   const locale = useLocale() as "es" | "en";
+
+  // Cargar noticias desde Supabase
+  useEffect(() => {
+    async function loadNews() {
+      try {
+        const data = await getAllNews();
+        setNewsData(data);
+      } catch (error) {
+        console.error("Error loading news for search:", error);
+      }
+    }
+    loadNews();
+  }, []);
 
   const searchResults = useMemo(() => {
     if (query.trim().length < 2) {
@@ -65,11 +80,11 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
           song.title.toLowerCase().includes(searchTerm) ||
           song.album.title.toLowerCase().includes(searchTerm) ||
           song.credits?.writers?.lyrics?.some((w: string) =>
-            w.toLowerCase().includes(searchTerm)
+            w.toLowerCase().includes(searchTerm),
           ) ||
           song.credits?.writers?.music?.some((w: string) =>
-            w.toLowerCase().includes(searchTerm)
-          )
+            w.toLowerCase().includes(searchTerm),
+          ),
       )
       .slice(0, 5);
 
@@ -84,7 +99,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
       .filter(
         (album) =>
           album.title.toLowerCase().includes(searchTerm) ||
-          album.year.toString().includes(searchTerm)
+          album.year.toString().includes(searchTerm),
       )
       .slice(0, 5);
 
@@ -95,7 +110,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
           show.city.toLowerCase().includes(searchTerm) ||
           show.venue.toLowerCase().includes(searchTerm) ||
           show.country.toLowerCase().includes(searchTerm) ||
-          show.era.toLowerCase().includes(searchTerm)
+          show.era.toLowerCase().includes(searchTerm),
       )
       .slice(0, 5);
 
@@ -104,7 +119,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
       .filter(
         (article) =>
           article.title[locale].toLowerCase().includes(searchTerm) ||
-          article.description[locale].toLowerCase().includes(searchTerm)
+          article.description[locale].toLowerCase().includes(searchTerm),
       )
       .slice(0, 5);
 
@@ -118,8 +133,8 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
       .filter(
         (interview) =>
           interview.interviewees?.some((person) =>
-            person.name?.toLowerCase().includes(searchTerm)
-          ) || interview.media?.name?.toLowerCase().includes(searchTerm)
+            person.name?.toLowerCase().includes(searchTerm),
+          ) || interview.media?.name?.toLowerCase().includes(searchTerm),
       )
       .slice(0, 5);
 
