@@ -40,20 +40,16 @@ export async function generateMetadata({ params }: NewsPageProps) {
   const title = getSafeTranslation(
     article.title,
     locale,
-    locale === "es" ? "Noticia sin título" : "Untitled news"
+    locale === "es" ? "Noticia sin título" : "Untitled news",
   );
-  
+
   const description = getSafeTranslation(
     article.description,
     locale,
-    locale === "es" ? "Descripción no disponible" : "Description unavailable"
+    locale === "es" ? "Descripción no disponible" : "Description unavailable",
   );
 
-  const imageAlt = getSafeTranslation(
-    article.imageAlt,
-    locale,
-    title
-  );
+  const imageAlt = getSafeTranslation(article.imageAlt, locale, title);
 
   return {
     title: `${title} | Megadeth Argentina`,
@@ -109,20 +105,16 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
   const title = getSafeTranslation(
     article.title,
     locale,
-    locale === "es" ? "Noticia sin título" : "Untitled news"
+    locale === "es" ? "Noticia sin título" : "Untitled news",
   );
-  
+
   const description = getSafeTranslation(
     article.description,
     locale,
-    locale === "es" ? "Descripción no disponible" : "Description unavailable"
+    locale === "es" ? "Descripción no disponible" : "Description unavailable",
   );
 
-  const imageAlt = getSafeTranslation(
-    article.imageAlt,
-    locale,
-    title
-  );
+  const imageAlt = getSafeTranslation(article.imageAlt, locale, title);
 
   // Formatear fecha
   const formattedDate = new Date(article.publishedDate).toLocaleDateString(
@@ -193,10 +185,7 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
       <ContainerGradientNoPadding>
         <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
           <Breadcrumb
-            items={[
-              { label: tb("news"), href: `/noticias` },
-              { label: title },
-            ]}
+            items={[{ label: tb("news"), href: `/noticias` }, { label: title }]}
           />
         </Box>
         <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
@@ -247,10 +236,7 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
             {/* Imagen o Video */}
             {article.youtubeVideoId && (
               <Box sx={{ mb: 4 }}>
-                <YouTubeEmbed
-                  videoId={article.youtubeVideoId}
-                  title={title}
-                />
+                <YouTubeEmbed videoId={article.youtubeVideoId} title={title} />
               </Box>
             )}
 

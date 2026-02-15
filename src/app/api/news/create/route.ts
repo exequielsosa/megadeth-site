@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
         .from("news_articles")
         .select("id, title_en")
         .eq("source_url", validatedData.source_url)
-        .single();
+        .maybeSingle<{ id: string; title_en: string }>();
 
       if (existingByUrl) {
         return NextResponse.json(

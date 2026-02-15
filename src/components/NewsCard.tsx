@@ -1,16 +1,14 @@
 "use client";
 
-import {
-  Card,
-  CardContent,
-  Typography,
-  Box,
-  Chip,
-} from "@mui/material";
+import { Card, CardContent, Typography, Box, Chip } from "@mui/material";
 import { NewsArticle } from "@/types/news";
 import Link from "next/link";
 import { useLocale } from "next-intl";
-import { getSafeTranslation, formatSafeDate, getSafeUrl } from "@/utils/safeContent";
+import {
+  getSafeTranslation,
+  formatSafeDate,
+  getSafeUrl,
+} from "@/utils/safeContent";
 import SafeNewsImage from "./SafeNewsImage";
 
 interface NewsCardProps {
@@ -24,20 +22,16 @@ export default function NewsCard({ article }: NewsCardProps) {
   const title = getSafeTranslation(
     article.title,
     locale,
-    locale === "es" ? "Noticia sin título" : "Untitled news"
+    locale === "es" ? "Noticia sin título" : "Untitled news",
   );
-  
+
   const description = getSafeTranslation(
     article.description,
     locale,
-    locale === "es" ? "Descripción no disponible" : "Description unavailable"
+    locale === "es" ? "Descripción no disponible" : "Description unavailable",
   );
-  
-  const imageAlt = getSafeTranslation(
-    article.imageAlt,
-    locale,
-    title
-  );
+
+  const imageAlt = getSafeTranslation(article.imageAlt, locale, title);
 
   // Formatear fecha de forma segura
   const formattedDate = formatSafeDate(article.publishedDate, locale);

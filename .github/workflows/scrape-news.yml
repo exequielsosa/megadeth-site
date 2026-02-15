@@ -3,15 +3,15 @@ name: Scrape Megadeth News
 # Ejecutar cada Martes y Viernes a las 10:00 AM UTC
 on:
   schedule:
-    - cron: '0 10 * * 2,5'  # Martes y Viernes a las 10:00 UTC
-  
+    - cron: "0 10 * * 2,5" # Martes y Viernes a las 10:00 UTC
+
   # Permitir ejecución manual desde GitHub Actions UI
   workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 🔄 Checkout repository
         uses: actions/checkout@v4
@@ -19,8 +19,8 @@ jobs:
       - name: 📦 Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
 
       - name: 📥 Install dependencies
         run: npm ci

@@ -108,12 +108,14 @@ export default function NoticiasPage() {
           headline: getSafeTranslation(
             article.title,
             locale,
-            locale === "es" ? "Noticia sin título" : "Untitled news"
+            locale === "es" ? "Noticia sin título" : "Untitled news",
           ),
           description: getSafeTranslation(
             article.description,
             locale,
-            locale === "es" ? "Descripción no disponible" : "Description unavailable"
+            locale === "es"
+              ? "Descripción no disponible"
+              : "Description unavailable",
           ).substring(0, 200),
           datePublished: article.publishedDate,
           url: `https://megadeth.com.ar/${locale}/noticias/${article.id}`,
@@ -144,7 +146,7 @@ export default function NoticiasPage() {
           >
             <VicLoader size={200} />
             <Typography variant="body1" sx={{ mt: 3, color: "text.secondary" }}>
-              {locale === "es" ? "Cargando noticias..." : "Loading news..."}
+              {t("loading")}
             </Typography>
           </Box>
         </Container>
@@ -157,10 +159,17 @@ export default function NoticiasPage() {
     return (
       <>
         <ContainerGradientNoPadding>
-          <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
+          <Box
+            pt={{ xs: 2, md: 4 }}
+            px={{ xs: 2, md: 0 }}
+            pb={{ xs: 0, md: 0 }}
+          >
             <Breadcrumb items={[{ label: tb("news") }]} />
           </Box>
-          <Container maxWidth={false} sx={{ maxWidth: 1440, mx: "auto", py: 4 }}>
+          <Container
+            maxWidth={false}
+            sx={{ maxWidth: 1440, mx: "auto", py: 4 }}
+          >
             <Typography
               variant="h1"
               sx={{ fontSize: { xs: 32, md: 56 }, mb: 2, fontWeight: 700 }}
