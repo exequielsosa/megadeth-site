@@ -312,7 +312,9 @@ export default function LastShowsCards() {
   const t = useTranslations("lastShows");
 
   useEffect(() => {
-    fetch("/api/last-show")
+    fetch("/api/last-show", {
+      cache: "no-store", // Evitar cache del navegador
+    })
       .then((res) => res.json())
       .then((data) => {
         setData(data);

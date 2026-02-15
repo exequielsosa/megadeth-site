@@ -122,6 +122,87 @@ function pickClosestInSameMonth(shows: NormalizedShow[], targetISO: string): Nor
     })[0];
 }
 
+/**
+ * Encuentra el show más cercano a una fecha objetivo
+ * Estrategia de búsqueda:
+ * 1. Mismo mes y año
+ * 2. Mismo año (cualquier mes)
+ * 3. Año anterior o posterior
+ */
+function pickClosestToDate(shows: NormalizedShow[], targetISO: string): NormalizedShow | null {
+  if (!shows.length) return null;
+  
+  const target = isoToDate(targetISO);
+  if (Number.isNaN(target.getTime())) return null;
+
+  const ty = target.getUTCFullYear();
+  const tm = target.getUTCMonth();
+  const tms = target.getTime();
+
+  // 1. Primero: buscar en el mismo mes y año
+  const inSameMonth = shows.filter((s) => {
+    const d = isoToDate(s.eventDateISO);
+    return !Number.isNaN(d.getTime()) && d.getUTCFullYear() === ty && d.getUTCMonth() === tm;
+  });
+
+  if (inSameMonth.length > 0) {
+    return inSameMonth
+      .slice()
+      .sort((a, b) => {
+        const da = Math.abs(isoToDate(a.eventDateISO).getTime() - tms);
+        const db = Math.abs(isoToDate(b.eventDateISO).getTime() - tms);
+        return da - db;
+      })[0];
+  }
+
+  // 2. Si no hay en el mismo mes, buscar en el mismo año
+  const inSameYear = shows.filter((s) => {
+    const d = isoToDate(s.eventDateISO);
+    return !Number.isNaN(d.getTime()) && d.getUTCFullYear() === ty;
+  });
+
+  if (inSameYear.length > 0) {
+    return inSameYear
+      .slice()
+      .sort((a, b) => {
+        const da = Math.abs(isoToDate(a.eventDateISO).getTime() - tms);
+        const db = Math.abs(isoToDate(b.eventDateISO).getTime() - tms);
+        return da - db;
+      })[0];
+  }
+
+  // 3. Si no hay en el mismo año, buscar el más cercano en general
+  return shows
+    .slice()
+    .sort((a, b) => {
+      const da = Math.abs(isoToDate(a.eventDateISO).getTime() - tms);
+      const db = Math.abs(isoToDate(b.eventDateISO).getTime() - tms);
+      return da - db;
+    })[0];
+}
+
+/**
+ * Encuentra el show más reciente que tenga setlist (canciones)
+ * Busca en los primeros N shows hasta encontrar uno con songs
+ */
+function findLatestWithSetlist(setlists: any[]): any | null {
+  if (!Array.isArray(setlists) || !setlists.length) return null;
+  
+  // Buscar el primer show que tenga canciones
+  for (const show of setlists) {
+    const set0 = show?.sets?.set?.[0];
+    const songsRaw: any[] = Array.isArray(set0?.song) ? set0.song : [];
+    
+    // Si tiene al menos 1 canción, usarlo
+    if (songsRaw.length > 0) {
+      return show;
+    }
+  }
+  
+  // Si ninguno tiene setlist, devolver el más reciente de todos modos
+  return setlists[0];
+}
+
 /** =======================
  * Upstream fetch
  * ======================= */
@@ -173,11 +254,12 @@ export async function GET(req: Request) {
   const yearsAgo = Number(searchParams.get("yearsAgo") || "20");
 
   // “warm” solo para forzar el segundo fetch si falta cache
-  const warm = searchParams.get("warm") === "1";
-
+  const warm = searchParams.get("warm") === "1";  
+  // "force" para bypass cache y forzar refresh (útil para debugging/invalidación manual)
+  const force = searchParams.get("force") === "1";
   const latestKey = `setlist:latest:${mbid}:p1`;
-  const latestFreshSeconds = 60;     // 1 min fresco
-  const latestKeepSeconds = 24 * 60 * 60; // lo guardo 24h para poder servir stale si hay 429
+  const latestFreshSeconds = 24 * 60 * 60;     // 24h fresco (refresca 1 vez al día)
+  const latestKeepSeconds = 7 * 24 * 60 * 60;  // guardo 7 días para servir stale si hay rate limit
 
   const yearsKeepSeconds = 7 * 24 * 60 * 60; // guardo una semana
   const yearsFreshSeconds = 24 * 60 * 60;    // fresco 24h
@@ -185,27 +267,63 @@ export async function GET(req: Request) {
   try {
     /** 1) LATEST desde KV (o upstream) */
     let latestObj: NormalizedShow | null = null;
+    let cacheStatus = "miss";
     const latestCached = await kvGet<NormalizedShow>(latestKey);
 
-    if (latestCached.value) {
+    // Si hay cache fresco (< 24h) Y NO es force, usarlo sin llamar a la API
+    if (latestCached.value && !latestCached.stale && !force) {
       latestObj = latestCached.value;
+      cacheStatus = "fresh";
     } else {
-      const latestRes = await upstreamFetch(`/artist/${mbid}/setlists?p=1`);
-      if (!latestRes.ok) {
-        return NextResponse.json(
-          { latest: null, yearsAgoPrev: null, error: "Upstream error", details: latestRes.bodyText },
-          { status: latestRes.status }
-        );
+      // Cache expirado, no existe, o force=1 → intentar refrescar desde setlist.fm
+      if (force && latestCached.value) {
+        cacheStatus = "force-refresh";
       }
-      const latestRaw = latestRes.json?.setlist?.[0];
-      latestObj = normalizeSetlistItem(latestRaw);
-      if (!latestObj) {
-        return NextResponse.json(
-          { latest: null, yearsAgoPrev: null, error: "Latest not found/invalid" },
-          { status: 404 }
-        );
+      try {
+        const latestRes = await upstreamFetch(`/artist/${mbid}/setlists?p=1`);
+        if (!latestRes.ok) {
+          // Si falla pero hay cache stale, usarlo como fallback
+          if (latestCached.value) {
+            latestObj = latestCached.value;
+            cacheStatus = "stale-fallback";
+            console.warn(`Using stale cache for ${latestKey} due to upstream error ${latestRes.status}`);
+          } else {
+            return NextResponse.json(
+              { latest: null, yearsAgoPrev: null, error: "Upstream error", details: latestRes.bodyText },
+              { status: latestRes.status }
+            );
+          }
+        } else {
+          const setlists = latestRes.json?.setlist ?? [];
+          const latestRaw = findLatestWithSetlist(setlists);
+          latestObj = normalizeSetlistItem(latestRaw);
+          if (!latestObj) {
+            // Si falla normalización pero hay cache viejo, usarlo
+            if (latestCached.value) {
+              latestObj = latestCached.value;
+              cacheStatus = "stale-fallback";
+            } else {
+              return NextResponse.json(
+                { latest: null, yearsAgoPrev: null, error: "Latest not found/invalid" },
+                { status: 404 }
+              );
+            }
+          } else {
+            // Guardamos el nuevo dato fresco
+            await kvSet(latestKey, latestObj, latestFreshSeconds, latestKeepSeconds);
+            cacheStatus = "refreshed";
+          }
+        }
+      } catch (fetchError) {
+        // Error de red/timeout → usar cache stale si existe
+        if (latestCached.value) {
+          latestObj = latestCached.value;
+          cacheStatus = "stale-fallback";
+          console.warn(`Using stale cache for ${latestKey} due to fetch error:`, fetchError);
+        } else {
+          throw fetchError;
+        }
       }
-      await kvSet(latestKey, latestObj, latestFreshSeconds, latestKeepSeconds);
     }
 
     // validación dura
@@ -230,7 +348,7 @@ export async function GET(req: Request) {
         {
           latest: latestObj,
           yearsAgoPrev: yearsCached.value,
-          meta: { targetISO, targetYear, targetMonth, cache: { latestKey, yearsKey }, stale: yearsCached.stale },
+          meta: { targetISO, targetYear, targetMonth, cache: { latestKey, yearsKey, latestStatus: cacheStatus, yearsStatus: yearsCached.stale ? 'stale' : 'fresh' } },
         },
         { status: 200 }
       );
@@ -243,7 +361,7 @@ export async function GET(req: Request) {
           latest: latestObj,
           yearsAgoPrev: null,
           needsWarm: true,
-          meta: { targetISO, targetYear, targetMonth, hint: "Call same endpoint with ?warm=1 to cache yearsAgoPrev." },
+          meta: { targetISO, targetYear, targetMonth, cache: { latestStatus: cacheStatus }, hint: "Call same endpoint with ?warm=1 to cache yearsAgoPrev." },
         },
         { status: 200 }
       );
@@ -269,7 +387,7 @@ export async function GET(req: Request) {
     const yearSetlists: any[] = Array.isArray(yearRes.json?.setlist) ? yearRes.json.setlist : [];
     const normalized = yearSetlists.map(normalizeSetlistItem).filter(Boolean) as NormalizedShow[];
 
-    const yearsAgoPrev = pickClosestInSameMonth(normalized, targetISO);
+    const yearsAgoPrev = pickClosestToDate(normalized, targetISO);
 
     // cacheo (incluso null) por 24h fresco y 7 días retenido
     await kvSet(yearsKey, yearsAgoPrev ?? null, yearsFreshSeconds, yearsKeepSeconds);
@@ -278,7 +396,7 @@ export async function GET(req: Request) {
       {
         latest: latestObj,
         yearsAgoPrev: yearsAgoPrev ?? null,
-        meta: { targetISO, targetYear, targetMonth, cache: { latestKey, yearsKey }, warmUsed: true },
+        meta: { targetISO, targetYear, targetMonth, cache: { latestKey, yearsKey, latestStatus: cacheStatus, yearsStatus: 'refreshed' }, warmUsed: true },
       },
       { status: 200 }
     );
