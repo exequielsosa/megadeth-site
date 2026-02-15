@@ -7,11 +7,12 @@ import { z } from "zod";
  */
 
 // Schema de validación para respuesta de Gemini
+// 200-300 palabras = ~1200-1800 caracteres
 const GeminiNewsResponseSchema = z.object({
   title_en: z.string().min(1).max(100),
   title_es: z.string().min(1).max(100),
-  description_en: z.string().min(50).max(500),
-  description_es: z.string().min(50).max(500),
+  description_en: z.string().min(100).max(2000),
+  description_es: z.string().min(100).max(2000),
   image_caption_en: z.string().min(1).max(80),
   image_caption_es: z.string().min(1).max(80),
 });
@@ -87,8 +88,8 @@ Se te proporciona una noticia sobre Megadeth. Procesala así:
 
 1. Título optimizado en inglés (máx 80 caracteres, directo y claro)
 2. Traducción al español (máx 80 caracteres, manteniendo el sentido)
-3. Descripción completa en inglés (200-400 palabras)
-4. Descripción completa en español
+3. Descripción completa en inglés (200-300 palabras / 1200-1800 caracteres)
+4. Traducción completa al español (200-300 palabras / 1200-1800 caracteres)
 5. Caption para imagen en inglés (máx 60 caracteres)
 6. Caption en español (máx 60 caracteres)
 
@@ -163,18 +164,9 @@ Responde ÚNICAMENTE con un objeto JSON válido (sin markdown, sin \`\`\`json):
   } catch (error) {
     console.error("❌ Error procesando con Gemini AI después de varios reintentos:", error);
     
-    // Fallback seguro: devolver contenido original con indicador
-    const safeFallback = {
-      title_en: title.substring(0, 80),
-      title_es: title.substring(0, 80),
-      description_en: content.substring(0, 400),
-      description_es: content.substring(0, 400),
-      image_caption_en: title.substring(0, 60),
-      image_caption_es: title.substring(0, 60),
-    };
-    
-    console.warn("⚠️  Usando fallback con contenido original (sin procesar por IA)");
-    return safeFallback;
+    // NO hay fallback: si Gemini falla, descartamos la noticia
+    // Esto garantiza que NUNCA se muestre contenido mal procesado al usuario
+    throw new Error(`Gemini AI falló al procesar la noticia: ${error instanceof Error ? error.message : 'Error desconocido'}`);
   }
 }
 
