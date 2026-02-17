@@ -1,4 +1,10 @@
 {
+  "crons": [
+    {
+      "path": "/api/cron/warm-shows",
+      "schedule": "0 6 * * *"
+    }
+  ],
   "redirects": [
     {
       "source": "/songs",
