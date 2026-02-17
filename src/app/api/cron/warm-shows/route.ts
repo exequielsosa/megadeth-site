@@ -22,15 +22,26 @@ export async function GET(req: Request) {
       );
     }
 
-    // Obtener la URL base desde el request o variables de entorno
-    const url = new URL(req.url);
-    const baseUrl = process.env.VERCEL_URL 
-      ? `https://${process.env.VERCEL_URL}`
-      : `${url.protocol}//${url.host}`;
+    // Obtener la URL base desde variables de entorno
+    const productionUrl = process.env.PRODUCTION_URL;
+    
+    if (!productionUrl) {
+      console.error('[Cron] PRODUCTION_URL environment variable is not set');
+      return NextResponse.json(
+        { 
+          success: false, 
+          error: "Configuration error",
+          details: "PRODUCTION_URL environment variable is required" 
+        },
+        { status: 500 }
+      );
+    }
 
     console.log(`[Cron] Warming shows cache at ${new Date().toISOString()}`);
+    console.log(`[Cron] Using baseUrl: ${productionUrl}`);
 
     // Llamar al endpoint con warm=1 para forzar cache
+    const baseUrl = productionUrl;
     const warmResponse = await fetch(`${baseUrl}/api/last-show?warm=1`, {
       headers: {
         // Pasar headers necesarios
