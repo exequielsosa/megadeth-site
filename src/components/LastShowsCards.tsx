@@ -312,6 +312,7 @@ export default function LastShowsCards() {
   const t = useTranslations("lastShows");
 
   useEffect(() => {
+    // Primer intento: usar cache (el cron debería mantenerlo caliente)
     fetch("/api/last-show", {
       cache: "no-store", // Evitar cache del navegador
     })
@@ -319,6 +320,21 @@ export default function LastShowsCards() {
       .then((data) => {
         setData(data);
         setLoading(false);
+        
+        // Si falta yearsAgoPrev (cache frío), hacer warm request de respaldo
+        // Esto solo debería pasar la primera vez o si el cron falló
+        if (data.needsWarm && data.latest) {
+          console.log("[LastShowsCards] Cache needs warming, fetching with warm=1");
+          fetch("/api/last-show?warm=1")
+            .then((res) => res.json())
+            .then((warmData) => {
+              console.log("[LastShowsCards] Warm data fetched successfully");
+              setData(warmData);
+            })
+            .catch((err) => {
+              console.error("[LastShowsCards] Failed to warm cache:", err);
+            });
+        }
       })
       .catch((error) => {
         console.error("Error fetching last shows:", error);
