@@ -320,11 +320,13 @@ export default function LastShowsCards() {
       .then((data) => {
         setData(data);
         setLoading(false);
-        
+
         // Si falta yearsAgoPrev (cache frío), hacer warm request de respaldo
         // Esto solo debería pasar la primera vez o si el cron falló
         if (data.needsWarm && data.latest) {
-          console.log("[LastShowsCards] Cache needs warming, fetching with warm=1");
+          console.log(
+            "[LastShowsCards] Cache needs warming, fetching with warm=1",
+          );
           fetch("/api/last-show?warm=1")
             .then((res) => res.json())
             .then((warmData) => {
