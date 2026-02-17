@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Box } from "@mui/material";
@@ -53,7 +54,7 @@ export async function generateMetadata({
     "thrash metal",
     chapterTitle.toLowerCase(),
     ...chapter.sections.flatMap((section) =>
-      section.title ? [getText(section.title, locale)] : []
+      section.title ? [getText(section.title, locale)] : [],
     ),
   ];
 

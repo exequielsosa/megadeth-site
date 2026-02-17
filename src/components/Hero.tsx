@@ -18,38 +18,13 @@ import LastShowsCards from "./LastShowsCards";
 import FeaturedReviewBanner from "./FeaturedReviewBanner";
 import ArgentinaConcertBanner from "./ArgentinaConcertBanner";
 import { slugify } from "@/utils/slugify";
-import { useState, useEffect } from "react";
-import { getAllNews } from "@/lib/supabase";
 
-export default function Hero() {
+export default function Hero({ latestNews }: { latestNews: NewsArticle[] }) {
   const t = useTranslations("hero");
   const tAlbum = useTranslations("album");
   const tNews = useTranslations("news");
   const tIntro = useTranslations("heroIntro");
   const locale = useLocale() as "es" | "en";
-
-  const [latestNews, setLatestNews] = useState<NewsArticle[]>([]);
-
-  // Cargar las últimas noticias desde Supabase
-  useEffect(() => {
-    async function loadNews() {
-      try {
-        const data = await getAllNews();
-        // Ordenar por fecha y obtener las primeras 5
-        const sorted = data
-          .sort(
-            (a, b) =>
-              new Date(b.publishedDate).getTime() -
-              new Date(a.publishedDate).getTime(),
-          )
-          .slice(0, 5);
-        setLatestNews(sorted);
-      } catch (error) {
-        console.error("Error loading news for hero:", error);
-      }
-    }
-    loadNews();
-  }, []);
 
   return (
     <ContainerGradient>

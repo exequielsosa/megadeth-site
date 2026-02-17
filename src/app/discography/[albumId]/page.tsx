@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import AlbumDetail from "@/components/AlbumDetail";
@@ -18,19 +19,19 @@ interface Props {
 function getAlbumById(id: string): Album | undefined {
   // Buscar primero en álbumes de estudio
   const studioAlbum = discographyData.find(
-    (album) => album.id === id
+    (album) => album.id === id,
   ) as unknown as Album | undefined;
   if (studioAlbum) return studioAlbum;
 
   // Si no se encuentra, buscar en álbumes en vivo
   const liveAlbum = liveAlbumsData.find(
-    (album) => album.id === id
+    (album) => album.id === id,
   ) as unknown as Album | undefined;
   if (liveAlbum) return liveAlbum;
 
   // Si no se encuentra, buscar en compilaciones
   const compilation = compilationsData.find(
-    (album) => album.id === id
+    (album) => album.id === id,
   ) as unknown as Album | undefined;
   if (compilation) return compilation;
 

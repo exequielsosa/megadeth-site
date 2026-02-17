@@ -80,7 +80,7 @@ export default function TourPage() {
       (show) =>
         show.city.toLowerCase().includes(lowerQuery) ||
         show.venue.toLowerCase().includes(lowerQuery) ||
-        show.country.toLowerCase().includes(lowerQuery)
+        show.country.toLowerCase().includes(lowerQuery),
     );
   };
 
@@ -134,7 +134,7 @@ export default function TourPage() {
                     day: "numeric",
                     month: "long",
                     year: "numeric",
-                  }
+                  },
                 )}
               </Typography>
               <Typography variant="h5" gutterBottom>
@@ -272,8 +272,8 @@ export default function TourPage() {
                     ? "Ordenar descendente"
                     : "Ordenar ascendente"
                   : sortOrder === "asc"
-                  ? "Sort descending"
-                  : "Sort ascending"
+                    ? "Sort descending"
+                    : "Sort ascending"
               }
             >
               {sortOrder === "asc" ? (

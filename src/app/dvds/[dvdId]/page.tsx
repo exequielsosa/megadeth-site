@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import { notFound } from "next/navigation";
 import {
   Container,
@@ -175,7 +176,7 @@ export default async function DVDPage({ params }: DVDPageProps) {
   const dvdYear = dvd.year || dvd.release_year || 2000;
   const extendedDescription = getDVDExtendedDescription(
     dvd.description || {},
-    locale
+    locale,
   );
   // Usar cover_image si está disponible, sino generar usando el título
   const imageUrl = dvd.cover_image || `${generateDVDSlug(dvdTitle)}.jpg`;

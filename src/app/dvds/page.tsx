@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import DVDGrid from "@/components/DVDGrid";
 import dvdsData from "../../constants/dvd.json";
 import type { DVD } from "@/types/dvd";
@@ -150,7 +151,7 @@ interface DVDDataItem {
 function generateStructuredData(locale: string) {
   const dvdList = (dvdsData as DVDDataItem[])
     .filter(
-      (item) => (item.title || item.album_title) && item.description?.short
+      (item) => (item.title || item.album_title) && item.description?.short,
     ) // Filtrar solo elementos con estructura correcta
     .map((dvd) => ({
       "@type": "CreativeWork",
@@ -227,7 +228,7 @@ export default async function DVDsPage() {
 
   // Filtrar solo DVDs válidos que tengan la estructura esperada
   const validDvds = (dvdsData as DVDDataItem[]).filter(
-    (item) => (item.title || item.album_title) && item.description?.short
+    (item) => (item.title || item.album_title) && item.description?.short,
   );
 
   return (

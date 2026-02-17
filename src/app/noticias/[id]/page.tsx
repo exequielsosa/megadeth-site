@@ -1,3 +1,4 @@
+export const revalidate = 300;
 import { Container, Typography, Box, Chip } from "@mui/material";
 import { notFound } from "next/navigation";
 import { getTranslations, getLocale } from "next-intl/server";
