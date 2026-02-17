@@ -51,9 +51,11 @@ export function transformNewsFromDB(dbNews: NewsArticleFromDB): NewsArticle {
     throw new Error(`Invalid news data for ID ${dbNews.id}: missing titles`);
   }
 
-  if (!dbNews.description_es && !dbNews.description_en) {
-    console.error("Invalid news data: missing both descriptions", dbNews);
-    throw new Error(`Invalid news data for ID ${dbNews.id}: missing descriptions`);
+  // Permitir descripciones vacías si hay un video de YouTube o imagen
+  const hasMediaContent = dbNews.youtube_video_id || dbNews.image_url;
+  if (!dbNews.description_es && !dbNews.description_en && !hasMediaContent) {
+    console.error("Invalid news data: missing both descriptions and media content", dbNews);
+    throw new Error(`Invalid news data for ID ${dbNews.id}: missing descriptions and media content`);
   }
 
   if (!dbNews.published_date) {

@@ -83,6 +83,15 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'img.youtube.com',
       },
+      // Future CDN (para Metal Hammer, Loudersound, etc.)
+      {
+        protocol: 'https',
+        hostname: '*.futurecdn.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.mos.cms.futurecdn.net',
+      },
       // BraveWords (nueva fuente)
       {
         protocol: 'https',
@@ -136,6 +145,64 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'mariskalrock.com',
+      },
+      // Fuentes adicionales potenciales (de FUENTES-RSS-ANALISIS.md)
+      {
+        protocol: 'https',
+        hostname: '*.decibelmagazine.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'decibelmagazine.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.metaltalk.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'metaltalk.net',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.metaladdicts.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'metaladdicts.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.invisibleoranges.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'invisibleoranges.com',
+      },
+      // CDNs adicionales comunes para sitios de medios
+      {
+        protocol: 'https',
+        hostname: '*.fastly.net',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.akamaized.net',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.googleusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.amazonaws.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.cloudinary.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.vimeocdn.com',
       },
     ],
   },
