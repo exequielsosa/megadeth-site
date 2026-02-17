@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import VideosGrid from "@/components/VideosGrid";
 import videosData from "../../constants/videos.json";
 import type { Video } from "@/types/video";

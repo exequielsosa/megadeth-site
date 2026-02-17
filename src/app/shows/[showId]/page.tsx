@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import { notFound } from "next/navigation";
 import ShowDetailPage from "@/components/ShowDetailPage";
 import showsData from "@/constants/shows.json";

@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import { Metadata } from "next";
 import HistoriaClient from "./HistoriaClient";
 import { getTranslations } from "next-intl/server";

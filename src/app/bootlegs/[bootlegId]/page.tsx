@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import { notFound } from "next/navigation";
 import BootlegDetailPage from "@/components/BootlegDetailPage";
 import bootlegsData from "@/constants/bootlegs.json";

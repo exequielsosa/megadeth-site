@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 // This file is a server component, so 'use client' should not be present.
 // Removing 'use client' to allow for export of generateMetadata.
 
@@ -130,7 +131,7 @@ export default function MembersPage() {
   const currentMembers = sortedMembers.filter(
     (member) =>
       member.period[locale]?.includes("presente") ||
-      member.period[locale]?.includes("present")
+      member.period[locale]?.includes("present"),
   );
 
   const formerMembers = sortedMembers.filter(
@@ -138,7 +139,7 @@ export default function MembersPage() {
       !(
         member.period[locale]?.includes("presente") ||
         member.period[locale]?.includes("present")
-      )
+      ),
   );
 
   const MemberCard = ({ member }: { member: (typeof members)[0] }) => (

@@ -164,7 +164,7 @@ export default function MemberDetailPage({ params }: PageProps) {
                             color="primary"
                             variant="outlined"
                           />
-                        )
+                        ),
                       ) ||
                         member.instruments.es?.map((instrument, index) => (
                           <Chip
@@ -288,7 +288,7 @@ export default function MemberDetailPage({ params }: PageProps) {
                           >
                             • {project}
                           </Typography>
-                        )
+                        ),
                       ) ||
                         member.otherProjects.es?.map((project, index) => (
                           <Typography
