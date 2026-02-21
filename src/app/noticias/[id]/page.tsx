@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: NewsPageProps) {
       images: article.imageUrl
         ? [
             {
-              url: `https://megadeth.com.ar${article.imageUrl}`,
+              url: article.imageUrl.startsWith('http') ? article.imageUrl : `https://megadeth.com.ar${article.imageUrl}`,
               alt: imageAlt,
             },
           ]

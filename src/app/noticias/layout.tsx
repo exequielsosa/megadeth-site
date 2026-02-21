@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: "https://megadeth.com.ar/logo-megadeth.png",
+          url: "https://megadeth.com.ar/images/band.webp",
           width: 1200,
           height: 630,
           alt: "Megadeth",
@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: t("pageTitle"),
       description: t("pageDescription"),
-      images: ["https://megadeth.com.ar/logo-megadeth.png"],
+      images: ["https://megadeth.com.ar/images/band.webp"],
     },
     alternates: {
       canonical: "https://megadeth.com.ar/noticias",
