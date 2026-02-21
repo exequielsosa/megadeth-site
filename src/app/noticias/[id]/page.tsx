@@ -55,15 +55,21 @@ export async function generateMetadata({ params }: NewsPageProps) {
   return {
     title: `${title} | Megadeth Argentina`,
     description: description,
+    other: {
+      "fb:app_id": "894918050009208",
+    },
     openGraph: {
       title: title,
       description: description,
       type: "article",
+      url: `https://megadeth.com.ar/noticias/${resolvedParams.id}`,
       publishedTime: article.publishedDate,
       images: article.imageUrl
         ? [
             {
-              url: article.imageUrl.startsWith('http') ? article.imageUrl : `https://megadeth.com.ar${article.imageUrl}`,
+              url: article.imageUrl.startsWith("http")
+                ? article.imageUrl
+                : `https://megadeth.com.ar${article.imageUrl}`,
               alt: imageAlt,
             },
           ]
@@ -81,7 +87,11 @@ export async function generateMetadata({ params }: NewsPageProps) {
       title: title,
       description: description,
       images: article.imageUrl
-        ? [article.imageUrl.startsWith('http') ? article.imageUrl : `https://megadeth.com.ar${article.imageUrl}`]
+        ? [
+            article.imageUrl.startsWith("http")
+              ? article.imageUrl
+              : `https://megadeth.com.ar${article.imageUrl}`,
+          ]
         : article.youtubeVideoId
           ? [
               `https://img.youtube.com/vi/${article.youtubeVideoId}/maxresdefault.jpg`,
@@ -245,14 +255,23 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
             )}
 
             {article.imageUrl && !article.youtubeVideoId && (
-              <Box sx={{ mb: 4, position: "relative", width: "100%" }}>
+              <Box
+                sx={{
+                  mb: 4,
+                  position: "relative",
+                  width: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                }}
+              >
                 <SafeNewsImage
                   src={article.imageUrl}
                   alt={imageAlt}
-                  width={1200}
-                  height={675}
+                  width={800}
+                  height={400}
                   style={{
-                    width: "100%",
+                    width: "52%",
                     height: "auto",
                     borderRadius: 8,
                   }}
