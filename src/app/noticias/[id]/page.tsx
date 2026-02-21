@@ -81,12 +81,15 @@ export async function generateMetadata({ params }: NewsPageProps) {
       title: title,
       description: description,
       images: article.imageUrl
-        ? [`https://megadeth.com.ar${article.imageUrl}`]
+        ? [article.imageUrl.startsWith('http') ? article.imageUrl : `https://megadeth.com.ar${article.imageUrl}`]
         : article.youtubeVideoId
           ? [
               `https://img.youtube.com/vi/${article.youtubeVideoId}/maxresdefault.jpg`,
             ]
           : [],
+    },
+    alternates: {
+      canonical: `https://megadeth.com.ar/noticias/${resolvedParams.id}`,
     },
   };
 }
