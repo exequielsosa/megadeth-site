@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getLocale } from "next-intl/server";
+import { cookies } from "next/headers";
 import ThemeRegistry from "@/theme/ThemeRegistry";
 import { ColorModeProvider } from "@/theme/useColorMode";
 import Header from "@/components/Header";
@@ -209,6 +210,9 @@ export default async function RootLayout({
 }) {
   const messages = await getMessages();
   const locale = await getLocale();
+  const cookieStore = await cookies();
+  const initialMode =
+    (cookieStore.get("color-mode")?.value as "light" | "dark") || "dark";
 
   return (
     <html lang={locale} className={poppins.variable} suppressHydrationWarning>
@@ -281,26 +285,6 @@ export default async function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://img.youtube.com" />
 
-        {/* Script para inicializar color mode antes de hidratar React */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var mode = localStorage.getItem('color-mode');
-                  if (!mode) {
-                    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                      mode = 'dark';
-                    } else {
-                      mode = 'light';
-                    }
-                  }
-                  document.documentElement.setAttribute('data-color-mode', mode);
-                } catch(e) {}
-              })();
-            `,
-          }}
-        />
       </head>
       <body
         style={{
@@ -312,7 +296,7 @@ export default async function RootLayout({
         }}
       >
         <NextIntlClientProvider messages={messages}>
-          <ColorModeProvider>
+          <ColorModeProvider initialMode={initialMode}>
             <ThemeRegistry>
               <Header />
               <main style={{ flex: 1 }}>

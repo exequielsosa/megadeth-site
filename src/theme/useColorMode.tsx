@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useMemo, useState } from "react";
 
 type ColorMode = "light" | "dark";
 type Ctx = { mode: ColorMode; toggle: () => void };
@@ -15,26 +15,18 @@ export const useColorMode = () => {
 
 export const ColorModeProvider = ({
   children,
+  initialMode = "dark",
 }: {
   children: React.ReactNode;
+  initialMode?: ColorMode;
 }) => {
-  const [mode, setMode] = useState<ColorMode>("light");
-
-  useEffect(() => {
-    const saved = window.localStorage.getItem("color-mode") as ColorMode | null;
-    if (saved) setMode(saved);
-    else if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      setMode("dark");
-    }
-  }, []);
+  const [mode, setMode] = useState<ColorMode>(initialMode);
 
   const toggle = () =>
     setMode((prev) => {
       const next = prev === "light" ? "dark" : "light";
       window.localStorage.setItem("color-mode", next);
+      document.cookie = `color-mode=${next};max-age=31536000;path=/`;
       return next;
     });
 
