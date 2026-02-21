@@ -156,7 +156,7 @@ async function main() {
     .select('id, title_es, title_en, description_es, description_en, image_url')
     .is('social_posted_at', null)
     .order('published_date', { ascending: false })
-    .limit(1);
+    .limit(3);
 
   if (error) throw new Error(error.message);
 
