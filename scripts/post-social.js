@@ -38,24 +38,48 @@ function articleUrl(id) {
 }
 
 function buildFacebookPost(article) {
-  const descEs = (article.description_es || '').slice(0, 200);
-  const descEn = (article.description_en || '').slice(0, 200);
+  const url = articleUrl(article.id);
+  const MAX = 30000;
+
+  const rawEs = article.description_es || '';
+  const rawEn = article.description_en || '';
+
+  const descEs = rawEs.length > MAX
+    ? `${rawEs.slice(0, MAX)}...\n\nVer nota completa: ${url}`
+    : `${rawEs}\n\nVer más noticias y novedades en https://megadeth.com.ar/noticias`;
+
+  const descEn = rawEn.length > MAX
+    ? `${rawEn.slice(0, MAX)}...\n\nRead full article: ${url}`
+    : `${rawEn}\n\nMore news at https://megadeth.com.ar/noticias`;
+
   const message =
     `${article.title_es}\n\n${descEs}\n\n` +
     `─────────────────────\n\n` +
     `${article.title_en}\n\n${descEn}`;
-  return { message, link: articleUrl(article.id) };
+  return { message, link: url };
 }
 
 function buildInstagramCaption(article) {
-  const descEs = (article.description_es || '').slice(0, 300);
-  const descEn = (article.description_en || '').slice(0, 300);
+  const url = articleUrl(article.id);
+  const MAX = 900;
   const hashtags = '#Megadeth #MegadethArgentina #metal #heavymetal #thrashmetal #DaveMustaine';
+
+  const rawEs = article.description_es || '';
+  const rawEn = article.description_en || '';
+
+  const descEs = rawEs.length > MAX
+    ? `${rawEs.slice(0, MAX)}...\n\nVer nota completa: ${url}`
+    : `${rawEs}\n\nVer más noticias: megadeth.com.ar/noticias`;
+
+  const descEn = rawEn.length > MAX
+    ? `${rawEn.slice(0, MAX)}...\n\nRead full article: ${url}`
+    : `${rawEn}\n\nMore news: megadeth.com.ar/noticias`;
+
   return (
     `${article.title_es}\n\n${descEs}\n\n` +
     `─────────────────────\n\n` +
     `${article.title_en}\n\n${descEn}\n\n` +
-    `${articleUrl(article.id)}\n\n${hashtags}`
+    hashtags
   );
 }
 
@@ -132,7 +156,7 @@ async function main() {
     .select('id, title_es, title_en, description_es, description_en, image_url')
     .is('social_posted_at', null)
     .order('published_date', { ascending: false })
-    .limit(3);
+    .limit(1);
 
   if (error) throw new Error(error.message);
 
