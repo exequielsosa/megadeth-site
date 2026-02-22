@@ -1,4 +1,3 @@
-export const dynamic = "force-static";
 import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";

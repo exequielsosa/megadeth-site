@@ -1,4 +1,3 @@
-export const dynamic = "force-static";
 import DiscographyGrid from "@/components/DiscographyGrid";
 import studioAlbums from "../../constants/discography.json";
 import liveAlbums from "../../constants/liveAlbums.json";

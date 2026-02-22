@@ -1,4 +1,3 @@
-export const dynamic = "force-static";
 import SongDetailPage from "../../../components/SongDetailPage";
 import songsData from "@/constants/songs.json";
 import { getLocale } from "next-intl/server";

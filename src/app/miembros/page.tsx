@@ -1,4 +1,3 @@
-export const dynamic = "force-static";
 // This file is a server component, so 'use client' should not be present.
 // Removing 'use client' to allow for export of generateMetadata.
 

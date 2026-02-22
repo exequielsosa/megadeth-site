@@ -1,4 +1,3 @@
-export const dynamic = "force-static";
 import { useTranslations } from "next-intl";
 import { Container, Typography, Box } from "@mui/material";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";

@@ -232,3 +232,21 @@ npm run add:news         # Agregar noticias manualmente via CLI
 - Al final de cada sesión de trabajo, actualiza la sección "Estado actual" de este archivo con un resumen de lo que se hizo y qué queda pendiente.
 
 ## Estado actual
+
+### Completado (Feb 2026)
+
+**Auto-posting a redes sociales (`scripts/post-social.js`)**
+- Facebook ✅ y Instagram ✅ funcionando — se ejecuta como paso en `.github/workflows/scrape-news.yml`
+- X (Twitter) ⚠️ pausado — error 402 por plan pay-per-use sin créditos
+- OG tags de páginas de noticias corregidos (canonical, og:url, imagen con URL absoluta, fb:app_id)
+- Columna `social_posted_at` en `news_articles` para anti-duplicados
+- Token de Facebook expira **22 abril 2026** — renovar antes de esa fecha
+
+**Dark mode FOUC eliminado**
+- Solución: cookie `color-mode` leída en el servidor (`layout.tsx` con `cookies()` de `next/headers`)
+- `initialMode` pasado al `ColorModeProvider` — SSR renderiza directamente en el modo correcto
+- Toggle escribe localStorage + cookie (max-age 1 año)
+
+### Pendiente
+- Renovar `FACEBOOK_PAGE_ACCESS_TOKEN` antes del 22 de abril de 2026
+- Decidir si comprar créditos en X para activar Twitter posting

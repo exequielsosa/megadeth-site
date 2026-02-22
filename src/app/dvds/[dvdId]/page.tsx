@@ -1,4 +1,3 @@
-export const dynamic = "force-static";
 import { notFound } from "next/navigation";
 import {
   Container,
