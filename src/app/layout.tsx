@@ -218,6 +218,7 @@ export default async function RootLayout({
     <html lang={locale} className={poppins.variable} suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/webp" href="/icon.webp" />
+        <link rel="alternate" type="application/rss+xml" title="Megadeth Fan Site — Noticias" href="/feed.xml" />
         {/* Schema.org MusicGroup */}
         <script
           type="application/ld+json"
