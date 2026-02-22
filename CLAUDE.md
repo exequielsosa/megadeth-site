@@ -253,6 +253,14 @@ npm run add:news         # Agregar noticias manualmente via CLI
 - Fix aplicado: eliminado `force-static` de las 21 páginas afectadas → SSR dinámico por request
 - Páginas afectadas: discography, shows, videos, dvds, bootlegs, entrevistas, historia, formaciones, miembros, songs y sus rutas dinámicas
 
+**Footer — iconos de redes sociales (Feb 2026)**
+- Agregados `FacebookIcon` e `InstagramIcon` de `@mui/icons-material` en la barra de copyright
+- Diseño: copyright a la izquierda, iconos a la derecha (mobile: apilados centrados)
+- Hover: azul Facebook `#1877F2`, rosa Instagram `#E4405F`
+- URLs: `facebook.com/profile.php?id=939019079302919` y `instagram.com/megadeth_arg_fan/`
+- Schema.org `sameAs` actualizado: solo contiene nuestras páginas fan (se removieron las cuentas oficiales de Megadeth)
+- Keys de traducción agregadas: `footer.followFacebook` y `footer.followInstagram` en `messages/es.json` y `messages/en.json`
+
 ### Pendiente
 - Renovar `FACEBOOK_PAGE_ACCESS_TOKEN` antes del 22 de abril de 2026
 - Decidir si comprar créditos en X para activar Twitter posting
