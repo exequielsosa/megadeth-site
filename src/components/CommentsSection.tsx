@@ -162,45 +162,10 @@ export function CommentsSection({
         />
       )}
 
-      {/* JSON-LD para el formulario de comentarios */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "DiscussionForumPosting",
-            headline: `${t("leave")} "${title}"`,
-            text: t("subtitle"),
-            author: {
-              "@type": "Organization",
-              name: "Megadeth Fan Site",
-              url: "https://megadeth.com.ar",
-            },
-            datePublished: new Date().toISOString(),
-            commentCount: items.length,
-            comment:
-              items.length > 0
-                ? items.slice(0, 3).map((c) => ({
-                    "@type": "Comment",
-                    text: c.content,
-                    author: {
-                      "@type": "Person",
-                      name: c.name,
-                      url: "https://megadeth.com.ar",
-                    },
-                    dateCreated: c.created_at,
-                  }))
-                : [],
-          }),
-        }}
-      />
-
       {/* Card principal que contiene todo */}
       <Card
         component="section"
         aria-labelledby="comments-section-title"
-        itemScope
-        itemType="https://schema.org/DiscussionForumPosting"
         sx={{ overflow: "hidden" }}
       >
         {/* Banner Header */}
@@ -228,7 +193,6 @@ export function CommentsSection({
               variant="h4"
               component="h2"
               id="comments-section-title"
-              itemProp="headline"
               sx={{
                 color: "white",
                 fontWeight: 500,
@@ -257,8 +221,6 @@ export function CommentsSection({
           <Box
             component="form"
             onSubmit={submit}
-            itemScope
-            itemType="https://schema.org/CommentAction"
             aria-label={t("subtitle") + " " + title}
             sx={{ display: "flex", flexDirection: "column", gap: 2, mb: 4 }}
           >
@@ -341,7 +303,6 @@ export function CommentsSection({
             <Typography
               variant="h6"
               component="h3"
-              itemProp="commentCount"
               sx={{
                 mb: 3,
                 fontSize: { xs: "1.1rem", md: "1.25rem" },
@@ -404,8 +365,6 @@ export function CommentsSection({
                     key={c.id}
                     component="li"
                     variant="outlined"
-                    itemScope
-                    itemType="https://schema.org/Comment"
                     role="article"
                     aria-label={`Comentario de ${c.name}`}
                     sx={{
@@ -426,17 +385,13 @@ export function CommentsSection({
                     >
                       <Typography
                         variant="subtitle2"
-                        itemProp="author"
-                        itemScope
-                        itemType="https://schema.org/Person"
                         sx={{ fontWeight: 700 }}
                       >
-                        <span itemProp="name">{c.name}</span>
+                        {c.name}
                       </Typography>
                       <Typography
                         variant="caption"
                         component="time"
-                        itemProp="dateCreated"
                         dateTime={c.created_at}
                         sx={{ color: "text.secondary" }}
                       >
@@ -451,7 +406,6 @@ export function CommentsSection({
                     </Box>
                     <Typography
                       variant="body2"
-                      itemProp="text"
                       sx={{ whiteSpace: "pre-wrap", color: "text.secondary" }}
                     >
                       {c.content}

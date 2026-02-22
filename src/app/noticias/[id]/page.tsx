@@ -163,7 +163,9 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
     image: article.imageUrl
       ? {
           "@type": "ImageObject",
-          url: `https://megadeth.com.ar${article.imageUrl}`,
+          url: article.imageUrl.startsWith("http")
+            ? article.imageUrl
+            : `https://megadeth.com.ar${article.imageUrl}`,
           ...(article.imageAlt && {
             caption: imageAlt,
           }),
