@@ -1,5 +1,7 @@
 "use client";
-import { Box, Container, Typography, Divider, Grid } from "@mui/material";
+import { Box, Container, Typography, Divider, Grid, IconButton } from "@mui/material";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 
@@ -16,11 +18,8 @@ export default function Footer() {
     description: t("seoDescription"),
     logo: "https://megadeth-fan-site.com/images/logo.png",
     sameAs: [
-      "https://www.megadeth.com",
-      "https://www.facebook.com/Megadeth",
-      "https://twitter.com/Megadeth",
-      "https://www.instagram.com/megadeth/",
-      "https://www.youtube.com/user/megadeth",
+      "https://www.facebook.com/profile.php?id=939019079302919",
+      "https://www.instagram.com/megadeth_arg_fan/",
     ],
   };
 
@@ -289,21 +288,47 @@ export default function Footer() {
           </Box>
         </Box>
 
-        {/* Copyright */}
+        {/* Copyright + Redes sociales */}
         <Box
           sx={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "space-between",
+            flexDirection: { xs: "column", sm: "row" },
+            gap: 1,
           }}
         >
           <Typography
             variant="body2"
             color="text.secondary"
-            sx={{ fontWeight: 400, textAlign: "center" }}
+            sx={{ fontWeight: 400, textAlign: { xs: "center", sm: "left" } }}
           >
             {t("disclaimer", { year: new Date().getFullYear() })}
           </Typography>
+          <Box sx={{ display: "flex", gap: 0.5 }}>
+            <IconButton
+              component="a"
+              href="https://www.facebook.com/profile.php?id=939019079302919"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("followFacebook")}
+              size="small"
+              sx={{ color: "text.secondary", "&:hover": { color: "#1877F2" } }}
+            >
+              <FacebookIcon fontSize="small" />
+            </IconButton>
+            <IconButton
+              component="a"
+              href="https://www.instagram.com/megadeth_arg_fan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("followInstagram")}
+              size="small"
+              sx={{ color: "text.secondary", "&:hover": { color: "#E4405F" } }}
+            >
+              <InstagramIcon fontSize="small" />
+            </IconButton>
+          </Box>
         </Box>
 
         {/* Schema.org JSON-LD */}
