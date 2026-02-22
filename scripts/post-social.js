@@ -185,7 +185,9 @@ async function main() {
   console.log('\n✅ Post-social finalizado.');
 }
 
-main().catch(e => {
-  console.error('❌ Error fatal:', e.message);
-  process.exit(1);
-});
+main()
+  .then(() => process.exit(0))
+  .catch(e => {
+    console.error('❌ Error fatal:', e.message);
+    process.exit(1);
+  });
