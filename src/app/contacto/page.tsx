@@ -1,4 +1,3 @@
-export const dynamic = "force-static";
 import { useTranslations } from "next-intl";
 import { Container, Typography, Box, Button } from "@mui/material";
 import Breadcrumb from "@/components/Breadcrumb";

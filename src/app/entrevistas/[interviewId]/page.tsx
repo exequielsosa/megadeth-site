@@ -1,4 +1,3 @@
-export const dynamic = "force-static";
 import { notFound } from "next/navigation";
 import InterviewDetailPage from "@/components/InterviewDetailPage";
 import interviewsData from "@/constants/interviews.json";

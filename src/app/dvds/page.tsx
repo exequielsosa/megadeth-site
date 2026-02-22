@@ -1,4 +1,3 @@
-export const dynamic = "force-static";
 import DVDGrid from "@/components/DVDGrid";
 import dvdsData from "../../constants/dvd.json";
 import type { DVD } from "@/types/dvd";
