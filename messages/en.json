@@ -495,7 +495,9 @@
     "news": "News",
     "legal": "Legal",
     "seoDescription": "Megadeth is a pioneering thrash metal band founded by Dave Mustaine in 1983. This fan site compiles the complete Megadeth discography, including classic albums like Rust in Peace, Peace Sells... but Who's Buying?, and Countdown to Extinction. Explore the band's history, biographies of legendary members like Marty Friedman, Nick Menza, and David Ellefson, plus the current lineup featuring James LoMenzo, Dirk Verbeuren, and Teemu Mäntysaari. Find concert dates, live show setlists, bootlegs, official music videos, exclusive interviews, and the latest news about world tours and new releases.",
-    "sitemap": "Site Map"
+    "sitemap": "Site Map",
+    "followFacebook": "Follow us on Facebook",
+    "followInstagram": "Follow us on Instagram"
   },
   "videos": {
     "title": "Videos",

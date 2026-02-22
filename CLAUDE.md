@@ -247,6 +247,16 @@ npm run add:news         # Agregar noticias manualmente via CLI
 - `initialMode` pasado al `ColorModeProvider` — SSR renderiza directamente en el modo correcto
 - Toggle escribe localStorage + cookie (max-age 1 año)
 
+**Bug i18n: traducciones perdidas en 21 rutas (Feb 2026)**
+- Causa: `export const dynamic = "force-static"` en páginas con contenido traducido
+- En build-time no hay request headers → `accept-language` vacío → locale siempre `'en'`
+- Fix aplicado: eliminado `force-static` de las 21 páginas afectadas → SSR dinámico por request
+- Páginas afectadas: discography, shows, videos, dvds, bootlegs, entrevistas, historia, formaciones, miembros, songs y sus rutas dinámicas
+
 ### Pendiente
 - Renovar `FACEBOOK_PAGE_ACCESS_TOKEN` antes del 22 de abril de 2026
 - Decidir si comprar créditos en X para activar Twitter posting
+- **i18n routing definitivo**: migrar a URLs por locale (`/es/...`, `/en/...`) con middleware next-intl
+  - Permite `generateStaticParams` con ambos locales → cero Function invocations en Vercel
+  - Fix permanente para el problema de `force-static` vs locale detection
+  - Requiere: agregar `middleware.ts`, reestructurar rutas a `/[locale]/...`, actualizar todos los links internos
