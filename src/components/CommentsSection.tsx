@@ -146,6 +146,7 @@ export function CommentsSection({
                 items.length > 0
                   ? items[items.length - 1].created_at
                   : new Date().toISOString(),
+              image: "https://megadeth.com.ar/images/band.webp",
               commentCount: items.length,
               comment: items.map((c) => ({
                 "@type": "Comment",

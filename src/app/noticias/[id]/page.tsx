@@ -2,7 +2,6 @@ export const revalidate = 300;
 import { Container, Typography, Box, Chip } from "@mui/material";
 import { notFound } from "next/navigation";
 import { getTranslations, getLocale } from "next-intl/server";
-import { NewsArticle } from "@/types/news";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import SafeNewsImage from "@/components/SafeNewsImage";
@@ -179,6 +178,7 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
             "@type": "ImageObject",
             url: "https://megadeth.com.ar/images/meg-argentina.jpg",
           },
+    url: `https://megadeth.com.ar/noticias/${article.id}`,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://megadeth.com.ar${

@@ -117,13 +117,20 @@ export default function NoticiasPage() {
               ? "Descripción no disponible"
               : "Description unavailable",
           ).substring(0, 200),
-          datePublished: article.publishedDate,
-          url: `https://megadeth.com.ar/${locale}/noticias/${article.id}`,
+          datePublished: new Date(article.publishedDate).toISOString(),
+          url: `https://megadeth.com.ar/noticias/${article.id}`,
           image: article.imageUrl
-            ? `https://megadeth.com.ar${article.imageUrl}`
+            ? article.imageUrl.startsWith("http")
+              ? article.imageUrl
+              : `https://megadeth.com.ar${article.imageUrl}`
             : article.youtubeVideoId
               ? `https://img.youtube.com/vi/${article.youtubeVideoId}/hqdefault.jpg`
-              : "https://megadeth.com.ar/logo-megadeth.png",
+              : "https://megadeth.com.ar/images/band.webp",
+          author: {
+            "@type": "Organization",
+            name: "Megadeth Argentina",
+            url: "https://megadeth.com.ar",
+          },
         },
       })),
     },

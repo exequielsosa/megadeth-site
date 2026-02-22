@@ -119,8 +119,22 @@ export default function ArticleCard({
               "@type": "Article",
               headline: title,
               description: description,
-              datePublished: publishedDate,
-              image: imageUrl,
+              datePublished: new Date(publishedDate!).toISOString(),
+              image: imageUrl
+                ? imageUrl.startsWith("http")
+                  ? imageUrl
+                  : `https://megadeth.com.ar${imageUrl}`
+                : undefined,
+              author: {
+                "@type": "Organization",
+                name: "Megadeth Argentina",
+                url: "https://megadeth.com.ar",
+              },
+              ...(linkUrl && {
+                url: linkUrl.startsWith("http")
+                  ? linkUrl
+                  : `https://megadeth.com.ar${linkUrl}`,
+              }),
             }),
           }}
         />
