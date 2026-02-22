@@ -261,6 +261,23 @@ npm run add:news         # Agregar noticias manualmente via CLI
 - Schema.org `sameAs` actualizado: solo contiene nuestras páginas fan (se removieron las cuentas oficiales de Megadeth)
 - Keys de traducción agregadas: `footer.followFacebook` y `footer.followInstagram` en `messages/es.json` y `messages/en.json`
 
+**RSS Feed (Feb 2026)**
+- Creado `src/app/feed.xml/route.ts` — RSS 2.0 con los últimos 50 artículos
+- XML con escape correcto, `Cache-Control` 1h, `revalidate = 3600`
+- Autodiscovery link agregado en `src/app/layout.tsx`
+- Declarado en Google Search Console (Sitemaps → feed.xml)
+
+**Schema.org / JSON-LD — correcciones masivas (Feb 2026)**
+- `src/app/noticias/[id]/page.tsx`: fix imagen doble-prefijada (`startsWith('http')`), agregado `url`
+- `src/components/CommentsSection.tsx`: eliminado JSON-LD del formulario (generaba errores en todas las páginas con comentarios), eliminados todos los atributos microdata (`itemScope`/`itemType`/`itemProp`), agregado `image` al schema de comentarios reales
+- `src/components/ArticleCard.tsx`: agregado `author`, `datePublished` con timezone (`.toISOString()`), `url`, fix imagen doble-prefijada
+- `src/app/noticias/page.tsx`: fix imagen doble-prefijada, `datePublished` con timezone, `author` faltante, `url` con locale incorrecto corregido
+
+**Patrón de bug recurrente — imagen doble-prefijada:**
+- Causa: `https://megadeth.com.ar${imageUrl}` sin verificar si `imageUrl` ya es absoluta
+- Fix: `imageUrl.startsWith('http') ? imageUrl : \`https://megadeth.com.ar\${imageUrl}\``
+- Corregido en: noticias/[id]/page.tsx (JSON-LD + OG tags), noticias/page.tsx, ArticleCard.tsx
+
 ### Pendiente
 - Renovar `FACEBOOK_PAGE_ACCESS_TOKEN` antes del 22 de abril de 2026
 - Decidir si comprar créditos en X para activar Twitter posting
