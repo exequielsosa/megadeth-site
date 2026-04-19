@@ -28,23 +28,25 @@ export default function UpcomingToursWidget({
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
+  const parseDate = (dateString: string) => {
+    const [year, month, day] = dateString.split("-").map(Number);
+    return new Date(year, month - 1, day);
+  };
+
   const upcomingShows = tourDates
-    .filter((show) => new Date(show.date) >= today)
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .filter((show) => parseDate(show.date) >= today)
+    .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime())
     .slice(0, limit);
 
   if (upcomingShows.length === 0) {
     return null;
   }
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString(locale === "es" ? "es-ES" : "en-US", {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-  };
+  const formatDate = (dateString: string) =>
+    parseDate(dateString).toLocaleDateString(
+      locale === "es" ? "es-ES" : "en-US",
+      { day: "numeric", month: "short", year: "numeric" }
+    );
 
   return (
     <Box sx={{ width: "100%", height: "100%" }}>

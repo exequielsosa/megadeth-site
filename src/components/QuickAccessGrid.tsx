@@ -96,7 +96,7 @@ export default function QuickAccessGrid() {
                 sx={{
                   position: "relative",
                   width: "100%",
-                  height: 200,
+                  height: 250,
                   mb: 2,
                 }}
               >

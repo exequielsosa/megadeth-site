@@ -84,25 +84,30 @@ export default function TourPage() {
     );
   };
 
+  const parseDate = (dateString: string) => {
+    const [year, month, day] = dateString.split("-").map(Number);
+    return new Date(year, month - 1, day);
+  };
+
   // Función para ordenar conciertos
   const sortConcerts = (concerts: typeof tourDates, order: "asc" | "desc") => {
     return [...concerts].sort((a, b) => {
-      const dateA = new Date(a.date).getTime();
-      const dateB = new Date(b.date).getTime();
+      const dateA = parseDate(a.date).getTime();
+      const dateB = parseDate(b.date).getTime();
       return order === "asc" ? dateA - dateB : dateB - dateA;
     });
   };
 
   // Filtrar y ordenar conciertos próximos
   const upcomingConcerts = useMemo(() => {
-    const upcoming = tourDates.filter((show) => new Date(show.date) >= today);
+    const upcoming = tourDates.filter((show) => parseDate(show.date) >= today);
     const filtered = filterConcerts(upcoming, searchQuery);
     return sortConcerts(filtered, sortOrder);
   }, [searchQuery, sortOrder, today]);
 
   // Filtrar y ordenar conciertos pasados
   const pastConcerts = useMemo(() => {
-    const past = tourDates.filter((show) => new Date(show.date) < today);
+    const past = tourDates.filter((show) => parseDate(show.date) < today);
     const filtered = filterConcerts(past, searchQuery);
     return sortConcerts(filtered, sortOrder);
   }, [searchQuery, sortOrder]);
@@ -128,7 +133,7 @@ export default function TourPage() {
                 gutterBottom
                 color="primary"
               >
-                {new Date(show.date).toLocaleDateString(
+                {parseDate(show.date).toLocaleDateString(
                   locale === "es" ? "es-ES" : "en-US",
                   {
                     day: "numeric",
