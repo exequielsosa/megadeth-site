@@ -257,9 +257,9 @@ export default function Hero({ latestNews }: { latestNews: NewsArticle[] }) {
         </Stack>
 
         {/* Banner de concierto en Argentina */}
-        <Box mt={4}>
+        {/* <Box mt={4}>
           <ArgentinaConcertBanner />
-        </Box>
+        </Box> */}
 
         <FeaturedReviewBanner />
 
