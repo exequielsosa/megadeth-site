@@ -13,7 +13,10 @@
     "add:news": "node scripts/add-news.js",
     "check:config": "node scripts/check-config.js",
     "test:gemini": "node scripts/test-gemini.js",
-    "scrape:news": "node scripts/scrape-news.js"
+    "scrape:news": "node scripts/scrape-news.js",
+    "sync:backfill": "node src/scripts/setlist-sync.mjs backfill",
+    "sync:update": "node src/scripts/setlist-sync.mjs update",
+    "sync:fix": "node src/scripts/fix-song-counts.mjs src/data/songs.counts.json src/constants/songs.counts.fixed.json src/data/songs.counts.report.json"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

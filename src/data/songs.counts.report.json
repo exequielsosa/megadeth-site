@@ -1,0 +1,228 @@
+{
+  "inputPath": "src/data/songs.counts.json",
+  "outputPath": "src/constants/songs.counts.fixed.json",
+  "reportPath": "src/data/songs.counts.report.json",
+  "medleysExpanded": [
+    {
+      "originalKey": "Holy Wars... The Punishment Due / Mechanix",
+      "count": 34,
+      "parts": [
+        "Holy Wars... The Punishment Due",
+        "Mechanix"
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / Mechanix",
+      "count": 20,
+      "parts": [
+        "Peace Sells",
+        "Mechanix"
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / Set the World Afire",
+      "count": 1,
+      "parts": [
+        "Peace Sells",
+        "Set the World Afire"
+      ]
+    },
+    {
+      "originalKey": "Mechanix / The Scorpion / Reckoning Day",
+      "count": 1,
+      "parts": [
+        "Mechanix",
+        "The Scorpion",
+        "Reckoning Day"
+      ]
+    },
+    {
+      "originalKey": "Holy Wars... The Punishment Due / Reckoning Day",
+      "count": 1,
+      "parts": [
+        "Holy Wars... The Punishment Due",
+        "Reckoning Day"
+      ]
+    },
+    {
+      "originalKey": "Holy Wars... The Punishment Due / She-Wolf",
+      "count": 1,
+      "parts": [
+        "Holy Wars... The Punishment Due",
+        "She-Wolf"
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / Paranoid / Mechanix",
+      "count": 4,
+      "parts": [
+        "Peace Sells",
+        "Paranoid",
+        "Mechanix"
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / Paranoid",
+      "count": 17,
+      "parts": [
+        "Peace Sells",
+        "Paranoid"
+      ]
+    },
+    {
+      "originalKey": "Sweating Bullets / My Last Words",
+      "count": 1,
+      "parts": [
+        "Sweating Bullets",
+        "My Last Words"
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / Sabbath Bloody Sabbath / Paranoid",
+      "count": 1,
+      "parts": [
+        "Peace Sells",
+        "Sabbath Bloody Sabbath",
+        "Paranoid"
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / Mechanix / Paranoid",
+      "count": 3,
+      "parts": [
+        "Peace Sells",
+        "Mechanix",
+        "Paranoid"
+      ]
+    },
+    {
+      "originalKey": "Holy Wars... The Punishment Due / Paranoid",
+      "count": 4,
+      "parts": [
+        "Holy Wars... The Punishment Due",
+        "Paranoid"
+      ]
+    },
+    {
+      "originalKey": "Trust / Sweating Bullets",
+      "count": 1,
+      "parts": [
+        "Trust",
+        "Sweating Bullets"
+      ]
+    },
+    {
+      "originalKey": "Time: The Beginning / Use the Man",
+      "count": 26,
+      "parts": [
+        "Time: The Beginning",
+        "Use the Man"
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / Paranoid / Anarchy in the U.K.",
+      "count": 4,
+      "parts": [
+        "Peace Sells",
+        "Paranoid",
+        "Anarchy in the U.K."
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / Anarchy in the U.K.",
+      "count": 4,
+      "parts": [
+        "Peace Sells",
+        "Anarchy in the U.K."
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / Anarchy in the U.K. / Paranoid",
+      "count": 1,
+      "parts": [
+        "Peace Sells",
+        "Anarchy in the U.K.",
+        "Paranoid"
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / Tornado of Souls",
+      "count": 1,
+      "parts": [
+        "Peace Sells",
+        "Tornado of Souls"
+      ]
+    },
+    {
+      "originalKey": "Anarchy in the U.K. / Paranoid",
+      "count": 1,
+      "parts": [
+        "Anarchy in the U.K.",
+        "Paranoid"
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / FFF",
+      "count": 18,
+      "parts": [
+        "Peace Sells",
+        "FFF"
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / Victory",
+      "count": 2,
+      "parts": [
+        "Peace Sells",
+        "Victory"
+      ]
+    },
+    {
+      "originalKey": "Peace Sells / Wake Up Dead",
+      "count": 5,
+      "parts": [
+        "Peace Sells",
+        "Wake Up Dead"
+      ]
+    }
+  ],
+  "merges": [
+    {
+      "canonicalKey": "prince of darkness",
+      "chosenDisplay": "Prince of Darkness",
+      "variants": [
+        {
+          "name": "Prince of Darkness",
+          "count": 561
+        },
+        {
+          "name": "Prince Of Darkness",
+          "count": 7
+        }
+      ],
+      "uniqueNames": [
+        "Prince of Darkness",
+        "Prince Of Darkness"
+      ]
+    },
+    {
+      "canonicalKey": "the boys are back in town",
+      "chosenDisplay": "The Boys Are Back In Town",
+      "variants": [
+        {
+          "name": "The Boys Are Back In Town",
+          "count": 1
+        },
+        {
+          "name": "The Boys Are Back in Town",
+          "count": 6
+        }
+      ],
+      "uniqueNames": [
+        "The Boys Are Back In Town",
+        "The Boys Are Back in Town"
+      ]
+    }
+  ],
+  "notes": []
+}
