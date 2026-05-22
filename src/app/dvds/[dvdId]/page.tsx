@@ -208,9 +208,13 @@ export default async function DVDPage({ params }: DVDPageProps) {
     ...(dvd.tracks &&
       dvd.tracks.length > 0 && {
         hasPart: dvd.tracks.map((track) => ({
-          "@type": "VideoObject",
+          "@type": "MusicRecording",
           name: track.title,
           position: track.n,
+          byArtist: {
+            "@type": "MusicGroup",
+            name: "Megadeth",
+          },
         })),
       }),
   };

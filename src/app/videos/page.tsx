@@ -138,7 +138,7 @@ function generateStructuredData(locale: string) {
     thumbnailUrl: `https://img.youtube.com/vi/${
       video.youtube.split("v=")[1]?.split("&")[0]
     }/maxresdefault.jpg`,
-    uploadDate: `${video.year}-01-01`,
+    uploadDate: `${video.year}-01-01T00:00:00+00:00`,
     duration: "PT3M30S", // Duración promedio estimada
     contentUrl: video.youtube,
     embedUrl: `https://www.youtube.com/embed/${
