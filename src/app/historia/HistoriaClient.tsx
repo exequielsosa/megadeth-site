@@ -58,7 +58,7 @@ export default function HistoriaClient() {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: 'url("/images/historia/vic_v2.webp")',
+                background: 'url("/images/site-updates/history.jpg")',
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 opacity: 0.3,

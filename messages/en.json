@@ -405,6 +405,7 @@
     "discography": "Discography",
     "songs": "Songs",
     "withAllNews": "with all the news from the new album",
+    "tracklist": "Tracklist",
     "preOrder": "Buy now",
     "officialStore": "Megadeth Official Store"
   },
@@ -646,6 +647,49 @@
   },
   "heroIntro": {
     "description": "Welcome to the most complete Megadeth site in Spanish. Discover the entire discography, band history, live shows, exclusive interviews, song lyrics and the latest news about Dave Mustaine, Teemu Mäntysaári, James LoMenzo and Dirk Verbeuren."
+  },
+  "heroTabs": {
+    "title": "Megadeth Legacy",
+    "subtitle": "Weekly news, complete discography, tour dates, band history, lyrics and much more",
+    "tabs": {
+      "presentation": "Presentation",
+      "news": "News",
+      "shows": "Shows",
+      "history": "History",
+      "songs": "Songs"
+    },
+    "stats": {
+      "songs": "Documented Songs",
+      "albums": "Studio Albums",
+      "members": "Members",
+      "videos": "Music Videos",
+      "newsWeeklyTitle": "Weekly",
+      "newsWeekly": "Updates",
+      "newsMegadeth": "Megadeth",
+      "activeYears": "Active years",
+      "studioAlbums": "Studio albums",
+      "lineupChanges": "Lineup changes",
+      "worldwideSales": "Worldwide sales"
+    },
+    "content": {
+      "presentation": "Megadeth is one of the most influential thrash metal bands in history. On this site you'll find everything you need: news updated weekly, the complete discography with 17 studio albums, bootlegs, compilations and more. Explore tour dates, learn the band's history since its founding in 1983, discover all the songs with lyrics and translations, watch exclusive music videos, and access interviews and special content.",
+      "presentationSections": "Sections: News • Discography (17 albums) • Bootlegs (13) • Compilations (6) • Live Albums (6) • EPs (5) • DVDs (16) • Shows & Tour Dates • Members (27) • Videos (53) • Song Lyrics with Spanish Translation",
+      "news": "Stay updated with the latest Megadeth news. We publish verified content every week, with information about the band, its members, tour announcements, new material and much more. All news are available in Spanish and English.",
+      "shows": "Check out Megadeth's upcoming tour dates, venues, stadiums and details for each show. Here you'll find the most up-to-date information about where to see the band live.",
+      "history": "Discover the complete history of Megadeth since its founding in 1983 by Dave Mustaine. Learn about the band's most important milestones, their iconic albums, lineup changes, and their impact on metal music.",
+      "songs": "Explore more than 200 documented Megadeth songs. Each song includes lyrics in English and Spanish, album information, fun facts, and the meaning behind each theme. Discover which songs are played most live."
+    },
+    "buttons": {
+      "viewNews": "View all news",
+      "viewTour": "View tour dates",
+      "viewHistory": "Learn the history",
+      "viewSongs": "Explore songs"
+    },
+    "nextShow": "Next Show",
+    "secondShow": "2nd Show",
+    "upcomingShows": "Upcoming Shows",
+    "topSongs": "Top 5 Most Played Songs",
+    "timesPlayed": "times played"
   },
   "search": {
     "placeholder": "Search songs, albums, shows, news...",

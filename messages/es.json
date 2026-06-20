@@ -405,6 +405,7 @@
     "discography": "Discografía",
     "songs": "Canciones",
     "withAllNews": "con todas las novedades del nuevo disco",
+    "tracklist": "Tracklist",
     "preOrder": "Compralo ahora",
     "officialStore": "Tienda oficial de Megadeth"
   },
@@ -646,6 +647,49 @@
   },
   "heroIntro": {
     "description": "Bienvenido al sitio más completo de Megadeth en español. Descubre toda la discografía, historia de la banda, shows en vivo, entrevistas exclusivas, letras de canciones y las últimas noticias sobre Dave Mustaine, Teemu Mäntysaari, James LoMenzo y Dirk Verbeuren."
+  },
+  "heroTabs": {
+    "title": "Megadeth: El Legado",
+    "subtitle": "Noticias semanales, discografía completa, fechas de tour, historia de la banda, letras y mucho más",
+    "tabs": {
+      "presentation": "Presentación",
+      "news": "Noticias",
+      "shows": "Shows",
+      "history": "Historia",
+      "songs": "Canciones"
+    },
+    "stats": {
+      "songs": "Canciones documentadas",
+      "albums": "Álbumes de estudio",
+      "members": "Miembros",
+      "videos": "Videoclips",
+      "newsWeeklyTitle": "Semanal",
+      "newsWeekly": "Actualizaciones",
+      "newsMegadeth": "Megadeth",
+      "activeYears": "Años activos",
+      "studioAlbums": "Álbumes de estudio",
+      "lineupChanges": "Cambios en la formación",
+      "worldwideSales": "Ventas mundiales"
+    },
+    "content": {
+      "presentation": "Megadeth es una de las bandas de thrash metal más influyentes de la historia. En este sitio encontrarás todo lo que necesitas: noticias actualizadas semanalmente, la discografía completa con 17 álbumes de estudio, bootlegs, compilaciones y más. Explora las fechas de tour, conoce la historia de la banda desde su fundación en 1983, descubre todas las canciones con letras y traducciones, ve videos musicales exclusivos, y accede a entrevistas y contenido especial.",
+      "presentationSections": "Secciones: Noticias • Discografía (17 álbumes) • Bootlegs (13) • Compilaciones (6) • Álbumes en vivo (6) • EPs (5) • DVDs (16) • Shows y fechas de tour • Miembros (27) • Videos (53) • Letras de canciones con traducción al español",
+      "news": "Mantente actualizado con las últimas noticias sobre Megadeth. Publicamos contenido verificado todas las semanas, con información sobre la banda, sus miembros, anuncios de tour, nuevo material y mucho más. Todas las noticias están disponibles en español e inglés.",
+      "shows": "Revisa las próximas fechas de tour de Megadeth, ubicaciones, estadios y detalles de cada show. Aquí encontrarás la información más actualizada sobre dónde verá a la banda en vivo.",
+      "history": "Descubre la historia completa de Megadeth desde su fundación en 1983 por Dave Mustaine. Conoce los hitos más importantes de la banda, sus álbumes icónicos, los cambios en la formación, y su impacto en la música metal.",
+      "songs": "Explora más de 200 canciones documentadas de Megadeth. Cada canción incluye letras en inglés y español, información sobre el álbum, datos curiosos, y el significado detrás de cada tema. Descubre qué canciones tocan más en vivo."
+    },
+    "buttons": {
+      "viewNews": "Ver todas las noticias",
+      "viewTour": "Ver fechas de tour",
+      "viewHistory": "Conocer la historia",
+      "viewSongs": "Explorar canciones"
+    },
+    "nextShow": "Próximo Show",
+    "secondShow": "2º Show",
+    "upcomingShows": "Próximos Shows",
+    "topSongs": "Top 5 Canciones Más Tocadas",
+    "timesPlayed": "veces tocada"
   },
   "search": {
     "placeholder": "Buscar canciones, álbumes, shows, noticias...",

@@ -2,8 +2,8 @@
 
 import { Box, Container, Stack, Typography, Button } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
-import ContainerGradient from "../components/atoms/ContainerGradient";
 import Image from "next/image";
+import ContainerGradient from "../components/atoms/ContainerGradient";
 import Divider from "@mui/material/Divider";
 import ArticleCard from "./ArticleCard";
 import QuickAccessGrid from "./QuickAccessGrid";
@@ -16,14 +16,12 @@ import SiteUpdatesBanner from "./SiteUpdatesBanner";
 import siteUpdatesData from "@/constants/site-updates.json";
 import LastShowsCards from "./LastShowsCards";
 import FeaturedReviewBanner from "./FeaturedReviewBanner";
-import ArgentinaConcertBanner from "./ArgentinaConcertBanner";
-import { slugify } from "@/utils/slugify";
+import HeroTabs from "./HeroTabs";
 
 export default function Hero({ latestNews }: { latestNews: NewsArticle[] }) {
   const t = useTranslations("hero");
   const tAlbum = useTranslations("album");
   const tNews = useTranslations("news");
-  const tIntro = useTranslations("heroIntro");
   const locale = useLocale() as "es" | "en";
 
   return (
@@ -32,43 +30,30 @@ export default function Hero({ latestNews }: { latestNews: NewsArticle[] }) {
         maxWidth={false}
         sx={{ maxWidth: 1440, mx: "auto", px: { xs: 2, sm: 3 } }}
       >
-        <Stack spacing={3} alignItems="start">
-          <Typography variant="h1" sx={{ fontSize: { xs: 24, md: 56 } }}>
-            {t("title")}
-          </Typography>
+        <HeroTabs />
 
-          {/* Intro SEO */}
-          <Typography
-            variant="body1"
+        {/* Sección Álbum Final - Elemento Secundario */}
+        <Box sx={{ mt: 8, mb: 6 }}>
+          <Box
             sx={{
-              fontSize: { xs: 14, md: 18 },
-              color: "text.secondary",
-              maxWidth: 1200,
-              lineHeight: 1.7,
+              display: "grid",
+              gridTemplateColumns: { xs: "1fr", md: "250px 1fr 1fr" },
+              gap: 4,
+              alignItems: "start",
             }}
           >
-            {tIntro("description")}
-          </Typography>
-
-          <Box
-            width="100%"
-            gap={4}
-            display="flex"
-            flexDirection={{ xs: "column", lg: "row" }}
-            justifyContent={{ xs: "center", lg: "flex-start" }}
-            alignItems={{ xs: "center", lg: "flex-start" }}
-          >
+            {/* Imagen del álbum - más pequeña */}
             <Box
               sx={{
                 position: "relative",
-                width: { xs: "300px", md: "600px" },
-                height: { xs: "300px", md: "600px" },
-                flexShrink: 0,
+                width: { xs: "200px", md: "250px" },
+                height: { xs: "200px", md: "250px" },
+                mx: { xs: "auto", md: 0 },
+                borderRadius: 1,
                 overflow: "hidden",
-                borderRadius: 0,
                 transition: "border-radius 0.3s ease",
                 "&:hover": {
-                  borderRadius: "24px",
+                  borderRadius: 2,
                 },
               }}
             >
@@ -81,180 +66,160 @@ export default function Hero({ latestNews }: { latestNews: NewsArticle[] }) {
                   src="/images/megadeth-megadeth.jpg"
                   alt="Megadeth"
                   fill
-                  style={{
-                    objectFit: "cover",
-                  }}
-                  priority
+                  style={{ objectFit: "cover" }}
+                  priority={false}
                 />
               </Link>
             </Box>
-            <Box>
-              <Stack spacing={2} sx={{ mt: 0 }}>
-                <Typography
-                  variant="h4"
-                  color="primary"
-                  sx={{ fontSize: { xs: 20, md: 34 }, fontWeight: 600, mb: 1 }}
-                >
-                  {tAlbum("finalAlbumTitle")}
-                </Typography>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontWeight: 500,
-                    color: "text.primary",
-                    fontSize: { xs: 18, md: 24 },
-                  }}
-                >
-                  {tAlbum("albumName")}: &quot;{tAlbum("albumName")}&quot;
-                </Typography>
-                <Stack spacing={1.5}>
-                  <Typography
-                    variant="body1"
-                    sx={{ fontSize: { xs: 14, md: 17 } }}
-                  >
-                    <strong>{tAlbum("firstSingle")}:</strong> &quot;
-                    {tAlbum("firstSingleValue")}&quot;
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{ fontSize: { xs: 14, md: 17 } }}
-                  >
-                    <strong>{tAlbum("producedBy")}:</strong>{" "}
-                    {tAlbum("producedByValue")}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{ fontSize: { xs: 14, md: 17 } }}
-                  >
-                    <strong>{tAlbum("finalLineup")}:</strong>{" "}
-                    {tAlbum("finalLineupValue")}
-                  </Typography>
 
+            {/* Contenido del álbum - info */}
+            <Stack spacing={2}>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: { xs: 18, md: 24 },
+                  fontWeight: 700,
+                  color: "primary.main",
+                }}
+              >
+                {tAlbum("finalAlbumTitle")}
+              </Typography>
+
+              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                <strong>{tAlbum("albumName")}:</strong> &quot;
+                {tAlbum("albumName")}&quot;
+              </Typography>
+
+              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                <strong>{tAlbum("firstSingle")}:</strong> &quot;
+                {tAlbum("firstSingleValue")}&quot;
+              </Typography>
+
+              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                <strong>{tAlbum("producedBy")}:</strong>{" "}
+                {tAlbum("producedByValue")}
+              </Typography>
+
+              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                <strong>{tAlbum("finalLineup")}:</strong>{" "}
+                {tAlbum("finalLineupValue")}
+              </Typography>
+
+              <Box sx={{ pt: 1 }}>
+                <Typography variant="caption" sx={{ color: "text.secondary" }}>
+                  <strong>{tAlbum("preOrder")}:</strong>{" "}
                   <Typography
-                    variant="body1"
-                    sx={{ fontSize: { xs: 14, md: 17 }, mt: 1 }}
-                  >
-                    <strong>{tAlbum("preOrder")}:</strong>{" "}
-                    <Typography
-                      component="a"
-                      href="https://shop.megadeth.com/collections/megadeth"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      sx={{
-                        color: "primary.main",
-                        textDecoration: "none",
-                        fontWeight: 600,
-                        fontSize: "1.1rem",
-                        "&:hover": {
-                          color: "primary.dark",
-                          textDecoration: "underline",
-                        },
-                      }}
-                    >
-                      {tAlbum("officialStore")}
-                    </Typography>
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{ fontSize: { xs: 14, md: 17 } }}
-                  >
-                    <strong>{tAlbum("updatedSections")}:</strong>{" "}
-                    <Typography
-                      component={Link}
-                      href="/discography"
-                      sx={{
-                        color: "primary.main",
-                        textDecoration: "none",
-                        fontWeight: 600,
-                        fontSize: "1.1rem",
-                        "&:hover": {
-                          color: "primary.dark",
-                          textDecoration: "underline",
-                        },
-                      }}
-                    >
-                      {tAlbum("discography")}
-                    </Typography>
-                    {" y "}
-                    <Typography
-                      component={Link}
-                      href="/songs"
-                      sx={{
-                        color: "primary.main",
-                        textDecoration: "none",
-                        fontWeight: 600,
-                        fontSize: "1.1rem",
-                        "&:hover": {
-                          color: "primary.dark",
-                          textDecoration: "underline",
-                        },
-                      }}
-                    >
-                      {tAlbum("songs")}
-                    </Typography>{" "}
-                    {tAlbum("withAllNews")}
-                  </Typography>
-                </Stack>
-                {/* Tracklist Section */}
-                <Box mt={3}>
-                  <Typography
-                    variant="h6"
+                    component="a"
+                    href="https://shop.megadeth.com/collections/megadeth"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     sx={{
+                      color: "primary.main",
+                      textDecoration: "none",
                       fontWeight: 600,
-                      mb: 1,
-                      fontSize: { xs: 16, md: 22 },
+                      "&:hover": {
+                        textDecoration: "underline",
+                      },
                     }}
                   >
-                    Tracklist
+                    {tAlbum("officialStore")}
                   </Typography>
-                  <Stack spacing={0.5}>
-                    {[
-                      "TIPPING POINT",
-                      "I DON'T CARE",
-                      "HEY, GOD?!",
-                      "LET THERE BE SHRED",
-                      "PUPPET PARADE",
-                      "ANOTHER BAD DAY",
-                      "MADE TO KILL",
-                      "OBEY THE CALL",
-                      "I AM WAR",
-                      "THE LAST NOTE",
-                      "RIDE THE LIGHTNING",
-                      "BLOODLUST",
-                      "NOBODY'S HERO",
-                    ].map((track, idx) => (
-                      <Link
-                        key={track}
-                        href={`/songs/${slugify(track)}`}
-                        passHref
-                        style={{ textDecoration: "none", color: "inherit" }}
-                      >
-                        <Typography
-                          variant="body2"
-                          sx={{
-                            fontSize: { xs: 13, md: 16 },
-                            pl: 1,
-                            cursor: "pointer",
-                            transition: "color 0.2s",
-                            "&:hover": {
-                              color: "primary.main",
-                            },
-                          }}
-                        >
-                          <strong>{idx + 1}.</strong> {track}
-                        </Typography>
-                      </Link>
-                    ))}
-                  </Stack>
-                </Box>
-                {/* Countdown Component
-                <Box mt={1}>
-                  <Countdown />
-                </Box> */}
-              </Stack>
+                </Typography>
+              </Box>
+            </Stack>
+
+            {/* Tracklist - Columna Derecha */}
+            <Box>
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: { xs: 12, md: 13 },
+                  fontWeight: 700,
+                  color: "primary.main",
+                  mb: 1.5,
+                }}
+              >
+                {tAlbum("tracklist")}
+              </Typography>
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: 1,
+                }}
+              >
+                {[
+                  {
+                    number: 1,
+                    title: "Tipping Point",
+                    slug: "tipping-point",
+                  },
+                  { number: 2, title: "I Don't Care", slug: "i-dont-care" },
+                  { number: 3, title: "Hey, God?!", slug: "hey-god" },
+                  {
+                    number: 4,
+                    title: "Let There Be Shred",
+                    slug: "let-there-be-shred",
+                  },
+                  {
+                    number: 5,
+                    title: "Puppet Parade",
+                    slug: "puppet-parade",
+                  },
+                  {
+                    number: 6,
+                    title: "Another Bad Day",
+                    slug: "another-bad-day",
+                  },
+                  { number: 7, title: "Made to Kill", slug: "made-to-kill" },
+                  {
+                    number: 8,
+                    title: "Obey the Call",
+                    slug: "obey-the-call",
+                  },
+                  { number: 9, title: "I Am War", slug: "i-am-war" },
+                  {
+                    number: 10,
+                    title: "The Last Note",
+                    slug: "the-last-note",
+                  },
+                  {
+                    number: 11,
+                    title: "Ride the Lightning",
+                    slug: "ride-the-lightning",
+                  },
+                  { number: 12, title: "Bloodlust", slug: "bloodlust" },
+                  {
+                    number: 13,
+                    title: "Nobody's Hero",
+                    slug: "nobodys-hero",
+                  },
+                ].map((song) => (
+                  <Link
+                    key={song.slug}
+                    href={`/songs/${song.slug}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        color: "text.secondary",
+                        fontSize: { xs: 11, md: 12 },
+                        transition: "color 0.2s ease",
+                        display: "block",
+                        "&:hover": {
+                          color: "primary.main",
+                        },
+                      }}
+                    >
+                      {song.number}. {song.title}
+                    </Typography>
+                  </Link>
+                ))}
+              </Box>
             </Box>
           </Box>
-        </Stack>
+        </Box>
 
         {/* Banner de concierto en Argentina */}
         {/* <Box mt={4}>
