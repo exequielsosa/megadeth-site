@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 import AnimatedCounter from "./AnimatedCounter";
 import { tourDates } from "@/constants/tourDates";
 
@@ -106,6 +107,44 @@ function PresentationSectionsLinks({
   return <>{content}</>;
 }
 
+function TabBackground({
+  src,
+  alt,
+  overlay,
+  priority = false,
+  position = "center",
+}: {
+  src: string;
+  alt: string;
+  overlay: string;
+  priority?: boolean;
+  position?: string;
+}) {
+  return (
+    <>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        priority={priority}
+        sizes="(max-width: 1440px) 100vw, 1440px"
+        style={{ objectFit: "cover", objectPosition: position, zIndex: 0 }}
+      />
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: overlay,
+          zIndex: 1,
+        }}
+      />
+    </>
+  );
+}
+
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -122,18 +161,16 @@ function TabPanel(props: TabPanelProps) {
       aria-labelledby={`hero-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box
-          sx={{
-            borderRadius: 0,
-            minHeight: "500px",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {children}
-        </Box>
-      )}
+      <Box
+        sx={{
+          borderRadius: 0,
+          minHeight: "500px",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        {children}
+      </Box>
     </div>
   );
 }
@@ -216,31 +253,15 @@ export default function HeroTabs() {
             flex: 1,
             display: "flex",
             flexDirection: "column",
-            "&::before": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundImage:
-                "url(/images/site-updates/megadeth_argentina.avif)",
-              backgroundSize: "cover",
-              // filter: "blur(3px)",
-              zIndex: 0,
-            },
-            "&::after": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.75)",
-              zIndex: 1,
-            },
           }}
         >
+          <TabBackground
+            src="/images/site-updates/megadeth_argentina.avif"
+            alt="Megadeth en Argentina"
+            overlay="rgba(0, 0, 0, 0.75)"
+            priority
+            position="left top"
+          />
           <Stack
             spacing={6}
             sx={{
@@ -340,7 +361,7 @@ export default function HeroTabs() {
                     animation: `${fadeIn} 0.6s ease-in 0.2s both`,
                   }}
                 >
-                  <AnimatedCounter end={63} />
+                  <AnimatedCounter end={17} />
                 </Typography>
                 <Typography
                   variant="body2"
@@ -465,30 +486,13 @@ export default function HeroTabs() {
             flex: 1,
             display: "flex",
             flexDirection: "column",
-            "&::before": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundImage: "url(/images/site-updates/noticias_back2.jpg)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              zIndex: 0,
-            },
-            "&::after": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.55)",
-              zIndex: 1,
-            },
           }}
         >
+          <TabBackground
+            src="/images/site-updates/noticias_back2.jpg"
+            alt="Noticias de Megadeth"
+            overlay="rgba(0, 0, 0, 0.55)"
+          />
           <Box
             sx={{
               display: "flex",
@@ -635,30 +639,13 @@ export default function HeroTabs() {
             display: "flex",
             flexDirection: "column",
             minHeight: "500px",
-            "&::before": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundImage: "url(/images/site-updates/megadeth.webp)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              zIndex: 0,
-            },
-            "&::after": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.65)",
-              zIndex: 1,
-            },
           }}
         >
+          <TabBackground
+            src="/images/site-updates/megadeth.webp"
+            alt="Megadeth en vivo"
+            overlay="rgba(0, 0, 0, 0.65)"
+          />
           <Box
             sx={{
               display: "grid",
@@ -825,30 +812,13 @@ export default function HeroTabs() {
             display: "flex",
             flexDirection: "column",
             minHeight: "500px",
-            "&::before": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundImage: "url(/images/site-updates/hystoryback.jpg)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              zIndex: 0,
-            },
-            "&::after": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.45)",
-              zIndex: 1,
-            },
           }}
         >
+          <TabBackground
+            src="/images/site-updates/hystoryback.jpg"
+            alt="Historia de Megadeth"
+            overlay="rgba(0, 0, 0, 0.45)"
+          />
           <Stack
             spacing={3}
             sx={{
@@ -1075,30 +1045,13 @@ export default function HeroTabs() {
             display: "flex",
             flexDirection: "column",
             minHeight: "500px",
-            "&::before": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundImage: "url(/images/site-updates/songs_back.jpg)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              zIndex: 0,
-            },
-            "&::after": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.45)",
-              zIndex: 1,
-            },
           }}
         >
+          <TabBackground
+            src="/images/site-updates/songs_back.jpg"
+            alt="Canciones de Megadeth"
+            overlay="rgba(0, 0, 0, 0.45)"
+          />
           <Box
             sx={{
               display: "grid",

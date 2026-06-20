@@ -197,7 +197,7 @@ export default function Hero({ latestNews }: { latestNews: NewsArticle[] }) {
                 ].map((song) => (
                   <Link
                     key={song.slug}
-                    href={`/${locale}/songs/${song.slug}`}
+                    href={`/songs/${song.slug}`}
                     style={{ textDecoration: "none" }}
                   >
                     <Typography

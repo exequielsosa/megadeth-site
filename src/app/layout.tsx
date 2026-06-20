@@ -157,13 +157,13 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 
   const titleByLocale = {
-    es: "MEGADETH: Argentina 2026, Noticias, actualidad, shows, letras, discografia, bootlegs y adelantos del álbum final & gira 2026 Argentina / LATAM — Iron Maiden + Anthrax",
-    en: "MEGADETH: Argentina 2026, News, updates, shows, lyrics, discography, bootlegs and previews of the final album & 2026 tour Argentina / LATAM — Iron Maiden + Anthrax",
+    es: "Megadeth Argentina 2026 — Gira Final y Todo en Español",
+    en: "Megadeth Worldwide — Final Tour 2026, News & Lyrics",
   };
 
   const descriptionByLocale = {
-    es: "Todo sobre MEGADETH: Argentina 2026, Noticias, actualidad, discografía, shows, letras, bootlegs y adelantos del álbum final 'Megadeth' que se lanza el 23 de enero de 2026. Además, gira en Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago y México con Iron Maiden y Anthrax. Noticias, fechas y adelantos exclusivos. Sitio no oficial de fans.",
-    en: "All about MEGADETH: Argentina 2026, News, updates, discography, shows, lyrics, bootlegs and previews of the final album 'Megadeth' releasing on January 23, 2026. Also, tour in Argentina, Lima, Bogotá, Buenos Aires, São Paulo, Santiago and Mexico with Iron Maiden and Anthrax. Exclusive news, dates and previews. Unofficial fan site.",
+    es: "Megadeth en español: noticias diarias, fechas de la gira final 2026 en Argentina y LATAM, discografía completa, letras traducidas y shows. Sitio de fans.",
+    en: "Everything Megadeth: daily news, 2026 final tour dates worldwide, full discography, lyrics and shows. Unofficial fan site.",
   };
 
   return {
