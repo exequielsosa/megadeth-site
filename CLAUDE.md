@@ -233,6 +233,24 @@ npm run add:news         # Agregar noticias manualmente via CLI
 
 ## Estado actual
 
+### Completado (Jun 2026) — SEO home (nuevo Hero) + Tour
+
+**SEO del nuevo Hero (`Hero.tsx` + `HeroTabs.tsx`)**
+- Links del tracklist: se quitó el prefijo `/${locale}/` (daba 404; el sitio no tiene routing por locale).
+- `TabPanel` ahora renderiza SIEMPRE el contenido y oculta solo con `hidden` (antes `value === index && children` dejaba 4 de 5 tabs fuera del DOM → no indexables).
+- Fondos de tabs migrados de `background-image` CSS a `next/image` (`fill`) vía helper `TabBackground`; `priority` solo en el tab visible (LCP). Overlay y recorte preservados.
+- `AnimatedCounter` reescrito con `IntersectionObserver` → anima al entrar en viewport y se resetea al salir (re-anima al cambiar de tab). Antes animaba al montar.
+- Stat de Presentación: `63` "Álbumes y releases" → `17` "Álbumes de estudio" (coherente con el resto). Key `heroTabs.stats.albums` en ambos `messages`.
+
+**Title/Description de la home (`layout.tsx`) acortados para SERP**
+- Regla: title ≤ 60 car, description ~150-155 (lo clave en los primeros ~130).
+- Title ES: "Megadeth Argentina 2026 — Gira Final y Todo en Español" (55) / EN: "Megadeth Worldwide — Final Tour 2026, News & Lyrics" (51).
+- Desc ES 153 car (Argentina/LATAM) / EN 143 car ("worldwide"). `og:*` reusan estos valores.
+
+**`src/constants/tourDates.ts` actualizado**
+- Cómo funciona: tourDates solo alimenta PRÓXIMOS shows (filtro `date >= today`) en /tour tab 0, `UpcomingToursWidget` y tab Shows del Hero. Los PASADOS de /tour vienen de setlist.fm (`PastShowsGrid` → `/api/tour`), NO de tourDates.
+- Limpiadas fechas pasadas + agregadas 17 nuevas (Europa jul, USA jul-ago, Oceanía nov). Corregida 2ª noche de LA (26→27 sep). Total: 34 shows, orden cronológico, con estado/provincia en ciudades US/CA.
+
 ### Completado (Feb 2026)
 
 **Auto-posting a redes sociales (`scripts/post-social.js`)**
