@@ -13,6 +13,7 @@
     "add:news": "node scripts/add-news.js",
     "check:config": "node scripts/check-config.js",
     "test:gemini": "node scripts/test-gemini.js",
+    "test:ai": "node --experimental-strip-types scripts/test-ai.js",
     "scrape:news": "node scripts/scrape-news.js",
     "sync:backfill": "node src/scripts/setlist-sync.mjs backfill",
     "sync:update": "node src/scripts/setlist-sync.mjs update",

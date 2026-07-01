@@ -3,7 +3,7 @@ import { z } from "zod";
 
 /**
  * Cliente de Groq AI para procesamiento de noticias
- * Modelo: Llama 3.1 70B Versatile
+ * Modelo: openai/gpt-oss-120b (Groq) — modelo de reasoning
  * Con retry logic y validación estricta
  */
 
@@ -167,7 +167,7 @@ Responde ÚNICAMENTE con un objeto JSON válido (sin markdown, sin \`\`\`json):
     // Usar retry con backoff para llamada a Groq
     const parsed = await retryWithBackoff(async () => {
       const completion = await groq.chat.completions.create({
-        model: "llama-3.3-70b-versatile",
+        model: "openai/gpt-oss-120b",
         messages: [
           {
             role: "user",
@@ -175,7 +175,11 @@ Responde ÚNICAMENTE con un objeto JSON válido (sin markdown, sin \`\`\`json):
           },
         ],
         temperature: 0.3, // Más determinista para periodismo
-        max_tokens: 5000, // Dentro del límite free tier (6000/min)
+        // gpt-oss-120b es un modelo de reasoning: los tokens de razonamiento
+        // cuentan dentro de max_tokens. "low" mantiene el reasoning corto para
+        // que el presupuesto quede para el JSON y no consumir de más.
+        reasoning_effort: "low",
+        max_tokens: 5000, // Dentro del límite free tier
         response_format: { type: "json_object" }, // Forzar JSON válido
       });
 
@@ -255,7 +259,7 @@ Responde ÚNICAMENTE con un objeto JSON:
 
   try {
     const completion = await groq.chat.completions.create({
-      model: "llama-3.3-70b-versatile",
+      model: "openai/gpt-oss-120b",
       messages: [
         {
           role: "user",
@@ -263,7 +267,12 @@ Responde ÚNICAMENTE con un objeto JSON:
         },
       ],
       temperature: 0.1, // Muy determinista para filtrado
-      max_tokens: 100,
+      // gpt-oss-120b razona antes de responder y esos tokens cuentan dentro de
+      // max_tokens. Con 100 el reasoning se lo comía y no llegaba a escribir el
+      // JSON → parseo roto → caía al catch (return true) → procesaba TODO.
+      // "low" + 1000 deja margen para el JSON sin gastar de más.
+      reasoning_effort: "low",
+      max_tokens: 1000,
       response_format: { type: "json_object" },
     });
 
