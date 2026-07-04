@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { keyframes } from "@emotion/react";
 import {
   Box,
@@ -175,17 +175,43 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
+const TABS_COUNT = 5;
+const AUTOPLAY_INTERVAL_MS = 8000;
+
 export default function HeroTabs() {
   const t = useTranslations("heroTabs");
   const locale = useLocale();
   const [activeTab, setActiveTab] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
     setActiveTab(newValue);
   };
 
+  // Autoplay: rota al siguiente tab cada AUTOPLAY_INTERVAL_MS. Se reinicia
+  // cada vez que activeTab cambia (auto o manual), y se detiene con hover o
+  // foco de teclado, o si el usuario prefiere menos movimiento en pantalla.
+  useEffect(() => {
+    if (isPaused) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const timer = setInterval(() => {
+      setActiveTab((prev) => (prev + 1) % TABS_COUNT);
+    }, AUTOPLAY_INTERVAL_MS);
+
+    return () => clearInterval(timer);
+  }, [activeTab, isPaused]);
+
   return (
-    <Container maxWidth={false} disableGutters sx={{ maxWidth: 1440 }}>
+    <Container
+      maxWidth={false}
+      disableGutters
+      sx={{ maxWidth: 1440 }}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
+    >
       {/* Titulo y descripcion */}
       <Stack spacing={3} alignItems="start" sx={{ mb: 2 }}>
         <Typography
