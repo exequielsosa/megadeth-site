@@ -7,6 +7,28 @@ import compilationsData from "@/constants/compilations.json";
 import epsData from "@/constants/eps.json";
 import type { Album } from "@/types/album";
 import { getAlbumDescription } from "@/utils/albumHelpers";
+import songsData from "@/constants/songs.json";
+
+function toAbsoluteUrl(path: string): string {
+  return path.startsWith("http") ? path : `https://megadeth.com.ar${path}`;
+}
+
+function buildAlbumJsonLd(album: Album) {
+  const numTracks = songsData.filter(
+    (s) => s.album.title === album.title,
+  ).length;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "MusicAlbum",
+    name: album.title,
+    byArtist: { "@type": "MusicGroup", name: "Megadeth" },
+    datePublished: album.year.toString(),
+    image: toAbsoluteUrl(album.cover),
+    ...(numTracks > 0 && { numTracks }),
+    url: toAbsoluteUrl(`/discography/${album.id}`),
+  };
+}
 
 interface Props {
   params: Promise<{
@@ -117,5 +139,15 @@ export default async function AlbumPage({ params }: Props) {
     notFound();
   }
 
-  return <AlbumDetail album={album} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildAlbumJsonLd(album)),
+        }}
+      />
+      <AlbumDetail album={album} />
+    </>
+  );
 }

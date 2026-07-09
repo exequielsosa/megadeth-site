@@ -13,13 +13,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
 
   const titleByLocale = {
-    es: "Videos Oficiales de Megadeth | Videoclips y Performances en Vivo",
-    en: "Official Megadeth Videos | Music Videos and Live Performances",
+    es: "Videos Oficiales de Megadeth: Videoclips y Shows en Vivo",
+    en: "Official Megadeth Videos: Music Videos & Live Performances",
   };
 
   const descriptionByLocale = {
-    es: "Colección completa de videos musicales oficiales de Megadeth: desde Peace Sells hasta sus últimos éxitos. Videoclips, performances en vivo y contenido exclusivo de la legendaria banda de thrash metal.",
-    en: "Complete collection of official Megadeth music videos: from Peace Sells to their latest hits. Music videos, live performances and exclusive content from the legendary thrash metal band.",
+    es: "Colección completa de videos oficiales de Megadeth: videoclips y performances en vivo, desde Peace Sells hasta sus últimos éxitos.",
+    en: "Complete collection of official Megadeth music videos: music videos and live performances, from Peace Sells to their latest hits.",
   };
 
   const keywordsByLocale = {

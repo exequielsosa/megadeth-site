@@ -1,7 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { Container, Typography, Box } from "@mui/material";
-import { useEffect } from "react";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 
@@ -9,49 +8,43 @@ export default function FAQPage() {
   const t = useTranslations("faq");
   const tb = useTranslations("breadcrumb");
 
-  useEffect(() => {
-    const faqJsonLd = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: t("q1"),
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: t("a1"),
-          },
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: t("q1"),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t("a1"),
         },
-        {
-          "@type": "Question",
-          name: t("q2"),
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: t("a2"),
-          },
+      },
+      {
+        "@type": "Question",
+        name: t("q2"),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t("a2"),
         },
-        {
-          "@type": "Question",
-          name: t("q3"),
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: t("a3"),
-          },
+      },
+      {
+        "@type": "Question",
+        name: t("q3"),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t("a3"),
         },
-      ],
-    };
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = "faq-jsonld";
-    script.text = JSON.stringify(faqJsonLd);
-    document.head.appendChild(script);
-    return () => {
-      const el = document.getElementById("faq-jsonld");
-      if (el) document.head.removeChild(el);
-    };
-  }, [t]);
+      },
+    ],
+  };
+
   return (
     <ContainerGradientNoPadding>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
         <Breadcrumb items={[{ label: tb("faq") }]} />
       </Box>

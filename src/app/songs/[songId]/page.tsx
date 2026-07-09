@@ -83,7 +83,66 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+function toAbsoluteUrl(path: string): string {
+  return path.startsWith("http") ? path : `https://megadeth.com.ar${path}`;
+}
+
+function parseDurationToISO8601(duration?: string): string | undefined {
+  if (!duration) return undefined;
+  const parts = duration.split(":").map(Number);
+  if (parts.some((n) => Number.isNaN(n))) return undefined;
+  const [minutes, seconds] = parts.length === 2 ? parts : [0, parts[0]];
+  return `PT${minutes}M${seconds}S`;
+}
+
+function buildSongJsonLd(song: (typeof songsData)[number]) {
+  const lyricists = song.credits?.writers?.lyrics?.map((name) => ({
+    "@type": "Person",
+    name,
+  }));
+  const composers = song.credits?.writers?.music?.map((name) => ({
+    "@type": "Person",
+    name,
+  }));
+  const duration = parseDurationToISO8601(song.details?.duration);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "MusicRecording",
+    name: song.title,
+    byArtist: { "@type": "MusicGroup", name: "Megadeth" },
+    ...(duration && { duration }),
+    inAlbum: {
+      "@type": "MusicAlbum",
+      name: song.album.title,
+      datePublished: song.album.year.toString(),
+    },
+    recordingOf: {
+      "@type": "MusicComposition",
+      name: song.title,
+      ...(lyricists?.length && { lyricist: lyricists }),
+      ...(composers?.length && { composer: composers }),
+    },
+    image: toAbsoluteUrl(song.album.cover),
+    url: toAbsoluteUrl(`/songs/${song.id}`),
+  };
+}
+
 export default async function SongPage({ params }: Props) {
   const resolvedParams = await params;
-  return <SongDetailPage songId={resolvedParams.songId} />;
+  const song = songsData.find((s) => s.id === resolvedParams.songId);
+
+  return (
+    <>
+      {song && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildSongJsonLd(song)),
+          }}
+        />
+      )}
+      <SongDetailPage songId={resolvedParams.songId} />
+    </>
+  );
 }

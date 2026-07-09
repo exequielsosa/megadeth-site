@@ -16,13 +16,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
 
   const titleByLocale = {
-    es: "Discografía Completa de Megadeth | 16 Álbumes de Estudio + En Vivo y Compilaciones",
-    en: "Complete Megadeth Discography | 16 Studio Albums + Live & Compilations",
+    es: "Discografía Completa de Megadeth | 17 Álbumes de Estudio + En Vivo y Compilaciones",
+    en: "Complete Megadeth Discography | 17 Studio Albums + Live & Compilations",
   };
 
   const descriptionByLocale = {
-    es: "Discografía completa de Megadeth (1985-2022): 16 álbumes de estudio desde Killing Is My Business hasta The Sick, The Dying and the Dead, más álbumes en vivo, compilaciones y EPs. Información detallada, portadas, productores, músicos y enlaces a streaming.",
-    en: "Complete Megadeth discography (1985-2022): 16 studio albums from Killing Is My Business to The Sick, The Dying and the Dead, plus live albums, compilations and EPs. Detailed information, covers, producers, musicians and streaming links.",
+    es: "Discografía completa de Megadeth (1985-2026): 17 álbumes de estudio desde Killing Is My Business hasta Megadeth, el álbum final de despedida, más álbumes en vivo, compilaciones y EPs. Información detallada, portadas, productores, músicos y enlaces a streaming.",
+    en: "Complete Megadeth discography (1985-2026): 17 studio albums from Killing Is My Business to Megadeth, their final farewell album, plus live albums, compilations and EPs. Detailed information, covers, producers, musicians and streaming links.",
   };
 
   const keywordsByLocale = {
@@ -45,6 +45,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Super Collider",
       "Dystopia",
       "The Sick, The Dying and the Dead",
+      "Megadeth álbum final",
       "Dave Mustaine",
       "Marty Friedman",
       "thrash metal",
@@ -73,6 +74,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Super Collider",
       "Dystopia",
       "The Sick, The Dying and the Dead",
+      "Megadeth final album",
       "Dave Mustaine",
       "Marty Friedman",
       "thrash metal",
@@ -120,8 +122,8 @@ export async function generateMetadata(): Promise<Metadata> {
           height: 630,
           alt:
             locale === "es"
-              ? "Discografía de Megadeth - 16 álbumes de estudio desde Killing Is My Business hasta The Sick, The Dying and the Dead"
-              : "Megadeth Discography - 16 studio albums from Killing Is My Business to The Sick, The Dying and the Dead",
+              ? "Discografía de Megadeth - 17 álbumes de estudio desde Killing Is My Business hasta Megadeth, el álbum final"
+              : "Megadeth Discography - 17 studio albums from Killing Is My Business to Megadeth, their final album",
         },
       ],
     },

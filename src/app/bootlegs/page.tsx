@@ -6,7 +6,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const t = await getTranslations("bootlegs");
 
-  const title = `${t("listTitle")} | Megadeth`;
+  const title = t("listTitle");
   const description = t("listDescription");
   const keywords = [
     "Megadeth",

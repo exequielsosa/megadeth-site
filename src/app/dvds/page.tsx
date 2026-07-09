@@ -12,13 +12,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
 
   const titleByLocale = {
-    es: "DVDs de Megadeth | Videos Musicales, Documentales y Conciertos en Vivo",
-    en: "Megadeth DVDs | Music Videos, Documentaries and Live Concerts",
+    es: "DVDs de Megadeth: Videos, Documentales y Conciertos",
+    en: "Megadeth DVDs: Music Videos, Documentaries & Concerts",
   };
 
   const descriptionByLocale = {
-    es: "Colección completa de DVDs de Megadeth: videos musicales, documentales, conciertos en vivo y material exclusivo. Desde Rusted Pieces hasta sus últimos lanzamientos en formato audiovisual.",
-    en: "Complete collection of Megadeth DVDs: music videos, documentaries, live concerts and exclusive material. From Rusted Pieces to their latest audiovisual releases.",
+    es: "Colección completa de DVDs de Megadeth: videos musicales, documentales y conciertos en vivo, desde Rusted Pieces hasta sus últimos lanzamientos.",
+    en: "Complete collection of Megadeth DVDs: music videos, documentaries and live concerts, from Rusted Pieces to their latest releases.",
   };
 
   const keywordsByLocale = {
@@ -90,9 +90,6 @@ export async function generateMetadata(): Promise<Metadata> {
         "max-image-preview": "large",
         "max-snippet": -1,
       },
-    },
-    verification: {
-      google: "your-google-verification-code",
     },
     category: "entertainment",
     openGraph: {
