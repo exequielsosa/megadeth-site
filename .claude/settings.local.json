@@ -5,7 +5,28 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(node -e ' *)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(node -e \"console.log\\(Object.keys\\(require\\('./messages/es.json'\\)\\).join\\(', '\\)\\)\")",
+      "Bash(node -e \"const m=require\\('./src/constants/members.json'\\); const mm=m.members||m; console.log\\('claves:', Object.keys\\(mm\\).join\\(', '\\)\\)\")",
+      "Bash(node -e \"const k=require\\('./src/constants/kamiband.json'\\); console.log\\(JSON.stringify\\(Array.isArray\\(k\\)?k.map\\(x=>x.name||x.id||x\\):Object.keys\\(k\\)\\).slice\\(0,500\\)\\)\")",
+      "Bash(node -e \"const d=require\\('./src/constants/discography.json'\\); console.log\\('items:', Array.isArray\\(d\\)?d.length:Object.keys\\(d\\).length\\)\")",
+      "Bash(node -e \"const s=require\\('./src/constants/songs.json'\\); console.log\\('items:', Array.isArray\\(s\\)?s.length:Object.keys\\(s\\).length\\)\")",
+      "Bash(node -e \"const v=require\\('./src/constants/videos.json'\\); console.log\\('items:', Array.isArray\\(v\\)?v.length:Object.keys\\(v\\).length\\)\")",
+      "Bash(node -e \"const m=require\\('./messages/es.json'\\); for \\(const k of ['hero','heroIntro','album','quickAccess','members','kami-band','topSongs','upcomingTours','tour']\\) { console.log\\('['+k+']:', m[k]?Object.keys\\(m[k]\\).join\\(','\\):'NO EXISTE'\\); }\")",
+      "Bash(node -e \"const fs=require\\('fs'\\); const t=fs.readFileSync\\('./src/constants/tourDates.ts','utf8'\\); const dates=\\(t.match\\(/\\\\\"20[0-9-]{8,10}\\\\\"/g\\)||[]\\); console.log\\('total fechas:', dates.length\\); console.log\\('rango:', dates.sort\\(\\)[0], '->', dates.sort\\(\\).slice\\(-1\\)[0]\\)\")",
+      "Bash(node -e \"const k=require\\('./src/constants/kamiband.json'\\); const m=Object.values\\(k.musicians||{}\\); console.log\\('Kami Band musicians:', m.length\\); console.log\\('eastern:', m.filter\\(x=>x.faction==='eastern-kami'\\).length, '| western:', m.filter\\(x=>x.faction==='western-kami'\\).length\\); console.log\\('nombres:', m.map\\(x=>x.name\\).join\\(', '\\)\\)\")",
+      "Bash(node -e \"const c=require\\('./src/constants/colaborations.json'\\); console.log\\('items:', Array.isArray\\(c\\)?c.length:Object.keys\\(c\\).length\\)\")",
+      "Bash(node -e \"const m=require\\('./messages/es.json'\\); console.log\\('hero.title:', m.hero.title\\); console.log\\('album.finalAlbumTitle:', m.album.finalAlbumTitle\\); console.log\\('album.albumName:', m.album.albumName\\)\")",
+      "Bash(node -e \"require\\('./messages/es.json'\\); console.log\\('es.json OK'\\)\")",
+      "Bash(node -e \"require\\('./messages/en.json'\\); console.log\\('en.json OK'\\)\")",
+      "Bash(node -e \"console.log\\(Object.keys\\(require\\('./messages/es.json'\\).heroTabs\\)\\)\")",
+      "Bash(npx eslint *)",
+      "Bash(node -e \"console.log\\('ES:', require\\('./messages/es.json'\\).lineups.formerMembers\\); console.log\\('EN:', require\\('./messages/en.json'\\).lineups.formerMembers\\);\")"
+    ],
+    "additionalDirectories": [
+      "g:\\TRABAJO\\babymetal-site\\src\\components",
+      "g:\\TRABAJO\\babymetal-site\\messages",
+      "g:\\TRABAJO\\babymetal-site"
     ]
   }
 }

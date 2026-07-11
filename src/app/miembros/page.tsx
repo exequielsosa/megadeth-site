@@ -2,16 +2,32 @@
 // Removing 'use client' to allow for export of generateMetadata.
 
 // "use client"; // This line is being removed
-import { getLocale, getTranslations } from "next-intl/server";
+import { getLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
+import membersData from "@/constants/members.json";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
-  const t = await getTranslations("lineups");
 
-  const title = `${t("members")} | Megadeth`;
-  const description = t("membersSubtitle");
+  const members = Object.values(membersData.members);
+  const currentMembers = members.filter(
+    (m) =>
+      m.period.es?.includes("presente") || m.period.en?.includes("present"),
+  );
+  const formerCount = members.length - currentMembers.length;
+  const currentNames = currentMembers.map((m) => m.name).join(", ");
+
+  const title =
+    locale === "es"
+      ? `Miembros de Megadeth: formación actual y ${formerCount} ex integrantes`
+      : `Megadeth Members: Current Lineup & ${formerCount} Former Members`;
+
+  const description =
+    locale === "es"
+      ? `Conocé a los ${members.length} músicos de Megadeth: la formación actual (${currentNames}) y todos los ex integrantes.`
+      : `Meet all ${members.length} Megadeth musicians: the current lineup (${currentNames}) and every former band member.`;
+
   const keywords = [
     "Megadeth",
     "miembros",
@@ -83,7 +99,6 @@ export async function generateMetadata(): Promise<Metadata> {
 import { Typography, Box, Grid, Card, CardContent, Chip } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
 import { BilingualText } from "@/types";
-import membersData from "@/constants/members.json";
 import Breadcrumb from "@/components/Breadcrumb";
 
 type Member = {
@@ -140,6 +155,54 @@ export default function MembersPage() {
         member.period[locale]?.includes("present")
       ),
   );
+
+  // Respuesta directa (featured-snippet friendly): "¿quién es el
+  // guitarrista/bajista/baterista actual de Megadeth?"
+  const joinWithAnd = (items: string[]): string => {
+    if (items.length === 0) return "";
+    if (items.length === 1) return items[0];
+    const conjunction = locale === "es" ? "y" : "and";
+    return `${items.slice(0, -1).join(", ")} ${conjunction} ${items[items.length - 1]}`;
+  };
+
+  const currentLineupSentence = joinWithAnd(
+    currentMembers.map((member) => {
+      const instrument =
+        member.instruments[locale]?.[0] || member.instruments.es?.[0] || "";
+      return `${member.name} (${instrument})`;
+    }),
+  );
+
+  // Ex miembros agrupados por instrumento (categorías amplias: exact-match
+  // sobre el instrumento fragmentaría en grupos de 1, ej. "Bajo eléctrico" vs
+  // "Bajo eléctrico (fretless)").
+  const categorizeInstrument = (instrument: string): string => {
+    const lower = instrument.toLowerCase();
+    if (lower.includes("guitar")) return locale === "es" ? "Guitarra" : "Guitar";
+    if (lower.includes("baj") || lower.includes("bass"))
+      return locale === "es" ? "Bajo" : "Bass";
+    if (lower.includes("bater") || lower.includes("drum"))
+      return locale === "es" ? "Batería" : "Drums";
+    if (lower.includes("voz") || lower.includes("vocal"))
+      return locale === "es" ? "Voz" : "Vocals";
+    return locale === "es" ? "Otros" : "Other";
+  };
+
+  const categoryOrder =
+    locale === "es"
+      ? ["Guitarra", "Bajo", "Batería", "Voz", "Otros"]
+      : ["Guitar", "Bass", "Drums", "Vocals", "Other"];
+
+  const formerMembersByCategory = formerMembers.reduce<
+    Record<string, typeof formerMembers>
+  >((acc, member) => {
+    const instrument =
+      member.instruments[locale]?.[0] || member.instruments.es?.[0] || "";
+    const category = categorizeInstrument(instrument);
+    acc[category] = acc[category] || [];
+    acc[category].push(member);
+    return acc;
+  }, {});
 
   const MemberCard = ({ member }: { member: (typeof members)[0] }) => (
     <Card
@@ -236,6 +299,16 @@ export default function MembersPage() {
               {t("currentLineup")}
             </Typography>
 
+            <Typography
+              variant="body1"
+              color="text.secondary"
+              sx={{ mb: 3, maxWidth: 900 }}
+            >
+              {locale === "es"
+                ? `La formación actual de Megadeth está compuesta por ${currentLineupSentence}.`
+                : `The current lineup of Megadeth is made up of ${currentLineupSentence}.`}
+            </Typography>
+
             <Grid container spacing={3}>
               {currentMembers.map((member) => (
                 <Grid key={member.id} size={{ xs: 12, sm: 6, md: 3 }}>
@@ -253,16 +326,31 @@ export default function MembersPage() {
               gutterBottom
               sx={{ fontSize: { xs: 20, md: 30 } }}
             >
-              Miembros Anteriores
+              {t("formerMembers")}
             </Typography>
 
-            <Grid container spacing={3}>
-              {formerMembers.map((member) => (
-                <Grid key={member.id} size={{ xs: 12, sm: 6, md: 3 }}>
-                  <MemberCard member={member} />
-                </Grid>
+            {categoryOrder
+              .filter((category) => formerMembersByCategory[category]?.length)
+              .map((category) => (
+                <Box key={category} sx={{ mb: 5 }}>
+                  <Typography
+                    variant="h4"
+                    component="h3"
+                    gutterBottom
+                    sx={{ fontSize: { xs: 16, md: 22 }, fontWeight: 600 }}
+                  >
+                    {category}
+                  </Typography>
+
+                  <Grid container spacing={3}>
+                    {formerMembersByCategory[category].map((member) => (
+                      <Grid key={member.id} size={{ xs: 12, sm: 6, md: 3 }}>
+                        <MemberCard member={member} />
+                      </Grid>
+                    ))}
+                  </Grid>
+                </Box>
               ))}
-            </Grid>
           </Box>
         </Box>
       </Box>

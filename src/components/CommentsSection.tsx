@@ -13,6 +13,7 @@ import {
   Alert,
 } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import SendIcon from "@mui/icons-material/Send";
 
@@ -36,6 +37,7 @@ export function CommentsSection({
 }) {
   const t = useTranslations("comments");
   const locale = useLocale();
+  const pathname = usePathname();
 
   const [items, setItems] = useState<CommentItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -137,6 +139,7 @@ export function CommentsSection({
               "@type": "DiscussionForumPosting",
               headline: title,
               text: customSubtitle || title,
+              url: `https://megadeth.com.ar${pathname}`,
               author: {
                 "@type": "Organization",
                 name: "Megadeth Fan Site",

@@ -4,6 +4,8 @@ import membersData from '@/constants/members.json';
 import discographyData from '@/constants/discography.json';
 import dvdData from '@/constants/dvd.json';
 import songsData from '@/constants/songs.json';
+import videosData from '@/constants/videos.json';
+import { slugify } from '@/utils/slugify';
 import historiaData from '@/constants/historia.json';
 import interviewsData from '@/constants/interviews.json';
 import showsData from '@/constants/shows.json';
@@ -42,6 +44,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (song.id) {
         sitemap.push({
           url: `${base}/songs/${song.id}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        });
+      }
+    });
+  }
+
+  // Videos dinámicos (watch pages)
+  if (Array.isArray(videosData)) {
+    videosData.forEach(video => {
+      if (video.title) {
+        sitemap.push({
+          url: `${base}/videos/${slugify(video.title)}`,
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.7,

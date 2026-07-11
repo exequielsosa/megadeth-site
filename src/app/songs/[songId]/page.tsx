@@ -13,6 +13,32 @@ interface Props {
   }>;
 }
 
+// Canciones anteriores al álbum final (2026): baja conversión pese a buen
+// posicionamiento (ver SEO-MEJORAS-BRIEF.md, Tarea 4). El theme original se
+// mandaba completo en la description (160-778 caracteres) y Google lo cortaba
+// a mitad de oración. Las canciones del álbum final ya convierten bien con el
+// title/description actual, así que no se tocan.
+function firstSentence(text: string): string {
+  const idx = text.indexOf(". ");
+  return idx === -1 ? text : text.slice(0, idx + 1);
+}
+
+function buildClassicDescription(
+  title: string,
+  album: string,
+  year: number,
+  theme: string,
+  locale: string,
+): string {
+  const summary = firstSentence(theme);
+  const invite =
+    locale === "es"
+      ? ` Descubrí la historia completa de "${title}" (${album}, ${year}).`
+      : ` Discover the full story behind "${title}" (${album}, ${year}).`;
+  const full = summary + invite;
+  return full.length <= 160 ? full : summary;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resolvedParams = await params;
   const locale = await getLocale();
@@ -23,7 +49,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const album = song.album.title;
   const year = song.album.year;
   const theme = locale === "es" ? song.theme.es : song.theme.en;
-  const description = `${title} (${year}) - ${album}. ${theme}`;
+  const isClassic = year < 2026;
+
+  const pageTitle = isClassic
+    ? locale === "es"
+      ? `${title}: significado e historia | Megadeth`
+      : `${title}: Meaning & Story | Megadeth`
+    : `${title} | Megadeth`;
+
+  const description = isClassic
+    ? buildClassicDescription(title, album, year, theme, locale)
+    : `${title} (${year}) - ${album}. ${theme}`;
 
   const keywords = [
     title,
@@ -37,11 +73,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonicalUrl = `/songs/${song.id}`;
 
   return {
-    title: `${title} | Megadeth`,
+    title: pageTitle,
     description,
     keywords,
     openGraph: {
-      title: `${title} | Megadeth`,
+      title: pageTitle,
       description,
       url: `/songs/${song.id}`,
       siteName: "Megadeth Fan Site",
@@ -58,7 +94,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | Megadeth`,
+      title: pageTitle,
       description,
       images: [song.album.cover],
       creator: "@MegadethFanSite",

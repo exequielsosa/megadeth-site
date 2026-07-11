@@ -59,55 +59,6 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
       );
   }, [song]);
 
-  // Generar Schema.org MusicRecording (solo si song existe)
-  const songSchema = useMemo(() => {
-    if (!song) return null;
-    return {
-      "@context": "https://schema.org",
-      "@type": "MusicRecording",
-      name: song.title,
-      byArtist: {
-        "@type": "MusicGroup",
-        name: "Megadeth",
-      },
-      inAlbum: {
-        "@type": "MusicAlbum",
-        name: song.album.title,
-        image: `https://megadeth.com.ar${song.album.cover}`,
-      },
-      ...(song.details?.duration && { duration: song.details.duration }),
-      ...(song.album?.year && { datePublished: `${song.album.year}-01-01` }),
-      ...(song.credits?.writers?.lyrics &&
-        song.credits.writers.lyrics.length > 0 && {
-          author: song.credits.writers.lyrics.map((writer) => ({
-            "@type": "Person",
-            name: writer,
-          })),
-        }),
-      ...(song.credits?.musicians &&
-        song.credits.musicians.length > 0 && {
-          byArtist: song.credits.musicians.map((m) => ({
-            "@type": "Person",
-            name: m.name,
-            ...(m.instrument && {
-              roleName:
-                typeof m.instrument === "string"
-                  ? m.instrument
-                  : m.instrument[instrumentKey],
-            }),
-          })),
-        }),
-      genre: ["Heavy Metal", "Thrash Metal"],
-      ...(song.lyrics &&
-        song.lyrics.en && {
-          lyrics: {
-            "@type": "CreativeWork",
-            text: song.lyrics.en,
-          },
-        }),
-    };
-  }, [song, instrumentKey]);
-
   if (!song)
     return (
       <ContainerGradientNoPadding>
@@ -217,15 +168,6 @@ export default function SongDetailPage({ songId }: SongDetailPageProps) {
 
   return (
     <ContainerGradientNoPadding>
-      {/* Schema.org JSON-LD */}
-      {songSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(songSchema),
-          }}
-        />
-      )}
       <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>
         <Breadcrumb
           items={[
