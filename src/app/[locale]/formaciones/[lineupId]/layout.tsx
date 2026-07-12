@@ -2,6 +2,7 @@ import { LineupFormation } from "@/types";
 import lineupsData from "@/constants/lineups.json";
 import { Metadata } from "next";
 import { getLocale } from "next-intl/server";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 // Generate static params for all lineups
 export async function generateStaticParams() {
@@ -43,9 +44,7 @@ export async function generateMetadata({
       description,
       images: [lineup.image],
     },
-    alternates: {
-      canonical: `/formaciones/${lineupId}`,
-    },
+    alternates: i18nAlternates(`/formaciones/${lineupId}`, locale),
   };
 }
 

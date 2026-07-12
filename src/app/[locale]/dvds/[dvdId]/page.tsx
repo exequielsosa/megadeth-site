@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 import {
   Container,
   Typography,
@@ -112,13 +113,7 @@ export async function generateMetadata({
     publisher: "Megadeth Fan Site",
     category: "entertainment",
     classification: "Thrash Metal DVD",
-    alternates: {
-      canonical: `/dvds/${dvdId}`,
-      languages: {
-        es: `/dvds/${dvdId}`,
-        en: `/dvds/${dvdId}`,
-      },
-    },
+    alternates: i18nAlternates(`/dvds/${dvdId}`, locale),
     robots: {
       index: true,
       follow: true,

@@ -3,6 +3,7 @@ import ShowDetailPage from "@/components/ShowDetailPage";
 import showsData from "@/constants/shows.json";
 import { Show, generateShowSlug, formatShowDate } from "@/types/show";
 import { getLocale } from "next-intl/server";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 import type { Metadata } from "next";
 
 interface ShowPageProps {
@@ -83,13 +84,7 @@ export async function generateMetadata({
       images: [show.image || "/images/shows/1994.jpg"],
       creator: "@MegadethFanSite",
     },
-    alternates: {
-      canonical: `/shows/${showId}`,
-      languages: {
-        es: `/shows/${showId}`,
-        en: `/shows/${showId}`,
-      },
-    },
+    alternates: i18nAlternates(`/shows/${showId}`, locale),
     other: {
       "article:published_time": show.date,
       "article:section": "Shows",

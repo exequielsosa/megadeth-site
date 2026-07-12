@@ -1,8 +1,10 @@
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("news");
+  const locale = await getLocale();
 
   return {
     title: t("pageTitle"),
@@ -12,9 +14,9 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: t("pageTitle"),
       description: t("pageDescription"),
-      url: "https://megadeth.com.ar/noticias",
+      url: i18nAlternates("/noticias", locale).canonical,
       siteName: "Megadeth Argentina",
-      locale: "es_AR",
+      locale: locale === "es" ? "es_AR" : "en_US",
       type: "website",
       images: [
         {
@@ -31,13 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: t("pageDescription"),
       images: ["https://megadeth.com.ar/images/band.webp"],
     },
-    alternates: {
-      canonical: "https://megadeth.com.ar/noticias",
-      languages: {
-        es: "https://megadeth.com.ar/noticias",
-        en: "https://megadeth.com.ar/noticias",
-      },
-    },
+    alternates: i18nAlternates("/noticias", locale),
     robots: {
       index: true,
       follow: true,

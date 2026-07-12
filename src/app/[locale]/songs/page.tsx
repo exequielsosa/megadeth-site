@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import SongsListPage from "@/components/SongsListPage";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -57,13 +58,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: ["/images/discography/og-songs.jpg"],
       creator: "@MegadethFanSite",
     },
-    alternates: {
-      canonical: "/songs",
-      languages: {
-        es: "/songs",
-        en: "/songs",
-      },
-    },
+    alternates: i18nAlternates("/songs", locale),
     robots: {
       index: true,
       follow: true,

@@ -1,10 +1,12 @@
 import { Metadata } from "next";
 import HistoriaClient from "./HistoriaClient";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("historyPage");
+  const locale = await getLocale();
 
   return {
     title: t("title"),
@@ -29,13 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: t("description"),
       images: ["/images/historia/megadeth-timeline-hero.jpg"],
     },
-    alternates: {
-      canonical: "/historia",
-      languages: {
-        es: "/historia",
-        en: "/historia",
-      },
-    },
+    alternates: i18nAlternates("/historia", locale),
   };
 }
 

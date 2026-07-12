@@ -90,5 +90,61 @@ no hay un CTA roto de "comprá entradas" visible en el sitio. No es un bug de UI
 
 ---
 
+## Julio 2026 — ejecución de `SEO-MEJORAS-BRIEF.md`
+
+Brief técnico externo con datos GSC más granulares (por query/página). Cada
+tarea se verificó contra el código antes de implementar (varias no aplicaban
+tal cual estaban escritas). Detalle completo en `SEO-MEJORAS-BRIEF.md`.
+
+### Hecho
+- **Tarea 4** (canciones clásicas): title/description nuevos para las 187
+  canciones anteriores a 2026 (patrón "significado e historia"), sin tocar las
+  13 del álbum final que ya convertían bien. De paso, se encontró y sacó un
+  `MusicRecording` JSON-LD duplicado y con bugs en `SongDetailPage.tsx` que
+  competía con el que se había agregado en `songs/[songId]/page.tsx`.
+- **Tarea 1** (`/miembros`): title/description de la página y de las 27 fichas
+  individuales (se encontró un bug real: 11/27 fichas mostraban el nombre
+  repetido en el title por `fullName === name`). Se agregó schema `Person` por
+  ficha (no existía ninguno). Se agregó un párrafo de respuesta directa
+  ("la formación actual está compuesta por...") y se agruparon los 23
+  ex-miembros por instrumento (antes un solo grid sin orden temático).
+- **Tarea 7** (higiene, parcial): se agregó el campo `url` faltante al schema
+  `DiscussionForumPosting` de `CommentsSection.tsx` usando `usePathname()`.
+  *Nota: ese mismo schema depende de comentarios cargados client-side, así que
+  en el HTML inicial no se renderiza — mismo patrón de bug que tenía el
+  FAQPage antes de arreglarlo. No se resolvió de fondo (requiere traer
+  comentarios server-side), solo el fix puntual del `url`.*
+
+### Pendiente — Tarea 2 (redirects 404), guardada para después
+El brief pedía 2 reglas: `/en/*` → ES (esta sí es una regla estática simple,
+sin riesgo) y `/noticias/:slug-:timestamp` → `/noticias` si el artículo no
+existe. **La segunda no se puede hacer como regla de `next.config.ts`**: ese
+mismo patrón de URL (`slug-timestamp`) lo usan TODAS las noticias, activas y
+borradas — una regex ciega redirigiría también las noticias que sí funcionan.
+La solución correcta es puntual: en `noticias/[id]/page.tsx`, cuando
+`getNewsById` no encuentra el artículo, hoy llama a `notFound()` (correcto,
+devuelve 404 real) — cambiarlo por `permanentRedirect("/noticias")` en su
+lugar. Es un cambio de una línea, pero se decidió no tocarlo todavía por si
+el criterio cambia más adelante (ej. si se consigue la lista real de las 154
+URLs desde GSC y conviene armar un mapeo 1:1 en vez del redirect genérico a
+`/noticias`).
+
+### Pendiente — Tarea 6 (decisión, no código)
+Definir el title/description alternativo del home para después de que termine
+el ciclo de shows actual (reencuadre "Argentina 2026" → mensaje vigente). Ya
+está anotado más arriba en el bloque de julio, sigue sin resolverse.
+
+### Sin empezar
+- **Tarea 5** (watch pages para videos): confirmado que no existen páginas
+  individuales `/videos/[slug]` — los 76 videos viven en una sola `/videos`
+  con la grilla completa, por eso 69/76 no indexan. Requiere ruta nueva +
+  schema `VideoObject` + actualizar sitemap. Es el trabajo más grande después
+  de la migración de locale — no arrancado todavía.
+- **Tarea 3** (restaurar `/en/` con hreflang): descartada explícitamente por
+  el usuario (es la migración a routing por locale). Sigue fuera del plan
+  salvo que se reconsidere.
+
+---
+
 <!-- Próxima revisión: agregar acá un nuevo bloque "## [Mes] 2026 — revisión N"
      con el mismo formato, y comparar contra el bloque anterior. -->

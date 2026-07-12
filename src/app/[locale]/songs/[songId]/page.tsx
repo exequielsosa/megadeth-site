@@ -2,6 +2,7 @@ import SongDetailPage from "@/components/SongDetailPage";
 import songsData from "@/constants/songs.json";
 import { getLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 export async function generateStaticParams() {
   return songsData.map((song) => ({ songId: song.id }));
@@ -99,13 +100,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [song.album.cover],
       creator: "@MegadethFanSite",
     },
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        es: canonicalUrl,
-        en: canonicalUrl,
-      },
-    },
+    alternates: i18nAlternates(canonicalUrl, locale),
     robots: {
       index: true,
       follow: true,

@@ -9,6 +9,7 @@ import { slugify } from "@/utils/slugify";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import RandomSectionBanner from "@/components/NewsBanner";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -138,9 +139,7 @@ export async function generateMetadata({
       description,
       ...(thumbnail && { images: [thumbnail] }),
     },
-    alternates: {
-      canonical: `/videos/${slug}`,
-    },
+    alternates: i18nAlternates(`/videos/${slug}`, locale),
     robots: {
       index: true,
       follow: true,

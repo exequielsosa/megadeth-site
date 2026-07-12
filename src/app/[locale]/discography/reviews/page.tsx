@@ -6,6 +6,7 @@ import reviewsData from "@/constants/reviews.json";
 import { Review } from "@/types/review";
 import ReviewCard from "@/components/ReviewCard";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -14,6 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("pageTitle"),
     description: t("pageDescription"),
+    alternates: i18nAlternates("/discography/reviews", locale),
   };
 }
 

@@ -1,8 +1,10 @@
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("reviews");
+  const locale = await getLocale();
 
   return {
     title: t("pageTitle"),
@@ -12,9 +14,9 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: t("pageTitle"),
       description: t("pageDescription"),
-      url: "https://megadeth.com.ar/discography/reviews",
+      url: i18nAlternates("/discography/reviews", locale).canonical,
       siteName: "Megadeth Argentina",
-      locale: "es_AR",
+      locale: locale === "es" ? "es_AR" : "en_US",
       type: "website",
       images: [
         {
@@ -31,13 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: t("pageDescription"),
       images: ["https://megadeth.com.ar/logo-megadeth.png"],
     },
-    alternates: {
-      canonical: "https://megadeth.com.ar/discography/reviews",
-      languages: {
-        es: "https://megadeth.com.ar/discography/reviews",
-        en: "https://megadeth.com.ar/discography/reviews",
-      },
-    },
+    alternates: i18nAlternates("/discography/reviews", locale),
     robots: {
       index: true,
       follow: true,

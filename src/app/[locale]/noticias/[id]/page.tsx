@@ -8,6 +8,7 @@ import SafeNewsImage from "@/components/SafeNewsImage";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { Link } from "@/i18n/navigation";
 import RandomSectionBanner from "@/components/NewsBanner";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 import { CommentsSection } from "@/components/CommentsSection";
 import { getAllNews, getNewsById } from "@/lib/supabase";
 import { getSafeTranslation } from "@/utils/safeContent";
@@ -97,9 +98,7 @@ export async function generateMetadata({ params }: NewsPageProps) {
             ]
           : [],
     },
-    alternates: {
-      canonical: `https://megadeth.com.ar/noticias/${resolvedParams.id}`,
-    },
+    alternates: i18nAlternates(`/noticias/${resolvedParams.id}`, locale),
   };
 }
 

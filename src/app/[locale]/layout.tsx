@@ -5,6 +5,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { cookies } from "next/headers";
 import { routing } from "@/i18n/routing";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 import ThemeRegistry from "@/theme/ThemeRegistry";
 import { ColorModeProvider } from "@/theme/useColorMode";
 import Header from "@/components/Header";
@@ -208,9 +209,7 @@ export async function generateMetadata({
       ],
     },
     twitter: { card: "summary_large_image" },
-    alternates: {
-      canonical: "/",
-    },
+    alternates: i18nAlternates("/", locale),
   };
 }
 

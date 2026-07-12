@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import BootlegDetailPage from "@/components/BootlegDetailPage";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 import bootlegsData from "@/constants/bootlegs.json";
 import {
   Bootleg,
@@ -88,13 +89,7 @@ export async function generateMetadata({
       images: [bootleg.image || "/images/bootlegs/default-bootleg.jpg"],
       creator: "@MegadethFanSite",
     },
-    alternates: {
-      canonical: `/bootlegs/${bootlegId}`,
-      languages: {
-        es: `/bootlegs/${bootlegId}`,
-        en: `/bootlegs/${bootlegId}`,
-      },
-    },
+    alternates: i18nAlternates(`/bootlegs/${bootlegId}`, locale),
     other: {
       "article:published_time": bootleg.date,
       "article:section": "Bootlegs",

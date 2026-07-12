@@ -1,4 +1,5 @@
 import VideosGrid from "@/components/VideosGrid";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 import videosData from "@/constants/videos.json";
 import type { Video } from "@/types/video";
 import { Container, Box } from "@mui/material";
@@ -74,13 +75,7 @@ export async function generateMetadata(): Promise<Metadata> {
       address: false,
       telephone: false,
     },
-    alternates: {
-      canonical: "/videos",
-      languages: {
-        es: "/videos",
-        en: "/videos",
-      },
-    },
+    alternates: i18nAlternates("/videos", locale),
     openGraph: {
       title:
         titleByLocale[locale as keyof typeof titleByLocale] || titleByLocale.es,

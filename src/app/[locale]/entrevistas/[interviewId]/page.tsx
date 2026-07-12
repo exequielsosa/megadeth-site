@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import InterviewDetailPage from "@/components/InterviewDetailPage";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 import interviewsData from "@/constants/interviews.json";
 import {
   Interview,
@@ -88,13 +89,7 @@ export async function generateMetadata({
         : ["/images/entrevistas/rp1992.jpg"],
       creator: "@MegadethFanSite",
     },
-    alternates: {
-      canonical: `/entrevistas/${interviewId}`,
-      languages: {
-        es: `/entrevistas/${interviewId}`,
-        en: `/entrevistas/${interviewId}`,
-      },
-    },
+    alternates: i18nAlternates(`/entrevistas/${interviewId}`, locale),
     other: {
       "article:published_time": interview.date,
       "article:author": interview.interviewees.map((i) => i.name).join(", "),

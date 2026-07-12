@@ -4,6 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -47,6 +48,7 @@ export async function generateMetadata(): Promise<Metadata> {
     keywords:
       keywordsByLocale[locale as keyof typeof keywordsByLocale] ||
       keywordsByLocale.es,
+    alternates: i18nAlternates("/contacto", locale),
   };
 }
 

@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -57,13 +58,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: ["/images/lineups/og-lineups.jpg"],
       creator: "@MegadethFanSite",
     },
-    alternates: {
-      canonical: "/formaciones",
-      languages: {
-        es: "/formaciones",
-        en: "/formaciones",
-      },
-    },
+    alternates: i18nAlternates("/formaciones", locale),
     robots: {
       index: true,
       follow: true,

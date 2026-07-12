@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { getLocale } from "next-intl/server";
 import AlbumDetail from "@/components/AlbumDetail";
 import discographyData from "@/constants/discography.json";
 import liveAlbumsData from "@/constants/liveAlbums.json";
@@ -8,6 +9,7 @@ import epsData from "@/constants/eps.json";
 import type { Album } from "@/types/album";
 import { getAlbumDescription } from "@/utils/albumHelpers";
 import songsData from "@/constants/songs.json";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 function toAbsoluteUrl(path: string): string {
   return path.startsWith("http") ? path : `https://megadeth.com.ar${path}`;
@@ -78,6 +80,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const albumDescription =
     getAlbumDescription(album, "es", "short") ||
     `Álbum de Megadeth lanzado en ${album.year}.`;
+  const locale = await getLocale();
 
   return {
     title: `${album.title} (${album.year}) - Megadeth Fan`,
@@ -103,6 +106,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
       ],
     },
+    alternates: i18nAlternates(`/discography/${album.id}`, locale),
     robots: {
       index: true,
       follow: true,

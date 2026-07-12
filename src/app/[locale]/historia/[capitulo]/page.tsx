@@ -7,6 +7,7 @@ import historiaData from "@/constants/historia.json";
 import { getTranslations, getLocale } from "next-intl/server";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import Breadcrumb from "@/components/Breadcrumb";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 import {
   HistoryData,
   findChapterBySlug,
@@ -91,13 +92,7 @@ export async function generateMetadata({
         ? [chapter.coverImage.src]
         : ["/images/historia/megadeth-default-chapter.jpg"],
     },
-    alternates: {
-      canonical: `/historia/${chapter.slug}`,
-      languages: {
-        es: `/historia/${chapter.slug}`,
-        en: `/historia/${chapter.slug}`,
-      },
-    },
+    alternates: i18nAlternates(`/historia/${chapter.slug}`, locale),
     robots: {
       index: true,
       follow: true,

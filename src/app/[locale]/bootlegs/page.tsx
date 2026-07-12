@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import BootlegsListPage from "@/components/BootlegsListPage";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -51,13 +52,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       images: ["/images/bootlegs/og-bootlegs.jpg"],
     },
-    alternates: {
-      canonical: "/bootlegs",
-      languages: {
-        es: "/bootlegs",
-        en: "/bootlegs",
-      },
-    },
+    alternates: i18nAlternates("/bootlegs", locale),
   };
 }
 

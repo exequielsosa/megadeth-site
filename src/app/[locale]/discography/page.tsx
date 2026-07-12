@@ -1,4 +1,5 @@
 import DiscographyGrid from "@/components/DiscographyGrid";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 import studioAlbums from "@/constants/discography.json";
 import liveAlbums from "@/constants/liveAlbums.json";
 import compilations from "@/constants/compilations.json";
@@ -98,13 +99,7 @@ export async function generateMetadata(): Promise<Metadata> {
     authors: [{ name: "Megadeth Fan Site" }],
     creator: "Megadeth Fan Site",
     publisher: "Megadeth Fan Site",
-    alternates: {
-      canonical: "/discography",
-      languages: {
-        es: "/discography",
-        en: "/discography",
-      },
-    },
+    alternates: i18nAlternates("/discography", locale),
     openGraph: {
       title:
         titleByLocale[locale as keyof typeof titleByLocale] || titleByLocale.es,

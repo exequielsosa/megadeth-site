@@ -1,6 +1,7 @@
 import { getLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { tourDates } from "@/constants/tourDates";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 function buildTourEventsJsonLd(locale: string) {
   const eventNamePrefix = locale === "es" ? "Megadeth en" : "Megadeth in";
@@ -97,9 +98,7 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     twitter: { card: "summary_large_image" },
-    alternates: {
-      canonical: "/tour",
-    },
+    alternates: i18nAlternates("/tour", locale),
   };
 }
 

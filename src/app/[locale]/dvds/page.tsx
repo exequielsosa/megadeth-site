@@ -1,4 +1,5 @@
 import DVDGrid from "@/components/DVDGrid";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 import dvdsData from "@/constants/dvd.json";
 import type { DVD } from "@/types/dvd";
 import { Container, Box } from "@mui/material";
@@ -73,13 +74,7 @@ export async function generateMetadata(): Promise<Metadata> {
       address: false,
       telephone: false,
     },
-    alternates: {
-      canonical: "/dvds",
-      languages: {
-        es: "/dvds",
-        en: "/dvds",
-      },
-    },
+    alternates: i18nAlternates("/dvds", locale),
     robots: {
       index: true,
       follow: true,

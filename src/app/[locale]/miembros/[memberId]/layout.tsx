@@ -1,6 +1,7 @@
 import membersData from "@/constants/members.json";
 import { Metadata } from "next";
 import { getLocale } from "next-intl/server";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 function yearsOnly(period: string): string {
   const idx = period.indexOf(" (");
@@ -47,9 +48,7 @@ export async function generateMetadata({
       description,
       images: [member.image],
     },
-    alternates: {
-      canonical: `/miembros/${memberId}`,
-    },
+    alternates: i18nAlternates(`/miembros/${memberId}`, locale),
   };
 }
 

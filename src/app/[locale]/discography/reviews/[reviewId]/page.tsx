@@ -4,6 +4,7 @@ import { getLocale } from "next-intl/server";
 import reviewsData from "@/constants/reviews.json";
 import { Review } from "@/types/review";
 import ReviewDetailPage from "@/components/ReviewDetailPage";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 export async function generateStaticParams() {
   return reviewsData.map((review) => ({
@@ -55,13 +56,10 @@ export async function generateMetadata({
       description: review.content[locale as "es" | "en"].substring(0, 200),
       images: [`https://megadeth.com.ar${review.imageUrl}`],
     },
-    alternates: {
-      canonical: `https://megadeth.com.ar/discography/reviews/${review.id}`,
-      languages: {
-        es: `https://megadeth.com.ar/discography/reviews/${review.id}`,
-        en: `https://megadeth.com.ar/discography/reviews/${review.id}`,
-      },
-    },
+    alternates: i18nAlternates(
+      `/discography/reviews/${review.id}`,
+      locale,
+    ),
     robots: {
       index: true,
       follow: true,

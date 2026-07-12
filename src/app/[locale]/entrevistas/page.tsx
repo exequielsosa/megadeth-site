@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import InterviewsListPage from "@/components/InterviewsListPage";
+import { i18nAlternates } from "@/utils/i18nAlternates";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -58,13 +59,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: ["/images/entrevistas/og-interviews.jpg"],
       creator: "@MegadethFanSite",
     },
-    alternates: {
-      canonical: "/entrevistas",
-      languages: {
-        es: "/entrevistas",
-        en: "/entrevistas",
-      },
-    },
+    alternates: i18nAlternates("/entrevistas", locale),
     robots: {
       index: true,
       follow: true,
