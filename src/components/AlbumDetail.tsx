@@ -40,10 +40,30 @@ import discographyData from "@/constants/discography.json";
 import liveAlbumsData from "@/constants/liveAlbums.json";
 import compilationsData from "@/constants/compilations.json";
 import epsData from "@/constants/eps.json";
+import songsData from "@/constants/songs.json";
 import { CommentsSection } from "./CommentsSection";
 
 interface AlbumDetailProps {
   album: Album;
+}
+
+// Normaliza mayúsculas/tildes antes de comparar títulos: discography.json y
+// songs.json tienen pequeñas divergencias entre sí (ej. "BloodLust" vs
+// "Bloodlust", "A Tout le Monde" vs "À Tout le Monde") que un match exacto
+// (===) pierde. Buscar la canción real y usar su `id` real es la única forma
+// robusta de linkear — regenerar el slug con regex rompe apenas el título
+// tenga un caracter que el regex no contemple (ver BRIEF-ALBUM-SONGS-
+// INTERLINKING.md).
+function normalizeTitle(title: string): string {
+  return title
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "");
+}
+
+function findMatchedSong(trackTitle: string) {
+  const normalized = normalizeTitle(trackTitle);
+  return songsData.find((s) => normalizeTitle(s.title) === normalized);
 }
 
 export default function AlbumDetail({ album }: AlbumDetailProps) {
@@ -303,7 +323,9 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
 
             <Card variant="outlined">
               <List sx={{ p: 0 }}>
-                {album.tracks.map((track, index) => (
+                {album.tracks.map((track, index) => {
+                  const matchedSong = findMatchedSong(track.title);
+                  return (
                   <Box key={track.n}>
                     <ListItem
                       sx={{
@@ -328,12 +350,31 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                             >
                               {track.n}
                             </Typography>
-                            <Typography
-                              variant="body1"
-                              sx={{ fontWeight: 500 }}
-                            >
-                              {track.title}
-                            </Typography>
+                            {matchedSong ? (
+                              <Typography
+                                component={Link}
+                                href={`/songs/${matchedSong.id}`}
+                                variant="body1"
+                                sx={{
+                                  fontWeight: 500,
+                                  color: "text.primary",
+                                  textDecoration: "none",
+                                  "&:hover": {
+                                    color: "primary.main",
+                                    textDecoration: "underline",
+                                  },
+                                }}
+                              >
+                                {track.title}
+                              </Typography>
+                            ) : (
+                              <Typography
+                                variant="body1"
+                                sx={{ fontWeight: 500 }}
+                              >
+                                {track.title}
+                              </Typography>
+                            )}
                             {track.lyrics && (
                               <Tooltip title={t("viewLyrics") || "Ver letras"}>
                                 <Box
@@ -379,12 +420,9 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                           </Box>
                         }
                       />
-                      {track.lyrics && (
+                      {matchedSong && (
                         <Link
-                          href={`/songs/${track.title
-                            .toLowerCase()
-                            .replace(/[^a-z0-9 ]/gi, "")
-                            .replace(/ /g, "-")}`}
+                          href={`/songs/${matchedSong.id}`}
                           passHref
                           legacyBehavior
                         >
@@ -406,7 +444,8 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
                     </ListItem>
                     {index < (album.tracks?.length || 0) - 1 && <Divider />}
                   </Box>
-                ))}
+                  );
+                })}
               </List>
             </Card>
           </Box>

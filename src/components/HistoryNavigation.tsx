@@ -3,7 +3,7 @@
 import { Box, Button, Typography, useTheme } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { HistoryChapter, getText } from "@/types/historia";
-import { useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 
 interface HistoryNavigationProps {
@@ -20,7 +20,6 @@ export default function HistoryNavigation({
   allChapters,
 }: HistoryNavigationProps) {
   const theme = useTheme();
-  const router = useRouter();
   const locale = useLocale() as "es" | "en";
   const t = useTranslations("history");
 
@@ -28,20 +27,6 @@ export default function HistoryNavigation({
     (ch) => ch.slug === currentChapter.slug
   );
   const progress = ((currentIndex + 1) / allChapters.length) * 100;
-
-  const handlePrevious = () => {
-    if (previousChapter) {
-      router.push(`/historia/${previousChapter.slug}`);
-    }
-  };
-
-  const handleNext = () => {
-    if (nextChapter) {
-      router.push(`/historia/${nextChapter.slug}`);
-    }
-  };
-
-  console.log(currentChapter.id, "currentChapter");
 
   return (
     <Box
@@ -123,9 +108,10 @@ export default function HistoryNavigation({
           <Box></Box>
         ) : (
           <Button
+            component={Link}
+            href={previousChapter ? `/historia/${previousChapter.slug}` : "#"}
             variant="outlined"
             startIcon={<ArrowBack />}
-            onClick={handlePrevious}
             disabled={!previousChapter}
             sx={{
               minWidth: "120px",
@@ -166,9 +152,10 @@ export default function HistoryNavigation({
           <Box></Box>
         ) : (
           <Button
+            component={Link}
+            href={nextChapter ? `/historia/${nextChapter.slug}` : "#"}
             variant="outlined"
             endIcon={<ArrowForward />}
-            onClick={handleNext}
             disabled={!nextChapter}
             sx={{
               minWidth: "120px",

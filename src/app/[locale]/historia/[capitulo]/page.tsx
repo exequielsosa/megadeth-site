@@ -1,12 +1,14 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Box } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import HistoryChapterComponent from "@/components/HistoryChapter";
 import HistoryNavigation from "@/components/HistoryNavigation";
 import historiaData from "@/constants/historia.json";
+import interviewsData from "@/constants/interviews.json";
 import { getTranslations, getLocale } from "next-intl/server";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import Breadcrumb from "@/components/Breadcrumb";
+import { Link } from "@/i18n/navigation";
 import { i18nAlternates } from "@/utils/i18nAlternates";
 import {
   HistoryData,
@@ -15,9 +17,36 @@ import {
   getPreviousChapter,
   getText,
 } from "@/types/historia";
+import {
+  Interview,
+  generateInterviewSlug,
+  getInterviewTitle,
+} from "@/types/interview";
 
 interface PageProps {
   params: Promise<{ capitulo: string }>;
+}
+
+// Entrevistas cuyo año cae dentro del rango del capítulo. El capítulo con el
+// yearEnd más alto (la era actual) queda sin tope superior, para no perder
+// entrevistas más recientes que la fecha de cierre declarada en
+// historia.json.
+function getRelatedInterviews(
+  chapter: HistoryData["chapters"][number],
+  allChapters: HistoryData["chapters"],
+): Interview[] {
+  const isLatestChapter =
+    chapter.yearEnd === Math.max(...allChapters.map((c) => c.yearEnd));
+
+  return (interviewsData as Interview[]).filter((interview) => {
+    // getUTCFullYear(), no getFullYear(): las fechas son strings "YYYY-01-01"
+    // (medianoche UTC) — en timezones UTC-negativos, getFullYear() (hora
+    // local) devuelve el año anterior para esos casos.
+    const year = new Date(interview.date).getUTCFullYear();
+    return (
+      year >= chapter.yearStart && (isLatestChapter || year <= chapter.yearEnd)
+    );
+  });
 }
 
 export async function generateStaticParams() {
@@ -117,6 +146,7 @@ export default async function CapituloPage({ params }: PageProps) {
 
   const previousChapter = getPreviousChapter(data.chapters, capitulo);
   const nextChapter = getNextChapter(data.chapters, capitulo);
+  const relatedInterviews = getRelatedInterviews(chapter, data.chapters);
 
   // JSON-LD Structured Data
   const jsonLd = {
@@ -193,13 +223,60 @@ export default async function CapituloPage({ params }: PageProps) {
           flexDirection="column"
           width={"100%"}
         >
-          <Box
-            maxWidth="1392px"
-            sx={{ py: 4, pb: 10, mb: "600px" }}
-            width="100%"
-          >
+          <Box maxWidth="1392px" sx={{ py: 4, pb: 0, mb: "0px" }} width="100%">
             <HistoryChapterComponent chapter={chapter} />
           </Box>
+          {/* Entrevistas de esta era — interlinking automático por año */}
+          {relatedInterviews.length > 0 && (
+            <Box sx={{ mt: 2, maxWidth: "1400px", mb: "200px" }}>
+              <Typography
+                component="h2"
+                variant="h5"
+                sx={{ fontWeight: 700, mb: 2 }}
+              >
+                {locale === "es"
+                  ? "Entrevistas de esta era"
+                  : "Interviews from this era"}
+              </Typography>
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: {
+                    xs: "1fr",
+                    sm: "repeat(2, 1fr)",
+                    md: "repeat(3, 1fr)",
+                  },
+                  gap: 2,
+                }}
+              >
+                {relatedInterviews.map((interview) => (
+                  <Link
+                    key={interview.id}
+                    href={`/entrevistas/${generateInterviewSlug(interview.id)}`}
+                    style={{
+                      textDecoration: "none",
+                      color: "inherit",
+                      display: "block",
+                      height: "100%",
+                    }}
+                  >
+                    <Card variant="outlined" sx={{ p: 2, height: "100%" }}>
+                      <Typography
+                        variant="body1"
+                        sx={{ fontWeight: 600, mb: 0.5 }}
+                      >
+                        {getInterviewTitle(interview, locale)}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {interview.media.name} ·{" "}
+                        {new Date(interview.date).getUTCFullYear()}
+                      </Typography>
+                    </Card>
+                  </Link>
+                ))}
+              </Box>
+            </Box>
+          )}
         </Box>
       </ContainerGradientNoPadding>
 

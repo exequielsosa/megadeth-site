@@ -5,6 +5,7 @@ import {
   Box,
   Card,
   CardContent,
+  CardActionArea,
   Chip,
   Grid,
   Button,
@@ -20,11 +21,106 @@ import {
   Interview,
   getInterviewTitle,
   getInterviewDescription,
+  generateInterviewSlug,
   InterviewContentItem,
 } from "@/types/interview";
+import { getYouTubeVideoId } from "@/types/show";
+import interviewsData from "@/constants/interviews.json";
 import ContainerGradientNoPadding from "./atoms/ContainerGradientNoPadding";
 import RandomSectionBanner from "./NewsBanner";
 import { CommentsSection } from "./CommentsSection";
+
+// Las 4 entrevistas más cercanas en fecha a la actual (antes o después),
+// sin filtrar por era ni por entrevistado, para dar interlinking real entre
+// páginas de contenido (antes esta página dependía 100% del nav/footer).
+function getRelatedInterviews(current: Interview): Interview[] {
+  const currentTime = new Date(current.date).getTime();
+
+  return (interviewsData as Interview[])
+    .filter((iv) => iv.id !== current.id)
+    .sort(
+      (a, b) =>
+        Math.abs(new Date(a.date).getTime() - currentTime) -
+        Math.abs(new Date(b.date).getTime() - currentTime)
+    )
+    .slice(0, 4);
+}
+
+// Card de entrevista relacionada: thumbnail de YouTube si es de video,
+// content.cover_image si es de texto/monólogo — todas las entrevistas
+// tienen una u otra, ninguna queda sin imagen.
+function RelatedInterviewCard({
+  interview,
+  locale,
+  t,
+}: {
+  interview: Interview;
+  locale: string;
+  t: ReturnType<typeof useTranslations>;
+}) {
+  const videoId = interview.youtube_url
+    ? getYouTubeVideoId(interview.youtube_url)
+    : null;
+  const imageUrl = videoId
+    ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+    : interview.content?.cover_image;
+
+  return (
+    <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+      <Card sx={{ height: "100%" }}>
+        <CardActionArea
+          component={Link}
+          href={`/entrevistas/${generateInterviewSlug(interview.id)}`}
+          sx={{
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "stretch",
+          }}
+        >
+          {imageUrl && (
+            <Box
+              sx={{ position: "relative", width: "100%", height: 160, flexShrink: 0 }}
+            >
+              <Image
+                src={imageUrl}
+                alt={getInterviewTitle(interview, locale)}
+                fill
+                style={{ objectFit: videoId ? "cover" : "contain" }}
+              />
+              <Chip
+                label={new Date(interview.date).getUTCFullYear()}
+                size="small"
+                color="primary"
+                sx={{ position: "absolute", top: 8, right: 8, fontWeight: 700 }}
+              />
+            </Box>
+          )}
+          <CardContent>
+            <Typography
+              variant="body1"
+              sx={{
+                fontWeight: 600,
+                mb: 0.5,
+                minHeight: "2.6em",
+                display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+              }}
+            >
+              {getInterviewTitle(interview, locale)}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {interview.media.name} ·{" "}
+              {interview.type === "video" ? t("video") : t("text")}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </Grid>
+  );
+}
 
 interface InterviewDetailPageProps {
   interview: Interview;
@@ -327,6 +423,7 @@ export default function InterviewDetailPage({
   const title = getInterviewTitle(interview, locale);
   const description = getInterviewDescription(interview, locale);
   const content = interview.content?.[locale as "es" | "en"] || [];
+  const relatedInterviews = getRelatedInterviews(interview);
 
   return (
     <ContainerGradientNoPadding>
@@ -434,6 +531,29 @@ export default function InterviewDetailPage({
                 </Typography>
               </Paper>
             )}
+          </Box>
+        )}
+
+        {/* Otras entrevistas — interlinking entre páginas de detalle */}
+        {relatedInterviews.length > 0 && (
+          <Box sx={{ mt: 6 }}>
+            <Typography
+              component="h2"
+              variant="h5"
+              sx={{ fontSize: { xs: 20, md: 26 }, fontWeight: 700, mb: 3 }}
+            >
+              {t("otherInterviews")}
+            </Typography>
+            <Grid container spacing={2}>
+              {relatedInterviews.map((relatedInterview) => (
+                <RelatedInterviewCard
+                  key={relatedInterview.id}
+                  interview={relatedInterview}
+                  locale={locale}
+                  t={t}
+                />
+              ))}
+            </Grid>
           </Box>
         )}
 
