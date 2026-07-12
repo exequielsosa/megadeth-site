@@ -15,9 +15,9 @@ import {
 } from "@mui/material";
 import { Launch } from "@mui/icons-material";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
-import DVDImage from "../../../components/DVDImage";
-import DVDYouTubeButton from "../../../components/DVDYouTubeButton";
-import dvdsData from "../../../constants/dvd.json";
+import DVDImage from "@/components/DVDImage";
+import DVDYouTubeButton from "@/components/DVDYouTubeButton";
+import dvdsData from "@/constants/dvd.json";
 import {
   getDVDExtendedDescription,
   generateDVDSlug,
@@ -25,7 +25,7 @@ import {
 } from "@/types/dvd";
 import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Breadcrumb from "@/components/Breadcrumb";
 import RandomSectionBanner from "@/components/NewsBanner";
 import { CommentsSection } from "@/components/CommentsSection";
@@ -404,14 +404,11 @@ export default async function DVDPage({ params }: DVDPageProps) {
 
           {/* Botón volver */}
           <Box sx={{ mt: 6, textAlign: "center" }}>
-            <Button
-              component={Link}
-              href="/dvds"
-              variant="outlined"
-              startIcon={<Launch />}
-            >
-              {locale === "es" ? "Volver a DVDs" : "Back to DVDs"}
-            </Button>
+            <Link href="/dvds" style={{ textDecoration: "none" }}>
+              <Button variant="outlined" startIcon={<Launch />}>
+                {locale === "es" ? "Volver a DVDs" : "Back to DVDs"}
+              </Button>
+            </Link>
           </Box>
           <Box mt={4}>
             <RandomSectionBanner currentSection="dvds" />

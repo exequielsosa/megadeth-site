@@ -5,7 +5,7 @@ import HistoryChapterComponent from "@/components/HistoryChapter";
 import HistoryNavigation from "@/components/HistoryNavigation";
 import historiaData from "@/constants/historia.json";
 import { getTranslations, getLocale } from "next-intl/server";
-import ContainerGradientNoPadding from "../../../components/atoms/ContainerGradientNoPadding";
+import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import Breadcrumb from "@/components/Breadcrumb";
 import {
   HistoryData,

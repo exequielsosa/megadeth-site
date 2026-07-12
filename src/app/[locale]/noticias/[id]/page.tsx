@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import SafeNewsImage from "@/components/SafeNewsImage";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import RandomSectionBanner from "@/components/NewsBanner";
 import { CommentsSection } from "@/components/CommentsSection";
 import { getAllNews, getNewsById } from "@/lib/supabase";

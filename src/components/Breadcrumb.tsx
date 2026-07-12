@@ -4,7 +4,7 @@ import { Breadcrumbs, Link, Typography, Container } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import HomeIcon from "@mui/icons-material/Home";
-import NextLink from "next/link";
+import { Link as NextLink } from "@/i18n/navigation";
 
 interface BreadcrumbItem {
   label: string;

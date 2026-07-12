@@ -1,5 +1,5 @@
 import DVDGrid from "@/components/DVDGrid";
-import dvdsData from "../../constants/dvd.json";
+import dvdsData from "@/constants/dvd.json";
 import type { DVD } from "@/types/dvd";
 import { Container, Box } from "@mui/material";
 import type { Metadata } from "next";

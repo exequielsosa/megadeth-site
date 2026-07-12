@@ -15,7 +15,7 @@ import lineupsData from "@/constants/lineups.json";
 import membersData from "@/constants/members.json";
 import { use } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import Breadcrumb from "@/components/Breadcrumb";

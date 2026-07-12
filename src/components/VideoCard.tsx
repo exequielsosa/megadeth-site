@@ -3,7 +3,7 @@
 import { Box, Card, CardContent, Typography, IconButton } from "@mui/material";
 import { PlayArrow } from "@mui/icons-material";
 import { useLocale } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import type { Video } from "@/types/video";
 import { slugify } from "@/utils/slugify";
 

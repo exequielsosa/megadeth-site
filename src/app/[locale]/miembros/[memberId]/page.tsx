@@ -15,7 +15,7 @@ import membersData from "@/constants/members.json";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { use } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import Breadcrumb from "@/components/Breadcrumb";
 import RandomSectionBanner from "@/components/NewsBanner";

@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import SongsListPage from "../../components/SongsListPage";
+import SongsListPage from "@/components/SongsListPage";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();

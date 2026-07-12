@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Box, Button, Chip, Container, Typography } from "@mui/material";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { slugify } from "@/utils/slugify";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
@@ -253,20 +253,20 @@ export default async function VideoWatchPage({ params }: Props) {
         </Typography>
 
         <Box sx={{ mt: 4 }}>
-          <Button
-            component={Link}
-            href="/videos"
-            variant="contained"
-            size="large"
-            sx={{
-              px: 4,
-              py: 1.5,
-              fontSize: { xs: 16, md: 18 },
-              fontWeight: 600,
-            }}
-          >
-            {lang === "es" ? "Ver todos los videos" : "Back to all videos"}
-          </Button>
+          <Link href="/videos" style={{ textDecoration: "none" }}>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{
+                px: 4,
+                py: 1.5,
+                fontSize: { xs: 16, md: 18 },
+                fontWeight: 600,
+              }}
+            >
+              {lang === "es" ? "Ver todos los videos" : "Back to all videos"}
+            </Button>
+          </Link>
         </Box>
 
         {/* Más videos sugeridos */}

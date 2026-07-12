@@ -1,8 +1,8 @@
 import DiscographyGrid from "@/components/DiscographyGrid";
-import studioAlbums from "../../constants/discography.json";
-import liveAlbums from "../../constants/liveAlbums.json";
-import compilations from "../../constants/compilations.json";
-import eps from "../../constants/eps.json";
+import studioAlbums from "@/constants/discography.json";
+import liveAlbums from "@/constants/liveAlbums.json";
+import compilations from "@/constants/compilations.json";
+import eps from "@/constants/eps.json";
 import { Typography, Box } from "@mui/material";
 import type { Album } from "@/types/album";
 import { useTranslations } from "next-intl";

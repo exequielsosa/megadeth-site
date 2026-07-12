@@ -91,7 +91,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { LineupFormation, BilingualText } from "@/types";
 import lineupsData from "@/constants/lineups.json";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Breadcrumb from "@/components/Breadcrumb";
 import RandomSectionBanner from "@/components/NewsBanner";
 

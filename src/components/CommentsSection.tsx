@@ -37,6 +37,13 @@ export function CommentsSection({
 }) {
   const t = useTranslations("comments");
   const locale = useLocale();
+  // OJO: usePathname acá es el de next/navigation a propósito, NO el de
+  // @/i18n/navigation. El pathname se usa para el campo `url` del schema
+  // DiscussionForumPosting más abajo, y ese campo necesita la URL real
+  // completa (con el prefijo /es incluido cuando corresponda). El
+  // usePathname de next-intl devuelve la ruta SIN el prefijo de locale
+  // (es su diseño, para matchear patrones) — usarlo acá rompería el `url`
+  // en la versión en español.
   const pathname = usePathname();
 
   const [items, setItems] = useState<CommentItem[]>([]);

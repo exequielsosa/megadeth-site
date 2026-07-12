@@ -10,7 +10,7 @@ import QuickAccessGrid from "./QuickAccessGrid";
 import TopSongsWidget from "./TopSongsWidget";
 import UpcomingToursWidget from "./UpcomingToursWidget";
 import { NewsArticle } from "@/types/news";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import RandomSectionBanner from "./NewsBanner";
 import SiteUpdatesBanner from "./SiteUpdatesBanner";
 import siteUpdatesData from "@/constants/site-updates.json";

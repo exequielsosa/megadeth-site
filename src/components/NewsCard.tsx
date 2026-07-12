@@ -2,7 +2,7 @@
 
 import { Card, CardContent, Typography, Box, Chip } from "@mui/material";
 import { NewsArticle } from "@/types/news";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import {
   getSafeTranslation,

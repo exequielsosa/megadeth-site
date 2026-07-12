@@ -118,7 +118,7 @@ type Member = {
   country: { es: string; en: string };
 };
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import RandomSectionBanner from "@/components/NewsBanner";
 
 export default function MembersPage() {
@@ -205,20 +205,21 @@ export default function MembersPage() {
   }, {});
 
   const MemberCard = ({ member }: { member: (typeof members)[0] }) => (
-    <Card
-      component={Link}
+    <Link
       href={`/miembros/${member.id}`}
-      sx={{
-        height: "100%",
-        textDecoration: "none",
-        transition: "transform 0.2s, box-shadow 0.2s",
-        "&:hover": {
-          transform: "translateY(-4px)",
-          boxShadow: 8,
-        },
-      }}
+      style={{ textDecoration: "none", display: "block", height: "100%" }}
     >
-      <CardContent sx={{ textAlign: "center" }}>
+      <Card
+        sx={{
+          height: "100%",
+          transition: "transform 0.2s, box-shadow 0.2s",
+          "&:hover": {
+            transform: "translateY(-4px)",
+            boxShadow: 8,
+          },
+        }}
+      >
+        <CardContent sx={{ textAlign: "center" }}>
         <Image
           src={member.image ?? "/images/default.jpg"}
           alt={member.name}
@@ -256,8 +257,9 @@ export default function MembersPage() {
             {`${member.birthYear} - ${member.deathYear}`}
           </Typography>
         )}
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </Link>
   );
 
   return (

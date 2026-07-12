@@ -1,5 +1,5 @@
 import VideosGrid from "@/components/VideosGrid";
-import videosData from "../../constants/videos.json";
+import videosData from "@/constants/videos.json";
 import type { Video } from "@/types/video";
 import { Container, Box } from "@mui/material";
 import type { Metadata } from "next";

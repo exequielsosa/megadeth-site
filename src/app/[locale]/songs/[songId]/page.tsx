@@ -1,4 +1,4 @@
-import SongDetailPage from "../../../components/SongDetailPage";
+import SongDetailPage from "@/components/SongDetailPage";
 import songsData from "@/constants/songs.json";
 import { getLocale } from "next-intl/server";
 import type { Metadata } from "next";
