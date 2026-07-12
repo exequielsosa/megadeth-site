@@ -8,7 +8,7 @@ import {
   Button,
 } from "@mui/material";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import { useLocale } from "next-intl";

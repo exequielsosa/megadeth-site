@@ -11,11 +11,34 @@ import interviewsData from '@/constants/interviews.json';
 import showsData from '@/constants/shows.json';
 import reviewsData from '@/constants/reviews.json';
 import { generateInterviewSlug } from '@/types/interview';
+import { generateShowSlug, Show } from '@/types/show';
+import { generateBootlegSlug, Bootleg } from '@/types/bootleg';
+import { generateDVDSlug } from '@/types/dvd';
 import bootlegsData from '@/constants/bootlegs.json';
 import { getAllNews } from '@/lib/supabase';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = 'https://megadeth.com.ar';
+
+  // Empuja las dos versiones (en + es) de una misma página, cada una
+  // declarando a la otra como alternate — así Google indexa ambos idiomas
+  // como URLs propias, no como duplicados.
+  function pushBilingual(
+    sitemap: MetadataRoute.Sitemap,
+    path: string,
+    entry: {
+      lastModified: Date;
+      changeFrequency: NonNullable<MetadataRoute.Sitemap[number]['changeFrequency']>;
+      priority: number;
+    },
+  ) {
+    const enUrl = `${base}${path}`;
+    const esUrl = path === '/' ? `${base}/es` : `${base}/es${path}`;
+    const languages = { en: enUrl, es: esUrl };
+    sitemap.push({ url: enUrl, alternates: { languages }, ...entry });
+    sitemap.push({ url: esUrl, alternates: { languages }, ...entry });
+  }
+
   const pages = [
     { path: '/', priority: 1, changeFreq: 'daily' as const },
     { path: '/tour', priority: 0.8, changeFreq: 'weekly' as const },
@@ -42,8 +65,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (Array.isArray(songsData)) {
     songsData.forEach(song => {
       if (song.id) {
-        sitemap.push({
-          url: `${base}/songs/${song.id}`,
+        pushBilingual(sitemap, `/songs/${song.id}`, {
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.7,
@@ -56,8 +78,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (Array.isArray(videosData)) {
     videosData.forEach(video => {
       if (video.title) {
-        sitemap.push({
-          url: `${base}/videos/${slugify(video.title)}`,
+        pushBilingual(sitemap, `/videos/${slugify(video.title)}`, {
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.7,
@@ -68,20 +89,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Agregar páginas principales
   pages.forEach(page => {
-    sitemap.push({
-      url: `${base}${page.path}`,
+    pushBilingual(sitemap, page.path, {
       lastModified: new Date(),
       changeFrequency: page.changeFreq,
       priority: page.priority,
     });
   });
 
-  // Agregar páginas individuales de formaciones
   // Formaciones dinámicas
   const lineups = lineupsData.lineups;
   lineups.forEach(lineup => {
-    sitemap.push({
-      url: `${base}/formaciones/${lineup.id}`,
+    pushBilingual(sitemap, `/formaciones/${lineup.id}`, {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -91,8 +109,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Miembros dinámicos
   const memberIds = Object.keys(membersData.members);
   memberIds.forEach(memberId => {
-    sitemap.push({
-      url: `${base}/miembros/${memberId}`,
+    pushBilingual(sitemap, `/miembros/${memberId}`, {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -103,8 +120,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (Array.isArray(discographyData)) {
     discographyData.forEach(album => {
       if (album.id) {
-        sitemap.push({
-          url: `${base}/discography/${album.id}`,
+        pushBilingual(sitemap, `/discography/${album.id}`, {
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.7,
@@ -115,18 +131,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // DVDs dinámica
   if (Array.isArray(dvdData)) {
-    // Función para normalizar el título a slug
-    const slugify = (str: string) =>
-      str
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/(^-|-$)/g, '');
-
-    dvdData.forEach((dvd) => {
-      const slug = dvd.title ? slugify(dvd.title) : undefined;
+    (dvdData as { title?: string; album_title?: string }[]).forEach((dvd) => {
+      // Usa la MISMA función que resuelve la página (`generateDVDSlug`), no una
+      // copia local: con títulos con puntuación especial (ej. apóstrofes) una
+      // función distinta genera un slug diferente al que la página realmente
+      // busca → 404 real (confirmado con "Peace Sells... But Who's Buying?").
+      const slug = generateDVDSlug(dvd.title || dvd.album_title);
       if (slug) {
-        sitemap.push({
-          url: `${base}/dvds/${slug}`,
+        pushBilingual(sitemap, `/dvds/${slug}`, {
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.7,
@@ -139,8 +151,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (historiaData && Array.isArray(historiaData.chapters)) {
     historiaData.chapters.forEach(chapter => {
       if (chapter.slug) {
-        sitemap.push({
-          url: `${base}/historia/${chapter.slug}`,
+        pushBilingual(sitemap, `/historia/${chapter.slug}`, {
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.7,
@@ -154,8 +165,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     interviewsData.forEach(interview => {
       const slug = generateInterviewSlug(interview.id);
       if (slug) {
-        sitemap.push({
-          url: `${base}/entrevistas/${slug}`,
+        pushBilingual(sitemap, `/entrevistas/${slug}`, {
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.7,
@@ -166,11 +176,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Shows dinámicas
   if (Array.isArray(showsData)) {
-    showsData.forEach(show => {
-      const slug = generateInterviewSlug(show.id);
+    (showsData as Show[]).forEach(show => {
+      const slug = generateShowSlug(show);
       if (slug) {
-        sitemap.push({
-          url: `${base}/shows/${slug}`,
+        pushBilingual(sitemap, `/shows/${slug}`, {
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.7,
@@ -181,11 +190,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Bootlegs dinámicas
   if (Array.isArray(bootlegsData)) {
-    bootlegsData.forEach(bootleg => {
-      const slug = generateInterviewSlug(bootleg.id);
+    (bootlegsData as Bootleg[]).forEach(bootleg => {
+      const slug = generateBootlegSlug(bootleg);
       if (slug) {
-        sitemap.push({
-          url: `${base}/bootlegs/${slug}`,
+        pushBilingual(sitemap, `/bootlegs/${slug}`, {
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.7,
@@ -199,10 +207,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const newsData = await getAllNews();
     if (Array.isArray(newsData)) {
       newsData.forEach(news => {
-        const slug = generateInterviewSlug(news.id);
-        if (slug) {
-          sitemap.push({
-            url: `${base}/noticias/${slug}`,
+        // OJO: acá va el id crudo, NO generateInterviewSlug(news.id). La página
+        // busca con getNewsById() -> .eq("id", id), match exacto contra la DB.
+        // Un id con guion doble ("...month--178...") se colapsaba a guion simple
+        // y generaba una URL que no existía en la DB → 404 real (confirmado con
+        // scripts/check-all-sitemap.mjs).
+        if (news.id) {
+          pushBilingual(sitemap, `/noticias/${news.id}`, {
             lastModified: new Date(news.publishedDate || new Date()),
             changeFrequency: 'weekly',
             priority: 0.8,
@@ -218,8 +229,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (Array.isArray(reviewsData)) {
     reviewsData.forEach(review => {
       if (review.id) {
-        sitemap.push({
-          url: `${base}/discography/reviews/${review.id}`,
+        pushBilingual(sitemap, `/discography/reviews/${review.id}`, {
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.8,

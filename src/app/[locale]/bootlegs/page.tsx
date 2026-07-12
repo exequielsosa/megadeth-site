@@ -1,0 +1,61 @@
+import { getLocale, getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import BootlegsListPage from "@/components/BootlegsListPage";
+import { i18nAlternates } from "@/utils/i18nAlternates";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const t = await getTranslations("bootlegs");
+
+  const title = t("listTitle");
+  const description = t("listDescription");
+  const keywords = [
+    "Megadeth",
+    "bootlegs",
+    "conciertos",
+    "concerts",
+    "live",
+    "en vivo",
+    "thrash metal",
+    "metal",
+    "Dave Mustaine",
+    "recordings",
+    "grabaciones",
+    "YouTube",
+    "unofficial",
+    "no oficial",
+  ];
+
+  return {
+    title,
+    description,
+    keywords,
+    openGraph: {
+      title,
+      description,
+      url: "/bootlegs",
+      siteName: "Megadeth Fan Site",
+      locale: locale === "es" ? "es_ES" : "en_US",
+      type: "website",
+      images: [
+        {
+          url: "/images/bootlegs/og-bootlegs.jpg",
+          width: 1200,
+          height: 630,
+          alt: locale === "es" ? "Bootlegs de Megadeth" : "Megadeth Bootlegs",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/bootlegs/og-bootlegs.jpg"],
+    },
+    alternates: i18nAlternates("/bootlegs", locale),
+  };
+}
+
+export default function BootlegsPage() {
+  return <BootlegsListPage />;
+}

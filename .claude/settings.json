@@ -4,7 +4,28 @@
       "Bash(node -e \"console.log\\(require\\('./package.json'\\).scripts\\)\")",
       "Bash(npx tsc *)",
       "Bash(npx eslint *)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(node -e \"console.log\\(require\\('./package.json'\\).dependencies['next-intl']\\)\")",
+      "Bash(xargs grep -l \"useRouter\\\\|redirect\")",
+      "Bash(node -e \"const es=require\\('./messages/es.json'\\); console.log\\('notFound.es:', JSON.stringify\\(es.notFound\\)\\)\")",
+      "Bash(xargs grep -ln \"hasLocale\")",
+      "Bash(echo \"exit: $?\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/miembros)",
+      "Bash(curl -s http://localhost:3000/miembros)",
+      "Bash(curl -s -o /dev/null -w \"status: %{http_code}\\\\n\" http://localhost:3000/miembros)",
+      "Bash(curl -s http://localhost:3000/es/miembros)",
+      "Bash(curl -s -o /dev/null -w \"status: %{http_code}\\\\n\" http://localhost:3000/es/miembros)",
+      "Bash(curl -s -o /dev/null -w \"status: %{http_code}\\\\n\" http://localhost:3000/en/miembros)",
+      "Bash(curl -s -I http://localhost:3000/en/miembros)",
+      "Bash(curl -s -H \"Accept-Language: es\" http://localhost:3000/miembros)",
+      "Bash(curl -s -o /dev/null -w \"status: %{http_code}\\\\n\" -H \"Accept-Language: es\" http://localhost:3000/miembros)",
+      "Bash(curl -s -o /dev/null -w \"/ -> %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"/es -> %{http_code}\\\\n\" http://localhost:3000/es)",
+      "Bash(curl -s -o /dev/null -w \"en -> %{http_code}\\\\n\" http://localhost:3000/songs/tornado-of-souls)",
+      "Bash(curl -s -o /dev/null -w \"es -> %{http_code}\\\\n\" http://localhost:3000/es/songs/tornado-of-souls)",
+      "Bash(pkill -f \"next start\")",
+      "Bash(echo \"=== TODOS los <a href=...> del documento ===\" *)",
+      "Read(//tmp/**)"
     ]
   }
 }

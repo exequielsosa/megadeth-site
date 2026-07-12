@@ -17,6 +17,7 @@
     "track": "Track number",
     "theme": "Theme",
     "lyrics": "Lyrics",
+    "lyricsNotAvailable": "Lyrics not available.",
     "showEs": "Show lyrics in Spanish",
     "showEn": "Show lyrics in English",
     "musicians": "Musicians",

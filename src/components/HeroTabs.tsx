@@ -12,7 +12,7 @@ import {
   Button,
 } from "@mui/material";
 import { useTranslations, useLocale } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import AnimatedCounter from "./AnimatedCounter";
 import { tourDates } from "@/constants/tourDates";

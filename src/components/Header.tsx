@@ -25,8 +25,7 @@ import { useColorMode } from "@/theme/useColorMode";
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
@@ -45,6 +44,7 @@ export default function Header() {
   const currentLocale = useLocale();
   const t = useTranslations("navigation");
   const pathname = usePathname();
+  const router = useRouter();
 
   // Detectar scroll
   useEffect(() => {
@@ -85,9 +85,8 @@ export default function Header() {
     setAnchorEl(null);
   };
 
-  const handleLanguageChange = (locale: string) => {
-    document.cookie = `NEXT_LOCALE=${locale}; max-age=31536000; path=/`;
-    window.location.reload();
+  const handleLanguageChange = (locale: "en" | "es") => {
+    router.replace(pathname, { locale });
     handleLanguageClose();
   };
 

@@ -19,7 +19,7 @@ import {
 } from "@mui/material";
 import { Close, CalendarMonth, Place } from "@mui/icons-material";
 import { useLocale } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
 interface TourShow {
