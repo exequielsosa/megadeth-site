@@ -140,8 +140,8 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
     "@type": "Article",
     headline: title,
     description: description,
-    datePublished: article.publishedDate,
-    dateModified: article.publishedDate,
+    datePublished: new Date(article.publishedDate).toISOString(),
+    dateModified: new Date(article.publishedDate).toISOString(),
     author: {
       "@type": "Organization",
       name: "Megadeth Argentina",

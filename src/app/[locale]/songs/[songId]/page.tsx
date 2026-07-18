@@ -146,7 +146,7 @@ function buildSongJsonLd(song: (typeof songsData)[number]) {
     inAlbum: {
       "@type": "MusicAlbum",
       name: song.album.title,
-      datePublished: song.album.year.toString(),
+      datePublished: new Date(`${song.album.year}-01-01`).toISOString(),
     },
     recordingOf: {
       "@type": "MusicComposition",

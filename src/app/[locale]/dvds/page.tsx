@@ -153,7 +153,9 @@ function generateStructuredData(locale: string) {
         ] ||
         dvd.description?.short?.es ||
         "",
-      datePublished: `${dvd.year || dvd.release_year || 2000}-01-01`,
+      datePublished: new Date(
+        `${dvd.year || dvd.release_year || 2000}-01-01`,
+      ).toISOString(),
       duration: dvd.duration || "Unknown",
       publisher: {
         "@type": "Organization",

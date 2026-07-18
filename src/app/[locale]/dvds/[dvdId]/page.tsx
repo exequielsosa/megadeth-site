@@ -181,7 +181,7 @@ export default async function DVDPage({ params }: DVDPageProps) {
     "@type": "CreativeWork",
     name: dvdTitle,
     description: extendedDescription,
-    datePublished: `${dvdYear}-01-01`,
+    datePublished: new Date(`${dvdYear}-01-01`).toISOString(),
     publisher: {
       "@type": "Organization",
       name: dvd.label || "Unknown Label",

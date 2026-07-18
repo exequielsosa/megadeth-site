@@ -116,7 +116,9 @@ export default function AlbumDetail({ album }: AlbumDetailProps) {
         "@type": "MusicGroup",
         name: "Megadeth",
       },
-      datePublished: album.releaseDate || `${album.year}-01-01`,
+      datePublished: new Date(
+        album.releaseDate || `${album.year}-01-01`,
+      ).toISOString(),
       genre: ["Heavy Metal", "Thrash Metal"],
       image: `https://megadeth.com.ar${album.cover}`,
       ...(album.label && { recordLabel: album.label }),

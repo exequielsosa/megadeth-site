@@ -25,7 +25,7 @@ function buildAlbumJsonLd(album: Album) {
     "@type": "MusicAlbum",
     name: album.title,
     byArtist: { "@type": "MusicGroup", name: "Megadeth" },
-    datePublished: album.year.toString(),
+    datePublished: new Date(`${album.year}-01-01`).toISOString(),
     image: toAbsoluteUrl(album.cover),
     ...(numTracks > 0 && { numTracks }),
     url: toAbsoluteUrl(`/discography/${album.id}`),

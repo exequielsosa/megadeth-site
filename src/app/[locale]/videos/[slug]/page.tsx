@@ -164,7 +164,9 @@ function buildVideoJsonLd(
     "@type": "VideoObject",
     name: video.title,
     description: video.description.es,
-    uploadDate: `${video.year}-01-01`,
+    // ISO 8601 completo con timezone — Google marca como inválida una fecha
+    // cruda sin hora/timezone (mismo patrón de bug ya visto en noticias).
+    uploadDate: new Date(`${video.year}-01-01`).toISOString(),
     ...(videoId && {
       thumbnailUrl: [
         `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,

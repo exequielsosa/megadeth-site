@@ -71,7 +71,7 @@ export default async function ReviewsPage() {
             "@type": "Organization",
             name: "Megadeth Argentina",
           },
-          datePublished: review.publishedDate,
+          datePublished: new Date(review.publishedDate).toISOString(),
           reviewBody: review.content[locale as "es" | "en"].substring(0, 300),
           url: `https://megadeth.com.ar/discography/reviews/${review.id}`,
           image: `https://megadeth.com.ar${review.imageUrl}`,
