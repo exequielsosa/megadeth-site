@@ -354,6 +354,7 @@ export default function BootlegsListPage() {
         <CommentsSection
           pageType="article"
           pageId="bootlegs-page"
+          title={t("titlePage")}
           customSubtitle={t("preSubtitle")}
         />
       </Container>

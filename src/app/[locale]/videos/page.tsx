@@ -220,6 +220,7 @@ export default async function VideosPage() {
           <CommentsSection
             pageType="article"
             pageId="videos-page"
+            title={v("title")}
             customSubtitle={v("comment")}
           />
         </Container>

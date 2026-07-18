@@ -430,6 +430,7 @@ export default function SongsListPage() {
           <CommentsSection
             pageType="article"
             pageId="songs-list"
+            title={t("title")}
             customSubtitle={t("preSubtitle")}
           />
         </Box>

@@ -11,7 +11,14 @@ function buildTourEventsJsonLd(locale: string) {
     "@graph": tourDates.map((show) => ({
       "@type": "MusicEvent",
       name: `${eventNamePrefix} ${show.city}`,
+      description:
+        locale === "es"
+          ? `Megadeth se presenta en vivo en ${show.venue}, ${show.city}.`
+          : `Megadeth performs live at ${show.venue}, ${show.city}.`,
       startDate: show.date,
+      // No tenemos duración real del show — convención estándar para
+      // eventos de un solo día: usar la misma fecha que startDate.
+      endDate: show.date,
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       location: {
@@ -28,6 +35,12 @@ function buildTourEventsJsonLd(locale: string) {
       offers: {
         "@type": "Offer",
         url: show.ticketLink,
+        // price/priceCurrency/validFrom y organizer se omiten a propósito:
+        // no hay datos reales por show (las 34 fechas comparten el mismo
+        // link genérico a la web oficial), completarlos con datos
+        // inventados es peor que dejarlos ausentes (campos no críticos
+        // según Search Console).
+        availability: "https://schema.org/InStock",
       },
     })),
   };

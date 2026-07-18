@@ -343,6 +343,7 @@ export default function ShowsListPage() {
         <CommentsSection
           pageType="article"
           pageId="shows-page"
+          title={t("title")}
           customSubtitle={t("preSubtitle")}
         />
       </Container>

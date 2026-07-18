@@ -407,6 +407,7 @@ export default function InterviewsListPage() {
         <CommentsSection
           pageType="article"
           pageId="interviews-list"
+          title={t("title")}
           customSubtitle={t("preSubtitle")}
         />
       </Container>
