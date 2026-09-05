@@ -10,6 +10,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContainerGradientNoPadding from "@/components/atoms/ContainerGradientNoPadding";
 import RandomSectionBanner from "@/components/NewsBanner";
 import { i18nAlternates } from "@/utils/i18nAlternates";
+import { absoluteUrl } from "@/utils/absoluteUrl";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -158,12 +159,14 @@ function buildVideoJsonLd(
   video: Video,
   slug: string,
   videoId: string | null,
+  lang: "es" | "en",
+  locale: string,
 ) {
   return {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     name: video.title,
-    description: video.description.es,
+    description: video.description[lang] || video.description.es,
     // ISO 8601 completo con timezone — Google marca como inválida una fecha
     // cruda sin hora/timezone (mismo patrón de bug ya visto en noticias).
     uploadDate: new Date(`${video.year}-01-01`).toISOString(),
@@ -174,9 +177,12 @@ function buildVideoJsonLd(
       embedUrl: `https://www.youtube.com/embed/${videoId}`,
     }),
     contentUrl: video.youtube,
+    duration: video.duration,
     genre: "Thrash Metal",
     creator: { "@type": "MusicGroup", name: "Megadeth" },
-    url: `https://megadeth.com.ar/videos/${slug}`,
+    // Debe coincidir con el canonical de la página: en español lleva el
+    // prefijo /es, si no Google recibe dos ubicaciones distintas del video.
+    url: absoluteUrl(`/videos/${slug}`, locale),
   };
 }
 
@@ -195,7 +201,7 @@ export default async function VideoWatchPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildVideoJsonLd(video, slug, videoId)),
+          __html: JSON.stringify(buildVideoJsonLd(video, slug, videoId, lang, locale)),
         }}
       />
       <Box pt={{ xs: 2, md: 4 }} px={{ xs: 2, md: 0 }} pb={{ xs: 0, md: 0 }}>

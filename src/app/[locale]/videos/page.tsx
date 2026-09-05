@@ -1,5 +1,7 @@
 import VideosGrid from "@/components/VideosGrid";
 import { i18nAlternates } from "@/utils/i18nAlternates";
+import { absoluteUrl } from "@/utils/absoluteUrl";
+import { slugify } from "@/utils/slugify";
 import videosData from "@/constants/videos.json";
 import type { Video } from "@/types/video";
 import { Container, Box } from "@mui/material";
@@ -124,26 +126,15 @@ export async function generateMetadata(): Promise<Metadata> {
 
 // Datos estructurados para SEO
 function generateStructuredData(locale: string) {
+  // Lista de enlaces, no de VideoObject: esta página es una galería de
+  // tarjetas, no una página de visualización. El VideoObject completo vive
+  // en cada /videos/[slug], que sí tiene el reproductor. Declararlo también
+  // acá hacía que Google viera los videos alojados en la galería y no
+  // encontrara su watch page.
   const videoList = videosData.map((video: Video) => ({
-    "@type": "VideoObject",
+    "@type": "ListItem",
     name: video.title,
-    description:
-      video.description[locale as keyof typeof video.description] ||
-      video.description.es,
-    thumbnailUrl: `https://img.youtube.com/vi/${
-      video.youtube.split("v=")[1]?.split("&")[0]
-    }/maxresdefault.jpg`,
-    uploadDate: `${video.year}-01-01T00:00:00+00:00`,
-    duration: "PT3M30S", // Duración promedio estimada
-    contentUrl: video.youtube,
-    embedUrl: `https://www.youtube.com/embed/${
-      video.youtube.split("v=")[1]?.split("&")[0]
-    }`,
-    creator: {
-      "@type": "MusicGroup",
-      name: "Megadeth",
-      genre: "Thrash Metal",
-    },
+    url: absoluteUrl(`/videos/${slugify(video.title)}`, locale),
   }));
 
   const titleByLocale = {
@@ -169,14 +160,13 @@ function generateStructuredData(locale: string) {
     description:
       descriptionByLocale[locale as keyof typeof descriptionByLocale] ||
       descriptionByLocale.es,
-    url: "https://megadeth.com.ar/videos",
+    url: absoluteUrl("/videos", locale),
     mainEntity: {
       "@type": "ItemList",
       numberOfItems: videosData.length,
       itemListElement: videoList.map((video, index) => ({
-        "@type": "ListItem",
+        ...video,
         position: index + 1,
-        item: video,
       })),
     },
     about: {

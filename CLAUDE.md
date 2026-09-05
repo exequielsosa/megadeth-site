@@ -279,6 +279,35 @@ npm run add:news         # Agregar noticias manualmente via CLI
 - Schema.org `sameAs` actualizado: solo contiene nuestras páginas fan (se removieron las cuentas oficiales de Megadeth)
 - Keys de traducción agregadas: `footer.followFacebook` y `footer.followInstagram` en `messages/es.json` y `messages/en.json`
 
+### Revisado (5 sep 2026) — Warnings de datos estructurados en GSC
+
+**`uploadDate` sin timezone (VideoObject) — ya corregido, falta validar**
+- Causa: `/videos/[slug]` emitía `uploadDate: "${year}-01-01"` (fecha cruda, sin hora ni TZ).
+- Fix ya en producción desde el commit `0c403e9` (18 jul 2026): `new Date(...).toISOString()`.
+- Verificado en prod: watch pages devuelven `...T00:00:00.000Z` y la galería `...+00:00`.
+- Los rastreos del informe GSC son del 12/18 jul (previos al deploy). **Acción pendiente: pulsar "Validar corrección" en Search Console.** No hay nada que tocar en el código.
+
+**Warnings de `offers` y `organizer` (MusicEvent) — decisión: NO tocar**
+- 34 elementos = las 34 fechas de `tourDates.ts`, schema en `src/app/[locale]/tour/layout.tsx`.
+- Faltan `price`, `priceCurrency`, `validFrom` y `organizer`: son campos *recomendados*, no obligatorios. Los eventos siguen siendo válidos y elegibles para rich results.
+- No se completan porque no hay datos reales (las 34 fechas comparten un ticketLink genérico a la web oficial). Inventar `price` viola las políticas de datos estructurados de Google y arriesga perder la elegibilidad entera — peor que el warning.
+- **Decisión tomada: dejar los warnings visibles en GSC.** Si en el futuro se quieren datos reales, hay que agregar price/priceCurrency/validFrom por show en `tourDates.ts`.
+
+**Schema de videos — 3 correcciones (aplicadas)**
+- `src/utils/absoluteUrl.ts` (nuevo): URL absoluta con prefijo de locale, misma convención que `i18nAlternates`. Para JSON-LD, donde el `url` debe coincidir con el canonical.
+- **Galería `/videos`**: emitía los 53 `VideoObject` completos inline, sin `url`. Google veía los videos alojados en la galería (que no tiene reproductor) y no encontraba su watch page — candidato al "69 de 76 videos sin indexar" del brief. Ahora el `ItemList` lleva solo `ListItem` + `url` a cada `/videos/[slug]`; el `VideoObject` completo queda únicamente en la watch page. **No volver a poner VideoObject completos en la galería.**
+- **`url` del JSON-LD vs canonical**: la watch page hardcodeaba `megadeth.com.ar/videos/[slug]` sin `/es`, mientras el canonical sí lo llevaba. Solo afectaba a la versión ES. Ahora usa `absoluteUrl`.
+- **`description` del JSON-LD**: usaba `video.description.es` fijo; en la versión EN la meta iba en inglés y el JSON-LD en español. Ahora recibe `lang`.
+- Verificado con dev server: galería con 53 ListItem y 0 VideoObject, canonical == jsonld `url` en ES y EN, meta desc == jsonld desc en ambos, y las 53 URLs del ItemList responden 200.
+
+**`duration` real por video (aplicada)**
+- Reemplaza el `PT3M30S` inventado que compartían los 53. El usuario aportó la tabla de duraciones; se cargaron en `videos.json` como campo `duration` en ISO 8601 y `Video` (en `src/types/video.ts`) lo declara requerido.
+- La watch page lo emite en su `VideoObject`. Verificado: las 53 declaran `"duration":"PT..."`.
+- Precisión: la mayoría venían marcadas como aproximadas. Contraste puntual contra YouTube (`lengthSeconds` del HTML de watch): Train of Consequences daba 214s = 3:34 vs 3:33 de la tabla. Margen de ~1s, aceptable. Si alguna vez se quieren exactas, la API de YouTube (`videos?part=contentDetails`) las da en ISO 8601 directo.
+
+**Pendiente de esa revisión (decisión del usuario)**
+- `startDate`/`endDate` de los eventos en `tour/layout.tsx` son fechas sin hora ni timezone. No genera warning hoy; requeriría saber el horario de cada show. El `endDate` idéntico al `startDate` se podría directamente omitir.
+
 ### Pendiente
 - Renovar `FACEBOOK_PAGE_ACCESS_TOKEN` antes del 22 de abril de 2026
 - Decidir si comprar créditos en X para activar Twitter posting
