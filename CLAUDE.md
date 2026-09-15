@@ -342,7 +342,27 @@ npm run add:news         # Agregar noticias manualmente via CLI
 - Textos del homenaje escritos como borrador; el usuario los ajusta mirando el render.
 - Sin commit.
 
+### Completado (15 sep 2026) — Pico de tráfico en Vercel: era el crawler de IA de Meta
+
+**El diagnóstico**
+- Alerta de Vercel: edge requests 4,9× sobre la línea base. NO lo causó el sitio viejo (en ese momento ni estaba commiteado) ni un deploy (el último era del 5 sep).
+- Firewall → Allowed Requests: de 41,2k requests/día, **23,8k eran del ASN 32934 (Facebook)** con una sola huella JA4. Agrupando por User Agent: **~23,9k de `meta-externalagent/1.1`** (el crawler de entrenamiento de IA de Meta) contra **331 de `facebookexternalhit/1.1`** (el que arma las previews de los posteos).
+- Top path: `/_next/image` con 13,9k (el optimizador de imágenes, que se factura aparte).
+
+**Lo aplicado**
+- **Regla de firewall en Vercel** (dashboard, sin deploy): `User Agent contains meta-externalagent` → **Deny**. Verificado con curl: meta-externalagent → 403; facebookexternalhit, Googlebot y navegador normal → 200. **Nunca bloquear por ASN 32934**: se llevaría puesto a facebookexternalhit y los posteos de FB/IG quedarían sin miniatura.
+- **Commit en la rama `chore/bloqueo-crawlers-ia-y-analytics`** (sin mergear): `robots.ts` con Disallow para meta-externalagent, meta-webindexer, GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, anthropic-ai, CCBot, PerplexityBot, Bytespider, Amazonbot, Applebot-Extended y Google-Extended. Googlebot/Bingbot/facebookexternalhit siguen permitidos. Más `@vercel/analytics` y `<Analytics />` en el layout.
+- Web Analytics estaba **deshabilitado** en el proyecto: hay que activarlo en el dashboard además del commit.
+
+**Causa de fondo, NO resuelta**
+- Producción responde `Cache-Control: private, no-cache, no-store` y `X-Vercel-Cache: MISS` en **todas** las páginas: `await cookies()` en `src/app/[locale]/layout.tsx:231` (el fix del FOUC de dark mode) vuelve dinámico todo el árbol y anula los `generateStaticParams` de las 12 rutas. Cada request, humano o bot, ejecuta una función.
+- Arreglarlo implica migrar el theming a variables CSS de MUI v7. Ojo: `dark-mode-fouc` en memoria lista 3 enfoques que YA fallaron (entre ellos `CssVarsProvider`). No improvisar: rama aparte y pruebas.
+
+**Bug detectado de paso (sin arreglar)**
+- Se piden `/noticias/null` y `/miembros/null` → 404 con error de Supabase (`PGRST116`) en los logs. Algún link se genera con `id` nulo.
+
 ### Pendiente
+- Mergear y pushear `chore/bloqueo-crawlers-ia-y-analytics` + activar Web Analytics en el dashboard
 - Renovar `FACEBOOK_PAGE_ACCESS_TOKEN` antes del 22 de abril de 2026
 - Decidir si comprar créditos en X para activar Twitter posting
 - **i18n routing definitivo**: migrar a URLs por locale (`/es/...`, `/en/...`) con middleware next-intl
