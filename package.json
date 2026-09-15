@@ -27,6 +27,7 @@
     "@mui/material": "^7.3.4",
     "@next/third-parties": "^16.0.1",
     "@supabase/supabase-js": "^2.90.1",
+    "@vercel/analytics": "^2.0.1",
     "@vercel/kv": "^3.0.0",
     "groq-sdk": "^0.37.0",
     "next": "^15.5.9",

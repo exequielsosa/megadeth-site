@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 import LegacySiteTribute from "@/components/LegacySiteTribute";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -322,6 +323,7 @@ export default async function LocaleLayout({
               <main style={{ flex: 1 }}>
                 {children}
                 <GoogleAnalytics gaId="G-3MT8DZR057" />
+                <Analytics />
               </main>
               <LegacySiteTribute />
               <Footer />
