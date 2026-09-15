@@ -209,6 +209,26 @@ const nextConfig: NextConfig = {
 
   // Compresión
   compress: true,
+
+  // Sitio original de Megadeth Argentina (2000), servido estático desde
+  // public/archivo. No debe indexarse (147 páginas de época con links
+  // muertos), y la CSP bloquea todo recurso externo: sus contadores y banners
+  // apuntan a dominios abandonados que hoy podría controlar cualquiera.
+  async headers() {
+    return [
+      {
+        source: "/archivo/:path*",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow" },
+          {
+            key: "Content-Security-Policy",
+            value:
+              "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; form-action 'none'; base-uri 'self'; frame-ancestors 'self'",
+          },
+        ],
+      },
+    ];
+  },
   
   // Experimental features para mejor performance
   experimental: {

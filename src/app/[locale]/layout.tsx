@@ -10,6 +10,7 @@ import ThemeRegistry from "@/theme/ThemeRegistry";
 import { ColorModeProvider } from "@/theme/useColorMode";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LegacySiteTribute from "@/components/LegacySiteTribute";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -322,6 +323,7 @@ export default async function LocaleLayout({
                 {children}
                 <GoogleAnalytics gaId="G-3MT8DZR057" />
               </main>
+              <LegacySiteTribute />
               <Footer />
               <ScrollToTopButton />
             </ThemeRegistry>

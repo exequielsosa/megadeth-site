@@ -308,6 +308,40 @@ npm run add:news         # Agregar noticias manualmente via CLI
 **Pendiente de esa revisión (decisión del usuario)**
 - `startDate`/`endDate` de los eventos en `tour/layout.tsx` son fechas sin hora ni timezone. No genera warning hoy; requeriría saber el horario de cada show. El `endDate` idéntico al `startDate` se podría directamente omitir.
 
+### Completado (13 sep 2026) — Autohomenaje: sitio original "Megadeth Argentina"
+
+**Qué es**
+- Sección antes del footer, en TODAS las páginas (`src/app/[locale]/layout.tsx`, entre `</main>` y `<Footer />`): cuenta que megadeth.com.ar continúa la página "Megadeth Argentina" que el usuario hacía en los 90.
+- Componente: `src/components/LegacySiteTribute.tsx` (client). Screenshot real del sitio viejo en sepia (`public/images/megadeth-argentina-2000.webp`, 800×600) + texto + CTA rojo. Click → `Dialog` con el sitio original funcionando en un iframe de 960×600 (un toque más ancho que los 800×600 originales, pedido del usuario; constantes `VIEWER_WIDTH`/`VIEWER_HEIGHT`, separadas de `SCREENSHOT_*` del hero).
+- Textos en `messages/{es,en}.json`, namespace `legacySite`.
+
+**El sitio viejo**
+- Origen: `G:/Personal/Paginas Web/Paginas Viejas/Megadeth`. Copia en `public/archivo/megadeth-argentina/` (1801 archivos, 25 MB).
+- El visor abre `home.htm` (frameset: menú | menú superior | contenido), NO `index.htm` (intro en Flash cuyo `.swf` ni siquiera existe).
+- **Excluidos de la copia**: todos los `WS_FTP.LOG` (datos del servidor FTP), `clave.txt`, `hugo.txt`, `nota rubros.txt`, `*.jbf` (cache de Paint Shop Pro) y la carpeta `wavs/` completa (audios con copyright; decisión del usuario). Sus links quedan rotos, como en cualquier archivo viejo.
+- **Parches mínimos sobre el HTML original** (solo funcionales, contenido intacto):
+  - Los 147 `.htm` convertidos de cp1252 a UTF-8 (137 meta charset reemplazados, 10 insertados). Next/Vercel sirven `.htm` como `charset=UTF-8`; sin esto todas las tildes salían rotas.
+  - 14 `target="_top"` a dominios externos → `_blank` (dentro del iframe sacaban al usuario de megadeth.com.ar). 1 interno (`menu2.htm` → `index.htm`) → `_parent`.
+  - 2 links absolutos a `members.xoom.com/_XMCM/Megarg/home.htm` → `home.htm` relativo.
+- **Decisión del usuario**: los 13 emails de fans de terceros (clasif, cdr2, concu, encues, fanzone) quedan tal cual. Se le advirtió del riesgo de spam.
+- `next.config.ts` → `headers()` para `/archivo/:path*`: `X-Robots-Tag: noindex, nofollow` (147 páginas de época con links muertos no deben indexarse) + CSP que bloquea todo recurso externo (contadores/banners de LinkExchange, Nedstat, GeoCities, Xoom apuntan a dominios abandonados).
+
+**Mobile**
+- `getViewerScale()` achica la ventana 960×600 para que entre completa (390px → escala 0,37; nunca agranda por encima de 1). Botón "abrir a tamaño real" (pestaña nueva) y "volver al inicio" (remonta el iframe).
+- Gotcha: el iframe mide 960px reales (se achica con `transform: scale`, que no cambia su caja) dentro de una caja más chica. Con `overflow: hidden` esa caja es desplazable por programa (foco, scrollIntoView) y el sitio viejo se corría de costado en mobile (reportado por el usuario en DevTools). Se usa `overflow: clip` con `hidden` de fallback vía `@supports`. Verificado: forzar `scrollLeft = 300` queda en 0. Además la escala se calcula en `openViewer` antes de abrir, así el primer render no sale a 960px.
+- Gotcha: el Paper del `Dialog` de MUI trae `max-width: calc(100% - 64px)` por defecto y recortaba el visor en mobile. Se sobreescriben `width` (= ancho del visor), `maxWidth` y `maxHeight` para que coincidan con el margen y con el gutter del cálculo de escala.
+
+**Verificado** (dev server + Chrome headless vía CDP)
+- Headers OK en `/archivo`; `wavs/` → 404; sección presente en ES y EN antes del `<footer>`; el iframe NO viene en el HTML inicial (se monta al abrir).
+- Popup en 1280×900, 1366×650, 390×844 y 375×667: Paper == iframe, sin recortes, los 3 frames cargan, título con tildes correctas.
+- Modo claro y oscuro de la sección OK en desktop y mobile. `tsc` limpio, lint sin errores nuevos.
+
+**Pendiente / para que decida el usuario**
+- `home.htm` abre `info.htm`, que es contenido de **feb 2002** (Rude Awakening, remaster de Killing Is My Business y el cartel "está siendo totalmente renovada, vuelve pronto"). El texto nuevo dice "activa hasta Capitol Punishment" (elección del usuario). Los archivos muestran: contador desde ene 1999, restyling dic 2000, última actualización feb 2002. No se tocó.
+- Los links a `hijosdelsol.cjb.net` / `members.xoom.com/hijosdelsol` (dominios muertos) podrían apuntar hoy a hijosdelsol.com.ar. No se cambiaron (material de época).
+- Textos del homenaje escritos como borrador; el usuario los ajusta mirando el render.
+- Sin commit.
+
 ### Pendiente
 - Renovar `FACEBOOK_PAGE_ACCESS_TOKEN` antes del 22 de abril de 2026
 - Decidir si comprar créditos en X para activar Twitter posting

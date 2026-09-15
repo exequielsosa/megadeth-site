@@ -1,0 +1,77 @@
+<html>
+
+ <head><meta charset="utf-8"><title>Super Concurso Megadeth Argentina</title></head>
+<body bgcolor="#000000" text="#FFFFFF" link="#008000" vlink="#808080">
+ <center>
+
+ <img src="concurso.gif"  border=0> 
+
+ </center> 
+
+<br><div align="center">
+<font face="arial" size="5"><b><i>
+¡Lena este formulario, participa y gana!</font></b></i>
+<br><br>
+<u><font face="arial" size="3"><b>
+Datos Personales:</font></b></u>
+
+
+<form action="/cgi-bin/cgiemail" method="post">
+<!-- HTML Template used for the page after successful submission -->
+
+   <input type="hidden" name="cgiemail_html" value="gracias2.htm">
+
+   <!-- HTML Template used in case an error occurs -->
+
+   <input type="hidden" name="cgiemail_error" value="error2.htm">
+
+<input type="hidden" name="cgiemail_invalid" value="mail:Tipiaste mal tu direccion de e-mail">
+
+
+
+   <!-- Sent this email to webmaster -->
+
+   <input type="hidden" name="cgiemail_username" value="exequiel@ciudad.com.ar">
+
+   <!-- The Subject line in the email -->
+
+   <input type="hidden" name="cgiemail_subject" value="Concurso Megadeth Argentina">
+
+
+   <!-- Fields that must be submitted -->
+
+   <input type="hidden" name="cgiemail_required" value="nombre:¡Te falto poner tu nombre y apellido!">
+   <input type="hidden" name="cgiemail_required" value="pais:¡Te falto poner de que pais sos!">
+
+<input type="hidden" name="cgiemail_required" value="mail:¡Te falto poner tu e-mail!">
+   <input type="hidden" name="cgiemail_required" value="pregunta:¡Te falto contestar la pregunta del mes!">
+
+
+<div align="center">
+<table border=0><tr>
+<font face="arial">
+   <td><font face="arial"><b>Nombre y Apellido:</b></td><td><input type="text" size="40" name="nombre"></td></tr><tr>
+
+   </tr><tr><td><font face="arial"><b>Pais:</b></td><td><input type="text" size="40" name="pais"></td>
+
+
+   </tr><tr><td><font face="arial"><b>E-mail:</b></td><td><input type="text" size="40" name="mail"></td>
+   </td></tr></table>
+<br>
+<center><font face="arial"><b><u>Contesta la pregunta de este mes:</u><br><br><i> ¿Cuantos 
+años tiene Dave Ellefson?</center></font></b></i>
+
+<br><textarea rows="4" cols="60" name="pregunta"></textarea><br>
+
+
+<div align="center">
+<br>	
+   <input type="submit" value="Enviar">
+</centr>
+
+
+
+</form>
+<hr>
+
+</body></html>

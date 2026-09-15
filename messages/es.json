@@ -744,5 +744,21 @@
     "commentsTitle": "Comentarios",
     "invalidEmail": "Ingresa un email válido",
     "error": "Error al publicar comentario. Intenta nuevamente."
+  },
+  "legacySite": {
+    "eyebrow": "Antes de megadeth.com.ar",
+    "title": "¡Megadeth Argentina está de vuelta!",
+    "paragraph1": "Este sitio es la continuación de Megadeth Argentina, la página que armé en los 90 y mantuve durante varios años: noticias, letras, tabs, fotos, encuestas e intercambio de CD-R, todo en español.",
+    "paragraph2": "Estuvo activa hasta la salida de Capitol Punishment. Ahí recibió su último restyling, que quedó a medio hacer: la vida, el trabajo y todo lo demás se metieron en el medio.",
+    "paragraph3": "Hoy, muchísimos años después, estamos de vuelta. Y la página original sigue acá, tal cual quedó.",
+    "cta": "Entrar a Megadeth Argentina",
+    "quote": "«¡¡¡Esta pagina se ve mejor con Internet Explorer 4.0 o 5.0!!!» — Megadeth Argentina, 2000",
+    "imageAlt": "Captura del sitio original de Megadeth Argentina: menú lateral de frames sobre fondo negro",
+    "dialogTitle": "Megadeth Argentina — el sitio original",
+    "iframeTitle": "Sitio original de Megadeth Argentina",
+    "home": "Volver al inicio",
+    "openFullSize": "Abrir a tamaño real",
+    "close": "Cerrar",
+    "archiveNote": "Archivo de época: muchos links, contadores y servicios de entonces ya no existen."
   }
 }

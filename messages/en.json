@@ -744,5 +744,21 @@
     "commentsTitle": "Comments",
     "invalidEmail": "Please enter a valid email",
     "error": "Error posting comment. Please try again."
+  },
+  "legacySite": {
+    "eyebrow": "Before megadeth.com.ar",
+    "title": "Megadeth Argentina is back!",
+    "paragraph1": "This site is the continuation of Megadeth Argentina, the Spanish-language fan page I built in the 90s and ran for several years: news, lyrics, tabs, photos, polls and CD-R trading.",
+    "paragraph2": "It stayed active until Capitol Punishment came out. That is when it got its last redesign, which was never finished: life, work and everything else got in the way.",
+    "paragraph3": "Now, many years later, we are back. And the original site is still here, just as it was left.",
+    "cta": "Enter Megadeth Argentina",
+    "quote": "“This page looks best with Internet Explorer 4.0 or 5.0!!!” — Megadeth Argentina, 2000",
+    "imageAlt": "Screenshot of the original Megadeth Argentina site: frame-based side menu on a black background",
+    "dialogTitle": "Megadeth Argentina — the original site",
+    "iframeTitle": "Original Megadeth Argentina site",
+    "home": "Back to home",
+    "openFullSize": "Open at full size",
+    "close": "Close",
+    "archiveNote": "Period archive: many links, counters and services from back then no longer exist."
   }
 }
