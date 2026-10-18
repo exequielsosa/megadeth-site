@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback, useEffect } from "react";
+import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import {
   Dialog,
   DialogContent,
@@ -46,18 +46,27 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
   const t = useTranslations("search");
   const locale = useLocale() as "es" | "en";
 
-  // Cargar noticias desde Supabase
+  // Cargar noticias desde Supabase recién la primera vez que se abre el buscador.
+  // El modal está montado en el Header de todas las páginas: cargarlas al montar
+  // hacía que cada visita descargara todas las noticias (egress de Supabase).
+  const newsRequested = useRef(false);
   useEffect(() => {
+    if (!open || newsRequested.current) return;
+    newsRequested.current = true;
+
     async function loadNews() {
       try {
         const data = await getAllNews();
         setNewsData(data);
+        // getAllNews devuelve [] si falla: permitir reintento al reabrir
+        if (data.length === 0) newsRequested.current = false;
       } catch (error) {
         console.error("Error loading news for search:", error);
+        newsRequested.current = false;
       }
     }
     loadNews();
-  }, []);
+  }, [open]);
 
   const searchResults = useMemo(() => {
     if (query.trim().length < 2) {

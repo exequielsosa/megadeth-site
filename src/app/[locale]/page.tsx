@@ -1,12 +1,11 @@
 export const revalidate = 300;
 
 import Hero from "@/components/Hero";
-import { getAllNews } from "@/lib/supabase";
+import { getLatestNews } from "@/lib/supabase";
 
 export default async function HomePage() {
-  const news = await getAllNews();
-  const latestNews = news
-    .sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime())
-    .slice(0, 5);
+  // Pedir solo las 5 últimas (ya vienen ordenadas por fecha desc).
+  // Antes se traían todas las noticias cada 5 min solo para usar 5.
+  const latestNews = await getLatestNews(5);
   return <Hero latestNews={latestNews} />;
 }
