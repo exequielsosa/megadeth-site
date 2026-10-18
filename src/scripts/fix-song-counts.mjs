@@ -7,6 +7,32 @@ const outputPath = process.argv[3] || "songs.counts.fixed.json";
 const reportPath = process.argv[4] || "songs.counts.report.json";
 
 /**
+ * Nombre de setlist.fm (ya normalizado) -> título exacto de songs.json.
+ * Las páginas de canciones buscan el conteo por song.title, así que sin esto
+ * esos temas quedan en 0.
+ */
+const TITLE_ALIASES = {
+  "Skin o' My Teeth": "Skin O' My Teeth",
+  "Devil's Island": "Devils Island",
+  "Conquer or Die!": "Conquer Or Die!",
+  "These Boots Are Made for Walkin'": "These Boots",
+  "Good Mourning/Black Friday": "Good Mourning / Black Friday",
+  "Last Rites/Loved to Deth": "Last Rites / Loved to Deth",
+  "The Sick, the Dying... and the Dead!": "The Sick, The Dying... and The Dead!",
+  "Lying in State": "Lying In State",
+  "Never Say Die": "Never Say Die (Black Sabbath Cover)",
+  "Crown of Worms": "Crown of Worms (Demo Version)",
+};
+
+/**
+ * Conteos cargados a mano para temas que setlist.fm no trae.
+ * Solo se usan si el tema no aparece en los datos.
+ */
+const MANUAL_COUNTS = {
+  "Black Curtains": 1,
+};
+
+/**
  * Pass B: normalización “segura” (sin inventar nombres)
  */
 function normalizeTitle(raw) {
@@ -150,9 +176,18 @@ function main() {
   }
 
   // Construir JSON final ordenado por count desc
+  const finalCounts = {};
+  for (const { displayName, count } of acc.values()) {
+    const title = TITLE_ALIASES[displayName] ?? displayName;
+    finalCounts[title] = (finalCounts[title] || 0) + count;
+  }
+  for (const [title, count] of Object.entries(MANUAL_COUNTS)) {
+    if (!(title in finalCounts)) finalCounts[title] = count;
+  }
+
   const outObj = {};
-  const sorted = Array.from(acc.values()).sort((a, b) => b.count - a.count);
-  for (const item of sorted) outObj[item.displayName] = item.count;
+  const sorted = Object.entries(finalCounts).sort((a, b) => b[1] - a[1]);
+  for (const [title, count] of sorted) outObj[title] = count;
 
   // Escribir outputs
   fs.writeFileSync(outputPath, JSON.stringify(outObj, null, 2), "utf-8");

@@ -188,6 +188,24 @@
   ],
   "merges": [
     {
+      "canonicalKey": "silent scorn",
+      "chosenDisplay": "Silent Scorn",
+      "variants": [
+        {
+          "name": "Silent Scorn",
+          "count": 571
+        },
+        {
+          "name": "Silent scorn",
+          "count": 1
+        }
+      ],
+      "uniqueNames": [
+        "Silent Scorn",
+        "Silent scorn"
+      ]
+    },
+    {
       "canonicalKey": "prince of darkness",
       "chosenDisplay": "Prince of Darkness",
       "variants": [

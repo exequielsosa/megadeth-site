@@ -362,6 +362,17 @@ npm run add:news         # Agregar noticias manualmente via CLI
 **Bug detectado de paso (sin arreglar)**
 - Se piden `/noticias/null` y `/miembros/null` → 404 con error de Supabase (`PGRST116`) en los logs. Algún link se genera con `id` nulo.
 
+### Completado (18 oct 2026) — Actualización de "veces tocada en vivo"
+
+**Cómo se corre** (manual, no hay cron):
+1. `npm run sync:update` → baja de setlist.fm los shows nuevos (`src/scripts/setlist-sync.mjs`) y actualiza `src/data/songs.counts.json` + `processed-ids.json`. `sync:backfill` rehace todo desde cero.
+2. `npm run sync:fix` → normaliza y escribe `src/constants/songs.counts.fixed.json`, que es lo ÚNICO que lee el sitio (`SongsListPage`, `SongDetailPage`, `TopSongsWidget`). Sin este paso la web no cambia.
+3. Commit + deploy (son JSON estáticos del build).
+
+**Gotcha resuelto**: las páginas buscan el conteo por `song.title` exacto de `songs.json`. En may 2026 las claves se habían renombrado a mano y `sync:fix` las pisaba (11 temas quedaban en 0). Ahora `fix-song-counts.mjs` tiene `TITLE_ALIASES` (nombre setlist.fm → título de songs.json) y `MANUAL_COUNTS` (Black Curtains: 1, no viene de setlist.fm). **Si un tema nuevo sale en 0 en su página, agregar el alias ahí, no editar el JSON a mano.**
+
+Corrida del 18 oct: +46 shows (2684 en total), Puppet Parade aparece con 13. Verificado: 0 temas de `songs.json` pierden su conteo. Sin commit.
+
 ### Pendiente
 - Renovar `FACEBOOK_PAGE_ACCESS_TOKEN` antes del 22 de abril de 2026
 - Decidir si comprar créditos en X para activar Twitter posting
