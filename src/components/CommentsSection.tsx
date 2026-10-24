@@ -125,8 +125,9 @@ export function CommentsSection({
       setContent("");
       setWebsite("");
 
-      // recargar lista
-      await load();
+      // Agregar el comentario devuelto por el POST en lugar de recargar:
+      // el GET lo cachea la CDN (s-maxage=60) y devolvería la lista vieja.
+      if (json?.item) setItems((prev) => [json.item, ...prev]);
     } catch {
       setError(t("error"));
     } finally {
