@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createNewsSchema } from "@/lib/validations/news";
 import { getSupabaseAdmin } from "@/lib/supabase";
+import { revalidateTag } from "next/cache";
+import { NEWS_TAG } from "@/lib/news";
 
 /**
  * POST /api/news/create
@@ -113,7 +115,10 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // 8. Retornar respuesta exitosa
+    // 8. Invalidar el cache de noticias para que aparezca ya en el sitio
+    revalidateTag(NEWS_TAG);
+
+    // 9. Retornar respuesta exitosa
     return NextResponse.json(
       {
         success: true,

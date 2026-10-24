@@ -371,7 +371,34 @@ npm run add:news         # Agregar noticias manualmente via CLI
 
 **Gotcha resuelto**: las páginas buscan el conteo por `song.title` exacto de `songs.json`. En may 2026 las claves se habían renombrado a mano y `sync:fix` las pisaba (11 temas quedaban en 0). Ahora `fix-song-counts.mjs` tiene `TITLE_ALIASES` (nombre setlist.fm → título de songs.json) y `MANUAL_COUNTS` (Black Curtains: 1, no viene de setlist.fm). **Si un tema nuevo sale en 0 en su página, agregar el alias ahí, no editar el JSON a mano.**
 
-Corrida del 18 oct: +46 shows (2684 en total), Puppet Parade aparece con 13. Verificado: 0 temas de `songs.json` pierden su conteo. Sin commit.
+Corrida del 18 oct: +46 shows (2684 en total), Puppet Parade aparece con 13. Verificado: 0 temas de `songs.json` pierden su conteo. Commit `cd8a61b`.
+
+### Completado (24 oct 2026) — Migración de Supabase a cuenta nueva + fin del egress por visita
+
+**Por qué**: la org vieja (plan Free) quedó restringida por `exceed_egress_quota` (API → 402). Afectó a megadeth y a Call 2 Santa (la cuota es por organización). Causa: ninguna consulta se cacheaba y `/noticias` + `sitemap.xml` bajaban las 199 noticias completas (~1 MB) por visita/pedido de bot.
+
+**Migración**
+- Proyecto nuevo: **`bufcjevbyyjufshoyzim`** (us-east-1, cuenta nueva, Free). El viejo `anaxeiizlbfuycwnjwkw` queda como respaldo; borrarlo en unas semanas.
+- Hecha con Node + `pg` por el Session pooler (Docker no arranca: virtualización desactivada). La API REST vieja no sirve para esto (402), la conexión Postgres sí.
+- Backup en `backups/` (gitignored, tiene emails): `megadeth-schema-2026-10-24.sql` (estructura, ya con las mejoras) + `megadeth-datos-2026-10-24.sql`.
+- Verificado: hashes md5 de las 3 tablas y la vista idénticos entre vieja y nueva.
+- Mejoras de paso: políticas duplicadas de `comments` unificadas (6 → 4), vista `security_invoker`, función con `search_path` fijo, y **la clave pública ya no puede leer `comments.email`** (antes cualquiera con la anon key del navegador los veía). La API inserta con la clave pública y nunca pide `email`; si algún día se hace `select("*")` sobre comments con esa clave, falla con 42501.
+- Claves nuevas de Supabase (`sb_publishable_…` / `sb_secret_…`) en los mismos nombres de variables. Actualizadas en `.env`, Vercel (5) y GitHub Secrets (3).
+
+**Cache (rama `fix/egress-supabase`)**
+- `src/lib/news.ts`: `unstable_cache` con tag `news` (1 h) sobre las consultas. Funciona aunque el layout sea dinámico por `cookies()`. Si Supabase falla o da 0 filas, lanza → no se cachea el vacío y se sirve la última versión buena.
+- `/api/news/create` hace `revalidateTag("news")` → noticia nueva visible al instante (verificado).
+- `/noticias` ahora es server component; la UI pasó a `components/NoticiasPageClient.tsx`.
+- Buscador → `/api/news/search` (solo id/título/descripción, CDN 1 h: una noticia nueva puede tardar hasta 1 h en el buscador).
+- Sitemap y `generateStaticParams` → índice de solo `id` + `published_date`.
+- Medido con `pg_stat_statements`: ~100 cargas de home/noticias/detalle/sitemap/RSS/buscador = **0 consultas a Supabase**.
+- **Regla: toda lectura de noticias del lado servidor va por `lib/news.ts`, nunca directo a `lib/supabase.ts`.**
+
+**Pendiente de esta migración**
+- Merge del PR + verificar producción (home, /noticias, detalle, comentarios, sitemap, RSS, workflow de noticias y posteo a redes).
+- Resetear la contraseña de la base nueva (pasó por el chat) y la de la vieja.
+- Migrar **Call 2 Santa** (proyecto `jmlgqiwtnuveumoicufu`, otra carpeta local) a la cuenta nueva. Ojo: Free = 2 proyectos activos por cuenta.
+- Borrar el proyecto viejo cuando producción esté estable.
 
 ### Pendiente
 - Renovar `FACEBOOK_PAGE_ACCESS_TOKEN` antes del 22 de abril de 2026

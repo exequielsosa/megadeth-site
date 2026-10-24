@@ -46,3 +46,6 @@ next-env.d.ts
 #scripts
 /src/scripts/setlist-sync.mjs
 /data
+
+# backups de base de datos (contienen datos personales)
+backups/
