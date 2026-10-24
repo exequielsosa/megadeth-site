@@ -10,7 +10,7 @@ import { Link } from "@/i18n/navigation";
 import RandomSectionBanner from "@/components/NewsBanner";
 import { i18nAlternates } from "@/utils/i18nAlternates";
 import { CommentsSection } from "@/components/CommentsSection";
-import { getAllNews, getNewsById } from "@/lib/supabase";
+import { getNewsByIdCached, getNewsIndexCached } from "@/lib/news";
 import { getSafeTranslation } from "@/utils/safeContent";
 
 interface NewsPageProps {
@@ -20,7 +20,7 @@ interface NewsPageProps {
 }
 
 export async function generateStaticParams() {
-  const newsData = await getAllNews();
+  const newsData = await getNewsIndexCached();
   return newsData.map((article) => ({
     id: article.id,
   }));
@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: NewsPageProps) {
   const resolvedParams = await params;
   const locale = (await getLocale()) as "es" | "en";
-  const article = await getNewsById(resolvedParams.id);
+  const article = await getNewsByIdCached(resolvedParams.id);
 
   if (!article) {
     return {
@@ -107,7 +107,7 @@ export default async function NoticiaPage({ params }: NewsPageProps) {
   const locale = (await getLocale()) as "es" | "en";
   const tb = await getTranslations("breadcrumb");
 
-  const article = await getNewsById(resolvedParams.id);
+  const article = await getNewsByIdCached(resolvedParams.id);
 
   if (!article) {
     notFound();

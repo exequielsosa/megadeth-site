@@ -15,7 +15,7 @@ import { generateShowSlug, Show } from '@/types/show';
 import { generateBootlegSlug, Bootleg } from '@/types/bootleg';
 import { generateDVDSlug } from '@/types/dvd';
 import bootlegsData from '@/constants/bootlegs.json';
-import { getAllNews } from '@/lib/supabase';
+import { getNewsIndexCached } from '@/lib/news';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = 'https://megadeth.com.ar';
@@ -204,7 +204,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Noticias dinámicas desde Supabase
   try {
-    const newsData = await getAllNews();
+    const newsData = await getNewsIndexCached();
     if (Array.isArray(newsData)) {
       newsData.forEach(news => {
         // OJO: acá va el id crudo, NO generateInterviewSlug(news.id). La página
@@ -214,7 +214,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         // scripts/check-all-sitemap.mjs).
         if (news.id) {
           pushBilingual(sitemap, `/noticias/${news.id}`, {
-            lastModified: new Date(news.publishedDate || new Date()),
+            lastModified: new Date(news.published_date),
             changeFrequency: 'weekly',
             priority: 0.8,
           });

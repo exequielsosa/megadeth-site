@@ -1,4 +1,4 @@
-import { getLatestNews } from "@/lib/supabase";
+import { getLatestNewsCached } from "@/lib/news";
 
 export const revalidate = 3600; // Regenerar cada hora
 
@@ -14,7 +14,7 @@ function escapeXml(str: string): string {
 }
 
 export async function GET() {
-  const articles = await getLatestNews(50);
+  const articles = await getLatestNewsCached(50);
 
   const items = articles
     .map((article) => {
